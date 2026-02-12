@@ -1,0 +1,16 @@
+name: Weekly Full Sync
+
+on:
+  schedule:
+    # W niedzielę o 2:00 UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+jobs:
+  full-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync REST Countries
+        run: |
+          curl -X POST "${{ secrets.BACKEND_URL }}/api/admin/sync-rest-countries"

@@ -1,0 +1,24 @@
+name: Daily Data Sync
+
+on:
+  schedule:
+    # Codziennie o 3:00 UTC (4:00 CET)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  sync-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync Exchange Rates
+        run: |
+          curl -X POST "${{ secrets.BACKEND_URL }}/api/admin/sync-exchange-rates"
+
+      - name: Scrape Priority Countries
+        run: |
+          # Top 20 krajów do codziennego scrapowania
+          for country in TH PL DE FR ES IT GB US TR GR EG BR MA CZ AT; do
+            curl -X POST "${{ secrets.BACKEND_URL }}/api/admin/scrape-gov-pl/$country"
+            sleep 3  # Rate limiting
+          done
