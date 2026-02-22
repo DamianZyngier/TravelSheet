@@ -68,17 +68,41 @@ async def seed_all():
         except: pass
 
         # Weather (Only if API key is present)
-        if os.getenv("OPENWEATHER_API_KEY"):
-            try:
-                await weather.update_weather(db, iso2)
-            except: pass
-        
+        #if os.getenv("OPENWEATHER_API_KEY"):
+        #    try:
+        #        await weather.update_weather(db, iso2)
+        #    except: pass
+
         # Rate limiting: MSZ & OpenHolidays don't have strict limits, but let's be kind.
-        # OpenWeather has 60/min (we'll do 1.5s delay)
-        await asyncio.sleep(1.5)
+        # OpenWeather has 60/min
+        #await asyncio.sleep(1)
+
+    # 6. Summary of database content
+    print("\n📊 Database Summary:")
+    
+    entities = [
+        ("🏳️  Countries", models.Country),
+        ("🗣️  Languages", models.Language),
+        ("💰 Currencies", models.Currency),
+        ("🏛️  Attractions", models.Attraction),
+        ("📅 Holidays", models.Holiday),
+        ("🔌 Practical Info", models.PracticalInfo),
+        ("⚖️  Laws & Customs", models.LawAndCustom),
+        ("🛂 Safety Info", models.SafetyInfo),
+        ("🏦 Embassies", models.Embassy),
+        ("🌡️  Weather", models.Weather)
+    ]
+
+    for label, model in entities:
+        count = db.query(model).count()
+        samples = db.query(model).limit(3).all()
+        sample_str = ", ".join([str(s) for s in samples])
+        if count > 3:
+            sample_str += "..."
+        print(f"{label:18} {count:4} records. Samples: [{sample_str}]")
 
     db.close()
-    print("🏁 Seeding completed!")
+    print("\n🏁 Seeding completed!")
 
 if __name__ == "__main__":
     asyncio.run(seed_all())

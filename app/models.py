@@ -20,6 +20,9 @@ class Country(Base):
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
+    def __repr__(self):
+        return f"<Country(name='{self.name}', iso2='{self.iso_alpha2}')>"
+
     # Relations
     languages = relationship("Language", back_populates="country", cascade="all, delete-orphan")
     religions = relationship("Religion", back_populates="country", cascade="all, delete-orphan")
@@ -43,6 +46,9 @@ class Language(Base):
     code = Column(String(10))
     is_official = Column(Boolean, default=False)
 
+    def __repr__(self):
+        return f"<Language(name='{self.name}', code='{self.code}')>"
+
     country = relationship("Country", back_populates="languages")
 
 class Currency(Base):
@@ -59,6 +65,9 @@ class Currency(Base):
     relative_cost = Column(String(20))
     last_updated = Column(TIMESTAMP, server_default=func.now())
 
+    def __repr__(self):
+        return f"<Currency(code='{self.code}', rate_pln={self.exchange_rate_pln})>"
+
     country = relationship("Country", back_populates="currency")
 
 class SafetyInfo(Base):
@@ -70,6 +79,9 @@ class SafetyInfo(Base):
     summary = Column(Text)
     full_url = Column(Text)
     last_checked = Column(TIMESTAMP, server_default=func.now())
+
+    def __repr__(self):
+        return f"<Safety(risk='{self.risk_level}')>"
 
     country = relationship("Country", back_populates="safety")
 
@@ -85,6 +97,9 @@ class Embassy(Base):
     emergency_phone = Column(String(50))
     email = Column(String(100))
     website = Column(Text)
+
+    def __repr__(self):
+        return f"<Embassy(type='{self.type}', city='{self.city}')>"
 
     country = relationship("Country", back_populates="embassies")
 
@@ -116,6 +131,9 @@ class Attraction(Base):
     is_unique = Column(Boolean, default=False)
     display_order = Column(Integer, default=0)
 
+    def __repr__(self):
+        return f"<Attraction(name='{self.name}', cat='{self.category}')>"
+
     country = relationship("Country", back_populates="attractions")
 
 class Religion(Base):
@@ -137,6 +155,9 @@ class Holiday(Base):
     name_local = Column(String(255))
     date = Column(Date)
     type = Column(String(50)) # Public, Religious, etc.
+
+    def __repr__(self):
+        return f"<Holiday(name='{self.name}', date={self.date})>"
 
     country = relationship("Country", back_populates="holidays")
 
@@ -160,6 +181,9 @@ class PracticalInfo(Base):
     tipping_culture = Column(Text)
     internet_notes = Column(Text)
     esim_available = Column(Boolean)
+
+    def __repr__(self):
+        return f"<PracticalInfo(country_id={self.country_id}, plugs='{self.plug_types}')>"
 
     country = relationship("Country", back_populates="practical")
 
@@ -199,6 +223,9 @@ class LawAndCustom(Base):
     category = Column(String(50)) # "law", "custom", "tip", "souvenir"
     title = Column(String(255))
     description = Column(Text)
+
+    def __repr__(self):
+        return f"<LawAndCustom(cat='{self.category}', title='{self.title[:20]}...')>"
 
     country = relationship("Country", back_populates="laws_and_customs")
 
