@@ -86,6 +86,22 @@ async def sync_exchange_rates(db: Session = Depends(get_db)):
     result = await sync_rates(db)
     return result
 
+@app.post("/api/admin/sync-static-info")
+async def sync_static_info(db: Session = Depends(get_db)):
+    """Admin endpoint - sync static info from JSON"""
+    from .scrapers.static_info import sync_static_data
+
+    result = sync_static_data(db)
+    return result
+
+@app.post("/api/admin/update-weather/{iso_code}")
+async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
+    """Admin endpoint - update weather for specific country"""
+    from .scrapers.weather import update_weather
+
+    result = await update_weather(db, iso_code.upper())
+    return result
+
 @app.post("/api/admin/scrape-gov-pl/{iso_code}")
 async def scrape_gov_pl(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - scrape MSZ data for specific country"""

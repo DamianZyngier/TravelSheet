@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelSheet - Twój niezbędnik podróżnika</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌍 Travel<span>Sheet</span></h1>
+            <p>Wszystko co musisz wiedzieć przed podróżą w jednym miejscu.</p>
+            <div class="search-box">
+                <input type="text" id="countrySearch" placeholder="Wpisz nazwę kraju (np. Tajlandia, Włochy)...">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+        <!-- Loader -->
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Pobieram dane dla Ciebie...</p>
+        </div>
+
+        <!-- Welcome View -->
+        <div id="welcomeView">
+            <h2>Najpopularniejsze kierunki</h2>
+            <div class="country-grid" id="popularCountries">
+                <!-- Will be filled by JS -->
+            </div>
+        </div>
+
+        <!-- Country Detail View (Hidden by default) -->
+        <div id="detailView" class="hidden">
+            <button id="backBtn" class="btn-back">← Powrót</button>
+            
+            <div class="country-header">
+                <div class="flag-container">
+                    <img id="countryFlag" src="" alt="Flaga">
+                </div>
+                <div class="country-title">
+                    <h2 id="countryName"></h2>
+                    <p id="countryMeta"></p>
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <!-- Grupa 1: Bezpieczeństwo -->
+                <section class="card safety-card">
+                    <h3>🛡️ Bezpieczeństwo i MSZ</h3>
+                    <div class="risk-badge" id="riskLevel"></div>
+                    <p id="safetySummary"></p>
+                    <a id="mszLink" href="#" target="_blank" class="link-btn">Więcej na gov.pl</a>
+                </section>
+
+                <!-- Grupa 2: Pieniądze -->
+                <section class="card">
+                    <h3>💰 Pieniądze i Waluta</h3>
+                    <div class="info-row">
+                        <span>Waluta:</span>
+                        <strong id="currencyInfo"></strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Kurs (PLN):</span>
+                        <strong id="exchangeRate"></strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Płatności:</span>
+                        <span id="cardAcceptance"></span>
+                    </div>
+                </section>
+
+                <!-- Grupa 3: Pogoda -->
+                <section class="card weather-card">
+                    <h3>☀️ Pogoda teraz</h3>
+                    <div class="weather-main">
+                        <img id="weatherIcon" src="" alt="">
+                        <div class="temp" id="currentTemp">--°C</div>
+                    </div>
+                    <p id="weatherCondition"></p>
+                    <div class="weather-details">
+                        <span>Wilgotność: <b id="humidity"></b>%</span>
+                        <span>Wiatr: <b id="wind"></b> km/h</span>
+                    </div>
+                </section>
+
+                <!-- Grupa 4: Informacje Praktyczne -->
+                <section class="card">
+                    <h3>🔌 Informacje Praktyczne</h3>
+                    <div class="info-row">
+                        <span>Gniazdka:</span>
+                        <strong id="plugTypes"></strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Napięcie:</span>
+                        <strong id="voltage"></strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Woda z kranu:</span>
+                        <strong id="tapWater"></strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Ruch:</span>
+                        <strong id="drivingSide"></strong>
+                    </div>
+                </section>
+
+                <!-- Grupa 5: Atrakcje -->
+                <section class="card full-width">
+                    <h3>🏛️ Najważniejsze miejsca (UNESCO)</h3>
+                    <ul id="attractionsList" class="attractions-list"></ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TravelSheet. Dane pobierane z REST Countries, OpenWeather i Gov.pl.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

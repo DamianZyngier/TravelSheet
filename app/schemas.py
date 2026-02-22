@@ -68,6 +68,62 @@ class CountryBasic(BaseModel):
     class Config:
         from_attributes = True
 
+class ReligionSchema(BaseModel):
+    name: str
+    percentage: Optional[float]
+
+    class Config:
+        from_attributes = True
+
+class HolidaySchema(BaseModel):
+    name: str
+    name_local: Optional[str]
+    date: date
+    type: Optional[str]
+
+    class Config:
+        from_attributes = True
+
+class WeatherSchema(BaseModel):
+    temp_c: Optional[float]
+    feels_like_c: Optional[float]
+    condition: Optional[str]
+    condition_icon: Optional[str]
+    humidity: Optional[int]
+    wind_kph: Optional[float]
+    last_updated: Optional[datetime]
+
+    class Config:
+        from_attributes = True
+
+class PracticalSchema(BaseModel):
+    tap_water_safe: Optional[bool]
+    tap_water_notes: Optional[str]
+    plug_types: List[str] = []
+    voltage: Optional[int]
+    frequency: Optional[int]
+    card_acceptance: Optional[str]
+    cash_vs_card_notes: Optional[str]
+    driving_side: Optional[str]
+    license_required: Optional[str]
+    driving_notes: Optional[str]
+    odyseusz_url: Optional[str]
+    store_hours: Optional[str]
+    tipping_culture: Optional[str]
+    internet_notes: Optional[str]
+    esim_available: Optional[bool]
+
+    class Config:
+        from_attributes = True
+
+class LawCustomSchema(BaseModel):
+    category: str
+    title: str
+    description: Optional[str]
+
+    class Config:
+        from_attributes = True
+
 # Detailed response (pojedynczy kraj)
 class CountryDetail(BaseModel):
     iso_alpha2: str
@@ -81,11 +137,19 @@ class CountryDetail(BaseModel):
     flag_url: Optional[str]
     population: Optional[int]
 
+    # Grouped Info
     languages: List[LanguageSchema] = []
     currency: Optional[CurrencySchema]
     safety: Optional[SafetySchema]
     embassies: List[EmbassySchema] = []
     attractions: List[AttractionSchema] = []
+    
+    # New Fields
+    religions: List[ReligionSchema] = []
+    holidays: List[HolidaySchema] = []
+    weather: Optional[WeatherSchema]
+    practical: Optional[PracticalSchema]
+    laws_and_customs: List[LawCustomSchema] = []
 
     class Config:
         from_attributes = True

@@ -1,0 +1,101 @@
+{
+  "PL": {
+    "tap_water_safe": true,
+    "plug_types": ["C", "E"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "high"
+  },
+  "TH": {
+    "tap_water_safe": false,
+    "plug_types": ["A", "B", "C", "O"],
+    "voltage": 220,
+    "frequency": 50,
+    "driving_side": "left",
+    "license_required": "international",
+    "card_acceptance": "medium"
+  },
+  "EG": {
+    "tap_water_safe": false,
+    "plug_types": ["C", "F"],
+    "voltage": 220,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "international",
+    "card_acceptance": "low"
+  },
+  "IT": {
+    "tap_water_safe": true,
+    "plug_types": ["C", "F", "L"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "high"
+  },
+  "GR": {
+    "tap_water_safe": true,
+    "plug_types": ["C", "F"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "medium"
+  },
+  "ES": {
+    "tap_water_safe": true,
+    "plug_types": ["C", "F"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "high"
+  },
+  "TR": {
+    "tap_water_safe": false,
+    "plug_types": ["C", "F"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "medium"
+  },
+  "HR": {
+    "tap_water_safe": true,
+    "plug_types": ["C", "F"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "right",
+    "license_required": "national",
+    "card_acceptance": "medium"
+  },
+  "US": {
+    "tap_water_safe": true,
+    "plug_types": ["A", "B"],
+    "voltage": 120,
+    "frequency": 60,
+    "driving_side": "right",
+    "license_required": "international",
+    "card_acceptance": "high"
+  },
+  "GB": {
+    "tap_water_safe": true,
+    "plug_types": ["G"],
+    "voltage": 230,
+    "frequency": 50,
+    "driving_side": "left",
+    "license_required": "national",
+    "card_acceptance": "high"
+  },
+  "JP": {
+    "tap_water_safe": true,
+    "plug_types": ["A", "B"],
+    "voltage": 100,
+    "frequency": 50,
+    "driving_side": "left",
+    "license_required": "international",
+    "card_acceptance": "medium"
+  }
+}

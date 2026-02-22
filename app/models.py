@@ -28,6 +28,11 @@ class Country(Base):
     embassies = relationship("Embassy", back_populates="country", cascade="all, delete-orphan")
     entry_req = relationship("EntryRequirement", back_populates="country", uselist=False, cascade="all, delete-orphan")
     attractions = relationship("Attraction", back_populates="country", cascade="all, delete-orphan")
+    practical = relationship("PracticalInfo", back_populates="country", uselist=False, cascade="all, delete-orphan")
+    weather = relationship("Weather", back_populates="country", uselist=False, cascade="all, delete-orphan")
+    climate = relationship("Climate", back_populates="country", cascade="all, delete-orphan")
+    holidays = relationship("Holiday", back_populates="country", cascade="all, delete-orphan")
+    laws_and_customs = relationship("LawAndCustom", back_populates="country", cascade="all, delete-orphan")
 
 class Language(Base):
     __tablename__ = "languages"
@@ -94,7 +99,7 @@ class EntryRequirement(Base):
     visa_on_arrival = Column(Boolean)
     visa_free_days = Column(Integer)
     visa_notes = Column(Text)
-    special_requirements = Column(ARRAY(Text))
+    special_requirements = Column(Text) # Comma separated or JSON string
 
     country = relationship("Country", back_populates="entry_req")
 
@@ -113,4 +118,89 @@ class Attraction(Base):
 
     country = relationship("Country", back_populates="attractions")
 
-# Dodaj pozostałe modele analogicznie...
+class Religion(Base):
+    __tablename__ = "religions"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    name = Column(String(100))
+    percentage = Column(DECIMAL(5, 2))
+
+    country = relationship("Country", back_populates="religions")
+
+class Holiday(Base):
+    __tablename__ = "holidays"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    name = Column(String(255))
+    name_local = Column(String(255))
+    date = Column(Date)
+    type = Column(String(50)) # Public, Religious, etc.
+
+    country = relationship("Country", back_populates="holidays")
+
+class PracticalInfo(Base):
+    __tablename__ = "practical_info"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    tap_water_safe = Column(Boolean)
+    tap_water_notes = Column(Text)
+    plug_types = Column(String(50)) # e.g. "C,E"
+    voltage = Column(Integer) # e.g. 230
+    frequency = Column(Integer) # e.g. 50
+    card_acceptance = Column(String(50)) # e.g. "high", "medium", "low"
+    cash_vs_card_notes = Column(Text)
+    driving_side = Column(String(10)) # "left" or "right"
+    license_required = Column(String(100)) # "national" or "international"
+    driving_notes = Column(Text)
+    odyseusz_url = Column(Text, default="https://odyseusz.msz.gov.pl")
+    store_hours = Column(Text)
+    tipping_culture = Column(Text)
+    internet_notes = Column(Text)
+    esim_available = Column(Boolean)
+
+    country = relationship("Country", back_populates="practical")
+
+class Weather(Base):
+    __tablename__ = "weather"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    temp_c = Column(DECIMAL(4, 1))
+    feels_like_c = Column(DECIMAL(4, 1))
+    condition = Column(String(100))
+    condition_icon = Column(String(100))
+    humidity = Column(Integer)
+    wind_kph = Column(DECIMAL(5, 1))
+    last_updated = Column(TIMESTAMP, server_default=func.now())
+
+    country = relationship("Country", back_populates="weather")
+
+class Climate(Base):
+    __tablename__ = "climate"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    month = Column(Integer) # 1-12
+    avg_temp_min = Column(Integer)
+    avg_temp_max = Column(Integer)
+    avg_rain_mm = Column(Integer)
+    season_type = Column(String(50)) # "dry", "wet", "shoulder"
+
+    country = relationship("Country", back_populates="climate")
+
+class LawAndCustom(Base):
+    __tablename__ = "laws_and_customs"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    category = Column(String(50)) # "law", "custom", "tip", "souvenir"
+    title = Column(String(255))
+    description = Column(Text)
+
+    country = relationship("Country", back_populates="laws_and_customs")
+
+# Update Country model with new relationships
+# I will need to replace the whole file content to ensure consistency.
