@@ -5,33 +5,48 @@ import sys
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.database import SessionLocal
+from app.database import SessionLocal, engine
 from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, gov_pl
 from app import models
 
 async def seed_all():
+    # Create tables
+    models.Base.metadata.create_all(bind=engine)
+    
     db = SessionLocal()
     print("🚀 Starting full database seeding...")
 
     # 1. Sync all countries from REST Countries
     print("🌍 Step 1: Syncing all countries from REST Countries...")
     res = await rest_countries.sync_countries(db)
-    print(f"✅ Synced {res['synced']} countries.")
+    if 'error' in res:
+        print(f"❌ Error in Step 1: {res['error']}")
+    else:
+        print(f"✅ Synced {res['synced']} countries.")
 
     # 2. Sync currency exchange rates
     print("💰 Step 2: Syncing currency exchange rates...")
     res = await exchange_rates.sync_rates(db)
-    print(f"✅ Updated {res['updated']} rates.")
+    if 'error' in res:
+        print(f"❌ Error in Step 2: {res['error']}")
+    else:
+        print(f"✅ Updated {res['updated']} rates.")
 
     # 3. Sync static data (plugs, water, etc.)
     print("🔌 Step 3: Syncing static data (plugs, water, driving side)...")
     res = static_info.sync_static_data(db)
-    print(f"✅ Synced {res['synced']} static records.")
+    if 'error' in res:
+        print(f"❌ Error in Step 3: {res['error']}")
+    else:
+        print(f"✅ Synced {res['synced']} static records.")
 
     # 4. Sync UNESCO sites
     print("🏛️ Step 4: Syncing UNESCO World Heritage sites...")
     res = await attractions.sync_unesco_sites(db)
-    print(f"✅ Synced {res['synced']} UNESCO sites.")
+    if 'error' in res:
+        print(f"❌ Error in Step 4: {res['error']}")
+    else:
+        print(f"✅ Synced {res['synced']} UNESCO sites.")
 
     # 5. Sync per-country details (Gov.pl, Holidays, Weather)
     # We'll do this for a subset or all depending on time

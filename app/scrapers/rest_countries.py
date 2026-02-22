@@ -6,14 +6,29 @@ async def sync_countries(db: Session):
     """Sync all countries from REST Countries API"""
 
     async with httpx.AsyncClient() as client:
-        response = await client.get("https://restcountries.com/v3.1/all")
+        # Request exactly 10 fields to try to satisfy the API
+        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,population,continents"
+        response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
         countries_data = response.json()
+        
+        if isinstance(countries_data, dict) and countries_data.get('status') == 400:
+            # Fallback - maybe even fewer fields?
+            fields = "name,cca2,cca3,flags,currencies"
+            response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
+            countries_data = response.json()
 
     synced = 0
     errors = []
 
+    if not isinstance(countries_data, list):
+        return {"synced": 0, "error": "API did not return a list"}
+
     for data in countries_data:
+        iso2 = "Unknown"
         try:
+            if not isinstance(data, dict):
+                continue
+            
             iso2 = data.get('cca2')
             iso3 = data.get('cca3')
 
@@ -37,27 +52,36 @@ async def sync_countries(db: Session):
                 # Update
                 for key, value in country_dict.items():
                     setattr(existing, key, value)
+                country = existing
             else:
                 # Create
                 country = crud.create_country(db, country_dict)
 
-                # Add languages
-                languages = data.get('languages', {})
-                for code, name in languages.items():
-                    lang = models.Language(
-                        country_id=country.id,
-                        name=name,
-                        code=code,
-                        is_official=True
-                    )
-                    db.add(lang)
+            # Always sync languages
+            languages = data.get('languages', {})
+            # Clear existing languages to avoid duplicates on sync
+            db.query(models.Language).filter(models.Language.country_id == country.id).delete()
+            for code, name in languages.items():
+                lang = models.Language(
+                    country_id=country.id,
+                    name=name,
+                    code=code,
+                    is_official=True
+                )
+                db.add(lang)
 
-                # Add currency
-                currencies = data.get('currencies', {})
-                if currencies:
-                    curr_code = list(currencies.keys())[0]
-                    curr_data = currencies[curr_code]
+            # Always sync currency
+            currencies = data.get('currencies', {})
+            if currencies:
+                curr_code = list(currencies.keys())[0]
+                curr_data = currencies[curr_code]
 
+                existing_curr = db.query(models.Currency).filter(models.Currency.country_id == country.id).first()
+                if existing_curr:
+                    existing_curr.code = curr_code
+                    existing_curr.name = curr_data.get('name')
+                    existing_curr.symbol = curr_data.get('symbol')
+                else:
                     currency = models.Currency(
                         country_id=country.id,
                         code=curr_code,
