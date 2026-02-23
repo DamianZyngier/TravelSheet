@@ -7,7 +7,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇳",
     "flag_url": "https://flagcdn.com/w320/vn.png",
     "population": null,
     "safety": {
@@ -21,11 +21,11 @@
       "rate_pln": 0.000138
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -48,7 +48,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇫",
     "flag_url": "https://flagcdn.com/w320/gf.png",
     "population": null,
     "safety": {
@@ -62,11 +62,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -89,7 +89,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇽",
     "flag_url": "https://flagcdn.com/w320/sx.png",
     "population": null,
     "safety": {
@@ -103,11 +103,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -130,7 +130,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇬",
     "flag_url": "https://flagcdn.com/w320/vg.png",
     "population": null,
     "safety": {
@@ -144,11 +144,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -171,7 +171,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇬",
     "flag_url": "https://flagcdn.com/w320/pg.png",
     "population": null,
     "safety": {
@@ -185,11 +185,11 @@
       "rate_pln": 0.826446
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -212,7 +212,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇱",
     "flag_url": "https://flagcdn.com/w320/cl.png",
     "population": null,
     "safety": {
@@ -226,11 +226,11 @@
       "rate_pln": 0.004142
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -253,7 +253,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇺",
     "flag_url": "https://flagcdn.com/w320/hu.png",
     "population": null,
     "safety": {
@@ -267,11 +267,11 @@
       "rate_pln": 0.011107
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -294,7 +294,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇴",
     "flag_url": "https://flagcdn.com/w320/co.png",
     "population": null,
     "safety": {
@@ -308,11 +308,11 @@
       "rate_pln": 0.000968
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -335,7 +335,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇯",
     "flag_url": "https://flagcdn.com/w320/dj.png",
     "population": null,
     "safety": {
@@ -349,11 +349,11 @@
       "rate_pln": 0.020125
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -376,7 +376,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇼",
     "flag_url": "https://flagcdn.com/w320/aw.png",
     "population": null,
     "safety": {
@@ -390,11 +390,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -417,7 +417,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇴",
     "flag_url": "https://flagcdn.com/w320/to.png",
     "population": null,
     "safety": {
@@ -431,11 +431,11 @@
       "rate_pln": 1.526718
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -458,7 +458,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇰",
     "flag_url": "https://flagcdn.com/w320/dk.png",
     "population": null,
     "safety": {
@@ -472,11 +472,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -499,7 +499,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇽",
     "flag_url": "https://flagcdn.com/w320/cx.png",
     "population": null,
     "safety": {
@@ -540,7 +540,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇴",
     "flag_url": "https://flagcdn.com/w320/do.png",
     "population": null,
     "safety": {
@@ -554,11 +554,11 @@
       "rate_pln": 0.058309
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -581,7 +581,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇽",
     "flag_url": "https://flagcdn.com/w320/mx.png",
     "population": null,
     "safety": {
@@ -595,11 +595,11 @@
       "rate_pln": 0.208768
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -622,7 +622,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇧",
     "flag_url": "https://flagcdn.com/w320/gb.png",
     "population": null,
     "safety": {
@@ -637,10 +637,10 @@
     },
     "practical": {
       "plug_types": "G",
-      "voltage": 230,
-      "water_safe": true,
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -663,7 +663,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇷",
     "flag_url": "https://flagcdn.com/w320/tr.png",
     "population": null,
     "safety": {
@@ -677,11 +677,11 @@
       "rate_pln": 0.081699
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": false,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -704,7 +704,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇰",
     "flag_url": "https://flagcdn.com/w320/mk.png",
     "population": null,
     "safety": {
@@ -718,11 +718,11 @@
       "rate_pln": 0.068353
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -745,7 +745,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇦",
     "flag_url": "https://flagcdn.com/w320/ua.png",
     "population": null,
     "safety": {
@@ -759,11 +759,11 @@
       "rate_pln": 0.082919
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -786,7 +786,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇪",
     "flag_url": "https://flagcdn.com/w320/ve.png",
     "population": null,
     "safety": {
@@ -800,11 +800,11 @@
       "rate_pln": 0.008824
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -827,7 +827,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇫",
     "flag_url": "https://flagcdn.com/w320/bf.png",
     "population": null,
     "safety": {
@@ -841,11 +841,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -868,7 +868,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇷",
     "flag_url": "https://flagcdn.com/w320/er.png",
     "population": null,
     "safety": {
@@ -882,11 +882,11 @@
       "rate_pln": 0.238663
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -909,7 +909,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇭",
     "flag_url": "https://flagcdn.com/w320/eh.png",
     "population": null,
     "safety": {
@@ -923,11 +923,11 @@
       "rate_pln": 0.027556
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -950,7 +950,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇯🇪",
     "flag_url": "https://flagcdn.com/w320/je.png",
     "population": null,
     "safety": {
@@ -964,11 +964,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -991,7 +991,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇱",
     "flag_url": "https://flagcdn.com/w320/bl.png",
     "population": null,
     "safety": {
@@ -1005,11 +1005,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1032,7 +1032,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇺",
     "flag_url": "https://flagcdn.com/w320/lu.png",
     "population": null,
     "safety": {
@@ -1046,11 +1046,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1073,7 +1073,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇷🇪",
     "flag_url": "https://flagcdn.com/w320/re.png",
     "population": null,
     "safety": {
@@ -1087,11 +1087,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1114,7 +1114,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇻",
     "flag_url": "https://flagcdn.com/w320/tv.png",
     "population": null,
     "safety": {
@@ -1128,11 +1128,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1155,7 +1155,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇷",
     "flag_url": "https://flagcdn.com/w320/cr.png",
     "population": null,
     "safety": {
@@ -1169,11 +1169,11 @@
       "rate_pln": 0.00748
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1196,7 +1196,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇷🇴",
     "flag_url": "https://flagcdn.com/w320/ro.png",
     "population": null,
     "safety": {
@@ -1210,11 +1210,11 @@
       "rate_pln": 0.826446
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1237,7 +1237,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇷",
     "flag_url": "https://flagcdn.com/w320/gr.png",
     "population": null,
     "safety": {
@@ -1251,11 +1251,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1278,7 +1278,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇿🇼",
     "flag_url": "https://flagcdn.com/w320/zw.png",
     "population": null,
     "safety": {
@@ -1292,11 +1292,11 @@
       "rate_pln": 0.140056
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1319,7 +1319,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇨",
     "flag_url": "https://flagcdn.com/w320/mc.png",
     "population": null,
     "safety": {
@@ -1333,11 +1333,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1360,7 +1360,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇯",
     "flag_url": "https://flagcdn.com/w320/sj.png",
     "population": null,
     "safety": {
@@ -1374,11 +1374,11 @@
       "rate_pln": 0.37594
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1401,7 +1401,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇮",
     "flag_url": "https://flagcdn.com/w320/vi.png",
     "population": null,
     "safety": {
@@ -1415,11 +1415,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1442,7 +1442,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇦",
     "flag_url": "https://flagcdn.com/w320/ca.png",
     "population": null,
     "safety": {
@@ -1456,11 +1456,11 @@
       "rate_pln": 2.617801
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1483,7 +1483,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇭",
     "flag_url": "https://flagcdn.com/w320/gh.png",
     "population": null,
     "safety": {
@@ -1497,11 +1497,11 @@
       "rate_pln": 0.325733
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1524,7 +1524,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇮",
     "flag_url": "https://flagcdn.com/w320/ci.png",
     "population": null,
     "safety": {
@@ -1538,11 +1538,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1565,7 +1565,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇲",
     "flag_url": "https://flagcdn.com/w320/mm.png",
     "population": null,
     "safety": {
@@ -1579,11 +1579,11 @@
       "rate_pln": 0.001706
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, D, G, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1606,7 +1606,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇷",
     "flag_url": "https://flagcdn.com/w320/mr.png",
     "population": null,
     "safety": {
@@ -1620,11 +1620,11 @@
       "rate_pln": 0.089526
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1647,7 +1647,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇯🇲",
     "flag_url": "https://flagcdn.com/w320/jm.png",
     "population": null,
     "safety": {
@@ -1661,11 +1661,11 @@
       "rate_pln": 0.022973
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1688,7 +1688,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇸",
     "flag_url": "https://flagcdn.com/w320/ss.png",
     "population": null,
     "safety": {
@@ -1702,11 +1702,11 @@
       "rate_pln": 0.000782
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1729,7 +1729,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇳",
     "flag_url": "https://flagcdn.com/w320/bn.png",
     "population": null,
     "safety": {
@@ -1743,11 +1743,11 @@
       "rate_pln": 2.824859
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1770,7 +1770,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇬",
     "flag_url": "https://flagcdn.com/w320/sg.png",
     "population": null,
     "safety": {
@@ -1784,11 +1784,11 @@
       "rate_pln": 2.824859
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1811,7 +1811,7 @@
     "capital": null,
     "continent": "Antarctica",
     "region": "Antarctic",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇻",
     "flag_url": "https://flagcdn.com/w320/bv.png",
     "population": null,
     "safety": {
@@ -1852,7 +1852,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇿",
     "flag_url": "https://flagcdn.com/w320/nz.png",
     "population": null,
     "safety": {
@@ -1866,11 +1866,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1893,7 +1893,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇸",
     "flag_url": "https://flagcdn.com/w320/es.png",
     "population": null,
     "safety": {
@@ -1907,11 +1907,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1934,7 +1934,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇭",
     "flag_url": "https://flagcdn.com/w320/ph.png",
     "population": null,
     "safety": {
@@ -1948,11 +1948,11 @@
       "rate_pln": 0.061652
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1975,7 +1975,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇱",
     "flag_url": "https://flagcdn.com/w320/pl.png",
     "population": null,
     "safety": {
@@ -1989,11 +1989,11 @@
       "rate_pln": 1.0
     },
     "practical": {
-      "plug_types": "C,E",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, E",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2016,7 +2016,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇬",
     "flag_url": "https://flagcdn.com/w320/cg.png",
     "population": null,
     "safety": {
@@ -2030,11 +2030,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2057,7 +2057,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇨",
     "flag_url": "https://flagcdn.com/w320/nc.png",
     "population": null,
     "safety": {
@@ -2071,11 +2071,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2098,7 +2098,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇿",
     "flag_url": "https://flagcdn.com/w320/az.png",
     "population": null,
     "safety": {
@@ -2112,11 +2112,11 @@
       "rate_pln": 2.109705
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2139,7 +2139,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇼",
     "flag_url": "https://flagcdn.com/w320/tw.png",
     "population": null,
     "safety": {
@@ -2153,11 +2153,11 @@
       "rate_pln": 0.113766
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2180,7 +2180,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇹",
     "flag_url": "https://flagcdn.com/w320/it.png",
     "population": null,
     "safety": {
@@ -2194,11 +2194,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F,L",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F, L",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2221,7 +2221,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇽",
     "flag_url": "https://flagcdn.com/w320/ax.png",
     "population": null,
     "safety": {
@@ -2262,7 +2262,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇿",
     "flag_url": "https://flagcdn.com/w320/dz.png",
     "population": null,
     "safety": {
@@ -2276,11 +2276,11 @@
       "rate_pln": 0.027556
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2303,7 +2303,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇩",
     "flag_url": "https://flagcdn.com/w320/ad.png",
     "population": null,
     "safety": {
@@ -2317,11 +2317,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2344,7 +2344,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇨",
     "flag_url": "https://flagcdn.com/w320/tc.png",
     "population": null,
     "safety": {
@@ -2358,11 +2358,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2385,7 +2385,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇸",
     "flag_url": "https://flagcdn.com/w320/is.png",
     "population": null,
     "safety": {
@@ -2399,11 +2399,11 @@
       "rate_pln": 0.029146
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2426,7 +2426,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇩",
     "flag_url": "https://flagcdn.com/w320/td.png",
     "population": null,
     "safety": {
@@ -2440,11 +2440,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2467,7 +2467,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇸",
     "flag_url": "https://flagcdn.com/w320/bs.png",
     "population": null,
     "safety": {
@@ -2481,11 +2481,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2508,7 +2508,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇷",
     "flag_url": "https://flagcdn.com/w320/br.png",
     "population": null,
     "safety": {
@@ -2522,11 +2522,11 @@
       "rate_pln": 0.689655
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "N",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2549,7 +2549,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇭",
     "flag_url": "https://flagcdn.com/w320/th.png",
     "population": null,
     "safety": {
@@ -2563,11 +2563,11 @@
       "rate_pln": 0.115207
     },
     "practical": {
-      "plug_types": "A,B,C,O",
-      "voltage": 220,
-      "water_safe": false,
+      "plug_types": "A, B, C, O",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2590,7 +2590,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇲",
     "flag_url": "https://flagcdn.com/w320/fm.png",
     "population": null,
     "safety": {
@@ -2631,7 +2631,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇱",
     "flag_url": "https://flagcdn.com/w320/il.png",
     "population": null,
     "safety": {
@@ -2645,11 +2645,11 @@
       "rate_pln": 1.148106
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, H, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2672,7 +2672,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇮",
     "flag_url": "https://flagcdn.com/w320/ai.png",
     "population": null,
     "safety": {
@@ -2686,11 +2686,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2713,7 +2713,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇲",
     "flag_url": "https://flagcdn.com/w320/dm.png",
     "population": null,
     "safety": {
@@ -2727,11 +2727,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2754,7 +2754,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇱",
     "flag_url": "https://flagcdn.com/w320/ml.png",
     "population": null,
     "safety": {
@@ -2768,11 +2768,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2795,7 +2795,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇿",
     "flag_url": "https://flagcdn.com/w320/mz.png",
     "population": null,
     "safety": {
@@ -2809,11 +2809,11 @@
       "rate_pln": 0.056275
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2836,7 +2836,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇾",
     "flag_url": "https://flagcdn.com/w320/sy.png",
     "population": null,
     "safety": {
@@ -2850,11 +2850,11 @@
       "rate_pln": 0.031898
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2877,7 +2877,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇾🇪",
     "flag_url": "https://flagcdn.com/w320/ye.png",
     "population": null,
     "safety": {
@@ -2891,11 +2891,11 @@
       "rate_pln": 0.015038
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2918,7 +2918,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇰",
     "flag_url": "https://flagcdn.com/w320/sk.png",
     "population": null,
     "safety": {
@@ -2932,11 +2932,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2959,7 +2959,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇶",
     "flag_url": "https://flagcdn.com/w320/mq.png",
     "population": null,
     "safety": {
@@ -2973,11 +2973,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3000,7 +3000,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇨",
     "flag_url": "https://flagcdn.com/w320/vc.png",
     "population": null,
     "safety": {
@@ -3014,11 +3014,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, E, G, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3041,7 +3041,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇾",
     "flag_url": "https://flagcdn.com/w320/gy.png",
     "population": null,
     "safety": {
@@ -3055,11 +3055,11 @@
       "rate_pln": 0.017117
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3082,7 +3082,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇪",
     "flag_url": "https://flagcdn.com/w320/me.png",
     "population": null,
     "safety": {
@@ -3096,11 +3096,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3123,7 +3123,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇮",
     "flag_url": "https://flagcdn.com/w320/gi.png",
     "population": null,
     "safety": {
@@ -3137,11 +3137,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3164,7 +3164,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇶🇦",
     "flag_url": "https://flagcdn.com/w320/qa.png",
     "population": null,
     "safety": {
@@ -3178,11 +3178,11 @@
       "rate_pln": 0.980392
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3205,7 +3205,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇹",
     "flag_url": "https://flagcdn.com/w320/st.png",
     "population": null,
     "safety": {
@@ -3219,11 +3219,11 @@
       "rate_pln": 0.172414
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3246,7 +3246,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇿",
     "flag_url": "https://flagcdn.com/w320/uz.png",
     "population": null,
     "safety": {
@@ -3260,11 +3260,11 @@
       "rate_pln": 0.000293
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3287,7 +3287,7 @@
     "capital": null,
     "continent": "Antarctica",
     "region": "Antarctic",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇸",
     "flag_url": "https://flagcdn.com/w320/gs.png",
     "population": null,
     "safety": {
@@ -3301,11 +3301,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3328,7 +3328,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇪",
     "flag_url": "https://flagcdn.com/w320/se.png",
     "population": null,
     "safety": {
@@ -3342,11 +3342,11 @@
       "rate_pln": 0.395257
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3369,7 +3369,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇷",
     "flag_url": "https://flagcdn.com/w320/nr.png",
     "population": null,
     "safety": {
@@ -3383,11 +3383,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3410,7 +3410,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇾🇹",
     "flag_url": "https://flagcdn.com/w320/yt.png",
     "population": null,
     "safety": {
@@ -3424,11 +3424,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3451,7 +3451,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇮",
     "flag_url": "https://flagcdn.com/w320/ni.png",
     "population": null,
     "safety": {
@@ -3465,11 +3465,11 @@
       "rate_pln": 0.097371
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3492,7 +3492,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇴",
     "flag_url": "https://flagcdn.com/w320/io.png",
     "population": null,
     "safety": {
@@ -3533,7 +3533,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇺",
     "flag_url": "https://flagcdn.com/w320/vu.png",
     "population": null,
     "safety": {
@@ -3547,11 +3547,11 @@
       "rate_pln": 0.030534
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3574,7 +3574,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇳",
     "flag_url": "https://flagcdn.com/w320/cn.png",
     "population": null,
     "safety": {
@@ -3588,11 +3588,11 @@
       "rate_pln": 0.518135
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3615,7 +3615,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇵",
     "flag_url": "https://flagcdn.com/w320/kp.png",
     "population": null,
     "safety": {
@@ -3629,11 +3629,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3656,7 +3656,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇩",
     "flag_url": "https://flagcdn.com/w320/id.png",
     "population": null,
     "safety": {
@@ -3670,11 +3670,11 @@
       "rate_pln": 0.000212
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3697,7 +3697,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇪",
     "flag_url": "https://flagcdn.com/w320/be.png",
     "population": null,
     "safety": {
@@ -3711,11 +3711,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3738,7 +3738,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇿",
     "flag_url": "https://flagcdn.com/w320/cz.png",
     "population": null,
     "safety": {
@@ -3752,11 +3752,11 @@
       "rate_pln": 0.174216
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3779,7 +3779,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇫",
     "flag_url": "https://flagcdn.com/w320/cf.png",
     "population": null,
     "safety": {
@@ -3793,11 +3793,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3820,7 +3820,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇦",
     "flag_url": "https://flagcdn.com/w320/pa.png",
     "population": null,
     "safety": {
@@ -3834,11 +3834,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3861,7 +3861,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇪",
     "flag_url": "https://flagcdn.com/w320/ae.png",
     "population": null,
     "safety": {
@@ -3875,11 +3875,11 @@
       "rate_pln": 0.970874
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3902,7 +3902,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇼",
     "flag_url": "https://flagcdn.com/w320/gw.png",
     "population": null,
     "safety": {
@@ -3916,11 +3916,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3943,7 +3943,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇯",
     "flag_url": "https://flagcdn.com/w320/bj.png",
     "population": null,
     "safety": {
@@ -3957,11 +3957,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3984,7 +3984,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇫",
     "flag_url": "https://flagcdn.com/w320/nf.png",
     "population": null,
     "safety": {
@@ -3998,11 +3998,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4025,7 +4025,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇩",
     "flag_url": "https://flagcdn.com/w320/md.png",
     "population": null,
     "safety": {
@@ -4039,11 +4039,11 @@
       "rate_pln": 0.209205
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4066,7 +4066,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇼🇸",
     "flag_url": "https://flagcdn.com/w320/ws.png",
     "population": null,
     "safety": {
@@ -4080,11 +4080,11 @@
       "rate_pln": 1.342282
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4107,7 +4107,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇳",
     "flag_url": "https://flagcdn.com/w320/tn.png",
     "population": null,
     "safety": {
@@ -4121,11 +4121,11 @@
       "rate_pln": 1.248439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4148,7 +4148,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇨",
     "flag_url": "https://flagcdn.com/w320/ec.png",
     "population": null,
     "safety": {
@@ -4162,11 +4162,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4189,7 +4189,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇪",
     "flag_url": "https://flagcdn.com/w320/ne.png",
     "population": null,
     "safety": {
@@ -4203,11 +4203,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, D, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4230,7 +4230,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇰",
     "flag_url": "https://flagcdn.com/w320/ck.png",
     "population": null,
     "safety": {
@@ -4244,11 +4244,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4271,7 +4271,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇵",
     "flag_url": "https://flagcdn.com/w320/mp.png",
     "population": null,
     "safety": {
@@ -4312,7 +4312,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇬",
     "flag_url": "https://flagcdn.com/w320/ag.png",
     "population": null,
     "safety": {
@@ -4326,11 +4326,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4353,7 +4353,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇾",
     "flag_url": "https://flagcdn.com/w320/my.png",
     "population": null,
     "safety": {
@@ -4367,11 +4367,11 @@
       "rate_pln": 0.917431
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4394,7 +4394,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇵",
     "flag_url": "https://flagcdn.com/w320/gp.png",
     "population": null,
     "safety": {
@@ -4408,11 +4408,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4435,7 +4435,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇴🇲",
     "flag_url": "https://flagcdn.com/w320/om.png",
     "population": null,
     "safety": {
@@ -4449,11 +4449,11 @@
       "rate_pln": 9.345794
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4476,7 +4476,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇷",
     "flag_url": "https://flagcdn.com/w320/kr.png",
     "population": null,
     "safety": {
@@ -4490,11 +4490,11 @@
       "rate_pln": 0.002476
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4517,7 +4517,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇳",
     "flag_url": "https://flagcdn.com/w320/pn.png",
     "population": null,
     "safety": {
@@ -4531,11 +4531,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4558,7 +4558,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇦",
     "flag_url": "https://flagcdn.com/w320/ba.png",
     "population": null,
     "safety": {
@@ -4572,11 +4572,11 @@
       "rate_pln": 2.159827
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4599,7 +4599,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇸",
     "flag_url": "https://flagcdn.com/w320/ls.png",
     "population": null,
     "safety": {
@@ -4613,11 +4613,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4640,7 +4640,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇯🇵",
     "flag_url": "https://flagcdn.com/w320/jp.png",
     "population": null,
     "safety": {
@@ -4654,11 +4654,11 @@
       "rate_pln": 0.023121
     },
     "practical": {
-      "plug_types": "A,B",
-      "voltage": 100,
-      "water_safe": true,
+      "plug_types": "A, B",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4681,7 +4681,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇲",
     "flag_url": "https://flagcdn.com/w320/tm.png",
     "population": null,
     "safety": {
@@ -4695,11 +4695,11 @@
       "rate_pln": 1.023541
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4722,7 +4722,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇼",
     "flag_url": "https://flagcdn.com/w320/cw.png",
     "population": null,
     "safety": {
@@ -4736,11 +4736,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4763,7 +4763,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇷",
     "flag_url": "https://flagcdn.com/w320/hr.png",
     "population": null,
     "safety": {
@@ -4777,11 +4777,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4804,7 +4804,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇴",
     "flag_url": "https://flagcdn.com/w320/fo.png",
     "population": null,
     "safety": {
@@ -4818,11 +4818,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4845,7 +4845,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇹",
     "flag_url": "https://flagcdn.com/w320/bt.png",
     "population": null,
     "safety": {
@@ -4859,11 +4859,11 @@
       "rate_pln": 0.039448
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4886,7 +4886,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇮",
     "flag_url": "https://flagcdn.com/w320/si.png",
     "population": null,
     "safety": {
@@ -4900,11 +4900,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4927,7 +4927,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇦",
     "flag_url": "https://flagcdn.com/w320/la.png",
     "population": null,
     "safety": {
@@ -4941,11 +4941,11 @@
       "rate_pln": 0.000166
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4968,7 +4968,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇬",
     "flag_url": "https://flagcdn.com/w320/gg.png",
     "population": null,
     "safety": {
@@ -4982,11 +4982,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5009,7 +5009,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇧",
     "flag_url": "https://flagcdn.com/w320/lb.png",
     "population": null,
     "safety": {
@@ -5023,11 +5023,11 @@
       "rate_pln": 4e-05
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5050,7 +5050,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇹",
     "flag_url": "https://flagcdn.com/w320/mt.png",
     "population": null,
     "safety": {
@@ -5064,11 +5064,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5091,7 +5091,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇾",
     "flag_url": "https://flagcdn.com/w320/ky.png",
     "population": null,
     "safety": {
@@ -5105,11 +5105,11 @@
       "rate_pln": 4.291845
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5132,7 +5132,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇷🇸",
     "flag_url": "https://flagcdn.com/w320/rs.png",
     "population": null,
     "safety": {
@@ -5146,11 +5146,11 @@
       "rate_pln": 0.035958
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5173,7 +5173,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇻",
     "flag_url": "https://flagcdn.com/w320/lv.png",
     "population": null,
     "safety": {
@@ -5187,11 +5187,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5214,7 +5214,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇩",
     "flag_url": "https://flagcdn.com/w320/cd.png",
     "population": null,
     "safety": {
@@ -5228,11 +5228,11 @@
       "rate_pln": 0.001548
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5255,7 +5255,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇾",
     "flag_url": "https://flagcdn.com/w320/cy.png",
     "population": null,
     "safety": {
@@ -5269,11 +5269,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5296,7 +5296,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇦",
     "flag_url": "https://flagcdn.com/w320/ga.png",
     "population": null,
     "safety": {
@@ -5310,11 +5310,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5337,7 +5337,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇱",
     "flag_url": "https://flagcdn.com/w320/sl.png",
     "population": null,
     "safety": {
@@ -5351,11 +5351,11 @@
       "rate_pln": 0.145773
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5378,7 +5378,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇶",
     "flag_url": "https://flagcdn.com/w320/iq.png",
     "population": null,
     "safety": {
@@ -5392,11 +5392,11 @@
       "rate_pln": 0.002732
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5419,7 +5419,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇼",
     "flag_url": "https://flagcdn.com/w320/bw.png",
     "population": null,
     "safety": {
@@ -5433,11 +5433,11 @@
       "rate_pln": 0.271003
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5460,7 +5460,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇶",
     "flag_url": "https://flagcdn.com/w320/bq.png",
     "population": null,
     "safety": {
@@ -5501,7 +5501,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇴",
     "flag_url": "https://flagcdn.com/w320/so.png",
     "population": null,
     "safety": {
@@ -5515,11 +5515,11 @@
       "rate_pln": 0.006272
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5542,7 +5542,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇺",
     "flag_url": "https://flagcdn.com/w320/mu.png",
     "population": null,
     "safety": {
@@ -5556,11 +5556,11 @@
       "rate_pln": 0.07728
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5583,7 +5583,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇪",
     "flag_url": "https://flagcdn.com/w320/ge.png",
     "population": null,
     "safety": {
@@ -5597,11 +5597,11 @@
       "rate_pln": 1.338688
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5624,7 +5624,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇬",
     "flag_url": "https://flagcdn.com/w320/mg.png",
     "population": null,
     "safety": {
@@ -5638,11 +5638,11 @@
       "rate_pln": 0.000832
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5665,7 +5665,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇲",
     "flag_url": "https://flagcdn.com/w320/um.png",
     "population": null,
     "safety": {
@@ -5706,7 +5706,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇾",
     "flag_url": "https://flagcdn.com/w320/ly.png",
     "population": null,
     "safety": {
@@ -5720,11 +5720,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5747,7 +5747,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇹",
     "flag_url": "https://flagcdn.com/w320/at.png",
     "population": null,
     "safety": {
@@ -5761,11 +5761,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5788,7 +5788,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇺",
     "flag_url": "https://flagcdn.com/w320/nu.png",
     "population": null,
     "safety": {
@@ -5802,11 +5802,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5829,7 +5829,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇹",
     "flag_url": "https://flagcdn.com/w320/et.png",
     "population": null,
     "safety": {
@@ -5843,11 +5843,11 @@
       "rate_pln": 0.023047
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5870,7 +5870,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇲",
     "flag_url": "https://flagcdn.com/w320/cm.png",
     "population": null,
     "safety": {
@@ -5884,11 +5884,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5911,7 +5911,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇬",
     "flag_url": "https://flagcdn.com/w320/eg.png",
     "population": null,
     "safety": {
@@ -5925,11 +5925,11 @@
       "rate_pln": 0.075472
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 220,
-      "water_safe": false,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "low"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5952,7 +5952,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇼",
     "flag_url": "https://flagcdn.com/w320/pw.png",
     "population": null,
     "safety": {
@@ -5966,11 +5966,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5993,7 +5993,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇨",
     "flag_url": "https://flagcdn.com/w320/lc.png",
     "population": null,
     "safety": {
@@ -6007,11 +6007,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6034,7 +6034,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇷",
     "flag_url": "https://flagcdn.com/w320/pr.png",
     "population": null,
     "safety": {
@@ -6048,11 +6048,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6075,7 +6075,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇫",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
     "population": null,
     "safety": {
@@ -6089,11 +6089,11 @@
       "rate_pln": 0.056915
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6116,7 +6116,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇱",
     "flag_url": "https://flagcdn.com/w320/al.png",
     "population": null,
     "safety": {
@@ -6130,11 +6130,11 @@
       "rate_pln": 0.04384
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6157,7 +6157,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇷🇺",
     "flag_url": "https://flagcdn.com/w320/ru.png",
     "population": null,
     "safety": {
@@ -6171,11 +6171,11 @@
       "rate_pln": 0.046707
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6198,7 +6198,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇩",
     "flag_url": "https://flagcdn.com/w320/gd.png",
     "population": null,
     "safety": {
@@ -6212,11 +6212,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6239,7 +6239,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇽🇰",
     "flag_url": "https://flagcdn.com/w320/xk.png",
     "population": null,
     "safety": {
@@ -6280,7 +6280,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇮",
     "flag_url": "https://flagcdn.com/w320/bi.png",
     "population": null,
     "safety": {
@@ -6294,11 +6294,11 @@
       "rate_pln": 0.001207
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6321,7 +6321,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇲",
     "flag_url": "https://flagcdn.com/w320/km.png",
     "population": null,
     "safety": {
@@ -6335,11 +6335,11 @@
       "rate_pln": 0.008586
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6362,7 +6362,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇾",
     "flag_url": "https://flagcdn.com/w320/by.png",
     "population": null,
     "safety": {
@@ -6376,11 +6376,11 @@
       "rate_pln": 1.256281
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6403,7 +6403,7 @@
     "capital": null,
     "continent": "Antarctica",
     "region": "Antarctic",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇲",
     "flag_url": "https://flagcdn.com/w320/hm.png",
     "population": null,
     "safety": {
@@ -6444,7 +6444,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇿",
     "flag_url": "https://flagcdn.com/w320/tz.png",
     "population": null,
     "safety": {
@@ -6458,11 +6458,11 @@
       "rate_pln": 0.001383
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6485,7 +6485,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇬",
     "flag_url": "https://flagcdn.com/w320/bg.png",
     "population": null,
     "safety": {
@@ -6499,11 +6499,11 @@
       "rate_pln": 1.945525
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6526,7 +6526,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇻",
     "flag_url": "https://flagcdn.com/w320/sv.png",
     "population": null,
     "safety": {
@@ -6540,11 +6540,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6567,7 +6567,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇱",
     "flag_url": "https://flagcdn.com/w320/nl.png",
     "population": null,
     "safety": {
@@ -6581,11 +6581,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6608,7 +6608,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇻🇦",
     "flag_url": "https://flagcdn.com/w320/va.png",
     "population": null,
     "safety": {
@@ -6622,11 +6622,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6649,7 +6649,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇰",
     "flag_url": "https://flagcdn.com/w320/lk.png",
     "population": null,
     "safety": {
@@ -6663,11 +6663,11 @@
       "rate_pln": 0.011574
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6690,7 +6690,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇮",
     "flag_url": "https://flagcdn.com/w320/fi.png",
     "population": null,
     "safety": {
@@ -6704,11 +6704,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6731,7 +6731,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇫",
     "flag_url": "https://flagcdn.com/w320/pf.png",
     "population": null,
     "safety": {
@@ -6745,11 +6745,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6772,7 +6772,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇻",
     "flag_url": "https://flagcdn.com/w320/mv.png",
     "population": null,
     "safety": {
@@ -6786,11 +6786,11 @@
       "rate_pln": 0.232019
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, D, G, J, K, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6813,7 +6813,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇾",
     "flag_url": "https://flagcdn.com/w320/py.png",
     "population": null,
     "safety": {
@@ -6827,11 +6827,11 @@
       "rate_pln": 0.000552
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6854,7 +6854,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇿",
     "flag_url": "https://flagcdn.com/w320/sz.png",
     "population": null,
     "safety": {
@@ -6868,11 +6868,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6895,7 +6895,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇭",
     "flag_url": "https://flagcdn.com/w320/ch.png",
     "population": null,
     "safety": {
@@ -6909,11 +6909,11 @@
       "rate_pln": 4.62963
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6936,7 +6936,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇯",
     "flag_url": "https://flagcdn.com/w320/fj.png",
     "population": null,
     "safety": {
@@ -6950,11 +6950,11 @@
       "rate_pln": 1.615509
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6977,7 +6977,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇿🇦",
     "flag_url": "https://flagcdn.com/w320/za.png",
     "population": null,
     "safety": {
@@ -6991,11 +6991,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, M, N",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7018,7 +7018,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇯🇴",
     "flag_url": "https://flagcdn.com/w320/jo.png",
     "population": null,
     "safety": {
@@ -7032,11 +7032,11 @@
       "rate_pln": 5.050505
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "B, C, D, G, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7059,7 +7059,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇿",
     "flag_url": "https://flagcdn.com/w320/bz.png",
     "population": null,
     "safety": {
@@ -7073,11 +7073,11 @@
       "rate_pln": 1.788909
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7100,7 +7100,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇪",
     "flag_url": "https://flagcdn.com/w320/pe.png",
     "population": null,
     "safety": {
@@ -7114,11 +7114,11 @@
       "rate_pln": 1.067236
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7141,7 +7141,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇯",
     "flag_url": "https://flagcdn.com/w320/tj.png",
     "population": null,
     "safety": {
@@ -7155,11 +7155,11 @@
       "rate_pln": 0.381679
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7182,7 +7182,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇳",
     "flag_url": "https://flagcdn.com/w320/gn.png",
     "population": null,
     "safety": {
@@ -7196,11 +7196,11 @@
       "rate_pln": 0.00041
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7223,7 +7223,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇧",
     "flag_url": "https://flagcdn.com/w320/sb.png",
     "population": null,
     "safety": {
@@ -7237,11 +7237,11 @@
       "rate_pln": 0.45045
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7264,7 +7264,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇳",
     "flag_url": "https://flagcdn.com/w320/sn.png",
     "population": null,
     "safety": {
@@ -7278,11 +7278,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7305,7 +7305,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇱",
     "flag_url": "https://flagcdn.com/w320/gl.png",
     "population": null,
     "safety": {
@@ -7319,11 +7319,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7346,7 +7346,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇲",
     "flag_url": "https://flagcdn.com/w320/im.png",
     "population": null,
     "safety": {
@@ -7360,11 +7360,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7387,7 +7387,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇹",
     "flag_url": "https://flagcdn.com/w320/lt.png",
     "population": null,
     "safety": {
@@ -7401,11 +7401,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7428,7 +7428,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇳",
     "flag_url": "https://flagcdn.com/w320/mn.png",
     "population": null,
     "safety": {
@@ -7442,11 +7442,11 @@
       "rate_pln": 0.001013
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7469,7 +7469,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇴",
     "flag_url": "https://flagcdn.com/w320/bo.png",
     "population": null,
     "safety": {
@@ -7483,11 +7483,11 @@
       "rate_pln": 0.518135
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7510,7 +7510,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇿",
     "flag_url": "https://flagcdn.com/w320/kz.png",
     "population": null,
     "safety": {
@@ -7524,11 +7524,11 @@
       "rate_pln": 0.007202
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7551,7 +7551,7 @@
     "capital": null,
     "continent": "Antarctica",
     "region": "Antarctic",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇫",
     "flag_url": "https://flagcdn.com/w320/tf.png",
     "population": null,
     "safety": {
@@ -7592,7 +7592,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇰",
     "flag_url": "https://flagcdn.com/w320/hk.png",
     "population": null,
     "safety": {
@@ -7606,11 +7606,11 @@
       "rate_pln": 0.458716
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7633,7 +7633,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇸",
     "flag_url": "https://flagcdn.com/w320/ps.png",
     "population": null,
     "safety": {
@@ -7647,11 +7647,11 @@
       "rate_pln": 0.075472
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, H, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7674,7 +7674,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇷",
     "flag_url": "https://flagcdn.com/w320/ar.png",
     "population": null,
     "safety": {
@@ -7688,11 +7688,11 @@
       "rate_pln": 0.002463
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7715,7 +7715,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇸",
     "flag_url": "https://flagcdn.com/w320/as.png",
     "population": null,
     "safety": {
@@ -7729,11 +7729,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7756,7 +7756,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇫",
     "flag_url": "https://flagcdn.com/w320/mf.png",
     "population": null,
     "safety": {
@@ -7770,11 +7770,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7797,7 +7797,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇲",
     "flag_url": "https://flagcdn.com/w320/am.png",
     "population": null,
     "safety": {
@@ -7811,11 +7811,11 @@
       "rate_pln": 0.00951
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7838,7 +7838,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇴",
     "flag_url": "https://flagcdn.com/w320/ao.png",
     "population": null,
     "safety": {
@@ -7852,11 +7852,11 @@
       "rate_pln": 0.003875
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7879,7 +7879,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇬",
     "flag_url": "https://flagcdn.com/w320/tg.png",
     "population": null,
     "safety": {
@@ -7893,11 +7893,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7920,7 +7920,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇭",
     "flag_url": "https://flagcdn.com/w320/mh.png",
     "population": null,
     "safety": {
@@ -7934,11 +7934,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7961,7 +7961,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇭",
     "flag_url": "https://flagcdn.com/w320/bh.png",
     "population": null,
     "safety": {
@@ -7975,11 +7975,11 @@
       "rate_pln": 9.52381
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8002,7 +8002,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇪🇪",
     "flag_url": "https://flagcdn.com/w320/ee.png",
     "population": null,
     "safety": {
@@ -8016,11 +8016,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8043,7 +8043,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇸",
     "flag_url": "https://flagcdn.com/w320/ms.png",
     "population": null,
     "safety": {
@@ -8057,11 +8057,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8084,7 +8084,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇶",
     "flag_url": "https://flagcdn.com/w320/gq.png",
     "population": null,
     "safety": {
@@ -8098,11 +8098,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8125,7 +8125,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇬",
     "flag_url": "https://flagcdn.com/w320/ng.png",
     "population": null,
     "safety": {
@@ -8139,11 +8139,11 @@
       "rate_pln": 0.002665
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8166,7 +8166,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇲",
     "flag_url": "https://flagcdn.com/w320/bm.png",
     "population": null,
     "safety": {
@@ -8180,11 +8180,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8207,7 +8207,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇦",
     "flag_url": "https://flagcdn.com/w320/ma.png",
     "population": null,
     "safety": {
@@ -8221,11 +8221,11 @@
       "rate_pln": 0.390625
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8248,7 +8248,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇦",
     "flag_url": "https://flagcdn.com/w320/na.png",
     "population": null,
     "safety": {
@@ -8262,11 +8262,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8289,7 +8289,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇰",
     "flag_url": "https://flagcdn.com/w320/fk.png",
     "population": null,
     "safety": {
@@ -8303,11 +8303,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8330,7 +8330,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇨",
     "flag_url": "https://flagcdn.com/w320/sc.png",
     "population": null,
     "safety": {
@@ -8344,11 +8344,11 @@
       "rate_pln": 0.252525
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8371,7 +8371,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇿🇲",
     "flag_url": "https://flagcdn.com/w320/zm.png",
     "population": null,
     "safety": {
@@ -8385,11 +8385,11 @@
       "rate_pln": 0.189753
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8412,7 +8412,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇭",
     "flag_url": "https://flagcdn.com/w320/kh.png",
     "population": null,
     "safety": {
@@ -8426,11 +8426,11 @@
       "rate_pln": 0.000891
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8453,7 +8453,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇪",
     "flag_url": "https://flagcdn.com/w320/ie.png",
     "population": null,
     "safety": {
@@ -8467,11 +8467,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8494,7 +8494,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇰",
     "flag_url": "https://flagcdn.com/w320/pk.png",
     "population": null,
     "safety": {
@@ -8508,11 +8508,11 @@
       "rate_pln": 0.012809
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8535,7 +8535,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇺",
     "flag_url": "https://flagcdn.com/w320/gu.png",
     "population": null,
     "safety": {
@@ -8549,11 +8549,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8576,7 +8576,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇴",
     "flag_url": "https://flagcdn.com/w320/mo.png",
     "population": null,
     "safety": {
@@ -8590,11 +8590,11 @@
       "rate_pln": 0.444444
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8617,7 +8617,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇵",
     "flag_url": "https://flagcdn.com/w320/np.png",
     "population": null,
     "safety": {
@@ -8631,11 +8631,11 @@
       "rate_pln": 0.024655
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8658,7 +8658,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇳",
     "flag_url": "https://flagcdn.com/w320/in.png",
     "population": null,
     "safety": {
@@ -8672,11 +8672,11 @@
       "rate_pln": 0.039448
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8699,7 +8699,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇬",
     "flag_url": "https://flagcdn.com/w320/kg.png",
     "population": null,
     "safety": {
@@ -8713,11 +8713,11 @@
       "rate_pln": 0.04095
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8740,7 +8740,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇹",
     "flag_url": "https://flagcdn.com/w320/ht.png",
     "population": null,
     "safety": {
@@ -8754,11 +8754,11 @@
       "rate_pln": 0.027285
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8781,7 +8781,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇩🇪",
     "flag_url": "https://flagcdn.com/w320/de.png",
     "population": null,
     "safety": {
@@ -8795,11 +8795,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8822,7 +8822,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇷🇼",
     "flag_url": "https://flagcdn.com/w320/rw.png",
     "population": null,
     "safety": {
@@ -8836,11 +8836,11 @@
       "rate_pln": 0.00246
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8863,7 +8863,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇼🇫",
     "flag_url": "https://flagcdn.com/w320/wf.png",
     "population": null,
     "safety": {
@@ -8877,11 +8877,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8904,7 +8904,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇸",
     "flag_url": "https://flagcdn.com/w320/us.png",
     "population": null,
     "safety": {
@@ -8918,11 +8918,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "A,B",
-      "voltage": 120,
-      "water_safe": true,
+      "plug_types": "A, B",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8945,7 +8945,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇪",
     "flag_url": "https://flagcdn.com/w320/ke.png",
     "population": null,
     "safety": {
@@ -8959,11 +8959,11 @@
       "rate_pln": 0.027793
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8986,7 +8986,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇲",
     "flag_url": "https://flagcdn.com/w320/gm.png",
     "population": null,
     "safety": {
@@ -9000,11 +9000,11 @@
       "rate_pln": 0.048333
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9027,7 +9027,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇩",
     "flag_url": "https://flagcdn.com/w320/bd.png",
     "population": null,
     "safety": {
@@ -9041,11 +9041,11 @@
       "rate_pln": 0.029291
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9068,7 +9068,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇳🇴",
     "flag_url": "https://flagcdn.com/w320/no.png",
     "population": null,
     "safety": {
@@ -9082,11 +9082,11 @@
       "rate_pln": 0.37594
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9109,7 +9109,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇧🇧",
     "flag_url": "https://flagcdn.com/w320/bb.png",
     "population": null,
     "safety": {
@@ -9123,11 +9123,11 @@
       "rate_pln": 1.788909
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9150,7 +9150,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇳",
     "flag_url": "https://flagcdn.com/w320/kn.png",
     "population": null,
     "safety": {
@@ -9164,11 +9164,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9191,7 +9191,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇮",
     "flag_url": "https://flagcdn.com/w320/ki.png",
     "population": null,
     "safety": {
@@ -9205,11 +9205,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9232,7 +9232,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇱",
     "flag_url": "https://flagcdn.com/w320/tl.png",
     "population": null,
     "safety": {
@@ -9246,11 +9246,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9273,7 +9273,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇦",
     "flag_url": "https://flagcdn.com/w320/sa.png",
     "population": null,
     "safety": {
@@ -9287,11 +9287,11 @@
       "rate_pln": 0.952381
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9314,7 +9314,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇨",
     "flag_url": "https://flagcdn.com/w320/cc.png",
     "population": null,
     "safety": {
@@ -9355,7 +9355,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇲",
     "flag_url": "https://flagcdn.com/w320/sm.png",
     "population": null,
     "safety": {
@@ -9369,11 +9369,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9396,7 +9396,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇬",
     "flag_url": "https://flagcdn.com/w320/ug.png",
     "population": null,
     "safety": {
@@ -9410,11 +9410,11 @@
       "rate_pln": 0.000998
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9437,7 +9437,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇲",
     "flag_url": "https://flagcdn.com/w320/pm.png",
     "population": null,
     "safety": {
@@ -9451,11 +9451,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9478,7 +9478,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇵🇹",
     "flag_url": "https://flagcdn.com/w320/pt.png",
     "population": null,
     "safety": {
@@ -9492,11 +9492,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9519,7 +9519,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇭",
     "flag_url": "https://flagcdn.com/w320/sh.png",
     "population": null,
     "safety": {
@@ -9533,11 +9533,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9560,7 +9560,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇲🇼",
     "flag_url": "https://flagcdn.com/w320/mw.png",
     "population": null,
     "safety": {
@@ -9574,11 +9574,11 @@
       "rate_pln": 0.002062
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9601,7 +9601,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇰",
     "flag_url": "https://flagcdn.com/w320/tk.png",
     "population": null,
     "safety": {
@@ -9615,11 +9615,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9642,7 +9642,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇭🇳",
     "flag_url": "https://flagcdn.com/w320/hn.png",
     "population": null,
     "safety": {
@@ -9656,11 +9656,11 @@
       "rate_pln": 0.135501
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9683,7 +9683,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇺🇾",
     "flag_url": "https://flagcdn.com/w320/uy.png",
     "population": null,
     "safety": {
@@ -9697,11 +9697,11 @@
       "rate_pln": 0.092764
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9724,7 +9724,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇻",
     "flag_url": "https://flagcdn.com/w320/cv.png",
     "population": null,
     "safety": {
@@ -9738,11 +9738,11 @@
       "rate_pln": 0.0383
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9765,7 +9765,7 @@
     "capital": null,
     "continent": "Antarctica",
     "region": "Antarctic",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇶",
     "flag_url": "https://flagcdn.com/w320/aq.png",
     "population": null,
     "safety": {
@@ -9779,11 +9779,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9806,7 +9806,7 @@
     "capital": null,
     "continent": "Oceania",
     "region": "Oceania",
-    "flag_emoji": null,
+    "flag_emoji": "🇦🇺",
     "flag_url": "https://flagcdn.com/w320/au.png",
     "population": null,
     "safety": {
@@ -9820,11 +9820,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9847,7 +9847,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇮🇷",
     "flag_url": "https://flagcdn.com/w320/ir.png",
     "population": null,
     "safety": {
@@ -9861,11 +9861,11 @@
       "rate_pln": 3e-06
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9888,7 +9888,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇩",
     "flag_url": "https://flagcdn.com/w320/sd.png",
     "population": null,
     "safety": {
@@ -9902,11 +9902,11 @@
       "rate_pln": 0.007804
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9929,7 +9929,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇬🇹",
     "flag_url": "https://flagcdn.com/w320/gt.png",
     "population": null,
     "safety": {
@@ -9943,11 +9943,11 @@
       "rate_pln": 0.46729
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9970,7 +9970,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇮",
     "flag_url": "https://flagcdn.com/w320/li.png",
     "population": null,
     "safety": {
@@ -9984,11 +9984,11 @@
       "rate_pln": 4.62963
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10011,7 +10011,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇹🇹",
     "flag_url": "https://flagcdn.com/w320/tt.png",
     "population": null,
     "safety": {
@@ -10025,11 +10025,11 @@
       "rate_pln": 0.529101
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10052,7 +10052,7 @@
     "capital": null,
     "continent": "North America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇨🇺",
     "flag_url": "https://flagcdn.com/w320/cu.png",
     "population": null,
     "safety": {
@@ -10066,11 +10066,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10093,7 +10093,7 @@
     "capital": null,
     "continent": "Europe",
     "region": "Europe",
-    "flag_emoji": null,
+    "flag_emoji": "🇫🇷",
     "flag_url": "https://flagcdn.com/w320/fr.png",
     "population": null,
     "safety": {
@@ -10107,11 +10107,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10134,7 +10134,7 @@
     "capital": null,
     "continent": "South America",
     "region": "Americas",
-    "flag_emoji": null,
+    "flag_emoji": "🇸🇷",
     "flag_url": "https://flagcdn.com/w320/sr.png",
     "population": null,
     "safety": {
@@ -10148,11 +10148,11 @@
       "rate_pln": 0.09542
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10175,7 +10175,7 @@
     "capital": null,
     "continent": "Africa",
     "region": "Africa",
-    "flag_emoji": null,
+    "flag_emoji": "🇱🇷",
     "flag_url": "https://flagcdn.com/w320/lr.png",
     "population": null,
     "safety": {
@@ -10189,11 +10189,11 @@
       "rate_pln": 0.01935
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10216,7 +10216,7 @@
     "capital": null,
     "continent": "Asia",
     "region": "Asia",
-    "flag_emoji": null,
+    "flag_emoji": "🇰🇼",
     "flag_url": "https://flagcdn.com/w320/kw.png",
     "population": null,
     "safety": {
@@ -10230,11 +10230,11 @@
       "rate_pln": 11.709602
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
