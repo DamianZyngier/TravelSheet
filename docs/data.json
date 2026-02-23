@@ -21,11 +21,11 @@
       "rate_pln": 0.000138
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -62,11 +62,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -103,11 +103,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -144,11 +144,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -185,11 +185,11 @@
       "rate_pln": 0.826446
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -226,11 +226,11 @@
       "rate_pln": 0.004142
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -267,11 +267,11 @@
       "rate_pln": 0.011107
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -308,11 +308,11 @@
       "rate_pln": 0.000968
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -349,11 +349,11 @@
       "rate_pln": 0.020125
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -390,11 +390,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -431,11 +431,11 @@
       "rate_pln": 1.526718
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -472,11 +472,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -554,11 +554,11 @@
       "rate_pln": 0.058309
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -595,11 +595,11 @@
       "rate_pln": 0.208768
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -637,10 +637,10 @@
     },
     "practical": {
       "plug_types": "G",
-      "voltage": 230,
-      "water_safe": true,
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -677,11 +677,11 @@
       "rate_pln": 0.081699
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": false,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -718,11 +718,11 @@
       "rate_pln": 0.068353
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -759,11 +759,11 @@
       "rate_pln": 0.082919
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -800,11 +800,11 @@
       "rate_pln": 0.008824
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -841,11 +841,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -882,11 +882,11 @@
       "rate_pln": 0.238663
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -923,11 +923,11 @@
       "rate_pln": 0.027556
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -964,11 +964,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1005,11 +1005,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1046,11 +1046,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1087,11 +1087,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1128,11 +1128,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1169,11 +1169,11 @@
       "rate_pln": 0.00748
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1210,11 +1210,11 @@
       "rate_pln": 0.826446
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1251,11 +1251,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1292,11 +1292,11 @@
       "rate_pln": 0.140056
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1333,11 +1333,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1374,11 +1374,11 @@
       "rate_pln": 0.37594
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1415,11 +1415,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1456,11 +1456,11 @@
       "rate_pln": 2.617801
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1497,11 +1497,11 @@
       "rate_pln": 0.325733
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1538,11 +1538,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1579,11 +1579,11 @@
       "rate_pln": 0.001706
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, D, G, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1620,11 +1620,11 @@
       "rate_pln": 0.089526
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1661,11 +1661,11 @@
       "rate_pln": 0.022973
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1702,11 +1702,11 @@
       "rate_pln": 0.000782
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1743,11 +1743,11 @@
       "rate_pln": 2.824859
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1784,11 +1784,11 @@
       "rate_pln": 2.824859
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1866,11 +1866,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1907,11 +1907,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1948,11 +1948,11 @@
       "rate_pln": 0.061652
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -1989,11 +1989,11 @@
       "rate_pln": 1.0
     },
     "practical": {
-      "plug_types": "C,E",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, E",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2030,11 +2030,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2071,11 +2071,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2112,11 +2112,11 @@
       "rate_pln": 2.109705
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2153,11 +2153,11 @@
       "rate_pln": 0.113766
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2194,11 +2194,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F,L",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F, L",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2276,11 +2276,11 @@
       "rate_pln": 0.027556
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2317,11 +2317,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2358,11 +2358,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2399,11 +2399,11 @@
       "rate_pln": 0.029146
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2440,11 +2440,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2481,11 +2481,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2522,11 +2522,11 @@
       "rate_pln": 0.689655
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "N",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2563,11 +2563,11 @@
       "rate_pln": 0.115207
     },
     "practical": {
-      "plug_types": "A,B,C,O",
-      "voltage": 220,
-      "water_safe": false,
+      "plug_types": "A, B, C, O",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2645,11 +2645,11 @@
       "rate_pln": 1.148106
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, H, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2686,11 +2686,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2727,11 +2727,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2768,11 +2768,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2809,11 +2809,11 @@
       "rate_pln": 0.056275
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2850,11 +2850,11 @@
       "rate_pln": 0.031898
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2891,11 +2891,11 @@
       "rate_pln": 0.015038
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2932,11 +2932,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -2973,11 +2973,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3014,11 +3014,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, E, G, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3055,11 +3055,11 @@
       "rate_pln": 0.017117
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3096,11 +3096,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3137,11 +3137,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3178,11 +3178,11 @@
       "rate_pln": 0.980392
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3219,11 +3219,11 @@
       "rate_pln": 0.172414
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3260,11 +3260,11 @@
       "rate_pln": 0.000293
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3301,11 +3301,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3342,11 +3342,11 @@
       "rate_pln": 0.395257
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3383,11 +3383,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3424,11 +3424,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3465,11 +3465,11 @@
       "rate_pln": 0.097371
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3547,11 +3547,11 @@
       "rate_pln": 0.030534
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3588,11 +3588,11 @@
       "rate_pln": 0.518135
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3629,11 +3629,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3670,11 +3670,11 @@
       "rate_pln": 0.000212
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3711,11 +3711,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3752,11 +3752,11 @@
       "rate_pln": 0.174216
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3793,11 +3793,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3834,11 +3834,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3875,11 +3875,11 @@
       "rate_pln": 0.970874
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3916,11 +3916,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3957,11 +3957,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -3998,11 +3998,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4039,11 +4039,11 @@
       "rate_pln": 0.209205
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4080,11 +4080,11 @@
       "rate_pln": 1.342282
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4121,11 +4121,11 @@
       "rate_pln": 1.248439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4162,11 +4162,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4203,11 +4203,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, D, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4244,11 +4244,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4326,11 +4326,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4367,11 +4367,11 @@
       "rate_pln": 0.917431
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4408,11 +4408,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4449,11 +4449,11 @@
       "rate_pln": 9.345794
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4490,11 +4490,11 @@
       "rate_pln": 0.002476
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4531,11 +4531,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4572,11 +4572,11 @@
       "rate_pln": 2.159827
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4613,11 +4613,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4654,11 +4654,11 @@
       "rate_pln": 0.023121
     },
     "practical": {
-      "plug_types": "A,B",
-      "voltage": 100,
-      "water_safe": true,
+      "plug_types": "A, B",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4695,11 +4695,11 @@
       "rate_pln": 1.023541
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4736,11 +4736,11 @@
       "rate_pln": 2.0
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4777,11 +4777,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 230,
-      "water_safe": true,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "medium"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4818,11 +4818,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4859,11 +4859,11 @@
       "rate_pln": 0.039448
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4900,11 +4900,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4941,11 +4941,11 @@
       "rate_pln": 0.000166
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -4982,11 +4982,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5023,11 +5023,11 @@
       "rate_pln": 4e-05
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5064,11 +5064,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5105,11 +5105,11 @@
       "rate_pln": 4.291845
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5146,11 +5146,11 @@
       "rate_pln": 0.035958
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5187,11 +5187,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5228,11 +5228,11 @@
       "rate_pln": 0.001548
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5269,11 +5269,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5310,11 +5310,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5351,11 +5351,11 @@
       "rate_pln": 0.145773
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5392,11 +5392,11 @@
       "rate_pln": 0.002732
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5433,11 +5433,11 @@
       "rate_pln": 0.271003
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5515,11 +5515,11 @@
       "rate_pln": 0.006272
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5556,11 +5556,11 @@
       "rate_pln": 0.07728
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5597,11 +5597,11 @@
       "rate_pln": 1.338688
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5638,11 +5638,11 @@
       "rate_pln": 0.000832
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5720,11 +5720,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5761,11 +5761,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5802,11 +5802,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5843,11 +5843,11 @@
       "rate_pln": 0.023047
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5884,11 +5884,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5925,11 +5925,11 @@
       "rate_pln": 0.075472
     },
     "practical": {
-      "plug_types": "C,F",
-      "voltage": 220,
-      "water_safe": false,
+      "plug_types": "C, F",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "low"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -5966,11 +5966,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6007,11 +6007,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6048,11 +6048,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6089,11 +6089,11 @@
       "rate_pln": 0.056915
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6130,11 +6130,11 @@
       "rate_pln": 0.04384
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6171,11 +6171,11 @@
       "rate_pln": 0.046707
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6212,11 +6212,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6294,11 +6294,11 @@
       "rate_pln": 0.001207
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6335,11 +6335,11 @@
       "rate_pln": 0.008586
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6376,11 +6376,11 @@
       "rate_pln": 1.256281
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6458,11 +6458,11 @@
       "rate_pln": 0.001383
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6499,11 +6499,11 @@
       "rate_pln": 1.945525
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6540,11 +6540,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6581,11 +6581,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6622,11 +6622,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6663,11 +6663,11 @@
       "rate_pln": 0.011574
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6704,11 +6704,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6745,11 +6745,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6786,11 +6786,11 @@
       "rate_pln": 0.232019
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, D, G, J, K, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6827,11 +6827,11 @@
       "rate_pln": 0.000552
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6868,11 +6868,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6909,11 +6909,11 @@
       "rate_pln": 4.62963
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6950,11 +6950,11 @@
       "rate_pln": 1.615509
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -6991,11 +6991,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, M, N",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7032,11 +7032,11 @@
       "rate_pln": 5.050505
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "B, C, D, G, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7073,11 +7073,11 @@
       "rate_pln": 1.788909
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7114,11 +7114,11 @@
       "rate_pln": 1.067236
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7155,11 +7155,11 @@
       "rate_pln": 0.381679
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7196,11 +7196,11 @@
       "rate_pln": 0.00041
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7237,11 +7237,11 @@
       "rate_pln": 0.45045
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7278,11 +7278,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, E, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7319,11 +7319,11 @@
       "rate_pln": 0.564972
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7360,11 +7360,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7401,11 +7401,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7442,11 +7442,11 @@
       "rate_pln": 0.001013
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7483,11 +7483,11 @@
       "rate_pln": 0.518135
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7524,11 +7524,11 @@
       "rate_pln": 0.007202
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7606,11 +7606,11 @@
       "rate_pln": 0.458716
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7647,11 +7647,11 @@
       "rate_pln": 0.075472
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, H, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7688,11 +7688,11 @@
       "rate_pln": 0.002463
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7729,11 +7729,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7770,11 +7770,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7811,11 +7811,11 @@
       "rate_pln": 0.00951
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7852,11 +7852,11 @@
       "rate_pln": 0.003875
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7893,11 +7893,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7934,11 +7934,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -7975,11 +7975,11 @@
       "rate_pln": 9.52381
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8016,11 +8016,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8057,11 +8057,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8098,11 +8098,11 @@
       "rate_pln": 0.006439
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8139,11 +8139,11 @@
       "rate_pln": 0.002665
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8180,11 +8180,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8221,11 +8221,11 @@
       "rate_pln": 0.390625
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8262,11 +8262,11 @@
       "rate_pln": 0.223214
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8303,11 +8303,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8344,11 +8344,11 @@
       "rate_pln": 0.252525
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8385,11 +8385,11 @@
       "rate_pln": 0.189753
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8426,11 +8426,11 @@
       "rate_pln": 0.000891
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8467,11 +8467,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8508,11 +8508,11 @@
       "rate_pln": 0.012809
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8549,11 +8549,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8590,11 +8590,11 @@
       "rate_pln": 0.444444
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "D, G, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8631,11 +8631,11 @@
       "rate_pln": 0.024655
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8672,11 +8672,11 @@
       "rate_pln": 0.039448
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D, M",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8713,11 +8713,11 @@
       "rate_pln": 0.04095
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8754,11 +8754,11 @@
       "rate_pln": 0.027285
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8795,11 +8795,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8836,11 +8836,11 @@
       "rate_pln": 0.00246
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8877,11 +8877,11 @@
       "rate_pln": 0.035398
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8918,11 +8918,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "A,B",
-      "voltage": 120,
-      "water_safe": true,
+      "plug_types": "A, B",
+      "voltage": null,
+      "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": "high"
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -8959,11 +8959,11 @@
       "rate_pln": 0.027793
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9000,11 +9000,11 @@
       "rate_pln": 0.048333
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9041,11 +9041,11 @@
       "rate_pln": 0.029291
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, C, G, K",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9082,11 +9082,11 @@
       "rate_pln": 0.37594
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9123,11 +9123,11 @@
       "rate_pln": 1.788909
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9164,11 +9164,11 @@
       "rate_pln": 1.324503
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, D, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9205,11 +9205,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9246,11 +9246,11 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E, F, I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9287,11 +9287,11 @@
       "rate_pln": 0.952381
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9369,11 +9369,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9410,11 +9410,11 @@
       "rate_pln": 0.000998
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9451,11 +9451,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9492,11 +9492,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9533,11 +9533,11 @@
       "rate_pln": 4.830918
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9574,11 +9574,11 @@
       "rate_pln": 0.002062
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9615,11 +9615,11 @@
       "rate_pln": 2.141328
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9656,11 +9656,11 @@
       "rate_pln": 0.135501
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9697,11 +9697,11 @@
       "rate_pln": 0.092764
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9738,11 +9738,11 @@
       "rate_pln": 0.0383
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9779,11 +9779,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9820,11 +9820,11 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "I",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9861,11 +9861,11 @@
       "rate_pln": 3e-06
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9902,11 +9902,11 @@
       "rate_pln": 0.007804
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, D",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9943,11 +9943,11 @@
       "rate_pln": 0.46729
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -9984,11 +9984,11 @@
       "rate_pln": 4.62963
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, J",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10025,11 +10025,11 @@
       "rate_pln": 0.529101
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10066,11 +10066,11 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, L",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10107,11 +10107,11 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, E",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10148,11 +10148,11 @@
       "rate_pln": 0.09542
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "left",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10189,11 +10189,11 @@
       "rate_pln": 0.01935
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B, C, E, F",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
@@ -10230,11 +10230,11 @@
       "rate_pln": 11.709602
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "C, G",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
       "visa_required": null,
