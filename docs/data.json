@@ -10,9 +10,11 @@
     "flag_emoji": "🇻🇳",
     "flag_url": "https://flagcdn.com/w320/vn.png",
     "population": 101343800,
+    "latitude": 16.166667,
+    "longitude": 107.833333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wietnam).",
       "url": "https://www.gov.pl/web/wietnam/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -53,10 +55,12 @@
     "flag_emoji": "🇬🇫",
     "flag_url": "https://flagcdn.com/w320/gf.png",
     "population": 292354,
+    "latitude": 4.0,
+    "longitude": -53.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -71,11 +75,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -96,10 +100,12 @@
     "flag_emoji": "🇸🇽",
     "flag_url": "https://flagcdn.com/w320/sx.png",
     "population": 41349,
+    "latitude": 18.033333,
+    "longitude": -63.05,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/holandia/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "ANG",
@@ -114,11 +120,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -139,10 +145,12 @@
     "flag_emoji": "🇻🇬",
     "flag_url": "https://flagcdn.com/w320/vg.png",
     "population": 39471,
+    "latitude": 18.431383,
+    "longitude": -64.62305,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -157,11 +165,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -182,9 +190,11 @@
     "flag_emoji": "🇵🇬",
     "flag_url": "https://flagcdn.com/w320/pg.png",
     "population": 11781559,
+    "latitude": -6.0,
+    "longitude": 147.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Papua-Nowa Gwinea).",
       "url": "https://www.gov.pl/web/australia/papua-nowa-gwinea-idp"
     },
     "currency": {
@@ -225,9 +235,11 @@
     "flag_emoji": "🇨🇱",
     "flag_url": "https://flagcdn.com/w320/cl.png",
     "population": 20206953,
+    "latitude": -30.0,
+    "longitude": -71.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Chile).",
       "url": "https://www.gov.pl/web/chile/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -268,9 +280,11 @@
     "flag_emoji": "🇭🇺",
     "flag_url": "https://flagcdn.com/w320/hu.png",
     "population": 9539502,
+    "latitude": 47.0,
+    "longitude": 20.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Węgry).",
       "url": "https://www.gov.pl/web/wegry/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -332,9 +346,11 @@
     "flag_emoji": "🇨🇴",
     "flag_url": "https://flagcdn.com/w320/co.png",
     "population": 53057212,
+    "latitude": 4.0,
+    "longitude": -72.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kolumbia).",
       "url": "https://www.gov.pl/web/kolumbia/idp"
     },
     "currency": {
@@ -375,9 +391,11 @@
     "flag_emoji": "🇩🇯",
     "flag_url": "https://flagcdn.com/w320/dj.png",
     "population": 1066809,
+    "latitude": 11.5,
+    "longitude": 43.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Dżibuti).",
       "url": "https://www.gov.pl/web/etiopia/dzibuti-idp"
     },
     "currency": {
@@ -418,10 +436,12 @@
     "flag_emoji": "🇦🇼",
     "flag_url": "https://flagcdn.com/w320/aw.png",
     "population": 107566,
+    "latitude": 12.5,
+    "longitude": -69.966667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/holandia/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "AWG",
@@ -436,11 +456,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -461,9 +481,11 @@
     "flag_emoji": "🇹🇴",
     "flag_url": "https://flagcdn.com/w320/to.png",
     "population": 100179,
+    "latitude": -20.0,
+    "longitude": -175.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Tonga).",
       "url": "https://www.gov.pl/web/nowazelandia/tonga-idp"
     },
     "currency": {
@@ -504,9 +526,11 @@
     "flag_emoji": "🇩🇰",
     "flag_url": "https://flagcdn.com/w320/dk.png",
     "population": 6011488,
+    "latitude": 56.0,
+    "longitude": 10.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Dania).",
       "url": "https://www.gov.pl/web/dania/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -547,6 +571,8 @@
     "flag_emoji": "🇨🇽",
     "flag_url": "https://flagcdn.com/w320/cx.png",
     "population": 1692,
+    "latitude": -10.5,
+    "longitude": 105.666667,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -590,9 +616,11 @@
     "flag_emoji": "🇩🇴",
     "flag_url": "https://flagcdn.com/w320/do.png",
     "population": 10771504,
+    "latitude": 19.0,
+    "longitude": -70.666667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Dominikana).",
       "url": "https://www.gov.pl/web/panama/dominikana-idp"
     },
     "currency": {
@@ -633,9 +661,11 @@
     "flag_emoji": "🇲🇽",
     "flag_url": "https://flagcdn.com/w320/mx.png",
     "population": 130575786,
+    "latitude": 23.0,
+    "longitude": -102.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Meksyk).",
       "url": "https://www.gov.pl/web/meksyk/idp"
     },
     "currency": {
@@ -697,9 +727,11 @@
     "flag_emoji": "🇬🇧",
     "flag_url": "https://flagcdn.com/w320/gb.png",
     "population": 69281437,
+    "latitude": 54.0,
+    "longitude": -2.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zjednoczone Królestwo).",
       "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -715,10 +747,10 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
+      "id_card_allowed": false,
       "visa_notes": null
     },
     "weather": {
@@ -740,9 +772,11 @@
     "flag_emoji": "🇹🇷",
     "flag_url": "https://flagcdn.com/w320/tr.png",
     "population": 85664944,
+    "latitude": 39.0,
+    "longitude": 35.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Turcja).",
       "url": "https://www.gov.pl/web/turcja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -783,6 +817,8 @@
     "flag_emoji": "🇲🇰",
     "flag_url": "https://flagcdn.com/w320/mk.png",
     "population": 1822612,
+    "latitude": 41.833333,
+    "longitude": 22.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -826,9 +862,11 @@
     "flag_emoji": "🇺🇦",
     "flag_url": "https://flagcdn.com/w320/ua.png",
     "population": 32862000,
+    "latitude": 49.0,
+    "longitude": 32.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Ukraina).",
       "url": "https://www.gov.pl/web/ukraina/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -869,9 +907,11 @@
     "flag_emoji": "🇻🇪",
     "flag_url": "https://flagcdn.com/w320/ve.png",
     "population": 28517000,
+    "latitude": 8.0,
+    "longitude": -66.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Wenezuela).",
       "url": "https://www.gov.pl/web/wenezuela/idp"
     },
     "currency": {
@@ -912,9 +952,11 @@
     "flag_emoji": "🇧🇫",
     "flag_url": "https://flagcdn.com/w320/bf.png",
     "population": 24070553,
+    "latitude": 13.0,
+    "longitude": -2.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Burkina Faso).",
       "url": "https://www.gov.pl/web/senegal/burkina-faso-idp"
     },
     "currency": {
@@ -955,9 +997,11 @@
     "flag_emoji": "🇪🇷",
     "flag_url": "https://flagcdn.com/w320/er.png",
     "population": 3607000,
+    "latitude": 15.0,
+    "longitude": 39.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Erytrea).",
       "url": "https://www.gov.pl/web/egipt/erytrea-idp"
     },
     "currency": {
@@ -998,6 +1042,8 @@
     "flag_emoji": "🇪🇭",
     "flag_url": "https://flagcdn.com/w320/eh.png",
     "population": 600904,
+    "latitude": 24.5,
+    "longitude": -13.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -1041,6 +1087,8 @@
     "flag_emoji": "🇯🇪",
     "flag_url": "https://flagcdn.com/w320/je.png",
     "population": 103267,
+    "latitude": 49.25,
+    "longitude": -2.166667,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -1084,10 +1132,12 @@
     "flag_emoji": "🇧🇱",
     "flag_url": "https://flagcdn.com/w320/bl.png",
     "population": 10562,
+    "latitude": 18.5,
+    "longitude": -63.416667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -1102,11 +1152,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -1127,9 +1177,11 @@
     "flag_emoji": "🇱🇺",
     "flag_url": "https://flagcdn.com/w320/lu.png",
     "population": 681973,
+    "latitude": 49.75,
+    "longitude": 6.166667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Luksemburg).",
       "url": "https://www.gov.pl/web/luksemburg/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -1191,10 +1243,12 @@
     "flag_emoji": "🇷🇪",
     "flag_url": "https://flagcdn.com/w320/re.png",
     "population": 896175,
+    "latitude": -21.15,
+    "longitude": 55.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -1209,11 +1263,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -1234,9 +1288,11 @@
     "flag_emoji": "🇹🇻",
     "flag_url": "https://flagcdn.com/w320/tv.png",
     "population": 10643,
+    "latitude": -8.0,
+    "longitude": 178.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Tuvalu).",
       "url": "https://www.gov.pl/web/nowazelandia/tuvalu-idp"
     },
     "currency": {
@@ -1277,9 +1333,11 @@
     "flag_emoji": "🇨🇷",
     "flag_url": "https://flagcdn.com/w320/cr.png",
     "population": 5309625,
+    "latitude": 10.0,
+    "longitude": -84.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kostaryka).",
       "url": "https://www.gov.pl/web/meksyk/kostaryka-idp"
     },
     "currency": {
@@ -1320,9 +1378,11 @@
     "flag_emoji": "🇷🇴",
     "flag_url": "https://flagcdn.com/w320/ro.png",
     "population": 19036031,
+    "latitude": 46.0,
+    "longitude": 25.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Rumunia).",
       "url": "https://www.gov.pl/web/rumunia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -1384,9 +1444,11 @@
     "flag_emoji": "🇬🇷",
     "flag_url": "https://flagcdn.com/w320/gr.png",
     "population": 10400720,
+    "latitude": 39.0,
+    "longitude": 22.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Grecja).",
       "url": "https://www.gov.pl/web/grecja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -1427,9 +1489,11 @@
     "flag_emoji": "🇿🇼",
     "flag_url": "https://flagcdn.com/w320/zw.png",
     "population": 17073087,
+    "latitude": -20.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zimbabwe).",
       "url": "https://www.gov.pl/web/rpa/zimbabwe-idp"
     },
     "currency": {
@@ -1470,9 +1534,11 @@
     "flag_emoji": "🇲🇨",
     "flag_url": "https://flagcdn.com/w320/mc.png",
     "population": 38423,
+    "latitude": 43.733333,
+    "longitude": 7.4,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Monako).",
       "url": "https://www.gov.pl/web/francja/monako-idp"
     },
     "currency": {
@@ -1534,6 +1600,8 @@
     "flag_emoji": "🇸🇯",
     "flag_url": "https://flagcdn.com/w320/sj.png",
     "population": 2530,
+    "latitude": 78.0,
+    "longitude": 20.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -1577,10 +1645,12 @@
     "flag_emoji": "🇻🇮",
     "flag_url": "https://flagcdn.com/w320/vi.png",
     "population": 87146,
+    "latitude": 18.35,
+    "longitude": -64.933333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/usa/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -1595,11 +1665,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -1620,9 +1690,11 @@
     "flag_emoji": "🇨🇦",
     "flag_url": "https://flagcdn.com/w320/ca.png",
     "population": 41651653,
+    "latitude": 60.0,
+    "longitude": -95.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kanada).",
       "url": "https://www.gov.pl/web/kanada/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -1663,9 +1735,11 @@
     "flag_emoji": "🇬🇭",
     "flag_url": "https://flagcdn.com/w320/gh.png",
     "population": 33742380,
+    "latitude": 8.0,
+    "longitude": -2.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Ghana).",
       "url": "https://www.gov.pl/web/nigeria/ghana-idp"
     },
     "currency": {
@@ -1697,7 +1771,7 @@
   },
   "CI": {
     "name": "Ivory Coast",
-    "name_pl": "Wybrzeże Kości Słoniowej",
+    "name_pl": "WybrzeŻe Kości Słoniowej",
     "iso2": "CI",
     "iso3": "CIV",
     "capital": "Jamusupro",
@@ -1706,6 +1780,8 @@
     "flag_emoji": "🇨🇮",
     "flag_url": "https://flagcdn.com/w320/ci.png",
     "population": 31719275,
+    "latitude": 8.0,
+    "longitude": -5.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -1749,9 +1825,11 @@
     "flag_emoji": "🇲🇲",
     "flag_url": "https://flagcdn.com/w320/mm.png",
     "population": 51316756,
+    "latitude": 22.0,
+    "longitude": 98.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mjanma).",
       "url": "https://www.gov.pl/web/tajlandia/mjanma-idp"
     },
     "currency": {
@@ -1792,9 +1870,11 @@
     "flag_emoji": "🇲🇷",
     "flag_url": "https://flagcdn.com/w320/mr.png",
     "population": 4927532,
+    "latitude": 20.0,
+    "longitude": -12.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mauretania).",
       "url": "https://www.gov.pl/web/maroko/mauretania-idp"
     },
     "currency": {
@@ -1835,9 +1915,11 @@
     "flag_emoji": "🇯🇲",
     "flag_url": "https://flagcdn.com/w320/jm.png",
     "population": 2825544,
+    "latitude": 18.25,
+    "longitude": -77.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Jamajka).",
       "url": "https://www.gov.pl/web/wenezuela/jamajka-idp"
     },
     "currency": {
@@ -1878,9 +1960,11 @@
     "flag_emoji": "🇸🇸",
     "flag_url": "https://flagcdn.com/w320/ss.png",
     "population": 15786898,
+    "latitude": 7.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Sudan).",
       "url": "https://www.gov.pl/web/egipt/sudan-idp"
     },
     "currency": {
@@ -1921,9 +2005,11 @@
     "flag_emoji": "🇧🇳",
     "flag_url": "https://flagcdn.com/w320/bn.png",
     "population": 455500,
+    "latitude": 4.5,
+    "longitude": 114.666667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Brunei).",
       "url": "https://www.gov.pl/web/malezja/brunei-darussalam-idp"
     },
     "currency": {
@@ -1964,9 +2050,11 @@
     "flag_emoji": "🇸🇬",
     "flag_url": "https://flagcdn.com/w320/sg.png",
     "population": 6110200,
+    "latitude": 1.366667,
+    "longitude": 103.8,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Singapur).",
       "url": "https://www.gov.pl/web/singapur/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -2007,6 +2095,8 @@
     "flag_emoji": "🇧🇻",
     "flag_url": "https://flagcdn.com/w320/bv.png",
     "population": 0,
+    "latitude": -54.4208,
+    "longitude": 3.3464,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -2050,9 +2140,11 @@
     "flag_emoji": "🇳🇿",
     "flag_url": "https://flagcdn.com/w320/nz.png",
     "population": 5324700,
+    "latitude": -41.0,
+    "longitude": 174.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nowa Zelandia).",
       "url": "https://www.gov.pl/web/nowazelandia/idp"
     },
     "currency": {
@@ -2093,9 +2185,11 @@
     "flag_emoji": "🇪🇸",
     "flag_url": "https://flagcdn.com/w320/es.png",
     "population": 49315949,
+    "latitude": 40.0,
+    "longitude": -4.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Hiszpania).",
       "url": "https://www.gov.pl/web/hiszpania/idp"
     },
     "currency": {
@@ -2157,9 +2251,11 @@
     "flag_emoji": "🇵🇭",
     "flag_url": "https://flagcdn.com/w320/ph.png",
     "population": 114123600,
+    "latitude": 13.0,
+    "longitude": 122.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Filipiny).",
       "url": "https://www.gov.pl/web/filipiny/idp"
     },
     "currency": {
@@ -2200,6 +2296,8 @@
     "flag_emoji": "🇵🇱",
     "flag_url": "https://flagcdn.com/w320/pl.png",
     "population": 37392000,
+    "latitude": 52.0,
+    "longitude": 20.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -2264,9 +2362,11 @@
     "flag_emoji": "🇨🇬",
     "flag_url": "https://flagcdn.com/w320/cg.png",
     "population": 6142180,
+    "latitude": -1.0,
+    "longitude": 15.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kongo).",
       "url": "https://www.gov.pl/web/angola/republika-konga-idp"
     },
     "currency": {
@@ -2307,6 +2407,8 @@
     "flag_emoji": "🇳🇨",
     "flag_url": "https://flagcdn.com/w320/nc.png",
     "population": 264596,
+    "latitude": -21.5,
+    "longitude": 165.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -2350,9 +2452,11 @@
     "flag_emoji": "🇦🇿",
     "flag_url": "https://flagcdn.com/w320/az.png",
     "population": 10241722,
+    "latitude": 40.5,
+    "longitude": 47.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Azerbejdżan).",
       "url": "https://www.gov.pl/web/azerbejdzan/idp"
     },
     "currency": {
@@ -2393,9 +2497,11 @@
     "flag_emoji": "🇹🇼",
     "flag_url": "https://flagcdn.com/w320/tw.png",
     "population": 23317031,
+    "latitude": 23.5,
+    "longitude": 121.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Tajwan).",
       "url": "https://poland.tw/web/tajwan/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -2436,9 +2542,11 @@
     "flag_emoji": "🇮🇹",
     "flag_url": "https://flagcdn.com/w320/it.png",
     "population": 58927633,
+    "latitude": 42.833333,
+    "longitude": 12.833333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Włochy).",
       "url": "https://www.gov.pl/web/wlochy/idp"
     },
     "currency": {
@@ -2500,6 +2608,8 @@
     "flag_emoji": "🇦🇽",
     "flag_url": "https://flagcdn.com/w320/ax.png",
     "population": 30654,
+    "latitude": 60.116667,
+    "longitude": 19.9,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -2543,9 +2653,11 @@
     "flag_emoji": "🇩🇿",
     "flag_url": "https://flagcdn.com/w320/dz.png",
     "population": 47400000,
+    "latitude": 28.0,
+    "longitude": 3.0,
     "safety": {
-      "risk_level": "high",
-      "risk_text": "Odradzamy podróże, które nie są konieczne",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Algieria).",
       "url": "https://www.gov.pl/web/algieria/idp"
     },
     "currency": {
@@ -2586,9 +2698,11 @@
     "flag_emoji": "🇦🇩",
     "flag_url": "https://flagcdn.com/w320/ad.png",
     "population": 88406,
+    "latitude": 42.5,
+    "longitude": 1.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Andora).",
       "url": "https://www.gov.pl/web/hiszpania/andora-idp"
     },
     "currency": {
@@ -2650,10 +2764,12 @@
     "flag_emoji": "🇹🇨",
     "flag_url": "https://flagcdn.com/w320/tc.png",
     "population": 50828,
+    "latitude": 21.75,
+    "longitude": -71.583333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -2668,11 +2784,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -2693,9 +2809,11 @@
     "flag_emoji": "🇮🇸",
     "flag_url": "https://flagcdn.com/w320/is.png",
     "population": 391810,
+    "latitude": 65.0,
+    "longitude": -18.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Islandia).",
       "url": "https://www.gov.pl/web/islandia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -2736,9 +2854,11 @@
     "flag_emoji": "🇹🇩",
     "flag_url": "https://flagcdn.com/w320/td.png",
     "population": 19340757,
+    "latitude": 15.0,
+    "longitude": 19.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czad).",
       "url": "https://www.gov.pl/web/algieria/czad-idp"
     },
     "currency": {
@@ -2779,9 +2899,11 @@
     "flag_emoji": "🇧🇸",
     "flag_url": "https://flagcdn.com/w320/bs.png",
     "population": 398165,
+    "latitude": 25.0343,
+    "longitude": -77.3963,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bahamy).",
       "url": "https://www.gov.pl/web/usa/bahamy-idp"
     },
     "currency": {
@@ -2822,9 +2944,11 @@
     "flag_emoji": "🇧🇷",
     "flag_url": "https://flagcdn.com/w320/br.png",
     "population": 213421037,
+    "latitude": -10.0,
+    "longitude": -55.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Brazylia).",
       "url": "https://www.gov.pl/web/brazylia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -2840,7 +2964,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2865,9 +2989,11 @@
     "flag_emoji": "🇹🇭",
     "flag_url": "https://flagcdn.com/w320/th.png",
     "population": 65859640,
+    "latitude": 15.0,
+    "longitude": 100.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tajlandia).",
       "url": "https://www.gov.pl/web/tajlandia/idp"
     },
     "currency": {
@@ -2908,9 +3034,11 @@
     "flag_emoji": "🇫🇲",
     "flag_url": "https://flagcdn.com/w320/fm.png",
     "population": 105564,
+    "latitude": 6.916667,
+    "longitude": 158.25,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mikronezja).",
       "url": "https://www.gov.pl/web/filipiny/mikronezja-idp"
     },
     "currency": {
@@ -2951,9 +3079,11 @@
     "flag_emoji": "🇮🇱",
     "flag_url": "https://flagcdn.com/w320/il.png",
     "population": 10134800,
+    "latitude": 31.47,
+    "longitude": 35.13,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Izrael).",
       "url": "https://www.gov.pl/web/izrael/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -2994,6 +3124,8 @@
     "flag_emoji": "🇦🇮",
     "flag_url": "https://flagcdn.com/w320/ai.png",
     "population": 16010,
+    "latitude": 18.25,
+    "longitude": -63.166667,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3037,9 +3169,11 @@
     "flag_emoji": "🇩🇲",
     "flag_url": "https://flagcdn.com/w320/dm.png",
     "population": 67408,
+    "latitude": 15.416667,
+    "longitude": -61.333333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Dominika).",
       "url": "https://www.gov.pl/web/wenezuela/dominika-idp"
     },
     "currency": {
@@ -3080,10 +3214,12 @@
     "flag_emoji": "🇲🇱",
     "flag_url": "https://flagcdn.com/w320/ml.png",
     "population": 22395489,
+    "latitude": 17.0,
+    "longitude": -4.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/senegal/mali-idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "XOF",
@@ -3098,11 +3234,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -3123,9 +3259,11 @@
     "flag_emoji": "🇲🇿",
     "flag_url": "https://flagcdn.com/w320/mz.png",
     "population": 34090466,
+    "latitude": -18.25,
+    "longitude": 35.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Mozambik).",
       "url": "https://www.gov.pl/web/rpa/mozambik-idp"
     },
     "currency": {
@@ -3166,9 +3304,11 @@
     "flag_emoji": "🇸🇾",
     "flag_url": "https://flagcdn.com/w320/sy.png",
     "population": 25620000,
+    "latitude": 35.0,
+    "longitude": 38.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Syria).",
       "url": "https://www.gov.pl/web/syria/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -3209,9 +3349,11 @@
     "flag_emoji": "🇾🇪",
     "flag_url": "https://flagcdn.com/w320/ye.png",
     "population": 32684503,
+    "latitude": 15.0,
+    "longitude": 48.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Jemen).",
       "url": "https://www.gov.pl/web/arabiasaudyjska/jemen-idp"
     },
     "currency": {
@@ -3252,9 +3394,11 @@
     "flag_emoji": "🇸🇰",
     "flag_url": "https://flagcdn.com/w320/sk.png",
     "population": 5413813,
+    "latitude": 48.666667,
+    "longitude": 19.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Słowacja).",
       "url": "https://www.gov.pl/web/slowacja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -3316,10 +3460,12 @@
     "flag_emoji": "🇲🇶",
     "flag_url": "https://flagcdn.com/w320/mq.png",
     "population": 349925,
+    "latitude": 14.666667,
+    "longitude": -61.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -3334,11 +3480,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -3359,6 +3505,8 @@
     "flag_emoji": "🇻🇨",
     "flag_url": "https://flagcdn.com/w320/vc.png",
     "population": 110872,
+    "latitude": 13.25,
+    "longitude": -61.2,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3402,9 +3550,11 @@
     "flag_emoji": "🇬🇾",
     "flag_url": "https://flagcdn.com/w320/gy.png",
     "population": 772975,
+    "latitude": 5.0,
+    "longitude": -59.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gujana).",
       "url": "https://www.gov.pl/web/wenezuela/gujana-idp"
     },
     "currency": {
@@ -3445,10 +3595,12 @@
     "flag_emoji": "🇲🇪",
     "flag_url": "https://flagcdn.com/w320/me.png",
     "population": 623327,
+    "latitude": 42.5,
+    "longitude": 19.3,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czarnogóra).",
+      "url": "https://www.gov.pl/web/czarnogora/informacje-dla-podrozujacych"
     },
     "currency": {
       "code": "EUR",
@@ -3463,11 +3615,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": false,
-      "visa_notes": ""
+      "id_card_allowed": true,
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -3488,6 +3640,8 @@
     "flag_emoji": "🇬🇮",
     "flag_url": "https://flagcdn.com/w320/gi.png",
     "population": 38000,
+    "latitude": 36.133333,
+    "longitude": -5.35,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3531,9 +3685,11 @@
     "flag_emoji": "🇶🇦",
     "flag_url": "https://flagcdn.com/w320/qa.png",
     "population": 3173024,
+    "latitude": 25.5,
+    "longitude": 51.25,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Katar).",
       "url": "https://www.gov.pl/web/katar/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -3574,6 +3730,8 @@
     "flag_emoji": "🇸🇹",
     "flag_url": "https://flagcdn.com/w320/st.png",
     "population": 209607,
+    "latitude": 1.0,
+    "longitude": 7.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3617,9 +3775,11 @@
     "flag_emoji": "🇺🇿",
     "flag_url": "https://flagcdn.com/w320/uz.png",
     "population": 37859698,
+    "latitude": 41.0,
+    "longitude": 64.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Uzbekistan).",
       "url": "https://www.gov.pl/web/uzbekistan/idp"
     },
     "currency": {
@@ -3660,6 +3820,8 @@
     "flag_emoji": "🇬🇸",
     "flag_url": "https://flagcdn.com/w320/gs.png",
     "population": 0,
+    "latitude": -54.5,
+    "longitude": -37.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3703,9 +3865,11 @@
     "flag_emoji": "🇸🇪",
     "flag_url": "https://flagcdn.com/w320/se.png",
     "population": 10605098,
+    "latitude": 62.0,
+    "longitude": 15.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Szwecja).",
       "url": "https://www.gov.pl/web/szwecja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -3767,9 +3931,11 @@
     "flag_emoji": "🇳🇷",
     "flag_url": "https://flagcdn.com/w320/nr.png",
     "population": 11680,
+    "latitude": -0.533333,
+    "longitude": 166.916667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nauru).",
       "url": "https://www.gov.pl/web/australia/nauru-idp"
     },
     "currency": {
@@ -3810,10 +3976,12 @@
     "flag_emoji": "🇾🇹",
     "flag_url": "https://flagcdn.com/w320/yt.png",
     "population": 320901,
+    "latitude": -12.833333,
+    "longitude": 45.166667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -3828,11 +3996,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -3853,9 +4021,11 @@
     "flag_emoji": "🇳🇮",
     "flag_url": "https://flagcdn.com/w320/ni.png",
     "population": 6803886,
+    "latitude": 13.0,
+    "longitude": -85.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nikaragua).",
       "url": "https://www.gov.pl/web/panama/nikaragua-idp"
     },
     "currency": {
@@ -3896,6 +4066,8 @@
     "flag_emoji": "🇮🇴",
     "flag_url": "https://flagcdn.com/w320/io.png",
     "population": 0,
+    "latitude": -6.0,
+    "longitude": 71.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -3939,9 +4111,11 @@
     "flag_emoji": "🇻🇺",
     "flag_url": "https://flagcdn.com/w320/vu.png",
     "population": 321409,
+    "latitude": -16.0,
+    "longitude": 167.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Vanuatu).",
       "url": "https://www.gov.pl/web/australia/vanuatu-idp"
     },
     "currency": {
@@ -3982,9 +4156,11 @@
     "flag_emoji": "🇨🇳",
     "flag_url": "https://flagcdn.com/w320/cn.png",
     "population": 1408280000,
+    "latitude": 35.0,
+    "longitude": 105.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Chiny).",
       "url": "https://www.gov.pl/web/chiny/idp"
     },
     "currency": {
@@ -4025,9 +4201,11 @@
     "flag_emoji": "🇰🇵",
     "flag_url": "https://flagcdn.com/w320/kp.png",
     "population": 25950000,
+    "latitude": 40.0,
+    "longitude": 127.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Korea Północna).",
       "url": "https://www.gov.pl/web/chiny/krld-idp"
     },
     "currency": {
@@ -4068,9 +4246,11 @@
     "flag_emoji": "🇮🇩",
     "flag_url": "https://flagcdn.com/w320/id.png",
     "population": 284438782,
+    "latitude": -5.0,
+    "longitude": 120.0,
     "safety": {
       "risk_level": "high",
-      "risk_text": "Odradzamy podróże, które nie są konieczne",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Indonezja).",
       "url": "https://www.gov.pl/web/indonezja/idp"
     },
     "currency": {
@@ -4111,9 +4291,11 @@
     "flag_emoji": "🇧🇪",
     "flag_url": "https://flagcdn.com/w320/be.png",
     "population": 11825551,
+    "latitude": 50.833333,
+    "longitude": 4.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Belgia).",
       "url": "https://www.gov.pl/web/belgia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -4175,9 +4357,11 @@
     "flag_emoji": "🇨🇿",
     "flag_url": "https://flagcdn.com/w320/cz.png",
     "population": 10882341,
+    "latitude": 49.75,
+    "longitude": 15.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czechy).",
       "url": "https://www.gov.pl/web/czechy/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -4239,6 +4423,8 @@
     "flag_emoji": "🇨🇫",
     "flag_url": "https://flagcdn.com/w320/cf.png",
     "population": 6470307,
+    "latitude": 7.0,
+    "longitude": 21.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4282,9 +4468,11 @@
     "flag_emoji": "🇵🇦",
     "flag_url": "https://flagcdn.com/w320/pa.png",
     "population": 4064780,
+    "latitude": 9.0,
+    "longitude": -80.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Panama).",
       "url": "https://www.gov.pl/web/panama/idp"
     },
     "currency": {
@@ -4325,9 +4513,11 @@
     "flag_emoji": "🇦🇪",
     "flag_url": "https://flagcdn.com/w320/ae.png",
     "population": 11294243,
+    "latitude": 24.0,
+    "longitude": 54.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Emiraty Arabskie).",
       "url": "https://www.gov.pl/web/zea/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -4368,6 +4558,8 @@
     "flag_emoji": "🇬🇼",
     "flag_url": "https://flagcdn.com/w320/gw.png",
     "population": 1781308,
+    "latitude": 12.0,
+    "longitude": -15.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4411,9 +4603,11 @@
     "flag_emoji": "🇧🇯",
     "flag_url": "https://flagcdn.com/w320/bj.png",
     "population": 13224860,
+    "latitude": 9.5,
+    "longitude": 2.25,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Benin).",
       "url": "https://www.gov.pl/web/nigeria/benin-idp"
     },
     "currency": {
@@ -4454,6 +4648,8 @@
     "flag_emoji": "🇳🇫",
     "flag_url": "https://flagcdn.com/w320/nf.png",
     "population": 2188,
+    "latitude": -29.033333,
+    "longitude": 167.95,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4497,9 +4693,11 @@
     "flag_emoji": "🇲🇩",
     "flag_url": "https://flagcdn.com/w320/md.png",
     "population": 2749076,
+    "latitude": 47.0,
+    "longitude": 29.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Mołdawia).",
       "url": "https://www.gov.pl/web/republikamoldawii/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -4561,9 +4759,11 @@
     "flag_emoji": "🇼🇸",
     "flag_url": "https://flagcdn.com/w320/ws.png",
     "population": 205557,
+    "latitude": -13.583333,
+    "longitude": -172.333333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Samoa).",
       "url": "https://www.gov.pl/web/nowazelandia/samoa-idp"
     },
     "currency": {
@@ -4604,9 +4804,11 @@
     "flag_emoji": "🇹🇳",
     "flag_url": "https://flagcdn.com/w320/tn.png",
     "population": 11972169,
+    "latitude": 34.0,
+    "longitude": 9.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tunezja).",
       "url": "https://www.gov.pl/web/tunezja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -4624,7 +4826,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": true,
+      "temp_passport_allowed": false,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -4647,9 +4849,11 @@
     "flag_emoji": "🇪🇨",
     "flag_url": "https://flagcdn.com/w320/ec.png",
     "population": 18103660,
+    "latitude": -2.0,
+    "longitude": -77.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Ekwador).",
       "url": "https://www.gov.pl/web/peru/ekwador-idp"
     },
     "currency": {
@@ -4690,9 +4894,11 @@
     "flag_emoji": "🇳🇪",
     "flag_url": "https://flagcdn.com/w320/ne.png",
     "population": 26312034,
+    "latitude": 16.0,
+    "longitude": 8.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Niger).",
       "url": "https://www.gov.pl/web/algieria/niger-idp"
     },
     "currency": {
@@ -4733,6 +4939,8 @@
     "flag_emoji": "🇨🇰",
     "flag_url": "https://flagcdn.com/w320/ck.png",
     "population": 15040,
+    "latitude": -21.233333,
+    "longitude": -159.766667,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4776,10 +4984,12 @@
     "flag_emoji": "🇲🇵",
     "flag_url": "https://flagcdn.com/w320/mp.png",
     "population": 47329,
+    "latitude": 15.2,
+    "longitude": 145.75,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/usa/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -4794,11 +5004,11 @@
       "card_acceptance": ""
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -4819,6 +5029,8 @@
     "flag_emoji": "🇦🇬",
     "flag_url": "https://flagcdn.com/w320/ag.png",
     "population": 103603,
+    "latitude": 17.05,
+    "longitude": -61.8,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4862,9 +5074,11 @@
     "flag_emoji": "🇲🇾",
     "flag_url": "https://flagcdn.com/w320/my.png",
     "population": 34231700,
+    "latitude": 2.5,
+    "longitude": 112.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Malezja).",
       "url": "https://www.gov.pl/web/malezja/idp"
     },
     "currency": {
@@ -4905,10 +5119,12 @@
     "flag_emoji": "🇬🇵",
     "flag_url": "https://flagcdn.com/w320/gp.png",
     "population": 378561,
+    "latitude": 16.25,
+    "longitude": -61.583333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -4923,11 +5139,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -4948,9 +5164,11 @@
     "flag_emoji": "🇴🇲",
     "flag_url": "https://flagcdn.com/w320/om.png",
     "population": 5343630,
+    "latitude": 21.0,
+    "longitude": 57.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Oman).",
       "url": "https://www.gov.pl/web/arabiasaudyjska/oman-idp"
     },
     "currency": {
@@ -4991,6 +5209,8 @@
     "flag_emoji": "🇰🇷",
     "flag_url": "https://flagcdn.com/w320/kr.png",
     "population": 51159889,
+    "latitude": 37.0,
+    "longitude": 127.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -5034,6 +5254,8 @@
     "flag_emoji": "🇵🇳",
     "flag_url": "https://flagcdn.com/w320/pn.png",
     "population": 35,
+    "latitude": -25.066667,
+    "longitude": -130.1,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -5077,9 +5299,11 @@
     "flag_emoji": "🇧🇦",
     "flag_url": "https://flagcdn.com/w320/ba.png",
     "population": 3422000,
+    "latitude": 44.0,
+    "longitude": 18.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bośnia i Hercegowina).",
       "url": "https://www.gov.pl/web/bosniaihercegowina/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5120,9 +5344,11 @@
     "flag_emoji": "🇱🇸",
     "flag_url": "https://flagcdn.com/w320/ls.png",
     "population": 2116427,
+    "latitude": -29.5,
+    "longitude": 28.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Lesotho).",
       "url": "https://www.gov.pl/web/rpa/lesotho-idp"
     },
     "currency": {
@@ -5163,9 +5389,11 @@
     "flag_emoji": "🇯🇵",
     "flag_url": "https://flagcdn.com/w320/jp.png",
     "population": 123210000,
+    "latitude": 36.0,
+    "longitude": 138.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Japonia).",
       "url": "https://www.gov.pl/web/japonia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5206,9 +5434,11 @@
     "flag_emoji": "🇹🇲",
     "flag_url": "https://flagcdn.com/w320/tm.png",
     "population": 7057841,
+    "latitude": 40.0,
+    "longitude": 60.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Turkmenistan).",
       "url": "https://www.gov.pl/web/azerbejdzan/turkmenistan-idp"
     },
     "currency": {
@@ -5249,10 +5479,12 @@
     "flag_emoji": "🇨🇼",
     "flag_url": "https://flagcdn.com/w320/cw.png",
     "population": 156115,
+    "latitude": 12.116667,
+    "longitude": -68.933333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/holandia/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "ANG",
@@ -5267,11 +5499,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -5292,9 +5524,11 @@
     "flag_emoji": "🇭🇷",
     "flag_url": "https://flagcdn.com/w320/hr.png",
     "population": 3866233,
+    "latitude": 45.166667,
+    "longitude": 15.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Chorwacja).",
       "url": "https://www.gov.pl/web/chorwacja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5356,6 +5590,8 @@
     "flag_emoji": "🇫🇴",
     "flag_url": "https://flagcdn.com/w320/fo.png",
     "population": 54885,
+    "latitude": 62.0,
+    "longitude": -7.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -5399,9 +5635,11 @@
     "flag_emoji": "🇧🇹",
     "flag_url": "https://flagcdn.com/w320/bt.png",
     "population": 784043,
+    "latitude": 27.5,
+    "longitude": 90.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bhutan).",
       "url": "https://www.gov.pl/web/indie/bhutan-idp"
     },
     "currency": {
@@ -5442,9 +5680,11 @@
     "flag_emoji": "🇸🇮",
     "flag_url": "https://flagcdn.com/w320/si.png",
     "population": 2130638,
+    "latitude": 46.116667,
+    "longitude": 14.816667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Słowenia).",
       "url": "https://www.gov.pl/web/slowenia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5506,9 +5746,11 @@
     "flag_emoji": "🇱🇦",
     "flag_url": "https://flagcdn.com/w320/la.png",
     "population": 7647000,
+    "latitude": 18.0,
+    "longitude": 105.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Laos).",
       "url": "https://www.gov.pl/web/tajlandia/laos-idp"
     },
     "currency": {
@@ -5549,6 +5791,8 @@
     "flag_emoji": "🇬🇬",
     "flag_url": "https://flagcdn.com/w320/gg.png",
     "population": 64781,
+    "latitude": 49.466667,
+    "longitude": -2.583333,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -5592,9 +5836,11 @@
     "flag_emoji": "🇱🇧",
     "flag_url": "https://flagcdn.com/w320/lb.png",
     "population": 5490000,
+    "latitude": 33.833333,
+    "longitude": 35.833333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Liban).",
       "url": "https://www.gov.pl/web/liban/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5635,9 +5881,11 @@
     "flag_emoji": "🇲🇹",
     "flag_url": "https://flagcdn.com/w320/mt.png",
     "population": 574250,
+    "latitude": 35.9375,
+    "longitude": 14.3754,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Malta).",
       "url": "https://www.gov.pl/web/malta/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5699,10 +5947,12 @@
     "flag_emoji": "🇰🇾",
     "flag_url": "https://flagcdn.com/w320/ky.png",
     "population": 84738,
+    "latitude": 19.3133,
+    "longitude": -81.2546,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "KYD",
@@ -5717,11 +5967,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -5742,9 +5992,11 @@
     "flag_emoji": "🇷🇸",
     "flag_url": "https://flagcdn.com/w320/rs.png",
     "population": 6567783,
+    "latitude": 44.0,
+    "longitude": 21.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Serbia).",
       "url": "https://www.gov.pl/web/serbia/informacje-dla-podrozujacych2"
     },
     "currency": {
@@ -5806,9 +6058,11 @@
     "flag_emoji": "🇱🇻",
     "flag_url": "https://flagcdn.com/w320/lv.png",
     "population": 1829000,
+    "latitude": 57.0,
+    "longitude": 25.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Łotwa).",
       "url": "https://www.gov.pl/web/lotwa/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5870,6 +6124,8 @@
     "flag_emoji": "🇨🇩",
     "flag_url": "https://flagcdn.com/w320/cd.png",
     "population": 112832000,
+    "latitude": null,
+    "longitude": 25.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -5913,9 +6169,11 @@
     "flag_emoji": "🇨🇾",
     "flag_url": "https://flagcdn.com/w320/cy.png",
     "population": 1442614,
+    "latitude": 35.0,
+    "longitude": 33.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Cypr).",
       "url": "https://www.gov.pl/web/cypr/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -5956,9 +6214,11 @@
     "flag_emoji": "🇬🇦",
     "flag_url": "https://flagcdn.com/w320/ga.png",
     "population": 2469296,
+    "latitude": -1.0,
+    "longitude": 11.75,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Gabon).",
       "url": "https://www.gov.pl/web/angola/gabon-idp"
     },
     "currency": {
@@ -5999,6 +6259,8 @@
     "flag_emoji": "🇸🇱",
     "flag_url": "https://flagcdn.com/w320/sl.png",
     "population": 9077691,
+    "latitude": 8.5,
+    "longitude": -11.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -6042,9 +6304,11 @@
     "flag_emoji": "🇮🇶",
     "flag_url": "https://flagcdn.com/w320/iq.png",
     "population": 46118793,
+    "latitude": 33.0,
+    "longitude": 44.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Irak).",
       "url": "https://www.gov.pl/web/irak/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6085,9 +6349,11 @@
     "flag_emoji": "🇧🇼",
     "flag_url": "https://flagcdn.com/w320/bw.png",
     "population": 2359609,
+    "latitude": -22.0,
+    "longitude": 24.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Botswana).",
       "url": "https://www.gov.pl/web/rpa/botswana-idp"
     },
     "currency": {
@@ -6128,10 +6394,12 @@
     "flag_emoji": "🇧🇶",
     "flag_url": "https://flagcdn.com/w320/bq.png",
     "population": 31980,
+    "latitude": 12.18,
+    "longitude": -68.25,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/holandia/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -6139,18 +6407,18 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": "A, B",
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": "right",
+      "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -6171,9 +6439,11 @@
     "flag_emoji": "🇸🇴",
     "flag_url": "https://flagcdn.com/w320/so.png",
     "population": 19655000,
+    "latitude": 10.0,
+    "longitude": 49.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Somalia).",
       "url": "https://www.gov.pl/web/kenia/somalia-idp"
     },
     "currency": {
@@ -6191,7 +6461,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -6214,9 +6484,11 @@
     "flag_emoji": "🇲🇺",
     "flag_url": "https://flagcdn.com/w320/mu.png",
     "population": 1243741,
+    "latitude": -20.283333,
+    "longitude": 57.55,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mauritius).",
       "url": "https://www.gov.pl/web/kenia/mauritius-idp"
     },
     "currency": {
@@ -6257,9 +6529,11 @@
     "flag_emoji": "🇬🇪",
     "flag_url": "https://flagcdn.com/w320/ge.png",
     "population": 4000921,
+    "latitude": 42.0,
+    "longitude": 43.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gruzja).",
       "url": "https://www.gov.pl/web/gruzja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6300,9 +6574,11 @@
     "flag_emoji": "🇲🇬",
     "flag_url": "https://flagcdn.com/w320/mg.png",
     "population": 31727042,
+    "latitude": -20.0,
+    "longitude": 47.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Madagaskar).",
       "url": "https://www.gov.pl/web/kenia/madagaskar-idp"
     },
     "currency": {
@@ -6343,6 +6619,8 @@
     "flag_emoji": "🇺🇲",
     "flag_url": "https://flagcdn.com/w320/um.png",
     "population": 0,
+    "latitude": 19.3,
+    "longitude": 166.633333,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -6386,9 +6664,11 @@
     "flag_emoji": "🇱🇾",
     "flag_url": "https://flagcdn.com/w320/ly.png",
     "population": 7459000,
+    "latitude": 25.0,
+    "longitude": 17.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Libia).",
       "url": "https://www.gov.pl/web/libia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6404,7 +6684,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -6429,9 +6709,11 @@
     "flag_emoji": "🇦🇹",
     "flag_url": "https://flagcdn.com/w320/at.png",
     "population": 9200931,
+    "latitude": 47.333333,
+    "longitude": 13.333333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Austria).",
       "url": "https://www.gov.pl/web/austria/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6493,9 +6775,11 @@
     "flag_emoji": "🇳🇺",
     "flag_url": "https://flagcdn.com/w320/nu.png",
     "population": 1681,
+    "latitude": -19.033333,
+    "longitude": -169.866667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Niue).",
       "url": "https://www.gov.pl/web/nowazelandia/niue-idp"
     },
     "currency": {
@@ -6536,9 +6820,11 @@
     "flag_emoji": "🇪🇹",
     "flag_url": "https://flagcdn.com/w320/et.png",
     "population": 111652998,
+    "latitude": 8.0,
+    "longitude": 38.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Etiopia).",
       "url": "https://www.gov.pl/web/etiopia/idp"
     },
     "currency": {
@@ -6579,9 +6865,11 @@
     "flag_emoji": "🇨🇲",
     "flag_url": "https://flagcdn.com/w320/cm.png",
     "population": 29442327,
+    "latitude": 6.0,
+    "longitude": 12.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kamerun).",
       "url": "https://www.gov.pl/web/nigeria/kamerun-idp"
     },
     "currency": {
@@ -6622,9 +6910,11 @@
     "flag_emoji": "🇪🇬",
     "flag_url": "https://flagcdn.com/w320/eg.png",
     "population": 107271260,
+    "latitude": 27.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Egipt).",
       "url": "https://www.gov.pl/web/egipt/idp"
     },
     "currency": {
@@ -6665,9 +6955,11 @@
     "flag_emoji": "🇵🇼",
     "flag_url": "https://flagcdn.com/w320/pw.png",
     "population": 16733,
+    "latitude": 7.5,
+    "longitude": 134.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Palau).",
       "url": "https://www.gov.pl/web/filipiny/palau-idp"
     },
     "currency": {
@@ -6708,6 +7000,8 @@
     "flag_emoji": "🇱🇨",
     "flag_url": "https://flagcdn.com/w320/lc.png",
     "population": 184100,
+    "latitude": 13.883333,
+    "longitude": -60.966667,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -6751,10 +7045,12 @@
     "flag_emoji": "🇵🇷",
     "flag_url": "https://flagcdn.com/w320/pr.png",
     "population": 3203295,
+    "latitude": 18.25,
+    "longitude": -66.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/usa/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -6769,11 +7065,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -6794,9 +7090,11 @@
     "flag_emoji": "🇦🇫",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
     "population": 43844000,
+    "latitude": 33.0,
+    "longitude": 65.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Afganistan).",
       "url": "https://www.gov.pl/web/indie/afganistan-idp"
     },
     "currency": {
@@ -6837,9 +7135,11 @@
     "flag_emoji": "🇦🇱",
     "flag_url": "https://flagcdn.com/w320/al.png",
     "population": 2363314,
+    "latitude": 41.0,
+    "longitude": 20.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Albania).",
       "url": "https://www.gov.pl/web/albania/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6901,9 +7201,11 @@
     "flag_emoji": "🇷🇺",
     "flag_url": "https://flagcdn.com/w320/ru.png",
     "population": 146028325,
+    "latitude": 60.0,
+    "longitude": 100.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Rosja).",
       "url": "https://www.gov.pl/web/rosja/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -6944,9 +7246,11 @@
     "flag_emoji": "🇬🇩",
     "flag_url": "https://flagcdn.com/w320/gd.png",
     "population": 109021,
+    "latitude": 12.116667,
+    "longitude": -61.666667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Grenada).",
       "url": "https://www.gov.pl/web/wenezuela/grenada-idp"
     },
     "currency": {
@@ -6987,9 +7291,11 @@
     "flag_emoji": "🇽🇰",
     "flag_url": "https://flagcdn.com/w320/xk.png",
     "population": 1585566,
+    "latitude": 42.666667,
+    "longitude": 21.166667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kosowo).",
       "url": "https://www.gov.pl/web/macedoniapolnocna/kosowo-idp"
     },
     "currency": {
@@ -7030,9 +7336,11 @@
     "flag_emoji": "🇧🇮",
     "flag_url": "https://flagcdn.com/w320/bi.png",
     "population": 12332788,
+    "latitude": -3.5,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Burundi).",
       "url": "https://www.gov.pl/web/tanzania/burundi-idp"
     },
     "currency": {
@@ -7050,7 +7358,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -7073,9 +7381,11 @@
     "flag_emoji": "🇰🇲",
     "flag_url": "https://flagcdn.com/w320/km.png",
     "population": 919901,
+    "latitude": -12.166667,
+    "longitude": 44.25,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Komory).",
       "url": "https://www.gov.pl/web/tanzania/komory-idp"
     },
     "currency": {
@@ -7093,7 +7403,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -7116,9 +7426,11 @@
     "flag_emoji": "🇧🇾",
     "flag_url": "https://flagcdn.com/w320/by.png",
     "population": 9109280,
+    "latitude": 53.0,
+    "longitude": 28.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Białoruś).",
       "url": "https://www.gov.pl/web/bialorus/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7180,6 +7492,8 @@
     "flag_emoji": "🇭🇲",
     "flag_url": "https://flagcdn.com/w320/hm.png",
     "population": 0,
+    "latitude": -53.0818,
+    "longitude": 73.5042,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -7223,9 +7537,11 @@
     "flag_emoji": "🇹🇿",
     "flag_url": "https://flagcdn.com/w320/tz.png",
     "population": 68153004,
+    "latitude": -6.0,
+    "longitude": 35.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tanzania).",
       "url": "https://www.gov.pl/web/tanzania/idp"
     },
     "currency": {
@@ -7243,7 +7559,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -7266,9 +7582,11 @@
     "flag_emoji": "🇧🇬",
     "flag_url": "https://flagcdn.com/w320/bg.png",
     "population": 6437360,
+    "latitude": 43.0,
+    "longitude": 25.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Bułgaria).",
       "url": "https://www.gov.pl/web/bulgaria/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7330,9 +7648,11 @@
     "flag_emoji": "🇸🇻",
     "flag_url": "https://flagcdn.com/w320/sv.png",
     "population": 6029976,
+    "latitude": 13.833333,
+    "longitude": -88.916667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Salwador).",
       "url": "https://www.gov.pl/web/panama/salwador-idp"
     },
     "currency": {
@@ -7373,9 +7693,11 @@
     "flag_emoji": "🇳🇱",
     "flag_url": "https://flagcdn.com/w320/nl.png",
     "population": 18100436,
+    "latitude": 52.5,
+    "longitude": 5.75,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Holandia).",
       "url": "https://www.gov.pl/web/holandia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7437,9 +7759,11 @@
     "flag_emoji": "🇻🇦",
     "flag_url": "https://flagcdn.com/w320/va.png",
     "population": 882,
+    "latitude": 41.9,
+    "longitude": 12.45,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Watykan).",
       "url": "https://www.gov.pl/web/watykan/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7501,6 +7825,8 @@
     "flag_emoji": "🇱🇰",
     "flag_url": "https://flagcdn.com/w320/lk.png",
     "population": 21763170,
+    "latitude": 7.0,
+    "longitude": 81.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -7544,9 +7870,11 @@
     "flag_emoji": "🇫🇮",
     "flag_url": "https://flagcdn.com/w320/fi.png",
     "population": 5650325,
+    "latitude": 64.0,
+    "longitude": 26.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Finlandia).",
       "url": "https://www.gov.pl/web/finlandia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7587,10 +7915,12 @@
     "flag_emoji": "🇵🇫",
     "flag_url": "https://flagcdn.com/w320/pf.png",
     "population": 279500,
+    "latitude": -17.6797,
+    "longitude": -149.4068,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "XPF",
@@ -7605,11 +7935,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -7630,9 +7960,11 @@
     "flag_emoji": "🇲🇻",
     "flag_url": "https://flagcdn.com/w320/mv.png",
     "population": 515132,
+    "latitude": 3.25,
+    "longitude": 73.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Malediwy).",
       "url": "https://www.gov.pl/web/indie/malediwy-idp"
     },
     "currency": {
@@ -7673,9 +8005,11 @@
     "flag_emoji": "🇵🇾",
     "flag_url": "https://flagcdn.com/w320/py.png",
     "population": 6109644,
+    "latitude": -23.0,
+    "longitude": -58.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Paragwaj).",
       "url": "https://www.gov.pl/web/argentyna/paragwaj-idp"
     },
     "currency": {
@@ -7716,6 +8050,8 @@
     "flag_emoji": "🇸🇿",
     "flag_url": "https://flagcdn.com/w320/sz.png",
     "population": 1235549,
+    "latitude": -26.5,
+    "longitude": 31.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -7759,9 +8095,11 @@
     "flag_emoji": "🇨🇭",
     "flag_url": "https://flagcdn.com/w320/ch.png",
     "population": 9082848,
+    "latitude": 47.0,
+    "longitude": 8.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Szwajcaria).",
       "url": "https://www.gov.pl/web/szwajcaria/idp"
     },
     "currency": {
@@ -7823,9 +8161,11 @@
     "flag_emoji": "🇫🇯",
     "flag_url": "https://flagcdn.com/w320/fj.png",
     "population": 900869,
+    "latitude": -17.7134,
+    "longitude": 178.065,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Fidżi).",
       "url": "https://www.gov.pl/web/australia/fidzi-idp"
     },
     "currency": {
@@ -7866,6 +8206,8 @@
     "flag_emoji": "🇿🇦",
     "flag_url": "https://flagcdn.com/w320/za.png",
     "population": 63100945,
+    "latitude": -29.0,
+    "longitude": 24.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -7930,9 +8272,11 @@
     "flag_emoji": "🇯🇴",
     "flag_url": "https://flagcdn.com/w320/jo.png",
     "population": 11734000,
+    "latitude": 31.0,
+    "longitude": 36.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Jordania).",
       "url": "https://www.gov.pl/web/jordania/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -7973,9 +8317,11 @@
     "flag_emoji": "🇧🇿",
     "flag_url": "https://flagcdn.com/w320/bz.png",
     "population": 417634,
+    "latitude": 17.25,
+    "longitude": -88.75,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Belize).",
       "url": "https://www.gov.pl/web/panama/belize-idp"
     },
     "currency": {
@@ -8016,9 +8362,11 @@
     "flag_emoji": "🇵🇪",
     "flag_url": "https://flagcdn.com/w320/pe.png",
     "population": 34350244,
+    "latitude": -10.0,
+    "longitude": -76.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Peru).",
       "url": "https://www.gov.pl/web/peru/idp"
     },
     "currency": {
@@ -8059,9 +8407,11 @@
     "flag_emoji": "🇹🇯",
     "flag_url": "https://flagcdn.com/w320/tj.png",
     "population": 10499000,
+    "latitude": 39.0,
+    "longitude": 71.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tadżykistan).",
       "url": "https://www.gov.pl/web/uzbekistan/tadzykistan-idp"
     },
     "currency": {
@@ -8077,7 +8427,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8102,9 +8452,11 @@
     "flag_emoji": "🇬🇳",
     "flag_url": "https://flagcdn.com/w320/gn.png",
     "population": 14363931,
+    "latitude": 11.0,
+    "longitude": -10.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gwinea).",
       "url": "https://www.gov.pl/web/senegal/gwinea-idp"
     },
     "currency": {
@@ -8145,6 +8497,8 @@
     "flag_emoji": "🇸🇧",
     "flag_url": "https://flagcdn.com/w320/sb.png",
     "population": 750325,
+    "latitude": -8.0,
+    "longitude": 159.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8188,9 +8542,11 @@
     "flag_emoji": "🇸🇳",
     "flag_url": "https://flagcdn.com/w320/sn.png",
     "population": 18593258,
+    "latitude": 14.0,
+    "longitude": -14.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Senegal).",
       "url": "https://www.gov.pl/web/senegal/idp"
     },
     "currency": {
@@ -8231,6 +8587,8 @@
     "flag_emoji": "🇬🇱",
     "flag_url": "https://flagcdn.com/w320/gl.png",
     "population": 56542,
+    "latitude": 72.0,
+    "longitude": -40.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8274,6 +8632,8 @@
     "flag_emoji": "🇮🇲",
     "flag_url": "https://flagcdn.com/w320/im.png",
     "population": 84530,
+    "latitude": 54.25,
+    "longitude": -4.5,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8317,9 +8677,11 @@
     "flag_emoji": "🇱🇹",
     "flag_url": "https://flagcdn.com/w320/lt.png",
     "population": 2894886,
+    "latitude": 56.0,
+    "longitude": 24.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Litwa).",
       "url": "https://www.gov.pl/web/litwa/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -8381,9 +8743,11 @@
     "flag_emoji": "🇲🇳",
     "flag_url": "https://flagcdn.com/w320/mn.png",
     "population": 3544835,
+    "latitude": 46.0,
+    "longitude": 105.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mongolia).",
       "url": "https://www.gov.pl/web/mongolia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -8424,9 +8788,11 @@
     "flag_emoji": "🇧🇴",
     "flag_url": "https://flagcdn.com/w320/bo.png",
     "population": 11365333,
+    "latitude": -17.0,
+    "longitude": -65.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Boliwia).",
       "url": "https://www.gov.pl/web/peru/boliwia-idp"
     },
     "currency": {
@@ -8467,9 +8833,11 @@
     "flag_emoji": "🇰🇿",
     "flag_url": "https://flagcdn.com/w320/kz.png",
     "population": 20426568,
+    "latitude": 48.0196,
+    "longitude": 66.9237,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kazachstan).",
       "url": "https://www.gov.pl/web/kazachstan/idp"
     },
     "currency": {
@@ -8485,7 +8853,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8510,6 +8878,8 @@
     "flag_emoji": "🇹🇫",
     "flag_url": "https://flagcdn.com/w320/tf.png",
     "population": 400,
+    "latitude": -49.25,
+    "longitude": 69.167,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8553,9 +8923,11 @@
     "flag_emoji": "🇭🇰",
     "flag_url": "https://flagcdn.com/w320/hk.png",
     "population": 7527500,
+    "latitude": 22.267,
+    "longitude": 114.188,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Hongkong).",
       "url": "https://www.gov.pl/web/chiny/hongkong-idp"
     },
     "currency": {
@@ -8571,7 +8943,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8596,9 +8968,11 @@
     "flag_emoji": "🇵🇸",
     "flag_url": "https://flagcdn.com/w320/ps.png",
     "population": 5483450,
+    "latitude": 31.9,
+    "longitude": 35.2,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Palestyna).",
       "url": "https://www.gov.pl/web/palestyna/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -8639,9 +9013,11 @@
     "flag_emoji": "🇦🇷",
     "flag_url": "https://flagcdn.com/w320/ar.png",
     "population": 46735004,
+    "latitude": -34.0,
+    "longitude": -64.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Argentyna).",
       "url": "https://www.gov.pl/web/argentyna/idp"
     },
     "currency": {
@@ -8682,10 +9058,12 @@
     "flag_emoji": "🇦🇸",
     "flag_url": "https://flagcdn.com/w320/as.png",
     "population": 49710,
+    "latitude": -14.333333,
+    "longitude": -170.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/usa/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -8700,11 +9078,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -8725,10 +9103,12 @@
     "flag_emoji": "🇲🇫",
     "flag_url": "https://flagcdn.com/w320/mf.png",
     "population": 31496,
+    "latitude": 18.0708,
+    "longitude": -63.0501,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -8743,11 +9123,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -8768,9 +9148,11 @@
     "flag_emoji": "🇦🇲",
     "flag_url": "https://flagcdn.com/w320/am.png",
     "population": 3076200,
+    "latitude": 40.0,
+    "longitude": 45.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Armenia).",
       "url": "https://www.gov.pl/web/armenia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -8811,9 +9193,11 @@
     "flag_emoji": "🇦🇴",
     "flag_url": "https://flagcdn.com/w320/ao.png",
     "population": 36170961,
+    "latitude": -12.5,
+    "longitude": 18.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Angola).",
       "url": "https://www.gov.pl/web/angola/idp"
     },
     "currency": {
@@ -8854,9 +9238,11 @@
     "flag_emoji": "🇹🇬",
     "flag_url": "https://flagcdn.com/w320/tg.png",
     "population": 8095498,
+    "latitude": 8.0,
+    "longitude": 1.166667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Togo).",
       "url": "https://www.gov.pl/web/nigeria/togo-idp"
     },
     "currency": {
@@ -8874,7 +9260,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -8897,6 +9283,8 @@
     "flag_emoji": "🇲🇭",
     "flag_url": "https://flagcdn.com/w320/mh.png",
     "population": 42418,
+    "latitude": 9.0,
+    "longitude": 168.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8940,9 +9328,11 @@
     "flag_emoji": "🇧🇭",
     "flag_url": "https://flagcdn.com/w320/bh.png",
     "population": 1594654,
+    "latitude": 26.0,
+    "longitude": 50.55,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Bahrajn).",
       "url": "https://www.gov.pl/web/kuwejt/bahrajn-idp"
     },
     "currency": {
@@ -8983,9 +9373,11 @@
     "flag_emoji": "🇪🇪",
     "flag_url": "https://flagcdn.com/w320/ee.png",
     "population": 1369995,
+    "latitude": 59.0,
+    "longitude": 26.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Estonia).",
       "url": "https://www.gov.pl/web/estonia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -9047,10 +9439,12 @@
     "flag_emoji": "🇲🇸",
     "flag_url": "https://flagcdn.com/w320/ms.png",
     "population": 4386,
+    "latitude": 16.75,
+    "longitude": -62.2,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "XCD",
@@ -9065,11 +9459,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -9090,6 +9484,8 @@
     "flag_emoji": "🇬🇶",
     "flag_url": "https://flagcdn.com/w320/gq.png",
     "population": 1668768,
+    "latitude": 2.0,
+    "longitude": 10.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -9133,9 +9529,11 @@
     "flag_emoji": "🇳🇬",
     "flag_url": "https://flagcdn.com/w320/ng.png",
     "population": 223800000,
+    "latitude": 10.0,
+    "longitude": 8.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Nigeria).",
       "url": "https://www.gov.pl/web/nigeria/idp"
     },
     "currency": {
@@ -9176,10 +9574,12 @@
     "flag_emoji": "🇧🇲",
     "flag_url": "https://flagcdn.com/w320/bm.png",
     "population": 64055,
+    "latitude": 32.333333,
+    "longitude": -64.75,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "BMD",
@@ -9194,11 +9594,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -9219,9 +9619,11 @@
     "flag_emoji": "🇲🇦",
     "flag_url": "https://flagcdn.com/w320/ma.png",
     "population": 36828330,
+    "latitude": 32.0,
+    "longitude": -5.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Maroko).",
       "url": "https://www.gov.pl/web/maroko/idp"
     },
     "currency": {
@@ -9262,9 +9664,11 @@
     "flag_emoji": "🇳🇦",
     "flag_url": "https://flagcdn.com/w320/na.png",
     "population": 3022401,
+    "latitude": -22.0,
+    "longitude": 17.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Namibia).",
       "url": "https://www.gov.pl/web/rpa/namibia-idp"
     },
     "currency": {
@@ -9305,10 +9709,12 @@
     "flag_emoji": "🇫🇰",
     "flag_url": "https://flagcdn.com/w320/fk.png",
     "population": 3662,
+    "latitude": -51.75,
+    "longitude": -59.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/wielkabrytania/informacje-dla-podrozujacych"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "FKP",
@@ -9323,11 +9729,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": true,
-      "visa_notes": null
+      "id_card_allowed": false,
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -9348,9 +9754,11 @@
     "flag_emoji": "🇸🇨",
     "flag_url": "https://flagcdn.com/w320/sc.png",
     "population": 122729,
+    "latitude": -4.583333,
+    "longitude": 55.666667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Seszele).",
       "url": "https://www.gov.pl/web/kenia/seszele-idp"
     },
     "currency": {
@@ -9391,9 +9799,11 @@
     "flag_emoji": "🇿🇲",
     "flag_url": "https://flagcdn.com/w320/zm.png",
     "population": 19693423,
+    "latitude": -15.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zambia).",
       "url": "https://www.gov.pl/web/rpa/zambia-idp"
     },
     "currency": {
@@ -9434,9 +9844,11 @@
     "flag_emoji": "🇰🇭",
     "flag_url": "https://flagcdn.com/w320/kh.png",
     "population": 17577760,
+    "latitude": 13.0,
+    "longitude": 105.0,
     "safety": {
-      "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Kambodża).",
       "url": "https://www.gov.pl/web/tajlandia/kambodza-idp"
     },
     "currency": {
@@ -9477,9 +9889,11 @@
     "flag_emoji": "🇮🇪",
     "flag_url": "https://flagcdn.com/w320/ie.png",
     "population": 5458600,
+    "latitude": 53.0,
+    "longitude": -8.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Irlandia).",
       "url": "https://www.gov.pl/web/irlandia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -9541,9 +9955,11 @@
     "flag_emoji": "🇵🇰",
     "flag_url": "https://flagcdn.com/w320/pk.png",
     "population": 241499431,
+    "latitude": 30.0,
+    "longitude": 70.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Pakistan).",
       "url": "https://www.gov.pl/web/pakistan/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -9584,10 +10000,12 @@
     "flag_emoji": "🇬🇺",
     "flag_url": "https://flagcdn.com/w320/gu.png",
     "population": 153836,
+    "latitude": 13.466667,
+    "longitude": 144.783333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/usa/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "USD",
@@ -9602,11 +10020,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -9627,6 +10045,8 @@
     "flag_emoji": "🇲🇴",
     "flag_url": "https://flagcdn.com/w320/mo.png",
     "population": 685900,
+    "latitude": 22.166667,
+    "longitude": 113.55,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -9670,9 +10090,11 @@
     "flag_emoji": "🇳🇵",
     "flag_url": "https://flagcdn.com/w320/np.png",
     "population": 29911840,
+    "latitude": 28.0,
+    "longitude": 84.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nepal).",
       "url": "https://www.gov.pl/web/indie/nepal-idp"
     },
     "currency": {
@@ -9688,7 +10110,7 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": true,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -9713,9 +10135,11 @@
     "flag_emoji": "🇮🇳",
     "flag_url": "https://flagcdn.com/w320/in.png",
     "population": 1417492000,
+    "latitude": 20.0,
+    "longitude": 77.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Indie).",
       "url": "https://www.gov.pl/web/indie/idp"
     },
     "currency": {
@@ -9756,9 +10180,11 @@
     "flag_emoji": "🇰🇬",
     "flag_url": "https://flagcdn.com/w320/kg.png",
     "population": 7281800,
+    "latitude": 41.0,
+    "longitude": 75.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kirgistan).",
       "url": "https://www.gov.pl/web/kazachstan/kirgistan-idp"
     },
     "currency": {
@@ -9799,9 +10225,11 @@
     "flag_emoji": "🇭🇹",
     "flag_url": "https://flagcdn.com/w320/ht.png",
     "population": 11867032,
+    "latitude": 19.0,
+    "longitude": -72.416667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Haiti).",
       "url": "https://www.gov.pl/web/panama/haiti-idp"
     },
     "currency": {
@@ -9842,9 +10270,11 @@
     "flag_emoji": "🇩🇪",
     "flag_url": "https://flagcdn.com/w320/de.png",
     "population": 83491249,
+    "latitude": 51.0,
+    "longitude": 9.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Niemcy).",
       "url": "https://www.gov.pl/web/niemcy/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -9906,9 +10336,11 @@
     "flag_emoji": "🇷🇼",
     "flag_url": "https://flagcdn.com/w320/rw.png",
     "population": 14104969,
+    "latitude": -2.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Rwanda).",
       "url": "https://www.gov.pl/web/tanzania/rwanda-idp"
     },
     "currency": {
@@ -9949,10 +10381,12 @@
     "flag_emoji": "🇼🇫",
     "flag_url": "https://flagcdn.com/w320/wf.png",
     "population": 11620,
+    "latitude": -13.3,
+    "longitude": -176.2,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "XPF",
@@ -9967,11 +10401,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -9992,9 +10426,11 @@
     "flag_emoji": "🇺🇸",
     "flag_url": "https://flagcdn.com/w320/us.png",
     "population": 340110988,
+    "latitude": 38.0,
+    "longitude": -97.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Stany Zjednoczone).",
       "url": "https://www.gov.pl/web/usa/idp"
     },
     "currency": {
@@ -10012,7 +10448,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -10035,9 +10471,11 @@
     "flag_emoji": "🇰🇪",
     "flag_url": "https://flagcdn.com/w320/ke.png",
     "population": 53330978,
+    "latitude": 1.0,
+    "longitude": 38.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kenia).",
       "url": "https://www.gov.pl/web/kenia/idp"
     },
     "currency": {
@@ -10055,7 +10493,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -10078,9 +10516,11 @@
     "flag_emoji": "🇬🇲",
     "flag_url": "https://flagcdn.com/w320/gm.png",
     "population": 2422712,
+    "latitude": 13.466667,
+    "longitude": -16.566667,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gambia).",
       "url": "https://www.gov.pl/web/senegal/gambia-idp"
     },
     "currency": {
@@ -10121,9 +10561,11 @@
     "flag_emoji": "🇧🇩",
     "flag_url": "https://flagcdn.com/w320/bd.png",
     "population": 169828911,
+    "latitude": 24.0,
+    "longitude": 90.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "high",
+      "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Bangladesz).",
       "url": "https://www.gov.pl/web/indie/bangladesz-idp"
     },
     "currency": {
@@ -10164,9 +10606,11 @@
     "flag_emoji": "🇳🇴",
     "flag_url": "https://flagcdn.com/w320/no.png",
     "population": 5606944,
+    "latitude": 62.0,
+    "longitude": 10.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Norwegia).",
       "url": "https://www.gov.pl/web/norwegia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -10207,9 +10651,11 @@
     "flag_emoji": "🇧🇧",
     "flag_url": "https://flagcdn.com/w320/bb.png",
     "population": 267800,
+    "latitude": 13.166667,
+    "longitude": -59.533333,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Barbados).",
       "url": "https://www.gov.pl/web/wenezuela/barbados-idp"
     },
     "currency": {
@@ -10250,6 +10696,8 @@
     "flag_emoji": "🇰🇳",
     "flag_url": "https://flagcdn.com/w320/kn.png",
     "population": 51320,
+    "latitude": 17.333333,
+    "longitude": -62.75,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10293,9 +10741,11 @@
     "flag_emoji": "🇰🇮",
     "flag_url": "https://flagcdn.com/w320/ki.png",
     "population": 120740,
+    "latitude": 1.416667,
+    "longitude": 173.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kiribati).",
       "url": "https://www.gov.pl/web/nowazelandia/kiribati-idp"
     },
     "currency": {
@@ -10336,9 +10786,11 @@
     "flag_emoji": "🇹🇱",
     "flag_url": "https://flagcdn.com/w320/tl.png",
     "population": 1391221,
+    "latitude": -8.833333,
+    "longitude": 125.916667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Timor Wschodni).",
       "url": "https://www.gov.pl/web/indonezja/timor-wschodni-idp"
     },
     "currency": {
@@ -10379,9 +10831,11 @@
     "flag_emoji": "🇸🇦",
     "flag_url": "https://flagcdn.com/w320/sa.png",
     "population": 35300280,
+    "latitude": 25.0,
+    "longitude": 45.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Arabia Saudyjska).",
       "url": "https://www.gov.pl/web/arabiasaudyjska/idp"
     },
     "currency": {
@@ -10422,6 +10876,8 @@
     "flag_emoji": "🇨🇨",
     "flag_url": "https://flagcdn.com/w320/cc.png",
     "population": 593,
+    "latitude": -12.1642,
+    "longitude": 96.871,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10465,9 +10921,11 @@
     "flag_emoji": "🇸🇲",
     "flag_url": "https://flagcdn.com/w320/sm.png",
     "population": 34132,
+    "latitude": 43.766667,
+    "longitude": 12.416667,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (San Marino).",
       "url": "https://www.gov.pl/web/wlochy/san-marino-idp"
     },
     "currency": {
@@ -10529,9 +10987,11 @@
     "flag_emoji": "🇺🇬",
     "flag_url": "https://flagcdn.com/w320/ug.png",
     "population": 45905417,
+    "latitude": 1.0,
+    "longitude": 32.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Uganda).",
       "url": "https://www.gov.pl/web/kenia/uganda-idp"
     },
     "currency": {
@@ -10572,10 +11032,12 @@
     "flag_emoji": "🇵🇲",
     "flag_url": "https://flagcdn.com/w320/pm.png",
     "population": 5819,
+    "latitude": 46.833333,
+    "longitude": -56.333333,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
-      "url": "https://www.gov.pl/web/francja/idp"
+      "risk_level": "unknown",
+      "risk_text": "Brak danych",
+      "url": ""
     },
     "currency": {
       "code": "EUR",
@@ -10590,11 +11052,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": false,
+      "visa_required": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": null
+      "visa_notes": ""
     },
     "weather": {
       "temp": null,
@@ -10615,9 +11077,11 @@
     "flag_emoji": "🇵🇹",
     "flag_url": "https://flagcdn.com/w320/pt.png",
     "population": 10749635,
+    "latitude": 39.5,
+    "longitude": -8.0,
     "safety": {
       "risk_level": "medium",
-      "risk_text": "Zachowaj szczególną ostrożność",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Portugalia).",
       "url": "https://www.gov.pl/web/portugalia/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -10679,6 +11143,8 @@
     "flag_emoji": "🇸🇭",
     "flag_url": "https://flagcdn.com/w320/sh.png",
     "population": 5651,
+    "latitude": -15.95,
+    "longitude": -5.72,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10722,9 +11188,11 @@
     "flag_emoji": "🇲🇼",
     "flag_url": "https://flagcdn.com/w320/mw.png",
     "population": 20734262,
+    "latitude": -13.5,
+    "longitude": 34.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Malawi).",
       "url": "https://www.gov.pl/web/tanzania/malawi-idp"
     },
     "currency": {
@@ -10742,7 +11210,7 @@
     "entry": {
       "visa_required": false,
       "passport_required": true,
-      "temp_passport_allowed": false,
+      "temp_passport_allowed": true,
       "id_card_allowed": false,
       "visa_notes": null
     },
@@ -10765,6 +11233,8 @@
     "flag_emoji": "🇹🇰",
     "flag_url": "https://flagcdn.com/w320/tk.png",
     "population": 2608,
+    "latitude": -9.0,
+    "longitude": -172.0,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10808,9 +11278,11 @@
     "flag_emoji": "🇭🇳",
     "flag_url": "https://flagcdn.com/w320/hn.png",
     "population": 9892632,
+    "latitude": 15.0,
+    "longitude": -86.5,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Honduras).",
       "url": "https://www.gov.pl/web/panama/honduras-idp"
     },
     "currency": {
@@ -10851,9 +11323,11 @@
     "flag_emoji": "🇺🇾",
     "flag_url": "https://flagcdn.com/w320/uy.png",
     "population": 3499451,
+    "latitude": -33.0,
+    "longitude": -56.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Urugwaj).",
       "url": "https://www.gov.pl/web/argentyna/urugwaj-idp"
     },
     "currency": {
@@ -10894,6 +11368,8 @@
     "flag_emoji": "🇨🇻",
     "flag_url": "https://flagcdn.com/w320/cv.png",
     "population": 491233,
+    "latitude": 16.5388,
+    "longitude": -23.0418,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10937,6 +11413,8 @@
     "flag_emoji": "🇦🇶",
     "flag_url": "https://flagcdn.com/w320/aq.png",
     "population": 1300,
+    "latitude": -90.0,
+    "longitude": null,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10980,9 +11458,11 @@
     "flag_emoji": "🇦🇺",
     "flag_url": "https://flagcdn.com/w320/au.png",
     "population": 27536874,
+    "latitude": -27.0,
+    "longitude": 133.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Australia).",
       "url": "https://www.gov.pl/web/australia/idp"
     },
     "currency": {
@@ -11023,9 +11503,11 @@
     "flag_emoji": "🇮🇷",
     "flag_url": "https://flagcdn.com/w320/ir.png",
     "population": 85961000,
+    "latitude": 32.0,
+    "longitude": 53.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Iran).",
       "url": "https://www.gov.pl/web/iran/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -11066,9 +11548,11 @@
     "flag_emoji": "🇸🇩",
     "flag_url": "https://flagcdn.com/w320/sd.png",
     "population": 51662000,
+    "latitude": 15.0,
+    "longitude": 30.0,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Sudan).",
       "url": "https://www.gov.pl/web/egipt/sudan-idp"
     },
     "currency": {
@@ -11109,9 +11593,11 @@
     "flag_emoji": "🇬🇹",
     "flag_url": "https://flagcdn.com/w320/gt.png",
     "population": 18079810,
+    "latitude": 15.5,
+    "longitude": -90.25,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gwatemala).",
       "url": "https://www.gov.pl/web/panama/gwatemala-idp"
     },
     "currency": {
@@ -11152,9 +11638,11 @@
     "flag_emoji": "🇱🇮",
     "flag_url": "https://flagcdn.com/w320/li.png",
     "population": 40900,
+    "latitude": 47.266667,
+    "longitude": 9.533333,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Liechtenstein).",
       "url": "https://www.gov.pl/web/szwajcaria/ksiestwo-liechtensteinu-idp"
     },
     "currency": {
@@ -11216,6 +11704,8 @@
     "flag_emoji": "🇹🇹",
     "flag_url": "https://flagcdn.com/w320/tt.png",
     "population": 1367764,
+    "latitude": 10.6918,
+    "longitude": -61.2225,
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -11259,9 +11749,11 @@
     "flag_emoji": "🇨🇺",
     "flag_url": "https://flagcdn.com/w320/cu.png",
     "population": 9748007,
+    "latitude": 21.5,
+    "longitude": -80.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kuba).",
       "url": "https://www.gov.pl/web/kuba/informacje-dla-podrozujacych"
     },
     "currency": {
@@ -11302,9 +11794,11 @@
     "flag_emoji": "🇫🇷",
     "flag_url": "https://flagcdn.com/w320/fr.png",
     "population": 66351959,
+    "latitude": 46.0,
+    "longitude": 2.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Francja).",
       "url": "https://www.gov.pl/web/francja/idp"
     },
     "currency": {
@@ -11366,9 +11860,11 @@
     "flag_emoji": "🇸🇷",
     "flag_url": "https://flagcdn.com/w320/sr.png",
     "population": 616500,
+    "latitude": 4.0,
+    "longitude": -56.0,
     "safety": {
       "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Surinam).",
       "url": "https://www.gov.pl/web/wenezuela/surinam-idp"
     },
     "currency": {
@@ -11409,9 +11905,11 @@
     "flag_emoji": "🇱🇷",
     "flag_url": "https://flagcdn.com/w320/lr.png",
     "population": 5248621,
+    "latitude": 6.5,
+    "longitude": -9.5,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Liberia).",
       "url": "https://www.gov.pl/web/nigeria/liberia-idp"
     },
     "currency": {
@@ -11452,9 +11950,11 @@
     "flag_emoji": "🇰🇼",
     "flag_url": "https://flagcdn.com/w320/kw.png",
     "population": 4881254,
+    "latitude": 29.5,
+    "longitude": 45.75,
     "safety": {
-      "risk_level": "low",
-      "risk_text": "Zachowaj zwykłą ostrożność",
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kuwejt).",
       "url": "https://www.gov.pl/web/kuwejt/idp"
     },
     "currency": {

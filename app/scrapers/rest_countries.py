@@ -12,7 +12,7 @@ async def sync_countries(db: Session):
     async with httpx.AsyncClient() as client:
         # Request 1: Essential IDs, Names, and Translations
         try:
-            url1 = "https://restcountries.com/v3.1/all?fields=cca2,cca3,name,translations,capital,continents,region"
+            url1 = "https://restcountries.com/v3.1/all?fields=cca2,cca3,name,translations,capital,continents,region,latlng"
             resp1 = await client.get(url1, timeout=30.0)
             resp1.raise_for_status()
             base_data = resp1.json()
@@ -41,6 +41,11 @@ async def sync_countries(db: Session):
             continents = data.get('continents', [])
             continent = continents[0] if continents else data.get('region')
 
+            # LatLng
+            latlng = data.get('latlng', [None, None])
+            lat = latlng[0] if len(latlng) > 0 else None
+            lng = latlng[1] if len(latlng) > 1 else None
+
             country_dict = {
                 'iso_alpha2': iso2,
                 'iso_alpha3': data.get('cca3'),
@@ -53,7 +58,9 @@ async def sync_countries(db: Session):
                 'region': data.get('region'),
                 'flag_emoji': extra.get('flag'),
                 'flag_url': extra.get('flags', {}).get('png'),
-                'population': extra.get('population')
+                'population': extra.get('population'),
+                'latitude': lat,
+                'longitude': lng
             }
 
             existing = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()

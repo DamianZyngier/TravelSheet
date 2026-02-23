@@ -1,5 +1,9 @@
 import { useState, useEffect, useMemo } from 'react'
+import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
 import './App.css'
+
+// URL do topologii świata (lekkie 110m)
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
 interface CountryData {
   name: string;
@@ -10,6 +14,8 @@ interface CountryData {
   continent: string;
   flag_emoji: string;
   flag_url: string;
+  latitude: number | null;
+  longitude: number | null;
   safety: {
     risk_level: string;
     risk_text: string;
@@ -43,6 +49,8 @@ function App() {
   const [filterSafety, setFilterSafety] = useState<string>('all');
   const [filterContinent, setFilterContinent] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  
+  const [mapPosition, setMapPosition] = useState({ coordinates: [0, 0] as [number, number], zoom: 1 });
 
   const SAFETY_LABELS: Record<string, string> = {
     'low': 'Bezpiecznie',
@@ -146,6 +154,16 @@ function App() {
   // Aktualizuj URL gdy zmienia się wybrany kraj
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
+    
+    if (country && country.longitude !== null && country.latitude !== null) {
+      setMapPosition({ 
+        coordinates: [country.longitude, country.latitude], 
+        zoom: 4 
+      });
+    } else {
+      setMapPosition({ coordinates: [0, 0], zoom: 1 });
+    }
+
     const url = new URL(window.location.href);
     if (country) {
       url.searchParams.set('kraj', country.iso2);
@@ -265,6 +283,64 @@ function App() {
               <div className="detail-titles">
                 <h2>{selectedCountry.name_pl}</h2>
                 <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
+              </div>
+              
+              <div className="detail-map-container">
+                <ComposableMap 
+                  projectionConfig={{ scale: 140 }}
+                  style={{ width: "100%", height: "100%" }}
+                >
+                  <ZoomableGroup
+                    center={mapPosition.coordinates}
+                    zoom={mapPosition.zoom}
+                    onMoveEnd={(pos) => setMapPosition(pos)}
+                  >
+                    <Geographies geography={geoUrl}>
+                      {({ geographies }) =>
+                        geographies.map((geo: any) => {
+                          const isSelected = 
+                            geo.id === selectedCountry.iso3 || 
+                            geo.properties?.iso_a3 === selectedCountry.iso3 ||
+                            geo.properties?.name === selectedCountry.name;
+                          
+                          return (
+                            <Geography
+                              key={geo.rsmKey}
+                              geography={geo}
+                              fill={isSelected ? "#2b6cb0" : "#EAEAEC"}
+                              stroke={isSelected ? "#2b6cb0" : "#D6D6DA"}
+                              strokeWidth={0.5}
+                              style={{
+                                default: { outline: "none" },
+                                hover: { outline: "none" },
+                                pressed: { outline: "none" },
+                              }}
+                            />
+                          );
+                        })
+                      }
+                    </Geographies>
+                    
+                    {selectedCountry.longitude !== null && selectedCountry.latitude !== null && (
+                      <Marker coordinates={[selectedCountry.longitude, selectedCountry.latitude]}>
+                        <circle r={4} fill="#F56565" stroke="#fff" strokeWidth={1} />
+                        <text
+                          textAnchor="middle"
+                          y={-10}
+                          style={{ fontFamily: "system-ui", fill: "#E53E3E", fontSize: "10px", fontWeight: "bold" }}
+                        >
+                          📍
+                        </text>
+                      </Marker>
+                    )}
+                  </ZoomableGroup>
+                </ComposableMap>
+                
+                <div className="map-controls">
+                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: prev.zoom * 1.5 }))}>+</button>
+                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: prev.zoom / 1.5 }))}>-</button>
+                  <button onClick={() => setMapPosition({ coordinates: [selectedCountry.longitude || 0, selectedCountry.latitude || 0], zoom: 4 })}>🎯</button>
+                </div>
               </div>
             </div>
 

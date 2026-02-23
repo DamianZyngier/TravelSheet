@@ -19,6 +19,8 @@ class Country(Base):
     flag_emoji = Column(String(10))
     flag_url = Column(Text)
     population = Column(Integer)
+    latitude = Column(DECIMAL(10, 6))
+    longitude = Column(DECIMAL(10, 6))
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
