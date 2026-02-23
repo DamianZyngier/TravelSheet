@@ -9,6 +9,7 @@ interface CountryData {
   capital: string;
   continent: string;
   flag_emoji: string;
+  flag_url: string;
   safety: {
     risk_level: string;
     summary: string;
@@ -153,7 +154,7 @@ function App() {
                 onClick={() => setSelectedCountry(country)}
               >
                 <div className="card-content">
-                  <span className="main-flag">{country.flag_emoji}</span>
+                  <img src={country.flag_url} alt={`Flaga ${country.name_pl}`} className="main-flag-img" />
                   <h3>{country.name_pl}</h3>
                   <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
                   <span className={`risk-badge risk-${country.safety.risk_level}`}>
@@ -174,7 +175,7 @@ function App() {
             <button className="close-modal" onClick={() => setSelectedCountry(null)}>×</button>
             
             <div className="modal-header">
-              <span className="modal-flag">{selectedCountry.flag_emoji}</span>
+              <img src={selectedCountry.flag_url} alt={`Flaga ${selectedCountry.name_pl}`} className="modal-flag-img" />
               <div className="modal-titles">
                 <h2>{selectedCountry.name_pl}</h2>
                 <p>{selectedCountry.name} ({selectedCountry.iso2})</p>

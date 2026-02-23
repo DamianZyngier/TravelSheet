@@ -55,12 +55,15 @@ async def seed_all():
 
     for i, country in enumerate(countries):
         iso2 = country.iso_alpha2
-        print(f"[{i+1}/{len(countries)}] Processing {country.name} ({iso2})...")
+        name = country.name_pl or country.name
+        print(f"[{i+1}/{len(countries)}] Processing {name} ({iso2})...")
         
         # Gov.pl (MSZ)
         try:
             await gov_pl.scrape_country(db, iso2)
-        except: pass
+        except Exception as e: 
+            print(f"  - MSZ Error for {iso2}: {e}")
+            pass
 
         # Holidays
         try:

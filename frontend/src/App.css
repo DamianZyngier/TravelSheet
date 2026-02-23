@@ -96,9 +96,12 @@
   text-align: center;
 }
 
-.main-flag {
-  font-size: 4rem;
-  line-height: 1;
+.main-flag-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
   display: block;
 }
@@ -188,8 +191,12 @@
   margin-bottom: 2rem;
 }
 
-.modal-flag {
-  font-size: 4rem;
+.modal-flag-img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .modal-titles h2 {

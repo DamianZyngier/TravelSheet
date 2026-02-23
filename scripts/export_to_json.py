@@ -92,6 +92,11 @@ def export_all():
     with open('docs/data.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # Zapisujemy też do frontend/public (dla lokalnego developmentu)
+    os.makedirs('frontend/public', exist_ok=True)
+    with open('frontend/public/data.json', 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
     db.close()
     print(f"✅ Eksport zakończony! Plik docs/data.json zawiera {len(output)} krajów.")
 
