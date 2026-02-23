@@ -8,10 +8,13 @@ async def sync_unesco_sites(db: Session):
     """Fetch UNESCO World Heritage Sites from official XML dataset"""
     
     url = "https://whc.unesco.org/en/list/xml/"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
     
     async with httpx.AsyncClient(timeout=60.0) as client:
         try:
-            response = await client.get(url)
+            response = await client.get(url, headers=headers)
             response.raise_for_status()
         except Exception as e:
             return {"error": f"Failed to fetch UNESCO data: {str(e)}"}
