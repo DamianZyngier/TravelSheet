@@ -199,6 +199,10 @@
   font-weight: bold;
 }
 
+.info-block.full-width {
+  grid-column: 1 / -1;
+}
+
 .safety-info {
   padding: 1.5rem;
   border-radius: 8px;

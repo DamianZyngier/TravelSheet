@@ -42,6 +42,34 @@ function App() {
   const [filterContinent, setFilterContinent] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
+  const CONTINENT_MAP: Record<string, string> = {
+    'Africa': 'Afryka',
+    'Antarctica': 'Antarktyda',
+    'Asia': 'Azja',
+    'Europe': 'Europa',
+    'North America': 'Ameryka Północna',
+    'Oceania': 'Oceania',
+    'South America': 'Ameryka Południowa'
+  };
+
+  const formatPLN = (value: number | null) => {
+    if (value === null) return 'brak danych';
+    return value.toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' PLN';
+  };
+
+  const getCurrencyExample = (country: CountryData) => {
+    const rate = country.currency.rate_pln;
+    if (!rate) return null;
+    
+    // Jeśli 1 jednostka to mniej niż 0.1 PLN (np. JPY, IDR), pokaż przykład dla 1000
+    if (rate < 0.1) {
+      const exampleValue = 1000;
+      const plnValue = exampleValue * rate;
+      return `(1000 ${country.currency.code} ≈ ${formatPLN(plnValue)})`;
+    }
+    return null;
+  };
+
   useEffect(() => {
     fetch('./data.json')
       .then(res => {
@@ -99,7 +127,7 @@ function App() {
           <div className="filter-group">
             <select value={filterContinent} onChange={e => setFilterContinent(e.target.value)}>
               <option value="all">Wszystkie kontynenty</option>
-              {continents.map(c => <option key={c} value={c}>{c}</option>)}
+              {continents.map(c => <option key={c} value={c}>{CONTINENT_MAP[c] || c}</option>)}
             </select>
           </div>
 
@@ -127,7 +155,7 @@ function App() {
                 <span className="flag-icon">{country.flag_emoji}</span>
                 <div className="card-info">
                   <h3>{country.name_pl}</h3>
-                  <p className="card-continent">{country.continent}</p>
+                  <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
                   <span className={`risk-badge risk-${country.safety.risk_level}`}>
                     {country.safety.risk_level}
                   </span>
@@ -156,12 +184,25 @@ function App() {
             <div className="modal-body">
               <div className="info-grid">
                 <div className="info-block">
+                  <label>Kontynent</label>
+                  <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
+                </div>
+                <div className="info-block">
                   <label>Stolica</label>
                   <span>{selectedCountry.capital || 'Brak danych'}</span>
                 </div>
-                <div className="info-block">
+                <div className="info-block full-width">
                   <label>Waluta</label>
-                  <span>{selectedCountry.currency.code} ({selectedCountry.currency.rate_pln ? `${selectedCountry.currency.rate_pln.toFixed(2)} PLN` : 'brak kursu'})</span>
+                  <span>
+                    {selectedCountry.currency.name} ({selectedCountry.currency.code}) <br/>
+                    {selectedCountry.currency.rate_pln ? (
+                      <>
+                        1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
+                        <br/>
+                        <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
+                      </>
+                    ) : 'brak danych o kursie'}
+                  </span>
                 </div>
                 <div className="info-block">
                   <label>Gniazdka</label>

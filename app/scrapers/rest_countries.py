@@ -6,14 +6,14 @@ async def sync_countries(db: Session):
     """Sync all countries from REST Countries API"""
 
     async with httpx.AsyncClient() as client:
-        # Request exactly 11 fields to include translations
-        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,population,continents,translations"
+        # Request essential fields. REST Countries API can be picky with long field lists.
+        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,subregion,population,continents,translations"
         response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
         countries_data = response.json()
         
         if isinstance(countries_data, dict) and countries_data.get('status') == 400:
-            # Fallback - maybe even fewer fields?
-            fields = "name,cca2,cca3,flags,currencies,translations"
+            # Fallback - minimum set of fields
+            fields = "name,cca2,cca3,flags,currencies,translations,continents,region"
             response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
             countries_data = response.json()
 

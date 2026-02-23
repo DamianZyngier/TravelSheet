@@ -8,77 +8,104 @@ import logging
 
 logger = logging.getLogger("uvicorn")
 
-# Manual mapping for countries that are hard to guess or have unique subdomains
-# This is our source of truth for the core country subdomains on gov.pl
-MANUAL_MAPPING = {
-    'AF': 'afganistan', 'AL': 'albania', 'DZ': 'algieria', 'AD': 'andora', 'AO': 'angola', 
-    'AR': 'argentyna', 'AM': 'armenia', 'AU': 'australia', 'AT': 'austria', 'AZ': 'azerbejdzan',
-    'BS': 'bahamy', 'BH': 'bahrajn', 'BD': 'bangladesz', 'BB': 'barbados', 'BE': 'belgia',
-    'BZ': 'belize', 'BJ': 'benin', 'BT': 'bhutan', 'BY': 'bialorus', 'BO': 'boliwia',
-    'BA': 'bosnia-i-hercegowina', 'BW': 'botswana', 'BR': 'brazylia', 'BN': 'brunei', 'BG': 'bulgaria',
-    'BF': 'burkina-faso', 'BI': 'burundi', 'CL': 'chile', 'CN': 'chiny', 'HR': 'chorwacja',
-    'CY': 'cypr', 'TD': 'czad', 'CZ': 'czechy', 'DK': 'dania', 'DM': 'dominika',
-    'DO': 'dominikana', 'DJ': 'dzibuti', 'EG': 'egipt', 'EC': 'ekwador', 'ER': 'erytrea',
-    'EE': 'estonia', 'ET': 'etiopia', 'PH': 'filipiny', 'FI': 'finlandia', 'FR': 'francja',
-    'GA': 'gabon', 'GM': 'gambia', 'GH': 'ghana', 'GR': 'grecja', 'GD': 'grenada',
-    'GE': 'gruzja', 'GY': 'gujana', 'GN': 'gwinea', 'GW': 'gwinea-bissau', 'GQ': 'gwinea-rownikowa',
-    'HT': 'haiti', 'ES': 'hiszpania', 'NL': 'holandia', 'HN': 'honduras', 'IN': 'indie',
-    'ID': 'indonezja', 'IQ': 'irak', 'IR': 'iran', 'IE': 'irlandia', 'IS': 'islandia',
-    'IL': 'izrael', 'JM': 'jamajka', 'JP': 'japonia', 'YE': 'jemen', 'JO': 'jordania',
-    'KH': 'kambodza', 'CM': 'kamerun', 'CA': 'kanada', 'QA': 'katar', 'KZ': 'kazachstan',
-    'KE': 'kenia', 'KG': 'kirgistan', 'CO': 'kolumbia', 'KM': 'komory', 'CG': 'kongo',
-    'CD': 'demokratyczna-republika-konga', 'KP': 'korea-polnocna', 'KR': 'republika-korei', 'XK': 'kosowo', 'CR': 'kostaryka',
-    'CU': 'kuba', 'KW': 'kuwejt', 'LA': 'laos', 'LS': 'lesotho', 'LB': 'liban',
-    'LR': 'liberia', 'LY': 'libia', 'LI': 'liechtenstein', 'LT': 'litwa', 'LU': 'luksemburg',
-    'LV': 'lotwa', 'MK': 'macedonia-polnocna', 'MG': 'madagaskar', 'MY': 'malezja', 'MW': 'malawi',
-    'MV': 'malediwy', 'ML': 'mali', 'MT': 'malta', 'MA': 'maroko', 'MR': 'mauretania',
-    'MU': 'mauritius', 'MX': 'meksyk', 'MD': 'moldawia', 'MC': 'monako', 'MN': 'mongolia',
-    'ME': 'czarnogora', 'MZ': 'mozambik', 'MM': 'mjanma', 'NA': 'namibia', 'NP': 'nepal',
-    'DE': 'niemcy', 'NE': 'niger', 'NG': 'nigeria', 'NI': 'nikaragua', 'NO': 'norwegia',
-    'NZ': 'nowa-zelandia', 'OM': 'oman', 'PK': 'pakistan', 'PA': 'panama', 'PG': 'papua-nowa-gwinea',
-    'PY': 'paragwaj', 'PE': 'peru', 'PT': 'portugalia', 'RU': 'rosja', 'RW': 'rwanda',
-    'RO': 'rumunia', 'SV': 'salwador', 'WS': 'samoa', 'SM': 'san-marino', 'SA': 'arabia-saudyjska',
-    'SN': 'senegal', 'RS': 'serbia', 'SC': 'seszele', 'SL': 'sierra-leone', 'SG': 'singapur',
-    'SK': 'slowacja', 'SI': 'slowenia', 'SO': 'somalia', 'LK': 'sri-lanka', 'US': 'usa',
-    'SD': 'sudan', 'SR': 'surinam', 'SY': 'syria', 'SZ': 'suazi', 'TJ': 'tadzykistan',
-    'TH': 'tajlandia', 'TW': 'tajwan', 'TZ': 'tanzania', 'TL': 'timor-wschodni', 'TG': 'togo',
-    'TO': 'tonga', 'TT': 'trynidad-i-tobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
-    'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
-    'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
-    'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
-    'AE': 'zjednoczone-emiraty-arabskie'
-}
+# Global cache for slugs
+_SLUG_CACHE = {}
+
+def clean_name(name):
+    """Clean name for better matching with MSZ directory"""
+    if not name: return ""
+    name = re.sub(r'\(.*?\)', '', name)
+    name = name.split(',')[0]
+    return name.strip().lower()
+
+async def fetch_directory_slugs():
+    """Fetch all country slugs from the directory page"""
+    url = "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+    
+    slugs = {}
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        try:
+            response = await client.get(url, headers=headers)
+            response.raise_for_status()
+            
+            # Find all /web/dyplomacja/SLUG links followed by a title div
+            matches = re.findall(r'<a href="/web/dyplomacja/([^"]+)">\s*<div>\s*<div class="title">([^<]+)', response.text)
+            
+            for slug, name in matches:
+                name_clean = clean_name(name)
+                slug_clean = slug.strip().split('?')[0].strip('/')
+                if slug_clean and name_clean:
+                    slugs[name_clean] = slug_clean
+            
+            logger.info(f"Fetched {len(slugs)} slugs from MSZ directory")
+            return slugs
+        except Exception as e:
+            logger.error(f"Error fetching directory: {e}")
+            return {}
 
 async def scrape_country(db: Session, iso_code: str):
     """Scrape MSZ data for specific country"""
     if iso_code == 'PL':
         return {"status": "skipped", "reason": "Home country"}
 
-    country = crud.get_country_by_iso2(db, iso_code)
+    country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso_code).first()
     if not country:
         return {"error": "Country not found in DB"}
 
-    name_pl = country.name_pl.lower() if country.name_pl else country.name.lower()
-    slug = MANUAL_MAPPING.get(iso_code.upper())
+    name_pl = clean_name(country.name_pl or country.name)
     
+    # TERRITORY MAPPING: Map dependencies to parent countries
+    TERRITORY_MAPPING = {
+        'AW': 'holandia', 'BQ': 'holandia', 'CW': 'holandia', 'SX': 'holandia',
+        'GF': 'francja', 'GP': 'francja', 'MQ': 'francja', 'RE': 'francja', 'YT': 'francja',
+        'BL': 'francja', 'MF': 'francja', 'PM': 'francja', 'WF': 'francja', 'PF': 'francja', 'NC': 'francja', 'TF': 'francja',
+        'BM': 'wielkabrytania', 'VG': 'wielkabrytania', 'KY': 'wielkabrytania', 'MS': 'wielkabrytania', 
+        'TC': 'wielkabrytania', 'FK': 'wielkabrytania', 'GI': 'wielkabrytania', 'SH': 'wielkabrytania', 
+        'IO': 'wielkabrytania', 'PN': 'wielkabrytania', 'GS': 'wielkabrytania', 'AI': 'wielkabrytania',
+        'JE': 'wielkabrytania', 'GG': 'wielkabrytania', 'IM': 'wielkabrytania',
+        'AS': 'usa', 'GU': 'usa', 'MP': 'usa', 'PR': 'usa', 'VI': 'usa', 'UM': 'usa',
+        'CX': 'australia', 'CC': 'australia', 'NF': 'australia', 'HM': 'australia',
+        'CK': 'nowa-zelandia', 'NU': 'nowa-zelandia', 'TK': 'nowa-zelandia',
+        'GL': 'dania', 'FO': 'dania', 'SJ': 'norwegia', 'BV': 'norwegia', 'AX': 'finlandia',
+        'MO': 'chiny', 'HK': 'hongkong', 'AQ': 'argentyna', 'EH': 'maroko'
+    }
+    
+    # Try directory cache first, then territory mapping
+    slug = _SLUG_CACHE.get(name_pl)
+    if not slug:
+        slug = TERRITORY_MAPPING.get(iso_code.upper())
+
+    # Predefined manual overrides for discrepancies
+    OVERRIDE_MAPPING = {
+        'US': 'usa', 'GB': 'wielkabrytania', 'AE': 'zea', 'BN': 'brunei-darussalam',
+        'KR': 'republika-korei', 'CZ': 'czechy', 'VA': 'watykan', 'VN': 'wietnam',
+        'LA': 'laos', 'MK': 'macedonia', 'CI': 'wybrzeze-kosci-sloniowej',
+        'CD': 'demokratyczna-republika-kong', 'CG': 'kongo', 'ZA': 'republika-poludniowej-afryki',
+        'KN': 'saint-kitts-i-nevis', 'SZ': 'eswatini', 'ST': 'wyspy-swietego-tomasza-i-ksiazeca',
+        'CV': 'republika-zielonego-przyladka', 'TL': 'timor-wschodni'
+    }
+    
+    if not slug or iso_code.upper() in OVERRIDE_MAPPING:
+        slug = OVERRIDE_MAPPING.get(iso_code.upper(), slug)
+
     if not slug:
         # Fallback slug generation
-        slug = name_pl.replace(' ', '').replace('ą', 'a').replace('ć', 'c').replace('ę', 'e').replace('ł', 'l').replace('ń', 'n').replace('ó', 'o').replace('ś', 's').replace('ź', 'z').replace('ż', 'z')
-        slug = re.sub(r'[^a-z0-9]', '', slug)
+        slug = name_pl.replace(' ', '-').replace('ą', 'a').replace('ć', 'c').replace('ę', 'e').replace('ł', 'l').replace('ń', 'n').replace('ó', 'o').replace('ś', 's').replace('ź', 'z').replace('ż', 'z')
+        slug = re.sub(r'[^a-z0-9\-]', '', slug)
 
-    # Strategy: Priority list of URLs
+    slug_no_hyphen = slug.replace('-', '')
+    
     urls_to_try = [
-        f"https://www.gov.pl/web/{slug}/idp", # Direct country site
+        f"https://www.gov.pl/web/dyplomacja/{slug}",
+        f"https://www.gov.pl/web/{slug}/idp",
         f"https://www.gov.pl/web/{slug}/informacje-dla-podrozujacych",
-        f"https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych/{slug}", # Main diplomacy path
+        f"https://www.gov.pl/web/dyplomacja/{slug_no_hyphen}",
+        f"https://www.gov.pl/web/{slug_no_hyphen}/idp",
+        f"https://www.gov.pl/web/{slug_no_hyphen}/informacje-dla-podrozujacych",
     ]
-
-    # Handle cases where slug might be slightly different
-    slug_hyphen = slug.replace('', '-').strip('-') # This is just a placeholder logic
-    # Real logic for common hyphen discrepancy
-    if '-' not in slug:
-        # Try with hyphens for some specific cases if manual mapping was missing them
-        pass
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -91,15 +118,11 @@ async def scrape_country(db: Session, iso_code: str):
         for url in urls_to_try:
             try:
                 response = await client.get(url, headers=headers)
-                # STRICT REDIRECT CHECK: Gov.pl redirects 404s to its home page
                 if response.status_code == 200:
                     curr_url = str(response.url).rstrip('/')
-                    if curr_url == "https://www.gov.pl":
+                    if curr_url == "https://www.gov.pl" or curr_url == "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych":
                         continue
-                    
-                    # Content validation: must contain travel-related keywords
-                    text_lower = response.text.lower()
-                    if "bezpieczeństwo" in text_lower or "informacje dla podróżujących" in text_lower:
+                    if "bezpieczeństwo" in response.text.lower() or "travel advisory" in response.text.lower():
                         response_text = response.text
                         final_url = str(response.url)
                         break
@@ -107,16 +130,13 @@ async def scrape_country(db: Session, iso_code: str):
                 continue
 
     if not response_text:
-        return {"error": f"Failed to find valid MSZ page for {iso_code}"}
+        return {"error": f"Failed to find valid MSZ page for {iso_code} (slug: {slug})"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
 
     # Risk level extraction
     risk_level = "low"
-    risk_container = (
-        soup.select_one('.travel-advisory--risk-level') or 
-        soup.select_one('.safety-level')
-    )
+    risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')
     if not risk_container:
         for i in range(1, 5):
             risk_container = soup.select_one(f'.safety-level--{i}')
@@ -129,7 +149,6 @@ async def scrape_country(db: Session, iso_code: str):
         elif 'odradzamy podróże, które nie są konieczne' in text: risk_level = 'high'
         elif 'odradzamy wszelkie podróże' in text: risk_level = 'critical'
     else:
-        # Keyword detection in the whole page
         page_text = soup.get_text().lower()
         if 'odradzamy wszelkie podróże' in page_text: risk_level = 'critical'
         elif 'odradzamy podróże, które nie są konieczne' in page_text: risk_level = 'high'
@@ -149,11 +168,10 @@ async def scrape_country(db: Session, iso_code: str):
         while curr and count < 15:
             if curr.name == 'p':
                 txt = curr.get_text(strip=True)
-                if txt and "Odyseusz" not in txt and "placówką zagraniczną RP" not in txt:
+                if txt and not any(x in txt for x in ["Odyseusz", "placówką zagraniczną RP"]):
                     paragraphs.append(txt)
                 count += 1
             elif curr.name == 'div':
-                # Sometimes gov.pl wraps paragraphs in divs
                 for p in curr.find_all('p'):
                     txt = p.get_text(strip=True)
                     if txt and "Odyseusz" not in txt:
@@ -163,10 +181,13 @@ async def scrape_country(db: Session, iso_code: str):
             elif curr.name in ['h2', 'h3', 'h4']:
                 break
             curr = curr.find_next_sibling()
-        
         summary = "\n\n".join(paragraphs[:6])
 
-    # Update DB
+    if not summary:
+        desc_meta = soup.find('meta', {'property': 'og:description'})
+        if desc_meta:
+            summary = desc_meta.get('content', '')
+
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if safety:
         safety.risk_level = risk_level
@@ -181,6 +202,9 @@ async def scrape_country(db: Session, iso_code: str):
 
 async def scrape_all_with_cache(db: Session):
     """Batch scrape all countries"""
+    global _SLUG_CACHE
+    _SLUG_CACHE = await fetch_directory_slugs()
+    
     countries = db.query(models.Country).all()
     results = {"success": 0, "errors": 0, "details": []}
 
@@ -192,7 +216,7 @@ async def scrape_all_with_cache(db: Session):
                 results["errors"] += 1
                 logger.error(f"  - Error: {res['error']}")
             elif res.get("status") == "skipped":
-                results["success"] += 1 # Counting skip as success for logic flow
+                results["success"] += 1
                 logger.info(f"  - Skipped: {res['reason']}")
             else:
                 results["success"] += 1
