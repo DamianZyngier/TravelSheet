@@ -284,28 +284,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Good Friday",
-        "date": "2026-04-03"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      }
-    ]
+    "holidays": []
   },
   "CO": {
     "name": "Colombia",
@@ -633,28 +612,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Benito Juárez's birthday",
-        "date": "2026-03-16"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Constitution Day",
-        "date": "2026-02-02"
-      },
-      {
-        "name": "Independence Day",
-        "date": "2026-09-16"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      }
-    ]
+    "holidays": []
   },
   "GB": {
     "name": "United Kingdom",
@@ -1105,28 +1063,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "RE": {
     "name": "Réunion",
@@ -1290,28 +1227,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Children's Day",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "Day of the Unification of the Romanian Principalities",
-        "date": "2026-01-24"
-      },
-      {
-        "name": "Epiphany",
-        "date": "2026-01-06"
-      },
-      {
-        "name": "First Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "GR": {
     "name": "Greece",
@@ -1434,28 +1350,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Ascension's Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption's Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      }
-    ]
+    "holidays": []
   },
   "SJ": {
     "name": "Svalbard and Jan Mayen",
@@ -2029,28 +1924,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Andalusia Day",
-        "date": "2026-02-28"
-      },
-      {
-        "name": "Aragon Day",
-        "date": "2026-04-23"
-      },
-      {
-        "name": "Assumption of Mary",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Asturias Day",
-        "date": "2026-09-08"
-      }
-    ]
+    "holidays": []
   },
   "PH": {
     "name": "Philippines",
@@ -2132,28 +2006,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Boże Ciało",
-        "date": "2026-06-04"
-      },
-      {
-        "name": "Boże Narodzenie",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Drugi Dzień Bożego Narodzenia",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Drugi Dzień Wielkanocy",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Narodowe Święto Niepodległości",
-        "date": "2026-11-11"
-      }
-    ]
+    "holidays": []
   },
   "CG": {
     "name": "Republic of the Congo",
@@ -2358,28 +2211,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Epiphany",
-        "date": "2026-01-06"
-      }
-    ]
+    "holidays": []
   },
   "AX": {
     "name": "Åland Islands",
@@ -2502,28 +2334,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Carnival",
-        "date": "2026-02-16"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Constitution Day",
-        "date": "2026-03-14"
-      }
-    ]
+    "holidays": []
   },
   "TC": {
     "name": "Turks and Caicos Islands",
@@ -3138,28 +2949,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints’ Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of Our Lady of the Seven Sorrows",
-        "date": "2026-09-15"
-      },
-      {
-        "name": "Day of Struggle for Freedom and Democracy",
-        "date": "2026-11-17"
-      }
-    ]
+    "holidays": []
   },
   "MQ": {
     "name": "Martinique",
@@ -3569,28 +3359,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-10-31"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "NR": {
     "name": "Nauru",
@@ -3959,28 +3728,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "CZ": {
     "name": "Czechia",
@@ -4021,28 +3769,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Czech Statehood Day",
-        "date": "2026-09-28"
-      },
-      {
-        "name": "Day of Struggle for Freedom and Democracy",
-        "date": "2026-11-17"
-      },
-      {
-        "name": "Day of the Burning of Jan Hus",
-        "date": "2026-07-06"
-      }
-    ]
+    "holidays": []
   },
   "CF": {
     "name": "Central African Republic",
@@ -4056,9 +3783,9 @@
     "flag_url": "https://flagcdn.com/w320/cf.png",
     "population": 6470307,
     "safety": {
-      "risk_level": "unknown",
-      "summary": "",
-      "url": ""
+      "risk_level": "critical",
+      "summary": "W przypadku wystąpienia nadzwyczajnych sytuacji podczas Twojego pobytu za granicą, MSZ będzie mógł się z Tobą skontaktować.\n\nJeśli masz uwagi bądź pytania do poniżej przedstawionych informacji, skontaktuj się z właściwą terytorialnieAmbasadą RP w Luandzie.\n\nMinisterstwo Spraw Zagranicznychodradza podróże, które nie są koniecznedo centralnych dzielnic stolicyRepubliki Środkowoafrykańskiej, Bangi.\n\nNa pozostałe terytoriom RŚAodradzamy wszelkie podróże.\n\nSytuacja bezpieczeństwa w RŚA jest wysoce niestabilna, głównie z powodu aktywności grup rebelianckich oraz braku faktycznej kontroli administracji państwowej nad większością terytorium kraju. Na terenie całej RŚA, w tym w Bangi, dochodzić może do aktów przemocy, napadów rabunkowych, porwań, a także starć sił zbrojnych z grupami rebeliantów.\n\nW związku z brakiem polskiej placówki, możliwość udzielenia bezpośredniej pomocy konsularnej obywatelom polskim może być ograniczona. Zgodnie z prawem UE, obywatele polscy przebywający w państwach trzecich (poza UE), w których nie ma polskiej placówki, uprawnieni są do pomocy dyplomatycznej i konsularnej państw członkowskich UE posiadających w danym kraju placówkę, na takich samych warunkach, na jakich państwa te pomagają swoim obywatelom. W celu nawiązania kontaktu z placówką państwa członkowskiego UE, zachęcamy do korzystania z wyszukiwarki na stronieKomisji Europejskiej.",
+      "url": "https://www.gov.pl/web/angola/republika-srodkowoafrykanska-idp"
     },
     "currency": {
       "code": "XAF",
@@ -4329,28 +4056,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Birth of Jesus Christ (Christmas in a new style)",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Birth of Jesus Christ (Christmas in the old style)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Children's Day",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "Commemoration Day (Radonitsa)",
-        "date": "2026-04-20"
-      },
-      {
-        "name": "Europe Day",
-        "date": "2026-05-09"
-      }
-    ]
+    "holidays": []
   },
   "WS": {
     "name": "Samoa",
@@ -4529,8 +4235,8 @@
     "population": 15040,
     "safety": {
       "risk_level": "low",
-      "summary": "W przypadku wystąpienia nadzwyczajnych sytuacji podczas Twojego pobytu za granicą, MSZ będzie mógł się z Tobą skontaktować.\n\nJeśli masz uwagi bądź pytania do poniżej przedstawionych informacji, skontaktuj się z właściwą terytorialnieplacówką zagraniczną RP.\n\nStopień zagrożenia bezpieczeństwa w Nowej Zelandii jest obecnie na poziomie niskim.\n\nNie ma przeciwskazań dotyczących podróżowania po kraju. Wszystkim osobom zaleca się ostrożność, a w przypadku zauważenia niepokojących zachowań prosi się o kontakt z miejscową policją  (nr tel. 111).\n\nNowa Zelandia leży w strefie aktywnej sejsmicznie. Informacje i porady jak zachować się w razie trzęsienia ziemi lub wybuchu wulkanu są dostępnetutaj.\n\nSzczegółowe zalecenia władz miejscowych dotyczące zasad bezpiecznej podróży po Nowej Zelandii dostępne sątutajoraztutaj.",
-      "url": "https://www.gov.pl/web/nowazelandia/idp"
+      "summary": "W przypadku wystąpienia nadzwyczajnych sytuacji podczas Twojego pobytu za granicą, MSZ będzie mógł się z Tobą skontaktować.\n\nJeśli masz uwagi bądź pytania do poniżej przedstawionych informacji, skontaktuj się z właściwą terytorialnieplacówką zagraniczną RP.\n\nWyspy Cooka leżą w strefie aktywnej sejsmicznie. Występuje tu zagrożenie trzęsieniami, tajfunami oraz tsunami. Sezon występowania cyklonów trwa od listopada do kwietnia, ale silne burze mogą występować przez cały rok. W przypadku wystąpienia zagrożenia stosuj się do zaleceń władz miejscowych. Informacje i porady jak, zachować się w razie katastrof naturalnych, są dostępnena tej stronie.\n\nW związku z brakiem polskiej placówki w tym kraju, możliwość udzielenia bezpośredniej pomocy konsularnej obywatelom polskim jest bardzo ograniczona. Zgodnie z prawem UE, obywatele polscy przebywający w państwach trzecich (poza UE), w których nie ma polskiej placówki, uprawnieni są do pomocy dyplomatycznej i konsularnej państw członkowskich UE posiadających w danym kraju placówkę, na takich samych warunkach, na jakich państwa te pomagają swoim obywatelom. W celu nawiązania kontaktu z placówką państwa członkowskiego UE, zachęcamy do korzystania z wyszukiwarki nastronie Komisji Europejskiej.",
+      "url": "https://www.gov.pl/web/nowazelandia/wyspy-cooka-idp"
     },
     "currency": {
       "code": "CKD",
@@ -5088,28 +4794,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Anti-Fascist Struggle Day",
-        "date": "2026-06-22"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas",
-        "date": "2026-12-26"
-      }
-    ]
+    "holidays": []
   },
   "FO": {
     "name": "Faroe Islands",
@@ -5232,28 +4917,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Day of Remembrance for the Dead",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Day of Uprising Against the Occupation",
-        "date": "2026-04-27"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "LA": {
     "name": "Laos",
@@ -5417,28 +5081,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Feast of St. Joseph",
-        "date": "2026-03-19"
-      },
-      {
-        "name": "Feast of St. Paul's Shipwreck",
-        "date": "2026-02-10"
-      },
-      {
-        "name": "Freedom Day",
-        "date": "2026-03-31"
-      },
-      {
-        "name": "Good Friday",
-        "date": "2026-04-03"
-      },
-      {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
-      }
-    ]
+    "holidays": []
   },
   "KY": {
     "name": "Cayman Islands",
@@ -5520,28 +5163,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
-      },
-      {
-        "name": "Christmas (Orthodox)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Easter Monday (Orthodox)",
-        "date": "2026-04-13"
-      },
-      {
-        "name": "Easter Saturday (Orthodox)",
-        "date": "2026-04-11"
-      },
-      {
-        "name": "Easter Sunday (Orthodox)",
-        "date": "2026-04-12"
-      }
-    ]
+    "holidays": []
   },
   "LV": {
     "name": "Latvia",
@@ -5582,28 +5204,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of the Proclamation of the Republic of Latvia",
-        "date": "2026-11-18"
-      },
-      {
-        "name": "Day of the Restoration of Independence",
-        "date": "2026-05-04"
-      }
-    ]
+    "holidays": []
   },
   "CD": {
     "name": "DR Congo",
@@ -6177,28 +5778,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      }
-    ]
+    "holidays": []
   },
   "NU": {
     "name": "Niue",
@@ -6213,8 +5793,8 @@
     "population": 1681,
     "safety": {
       "risk_level": "low",
-      "summary": "W przypadku wystąpienia nadzwyczajnych sytuacji podczas Twojego pobytu za granicą, MSZ będzie mógł się z Tobą skontaktować.\n\nJeśli masz uwagi bądź pytania do poniżej przedstawionych informacji, skontaktuj się z właściwą terytorialnieplacówką zagraniczną RP.\n\nStopień zagrożenia bezpieczeństwa w Nowej Zelandii jest obecnie na poziomie niskim.\n\nNie ma przeciwskazań dotyczących podróżowania po kraju. Wszystkim osobom zaleca się ostrożność, a w przypadku zauważenia niepokojących zachowań prosi się o kontakt z miejscową policją  (nr tel. 111).\n\nNowa Zelandia leży w strefie aktywnej sejsmicznie. Informacje i porady jak zachować się w razie trzęsienia ziemi lub wybuchu wulkanu są dostępnetutaj.\n\nSzczegółowe zalecenia władz miejscowych dotyczące zasad bezpiecznej podróży po Nowej Zelandii dostępne sątutajoraztutaj.",
-      "url": "https://www.gov.pl/web/nowazelandia/idp"
+      "summary": "W przypadku wystąpienia nadzwyczajnych sytuacji podczas Twojego pobytu za granicą, MSZ będzie mógł się z Tobą skontaktować.\n\nJeśli masz uwagi bądź pytania do poniżej przedstawionych informacji, skontaktuj się z właściwą terytorialnieplacówką zagraniczną RP.\n\nIstnieje zagrożenie kradzieżami kieszonkowymi.\n\nNiue leży w strefie aktywnej sejsmicznie.  Występuje zagrożenie trzęsieniami, tajfunami oraz tsunami. Informacje i ostrzeżenia są dostępne natutaj.\n\nW związku z zagrożeniem bezpieczeństwa oraz brakiem polskiej placówki w tym kraju, możliwość udzielenia bezpośredniej pomocy konsularnej obywatelom polskim jest bardzo ograniczona. Zgodnie z prawem UE, obywatele polscy przebywający w państwach trzecich (poza UE), w których nie ma polskiej placówki, uprawnieni są do pomocy dyplomatycznej i konsularnej państw członkowskich UE posiadających w danym kraju placówkę, na takich samych warunkach, na jakich państwa te pomagają swoim obywatelom. W celu nawiązania kontaktu z placówką państwa członkowskiego UE, zachęcamy do korzystania z wyszukiwarki nastronie Komisji Europejskiej.",
+      "url": "https://www.gov.pl/web/nowazelandia/niue-idp"
     },
     "currency": {
       "code": "NZD",
@@ -6567,28 +6147,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      },
-      {
-        "name": "Eid al-Fitr (Holiday of Breaking the Fast)",
-        "date": "2026-03-20"
-      },
-      {
-        "name": "Eid ul-Adha (Feast of Sacrifice)",
-        "date": "2026-05-26"
-      }
-    ]
+    "holidays": []
   },
   "RU": {
     "name": "Russia",
@@ -6834,28 +6393,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Catholic Christmas",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas (Orthodox Christmas)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Day of the Republic",
-        "date": "2026-07-03"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      },
-      {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
-      }
-    ]
+    "holidays": []
   },
   "HM": {
     "name": "Heard Island and McDonald Islands",
@@ -6978,28 +6516,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Bulgarian Education and Culture, and Slavic Script Day",
-        "date": "2026-05-24"
-      },
-      {
-        "name": "Bulgarian Education and Culture, and Slavic Script Day (Observed)",
-        "date": "2026-05-25"
-      },
-      {
-        "name": "Bulgaria’s Liberation from the Ottoman Empire",
-        "date": "2026-03-03"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-26"
-      }
-    ]
+    "holidays": []
   },
   "SV": {
     "name": "El Salvador",
@@ -7081,28 +6598,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      }
-    ]
+    "holidays": []
   },
   "VA": {
     "name": "Vatican City",
@@ -7143,28 +6639,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints’ Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls’ Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Anniversary of the election of Pope Leo XIV",
-        "date": "2026-05-08"
-      },
-      {
-        "name": "Anniversary of the foundation of Vatican City",
-        "date": "2026-02-11"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "LK": {
     "name": "Sri Lanka",
@@ -7451,28 +6926,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Agathe's day",
-        "date": "2026-02-05"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Angel consecration",
-        "date": "2026-09-14"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "FJ": {
     "name": "Fiji",
@@ -7554,28 +7008,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Day of Goodwill",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Day of Reconciliation",
-        "date": "2026-12-16"
-      },
-      {
-        "name": "Family Day",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Freedom Day",
-        "date": "2026-04-27"
-      }
-    ]
+    "holidays": []
   },
   "JO": {
     "name": "Jordan",
@@ -7985,28 +7418,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "MN": {
     "name": "Mongolia",
@@ -8621,28 +8033,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of Restoration of Independence",
-        "date": "2026-08-20"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      }
-    ]
+    "holidays": []
   },
   "MS": {
     "name": "Montserrat",
@@ -9093,28 +8484,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "August Holiday",
-        "date": "2026-08-03"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "June Holiday",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "May Day",
-        "date": "2026-05-04"
-      }
-    ]
+    "holidays": []
   },
   "PK": {
     "name": "Pakistan",
@@ -9442,28 +8812,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "RW": {
     "name": "Rwanda",
@@ -10037,28 +9386,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Anniversary of the 1906 Arengo and commemoration of the Militia",
-        "date": "2026-03-25"
-      },
-      {
-        "name": "Anniversary of the Fall of Fascism and Day of Freedom",
-        "date": "2026-07-28"
-      },
-      {
-        "name": "Assumption of the Virgin Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "UG": {
     "name": "Uganda",
@@ -10181,28 +9509,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Azores Day",
-        "date": "2026-05-25"
-      },
-      {
-        "name": "Battle of Atoleiros",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Battle of Salgadela",
-        "date": "2026-07-07"
-      }
-    ]
+    "holidays": []
   },
   "SH": {
     "name": "Saint Helena, Ascension and Tristan da Cunha",
@@ -10694,28 +10001,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "TT": {
     "name": "Trinidad and Tobago",
@@ -10838,28 +10124,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-04-27"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-05-22"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-05-27"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-06-10"
-      }
-    ]
+    "holidays": []
   },
   "SR": {
     "name": "Suriname",
