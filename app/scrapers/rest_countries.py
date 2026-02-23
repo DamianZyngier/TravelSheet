@@ -10,7 +10,7 @@ async def sync_countries(db: Session):
 
     async with httpx.AsyncClient() as client:
         # Request essential fields. 
-        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,subregion,population,continents,translations"
+        fields = "name,cca2,cca3,flag,flags,currencies,languages,capital,region,subregion,population,continents,translations"
         try:
             response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}", timeout=30.0)
             response.raise_for_status()
@@ -18,7 +18,7 @@ async def sync_countries(db: Session):
         except Exception as e:
             logger.error(f"Primary API request failed: {e}")
             # Fallback
-            fields = "name,cca2,cca3,flags,currencies,translations,continents,region"
+            fields = "name,cca2,cca3,flag,flags,currencies,translations,continents,region"
             response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
             countries_data = response.json()
 
