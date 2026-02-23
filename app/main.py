@@ -4,6 +4,16 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import os
 import asyncio
+import logging
+import sys
+
+# Konfiguracja logowania do stdout dla GitHub Actions
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    stream=sys.stdout
+)
+logger = logging.getLogger("uvicorn")
 
 from .database import engine, get_db
 from . import models, schemas, crud
@@ -133,14 +143,14 @@ async def scrape_all_gov_pl(db: Session = Depends(get_db)):
 
     for i, country in enumerate(countries):
         try:
-            print(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...", flush=True)
+            logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
             res = await scrape_country(db, country.iso_alpha2)
             if "error" in res:
                 results["errors"] += 1
-                print(f"  - Error: {res['error']}", flush=True)
+                logger.error(f"  - Error: {res['error']}")
             else:
                 results["success"] += 1
-                print(f"  - Success: {res['risk_level']}", flush=True)
+                logger.info(f"  - Success: {res['risk_level']}")
             await asyncio.sleep(0.5) # Be kind to MSZ servers
         except Exception as e:
             results["errors"] += 1

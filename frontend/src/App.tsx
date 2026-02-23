@@ -94,6 +94,7 @@ function App() {
 
   return (
     <div className="app-container">
+      {error && <div className="error-toast">{error}</div>}
       <aside className="sidebar">
         <header>
           <h1>🌍 TravelSheet</h1>
@@ -179,8 +180,8 @@ function App() {
             <Sphere stroke="#E4E5E6" strokeWidth={0.5} fill="transparent" id="sphere" />
             <Graticule stroke="#E4E5E6" strokeWidth={0.5} id="graticule" />
             <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
+              {({ geographies }: { geographies: any[] }) =>
+                geographies.map((geo: any) => {
                   const country = Object.values(countries).find(c => c.iso3 === geo.id || c.iso3 === geo.properties.ISO_A3);
                   const isFiltered = country && filteredCountries.find(fc => fc.iso3 === country.iso3);
                   

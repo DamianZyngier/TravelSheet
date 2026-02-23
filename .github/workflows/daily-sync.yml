@@ -28,9 +28,9 @@ jobs:
 
       - name: Start API in background
         run: |
-          # Usuwamy starą bazę jeśli istnieje, aby upewnić się że schemat jest aktualny
           rm -f travel_cheatsheet.db
-          uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+          # Redirect to log file for later viewing
+          nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > uvicorn.log 2>&1 &
           # Wait for API to be ready
           for i in {1..30}; do
             if curl -s http://localhost:8000/health > /dev/null; then
@@ -57,7 +57,15 @@ jobs:
       - name: Scrape All Countries
         run: |
           echo "Scraping all countries from MSZ (gov.pl)..."
-          curl -X POST "http://localhost:8000/api/admin/scrape-all-gov-pl"
+          # Uruchamiamy curl w tle i tailujemy logi uvicorna dopóki curl się nie skończy
+          curl -X POST "http://localhost:8000/api/admin/scrape-all-gov-pl" &
+          CURL_PID=$!
+          
+          # Tail logów uvicorna w czasie rzeczywistym
+          tail -f uvicorn.log --pid=$CURL_PID
+          
+          # Czekamy na zakończenie curla (na wszelki wypadek)
+          wait $CURL_PID
 
       - name: Export to JSON
         run: |
