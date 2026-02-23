@@ -54,18 +54,9 @@ jobs:
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-exchange-rates"
 
-      - name: Scrape All Countries
+      - name: Scrape All Countries (MSZ gov.pl)
         run: |
-          echo "Scraping all countries from MSZ (gov.pl)..."
-          # Uruchamiamy curl w tle i tailujemy logi uvicorna dopóki curl się nie skończy
-          curl -X POST "http://localhost:8000/api/admin/scrape-all-gov-pl" &
-          CURL_PID=$!
-          
-          # Tail logów uvicorna w czasie rzeczywistym
-          tail -f uvicorn.log --pid=$CURL_PID
-          
-          # Czekamy na zakończenie curla (na wszelki wypadek)
-          wait $CURL_PID
+          python scripts/sync_msz.py
 
       - name: Export to JSON
         run: |

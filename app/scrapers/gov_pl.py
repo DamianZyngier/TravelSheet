@@ -33,9 +33,9 @@ MANUAL_MAPPING = {
     'CU': 'kuba', 'KW': 'kuwejt', 'LA': 'laos', 'LS': 'lesotho', 'LB': 'liban',
     'LR': 'liberia', 'LY': 'libia', 'LI': 'liechtenstein', 'LT': 'litwa', 'LU': 'luksemburg',
     'LV': 'lotwa', 'MK': 'macedonia-polnocna', 'MG': 'madagaskar', 'MY': 'malezja', 'MW': 'malawi',
-    'MV': 'malediwy', 'ML': 'mali', 'MT': 'malta', 'MA': 'maroko', 'MR': 'mauretania',
+    'MV': 'malediwy', 'ML': 'bamako', 'MT': 'malta', 'MA': 'maroko', 'MR': 'mauretania',
     'MU': 'mauritius', 'MX': 'meksyk', 'MD': 'moldawia', 'MC': 'monako', 'MN': 'mongolia',
-    'ME': 'podgorica', 'MZ': 'mozambik', 'MM': 'mjanma', 'NA': 'namibia', 'NP': 'nepal',
+    'ME': 'czarnogora', 'MZ': 'mozambik', 'MM': 'mjanma', 'NA': 'namibia', 'NP': 'nepal',
     'DE': 'niemcy', 'NE': 'niger', 'NG': 'nigeria', 'NI': 'nikaragua', 'NO': 'norwegia',
     'NZ': 'nowa-zelandia', 'OM': 'oman', 'PK': 'pakistan', 'PA': 'panama', 'PG': 'papua-nowa-gwinea',
     'PY': 'paragwaj', 'PE': 'peru', 'PT': 'portugalia', 'RU': 'rosja', 'RW': 'rwanda',
@@ -47,8 +47,8 @@ MANUAL_MAPPING = {
     'TO': 'tonga', 'TT': 'trynidaditobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
     'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
     'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielkabrytania', 'VN': 'wietnam',
-    'IT': 'wlochy', 'CI': 'wybrzezekoscisloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
-    'AE': 'zea'
+    'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
+    'AE': 'zjednoczone-emiraty-arabskie'
 }
 
 def clean_name(name):
@@ -90,18 +90,7 @@ async def scrape_country(db: Session, iso_code: str):
         return {"error": "Country not found in DB"}
 
     name_pl = clean_name(country.name_pl or country.name)
-    
-    # TERRITORY MAPPING
-    TERRITORY_MAPPING = {
-        'AW': 'holandia', 'BQ': 'holandia', 'CW': 'holandia', 'SX': 'holandia',
-        'GF': 'francja', 'GP': 'francja', 'MQ': 'francja', 'RE': 'francja', 'YT': 'francja',
-        'BL': 'francja', 'MF': 'francja', 'PM': 'francja', 'WF': 'francja', 'PF': 'francja',
-        'BM': 'wielkabrytania', 'VG': 'wielkabrytania', 'KY': 'wielkabrytania', 
-        'MS': 'wielkabrytania', 'TC': 'wielkabrytania', 'FK': 'wielkabrytania',
-        'AS': 'usa', 'GU': 'usa', 'MP': 'usa', 'PR': 'usa', 'VI': 'usa'
-    }
-    
-    slug = _SLUG_CACHE.get(name_pl) or TERRITORY_MAPPING.get(iso_code.upper()) or MANUAL_MAPPING.get(iso_code.upper())
+    slug = _SLUG_CACHE.get(name_pl) or MANUAL_MAPPING.get(iso_code.upper())
     
     if not slug:
         slug = name_pl.replace(' ', '').replace('ą', 'a').replace('ć', 'c').replace('ę', 'e').replace('ł', 'l').replace('ń', 'n').replace('ó', 'o').replace('ś', 's').replace('ź', 'z').replace('ż', 'z')
@@ -113,7 +102,10 @@ async def scrape_country(db: Session, iso_code: str):
         f"https://www.gov.pl/web/{slug}/informacje-dla-podrozujacych",
     ]
 
-    headers = {"User-Agent": "Mozilla/5.0"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+
     response_text = None
     final_url = None
 
@@ -122,20 +114,21 @@ async def scrape_country(db: Session, iso_code: str):
             try:
                 response = await client.get(url, headers=headers)
                 if response.status_code == 200:
-                    if str(response.url).rstrip('/') in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
+                    curr_url = str(response.url).rstrip('/')
+                    if curr_url == "https://www.gov.pl" or curr_url == "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych":
                         continue
-                    if "bezpieczeństwo" in response.text.lower():
+                    
+                    if "bezpieczeństwo" in response.text.lower() or "travel advisory" in response.text.lower():
                         response_text = response.text
                         final_url = str(response.url)
                         break
             except: continue
 
     if not response_text:
-        return {"error": f"Failed to find valid MSZ page for {iso_code}"}
+        return {"error": f"Failed to find valid MSZ page for {iso_code} (slug: {slug})"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
     risk_level = "low"
-    risk_text = "Zachowaj zwykłą ostrożność"
     
     risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')
     if not risk_container:
@@ -144,39 +137,79 @@ async def scrape_country(db: Session, iso_code: str):
             if risk_container: break
 
     if risk_container:
-        risk_text = risk_container.get_text().strip()
-        text_l = risk_text.lower()
+        text_l = risk_container.get_text().strip().lower()
         if 'zachowaj zwykłą ostrożność' in text_l: risk_level = 'low'
         elif 'zachowaj szczególną ostrożność' in text_l: risk_level = 'medium'
         elif 'odradzamy podróże, które nie są konieczne' in text_l: risk_level = 'high'
         elif 'odradzamy wszelkie podróże' in text_l: risk_level = 'critical'
+    
+    # Fallback/Override by keyword search in whole page
+    page_text = soup.get_text().lower()
+    if 'odradza wszelkie podróże' in page_text or 'odradzamy wszelkie podróże' in page_text: 
+        risk_level = 'critical'
+    elif risk_level == 'low': # Only check other keywords if still low
+        if 'odradza podróże, które nie są konieczne' in page_text or 'odradzamy podróże, które nie są konieczne' in page_text: 
+            risk_level = 'high'
+        elif 'zachowanie szczególnej ostrożności' in page_text or 'zachowaj szczególną ostrożność' in page_text: 
+            risk_level = 'medium'
+
+    # Phrasing per risk level
+    country_name = country.name_pl
+    if risk_level == 'critical':
+        risk_phrase = f"MSZ odradza wszelkie podróże do tego kraju ({country_name})."
+    elif risk_level == 'high':
+        risk_phrase = f"MSZ odradza podróże, które nie są konieczne do tego kraju ({country_name})."
+    elif risk_level == 'medium':
+        risk_phrase = f"MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju ({country_name})."
     else:
-        page_text = soup.get_text().lower()
-        if 'odradzamy wszelkie podróże' in page_text: 
-            risk_level, risk_text = 'critical', "Odradzamy wszelkie podróże"
-        elif 'odradzamy podróże, które nie są konieczne' in page_text: 
-            risk_level, risk_text = 'high', "Odradzamy podróże, które nie są konieczne"
-        elif 'zachowaj szczególną ostrożność' in page_text: 
-            risk_level, risk_text = 'medium', "Zachowaj szczególną ostrożność"
+        risk_phrase = f"MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju ({country_name})."
 
     # Update Safety
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
-    safety.risk_level, safety.summary, safety.full_url = risk_level, risk_text, final_url
+    safety.risk_level, safety.summary, safety.full_url = risk_level, risk_phrase, final_url
 
     # Docs & Visa
     passport_req, temp_passport_req, id_card_req, visa_req = True, True, False, False
     raw_text = soup.get_text()
-    if re.search(r'Paszport:\s*TAK', raw_text, re.I): passport_req = True
-    if re.search(r'Paszport:\s*NIE', raw_text, re.I): passport_req = False
-    if re.search(r'Paszport tymczasowy:\s*TAK', raw_text, re.I): temp_passport_req = True
-    if re.search(r'Paszport tymczasowy:\s*NIE', raw_text, re.I): temp_passport_req = False
-    if re.search(r'Dowód osobisty:\s*TAK', raw_text, re.I): id_card_req = True
-    if re.search(r'Dowód osobisty:\s*NIE', raw_text, re.I): id_card_req = False
-    if any(x in raw_text.lower() for x in ["nie muszą mieć wizy", "ruch bezwizowy", "bezwizowo"]): visa_req = False
-    elif any(x in raw_text.lower() for x in ["wymagana jest wiza", "obowiązek wizowy"]): visa_req = True
+    
+    docs_section = soup.find(string=re.compile(r'Na jakim dokumencie', re.I))
+    if docs_section:
+        docs_text = ""
+        curr = docs_section.parent
+        for _ in range(10):
+            if curr:
+                docs_text += curr.get_text()
+                curr = curr.find_next_sibling()
+        
+        if re.search(r'Paszport:.*?TAK', docs_text, re.I | re.S): passport_req = True
+        elif re.search(r'Paszport:.*?NIE', docs_text, re.I | re.S): passport_req = False
+        
+        if re.search(r'Paszport tymczasowy:.*?TAK', docs_text, re.I | re.S): temp_passport_req = True
+        elif re.search(r'Paszport tymczasowy:.*?NIE', docs_text, re.I | re.S): temp_passport_req = False
+        
+        if re.search(r'Dowód osobisty:.*?TAK', docs_text, re.I | re.S): id_card_req = True
+        elif re.search(r'Dowód osobisty:.*?NIE', docs_text, re.I | re.S): id_card_req = False
+    
+    visa_section = soup.find(string=re.compile(r'Czy trzeba wyrobić wizę', re.I))
+    if visa_section:
+        visa_text = ""
+        curr = visa_section.parent
+        for _ in range(8):
+            if curr:
+                visa_text += curr.get_text()
+                curr = curr.find_next_sibling()
+        
+        if any(x in visa_text.lower() for x in ["nie muszą mieć wizy", "nie jest wymagana wiza", "ruch bezwizowy", "bezwizowo", "bezwizowy"]):
+            visa_req = False
+        elif any(x in visa_text.lower() for x in ["wymagana jest wiza", "obowiązek wizowy", "muszą posiadać wizę", "wizę należy uzyskać"]):
+            visa_req = True
+    else:
+        if "nie muszą mieć wizy" in raw_text.lower() or "bezwizowo" in raw_text.lower(): visa_req = False
+        elif "wymagana jest wiza" in raw_text.lower(): visa_req = True
+
     if country.continent == 'Europe' and iso_code not in ['BY', 'RU', 'UA', 'GB']:
         id_card_req, visa_req = True, False
 

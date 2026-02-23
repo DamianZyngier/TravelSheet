@@ -44,6 +44,14 @@ function App() {
   const [filterContinent, setFilterContinent] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
+  const SAFETY_LABELS: Record<string, string> = {
+    'low': 'Bezpiecznie',
+    'medium': 'Średnio bezpiecznie',
+    'high': 'Niebezpiecznie',
+    'critical': 'Bardzo niebezpiecznie',
+    'unknown': 'Brak danych'
+  };
+
   const CONTINENT_MAP: Record<string, string> = {
     'Africa': 'Afryka',
     'Antarctica': 'Antarktyda',
@@ -80,6 +88,26 @@ function App() {
     return { text: 'Inne - wymagany adapter', class: 'plugs-err', warning: true };
   };
 
+  const PLUG_IMAGES: Record<string, string> = {
+    'A': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-A-100x100.jpg',
+    'B': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-B-100x100.jpg',
+    'C': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-C-100x100.jpg',
+    'D': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-D-100x100.jpg',
+    'E': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-E-100x100.jpg',
+    'F': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-F-100x100.jpg',
+    'G': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-G-100x100.jpg',
+    'H': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-H-100x100.jpg',
+    'I': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-I-100x100.jpg',
+    'J': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-J-100x100.jpg',
+    'K': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-K-100x100.jpg',
+    'L': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-L-100x100.jpg',
+    'M': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-M-100x100.jpg',
+    'N': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-N-100x100.jpg',
+    'O': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-O-100x100.jpg'
+  };
+
+  const getEnlargedPlugUrl = (url: string) => url.replace('100x100', '500x500');
+
   useEffect(() => {
     fetch('./data.json')
       .then(res => {
@@ -89,12 +117,43 @@ function App() {
       .then(data => {
         setCountries(data);
         setLoading(false);
+        
+        // Deep linking: sprawdź parametr w URL po załadowaniu danych
+        const params = new URLSearchParams(window.location.search);
+        const countryCode = params.get('kraj');
+        if (countryCode && data[countryCode.toUpperCase()]) {
+          setSelectedCountry(data[countryCode.toUpperCase()]);
+        }
       })
       .catch(err => {
         setError(err.message);
         setLoading(false);
       });
+
+    // Obsługa przycisku wstecz w przeglądarce
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const countryCode = params.get('kraj');
+      if (!countryCode) {
+        setSelectedCountry(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Aktualizuj URL gdy zmienia się wybrany kraj
+  const handleSelectCountry = (country: CountryData | null) => {
+    setSelectedCountry(country);
+    const url = new URL(window.location.href);
+    if (country) {
+      url.searchParams.set('kraj', country.iso2);
+    } else {
+      url.searchParams.delete('kraj');
+    }
+    window.history.pushState({}, '', url.toString());
+  };
 
   const continents = useMemo(() => {
     const set = new Set(Object.values(countries).map(c => c.continent).filter(Boolean));
@@ -121,79 +180,95 @@ function App() {
     <div className="app-container">
       {error && <div className="error-toast">{error}</div>}
       
-      <header className="main-header">
-        <div className="logo-section">
-          <h1>🌍 TravelSheet</h1>
-          <p>Twoje centrum bezpiecznych podróży</p>
-        </div>
-        
-        <div className="controls-section">
-          <input 
-            type="text" 
-            placeholder="Szukaj kraju..." 
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
-          
-          <div className="filter-group">
-            <select value={filterContinent} onChange={e => setFilterContinent(e.target.value)}>
-              <option value="all">Wszystkie kontynenty</option>
-              {continents.map(c => <option key={c} value={c}>{CONTINENT_MAP[c] || c}</option>)}
-            </select>
-          </div>
+      {!selectedCountry ? (
+        <>
+          <header className="main-header">
+            <div className="header-content">
+              <div className="logo-section">
+                <h1>🌍 TravelSheet</h1>
+                <p>Twoje centrum bezpiecznych podróży</p>
+              </div>
+              
+              <div className="controls-section">
+                <input 
+                  type="text" 
+                  placeholder="Szukaj kraju..." 
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className="search-input"
+                />
+                
+                <div className="filter-group">
+                  <select value={filterContinent} onChange={e => setFilterContinent(e.target.value)}>
+                    <option value="all">Wszystkie kontynenty</option>
+                    {continents.map(c => <option key={c} value={c}>{CONTINENT_MAP[c] || c}</option>)}
+                  </select>
+                </div>
 
-          <div className="filter-group">
-            <select value={filterSafety} onChange={e => setFilterSafety(e.target.value)}>
-              <option value="all">Wszystkie poziomy bezpieczeństwa</option>
-              <option value="low">Niskie ryzyko</option>
-              <option value="medium">Średnie ryzyko</option>
-              <option value="high">Wysokie ryzyko</option>
-              <option value="critical">Ekstremalne ryzyko</option>
-            </select>
-          </div>
-        </div>
-      </header>
-
-      <main className="content-area">
-        <div className="country-grid">
-          {countryList.length > 0 ? (
-            countryList.map(country => (
-              <div 
-                key={country.iso2} 
-                className={`country-card risk-border-${country.safety.risk_level}`}
-                onClick={() => setSelectedCountry(country)}
-              >
-                <div className="card-content">
-                  <img src={country.flag_url} alt={`Flaga ${country.name_pl}`} className="main-flag-img" />
-                  <h3>{country.name_pl}</h3>
-                  <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
-                  <span className={`risk-badge risk-${country.safety.risk_level}`}>
-                    {country.safety.risk_level}
-                  </span>
+                <div className="filter-group">
+                  <select value={filterSafety} onChange={e => setFilterSafety(e.target.value)}>
+                    <option value="all">Wszystkie poziomy bezpieczeństwa</option>
+                    <option value="low">Bezpiecznie</option>
+                    <option value="medium">Średnio bezpiecznie</option>
+                    <option value="high">Niebezpiecznie</option>
+                    <option value="critical">Bardzo niebezpiecznie</option>
+                  </select>
                 </div>
               </div>
-            ))
-          ) : (
-            <div className="no-results">Nie znaleziono krajów spełniających kryteria.</div>
-          )}
-        </div>
-      </main>
+            </div>
+          </header>
 
-      {selectedCountry && (
-        <div className="modal-overlay" onClick={() => setSelectedCountry(null)}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-modal" onClick={() => setSelectedCountry(null)}>×</button>
-            
-            <div className="modal-header">
-              <img src={selectedCountry.flag_url} alt={`Flaga ${selectedCountry.name_pl}`} className="modal-flag-img" />
-              <div className="modal-titles">
+          <main className="content-area">
+            <div className="country-grid">
+              {countryList.length > 0 ? (
+                countryList.map(country => (
+                  <div 
+                    key={country.iso2} 
+                    className={`country-card risk-border-${country.safety.risk_level}`}
+                    onClick={() => handleSelectCountry(country)}
+                  >
+                    <div className="card-content">
+                      <img 
+                        src={country.flag_url} 
+                        alt={`Flaga ${country.name_pl}`} 
+                        className="main-flag-img" 
+                        style={{ objectFit: 'contain' }}
+                      />
+                      <h3>{country.name_pl}</h3>
+                      <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
+                      <span className={`risk-badge risk-${country.safety.risk_level}`}>
+                        {SAFETY_LABELS[country.safety.risk_level] || country.safety.risk_level}
+                      </span>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="no-results">Nie znaleziono krajów spełniających kryteria.</div>
+              )}
+            </div>
+          </main>
+        </>
+      ) : (
+        <div className="detail-view-container">
+          <button className="back-button" onClick={() => handleSelectCountry(null)}>
+            ← Powrót do listy
+          </button>
+          
+          <div className="detail-card">
+            <div className="detail-header">
+              <img 
+                src={selectedCountry.flag_url} 
+                alt={`Flaga ${selectedCountry.name_pl}`} 
+                className="detail-flag-img" 
+                style={{ objectFit: 'contain' }}
+              />
+              <div className="detail-titles">
                 <h2>{selectedCountry.name_pl}</h2>
                 <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
               </div>
             </div>
 
-            <div className="modal-body">
+            <div className="detail-body">
               <div className="info-grid">
                 <div className="info-block">
                   <label>Kontynent</label>
@@ -247,12 +322,23 @@ function App() {
                       {selectedCountry.practical.plug_types.split(',').map(type => (
                         <div key={type} className="plug-icon-box">
                           <span className="plug-letter">{type.trim()}</span>
-                          <img 
-                            src={`https://www.worldstandards.eu/wp-content/uploads/plug-type-${type.trim().toLowerCase()}-300x300.jpg`} 
-                            alt={`Typ ${type}`}
-                            className="plug-img"
-                            onError={(e) => (e.currentTarget.style.display = 'none')}
-                          />
+                          {PLUG_IMAGES[type.trim().toUpperCase()] && (
+                            <div className="plug-img-wrapper">
+                              <img 
+                                src={PLUG_IMAGES[type.trim().toUpperCase()]} 
+                                alt={`Typ ${type}`}
+                                className="plug-img"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="plug-img-enlarged">
+                                <img 
+                                  src={getEnlargedPlugUrl(PLUG_IMAGES[type.trim().toUpperCase()])} 
+                                  alt={`Typ ${type} powiększony`}
+                                  referrerPolicy="no-referrer"
+                                />
+                              </div>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -266,14 +352,15 @@ function App() {
                 <div className="info-block">
                   <label>Ruch drogowy</label>
                   <span>
-                    {selectedCountry.practical.driving_side === 'right' ? '🚗 Prawostronny' : '🏎️ Lewostronny'}
+                    {selectedCountry.practical.driving_side === 'right' ? 'Prawostronny' : 'Lewostronny'}
                   </span>
                 </div>
               </div>
 
               <div className={`safety-info risk-${selectedCountry.safety.risk_level}`}>
                 <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
-                <p className="risk-desc">{selectedCountry.safety.risk_text}</p>
+                <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+                <p className="risk-summary-text">{selectedCountry.safety.risk_text}</p>
                 {selectedCountry.safety.url && (
                   <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
                     Zobacz pełny komunikat MSZ na gov.pl →
