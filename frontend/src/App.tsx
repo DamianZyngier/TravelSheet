@@ -1,34 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 
+interface CountryData {
+  name: string;
+  iso2: string;
+  capital: string;
+  continent: string;
+  flag_emoji: string;
+  safety: {
+    risk_level: string;
+    summary: string;
+  };
+  currency: {
+    code: string;
+    rate_pln: number | null;
+  };
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [countries, setCountries] = useState<Record<string, CountryData>>({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Na GitHub Pages plik data.json będzie w tym samym folderze co index.html
+    fetch('./data.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Nie udało się pobrać danych');
+        return res.json();
+      })
+      .then(data => {
+        setCountries(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div>Ładowanie danych podróżniczych...</div>;
+  if (error) return <div>Błąd: {error}</div>;
+
+  const countryList = Object.values(countries);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-container">
+      <header>
+        <h1>🌍 TravelSheet</h1>
+        <p>Twoje centrum informacji o świecie</p>
+      </header>
+
+      <div className="country-grid">
+        {countryList.map(country => (
+          <div key={country.iso2} className="country-card">
+            <span className="flag">{country.flag_emoji}</span>
+            <h2>{country.name}</h2>
+            <p><strong>Stolica:</strong> {country.capital}</p>
+            <p><strong>Bezpieczeństwo:</strong> 
+              <span className={`risk-${country.safety.risk_level}`}>
+                {country.safety.risk_level}
+              </span>
+            </p>
+            {country.currency.rate_pln && (
+              <p><strong>Kurs:</strong> 1 {country.currency.code} = {country.currency.rate_pln.toFixed(2)} PLN</p>
+            )}
+          </div>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
