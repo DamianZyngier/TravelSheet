@@ -24,6 +24,9 @@ COUNTRY_SLUGS = {
     'PT': 'portugalia',
     'MA': 'maroko',
     'TN': 'tunezja',
+    'BR': 'brazylia',
+    'CZ': 'republika-czeska',
+    'AT': 'austria',
 }
 
 async def scrape_country(db: Session, iso_code: str):

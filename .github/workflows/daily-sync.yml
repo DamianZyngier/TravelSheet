@@ -39,6 +39,15 @@ jobs:
             sleep 1
           done
 
+      - name: Sync Base Data
+        run: |
+          echo "Syncing countries from REST Countries..."
+          curl -X POST "http://localhost:8000/api/admin/sync-rest-countries"
+          echo "Syncing static data (plugs, driving side)..."
+          curl -X POST "http://localhost:8000/api/admin/sync-static-info"
+          echo "Syncing UNESCO World Heritage sites..."
+          curl -X POST "http://localhost:8000/api/admin/sync-unesco-sites"
+
       - name: Sync Exchange Rates
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-exchange-rates"
@@ -60,4 +69,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: daily data sync [skip ci]"
-          file_pattern: 'docs/data.json travel_cheatsheet.db'
+          file_pattern: 'docs/data.json'
