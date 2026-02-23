@@ -2,6 +2,7 @@ import httpx
 from sqlalchemy.orm import Session
 from .. import models, crud
 import logging
+from .capitals_pl import CAPITAL_MAPPING_PL
 
 logger = logging.getLogger("uvicorn")
 
@@ -47,6 +48,7 @@ async def sync_countries(db: Session):
                 'name_pl': name_pl,
                 'name_local': list(data.get('name', {}).get('nativeName', {}).values())[0].get('common') if data.get('name', {}).get('nativeName') else None,
                 'capital': data.get('capital', [None])[0] if data.get('capital') else None,
+                'capital_pl': CAPITAL_MAPPING_PL.get(iso2.upper()) or (data.get('capital', [None])[0] if data.get('capital') else None),
                 'continent': continent,
                 'region': data.get('region'),
                 'flag_emoji': extra.get('flag'),

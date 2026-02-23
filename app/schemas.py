@@ -62,6 +62,7 @@ class CountryBasic(BaseModel):
     name: str
     name_pl: Optional[str]
     capital: Optional[str]
+    capital_pl: Optional[str]
     region: Optional[str]
     flag_emoji: Optional[str]
     flag_url: Optional[str]
@@ -133,6 +134,7 @@ class CountryDetail(BaseModel):
     name_pl: Optional[str]
     name_local: Optional[str]
     capital: Optional[str]
+    capital_pl: Optional[str]
     continent: Optional[str]
     region: Optional[str]
     flag_emoji: Optional[str]

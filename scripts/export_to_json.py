@@ -38,7 +38,7 @@ def export_all():
             "name_pl": c.name_pl or c.name,
             "iso2": c.iso_alpha2,
             "iso3": c.iso_alpha3,
-            "capital": c.capital,
+            "capital": c.capital_pl or c.capital,
             "continent": c.continent,
             "region": c.region,
             "flag_emoji": c.flag_emoji,
@@ -47,7 +47,7 @@ def export_all():
             
             "safety": {
                 "risk_level": c.safety.risk_level if c.safety else "unknown",
-                "summary": c.safety.summary if c.safety else "",
+                "risk_text": c.safety.summary if c.safety else "Brak danych",
                 "url": c.safety.full_url if c.safety else ""
             },
             
@@ -67,7 +67,9 @@ def export_all():
 
             "entry": {
                 "visa_required": c.entry_req.visa_required if c.entry_req else None,
-                "visa_on_arrival": c.entry_req.visa_on_arrival if c.entry_req else None,
+                "passport_required": c.entry_req.passport_required if c.entry_req else True,
+                "temp_passport_allowed": c.entry_req.temp_passport_allowed if c.entry_req else True,
+                "id_card_allowed": c.entry_req.id_card_allowed if c.entry_req else False,
                 "visa_notes": c.entry_req.visa_notes if c.entry_req else ""
             },
             

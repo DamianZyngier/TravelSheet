@@ -12,7 +12,7 @@ interface CountryData {
   flag_url: string;
   safety: {
     risk_level: string;
-    summary: string;
+    risk_text: string;
     url: string;
   };
   currency: {
@@ -27,7 +27,9 @@ interface CountryData {
   };
   entry?: {
     visa_required: boolean | null;
-    visa_on_arrival: boolean | null;
+    passport_required: boolean | null;
+    temp_passport_allowed: boolean | null;
+    id_card_allowed: boolean | null;
     visa_notes: string;
   };
 }
@@ -38,7 +40,6 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null);
   
-  // Filtry
   const [filterSafety, setFilterSafety] = useState<string>('all');
   const [filterContinent, setFilterContinent] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -61,14 +62,22 @@ function App() {
   const getCurrencyExample = (country: CountryData) => {
     const rate = country.currency.rate_pln;
     if (!rate) return null;
-    
-    // Jeśli 1 jednostka to mniej niż 0.1 PLN (np. JPY, IDR), pokaż przykład dla 1000
     if (rate < 0.1) {
       const exampleValue = 1000;
       const plnValue = exampleValue * rate;
       return `(1000 ${country.currency.code} ≈ ${formatPLN(plnValue)})`;
     }
     return null;
+  };
+
+  const checkPlugs = (types: string) => {
+    const plugList = types.split(',').map(t => t.trim().toUpperCase());
+    const isSameAsPoland = plugList.every(t => ['C', 'E', 'F'].includes(t));
+    const hasPolishCompatible = plugList.some(t => ['C', 'E', 'F'].includes(t));
+    
+    if (isSameAsPoland) return { text: 'Takie same jak w Polsce', class: 'plugs-ok', warning: false };
+    if (hasPolishCompatible) return { text: 'Podobne / częściowo zgodne', class: 'plugs-warn', warning: false };
+    return { text: 'Inne - wymagany adapter', class: 'plugs-err', warning: true };
   };
 
   useEffect(() => {
@@ -92,16 +101,18 @@ function App() {
     return Array.from(set).sort();
   }, [countries]);
 
-  const filteredCountries = useMemo(() => {
-    return Object.values(countries).filter(c => {
-      const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
-      const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
-      const matchSearch = c.name_pl.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          c.iso2.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      return matchSafety && matchContinent && matchSearch;
-    });
+  const countryList = useMemo(() => {
+    return Object.values(countries)
+      .filter(c => {
+        const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
+        const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
+        const matchSearch = c.name_pl.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                            c.iso2.toLowerCase().includes(searchQuery.toLowerCase());
+        
+        return matchSafety && matchContinent && matchSearch;
+      })
+      .sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
   }, [countries, filterSafety, filterContinent, searchQuery]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
@@ -146,8 +157,8 @@ function App() {
 
       <main className="content-area">
         <div className="country-grid">
-          {filteredCountries.length > 0 ? (
-            filteredCountries.map(country => (
+          {countryList.length > 0 ? (
+            countryList.map(country => (
               <div 
                 key={country.iso2} 
                 className={`country-card risk-border-${country.safety.risk_level}`}
@@ -192,6 +203,29 @@ function App() {
                   <label>Stolica</label>
                   <span>{selectedCountry.capital || 'Brak danych'}</span>
                 </div>
+                
+                <div className="info-block full-width docs-section">
+                  <label>Wymagane dokumenty (dla Polaków)</label>
+                  <div className="docs-grid">
+                    <div className={`doc-item ${selectedCountry.entry?.passport_required ? 'doc-yes' : 'doc-no'}`}>
+                      <strong>Paszport</strong>
+                      <span>{selectedCountry.entry?.passport_required ? '✅ TAK' : '❌ NIE'}</span>
+                    </div>
+                    <div className={`doc-item ${selectedCountry.entry?.temp_passport_allowed ? 'doc-yes' : 'doc-no'}`}>
+                      <strong>Paszport tymczasowy</strong>
+                      <span>{selectedCountry.entry?.temp_passport_allowed ? '✅ TAK' : '❌ NIE'}</span>
+                    </div>
+                    <div className={`doc-item ${selectedCountry.entry?.id_card_allowed ? 'doc-yes' : 'doc-no'}`}>
+                      <strong>Dowód osobisty</strong>
+                      <span>{selectedCountry.entry?.id_card_allowed ? '✅ TAK' : '❌ NIE'}</span>
+                    </div>
+                    <div className={`doc-item ${selectedCountry.entry?.visa_required ? 'doc-no' : 'doc-yes'}`}>
+                      <strong>Wiza turystyczna</strong>
+                      <span>{selectedCountry.entry?.visa_required ? '🛂 WYMAGANA' : '🆓 NIEPOTRZEBNA'}</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="info-block full-width">
                   <label>Waluta</label>
                   <span>
@@ -205,26 +239,44 @@ function App() {
                     ) : 'brak danych o kursie'}
                   </span>
                 </div>
-                <div className="info-block">
-                  <label>Gniazdka</label>
-                  <span>{selectedCountry.practical.plug_types || 'Brak danych'}</span>
+
+                <div className="info-block full-width">
+                  <label>Gniazdka elektryczne</label>
+                  <div className="plugs-container">
+                    <div className="plug-types-list">
+                      {selectedCountry.practical.plug_types.split(',').map(type => (
+                        <div key={type} className="plug-icon-box">
+                          <span className="plug-letter">{type.trim()}</span>
+                          <img 
+                            src={`https://www.worldstandards.eu/wp-content/uploads/plug-type-${type.trim().toLowerCase()}-300x300.jpg`} 
+                            alt={`Typ ${type}`}
+                            className="plug-img"
+                            onError={(e) => (e.currentTarget.style.display = 'none')}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className={`plug-comparison ${checkPlugs(selectedCountry.practical.plug_types).class}`}>
+                      {checkPlugs(selectedCountry.practical.plug_types).warning && '⚠️ '}
+                      {checkPlugs(selectedCountry.practical.plug_types).text}
+                    </div>
+                  </div>
                 </div>
+
                 <div className="info-block">
-                  <label>Ruch</label>
-                  <span>{selectedCountry.practical.driving_side === 'right' ? 'Prawostronny' : 'Lewostronny'}</span>
-                </div>
-                <div className="info-block">
-                  <label>Wiza (Polacy)</label>
-                  <span>{selectedCountry.entry?.visa_required === true ? 'Wymagana' : (selectedCountry.entry?.visa_required === false ? 'Bezwizowy' : 'Brak danych')}</span>
+                  <label>Ruch drogowy</label>
+                  <span>
+                    {selectedCountry.practical.driving_side === 'right' ? '🚗 Prawostronny' : '🏎️ Lewostronny'}
+                  </span>
                 </div>
               </div>
 
               <div className={`safety-info risk-${selectedCountry.safety.risk_level}`}>
-                <h4>⚠️ Poziom bezpieczeństwa: {selectedCountry.safety.risk_level.toUpperCase()}</h4>
-                <p>{selectedCountry.safety.summary || 'Brak szczegółowego opisu bezpieczeństwa.'}</p>
+                <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
+                <p className="risk-desc">{selectedCountry.safety.risk_text}</p>
                 {selectedCountry.safety.url && (
                   <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
-                    Zobacz pełny komunikat MSZ na gov.pl
+                    Zobacz pełny komunikat MSZ na gov.pl →
                   </a>
                 )}
               </div>
