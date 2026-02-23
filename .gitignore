@@ -1,5 +1,8 @@
-# Environments
+# Environments & Secrets
 .env
+venv/
+ENV/
+env/
 
 # Python
 __pycache__/
@@ -7,7 +10,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -27,11 +29,13 @@ wheels/
 # Database
 *.db
 *.sqlite3
+*.db-journal
 
-# Node/Frontend
+# Node / Frontend
 node_modules/
-dist/
-dist-ssr
+frontend/dist/
+frontend/dist-ssr/
+frontend/public/data.json
 *.local
 
 # Editor
@@ -39,6 +43,13 @@ dist-ssr
 .vscode/
 *.swp
 *.swo
+*.iml
+
+# Logs
+*.log
+nohup.out
 
 # Project specific
-# docs/data.json (KEEP THIS)
+# We MUST keep 'docs/' folder as it is the source for GitHub Pages
+!docs/
+!docs/data.json
