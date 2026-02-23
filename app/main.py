@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from typing import List, Optional
 import os
+import asyncio
 
 from .database import engine, get_db
 from . import models, schemas, crud
@@ -122,18 +123,24 @@ async def scrape_gov_pl(iso_code: str, db: Session = Depends(get_db)):
 async def scrape_all_gov_pl(db: Session = Depends(get_db)):
     """Admin endpoint - scrape data for ALL countries (with rate limiting)"""
     from .scrapers.gov_pl import scrape_country
-    import asyncio
 
-    countries = db.query(models.Country).all()
+    try:
+        countries = db.query(models.Country).all()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database query failed: {str(e)}")
+
     results = {"success": 0, "errors": 0, "details": []}
 
-    for country in countries:
+    for i, country in enumerate(countries):
         try:
+            print(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...", flush=True)
             res = await scrape_country(db, country.iso_alpha2)
             if "error" in res:
                 results["errors"] += 1
+                print(f"  - Error: {res['error']}", flush=True)
             else:
                 results["success"] += 1
+                print(f"  - Success: {res['risk_level']}", flush=True)
             await asyncio.sleep(0.5) # Be kind to MSZ servers
         except Exception as e:
             results["errors"] += 1
