@@ -312,28 +312,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Good Friday",
-        "date": "2026-04-03"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      }
-    ]
+    "holidays": []
   },
   "CO": {
     "name": "Colombia",
@@ -693,28 +672,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Benito Juárez's birthday",
-        "date": "2026-03-16"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Constitution Day",
-        "date": "2026-02-02"
-      },
-      {
-        "name": "Independence Day",
-        "date": "2026-09-16"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      }
-    ]
+    "holidays": []
   },
   "GB": {
     "name": "United Kingdom",
@@ -820,9 +778,9 @@
     "latitude": 41.833333,
     "longitude": 22.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Macedonia Północna).",
+      "url": "https://www.gov.pl/web/macedoniapolnocna/idp"
     },
     "currency": {
       "code": "MKD",
@@ -837,11 +795,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
-      "id_card_allowed": false,
-      "visa_notes": ""
+      "id_card_allowed": true,
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -1209,28 +1167,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "RE": {
     "name": "Réunion",
@@ -1410,28 +1347,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Children's Day",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "Day of the Unification of the Romanian Principalities",
-        "date": "2026-01-24"
-      },
-      {
-        "name": "Epiphany",
-        "date": "2026-01-06"
-      },
-      {
-        "name": "First Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "GR": {
     "name": "Greece",
@@ -1566,28 +1482,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Ascension's Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption's Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      }
-    ]
+    "holidays": []
   },
   "SJ": {
     "name": "Svalbard and Jan Mayen",
@@ -2217,28 +2112,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Andalusia Day",
-        "date": "2026-02-28"
-      },
-      {
-        "name": "Aragon Day",
-        "date": "2026-04-23"
-      },
-      {
-        "name": "Assumption of Mary",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Asturias Day",
-        "date": "2026-09-08"
-      }
-    ]
+    "holidays": []
   },
   "PH": {
     "name": "Philippines",
@@ -2328,28 +2202,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Boże Ciało",
-        "date": "2026-06-04"
-      },
-      {
-        "name": "Boże Narodzenie",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Drugi Dzień Bożego Narodzenia",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Drugi Dzień Wielkanocy",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Narodowe Święto Niepodległości",
-        "date": "2026-11-11"
-      }
-    ]
+    "holidays": []
   },
   "CG": {
     "name": "Republic of the Congo",
@@ -2574,28 +2427,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Epiphany",
-        "date": "2026-01-06"
-      }
-    ]
+    "holidays": []
   },
   "AX": {
     "name": "Åland Islands",
@@ -2730,28 +2562,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Carnival",
-        "date": "2026-02-16"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Constitution Day",
-        "date": "2026-03-14"
-      }
-    ]
+    "holidays": []
   },
   "TC": {
     "name": "Turks and Caicos Islands",
@@ -3217,9 +3028,9 @@
     "latitude": 17.0,
     "longitude": -4.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mali).",
+      "url": "https://www.gov.pl/web/senegal/mali-idp"
     },
     "currency": {
       "code": "XOF",
@@ -3234,11 +3045,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -3426,28 +3237,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints’ Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of Our Lady of the Seven Sorrows",
-        "date": "2026-09-15"
-      },
-      {
-        "name": "Day of Struggle for Freedom and Democracy",
-        "date": "2026-11-17"
-      }
-    ]
+    "holidays": []
   },
   "MQ": {
     "name": "Martinique",
@@ -3508,9 +3298,9 @@
     "latitude": 13.25,
     "longitude": -61.2,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Saint Vincent i Grenadyny).",
+      "url": "https://www.gov.pl/web/wenezuela/saint-vincent-i-grenadyny-idp"
     },
     "currency": {
       "code": "XCD",
@@ -3525,11 +3315,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -3733,9 +3523,9 @@
     "latitude": 1.0,
     "longitude": 7.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Świętego Tomasza i Książęca).",
+      "url": "https://www.gov.pl/web/angola/demokratyczna-republika-wysp-sw-tomasza-i-ksiazecej-idp"
     },
     "currency": {
       "code": "STN",
@@ -3750,11 +3540,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -3897,28 +3687,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-10-31"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "NR": {
     "name": "Nauru",
@@ -4323,28 +4092,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "CZ": {
     "name": "Czechia",
@@ -4389,28 +4137,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Czech Statehood Day",
-        "date": "2026-09-28"
-      },
-      {
-        "name": "Day of Struggle for Freedom and Democracy",
-        "date": "2026-11-17"
-      },
-      {
-        "name": "Day of the Burning of Jan Hus",
-        "date": "2026-07-06"
-      }
-    ]
+    "holidays": []
   },
   "CF": {
     "name": "Central African Republic",
@@ -4426,9 +4153,9 @@
     "latitude": 7.0,
     "longitude": 21.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Republika Środkowoafrykańska).",
+      "url": "https://www.gov.pl/web/angola/republika-srodkowoafrykanska-idp"
     },
     "currency": {
       "code": "XAF",
@@ -4443,11 +4170,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -4561,9 +4288,9 @@
     "latitude": 12.0,
     "longitude": -15.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gwinea Bissau).",
+      "url": "https://www.gov.pl/web/senegal/gwinea-bissau-idp"
     },
     "currency": {
       "code": "XOF",
@@ -4578,11 +4305,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -4725,28 +4452,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Birth of Jesus Christ (Christmas in a new style)",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Birth of Jesus Christ (Christmas in the old style)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Children's Day",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "Commemoration Day (Radonitsa)",
-        "date": "2026-04-20"
-      },
-      {
-        "name": "Europe Day",
-        "date": "2026-05-09"
-      }
-    ]
+    "holidays": []
   },
   "WS": {
     "name": "Samoa",
@@ -4942,9 +4648,9 @@
     "latitude": -21.233333,
     "longitude": -159.766667,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Cooka).",
+      "url": "https://www.gov.pl/web/nowazelandia/wyspy-cooka-idp"
     },
     "currency": {
       "code": "CKD",
@@ -4959,11 +4665,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -5032,9 +4738,9 @@
     "latitude": 17.05,
     "longitude": -61.8,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Antigua i Barbuda).",
+      "url": "https://www.gov.pl/web/kolumbia/antigua-i-barbuda-idp"
     },
     "currency": {
       "code": "XCD",
@@ -5049,11 +4755,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -5212,9 +4918,9 @@
     "latitude": 37.0,
     "longitude": 127.5,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Korea Południowa).",
+      "url": "https://www.gov.pl/web/republikakorei/informacje-dla-podrozujacych"
     },
     "currency": {
       "code": "KRW",
@@ -5229,11 +4935,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -5556,28 +5262,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Anti-Fascist Struggle Day",
-        "date": "2026-06-22"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas",
-        "date": "2026-12-26"
-      }
-    ]
+    "holidays": []
   },
   "FO": {
     "name": "Faroe Islands",
@@ -5712,28 +5397,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Day of Remembrance for the Dead",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Day of Uprising Against the Occupation",
-        "date": "2026-04-27"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "LA": {
     "name": "Laos",
@@ -5913,28 +5577,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Feast of St. Joseph",
-        "date": "2026-03-19"
-      },
-      {
-        "name": "Feast of St. Paul's Shipwreck",
-        "date": "2026-02-10"
-      },
-      {
-        "name": "Freedom Day",
-        "date": "2026-03-31"
-      },
-      {
-        "name": "Good Friday",
-        "date": "2026-04-03"
-      },
-      {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
-      }
-    ]
+    "holidays": []
   },
   "KY": {
     "name": "Cayman Islands",
@@ -6024,28 +5667,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
-      },
-      {
-        "name": "Christmas (Orthodox)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Easter Monday (Orthodox)",
-        "date": "2026-04-13"
-      },
-      {
-        "name": "Easter Saturday (Orthodox)",
-        "date": "2026-04-11"
-      },
-      {
-        "name": "Easter Sunday (Orthodox)",
-        "date": "2026-04-12"
-      }
-    ]
+    "holidays": []
   },
   "LV": {
     "name": "Latvia",
@@ -6090,28 +5712,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of the Proclamation of the Republic of Latvia",
-        "date": "2026-11-18"
-      },
-      {
-        "name": "Day of the Restoration of Independence",
-        "date": "2026-05-04"
-      }
-    ]
+    "holidays": []
   },
   "CD": {
     "name": "DR Congo",
@@ -6127,9 +5728,9 @@
     "latitude": null,
     "longitude": 25.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "critical",
+      "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Demokratyczna Republika Konga).",
+      "url": "https://www.gov.pl/web/angola/demokratyczna-republika-konga-idp"
     },
     "currency": {
       "code": "CDF",
@@ -6144,11 +5745,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -6262,9 +5863,9 @@
     "latitude": 8.5,
     "longitude": -11.5,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Sierra Leone).",
+      "url": "https://www.gov.pl/web/nigeria/sierra-leone-idp"
     },
     "currency": {
       "code": "SLE",
@@ -6279,11 +5880,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -6741,28 +6342,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      }
-    ]
+    "holidays": []
   },
   "NU": {
     "name": "Niue",
@@ -7003,9 +6583,9 @@
     "latitude": 13.883333,
     "longitude": -60.966667,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Saint Lucia).",
+      "url": "https://www.gov.pl/web/kolumbia/saint-lucia-idp"
     },
     "currency": {
       "code": "XCD",
@@ -7020,11 +6600,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -7167,28 +6747,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      },
-      {
-        "name": "Eid al-Fitr (Holiday of Breaking the Fast)",
-        "date": "2026-03-20"
-      },
-      {
-        "name": "Eid ul-Adha (Feast of Sacrifice)",
-        "date": "2026-05-26"
-      }
-    ]
+    "holidays": []
   },
   "RU": {
     "name": "Russia",
@@ -7458,28 +7017,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Catholic Christmas",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas (Orthodox Christmas)",
-        "date": "2026-01-07"
-      },
-      {
-        "name": "Day of the Republic",
-        "date": "2026-07-03"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
-      },
-      {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
-      }
-    ]
+    "holidays": []
   },
   "HM": {
     "name": "Heard Island and McDonald Islands",
@@ -7614,28 +7152,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Bulgarian Education and Culture, and Slavic Script Day",
-        "date": "2026-05-24"
-      },
-      {
-        "name": "Bulgarian Education and Culture, and Slavic Script Day (Observed)",
-        "date": "2026-05-25"
-      },
-      {
-        "name": "Bulgaria’s Liberation from the Ottoman Empire",
-        "date": "2026-03-03"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-26"
-      }
-    ]
+    "holidays": []
   },
   "SV": {
     "name": "El Salvador",
@@ -7725,28 +7242,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      }
-    ]
+    "holidays": []
   },
   "VA": {
     "name": "Vatican City",
@@ -7791,28 +7287,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints’ Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls’ Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Anniversary of the election of Pope Leo XIV",
-        "date": "2026-05-08"
-      },
-      {
-        "name": "Anniversary of the foundation of Vatican City",
-        "date": "2026-02-11"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "LK": {
     "name": "Sri Lanka",
@@ -7828,9 +7303,9 @@
     "latitude": 7.0,
     "longitude": 81.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Sri Lanka).",
+      "url": "https://www.gov.pl/web/indie/sri-lanka-idp"
     },
     "currency": {
       "code": "LKR",
@@ -7845,11 +7320,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -8127,28 +7602,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Agathe's day",
-        "date": "2026-02-05"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Angel consecration",
-        "date": "2026-09-14"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "FJ": {
     "name": "Fiji",
@@ -8238,28 +7692,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Day of Goodwill",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Day of Reconciliation",
-        "date": "2026-12-16"
-      },
-      {
-        "name": "Family Day",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Freedom Day",
-        "date": "2026-04-27"
-      }
-    ]
+    "holidays": []
   },
   "JO": {
     "name": "Jordan",
@@ -8500,9 +7933,9 @@
     "latitude": -8.0,
     "longitude": 159.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Salomona).",
+      "url": "https://www.gov.pl/web/australia/wyspy-salomona-idp"
     },
     "currency": {
       "code": "SBD",
@@ -8517,11 +7950,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -8709,28 +8142,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "MN": {
     "name": "Mongolia",
@@ -9286,9 +8698,9 @@
     "latitude": 9.0,
     "longitude": 168.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Marshalla).",
+      "url": "https://www.gov.pl/web/filipiny/wyspy-marshalla-idp"
     },
     "currency": {
       "code": "USD",
@@ -9303,11 +8715,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -9405,28 +8817,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
-      },
-      {
-        "name": "Day of Restoration of Independence",
-        "date": "2026-08-20"
-      },
-      {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
-      }
-    ]
+    "holidays": []
   },
   "MS": {
     "name": "Montserrat",
@@ -9487,9 +8878,9 @@
     "latitude": 2.0,
     "longitude": 10.0,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gwinea Równikowa).",
+      "url": "https://www.gov.pl/web/nigeria/gwinea-rownikowa-idp"
     },
     "currency": {
       "code": "XAF",
@@ -9504,11 +8895,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -9921,28 +9312,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "August Holiday",
-        "date": "2026-08-03"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "June Holiday",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "May Day",
-        "date": "2026-05-04"
-      }
-    ]
+    "holidays": []
   },
   "PK": {
     "name": "Pakistan",
@@ -10302,28 +9672,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      }
-    ]
+    "holidays": []
   },
   "RW": {
     "name": "Rwanda",
@@ -10699,9 +10048,9 @@
     "latitude": 17.333333,
     "longitude": -62.75,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Saint Kitts i Nevis).",
+      "url": "https://www.gov.pl/web/wenezuela/saint-kitts-i-nevis-idp"
     },
     "currency": {
       "code": "XCD",
@@ -10716,11 +10065,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -10953,28 +10302,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "All Souls' Day",
-        "date": "2026-11-02"
-      },
-      {
-        "name": "Anniversary of the 1906 Arengo and commemoration of the Militia",
-        "date": "2026-03-25"
-      },
-      {
-        "name": "Anniversary of the Fall of Fascism and Day of Freedom",
-        "date": "2026-07-28"
-      },
-      {
-        "name": "Assumption of the Virgin Day",
-        "date": "2026-08-15"
-      }
-    ]
+    "holidays": []
   },
   "UG": {
     "name": "Uganda",
@@ -11109,28 +10437,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Azores Day",
-        "date": "2026-05-25"
-      },
-      {
-        "name": "Battle of Atoleiros",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Battle of Salgadela",
-        "date": "2026-07-07"
-      }
-    ]
+    "holidays": []
   },
   "SH": {
     "name": "Saint Helena, Ascension and Tristan da Cunha",
@@ -11371,9 +10678,9 @@
     "latitude": 16.5388,
     "longitude": -23.0418,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "medium",
+      "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Republika Zielonego Przylądka).",
+      "url": "https://www.gov.pl/web/senegal/republika-zielonego-przyladka-idp"
     },
     "currency": {
       "code": "CVE",
@@ -11388,11 +10695,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -11670,28 +10977,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
-      },
-      {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
-      },
-      {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
-      },
-      {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      }
-    ]
+    "holidays": []
   },
   "TT": {
     "name": "Trinidad and Tobago",
@@ -11707,9 +10993,9 @@
     "latitude": 10.6918,
     "longitude": -61.2225,
     "safety": {
-      "risk_level": "unknown",
-      "risk_text": "Brak danych",
-      "url": ""
+      "risk_level": "low",
+      "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Trynidad i Tobago).",
+      "url": "https://www.gov.pl/web/wenezuela/trynidad-i-tobago-idp"
     },
     "currency": {
       "code": "TTD",
@@ -11724,11 +11010,11 @@
       "card_acceptance": null
     },
     "entry": {
-      "visa_required": null,
+      "visa_required": false,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -11826,28 +11112,7 @@
       "icon": ""
     },
     "attractions": [],
-    "holidays": [
-      {
-        "name": "2nd day of Christmas",
-        "date": "2026-12-26"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-04-27"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-05-22"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-05-27"
-      },
-      {
-        "name": "Abolition of slavery",
-        "date": "2026-06-10"
-      }
-    ]
+    "holidays": []
   },
   "SR": {
     "name": "Suriname",
