@@ -94,6 +94,14 @@ async def sync_static_info(db: Session = Depends(get_db)):
     result = sync_static_data(db)
     return result
 
+@app.post("/api/admin/sync-unesco-sites")
+async def sync_unesco_sites(db: Session = Depends(get_db)):
+    """Admin endpoint - sync UNESCO World Heritage sites"""
+    from .scrapers.attractions import sync_unesco_sites
+
+    result = await sync_unesco_sites(db)
+    return result
+
 @app.post("/api/admin/update-weather/{iso_code}")
 async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - update weather for specific country"""
