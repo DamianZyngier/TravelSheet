@@ -65,65 +65,53 @@
 
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .country-card {
   background-color: white;
-  border-radius: 8px;
-  padding: 1.25rem;
-  display: flex;
-  gap: 1rem;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
   border: 1px solid #edf2f7;
-  border-left-width: 5px;
+  border-top: 6px solid #a0aec0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-flag {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card-content h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .country-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
 
-.flag-icon {
-  font-size: 2.5rem;
-}
-
-.card-info h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.card-continent {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #a0aec0;
-}
-
-.risk-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
-  margin-top: 0.5rem;
-}
-
-/* Kolory ryzyka */
-.risk-low { background-color: #c6f6d5; color: #22543d; }
-.risk-medium { background-color: #fefcbf; color: #744210; }
-.risk-high { background-color: #fed7d7; color: #822727; }
-.risk-critical { background-color: #9b2c2c; color: white; }
-.risk-unknown { background-color: #edf2f7; color: #4a5568; }
-
-.risk-border-low { border-left-color: #48bb78; }
-.risk-border-medium { border-left-color: #ecc94b; }
-.risk-border-high { border-left-color: #f56565; }
-.risk-border-critical { border-left-color: #9b2c2c; }
-.risk-border-unknown { border-left-color: #a0aec0; }
+.risk-border-low { border-top-color: #48bb78; }
+.risk-border-medium { border-top-color: #ecc94b; }
+.risk-border-high { border-top-color: #f56565; }
+.risk-border-critical { border-top-color: #9b2c2c; }
+.risk-border-unknown { border-top-color: #a0aec0; }
 
 /* Modal */
 .modal-overlay {

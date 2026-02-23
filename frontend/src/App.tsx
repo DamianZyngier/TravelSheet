@@ -152,8 +152,8 @@ function App() {
                 className={`country-card risk-border-${country.safety.risk_level}`}
                 onClick={() => setSelectedCountry(country)}
               >
-                <span className="flag-icon">{country.flag_emoji}</span>
-                <div className="card-info">
+                <div className="card-content">
+                  <span className="main-flag">{country.flag_emoji}</span>
                   <h3>{country.name_pl}</h3>
                   <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
                   <span className={`risk-badge risk-${country.safety.risk_level}`}>

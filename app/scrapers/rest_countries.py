@@ -1,18 +1,23 @@
 import httpx
 from sqlalchemy.orm import Session
 from .. import models, crud
+import logging
+
+logger = logging.getLogger("uvicorn")
 
 async def sync_countries(db: Session):
-    """Sync all countries from REST Countries API"""
+    """Sync all countries from REST Countries API with full field enforcement"""
 
     async with httpx.AsyncClient() as client:
-        # Request essential fields. REST Countries API can be picky with long field lists.
+        # Request essential fields. 
         fields = "name,cca2,cca3,flags,currencies,languages,capital,region,subregion,population,continents,translations"
-        response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
-        countries_data = response.json()
-        
-        if isinstance(countries_data, dict) and countries_data.get('status') == 400:
-            # Fallback - minimum set of fields
+        try:
+            response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}", timeout=30.0)
+            response.raise_for_status()
+            countries_data = response.json()
+        except Exception as e:
+            logger.error(f"Primary API request failed: {e}")
+            # Fallback
             fields = "name,cca2,cca3,flags,currencies,translations,continents,region"
             response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
             countries_data = response.json()
@@ -24,21 +29,16 @@ async def sync_countries(db: Session):
         return {"synced": 0, "error": "API did not return a list"}
 
     for data in countries_data:
-        iso2 = "Unknown"
+        iso2 = data.get('cca2', '??')
         try:
-            if not isinstance(data, dict):
-                continue
-            
-            iso2 = data.get('cca2')
             iso3 = data.get('cca3')
-
-            # Extract Polish name from translations
             name_pl = data.get('translations', {}).get('pol', {}).get('common')
             if not name_pl:
                 name_pl = data.get('name', {}).get('common')
 
-            # Check if exists
-            existing = crud.get_country_by_iso2(db, iso2)
+            # Get continent (API returns a list, e.g. ["Europe"])
+            continents = data.get('continents', [])
+            continent = continents[0] if continents else data.get('region')
 
             country_dict = {
                 'iso_alpha2': iso2,
@@ -47,64 +47,52 @@ async def sync_countries(db: Session):
                 'name_pl': name_pl,
                 'name_local': list(data.get('name', {}).get('nativeName', {}).values())[0].get('common') if data.get('name', {}).get('nativeName') else None,
                 'capital': data.get('capital', [None])[0] if data.get('capital') else None,
-                'continent': data.get('continents', [None])[0] if data.get('continents') else None,
+                'continent': continent,
                 'region': data.get('region'),
                 'flag_emoji': data.get('flag'),
                 'flag_url': data.get('flags', {}).get('png'),
                 'population': data.get('population')
             }
 
+            existing = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()
+
             if existing:
-                # Update
+                # Force update all fields
                 for key, value in country_dict.items():
                     setattr(existing, key, value)
                 country = existing
             else:
-                # Create
-                country = crud.create_country(db, country_dict)
+                country = models.Country(**country_dict)
+                db.add(country)
+                db.flush() # Get ID for relationships
 
-            # Always sync languages
+            # Sync languages
             languages = data.get('languages', {})
-            # Clear existing languages to avoid duplicates on sync
             db.query(models.Language).filter(models.Language.country_id == country.id).delete()
             for code, name in languages.items():
-                lang = models.Language(
-                    country_id=country.id,
-                    name=name,
-                    code=code,
-                    is_official=True
-                )
+                lang = models.Language(country_id=country.id, name=name, code=code, is_official=True)
                 db.add(lang)
 
-            # Always sync currency
+            # Sync currency
             currencies = data.get('currencies', {})
             if currencies:
                 curr_code = list(currencies.keys())[0]
                 curr_data = currencies[curr_code]
-
                 existing_curr = db.query(models.Currency).filter(models.Currency.country_id == country.id).first()
                 if existing_curr:
                     existing_curr.code = curr_code
                     existing_curr.name = curr_data.get('name')
                     existing_curr.symbol = curr_data.get('symbol')
                 else:
-                    currency = models.Currency(
-                        country_id=country.id,
-                        code=curr_code,
-                        name=curr_data.get('name'),
-                        symbol=curr_data.get('symbol')
-                    )
+                    currency = models.Currency(country_id=country.id, code=curr_code, name=curr_data.get('name'), symbol=curr_data.get('symbol'))
                     db.add(currency)
 
             db.commit()
             synced += 1
 
         except Exception as e:
+            db.rollback()
             errors.append(f"{iso2}: {str(e)}")
             continue
 
-    return {
-        "synced": synced,
-        "total": len(countries_data),
-        "errors": errors
-    }
+    return {"synced": synced, "total": len(countries_data), "errors": errors}
