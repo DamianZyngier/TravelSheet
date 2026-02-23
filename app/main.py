@@ -117,3 +117,26 @@ async def scrape_gov_pl(iso_code: str, db: Session = Depends(get_db)):
 
     result = await scrape_country(db, iso_code.upper())
     return result
+
+@app.post("/api/admin/scrape-all-gov-pl")
+async def scrape_all_gov_pl(db: Session = Depends(get_db)):
+    """Admin endpoint - scrape data for ALL countries (with rate limiting)"""
+    from .scrapers.gov_pl import scrape_country
+    import asyncio
+
+    countries = db.query(models.Country).all()
+    results = {"success": 0, "errors": 0, "details": []}
+
+    for country in countries:
+        try:
+            res = await scrape_country(db, country.iso_alpha2)
+            if "error" in res:
+                results["errors"] += 1
+            else:
+                results["success"] += 1
+            await asyncio.sleep(0.5) # Be kind to MSZ servers
+        except Exception as e:
+            results["errors"] += 1
+            results["details"].append(f"{country.iso_alpha2}: {str(e)}")
+
+    return results

@@ -10,6 +10,7 @@ class Country(Base):
     iso_alpha2 = Column(String(2), unique=True, nullable=False, index=True)
     iso_alpha3 = Column(String(3), unique=True, nullable=False, index=True)
     name = Column(String(255), nullable=False)
+    name_pl = Column(String(255))
     name_local = Column(String(255))
     capital = Column(String(255))
     continent = Column(String(50))

@@ -60,6 +60,7 @@ class CountryBasic(BaseModel):
     iso_alpha2: str
     iso_alpha3: str
     name: str
+    name_pl: Optional[str]
     capital: Optional[str]
     region: Optional[str]
     flag_emoji: Optional[str]
@@ -129,6 +130,7 @@ class CountryDetail(BaseModel):
     iso_alpha2: str
     iso_alpha3: str
     name: str
+    name_pl: Optional[str]
     name_local: Optional[str]
     capital: Optional[str]
     continent: Optional[str]

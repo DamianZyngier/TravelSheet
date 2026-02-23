@@ -35,6 +35,7 @@ def export_all():
         # Budujemy obiekt dla każdego kraju
         country_data = {
             "name": c.name,
+            "name_pl": c.name_pl or c.name,
             "iso2": c.iso_alpha2,
             "iso3": c.iso_alpha3,
             "capital": c.capital,
@@ -62,6 +63,12 @@ def export_all():
                 "water_safe": c.practical.tap_water_safe if c.practical else None,
                 "driving_side": c.practical.driving_side if c.practical else "",
                 "card_acceptance": c.practical.card_acceptance if c.practical else ""
+            },
+
+            "entry": {
+                "visa_required": c.entry_req.visa_required if c.entry_req else None,
+                "visa_on_arrival": c.entry_req.visa_on_arrival if c.entry_req else None,
+                "visa_notes": c.entry_req.visa_notes if c.entry_req else ""
             },
             
             "weather": {

@@ -6,14 +6,14 @@ async def sync_countries(db: Session):
     """Sync all countries from REST Countries API"""
 
     async with httpx.AsyncClient() as client:
-        # Request exactly 10 fields to try to satisfy the API
-        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,population,continents"
+        # Request exactly 11 fields to include translations
+        fields = "name,cca2,cca3,flags,currencies,languages,capital,region,population,continents,translations"
         response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
         countries_data = response.json()
         
         if isinstance(countries_data, dict) and countries_data.get('status') == 400:
             # Fallback - maybe even fewer fields?
-            fields = "name,cca2,cca3,flags,currencies"
+            fields = "name,cca2,cca3,flags,currencies,translations"
             response = await client.get(f"https://restcountries.com/v3.1/all?fields={fields}")
             countries_data = response.json()
 
@@ -32,6 +32,11 @@ async def sync_countries(db: Session):
             iso2 = data.get('cca2')
             iso3 = data.get('cca3')
 
+            # Extract Polish name from translations
+            name_pl = data.get('translations', {}).get('pol', {}).get('common')
+            if not name_pl:
+                name_pl = data.get('name', {}).get('common')
+
             # Check if exists
             existing = crud.get_country_by_iso2(db, iso2)
 
@@ -39,6 +44,7 @@ async def sync_countries(db: Session):
                 'iso_alpha2': iso2,
                 'iso_alpha3': iso3,
                 'name': data.get('name', {}).get('common'),
+                'name_pl': name_pl,
                 'name_local': list(data.get('name', {}).get('nativeName', {}).values())[0].get('common') if data.get('name', {}).get('nativeName') else None,
                 'capital': data.get('capital', [None])[0] if data.get('capital') else None,
                 'continent': data.get('continents', [None])[0] if data.get('continents') else None,
