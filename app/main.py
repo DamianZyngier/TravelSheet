@@ -131,29 +131,8 @@ async def scrape_gov_pl(iso_code: str, db: Session = Depends(get_db)):
 
 @app.post("/api/admin/scrape-all-gov-pl")
 async def scrape_all_gov_pl(db: Session = Depends(get_db)):
-    """Admin endpoint - scrape data for ALL countries (with rate limiting)"""
-    from .scrapers.gov_pl import scrape_country
+    """Admin endpoint - scrape data for ALL countries (with rate limiting and slug cache)"""
+    from .scrapers.gov_pl import scrape_all_with_cache
 
-    try:
-        countries = db.query(models.Country).all()
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Database query failed: {str(e)}")
-
-    results = {"success": 0, "errors": 0, "details": []}
-
-    for i, country in enumerate(countries):
-        try:
-            logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
-            res = await scrape_country(db, country.iso_alpha2)
-            if "error" in res:
-                results["errors"] += 1
-                logger.error(f"  - Error: {res['error']}")
-            else:
-                results["success"] += 1
-                logger.info(f"  - Success: {res['risk_level']}")
-            await asyncio.sleep(0.5) # Be kind to MSZ servers
-        except Exception as e:
-            results["errors"] += 1
-            results["details"].append(f"{country.iso_alpha2}: {str(e)}")
-
+    results = await scrape_all_with_cache(db)
     return results
