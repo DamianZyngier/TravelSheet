@@ -1212,3 +1212,54 @@
   margin-bottom: 0.5rem;
 }
 
+
+/* Connectivity Badges */
+.connectivity-badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.emergency-112-hero.mini {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1.25rem;
+}
+
+.emergency-112-hero.mini .hero-112-badge {
+  font-size: 1.5rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.emergency-112-hero.mini .hero-112-text strong {
+  font-size: 0.9rem;
+}
+
+.roaming-badge-hero {
+  flex: 1;
+  min-width: 200px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(72, 187, 120, 0.3);
+}
+
+.roaming-icon {
+  font-size: 1.8rem;
+}
+
+.roaming-text strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.roaming-text p {
+  margin: 0;
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+

@@ -194,6 +194,7 @@ class PracticalInfo(Base):
     vaccinations_required = Column(Text)
     vaccinations_suggested = Column(Text)
     health_info = Column(Text)
+    roaming_info = Column(Text) # Info about Roam Like at Home
 
     @property
     def emergency(self):

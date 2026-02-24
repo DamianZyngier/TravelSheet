@@ -70,7 +70,8 @@ def export_all():
                 "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None,
                 "vaccinations_required": c.practical.vaccinations_required if c.practical else "",
                 "vaccinations_suggested": c.practical.vaccinations_suggested if c.practical else "",
-                "health_info": c.practical.health_info if c.practical else ""
+                "health_info": c.practical.health_info if c.practical else "",
+                "roaming_info": c.practical.roaming_info if c.practical else ""
             },
 
             "costs": {

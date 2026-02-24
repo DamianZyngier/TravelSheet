@@ -129,25 +129,38 @@ TECH_DATA = {
     'ZM': {'plugs': 'C, D, G', 'side': 'left'}, 'ZW': {'plugs': 'D, G', 'side': 'left'}
 }
 
+# EU and EEA countries for Roam Like at Home
+RLAH_COUNTRIES = [
+    'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
+    'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', # EU
+    'IS', 'LI', 'NO' # EEA
+]
+
 def sync_static_data(db: Session):
-    """Update plugs and driving side for all countries"""
+    """Update plugs, driving side and roaming for all countries"""
     synced = 0
     countries = db.query(models.Country).all()
     
     for country in countries:
-        tech = TECH_DATA.get(country.iso_alpha2.upper())
-        if not tech:
+        iso2 = country.iso_alpha2.upper()
+        tech = TECH_DATA.get(iso2)
+        roaming = "Roam Like at Home (UE/EOG)" if iso2 in RLAH_COUNTRIES else None
+        
+        if not tech and not roaming:
             continue
             
         practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
         if practical:
-            practical.plug_types = tech['plugs']
-            practical.driving_side = tech['side']
+            if tech:
+                practical.plug_types = tech['plugs']
+                practical.driving_side = tech['side']
+            practical.roaming_info = roaming
         else:
             practical = models.PracticalInfo(
                 country_id=country.id,
-                plug_types=tech['plugs'],
-                driving_side=tech['side']
+                plug_types=tech['plugs'] if tech else None,
+                driving_side=tech['side'] if tech else 'right',
+                roaming_info=roaming
             )
             db.add(practical)
         synced += 1
