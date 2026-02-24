@@ -10,6 +10,8 @@
     "flag_emoji": "🇻🇳",
     "flag_url": "https://flagcdn.com/w320/vn.png",
     "population": 101343800,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 16.166667,
     "longitude": 107.833333,
     "safety": {
@@ -192,6 +194,8 @@
     "flag_emoji": "🇬🇫",
     "flag_url": "https://flagcdn.com/w320/gf.png",
     "population": 292354,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 4.0,
     "longitude": -53.0,
     "safety": {
@@ -332,6 +336,8 @@
     "flag_emoji": "🇸🇽",
     "flag_url": "https://flagcdn.com/w320/sx.png",
     "population": 41349,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.033333,
     "longitude": -63.05,
     "safety": {
@@ -472,6 +478,8 @@
     "flag_emoji": "🇻🇬",
     "flag_url": "https://flagcdn.com/w320/vg.png",
     "population": 39471,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.431383,
     "longitude": -64.62305,
     "safety": {
@@ -612,6 +620,8 @@
     "flag_emoji": "🇵🇬",
     "flag_url": "https://flagcdn.com/w320/pg.png",
     "population": 11781559,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -6.0,
     "longitude": 147.0,
     "safety": {
@@ -797,6 +807,8 @@
     "flag_emoji": "🇨🇱",
     "flag_url": "https://flagcdn.com/w320/cl.png",
     "population": 20206953,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -30.0,
     "longitude": -71.0,
     "safety": {
@@ -1047,6 +1059,8 @@
     "flag_emoji": "🇭🇺",
     "flag_url": "https://flagcdn.com/w320/hu.png",
     "population": 9539502,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 47.0,
     "longitude": 20.0,
     "safety": {
@@ -1257,6 +1271,8 @@
     "flag_emoji": "🇨🇴",
     "flag_url": "https://flagcdn.com/w320/co.png",
     "population": 53057212,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 4.0,
     "longitude": -72.0,
     "safety": {
@@ -1511,6 +1527,8 @@
     "flag_emoji": "🇩🇯",
     "flag_url": "https://flagcdn.com/w320/dj.png",
     "population": 1066809,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 11.5,
     "longitude": 43.0,
     "safety": {
@@ -1651,6 +1669,8 @@
     "flag_emoji": "🇦🇼",
     "flag_url": "https://flagcdn.com/w320/aw.png",
     "population": 107566,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 12.5,
     "longitude": -69.966667,
     "safety": {
@@ -1791,6 +1811,8 @@
     "flag_emoji": "🇹🇴",
     "flag_url": "https://flagcdn.com/w320/to.png",
     "population": 100179,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -20.0,
     "longitude": -175.0,
     "safety": {
@@ -1931,6 +1953,8 @@
     "flag_emoji": "🇩🇰",
     "flag_url": "https://flagcdn.com/w320/dk.png",
     "population": 6011488,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 56.0,
     "longitude": 10.0,
     "safety": {
@@ -2145,6 +2169,8 @@
     "flag_emoji": "🇨🇽",
     "flag_url": "https://flagcdn.com/w320/cx.png",
     "population": 1692,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -10.5,
     "longitude": 105.666667,
     "safety": {
@@ -2285,6 +2311,8 @@
     "flag_emoji": "🇩🇴",
     "flag_url": "https://flagcdn.com/w320/do.png",
     "population": 10771504,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 19.0,
     "longitude": -70.666667,
     "safety": {
@@ -2478,6 +2506,8 @@
     "flag_emoji": "🇲🇽",
     "flag_url": "https://flagcdn.com/w320/mx.png",
     "population": 130575786,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 23.0,
     "longitude": -102.0,
     "safety": {
@@ -2672,6 +2702,8 @@
     "flag_emoji": "🇬🇧",
     "flag_url": "https://flagcdn.com/w320/gb.png",
     "population": 69281437,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 54.0,
     "longitude": -2.0,
     "safety": {
@@ -2910,6 +2942,8 @@
     "flag_emoji": "🇹🇷",
     "flag_url": "https://flagcdn.com/w320/tr.png",
     "population": 85664944,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 39.0,
     "longitude": 35.0,
     "safety": {
@@ -3128,6 +3162,8 @@
     "flag_emoji": "🇲🇰",
     "flag_url": "https://flagcdn.com/w320/mk.png",
     "population": 1822612,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 41.833333,
     "longitude": 22.0,
     "safety": {
@@ -3317,6 +3353,8 @@
     "flag_emoji": "🇺🇦",
     "flag_url": "https://flagcdn.com/w320/ua.png",
     "population": 32862000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 49.0,
     "longitude": 32.0,
     "safety": {
@@ -3502,6 +3540,8 @@
     "flag_emoji": "🇻🇪",
     "flag_url": "https://flagcdn.com/w320/ve.png",
     "population": 28517000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.0,
     "longitude": -66.0,
     "safety": {
@@ -3796,6 +3836,8 @@
     "flag_emoji": "🇧🇫",
     "flag_url": "https://flagcdn.com/w320/bf.png",
     "population": 24070553,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.0,
     "longitude": -2.0,
     "safety": {
@@ -3936,6 +3978,8 @@
     "flag_emoji": "🇪🇷",
     "flag_url": "https://flagcdn.com/w320/er.png",
     "population": 3607000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": 39.0,
     "safety": {
@@ -4076,6 +4120,8 @@
     "flag_emoji": "🇪🇭",
     "flag_url": "https://flagcdn.com/w320/eh.png",
     "population": 600904,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 24.5,
     "longitude": -13.0,
     "safety": {
@@ -4216,6 +4262,8 @@
     "flag_emoji": "🇯🇪",
     "flag_url": "https://flagcdn.com/w320/je.png",
     "population": 103267,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 49.25,
     "longitude": -2.166667,
     "safety": {
@@ -4393,6 +4441,8 @@
     "flag_emoji": "🇧🇱",
     "flag_url": "https://flagcdn.com/w320/bl.png",
     "population": 10562,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.5,
     "longitude": -63.416667,
     "safety": {
@@ -4533,6 +4583,8 @@
     "flag_emoji": "🇱🇺",
     "flag_url": "https://flagcdn.com/w320/lu.png",
     "population": 681973,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 49.75,
     "longitude": 6.166667,
     "safety": {
@@ -4739,6 +4791,8 @@
     "flag_emoji": "🇷🇪",
     "flag_url": "https://flagcdn.com/w320/re.png",
     "population": 896175,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -21.15,
     "longitude": 55.5,
     "safety": {
@@ -4879,6 +4933,8 @@
     "flag_emoji": "🇹🇻",
     "flag_url": "https://flagcdn.com/w320/tv.png",
     "population": 10643,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -8.0,
     "longitude": 178.0,
     "safety": {
@@ -5019,6 +5075,8 @@
     "flag_emoji": "🇨🇷",
     "flag_url": "https://flagcdn.com/w320/cr.png",
     "population": 5309625,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 10.0,
     "longitude": -84.0,
     "safety": {
@@ -5204,6 +5262,8 @@
     "flag_emoji": "🇷🇴",
     "flag_url": "https://flagcdn.com/w320/ro.png",
     "population": 19036031,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 46.0,
     "longitude": 25.0,
     "safety": {
@@ -5462,6 +5522,8 @@
     "flag_emoji": "🇬🇷",
     "flag_url": "https://flagcdn.com/w320/gr.png",
     "population": 10400720,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 39.0,
     "longitude": 22.0,
     "safety": {
@@ -5717,6 +5779,8 @@
     "flag_emoji": "🇿🇼",
     "flag_url": "https://flagcdn.com/w320/zw.png",
     "population": 17073087,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -20.0,
     "longitude": 30.0,
     "safety": {
@@ -5910,6 +5974,8 @@
     "flag_emoji": "🇲🇨",
     "flag_url": "https://flagcdn.com/w320/mc.png",
     "population": 38423,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 43.733333,
     "longitude": 7.4,
     "safety": {
@@ -6099,6 +6165,8 @@
     "flag_emoji": "🇸🇯",
     "flag_url": "https://flagcdn.com/w320/sj.png",
     "population": 2530,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 78.0,
     "longitude": 20.0,
     "safety": {
@@ -6288,6 +6356,8 @@
     "flag_emoji": "🇻🇮",
     "flag_url": "https://flagcdn.com/w320/vi.png",
     "population": 87146,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.35,
     "longitude": -64.933333,
     "safety": {
@@ -6428,6 +6498,8 @@
     "flag_emoji": "🇨🇦",
     "flag_url": "https://flagcdn.com/w320/ca.png",
     "population": 41651653,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 60.0,
     "longitude": -95.0,
     "safety": {
@@ -6726,6 +6798,8 @@
     "flag_emoji": "🇬🇭",
     "flag_url": "https://flagcdn.com/w320/gh.png",
     "population": 33742380,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.0,
     "longitude": -2.0,
     "safety": {
@@ -6911,6 +6985,8 @@
     "flag_emoji": "🇨🇮",
     "flag_url": "https://flagcdn.com/w320/ci.png",
     "population": 31719275,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.0,
     "longitude": -5.0,
     "safety": {
@@ -7051,6 +7127,8 @@
     "flag_emoji": "🇲🇲",
     "flag_url": "https://flagcdn.com/w320/mm.png",
     "population": 51316756,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 22.0,
     "longitude": 98.0,
     "safety": {
@@ -7191,6 +7269,8 @@
     "flag_emoji": "🇲🇷",
     "flag_url": "https://flagcdn.com/w320/mr.png",
     "population": 4927532,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 20.0,
     "longitude": -12.0,
     "safety": {
@@ -7331,6 +7411,8 @@
     "flag_emoji": "🇯🇲",
     "flag_url": "https://flagcdn.com/w320/jm.png",
     "population": 2825544,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.25,
     "longitude": -77.5,
     "safety": {
@@ -7512,6 +7594,8 @@
     "flag_emoji": "🇸🇸",
     "flag_url": "https://flagcdn.com/w320/ss.png",
     "population": 15786898,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 7.0,
     "longitude": 30.0,
     "safety": {
@@ -7652,6 +7736,8 @@
     "flag_emoji": "🇧🇳",
     "flag_url": "https://flagcdn.com/w320/bn.png",
     "population": 455500,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 4.5,
     "longitude": 114.666667,
     "safety": {
@@ -7792,6 +7878,8 @@
     "flag_emoji": "🇸🇬",
     "flag_url": "https://flagcdn.com/w320/sg.png",
     "population": 6110200,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 1.366667,
     "longitude": 103.8,
     "safety": {
@@ -7990,6 +8078,8 @@
     "flag_emoji": "🇧🇻",
     "flag_url": "https://flagcdn.com/w320/bv.png",
     "population": 0,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -54.4208,
     "longitude": 3.3464,
     "safety": {
@@ -8130,6 +8220,8 @@
     "flag_emoji": "🇳🇿",
     "flag_url": "https://flagcdn.com/w320/nz.png",
     "population": 5324700,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -41.0,
     "longitude": 174.0,
     "safety": {
@@ -8363,6 +8455,8 @@
     "flag_emoji": "🇪🇸",
     "flag_url": "https://flagcdn.com/w320/es.png",
     "population": 49315949,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 40.0,
     "longitude": -4.0,
     "safety": {
@@ -8721,6 +8815,8 @@
     "flag_emoji": "🇵🇭",
     "flag_url": "https://flagcdn.com/w320/ph.png",
     "population": 114123600,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.0,
     "longitude": 122.0,
     "safety": {
@@ -8991,6 +9087,8 @@
     "flag_emoji": "🇵🇱",
     "flag_url": "https://flagcdn.com/w320/pl.png",
     "population": 37392000,
+    "timezone": "UTC+01:00",
+    "national_dish": null,
     "latitude": 52.0,
     "longitude": 20.0,
     "safety": {
@@ -9214,6 +9312,8 @@
     "flag_emoji": "🇨🇬",
     "flag_url": "https://flagcdn.com/w320/cg.png",
     "population": 6142180,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -1.0,
     "longitude": 15.0,
     "safety": {
@@ -9399,6 +9499,8 @@
     "flag_emoji": "🇳🇨",
     "flag_url": "https://flagcdn.com/w320/nc.png",
     "population": 264596,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -21.5,
     "longitude": 165.5,
     "safety": {
@@ -9539,6 +9641,8 @@
     "flag_emoji": "🇦🇿",
     "flag_url": "https://flagcdn.com/w320/az.png",
     "population": 10241722,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 40.5,
     "longitude": 47.5,
     "safety": {
@@ -9696,6 +9800,8 @@
     "flag_emoji": "🇹🇼",
     "flag_url": "https://flagcdn.com/w320/tw.png",
     "population": 23317031,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 23.5,
     "longitude": 121.0,
     "safety": {
@@ -9836,6 +9942,8 @@
     "flag_emoji": "🇮🇹",
     "flag_url": "https://flagcdn.com/w320/it.png",
     "population": 58927633,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 42.833333,
     "longitude": 12.833333,
     "safety": {
@@ -10140,6 +10248,8 @@
     "flag_emoji": "🇦🇽",
     "flag_url": "https://flagcdn.com/w320/ax.png",
     "population": 30654,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 60.116667,
     "longitude": 19.9,
     "safety": {
@@ -10345,6 +10455,8 @@
     "flag_emoji": "🇩🇿",
     "flag_url": "https://flagcdn.com/w320/dz.png",
     "population": 47400000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 28.0,
     "longitude": 3.0,
     "safety": {
@@ -10510,6 +10622,8 @@
     "flag_emoji": "🇦🇩",
     "flag_url": "https://flagcdn.com/w320/ad.png",
     "population": 88406,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 42.5,
     "longitude": 1.5,
     "safety": {
@@ -10707,6 +10821,8 @@
     "flag_emoji": "🇹🇨",
     "flag_url": "https://flagcdn.com/w320/tc.png",
     "population": 50828,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 21.75,
     "longitude": -71.583333,
     "safety": {
@@ -10847,6 +10963,8 @@
     "flag_emoji": "🇮🇸",
     "flag_url": "https://flagcdn.com/w320/is.png",
     "population": 391810,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 65.0,
     "longitude": -18.0,
     "safety": {
@@ -11061,6 +11179,8 @@
     "flag_emoji": "🇹🇩",
     "flag_url": "https://flagcdn.com/w320/td.png",
     "population": 19340757,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": 19.0,
     "safety": {
@@ -11201,6 +11321,8 @@
     "flag_emoji": "🇧🇸",
     "flag_url": "https://flagcdn.com/w320/bs.png",
     "population": 398165,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 25.0343,
     "longitude": -77.3963,
     "safety": {
@@ -11386,6 +11508,8 @@
     "flag_emoji": "🇧🇷",
     "flag_url": "https://flagcdn.com/w320/br.png",
     "population": 213421037,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -10.0,
     "longitude": -55.0,
     "safety": {
@@ -11644,6 +11768,8 @@
     "flag_emoji": "🇹🇭",
     "flag_url": "https://flagcdn.com/w320/th.png",
     "population": 65859640,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": 100.0,
     "safety": {
@@ -11825,6 +11951,8 @@
     "flag_emoji": "🇫🇲",
     "flag_url": "https://flagcdn.com/w320/fm.png",
     "population": 105564,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 6.916667,
     "longitude": 158.25,
     "safety": {
@@ -11965,6 +12093,8 @@
     "flag_emoji": "🇮🇱",
     "flag_url": "https://flagcdn.com/w320/il.png",
     "population": 10134800,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 31.47,
     "longitude": 35.13,
     "safety": {
@@ -12138,6 +12268,8 @@
     "flag_emoji": "🇦🇮",
     "flag_url": "https://flagcdn.com/w320/ai.png",
     "population": 16010,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.25,
     "longitude": -63.166667,
     "safety": {
@@ -12278,6 +12410,8 @@
     "flag_emoji": "🇩🇲",
     "flag_url": "https://flagcdn.com/w320/dm.png",
     "population": 67408,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.416667,
     "longitude": -61.333333,
     "safety": {
@@ -12418,6 +12552,8 @@
     "flag_emoji": "🇲🇱",
     "flag_url": "https://flagcdn.com/w320/ml.png",
     "population": 22395489,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 17.0,
     "longitude": -4.0,
     "safety": {
@@ -12558,6 +12694,8 @@
     "flag_emoji": "🇲🇿",
     "flag_url": "https://flagcdn.com/w320/mz.png",
     "population": 34090466,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -18.25,
     "longitude": 35.0,
     "safety": {
@@ -12735,6 +12873,8 @@
     "flag_emoji": "🇸🇾",
     "flag_url": "https://flagcdn.com/w320/sy.png",
     "population": 25620000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 35.0,
     "longitude": 38.0,
     "safety": {
@@ -12884,6 +13024,8 @@
     "flag_emoji": "🇾🇪",
     "flag_url": "https://flagcdn.com/w320/ye.png",
     "population": 32684503,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": 48.0,
     "safety": {
@@ -13024,6 +13166,8 @@
     "flag_emoji": "🇸🇰",
     "flag_url": "https://flagcdn.com/w320/sk.png",
     "population": 5413813,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 48.666667,
     "longitude": 19.5,
     "safety": {
@@ -13266,6 +13410,8 @@
     "flag_emoji": "🇲🇶",
     "flag_url": "https://flagcdn.com/w320/mq.png",
     "population": 349925,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 14.666667,
     "longitude": -61.0,
     "safety": {
@@ -13406,6 +13552,8 @@
     "flag_emoji": "🇻🇨",
     "flag_url": "https://flagcdn.com/w320/vc.png",
     "population": 110872,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.25,
     "longitude": -61.2,
     "safety": {
@@ -13546,6 +13694,8 @@
     "flag_emoji": "🇬🇾",
     "flag_url": "https://flagcdn.com/w320/gy.png",
     "population": 772975,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 5.0,
     "longitude": -59.0,
     "safety": {
@@ -13731,6 +13881,8 @@
     "flag_emoji": "🇲🇪",
     "flag_url": "https://flagcdn.com/w320/me.png",
     "population": 623327,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 42.5,
     "longitude": 19.3,
     "safety": {
@@ -13961,6 +14113,8 @@
     "flag_emoji": "🇬🇮",
     "flag_url": "https://flagcdn.com/w320/gi.png",
     "population": 38000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 36.133333,
     "longitude": -5.35,
     "safety": {
@@ -14150,6 +14304,8 @@
     "flag_emoji": "🇶🇦",
     "flag_url": "https://flagcdn.com/w320/qa.png",
     "population": 3173024,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 25.5,
     "longitude": 51.25,
     "safety": {
@@ -14226,6 +14382,8 @@
     "flag_emoji": "🇸🇹",
     "flag_url": "https://flagcdn.com/w320/st.png",
     "population": 209607,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 1.0,
     "longitude": 7.0,
     "safety": {
@@ -14293,6 +14451,8 @@
     "flag_emoji": "🇺🇿",
     "flag_url": "https://flagcdn.com/w320/uz.png",
     "population": 37859698,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 41.0,
     "longitude": 64.0,
     "safety": {
@@ -14385,6 +14545,8 @@
     "flag_emoji": "🇬🇸",
     "flag_url": "https://flagcdn.com/w320/gs.png",
     "population": 0,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -54.5,
     "longitude": -37.0,
     "safety": {
@@ -14452,6 +14614,8 @@
     "flag_emoji": "🇸🇪",
     "flag_url": "https://flagcdn.com/w320/se.png",
     "population": 10605098,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 62.0,
     "longitude": 15.0,
     "safety": {
@@ -14609,6 +14773,8 @@
     "flag_emoji": "🇳🇷",
     "flag_url": "https://flagcdn.com/w320/nr.png",
     "population": 11680,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -0.533333,
     "longitude": 166.916667,
     "safety": {
@@ -14676,6 +14842,8 @@
     "flag_emoji": "🇾🇹",
     "flag_url": "https://flagcdn.com/w320/yt.png",
     "population": 320901,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -12.833333,
     "longitude": 45.166667,
     "safety": {
@@ -14743,6 +14911,8 @@
     "flag_emoji": "🇳🇮",
     "flag_url": "https://flagcdn.com/w320/ni.png",
     "population": 6803886,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.0,
     "longitude": -85.0,
     "safety": {
@@ -14859,6 +15029,8 @@
     "flag_emoji": "🇮🇴",
     "flag_url": "https://flagcdn.com/w320/io.png",
     "population": 0,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -6.0,
     "longitude": 71.5,
     "safety": {
@@ -14926,6 +15098,8 @@
     "flag_emoji": "🇻🇺",
     "flag_url": "https://flagcdn.com/w320/vu.png",
     "population": 321409,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -16.0,
     "longitude": 167.0,
     "safety": {
@@ -14993,6 +15167,8 @@
     "flag_emoji": "🇨🇳",
     "flag_url": "https://flagcdn.com/w320/cn.png",
     "population": 1408280000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 35.0,
     "longitude": 105.0,
     "safety": {
@@ -15101,6 +15277,8 @@
     "flag_emoji": "🇰🇵",
     "flag_url": "https://flagcdn.com/w320/kp.png",
     "population": 25950000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 40.0,
     "longitude": 127.0,
     "safety": {
@@ -15168,6 +15346,8 @@
     "flag_emoji": "🇮🇩",
     "flag_url": "https://flagcdn.com/w320/id.png",
     "population": 284438782,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -5.0,
     "longitude": 120.0,
     "safety": {
@@ -15317,6 +15497,8 @@
     "flag_emoji": "🇧🇪",
     "flag_url": "https://flagcdn.com/w320/be.png",
     "population": 11825551,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 50.833333,
     "longitude": 4.0,
     "safety": {
@@ -15482,6 +15664,8 @@
     "flag_emoji": "🇨🇿",
     "flag_url": "https://flagcdn.com/w320/cz.png",
     "population": 10882341,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 49.75,
     "longitude": 15.5,
     "safety": {
@@ -15611,6 +15795,8 @@
     "flag_emoji": "🇨🇫",
     "flag_url": "https://flagcdn.com/w320/cf.png",
     "population": 6470307,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 7.0,
     "longitude": 21.0,
     "safety": {
@@ -15678,6 +15864,8 @@
     "flag_emoji": "🇵🇦",
     "flag_url": "https://flagcdn.com/w320/pa.png",
     "population": 4064780,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 9.0,
     "longitude": -80.0,
     "safety": {
@@ -15871,6 +16059,8 @@
     "flag_emoji": "🇦🇪",
     "flag_url": "https://flagcdn.com/w320/ae.png",
     "population": 11294243,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 24.0,
     "longitude": 54.0,
     "safety": {
@@ -15938,6 +16128,8 @@
     "flag_emoji": "🇬🇼",
     "flag_url": "https://flagcdn.com/w320/gw.png",
     "population": 1781308,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 12.0,
     "longitude": -15.0,
     "safety": {
@@ -16005,6 +16197,8 @@
     "flag_emoji": "🇧🇯",
     "flag_url": "https://flagcdn.com/w320/bj.png",
     "population": 13224860,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 9.5,
     "longitude": 2.25,
     "safety": {
@@ -16129,6 +16323,8 @@
     "flag_emoji": "🇳🇫",
     "flag_url": "https://flagcdn.com/w320/nf.png",
     "population": 2188,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -29.033333,
     "longitude": 167.95,
     "safety": {
@@ -16196,6 +16392,8 @@
     "flag_emoji": "🇲🇩",
     "flag_url": "https://flagcdn.com/w320/md.png",
     "population": 2749076,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 47.0,
     "longitude": 29.0,
     "safety": {
@@ -16328,6 +16526,8 @@
     "flag_emoji": "🇼🇸",
     "flag_url": "https://flagcdn.com/w320/ws.png",
     "population": 205557,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -13.583333,
     "longitude": -172.333333,
     "safety": {
@@ -16395,6 +16595,8 @@
     "flag_emoji": "🇹🇳",
     "flag_url": "https://flagcdn.com/w320/tn.png",
     "population": 11972169,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 34.0,
     "longitude": 9.0,
     "safety": {
@@ -16520,6 +16722,8 @@
     "flag_emoji": "🇪🇨",
     "flag_url": "https://flagcdn.com/w320/ec.png",
     "population": 18103660,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -2.0,
     "longitude": -77.5,
     "safety": {
@@ -16632,6 +16836,8 @@
     "flag_emoji": "🇳🇪",
     "flag_url": "https://flagcdn.com/w320/ne.png",
     "population": 26312034,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 16.0,
     "longitude": 8.0,
     "safety": {
@@ -16728,6 +16934,8 @@
     "flag_emoji": "🇨🇰",
     "flag_url": "https://flagcdn.com/w320/ck.png",
     "population": 15040,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -21.233333,
     "longitude": -159.766667,
     "safety": {
@@ -16795,6 +17003,8 @@
     "flag_emoji": "🇲🇵",
     "flag_url": "https://flagcdn.com/w320/mp.png",
     "population": 47329,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.2,
     "longitude": 145.75,
     "safety": {
@@ -16862,6 +17072,8 @@
     "flag_emoji": "🇦🇬",
     "flag_url": "https://flagcdn.com/w320/ag.png",
     "population": 103603,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 17.05,
     "longitude": -61.8,
     "safety": {
@@ -16929,6 +17141,8 @@
     "flag_emoji": "🇲🇾",
     "flag_url": "https://flagcdn.com/w320/my.png",
     "population": 34231700,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 2.5,
     "longitude": 112.5,
     "safety": {
@@ -17037,6 +17251,8 @@
     "flag_emoji": "🇬🇵",
     "flag_url": "https://flagcdn.com/w320/gp.png",
     "population": 378561,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 16.25,
     "longitude": -61.583333,
     "safety": {
@@ -17104,6 +17320,8 @@
     "flag_emoji": "🇴🇲",
     "flag_url": "https://flagcdn.com/w320/om.png",
     "population": 5343630,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 21.0,
     "longitude": 57.0,
     "safety": {
@@ -17171,6 +17389,8 @@
     "flag_emoji": "🇰🇷",
     "flag_url": "https://flagcdn.com/w320/kr.png",
     "population": 51159889,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 37.0,
     "longitude": 127.5,
     "safety": {
@@ -17299,6 +17519,8 @@
     "flag_emoji": "🇵🇳",
     "flag_url": "https://flagcdn.com/w320/pn.png",
     "population": 35,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -25.066667,
     "longitude": -130.1,
     "safety": {
@@ -17366,6 +17588,8 @@
     "flag_emoji": "🇧🇦",
     "flag_url": "https://flagcdn.com/w320/ba.png",
     "population": 3422000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 44.0,
     "longitude": 18.0,
     "safety": {
@@ -17494,6 +17718,8 @@
     "flag_emoji": "🇱🇸",
     "flag_url": "https://flagcdn.com/w320/ls.png",
     "population": 2116427,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -29.5,
     "longitude": 28.5,
     "safety": {
@@ -17606,6 +17832,8 @@
     "flag_emoji": "🇯🇵",
     "flag_url": "https://flagcdn.com/w320/jp.png",
     "population": 123210000,
+    "timezone": "UTC+09:00",
+    "national_dish": null,
     "latitude": 36.0,
     "longitude": 138.0,
     "safety": {
@@ -17854,6 +18082,8 @@
     "flag_emoji": "🇹🇲",
     "flag_url": "https://flagcdn.com/w320/tm.png",
     "population": 7057841,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 40.0,
     "longitude": 60.0,
     "safety": {
@@ -17921,6 +18151,8 @@
     "flag_emoji": "🇨🇼",
     "flag_url": "https://flagcdn.com/w320/cw.png",
     "population": 156115,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 12.116667,
     "longitude": -68.933333,
     "safety": {
@@ -17988,6 +18220,8 @@
     "flag_emoji": "🇭🇷",
     "flag_url": "https://flagcdn.com/w320/hr.png",
     "population": 3866233,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 45.166667,
     "longitude": 15.5,
     "safety": {
@@ -18137,6 +18371,8 @@
     "flag_emoji": "🇫🇴",
     "flag_url": "https://flagcdn.com/w320/fo.png",
     "population": 54885,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 62.0,
     "longitude": -7.0,
     "safety": {
@@ -18273,6 +18509,8 @@
     "flag_emoji": "🇧🇹",
     "flag_url": "https://flagcdn.com/w320/bt.png",
     "population": 784043,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 27.5,
     "longitude": 90.5,
     "safety": {
@@ -18340,6 +18578,8 @@
     "flag_emoji": "🇸🇮",
     "flag_url": "https://flagcdn.com/w320/si.png",
     "population": 2130638,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 46.116667,
     "longitude": 14.816667,
     "safety": {
@@ -18509,6 +18749,8 @@
     "flag_emoji": "🇱🇦",
     "flag_url": "https://flagcdn.com/w320/la.png",
     "population": 7647000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.0,
     "longitude": 105.0,
     "safety": {
@@ -18576,6 +18818,8 @@
     "flag_emoji": "🇬🇬",
     "flag_url": "https://flagcdn.com/w320/gg.png",
     "population": 64781,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 49.466667,
     "longitude": -2.583333,
     "safety": {
@@ -18680,6 +18924,8 @@
     "flag_emoji": "🇱🇧",
     "flag_url": "https://flagcdn.com/w320/lb.png",
     "population": 5490000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 33.833333,
     "longitude": 35.833333,
     "safety": {
@@ -18756,6 +19002,8 @@
     "flag_emoji": "🇲🇹",
     "flag_url": "https://flagcdn.com/w320/mt.png",
     "population": 574250,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 35.9375,
     "longitude": 14.3754,
     "safety": {
@@ -18897,6 +19145,8 @@
     "flag_emoji": "🇰🇾",
     "flag_url": "https://flagcdn.com/w320/ky.png",
     "population": 84738,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 19.3133,
     "longitude": -81.2546,
     "safety": {
@@ -18964,6 +19214,8 @@
     "flag_emoji": "🇷🇸",
     "flag_url": "https://flagcdn.com/w320/rs.png",
     "population": 6567783,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 44.0,
     "longitude": 21.0,
     "safety": {
@@ -19101,6 +19353,8 @@
     "flag_emoji": "🇱🇻",
     "flag_url": "https://flagcdn.com/w320/lv.png",
     "population": 1829000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 57.0,
     "longitude": 25.0,
     "safety": {
@@ -19242,6 +19496,8 @@
     "flag_emoji": "🇨🇩",
     "flag_url": "https://flagcdn.com/w320/cd.png",
     "population": 112832000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": null,
     "longitude": 25.0,
     "safety": {
@@ -19354,6 +19610,8 @@
     "flag_emoji": "🇨🇾",
     "flag_url": "https://flagcdn.com/w320/cy.png",
     "population": 1442614,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 35.0,
     "longitude": 33.0,
     "safety": {
@@ -19515,6 +19773,8 @@
     "flag_emoji": "🇬🇦",
     "flag_url": "https://flagcdn.com/w320/ga.png",
     "population": 2469296,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -1.0,
     "longitude": 11.75,
     "safety": {
@@ -19627,6 +19887,8 @@
     "flag_emoji": "🇸🇱",
     "flag_url": "https://flagcdn.com/w320/sl.png",
     "population": 9077691,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.5,
     "longitude": -11.5,
     "safety": {
@@ -19694,6 +19956,8 @@
     "flag_emoji": "🇮🇶",
     "flag_url": "https://flagcdn.com/w320/iq.png",
     "population": 46118793,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 33.0,
     "longitude": 44.0,
     "safety": {
@@ -19770,6 +20034,8 @@
     "flag_emoji": "🇧🇼",
     "flag_url": "https://flagcdn.com/w320/bw.png",
     "population": 2359609,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -22.0,
     "longitude": 24.0,
     "safety": {
@@ -19882,6 +20148,8 @@
     "flag_emoji": "🇧🇶",
     "flag_url": "https://flagcdn.com/w320/bq.png",
     "population": 31980,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 12.18,
     "longitude": -68.25,
     "safety": {
@@ -19949,6 +20217,8 @@
     "flag_emoji": "🇸🇴",
     "flag_url": "https://flagcdn.com/w320/so.png",
     "population": 19655000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 10.0,
     "longitude": 49.0,
     "safety": {
@@ -20016,6 +20286,8 @@
     "flag_emoji": "🇲🇺",
     "flag_url": "https://flagcdn.com/w320/mu.png",
     "population": 1243741,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -20.283333,
     "longitude": 57.55,
     "safety": {
@@ -20083,6 +20355,8 @@
     "flag_emoji": "🇬🇪",
     "flag_url": "https://flagcdn.com/w320/ge.png",
     "population": 4000921,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 42.0,
     "longitude": 43.5,
     "safety": {
@@ -20228,6 +20502,8 @@
     "flag_emoji": "🇲🇬",
     "flag_url": "https://flagcdn.com/w320/mg.png",
     "population": 31727042,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -20.0,
     "longitude": 47.0,
     "safety": {
@@ -20336,6 +20612,8 @@
     "flag_emoji": "🇺🇲",
     "flag_url": "https://flagcdn.com/w320/um.png",
     "population": 0,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 19.3,
     "longitude": 166.633333,
     "safety": {
@@ -20403,6 +20681,8 @@
     "flag_emoji": "🇱🇾",
     "flag_url": "https://flagcdn.com/w320/ly.png",
     "population": 7459000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 25.0,
     "longitude": 17.0,
     "safety": {
@@ -20487,6 +20767,8 @@
     "flag_emoji": "🇦🇹",
     "flag_url": "https://flagcdn.com/w320/at.png",
     "population": 9200931,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 47.333333,
     "longitude": 13.333333,
     "safety": {
@@ -20680,6 +20962,8 @@
     "flag_emoji": "🇳🇺",
     "flag_url": "https://flagcdn.com/w320/nu.png",
     "population": 1681,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -19.033333,
     "longitude": -169.866667,
     "safety": {
@@ -20747,6 +21031,8 @@
     "flag_emoji": "🇪🇹",
     "flag_url": "https://flagcdn.com/w320/et.png",
     "population": 111652998,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.0,
     "longitude": 38.0,
     "safety": {
@@ -20831,6 +21117,8 @@
     "flag_emoji": "🇨🇲",
     "flag_url": "https://flagcdn.com/w320/cm.png",
     "population": 29442327,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 6.0,
     "longitude": 12.0,
     "safety": {
@@ -20898,6 +21186,8 @@
     "flag_emoji": "🇪🇬",
     "flag_url": "https://flagcdn.com/w320/eg.png",
     "population": 107271260,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 27.0,
     "longitude": 30.0,
     "safety": {
@@ -21043,6 +21333,8 @@
     "flag_emoji": "🇵🇼",
     "flag_url": "https://flagcdn.com/w320/pw.png",
     "population": 16733,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 7.5,
     "longitude": 134.5,
     "safety": {
@@ -21110,6 +21402,8 @@
     "flag_emoji": "🇱🇨",
     "flag_url": "https://flagcdn.com/w320/lc.png",
     "population": 184100,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.883333,
     "longitude": -60.966667,
     "safety": {
@@ -21177,6 +21471,8 @@
     "flag_emoji": "🇵🇷",
     "flag_url": "https://flagcdn.com/w320/pr.png",
     "population": 3203295,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.25,
     "longitude": -66.5,
     "safety": {
@@ -21329,6 +21625,8 @@
     "flag_emoji": "🇦🇫",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
     "population": 43844000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 33.0,
     "longitude": 65.0,
     "safety": {
@@ -21396,6 +21694,8 @@
     "flag_emoji": "🇦🇱",
     "flag_url": "https://flagcdn.com/w320/al.png",
     "population": 2363314,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 41.0,
     "longitude": 20.0,
     "safety": {
@@ -21537,6 +21837,8 @@
     "flag_emoji": "🇷🇺",
     "flag_url": "https://flagcdn.com/w320/ru.png",
     "population": 146028325,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 60.0,
     "longitude": 100.0,
     "safety": {
@@ -21657,6 +21959,8 @@
     "flag_emoji": "🇬🇩",
     "flag_url": "https://flagcdn.com/w320/gd.png",
     "population": 109021,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 12.116667,
     "longitude": -61.666667,
     "safety": {
@@ -21777,6 +22081,8 @@
     "flag_emoji": "🇽🇰",
     "flag_url": "https://flagcdn.com/w320/xk.png",
     "population": 1585566,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 42.666667,
     "longitude": 21.166667,
     "safety": {
@@ -21838,6 +22144,8 @@
     "flag_emoji": "🇧🇮",
     "flag_url": "https://flagcdn.com/w320/bi.png",
     "population": 12332788,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -3.5,
     "longitude": 30.0,
     "safety": {
@@ -21905,6 +22213,8 @@
     "flag_emoji": "🇰🇲",
     "flag_url": "https://flagcdn.com/w320/km.png",
     "population": 919901,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -12.166667,
     "longitude": 44.25,
     "safety": {
@@ -21972,6 +22282,8 @@
     "flag_emoji": "🇧🇾",
     "flag_url": "https://flagcdn.com/w320/by.png",
     "population": 9109280,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 53.0,
     "longitude": 28.0,
     "safety": {
@@ -22080,6 +22392,8 @@
     "flag_emoji": "🇭🇲",
     "flag_url": "https://flagcdn.com/w320/hm.png",
     "population": 0,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -53.0818,
     "longitude": 73.5042,
     "safety": {
@@ -22147,6 +22461,8 @@
     "flag_emoji": "🇹🇿",
     "flag_url": "https://flagcdn.com/w320/tz.png",
     "population": 68153004,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -6.0,
     "longitude": 35.0,
     "safety": {
@@ -22263,6 +22579,8 @@
     "flag_emoji": "🇧🇬",
     "flag_url": "https://flagcdn.com/w320/bg.png",
     "population": 6437360,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 43.0,
     "longitude": 25.0,
     "safety": {
@@ -22424,6 +22742,8 @@
     "flag_emoji": "🇸🇻",
     "flag_url": "https://flagcdn.com/w320/sv.png",
     "population": 6029976,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.833333,
     "longitude": -88.916667,
     "safety": {
@@ -22596,6 +22916,8 @@
     "flag_emoji": "🇳🇱",
     "flag_url": "https://flagcdn.com/w320/nl.png",
     "population": 18100436,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 52.5,
     "longitude": 5.75,
     "safety": {
@@ -22741,6 +23063,8 @@
     "flag_emoji": "🇻🇦",
     "flag_url": "https://flagcdn.com/w320/va.png",
     "population": 882,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 41.9,
     "longitude": 12.45,
     "safety": {
@@ -22878,6 +23202,8 @@
     "flag_emoji": "🇱🇰",
     "flag_url": "https://flagcdn.com/w320/lk.png",
     "population": 21763170,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 7.0,
     "longitude": 81.0,
     "safety": {
@@ -22945,6 +23271,8 @@
     "flag_emoji": "🇫🇮",
     "flag_url": "https://flagcdn.com/w320/fi.png",
     "population": 5650325,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 64.0,
     "longitude": 26.0,
     "safety": {
@@ -23114,6 +23442,8 @@
     "flag_emoji": "🇵🇫",
     "flag_url": "https://flagcdn.com/w320/pf.png",
     "population": 279500,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -17.6797,
     "longitude": -149.4068,
     "safety": {
@@ -23181,6 +23511,8 @@
     "flag_emoji": "🇲🇻",
     "flag_url": "https://flagcdn.com/w320/mv.png",
     "population": 515132,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 3.25,
     "longitude": 73.0,
     "safety": {
@@ -23248,6 +23580,8 @@
     "flag_emoji": "🇵🇾",
     "flag_url": "https://flagcdn.com/w320/py.png",
     "population": 6109644,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -23.0,
     "longitude": -58.0,
     "safety": {
@@ -23364,6 +23698,8 @@
     "flag_emoji": "🇸🇿",
     "flag_url": "https://flagcdn.com/w320/sz.png",
     "population": 1235549,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -26.5,
     "longitude": 31.5,
     "safety": {
@@ -23431,6 +23767,8 @@
     "flag_emoji": "🇨🇭",
     "flag_url": "https://flagcdn.com/w320/ch.png",
     "population": 9082848,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 47.0,
     "longitude": 8.0,
     "safety": {
@@ -23656,6 +23994,8 @@
     "flag_emoji": "🇫🇯",
     "flag_url": "https://flagcdn.com/w320/fj.png",
     "population": 900869,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -17.7134,
     "longitude": 178.065,
     "safety": {
@@ -23723,6 +24063,8 @@
     "flag_emoji": "🇿🇦",
     "flag_url": "https://flagcdn.com/w320/za.png",
     "population": 63100945,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -29.0,
     "longitude": 24.0,
     "safety": {
@@ -23839,6 +24181,8 @@
     "flag_emoji": "🇯🇴",
     "flag_url": "https://flagcdn.com/w320/jo.png",
     "population": 11734000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 31.0,
     "longitude": 36.0,
     "safety": {
@@ -23915,6 +24259,8 @@
     "flag_emoji": "🇧🇿",
     "flag_url": "https://flagcdn.com/w320/bz.png",
     "population": 417634,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 17.25,
     "longitude": -88.75,
     "safety": {
@@ -24043,6 +24389,8 @@
     "flag_emoji": "🇵🇪",
     "flag_url": "https://flagcdn.com/w320/pe.png",
     "population": 34350244,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -10.0,
     "longitude": -76.0,
     "safety": {
@@ -24219,6 +24567,8 @@
     "flag_emoji": "🇹🇯",
     "flag_url": "https://flagcdn.com/w320/tj.png",
     "population": 10499000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 39.0,
     "longitude": 71.0,
     "safety": {
@@ -24286,6 +24636,8 @@
     "flag_emoji": "🇬🇳",
     "flag_url": "https://flagcdn.com/w320/gn.png",
     "population": 14363931,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 11.0,
     "longitude": -10.0,
     "safety": {
@@ -24353,6 +24705,8 @@
     "flag_emoji": "🇸🇧",
     "flag_url": "https://flagcdn.com/w320/sb.png",
     "population": 750325,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -8.0,
     "longitude": 159.0,
     "safety": {
@@ -24420,6 +24774,8 @@
     "flag_emoji": "🇸🇳",
     "flag_url": "https://flagcdn.com/w320/sn.png",
     "population": 18593258,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 14.0,
     "longitude": -14.0,
     "safety": {
@@ -24520,6 +24876,8 @@
     "flag_emoji": "🇬🇱",
     "flag_url": "https://flagcdn.com/w320/gl.png",
     "population": 56542,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 72.0,
     "longitude": -40.0,
     "safety": {
@@ -24652,6 +25010,8 @@
     "flag_emoji": "🇮🇲",
     "flag_url": "https://flagcdn.com/w320/im.png",
     "population": 84530,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 54.25,
     "longitude": -4.5,
     "safety": {
@@ -24760,6 +25120,8 @@
     "flag_emoji": "🇱🇹",
     "flag_url": "https://flagcdn.com/w320/lt.png",
     "population": 2894886,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 56.0,
     "longitude": 24.0,
     "safety": {
@@ -24901,6 +25263,8 @@
     "flag_emoji": "🇲🇳",
     "flag_url": "https://flagcdn.com/w320/mn.png",
     "population": 3544835,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 46.0,
     "longitude": 105.0,
     "safety": {
@@ -25026,6 +25390,8 @@
     "flag_emoji": "🇧🇴",
     "flag_url": "https://flagcdn.com/w320/bo.png",
     "population": 11365333,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -17.0,
     "longitude": -65.0,
     "safety": {
@@ -25142,6 +25508,8 @@
     "flag_emoji": "🇰🇿",
     "flag_url": "https://flagcdn.com/w320/kz.png",
     "population": 20426568,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 48.0196,
     "longitude": 66.9237,
     "safety": {
@@ -25271,6 +25639,8 @@
     "flag_emoji": "🇹🇫",
     "flag_url": "https://flagcdn.com/w320/tf.png",
     "population": 400,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -49.25,
     "longitude": 69.167,
     "safety": {
@@ -25338,6 +25708,8 @@
     "flag_emoji": "🇭🇰",
     "flag_url": "https://flagcdn.com/w320/hk.png",
     "population": 7527500,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 22.267,
     "longitude": 114.188,
     "safety": {
@@ -25474,6 +25846,8 @@
     "flag_emoji": "🇵🇸",
     "flag_url": "https://flagcdn.com/w320/ps.png",
     "population": 5483450,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 31.9,
     "longitude": 35.2,
     "safety": {
@@ -25550,6 +25924,8 @@
     "flag_emoji": "🇦🇷",
     "flag_url": "https://flagcdn.com/w320/ar.png",
     "population": 46735004,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -34.0,
     "longitude": -64.0,
     "safety": {
@@ -25739,6 +26115,8 @@
     "flag_emoji": "🇦🇸",
     "flag_url": "https://flagcdn.com/w320/as.png",
     "population": 49710,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -14.333333,
     "longitude": -170.0,
     "safety": {
@@ -25806,6 +26184,8 @@
     "flag_emoji": "🇲🇫",
     "flag_url": "https://flagcdn.com/w320/mf.png",
     "population": 31496,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 18.0708,
     "longitude": -63.0501,
     "safety": {
@@ -25873,6 +26253,8 @@
     "flag_emoji": "🇦🇲",
     "flag_url": "https://flagcdn.com/w320/am.png",
     "population": 3076200,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 40.0,
     "longitude": 45.0,
     "safety": {
@@ -26014,6 +26396,8 @@
     "flag_emoji": "🇦🇴",
     "flag_url": "https://flagcdn.com/w320/ao.png",
     "population": 36170961,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -12.5,
     "longitude": 18.5,
     "safety": {
@@ -26098,6 +26482,8 @@
     "flag_emoji": "🇹🇬",
     "flag_url": "https://flagcdn.com/w320/tg.png",
     "population": 8095498,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 8.0,
     "longitude": 1.166667,
     "safety": {
@@ -26165,6 +26551,8 @@
     "flag_emoji": "🇲🇭",
     "flag_url": "https://flagcdn.com/w320/mh.png",
     "population": 42418,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 9.0,
     "longitude": 168.0,
     "safety": {
@@ -26232,6 +26620,8 @@
     "flag_emoji": "🇧🇭",
     "flag_url": "https://flagcdn.com/w320/bh.png",
     "population": 1594654,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 26.0,
     "longitude": 50.55,
     "safety": {
@@ -26299,6 +26689,8 @@
     "flag_emoji": "🇪🇪",
     "flag_url": "https://flagcdn.com/w320/ee.png",
     "population": 1369995,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 59.0,
     "longitude": 26.0,
     "safety": {
@@ -26424,6 +26816,8 @@
     "flag_emoji": "🇲🇸",
     "flag_url": "https://flagcdn.com/w320/ms.png",
     "population": 4386,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 16.75,
     "longitude": -62.2,
     "safety": {
@@ -26536,6 +26930,8 @@
     "flag_emoji": "🇬🇶",
     "flag_url": "https://flagcdn.com/w320/gq.png",
     "population": 1668768,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 2.0,
     "longitude": 10.0,
     "safety": {
@@ -26603,6 +26999,8 @@
     "flag_emoji": "🇳🇬",
     "flag_url": "https://flagcdn.com/w320/ng.png",
     "population": 223800000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 10.0,
     "longitude": 8.0,
     "safety": {
@@ -26752,6 +27150,8 @@
     "flag_emoji": "🇧🇲",
     "flag_url": "https://flagcdn.com/w320/bm.png",
     "population": 64055,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 32.333333,
     "longitude": -64.75,
     "safety": {
@@ -26819,6 +27219,8 @@
     "flag_emoji": "🇲🇦",
     "flag_url": "https://flagcdn.com/w320/ma.png",
     "population": 36828330,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 32.0,
     "longitude": -5.0,
     "safety": {
@@ -26968,6 +27370,8 @@
     "flag_emoji": "🇳🇦",
     "flag_url": "https://flagcdn.com/w320/na.png",
     "population": 3022401,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -22.0,
     "longitude": 17.0,
     "safety": {
@@ -27088,6 +27492,8 @@
     "flag_emoji": "🇫🇰",
     "flag_url": "https://flagcdn.com/w320/fk.png",
     "population": 3662,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -51.75,
     "longitude": -59.0,
     "safety": {
@@ -27155,6 +27561,8 @@
     "flag_emoji": "🇸🇨",
     "flag_url": "https://flagcdn.com/w320/sc.png",
     "population": 122729,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -4.583333,
     "longitude": 55.666667,
     "safety": {
@@ -27275,6 +27683,8 @@
     "flag_emoji": "🇿🇲",
     "flag_url": "https://flagcdn.com/w320/zm.png",
     "population": 19693423,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -15.0,
     "longitude": 30.0,
     "safety": {
@@ -27342,6 +27752,8 @@
     "flag_emoji": "🇰🇭",
     "flag_url": "https://flagcdn.com/w320/kh.png",
     "population": 17577760,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.0,
     "longitude": 105.0,
     "safety": {
@@ -27409,6 +27821,8 @@
     "flag_emoji": "🇮🇪",
     "flag_url": "https://flagcdn.com/w320/ie.png",
     "population": 5458600,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 53.0,
     "longitude": -8.0,
     "safety": {
@@ -27546,6 +27960,8 @@
     "flag_emoji": "🇵🇰",
     "flag_url": "https://flagcdn.com/w320/pk.png",
     "population": 241499431,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 30.0,
     "longitude": 70.0,
     "safety": {
@@ -27646,6 +28062,8 @@
     "flag_emoji": "🇬🇺",
     "flag_url": "https://flagcdn.com/w320/gu.png",
     "population": 153836,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.466667,
     "longitude": 144.783333,
     "safety": {
@@ -27713,6 +28131,8 @@
     "flag_emoji": "🇲🇴",
     "flag_url": "https://flagcdn.com/w320/mo.png",
     "population": 685900,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 22.166667,
     "longitude": 113.55,
     "safety": {
@@ -27780,6 +28200,8 @@
     "flag_emoji": "🇳🇵",
     "flag_url": "https://flagcdn.com/w320/np.png",
     "population": 29911840,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 28.0,
     "longitude": 84.0,
     "safety": {
@@ -27847,6 +28269,8 @@
     "flag_emoji": "🇮🇳",
     "flag_url": "https://flagcdn.com/w320/in.png",
     "population": 1417492000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 20.0,
     "longitude": 77.0,
     "safety": {
@@ -27968,6 +28392,8 @@
     "flag_emoji": "🇰🇬",
     "flag_url": "https://flagcdn.com/w320/kg.png",
     "population": 7281800,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 41.0,
     "longitude": 75.0,
     "safety": {
@@ -28035,6 +28461,8 @@
     "flag_emoji": "🇭🇹",
     "flag_url": "https://flagcdn.com/w320/ht.png",
     "population": 11867032,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 19.0,
     "longitude": -72.416667,
     "safety": {
@@ -28102,6 +28530,8 @@
     "flag_emoji": "🇩🇪",
     "flag_url": "https://flagcdn.com/w320/de.png",
     "population": 83491249,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 51.0,
     "longitude": 9.0,
     "safety": {
@@ -28299,6 +28729,8 @@
     "flag_emoji": "🇷🇼",
     "flag_url": "https://flagcdn.com/w320/rw.png",
     "population": 14104969,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -2.0,
     "longitude": 30.0,
     "safety": {
@@ -28366,6 +28798,8 @@
     "flag_emoji": "🇼🇫",
     "flag_url": "https://flagcdn.com/w320/wf.png",
     "population": 11620,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -13.3,
     "longitude": -176.2,
     "safety": {
@@ -28433,6 +28867,8 @@
     "flag_emoji": "🇺🇸",
     "flag_url": "https://flagcdn.com/w320/us.png",
     "population": 340110988,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 38.0,
     "longitude": -97.0,
     "safety": {
@@ -28650,6 +29086,8 @@
     "flag_emoji": "🇰🇪",
     "flag_url": "https://flagcdn.com/w320/ke.png",
     "population": 53330978,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 1.0,
     "longitude": 38.0,
     "safety": {
@@ -28766,6 +29204,8 @@
     "flag_emoji": "🇬🇲",
     "flag_url": "https://flagcdn.com/w320/gm.png",
     "population": 2422712,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.466667,
     "longitude": -16.566667,
     "safety": {
@@ -28833,6 +29273,8 @@
     "flag_emoji": "🇧🇩",
     "flag_url": "https://flagcdn.com/w320/bd.png",
     "population": 169828911,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 24.0,
     "longitude": 90.0,
     "safety": {
@@ -28900,6 +29342,8 @@
     "flag_emoji": "🇳🇴",
     "flag_url": "https://flagcdn.com/w320/no.png",
     "population": 5606944,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 62.0,
     "longitude": 10.0,
     "safety": {
@@ -29016,6 +29460,8 @@
     "flag_emoji": "🇧🇧",
     "flag_url": "https://flagcdn.com/w320/bb.png",
     "population": 267800,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 13.166667,
     "longitude": -59.533333,
     "safety": {
@@ -29083,6 +29529,8 @@
     "flag_emoji": "🇰🇳",
     "flag_url": "https://flagcdn.com/w320/kn.png",
     "population": 51320,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 17.333333,
     "longitude": -62.75,
     "safety": {
@@ -29150,6 +29598,8 @@
     "flag_emoji": "🇰🇮",
     "flag_url": "https://flagcdn.com/w320/ki.png",
     "population": 120740,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 1.416667,
     "longitude": 173.0,
     "safety": {
@@ -29217,6 +29667,8 @@
     "flag_emoji": "🇹🇱",
     "flag_url": "https://flagcdn.com/w320/tl.png",
     "population": 1391221,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -8.833333,
     "longitude": 125.916667,
     "safety": {
@@ -29284,6 +29736,8 @@
     "flag_emoji": "🇸🇦",
     "flag_url": "https://flagcdn.com/w320/sa.png",
     "population": 35300280,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 25.0,
     "longitude": 45.0,
     "safety": {
@@ -29351,6 +29805,8 @@
     "flag_emoji": "🇨🇨",
     "flag_url": "https://flagcdn.com/w320/cc.png",
     "population": 593,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -12.1642,
     "longitude": 96.871,
     "safety": {
@@ -29418,6 +29874,8 @@
     "flag_emoji": "🇸🇲",
     "flag_url": "https://flagcdn.com/w320/sm.png",
     "population": 34132,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 43.766667,
     "longitude": 12.416667,
     "safety": {
@@ -29558,6 +30016,8 @@
     "flag_emoji": "🇺🇬",
     "flag_url": "https://flagcdn.com/w320/ug.png",
     "population": 45905417,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 1.0,
     "longitude": 32.0,
     "safety": {
@@ -29625,6 +30085,8 @@
     "flag_emoji": "🇵🇲",
     "flag_url": "https://flagcdn.com/w320/pm.png",
     "population": 5819,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 46.833333,
     "longitude": -56.333333,
     "safety": {
@@ -29692,6 +30154,8 @@
     "flag_emoji": "🇵🇹",
     "flag_url": "https://flagcdn.com/w320/pt.png",
     "population": 10749635,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 39.5,
     "longitude": -8.0,
     "safety": {
@@ -30401,6 +30865,8 @@
     "flag_emoji": "🇸🇭",
     "flag_url": "https://flagcdn.com/w320/sh.png",
     "population": 5651,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -15.95,
     "longitude": -5.72,
     "safety": {
@@ -30468,6 +30934,8 @@
     "flag_emoji": "🇲🇼",
     "flag_url": "https://flagcdn.com/w320/mw.png",
     "population": 20734262,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -13.5,
     "longitude": 34.0,
     "safety": {
@@ -30535,6 +31003,8 @@
     "flag_emoji": "🇹🇰",
     "flag_url": "https://flagcdn.com/w320/tk.png",
     "population": 2608,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -9.0,
     "longitude": -172.0,
     "safety": {
@@ -30602,6 +31072,8 @@
     "flag_emoji": "🇭🇳",
     "flag_url": "https://flagcdn.com/w320/hn.png",
     "population": 9892632,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": -86.5,
     "safety": {
@@ -30669,6 +31141,8 @@
     "flag_emoji": "🇺🇾",
     "flag_url": "https://flagcdn.com/w320/uy.png",
     "population": 3499451,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -33.0,
     "longitude": -56.0,
     "safety": {
@@ -30736,6 +31210,8 @@
     "flag_emoji": "🇨🇻",
     "flag_url": "https://flagcdn.com/w320/cv.png",
     "population": 491233,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 16.5388,
     "longitude": -23.0418,
     "safety": {
@@ -30803,6 +31279,8 @@
     "flag_emoji": "🇦🇶",
     "flag_url": "https://flagcdn.com/w320/aq.png",
     "population": 1300,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -90.0,
     "longitude": null,
     "safety": {
@@ -30870,6 +31348,8 @@
     "flag_emoji": "🇦🇺",
     "flag_url": "https://flagcdn.com/w320/au.png",
     "population": 27536874,
+    "timezone": null,
+    "national_dish": null,
     "latitude": -27.0,
     "longitude": 133.0,
     "safety": {
@@ -30986,6 +31466,8 @@
     "flag_emoji": "🇮🇷",
     "flag_url": "https://flagcdn.com/w320/ir.png",
     "population": 85961000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 32.0,
     "longitude": 53.0,
     "safety": {
@@ -31070,6 +31552,8 @@
     "flag_emoji": "🇸🇩",
     "flag_url": "https://flagcdn.com/w320/sd.png",
     "population": 51662000,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.0,
     "longitude": 30.0,
     "safety": {
@@ -31137,6 +31621,8 @@
     "flag_emoji": "🇬🇹",
     "flag_url": "https://flagcdn.com/w320/gt.png",
     "population": 18079810,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 15.5,
     "longitude": -90.25,
     "safety": {
@@ -31204,6 +31690,8 @@
     "flag_emoji": "🇱🇮",
     "flag_url": "https://flagcdn.com/w320/li.png",
     "population": 40900,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 47.266667,
     "longitude": 9.533333,
     "safety": {
@@ -31324,6 +31812,8 @@
     "flag_emoji": "🇹🇹",
     "flag_url": "https://flagcdn.com/w320/tt.png",
     "population": 1367764,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 10.6918,
     "longitude": -61.2225,
     "safety": {
@@ -31391,6 +31881,8 @@
     "flag_emoji": "🇨🇺",
     "flag_url": "https://flagcdn.com/w320/cu.png",
     "population": 9748007,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 21.5,
     "longitude": -80.0,
     "safety": {
@@ -31467,6 +31959,8 @@
     "flag_emoji": "🇫🇷",
     "flag_url": "https://flagcdn.com/w320/fr.png",
     "population": 66351959,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 46.0,
     "longitude": 2.0,
     "safety": {
@@ -31705,6 +32199,8 @@
     "flag_emoji": "🇸🇷",
     "flag_url": "https://flagcdn.com/w320/sr.png",
     "population": 616500,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 4.0,
     "longitude": -56.0,
     "safety": {
@@ -31772,6 +32268,8 @@
     "flag_emoji": "🇱🇷",
     "flag_url": "https://flagcdn.com/w320/lr.png",
     "population": 5248621,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 6.5,
     "longitude": -9.5,
     "safety": {
@@ -31839,6 +32337,8 @@
     "flag_emoji": "🇰🇼",
     "flag_url": "https://flagcdn.com/w320/kw.png",
     "population": 4881254,
+    "timezone": null,
+    "national_dish": null,
     "latitude": 29.5,
     "longitude": 45.75,
     "safety": {

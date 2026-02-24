@@ -45,6 +45,8 @@ def export_all():
             "flag_emoji": c.flag_emoji,
             "flag_url": c.flag_url,
             "population": c.population,
+            "timezone": c.timezone,
+            "national_dish": c.national_dish,
             "latitude": float(c.latitude) if c.latitude else None,
             "longitude": float(c.longitude) if c.longitude else None,
             

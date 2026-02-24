@@ -21,6 +21,8 @@ class Country(Base):
     population = Column(Integer)
     latitude = Column(DECIMAL(10, 6))
     longitude = Column(DECIMAL(10, 6))
+    timezone = Column(String(255))
+    national_dish = Column(String(255))
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 

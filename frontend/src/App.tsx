@@ -17,6 +17,8 @@ interface CountryData {
   flag_url: string;
   latitude: number | null;
   longitude: number | null;
+  timezone: string | null;
+  national_dish: string | null;
   safety: {
     risk_level: string;
     risk_text: string;
@@ -581,6 +583,20 @@ function App() {
                     <label>Stolica</label>
                     <span>{selectedCountry.capital || 'Brak danych'}</span>
                   </div>
+                  
+                  {selectedCountry.timezone && (
+                    <div className="info-block">
+                      <label>Strefa czasowa</label>
+                      <span>{selectedCountry.timezone}</span>
+                    </div>
+                  )}
+
+                  {selectedCountry.national_dish && (
+                    <div className="info-block">
+                      <label>Potrawa narodowa</label>
+                      <span>🍽️ {selectedCountry.national_dish}</span>
+                    </div>
+                  )}
                   
                   <div id="docs" className="info-block full-width docs-section scroll-mt">
                     <label>Wymagane dokumenty (dla Polaków)</label>

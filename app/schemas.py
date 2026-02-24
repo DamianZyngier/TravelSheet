@@ -171,6 +171,8 @@ class CountryDetail(BaseModel):
     flag_emoji: Optional[str]
     flag_url: Optional[str]
     population: Optional[int]
+    timezone: Optional[str] = None
+    national_dish: Optional[str] = None
 
     # Grouped Info
     languages: List[LanguageSchema] = []
