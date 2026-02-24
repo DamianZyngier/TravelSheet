@@ -65,6 +65,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -261,6 +262,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -423,6 +425,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -577,6 +580,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -739,6 +743,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -938,6 +943,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -1202,6 +1208,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -1426,6 +1433,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -1698,6 +1706,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -1856,6 +1865,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2014,6 +2024,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2168,6 +2179,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -2396,6 +2408,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2550,6 +2563,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2757,6 +2771,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2965,6 +2980,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -3217,6 +3233,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -3449,6 +3466,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -3652,6 +3670,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -3851,6 +3870,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4159,6 +4179,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4321,6 +4342,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4483,6 +4505,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4645,6 +4668,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4836,6 +4860,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4998,6 +5023,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -5218,6 +5244,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5376,6 +5403,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5530,6 +5558,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5729,6 +5758,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -6001,6 +6031,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -6326,6 +6357,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -6533,6 +6565,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -6736,6 +6769,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -6939,6 +6973,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7097,6 +7132,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7409,6 +7445,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7608,6 +7645,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7762,6 +7800,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7916,6 +7955,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8074,6 +8114,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8269,6 +8310,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8423,6 +8465,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8589,6 +8632,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8801,6 +8845,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8963,6 +9008,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -9222,6 +9268,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -9598,6 +9645,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -9882,6 +9930,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10127,6 +10176,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10326,6 +10376,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10480,6 +10531,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -10651,6 +10703,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10809,6 +10862,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -11127,6 +11181,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -11346,6 +11401,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -11525,6 +11581,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -11736,6 +11793,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -11890,6 +11948,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -12122,6 +12181,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12276,6 +12336,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12475,6 +12536,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12747,6 +12809,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12942,6 +13005,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13100,6 +13164,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13287,6 +13352,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13441,6 +13507,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13595,6 +13662,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13749,6 +13817,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13940,6 +14009,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14103,6 +14173,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14257,6 +14328,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -14513,6 +14585,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14667,6 +14740,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14821,6 +14895,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15020,6 +15095,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -15264,6 +15340,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15467,6 +15544,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15557,6 +15635,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15642,6 +15721,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15748,6 +15828,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15829,6 +15910,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -16004,6 +16086,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16085,6 +16168,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16166,6 +16250,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16296,6 +16381,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16385,6 +16471,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16466,6 +16553,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16588,6 +16676,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16669,6 +16758,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16840,6 +16930,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -17023,6 +17114,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -17170,6 +17262,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17251,6 +17344,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17458,6 +17552,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17543,6 +17638,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17624,6 +17720,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17766,6 +17863,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17847,6 +17945,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -17997,6 +18096,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18078,6 +18178,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": false,
       "id_card_allowed": false,
@@ -18217,6 +18318,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18343,6 +18445,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18457,6 +18560,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18546,6 +18650,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18627,6 +18732,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18712,6 +18818,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18834,6 +18941,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18915,6 +19023,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18996,6 +19105,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19138,6 +19248,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19227,6 +19338,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -19373,6 +19485,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19499,6 +19612,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19765,6 +19879,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19854,6 +19969,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19935,6 +20051,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -20102,6 +20219,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20252,6 +20370,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20333,6 +20452,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -20516,6 +20636,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20605,6 +20726,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20727,6 +20849,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20821,6 +20944,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -20976,6 +21100,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21057,6 +21182,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21208,6 +21334,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21379,6 +21506,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21509,6 +21637,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21684,6 +21813,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21810,6 +21940,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21899,6 +22030,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21993,6 +22125,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22127,6 +22260,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22212,6 +22346,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22301,6 +22436,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22382,6 +22518,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22545,6 +22682,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22667,6 +22805,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22748,6 +22887,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22846,6 +22986,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -23057,6 +23198,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23138,6 +23280,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23240,6 +23383,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23321,6 +23465,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23484,6 +23629,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23565,6 +23711,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23650,6 +23797,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23824,6 +23972,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23905,6 +24054,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -24060,6 +24210,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24194,6 +24345,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24326,6 +24478,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -24411,6 +24564,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24500,6 +24654,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24585,6 +24740,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24707,6 +24863,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24792,6 +24949,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24922,6 +25080,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25097,6 +25256,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25283,6 +25443,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25446,6 +25607,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25601,6 +25763,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25686,6 +25849,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25869,6 +26033,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25950,6 +26115,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26035,6 +26201,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26169,6 +26336,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26262,6 +26430,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -26509,6 +26678,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26630,6 +26800,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26760,6 +26931,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26858,6 +27030,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27008,6 +27181,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27202,6 +27376,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27283,6 +27458,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27364,6 +27540,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27445,6 +27622,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27559,6 +27737,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27709,6 +27888,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27831,6 +28011,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -27986,6 +28167,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28137,6 +28319,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28271,6 +28454,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28414,6 +28598,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28499,6 +28684,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28649,6 +28835,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28743,6 +28930,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28950,6 +29138,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29031,6 +29220,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29112,6 +29302,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29267,6 +29458,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29365,6 +29557,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29450,6 +29643,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29531,6 +29725,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29612,6 +29807,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -29751,6 +29947,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29885,6 +30082,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29966,6 +30164,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30129,6 +30328,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30214,6 +30414,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30409,6 +30610,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30543,6 +30745,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30632,6 +30835,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30766,6 +30970,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30847,6 +31052,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30932,6 +31138,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -31087,6 +31294,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31209,6 +31417,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31294,6 +31503,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31375,6 +31585,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31464,6 +31675,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31603,6 +31815,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31688,6 +31901,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31769,6 +31983,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -31988,6 +32203,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32069,6 +32285,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32150,6 +32367,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32385,6 +32603,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32515,6 +32734,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32596,6 +32816,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32685,6 +32906,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -32815,6 +33037,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32896,6 +33119,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32981,6 +33205,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33066,6 +33291,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33147,6 +33373,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33228,6 +33455,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33309,6 +33537,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -33467,6 +33696,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33548,6 +33778,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33629,6 +33860,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -34352,6 +34584,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34437,6 +34670,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34526,6 +34760,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34607,6 +34842,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34688,6 +34924,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34769,6 +35006,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34845,6 +35083,7 @@
     },
     "entry": {
       "visa_required": null,
+      "visa_status": "",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34926,6 +35165,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35056,6 +35296,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35158,6 +35399,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35239,6 +35481,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35320,6 +35563,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -35454,6 +35698,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35535,6 +35780,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35625,6 +35871,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -35877,6 +36124,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35958,6 +36206,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -36039,6 +36288,7 @@
     },
     "entry": {
       "visa_required": false,
+      "visa_status": null,
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,

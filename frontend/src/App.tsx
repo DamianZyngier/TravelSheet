@@ -72,6 +72,7 @@ interface CountryData {
   }[];
   entry?: {
     visa_required: boolean | null;
+    visa_status: string;
     passport_required: boolean | null;
     temp_passport_allowed: boolean | null;
     id_card_allowed: boolean | null;
@@ -644,10 +645,15 @@ function App() {
                         <strong>Dowód osobisty</strong>
                         <span>{selectedCountry.entry?.id_card_allowed ? '✅ TAK' : '❌ NIE'}</span>
                       </div>
-                      <div className={`doc-item ${selectedCountry.entry?.visa_required ? 'doc-no' : 'doc-yes'}`}>
-                        <strong>Wiza turystyczna</strong>
-                        <span>{selectedCountry.entry?.visa_required ? '🛂 WYMAGANA' : '🆓 NIEPOTRZEBNA'}</span>
-                      </div>
+                                          <div className={`doc-item ${selectedCountry.entry?.visa_required ? 'doc-no' : 'doc-yes'}`}>
+                                            <strong>Wiza turystyczna</strong>
+                                            <span>
+                                              {selectedCountry.entry?.visa_status === 'Wiza niepotrzebna' ? '✅ NIEPOTRZEBNA' : 
+                                               selectedCountry.entry?.visa_status ? `🛂 ${selectedCountry.entry.visa_status.toUpperCase()}` : 
+                                               selectedCountry.entry?.visa_required ? '🛂 WYMAGANA' : '🆓 NIEPOTRZEBNA'}
+                                            </span>
+                                          </div>
+                      
                     </div>
                   </div>
 

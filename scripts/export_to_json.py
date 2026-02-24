@@ -100,6 +100,7 @@ def export_all():
 
             "entry": {
                 "visa_required": c.entry_req.visa_required if c.entry_req else None,
+                "visa_status": c.entry_req.visa_status if c.entry_req else "",
                 "passport_required": c.entry_req.passport_required if c.entry_req else True,
                 "temp_passport_allowed": c.entry_req.temp_passport_allowed if c.entry_req else True,
                 "id_card_allowed": c.entry_req.id_card_allowed if c.entry_req else False,

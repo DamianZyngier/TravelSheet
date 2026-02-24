@@ -127,6 +127,7 @@ class EntryRequirement(Base):
     temp_passport_allowed = Column(Boolean)
     id_card_allowed = Column(Boolean)
     visa_required = Column(Boolean)
+    visa_status = Column(String(255)) # Detailed status: "Niepotrzebna", "e-Visa", etc.
     visa_on_arrival = Column(Boolean)
     visa_free_days = Column(Integer)
     visa_notes = Column(Text)
