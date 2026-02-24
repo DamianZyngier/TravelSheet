@@ -53,6 +53,7 @@ interface CountryData {
     vaccinations_suggested: string;
     health_info: string;
     roaming_info: string;
+    license_type: string;
   };
   costs?: {
     index: number | null;
@@ -631,6 +632,14 @@ function App() {
                       <span>🍽️ {selectedCountry.national_dish}</span>
                     </div>
                   )}
+
+                  <div className="info-block">
+                    <label>Ruch drogowy</label>
+                    <div className="driving-info-box">
+                      <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
+                      <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
+                    </div>
+                  </div>
                   
                   <div id="docs" className="info-block full-width docs-section scroll-mt">
                     <label>Wymagane dokumenty (dla Polaków)</label>

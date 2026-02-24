@@ -203,6 +203,7 @@ class PracticalInfo(Base):
     vaccinations_suggested = Column(Text)
     health_info = Column(Text)
     roaming_info = Column(Text) # Info about Roam Like at Home
+    license_type = Column(String(255)) # Info about driving license requirements
 
     @property
     def emergency(self):

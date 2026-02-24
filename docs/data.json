@@ -53,7 +53,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -250,7 +251,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -413,7 +415,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -568,7 +571,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -731,7 +735,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -931,7 +936,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -1196,7 +1202,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 42.0,
@@ -1421,7 +1428,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 30.0,
@@ -1694,7 +1702,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -1853,7 +1862,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -2012,7 +2022,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -2167,7 +2178,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 80.0,
@@ -2396,7 +2408,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -2551,7 +2564,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -2759,7 +2773,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 42.0,
@@ -2968,7 +2983,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 70.0,
@@ -3221,7 +3237,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -3454,7 +3471,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": null,
@@ -3658,7 +3676,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -3858,7 +3877,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -4167,7 +4187,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -4330,7 +4351,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -4493,7 +4515,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -4656,7 +4679,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -4848,7 +4872,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -5011,7 +5036,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 82.0,
@@ -5232,7 +5258,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -5391,7 +5418,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -5546,7 +5574,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 48.0,
@@ -5746,7 +5775,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 40.0,
@@ -6019,7 +6049,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 55.0,
@@ -6345,7 +6376,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 38.0,
@@ -6553,7 +6585,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 95.0,
@@ -6757,7 +6790,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -6961,7 +6995,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -7120,7 +7155,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 70.0,
@@ -7433,7 +7469,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -7633,7 +7670,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 42.0,
@@ -7788,7 +7826,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 32.0,
@@ -7943,7 +7982,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -8102,7 +8142,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 55.0,
@@ -8298,7 +8339,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -8453,7 +8495,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 50.0,
@@ -8620,7 +8663,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 82.0,
@@ -8833,7 +8877,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -8996,7 +9041,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 72.0,
@@ -9256,7 +9302,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 58.0,
@@ -9633,7 +9680,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -9918,7 +9966,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 42.0,
@@ -10164,7 +10213,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -10364,7 +10414,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -10519,7 +10570,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 30.0,
@@ -10691,7 +10743,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -10850,7 +10903,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 65.0,
@@ -11169,7 +11223,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -11389,7 +11444,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 28.0,
@@ -11569,7 +11625,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 65.0,
@@ -11781,7 +11838,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -11936,7 +11994,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 85.0,
@@ -12169,7 +12228,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -12324,7 +12384,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 85.0,
@@ -12524,7 +12585,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 38.0,
@@ -12797,7 +12859,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 42.0,
@@ -12993,7 +13056,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -13152,7 +13216,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 75.0,
@@ -13340,7 +13405,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -13495,7 +13561,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -13650,7 +13717,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -13805,7 +13873,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -13997,7 +14066,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 30.0,
@@ -14161,7 +14231,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -14316,7 +14387,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 48.0,
@@ -14573,7 +14645,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -14728,7 +14801,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 65.0,
@@ -14883,7 +14957,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 42.0,
@@ -15083,7 +15158,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 42.0,
@@ -15328,7 +15404,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -15532,7 +15609,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -15623,7 +15701,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 42.0,
@@ -15709,7 +15788,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 30.0,
@@ -15816,7 +15896,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -15898,7 +15979,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 72.0,
@@ -16074,7 +16156,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -16156,7 +16239,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -16238,7 +16322,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 38.0,
@@ -16369,7 +16454,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -16459,7 +16545,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -16541,7 +16628,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 40.0,
@@ -16664,7 +16752,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -16746,7 +16835,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 32.0,
@@ -16918,7 +17008,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 65.0,
@@ -17102,7 +17193,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 45.0,
@@ -17250,7 +17342,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 40.0,
@@ -17332,7 +17425,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 48.0,
@@ -17540,7 +17634,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 65.0,
@@ -17626,7 +17721,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -17708,7 +17804,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -17851,7 +17948,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -17933,7 +18031,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 32.0,
@@ -18084,7 +18183,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -18166,7 +18266,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 30.0,
@@ -18306,7 +18407,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 38.0,
@@ -18433,7 +18535,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -18548,7 +18651,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -18638,7 +18742,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -18720,7 +18825,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 60.0,
@@ -18806,7 +18912,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 38.0,
@@ -18929,7 +19036,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -19011,7 +19119,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 50.0,
@@ -19093,7 +19202,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -19236,7 +19346,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -19326,7 +19437,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -19473,7 +19585,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -19600,7 +19713,8 @@
       "vaccinations_required": "",
       "vaccinations_suggested": "",
       "health_info": "Zdrowie\n\nOpieka medyczna w Japonii jest bardzo kosztowna, dlatego polecamy zakup ubezpieczenia zdrowotnego na cały okres pobytu. Warto upewnić się, czy ubezpieczenie na pewno jest honorowane w Japonii.\n\nZ lekarzem można porozumieć się zazwyczaj tylko w j. japońskim, niekiedy w j. angielskim\nSzpitale w Tokio oferujące obsługę w języku angielskim to przykładowo:\n\nJapan Red Cross Medical Center http://www.med.jrc.or.jp/en/tabid/393/Default.aspx \nSt. Luke’s International Hospital w Tokio http://hospital.luke.ac.jp/eng/\nHiroo International Clinic http://www.hiroo-ic.com/  \nTokyo Medical and Surgical Clinic http://www.tmsc.jp/​​​​​​\n\nNa poniższej stronie można wyszukać szpitale oferujące usługi w języku angielskim w całej Japonii:\nEnglish-Speaking Hospitals in Japan - JapanLivingGuide.net - Living Guide in Japan\nW Japonii apteki są prawie zawsze zlokalizowane obok klinik lub wewnątrz szpitali. W ogólnych drogeriach można natomiast nabyć niezbyt mocne leki bez recepty.\nOgólne przepisy wwozu leków na teren Japonii, które znajdują się na stronie japońskiego Ministerstwa Zdrowia,  mówią, że można wwieźć leki na własny użytek na 1 miesiąc bez żadnych zezwoleń.\nWięcej szczegółów na stronie:\nBringing Medication to Japan: What to Know Before You Travel - JapanLivingGuide.net - Living Guide in Japan\nW przypadku leków psychotropowych oraz odurzających należy posiadać uprzednią zgodę na wwóz na terytorium Japonii.\n\nWięcej informacji na stronie japońskiego Ministerstwa Zdrowia:\nhttps://www.mhlw.go.jp/english/policy/health-medical/pharmaceuticals/01.html",
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 65.0,
@@ -19867,7 +19981,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 45.0,
@@ -19957,7 +20072,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -20039,7 +20155,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 48.0,
@@ -20207,7 +20324,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -20358,7 +20476,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 30.0,
@@ -20440,7 +20559,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 52.0,
@@ -20624,7 +20744,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -20714,7 +20835,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -20837,7 +20959,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -20932,7 +21055,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 60.0,
@@ -21088,7 +21212,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -21170,7 +21295,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 40.0,
@@ -21322,7 +21448,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 48.0,
@@ -21494,7 +21621,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 45.0,
@@ -21625,7 +21753,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 55.0,
@@ -21801,7 +21930,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -21928,7 +22058,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -22018,7 +22149,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -22113,7 +22245,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 38.0,
@@ -22248,7 +22381,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -22334,7 +22468,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -22424,7 +22559,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -22506,7 +22642,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 32.0,
@@ -22670,7 +22807,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 28.0,
@@ -22793,7 +22931,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -22875,7 +23014,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -22974,7 +23114,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 68.0,
@@ -23186,7 +23327,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -23268,7 +23410,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 28.0,
@@ -23371,7 +23514,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 38.0,
@@ -23453,7 +23597,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 25.0,
@@ -23617,7 +23762,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 75.0,
@@ -23699,7 +23845,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 65.0,
@@ -23785,7 +23932,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -23960,7 +24108,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 25.0,
@@ -24042,7 +24191,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -24198,7 +24348,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 38.0,
@@ -24333,7 +24484,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 60.0,
@@ -24457,16 +24609,17 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": "",
+      "driving_side": "right",
+      "card_acceptance": null,
       "emergency": null,
-      "vaccinations_required": "",
-      "vaccinations_suggested": "",
-      "health_info": "",
-      "roaming_info": ""
+      "vaccinations_required": null,
+      "vaccinations_suggested": null,
+      "health_info": null,
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -24552,7 +24705,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 25.0,
@@ -24642,7 +24796,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -24728,7 +24883,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 30.0,
@@ -24851,7 +25007,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -24937,7 +25094,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 32.0,
@@ -25068,7 +25226,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 38.0,
@@ -25244,7 +25403,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -25431,7 +25591,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 72.0,
@@ -25595,7 +25756,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": null,
@@ -25751,7 +25913,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 30.0,
@@ -25837,7 +26000,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 72.0,
@@ -26021,7 +26185,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -26103,7 +26268,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -26189,7 +26355,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -26324,7 +26491,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -26418,7 +26586,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 98.0,
@@ -26666,7 +26835,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -26788,7 +26958,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 42.0,
@@ -26919,7 +27090,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 50.0,
@@ -27018,7 +27190,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 48.0,
@@ -27169,7 +27342,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -27364,7 +27538,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 28.0,
@@ -27446,7 +27621,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 38.0,
@@ -27528,7 +27704,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -27610,7 +27787,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 42.0,
@@ -27725,7 +27903,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -27876,7 +28055,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -27999,7 +28179,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 48.0,
@@ -28155,7 +28336,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 32.0,
@@ -28307,7 +28489,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 32.0,
@@ -28442,7 +28625,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 32.0,
@@ -28586,7 +28770,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -28672,7 +28857,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -28823,7 +29009,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -28918,7 +29105,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -29126,7 +29314,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -29208,7 +29397,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -29290,7 +29480,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 32.0,
@@ -29446,7 +29637,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -29545,7 +29737,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -29631,7 +29824,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 65.0,
@@ -29713,7 +29907,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 55.0,
@@ -29795,7 +29990,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 52.0,
@@ -29935,7 +30131,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -30070,7 +30267,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 50.0,
@@ -30152,7 +30350,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -30316,7 +30515,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -30402,7 +30602,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -30598,7 +30799,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 38.0,
@@ -30733,7 +30935,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -30823,7 +31026,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 72.0,
@@ -30958,7 +31162,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 35.0,
@@ -31040,7 +31245,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -31126,7 +31332,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 75.0,
@@ -31282,7 +31489,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 22.0,
@@ -31405,7 +31613,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -31491,7 +31700,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -31573,7 +31783,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 25.0,
@@ -31663,7 +31874,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 25.0,
@@ -31803,7 +32015,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 28.0,
@@ -31889,7 +32102,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 45.0,
@@ -31971,7 +32185,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 68.0,
@@ -32191,7 +32406,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -32273,7 +32489,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -32355,7 +32572,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 75.0,
@@ -32591,7 +32809,8 @@
       "vaccinations_required": "",
       "vaccinations_suggested": "",
       "health_info": "Zdrowie\n\nOdnotowano przypadki zachorowań na mpox (dawniej małpia ospa) w Kenii i Ugandzie\nŚwiatowa Organizacja Zdrowia (WHO) przekazała informacje o przypadkach zachorowań na mpox w niektórych częściach Afryki m.in. w Kenii i Ugandzie.\nMpox to choroba odzwierzęca wywołana przez wirus. Jest przenoszona na ludzi poprzez kontakt fizyczny z osobą zakażoną, zakażonymi zwierzętami lub skażonymi materiałami.\nObjawy choroby:\n\nwysypka\ngorączka\nból gardła\nból głowy\nbóle mięśni\nból pleców\nniski poziom energii\nobrzęk węzłów chłonnych\n\nAmbasada RP w Nairobi zaleca osobom podróżującym do Kenii i Ugandy przestrzeganie zasad higieny, unikanie kontaktu z osobami chorymi na mpox oraz kontakt z lekarzem w przypadku zanotowania objawów mpox. Nie wprowadzono kontroli medycznej na lotniskach w Kenii i Ugandzie dla osób podróżujących z Europy.\nWięcej informacji:\nhttps://www.afro.who.int/news/african-region-faces-unprecedent-surge-mpox-cases\nhttps://www.health.go.ke/ps-mary-muthoni-reviews-airport-preparedness-response-mpox-emergency\n\nZaleca się konsultację lekarską nie później niż 4-6 tygodni przed planowaną podróżą w celu sprawdzenia konieczności poddania się obowiązkowym i zalecanym szczepieniom. Od osób przybywających z Europy nie jest wymagane świadectwo szczepienia przeciw żółtej febrze. Może ono być potrzebne, jeśli turysta ma zamiar wjechać do Kenii z innych krajów afrykańskich. Na wybrzeżu kenijskim oraz na zachodzie kraju występuje całoroczne zagrożenie malarią. Malaria nie występuje na terenach wyżynnych, np. w Nairobi, stosowanie profilaktyki antymalarycznej na tych terenach nie jest potrzebne. W przypadku terenów nizinnych należy rozważyć korzyści wynikające ze stosowania leków antymalarycznych w celach profilaktycznych i efekty uboczne. Zdarzają się przypadki zachorowań na cholerę oraz dengę.\nW większych miastach usługi medyczne oraz lekarstwa są ogólnie dostępne. Są to usługi świadczone przez podmioty prywatne, w pełni odpłatne. Pobyt w szpitalu i leczenie operacyjne są bardzo kosztowne dlatego też przed przyjazdem do Kenii trzeba wykupić ubezpieczenie zdrowotne, najlepiej pokrywające koszt transportu lotniczego na terenie Kenii. Dodatkowo warto posiadać zabezpieczone środki na pokrycie niezbędnych usług medycznych.\nNa prowincji standard świadczonych usług medycznych jest niski. Ze względu na zagrożenie epidemiologiczne zaleca się picie wody butelkowanej. W całym kraju występuje zagrożenie HIV/AIDS.\nW Kenii opieka psychiatryczna jest bardzo słabo rozwinięta, praktycznie niedostępna poza Nairobi. Zaleca się aby osoby ze zdiagnozowanymi schorzeniami nie podróżowały same do Kenii.\nW krajach sąsiadujących z Kenią: Ugandzie i w Tanzanii odnotowano przypadki eboli. Przed podróżą zaleca się sprawdzenie aktualnych ostrzeżeń na stronie WHO: https://www.afro.who.int/countries",
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -32722,7 +32941,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 28.0,
@@ -32804,7 +33024,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 25.0,
@@ -32894,7 +33115,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 85.0,
@@ -33025,7 +33247,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 78.0,
@@ -33107,7 +33330,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 75.0,
@@ -33193,7 +33417,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 55.0,
@@ -33279,7 +33504,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -33361,7 +33587,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 52.0,
@@ -33443,7 +33670,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -33525,7 +33753,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 65.0,
@@ -33684,7 +33913,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 32.0,
@@ -33766,7 +33996,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -33848,7 +34079,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 52.0,
@@ -34572,7 +34804,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -34658,7 +34891,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 25.0,
@@ -34748,7 +34982,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -34830,7 +35065,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 40.0,
@@ -34912,7 +35148,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 55.0,
@@ -34994,7 +35231,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 42.0,
@@ -35071,7 +35309,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": null,
@@ -35153,7 +35392,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 75.0,
@@ -35284,7 +35524,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 35.0,
@@ -35387,7 +35628,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 35.0,
@@ -35469,7 +35711,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 42.0,
@@ -35551,7 +35794,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 95.0,
@@ -35686,7 +35930,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (Konwencja Genewska 1949)"
     },
     "costs": {
       "index": 55.0,
@@ -35768,7 +36013,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 40.0,
@@ -35859,7 +36105,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": "Roam Like at Home (UE/EOG)"
+      "roaming_info": "Roam Like at Home (UE/EOG)",
+      "license_type": "Polskie (UE/EOG)"
     },
     "costs": {
       "index": 70.0,
@@ -36112,7 +36359,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Międzynarodowe (IDP)"
     },
     "costs": {
       "index": 45.0,
@@ -36194,7 +36442,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 42.0,
@@ -36276,7 +36525,8 @@
       "vaccinations_required": null,
       "vaccinations_suggested": null,
       "health_info": null,
-      "roaming_info": null
+      "roaming_info": null,
+      "license_type": "Polskie (Konwencja Wiedeńska)"
     },
     "costs": {
       "index": 52.0,

@@ -136,8 +136,27 @@ RLAH_COUNTRIES = [
     'IS', 'LI', 'NO' # EEA
 ]
 
+# Signatories of the Vienna Convention on Road Traffic (1968)
+# Polish license should be sufficient, but IDP (1968) sometimes recommended
+VIENNA_CONVENTION = [
+    'AL', 'AD', 'AM', 'AZ', 'BS', 'BH', 'BY', 'BA', 'BR', 'CF', 'CI', 'HR', 'CU', 'CZ', 'CD', 'DK', 
+    'EC', 'EE', 'FI', 'FR', 'GE', 'DE', 'GR', 'HU', 'IR', 'IL', 'IT', 'KZ', 'KE', 'KG', 'KW', 'LV', 
+    'LR', 'LT', 'LU', 'MK', 'MA', 'MD', 'MC', 'MN', 'ME', 'NL', 'NE', 'NO', 'PK', 'PH', 'PL', 'PT', 
+    'RO', 'RU', 'SM', 'SN', 'RS', 'SC', 'SK', 'SI', 'ZA', 'SE', 'CH', 'TJ', 'TN', 'TR', 'TM', 'UA', 
+    'AE', 'UY', 'UZ', 'VN', 'ZW'
+]
+
+# Signatories of the Geneva Convention on Road Traffic (1949)
+# Requires International Driving Permit (1949 format)
+GENEVA_CONVENTION = [
+    'DZ', 'AR', 'AU', 'BD', 'BB', 'BJ', 'BW', 'BF', 'KH', 'CA', 'CL', 'CY', 'DO', 'EG', 'FJ', 'GH', 
+    'GT', 'HT', 'HN', 'IS', 'IN', 'IE', 'JM', 'JP', 'JO', 'LA', 'LB', 'LS', 'LY', 'MG', 'MW', 'MY', 
+    'ML', 'MT', 'MU', 'MX', 'NP', 'NZ', 'NI', 'NG', 'PY', 'PE', 'RW', 'KN', 'LC', 'VC', 'SG', 'SL', 
+    'LK', 'SY', 'TH', 'TG', 'TT', 'UG', 'GB', 'US', 'VA', 'VE', 'ZM'
+]
+
 def sync_static_data(db: Session):
-    """Update plugs, driving side and roaming for all countries"""
+    """Update plugs, driving side, roaming and license info for all countries"""
     synced = 0
     countries = db.query(models.Country).all()
     
@@ -146,7 +165,16 @@ def sync_static_data(db: Session):
         tech = TECH_DATA.get(iso2)
         roaming = "Roam Like at Home (UE/EOG)" if iso2 in RLAH_COUNTRIES else None
         
-        if not tech and not roaming:
+        # Determine license type
+        license_info = "Międzynarodowe (IDP)" # Default for unknown
+        if iso2 in RLAH_COUNTRIES:
+            license_info = "Polskie (UE/EOG)"
+        elif iso2 in VIENNA_CONVENTION:
+            license_info = "Polskie (Konwencja Wiedeńska)"
+        elif iso2 in GENEVA_CONVENTION:
+            license_info = "Międzynarodowe (Konwencja Genewska 1949)"
+        
+        if not tech and not roaming and not license_info:
             continue
             
         practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
@@ -155,12 +183,14 @@ def sync_static_data(db: Session):
                 practical.plug_types = tech['plugs']
                 practical.driving_side = tech['side']
             practical.roaming_info = roaming
+            practical.license_type = license_info
         else:
             practical = models.PracticalInfo(
                 country_id=country.id,
                 plug_types=tech['plugs'] if tech else None,
                 driving_side=tech['side'] if tech else 'right',
-                roaming_info=roaming
+                roaming_info=roaming,
+                license_type=license_info
             )
             db.add(practical)
         synced += 1

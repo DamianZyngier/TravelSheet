@@ -128,6 +128,7 @@ class PracticalSchema(BaseModel):
     vaccinations_suggested: Optional[str] = None
     health_info: Optional[str] = None
     roaming_info: Optional[str] = None
+    license_type: Optional[str] = None
 
     @field_validator("emergency", mode="before")
     @classmethod

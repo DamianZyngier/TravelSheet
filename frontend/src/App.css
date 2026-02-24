@@ -1463,3 +1463,17 @@
   color: #2b6cb0;
 }
 
+
+/* Driving Info Styles */
+.driving-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.license-info {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2b6cb0;
+}
+
