@@ -44,6 +44,8 @@ interface CountryData {
     index: number | null;
     restaurants: number | null;
     groceries: number | null;
+    transport: number | null;
+    accommodation: number | null;
     ratio_to_pl: number | null;
   };
   embassies?: {
@@ -622,25 +624,49 @@ function App() {
                              selectedCountry.costs.ratio_to_pl < 1.5 ? 'Drożej niż w PL' : 'Znacznie drożej niż w PL'}
                           </span>
                           <span className="costs-ratio">
-                            Index: <strong>{(selectedCountry.costs.ratio_to_pl * 100).toFixed(0)}%</strong> cen w Polsce
+                            Średnio: <strong>{(selectedCountry.costs.ratio_to_pl * 100).toFixed(0)}%</strong> cen w PL
                           </span>
                         </div>
-                        <div className="costs-grid">
-                          <div className="cost-item">
-                            <span className="cost-icon">🍔</span>
-                            <span className="cost-label">Restauracje</span>
-                            <div className="cost-bar-bg">
-                              <div className="cost-bar-fill" style={{ width: `${Math.min(100, (selectedCountry.costs.restaurants || 0) / 1.2)}%` }}></div>
-                            </div>
+
+                        <div className="costs-visual-chart">
+                          {/* Percent markers */}
+                          <div className="costs-markers">
+                            {[50, 75, 100, 125, 150, 175, 200].map(p => (
+                              <div key={p} className="marker-line-group" style={{ left: `${(p / 200) * 100}%` }}>
+                                <span className="marker-label">{p}%</span>
+                                <div className={`marker-line ${p === 100 ? 'base' : ''}`}></div>
+                              </div>
+                            ))}
                           </div>
-                          <div className="cost-item">
-                            <span className="cost-icon">🛒</span>
-                            <span className="cost-label">Zakupy</span>
-                            <div className="cost-bar-bg">
-                              <div className="cost-bar-fill" style={{ width: `${Math.min(100, (selectedCountry.costs.groceries || 0) / 1.2)}%` }}></div>
-                            </div>
+
+                          <div className="costs-bars-list">
+                            {[
+                              { label: 'Restauracje', icon: '🍔', val: (selectedCountry.costs.restaurants || 0) / 0.42 },
+                              { label: 'Zakupy', icon: '🛒', val: (selectedCountry.costs.groceries || 0) / 0.42 },
+                              { label: 'Transport', icon: '🚌', val: (selectedCountry.costs.transport || 0) / 0.42 },
+                              { label: 'Nocleg', icon: '🏨', val: (selectedCountry.costs.accommodation || 0) / 0.42 },
+                            ].map((item, idx) => (
+                              <div key={idx} className="cost-bar-row">
+                                <div className="cost-bar-label-box">
+                                  <span className="cost-bar-icon">{item.icon}</span>
+                                  <span className="cost-bar-name">{item.label}</span>
+                                </div>
+                                <div className="cost-bar-wrapper">
+                                  <div 
+                                    className="cost-bar-fill-v2" 
+                                    style={{ 
+                                      width: `${Math.min(100, (item.val / 200) * 100)}%`,
+                                      backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : '#f56565'
+                                    }}
+                                  >
+                                    <span className="cost-bar-value">{item.val.toFixed(0)}%</span>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
+                        <p className="costs-disclaimer">* Wartości przybliżone w oparciu o koszty w Polsce (100%)</p>
                       </>
                     ) : 'Brak danych o kosztach'}
                   </div>

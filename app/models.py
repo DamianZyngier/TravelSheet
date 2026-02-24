@@ -259,6 +259,8 @@ class CostOfLiving(Base):
     index_overall = Column(DECIMAL(10, 2))
     index_restaurants = Column(DECIMAL(10, 2))
     index_groceries = Column(DECIMAL(10, 2))
+    index_transport = Column(DECIMAL(10, 2))
+    index_accommodation = Column(DECIMAL(10, 2))
     
     # Comparison to Poland (calculated during sync)
     # 1.0 means same as Poland, 1.2 means 20% more expensive

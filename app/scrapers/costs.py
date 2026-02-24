@@ -53,6 +53,8 @@ def sync_costs(db: Session):
             index_overall=index,
             index_restaurants=index * 0.95,
             index_groceries=index * 1.05,
+            index_transport=index * 0.85,
+            index_accommodation=index * 1.2, # Accommodation usually higher than groceries
             ratio_to_poland=ratio
         )
         db.add(cost_entry)

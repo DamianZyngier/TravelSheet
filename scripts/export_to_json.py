@@ -74,6 +74,8 @@ def export_all():
                 "index": float(c.costs.index_overall) if c.costs else None,
                 "restaurants": float(c.costs.index_restaurants) if c.costs else None,
                 "groceries": float(c.costs.index_groceries) if c.costs else None,
+                "transport": float(c.costs.index_transport) if c.costs else None,
+                "accommodation": float(c.costs.index_accommodation) if c.costs else None,
                 "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs else None
             },
 

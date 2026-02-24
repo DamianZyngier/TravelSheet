@@ -716,6 +716,108 @@
   border-radius: 4px;
 }
 
+.costs-visual-chart {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.costs-markers {
+  position: absolute;
+  top: 0;
+  left: 120px; /* Offset for labels */
+  right: 0;
+  height: 100%;
+  pointer-events: none;
+}
+
+.marker-line-group {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #a0aec0;
+  margin-bottom: 4px;
+}
+
+.marker-line {
+  width: 1px;
+  height: calc(100% - 15px);
+  background-color: #e2e8f0;
+}
+
+.marker-line.base {
+  background-color: #cbd5e0;
+  width: 2px;
+}
+
+.costs-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cost-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cost-bar-label-box {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cost-bar-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.cost-bar-wrapper {
+  flex: 1;
+  height: 24px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+  overflow: hidden;
+}
+
+.cost-bar-fill-v2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.5s ease-out;
+}
+
+.cost-bar-value {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.costs-disclaimer {
+  margin-top: 1rem;
+  font-size: 0.65rem;
+  color: #a0aec0;
+  font-style: italic;
+  text-align: center;
+}
+
 .emergency-112-badge {
   background-color: #2b6cb0;
   color: white;
