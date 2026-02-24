@@ -150,7 +150,6 @@ function App() {
         .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
 
       if (intersecting.length > 0) {
-        // Pick the candidate that is prominently in the top detection zone
         const bestCandidate = intersecting.find(e => e.boundingClientRect.top < 300) || intersecting[0];
         setActiveSection(bestCandidate.target.id);
       }
@@ -467,6 +466,7 @@ function App() {
             </button>
             <div className="side-menu-list">
               {SECTIONS.map(s => {
+                // Approximate visibility check for menu
                 const el = document.getElementById(s.id);
                 if (s.id !== 'summary' && !el) return null;
                 
@@ -700,8 +700,6 @@ function App() {
                                 </div>
                               ))}
                             </div>
-                              ))}
-                            </div>
 
                             <div className="costs-bars-list">
                               {[
@@ -750,9 +748,9 @@ function App() {
                     </div>
                   </div>
 
-                  {selectedCountry.climate && selectedCountry.climate.length > 0 && (
-                    <div id="climate" className="info-block full-width climate-section scroll-mt">
-                      <label>Typowa pogoda (średnie miesięczne)</label>
+                  <div id="climate" className="info-block full-width climate-section scroll-mt">
+                    <label>Typowa pogoda (średnie miesięczne)</label>
+                    {selectedCountry.climate && selectedCountry.climate.length > 0 ? (
                       <div className="combined-chart-container" onMouseLeave={() => setChartTooltip(prev => ({ ...prev, visible: false }))}>
                         <div className="chart-y-axis-label left">Temperatura (°C)</div>
                         <div className="chart-y-axis-label right">Opady (mm)</div>
@@ -847,56 +845,57 @@ function App() {
                           <span className="legend-item"><i className="legend-rect rain"></i> Opady (mm)</span>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    ) : (
+                      <p className="no-data-text">Brak danych klimatycznych dla tego kraju.</p>
+                    )}
+                  </div>
 
                   <div id="health" className="info-block full-width health-section-box scroll-mt">
                     <label>Zdrowie i szczepienia</label>
-                                      <div className="health-container">
-                                        {selectedCountry.practical.health_info && (
-                                          <div className="health-full-info">
-                                            <strong>Oficjalne zalecenia MSZ:</strong>
-                                            <ExpandableText text={selectedCountry.practical.health_info} />
-                                          </div>
-                                        )}
-                                        
-                                        {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) && (
-                                          <div className="health-summary-vax">
-                                            {selectedCountry.practical.vaccinations_required && (
-                                              <div className="health-item mandatory">
-                                                <span className="health-icon">🚨</span>
-                                                <div className="health-text">
-                                                  <strong>Obowiązkowe:</strong>
-                                                  <p>{selectedCountry.practical.vaccinations_required}</p>
-                                                </div>
-                                              </div>
-                                            )}
-                                            {selectedCountry.practical.vaccinations_suggested && (
-                                              <div className="health-item suggested">
-                                                <span className="health-icon">💉</span>
-                                                <div className="health-text">
-                                                  <strong>Zalecane:</strong>
-                                                  <p>{selectedCountry.practical.vaccinations_suggested}</p>
-                                                </div>
-                                              </div>
-                                            )}
-                                          </div>
-                                        )}
-                    
-                                        {!selectedCountry.practical.health_info && !selectedCountry.practical.vaccinations_required && !selectedCountry.practical.vaccinations_suggested && (
-                                          <div className="health-item neutral">
-                                            <span className="health-icon">✅</span>
-                                            <p>Brak szczegółowych informacji o zdrowiu (sprawdź aktualny komunikat MSZ).</p>
-                                          </div>
-                                        )}
-                    
-                                        {selectedCountry.safety.url && (
-                                          <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="health-msz-link">
-                                            Pełny raport zdrowotny na gov.pl →
-                                          </a>
-                                        )}
-                                      </div>
-                    
+                    <div className="health-container">
+                      {selectedCountry.practical.health_info && (
+                        <div className="health-full-info">
+                          <strong>Oficjalne zalecenia MSZ:</strong>
+                          <ExpandableText text={selectedCountry.practical.health_info} />
+                        </div>
+                      )}
+                      
+                      {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) && (
+                        <div className="health-summary-vax">
+                          {selectedCountry.practical.vaccinations_required && (
+                            <div className="health-item mandatory">
+                              <span className="health-icon">🚨</span>
+                              <div className="health-text">
+                                <strong>Obowiązkowe:</strong>
+                                <p>{selectedCountry.practical.vaccinations_required}</p>
+                              </div>
+                            </div>
+                          )}
+                          {selectedCountry.practical.vaccinations_suggested && (
+                            <div className="health-item suggested">
+                              <span className="health-icon">💉</span>
+                              <div className="health-text">
+                                <strong>Zalecane:</strong>
+                                <p>{selectedCountry.practical.vaccinations_suggested}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {!selectedCountry.practical.health_info && !selectedCountry.practical.vaccinations_required && !selectedCountry.practical.vaccinations_suggested && (
+                        <div className="health-item neutral">
+                          <span className="health-icon">✅</span>
+                          <p>Brak szczegółowych informacji o zdrowiu (sprawdź aktualny komunikat MSZ).</p>
+                        </div>
+                      )}
+
+                      {selectedCountry.safety.url && (
+                        <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="health-msz-link">
+                          Pełny raport zdrowotny na gov.pl →
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   {selectedCountry.holidays && selectedCountry.holidays.length > 0 && (
