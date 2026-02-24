@@ -707,29 +707,34 @@ function App() {
                                 { label: 'Zakupy', icon: '🛒', val: selectedCountry.costs.groceries ? selectedCountry.costs.groceries / 0.42 : null },
                                 { label: 'Transport', icon: '🚌', val: selectedCountry.costs.transport ? selectedCountry.costs.transport / 0.42 : null },
                                 { label: 'Nocleg', icon: '🏨', val: selectedCountry.costs.accommodation ? selectedCountry.costs.accommodation / 0.42 : null },
-                              ].map((item, idx) => (
-                                <div key={idx} className="cost-bar-row">
-                                  <div className="cost-bar-label-box">
-                                    <span className="cost-bar-icon">{item.icon}</span>
-                                    <span className="cost-bar-name">{item.label}</span>
+                              ].map((item, idx) => {
+                                const isOverflow = (item.val || 0) > 200;
+                                return (
+                                  <div key={idx} className="cost-bar-row">
+                                    <div className="cost-bar-label-box">
+                                      <span className="cost-bar-icon">{item.icon}</span>
+                                      <span className="cost-bar-name">{item.label}</span>
+                                    </div>
+                                    <div className="cost-bar-wrapper">
+                                      {item.val !== null ? (
+                                        <div 
+                                          className={`cost-bar-fill-v2 ${isOverflow ? 'overflow' : ''}`} 
+                                          style={{ 
+                                            width: `${Math.min(100, (item.val / 200) * 100)}%`,
+                                            backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : isOverflow ? '#9b2c2c' : '#f56565'
+                                          }}
+                                        >
+                                          <span className="cost-bar-value">
+                                            {item.val.toFixed(0)}%{isOverflow ? '+' : ''}
+                                          </span>
+                                        </div>
+                                      ) : (
+                                        <div className="cost-bar-no-data">Brak danych</div>
+                                      )}
+                                    </div>
                                   </div>
-                                  <div className="cost-bar-wrapper">
-                                    {item.val !== null ? (
-                                      <div 
-                                        className="cost-bar-fill-v2" 
-                                        style={{ 
-                                          width: `${Math.min(100, (item.val / 200) * 100)}%`,
-                                          backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : '#f56565'
-                                        }}
-                                      >
-                                        <span className="cost-bar-value">{item.val.toFixed(0)}%</span>
-                                      </div>
-                                    ) : (
-                                      <div className="cost-bar-no-data">Brak danych</div>
-                                    )}
-                                  </div>
-                                </div>
-                              ))}
+                                );
+                              })}
                             </div>
                           </div>
                           <p className="costs-disclaimer">* Wartości przybliżone w oparciu o koszty w Polsce (100%)</p>

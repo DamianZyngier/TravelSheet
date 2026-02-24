@@ -47,7 +47,7 @@ jobs:
         run: |
           echo "Syncing countries from REST Countries..."
           curl -X POST "http://localhost:8000/api/admin/sync-rest-countries"
-          echo "Syncing static data (plugs, driving side)..."
+          echo "Syncing static data (plugs, driving side)..na islandii mam
           curl -X POST "http://localhost:8000/api/admin/sync-static-info"
           echo "Syncing emergency numbers..."
           curl -X POST "http://localhost:8000/api/admin/sync-emergency"
