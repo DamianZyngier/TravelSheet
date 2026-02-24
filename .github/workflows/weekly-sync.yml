@@ -73,6 +73,14 @@ jobs:
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-attractions-wiki"
 
+      - name: Sync Emergency
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-emergency"
+
+      - name: Sync Health (CDC)
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-cdc"
+
       - name: Sync Embassies
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-embassies"
