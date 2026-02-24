@@ -71,6 +71,10 @@ interface CountryData {
     name: string;
     date: string;
   }[];
+  attractions?: {
+    name: string;
+    category: string;
+  }[];
   climate?: {
     month: number;
     temp_day: number;
@@ -131,6 +135,7 @@ function App() {
     { id: 'health', label: 'Zdrowie', icon: '💉' },
     { id: 'holidays', label: 'Święta', icon: '📅' },
     { id: 'embassies', label: 'Ambasady', icon: '🏢' },
+    { id: 'attractions', label: 'Atrakcje', icon: '🏛️' },
     { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️' },
   ];
 
@@ -941,6 +946,22 @@ function App() {
                             {emb.phone && <p>📞 {emb.phone}</p>}
                             {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
                             {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
+                    <div id="attractions" className="info-block full-width unesco-section scroll-mt">
+                      <label>Zabytki i obiekty UNESCO</label>
+                      <div className="unesco-grid">
+                        {selectedCountry.attractions.map((attr, idx) => (
+                          <div key={idx} className="unesco-item">
+                            <span className="unesco-icon">
+                              {attr.category === 'Cultural' ? '🏛️' : attr.category === 'Natural' ? '🌳' : '🏔️'}
+                            </span>
+                            <span className="unesco-name">{attr.name}</span>
                           </div>
                         ))}
                       </div>

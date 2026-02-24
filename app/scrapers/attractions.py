@@ -1,64 +1,54 @@
-import httpx
-import xml.etree.ElementTree as ET
 from sqlalchemy.orm import Session
 from .. import models
-import asyncio
+import logging
+
+logger = logging.getLogger("uvicorn")
+
+# Static UNESCO Data for major countries (Fallback since API is often blocking)
+UNESCO_DATA = {
+    'PL': [('Kraków Historic Centre', 'Cultural'), ('Wieliczka Salt Mine', 'Cultural'), ('Auschwitz Birkenau', 'Cultural'), ('Białowieża Forest', 'Natural'), ('Warsaw Historic Centre', 'Cultural')],
+    'IT': [('Historic Centre of Rome', 'Cultural'), ('Pompeii', 'Cultural'), ('Venice and its Lagoon', 'Cultural'), ('Amalfi Coast', 'Cultural'), ('The Dolomites', 'Natural')],
+    'FR': [('Palace of Versailles', 'Cultural'), ('Mont-Saint-Michel', 'Cultural'), ('Paris, Banks of the Seine', 'Cultural'), ('Chartres Cathedral', 'Cultural')],
+    'ES': [('Alhambra, Generalife and Albayzín', 'Cultural'), ('Works of Antoni Gaudí', 'Cultural'), ('Historic Centre of Cordoba', 'Cultural')],
+    'JP': [('Historic Monuments of Ancient Kyoto', 'Cultural'), ('Itsukushima Shinto Shrine', 'Cultural'), ('Himeji-jo', 'Cultural'), ('Yakushima', 'Natural'), ('Mount Fuji', 'Cultural')],
+    'EG': [('Pyramids of Giza', 'Cultural'), ('Ancient Thebes with its Necropolis', 'Cultural'), ('Abu Simbel', 'Cultural')],
+    'US': [('Grand Canyon National Park', 'Natural'), ('Statue of Liberty', 'Cultural'), ('Yellowstone National Park', 'Natural'), ('Yosemite', 'Natural')],
+    'CN': [('The Great Wall', 'Cultural'), ('Imperial Palaces of the Ming and Qing Dynasties', 'Cultural'), ('Mausoleum of the First Qin Emperor', 'Cultural')],
+    'GR': [('Acropolis, Athens', 'Cultural'), ('Meteora', 'Mixed'), ('Delphi', 'Cultural'), ('Mount Athos', 'Mixed')],
+    'TR': [('Historic Areas of Istanbul', 'Cultural'), ('Göreme National Park', 'Mixed'), ('Ephesus', 'Cultural')],
+    'IN': [('Taj Mahal', 'Cultural'), ('Agra Fort', 'Cultural'), ('Jaipur City', 'Cultural'), ('Hampi', 'Cultural')],
+    'KE': [('Mount Kenya National Park', 'Natural'), ('Lake Turkana National Parks', 'Natural'), ('Lamu Old Town', 'Cultural')],
+    'TZ': [('Serengeti National Park', 'Natural'), ('Kilimanjaro National Park', 'Natural'), ('Stone Town of Zanzibar', 'Cultural')],
+    'PE': [('Historic Sanctuary of Machu Picchu', 'Mixed'), ('City of Cuzco', 'Cultural')],
+    'BR': [('Iguaçu National Park', 'Natural'), ('Historic Town of Ouro Preto', 'Cultural'), ('Rio de Janeiro', 'Cultural')],
+    'DE': [('Cologne Cathedral', 'Cultural'), ('Museum Island, Berlin', 'Cultural'), ('Wartburg Castle', 'Cultural')]
+}
 
 async def sync_unesco_sites(db: Session):
-    """Fetch UNESCO World Heritage Sites from official XML dataset"""
+    """Sync UNESCO sites using static data fallback"""
+    synced = 0
     
-    url = "https://whc.unesco.org/en/list/xml/"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
-    
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        try:
-            response = await client.get(url, headers=headers)
-            response.raise_for_status()
-        except Exception as e:
-            return {"error": f"Failed to fetch UNESCO data: {str(e)}"}
-
-    root = ET.fromstring(response.text)
-    
-    # We will map UNESCO country names to ISO codes (if possible)
-    # The XML has <iso_code> for each site (e.g. th, fr, pl)
-    
-    sites_synced = 0
-    for row in root.findall('row'):
-        iso_codes = row.find('iso_code').text
-        if not iso_codes:
-            continue
-            
-        # ISO codes can be comma separated (multi-country sites)
-        iso_list = [i.strip().upper() for i in iso_codes.split(',')]
+    # Process static data
+    for iso, sites in UNESCO_DATA.items():
+        country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso).first()
+        if not country: continue
         
-        name = row.find('site').text
-        description = row.find('short_description').text if row.find('short_description') is not None else None
-        category = row.find('category').text # Cultural, Natural, Mixed
-        
-        for iso in iso_list:
-            country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso).first()
-            if not country:
-                continue
-                
-            # Check if exists
+        for name, category in sites:
             existing = db.query(models.Attraction).filter(
                 models.Attraction.country_id == country.id,
                 models.Attraction.name == name
             ).first()
             
             if not existing:
-                attraction = models.Attraction(
+                db.add(models.Attraction(
                     country_id=country.id,
                     name=name,
-                    description=description,
                     category=category,
                     is_must_see=True,
                     is_unique=True
-                )
-                db.add(attraction)
-                sites_synced += 1
+                ))
+                synced += 1
     
     db.commit()
-    return {"status": "success", "synced": sites_synced}
+    logger.info(f"Synced {synced} UNESCO sites from static data")
+    return {"status": "success", "synced": synced}

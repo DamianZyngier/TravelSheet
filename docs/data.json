@@ -2995,7 +2995,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Ephesus",
+        "category": "Cultural"
+      },
+      {
+        "name": "Göreme National Park",
+        "category": "Mixed"
+      },
+      {
+        "name": "Historic Areas of Istanbul",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -5531,7 +5544,24 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Acropolis, Athens",
+        "category": "Cultural"
+      },
+      {
+        "name": "Delphi",
+        "category": "Cultural"
+      },
+      {
+        "name": "Meteora",
+        "category": "Mixed"
+      },
+      {
+        "name": "Mount Athos",
+        "category": "Mixed"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -8451,7 +8481,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Alhambra, Generalife and Albayzín",
+        "category": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Cordoba",
+        "category": "Cultural"
+      },
+      {
+        "name": "Works of Antoni Gaudí",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -8990,7 +9033,28 @@
       "icon": ""
     },
     "embassies": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Auschwitz Birkenau",
+        "category": "Cultural"
+      },
+      {
+        "name": "Białowieża Forest",
+        "category": "Natural"
+      },
+      {
+        "name": "Kraków Historic Centre",
+        "category": "Cultural"
+      },
+      {
+        "name": "Warsaw Historic Centre",
+        "category": "Cultural"
+      },
+      {
+        "name": "Wieliczka Salt Mine",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -9890,7 +9954,28 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Amalfi Coast",
+        "category": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Rome",
+        "category": "Cultural"
+      },
+      {
+        "name": "Pompeii",
+        "category": "Cultural"
+      },
+      {
+        "name": "The Dolomites",
+        "category": "Natural"
+      },
+      {
+        "name": "Venice and its Lagoon",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -11374,7 +11459,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Historic Town of Ouro Preto",
+        "category": "Cultural"
+      },
+      {
+        "name": "Iguaçu National Park",
+        "category": "Natural"
+      },
+      {
+        "name": "Rio de Janeiro",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -14924,7 +15022,20 @@
       "icon": ""
     },
     "embassies": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Imperial Palaces of the Ming and Qing Dynasties",
+        "category": "Cultural"
+      },
+      {
+        "name": "Mausoleum of the First Qin Emperor",
+        "category": "Cultural"
+      },
+      {
+        "name": "The Great Wall",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -17538,7 +17649,28 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Himeji-jo",
+        "category": "Cultural"
+      },
+      {
+        "name": "Historic Monuments of Ancient Kyoto",
+        "category": "Cultural"
+      },
+      {
+        "name": "Itsukushima Shinto Shrine",
+        "category": "Cultural"
+      },
+      {
+        "name": "Mount Fuji",
+        "category": "Cultural"
+      },
+      {
+        "name": "Yakushima",
+        "category": "Natural"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -20820,7 +20952,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Abu Simbel",
+        "category": "Cultural"
+      },
+      {
+        "name": "Ancient Thebes with its Necropolis",
+        "category": "Cultural"
+      },
+      {
+        "name": "Pyramids of Giza",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "Boże Narodzenie (prawosławne)",
@@ -22053,7 +22198,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Kilimanjaro National Park",
+        "category": "Natural"
+      },
+      {
+        "name": "Serengeti National Park",
+        "category": "Natural"
+      },
+      {
+        "name": "Stone Town of Zanzibar",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [],
     "climate": []
   },
@@ -23941,7 +24099,16 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "City of Cuzco",
+        "category": "Cultural"
+      },
+      {
+        "name": "Historic Sanctuary of Machu Picchu",
+        "category": "Mixed"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -27726,7 +27893,24 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Agra Fort",
+        "category": "Cultural"
+      },
+      {
+        "name": "Hampi",
+        "category": "Cultural"
+      },
+      {
+        "name": "Jaipur City",
+        "category": "Cultural"
+      },
+      {
+        "name": "Taj Mahal",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [],
     "climate": []
   },
@@ -27960,7 +28144,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Cologne Cathedral",
+        "category": "Cultural"
+      },
+      {
+        "name": "Museum Island, Berlin",
+        "category": "Cultural"
+      },
+      {
+        "name": "Wartburg Castle",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "New Year's Day",
@@ -28371,7 +28568,24 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Grand Canyon National Park",
+        "category": "Natural"
+      },
+      {
+        "name": "Statue of Liberty",
+        "category": "Cultural"
+      },
+      {
+        "name": "Yellowstone National Park",
+        "category": "Natural"
+      },
+      {
+        "name": "Yosemite",
+        "category": "Natural"
+      }
+    ],
     "holidays": [],
     "climate": []
   },
@@ -28471,7 +28685,20 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Lake Turkana National Parks",
+        "category": "Natural"
+      },
+      {
+        "name": "Lamu Old Town",
+        "category": "Cultural"
+      },
+      {
+        "name": "Mount Kenya National Park",
+        "category": "Natural"
+      }
+    ],
     "holidays": [],
     "climate": []
   },
@@ -31312,7 +31539,24 @@
         "website": null
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Chartres Cathedral",
+        "category": "Cultural"
+      },
+      {
+        "name": "Mont-Saint-Michel",
+        "category": "Cultural"
+      },
+      {
+        "name": "Palace of Versailles",
+        "category": "Cultural"
+      },
+      {
+        "name": "Paris, Banks of the Seine",
+        "category": "Cultural"
+      }
+    ],
     "holidays": [
       {
         "name": "New Year's Day",
