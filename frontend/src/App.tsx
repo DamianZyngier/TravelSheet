@@ -607,58 +607,75 @@ function App() {
                 {selectedCountry.climate && selectedCountry.climate.length > 0 && (
                   <div className="info-block full-width climate-section">
                     <label>Typowa pogoda (średnie miesięczne)</label>
-                    <div className="climate-charts-container">
-                      {/* Temperature Chart */}
-                      <div className="climate-chart-box">
-                        <span className="chart-title">Temperatura (°C)</span>
-                        <div className="temp-chart">
-                          {selectedCountry.climate.map((cl, idx) => (
-                            <div key={idx} className="temp-bar-group">
-                              <div className="temp-bars">
-                                <div 
-                                  className="temp-bar-day" 
-                                  style={{ height: `${Math.max(2, (cl.temp_day + 10) * 2)}px` }}
-                                  title={`Dzień: ${cl.temp_day}°C`}
-                                ></div>
-                                <div 
-                                  className="temp-bar-night" 
-                                  style={{ height: `${Math.max(2, (cl.temp_night + 10) * 2)}px` }}
-                                  title={`Noc: ${cl.temp_night}°C`}
-                                ></div>
-                              </div>
-                              <span className="chart-month-label">
-                                {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="chart-legend">
-                          <span className="legend-item"><i className="legend-dot day"></i> Dzień</span>
-                          <span className="legend-item"><i className="legend-dot night"></i> Noc</span>
-                        </div>
-                      </div>
+                    <div className="combined-chart-container">
+                      <div className="chart-y-axis-label left">Temperatura (°C)</div>
+                      <div className="chart-y-axis-label right">Opady (mm)</div>
+                      
+                      <svg viewBox="0 0 600 240" className="combined-svg-chart">
+                        {/* Grid lines */}
+                        {[0, 1, 2, 3, 4].map(i => (
+                          <line key={i} x1="40" y1={40 + i*40} x2="560" y2={40 + i*40} className="chart-grid-line" />
+                        ))}
 
-                      {/* Rain Chart */}
-                      <div className="climate-chart-box">
-                        <span className="chart-title">Opady (mm)</span>
-                        <div className="rain-chart">
-                          {selectedCountry.climate.map((cl, idx) => {
-                            const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]));
-                            const height = (cl.rain / (maxRain || 1)) * 60;
-                            return (
-                              <div key={idx} className="rain-bar-group">
-                                <div 
-                                  className="rain-bar" 
-                                  style={{ height: `${Math.max(2, height)}px` }}
-                                  title={`Opady: ${cl.rain}mm`}
-                                ></div>
-                                <span className="chart-month-label">
-                                  {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
-                                </span>
-                              </div>
-                            );
-                          })}
-                        </div>
+                        {/* Rain Bars (Precipitation) */}
+                        {selectedCountry.climate.map((cl, i) => {
+                          const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
+                          const barHeight = (cl.rain / maxRain) * 160;
+                          return (
+                            <rect
+                              key={`rain-${i}`}
+                              x={50 + i * 43}
+                              y={200 - barHeight}
+                              width="24"
+                              height={barHeight}
+                              className="chart-bar-rain"
+                              title={`Opady: ${cl.rain}mm`}
+                            />
+                          );
+                        })}
+
+                        {/* Temperature Lines (connecting day and night) */}
+                        {(() => {
+                          const getX = (i: number) => 62 + i * 43;
+                          const getY = (temp: number) => 200 - (temp + 10) * 3; // Offset -10 to 40+ range
+                          
+                          const dayPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ');
+                          const nightPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ');
+                          
+                          return (
+                            <>
+                              <path d={dayPath} className="chart-line-day" fill="none" />
+                              <path d={nightPath} className="chart-line-night" fill="none" />
+                              
+                              {/* Dots for emphasis */}
+                              {selectedCountry.climate.map((cl, i) => (
+                                <g key={`dots-${i}`}>
+                                  <circle cx={getX(i)} cy={getY(cl.temp_day)} r="3" className="chart-dot-day" title={`Dzień: ${cl.temp_day}°C`} />
+                                  <circle cx={getX(i)} cy={getY(cl.temp_night)} r="3" className="chart-dot-night" title={`Noc: ${cl.temp_night}°C`} />
+                                </g>
+                              ))}
+                            </>
+                          );
+                        })()}
+
+                        {/* Month Labels */}
+                        {selectedCountry.climate.map((cl, i) => (
+                          <text
+                            key={`label-${i}`}
+                            x={62 + i * 43}
+                            y="220"
+                            textAnchor="middle"
+                            className="chart-month-text"
+                          >
+                            {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
+                          </text>
+                        ))}
+                      </svg>
+
+                      <div className="chart-legend-combined">
+                        <span className="legend-item"><i className="legend-line day"></i> Temperatura w dzień</span>
+                        <span className="legend-item"><i className="legend-line night"></i> Temperatura w nocy</span>
+                        <span className="legend-item"><i className="legend-rect rain"></i> Opady (mm)</span>
                       </div>
                     </div>
                   </div>

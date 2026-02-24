@@ -718,106 +718,92 @@
   margin-top: 1rem;
 }
 
-.climate-charts-container {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.climate-chart-box {
-  flex: 1;
-  min-width: 300px;
+.combined-chart-container {
+  position: relative;
   background: #f8fafc;
-  padding: 1rem;
+  padding: 2.5rem 1.5rem 1.5rem;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
+  margin-top: 1rem;
 }
 
-.chart-title {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #4a5568;
-  margin-bottom: 1rem;
-  text-align: center;
+.combined-svg-chart {
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
-.temp-chart, .rain-chart {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 100px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #e2e8f0;
+.chart-grid-line {
+  stroke: #edf2f7;
+  stroke-width: 1;
 }
 
-.temp-bar-group, .rain-bar-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
+.chart-bar-rain {
+  fill: #bee3f8;
+  opacity: 0.6;
+  rx: 4;
+  transition: opacity 0.2s;
 }
 
-.temp-bars {
-  display: flex;
-  gap: 2px;
-  align-items: flex-end;
+.chart-bar-rain:hover {
+  opacity: 0.9;
 }
 
-.temp-bar-day {
-  width: 8px;
-  background-color: #f6ad55;
-  border-radius: 4px 4px 0 0;
-  transition: transform 0.2s;
+.chart-line-day {
+  stroke: #f6ad55;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.temp-bar-night {
-  width: 8px;
-  background-color: #4299e1;
-  border-radius: 4px 4px 0 0;
-  transition: transform 0.2s;
+.chart-line-night {
+  stroke: #4299e1;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.rain-bar {
-  width: 14px;
-  background-color: #63b3ed;
-  border-radius: 4px 4px 0 0;
-  transition: transform 0.2s;
+.chart-dot-day { fill: #ed8936; stroke: white; stroke-width: 1.5; }
+.chart-dot-night { fill: #3182ce; stroke: white; stroke-width: 1.5; }
+
+.chart-month-text {
+  font-size: 10px;
+  fill: #a0aec0;
+  font-weight: 600;
 }
 
-.temp-bar-day:hover, .temp-bar-night:hover, .rain-bar:hover {
-  transform: scaleY(1.1);
-  filter: brightness(1.1);
-}
-
-.chart-month-label {
+.chart-y-axis-label {
+  position: absolute;
+  top: 10px;
   font-size: 0.65rem;
-  color: #a0aec0;
-  margin-top: 4px;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
-.chart-legend {
+.chart-y-axis-label.left { left: 1.5rem; color: #dd6b20; }
+.chart-y-axis-label.right { right: 1.5rem; color: #3182ce; }
+
+.chart-legend-combined {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 0.75rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  border-top: 1px solid #edf2f7;
+  padding-top: 1rem;
 }
 
-.legend-item {
-  font-size: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #718096;
+.legend-line {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
 }
 
-.legend-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
+.legend-line.day { background-color: #f6ad55; }
+.legend-line.night { background-color: #4299e1; }
 
-.legend-dot.day { background-color: #f6ad55; }
-.legend-dot.night { background-color: #4299e1; }
+.legend-rect.rain {
+  width: 12px;
+  height: 12px;
+  background-color: #bee3f8;
+  border-radius: 3px;
+}
