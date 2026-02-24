@@ -1052,6 +1052,11 @@
   stroke-width: 1;
 }
 
+.chart-grid-line.zero-line {
+  stroke: #cbd5e0;
+  stroke-width: 2;
+}
+
 .chart-bar-rain {
   fill: #bee3f8;
   opacity: 0.6;

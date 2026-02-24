@@ -761,29 +761,32 @@ function App() {
                           </div>
                         )}
 
-                        <svg viewBox="0 0 600 240" className="combined-svg-chart">
-                          {[0, 10, 20, 30, 40].map(temp => {
-                            const y = 200 - (temp + 10) * 3;
+                        <svg viewBox="0 0 600 260" className="combined-svg-chart">
+                          {/* Grid lines & Y-Axis Labels */}
+                          {[-20, -10, 0, 10, 20, 30, 40].map(temp => {
+                            const y = 200 - (temp + 20) * 3.5; // Offset 20, scale 3.5
                             return (
                               <g key={temp}>
-                                <line x1="40" y1={y} x2="560" y2={y} className="chart-grid-line" />
+                                <line x1="40" y1={y} x2="560" y2={y} className={`chart-grid-line ${temp === 0 ? 'zero-line' : ''}`} />
                                 <text x="35" y={y + 4} textAnchor="end" className="chart-axis-text temp">{temp}°</text>
                               </g>
                             );
                           })}
 
+                          {/* Rain Axis Labels */}
                           {(() => {
                             const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
                             return [0, 0.5, 1].map(p => (
-                              <text key={p} x="565" y={200 - p * 160 + 4} textAnchor="start" className="chart-axis-text rain">
+                              <text key={p} x="565" y={200 - p * 180 + 4} textAnchor="start" className="chart-axis-text rain">
                                 {Math.round(p * maxRain)}
                               </text>
                             ));
                           })()}
 
+                          {/* Rain Bars */}
                           {selectedCountry.climate.map((cl, i) => {
                             const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
-                            const barHeight = (cl.rain / maxRain) * 160;
+                            const barHeight = (cl.rain / maxRain) * 180;
                             return (
                               <rect
                                 key={`rain-${i}`}
@@ -807,9 +810,10 @@ function App() {
                             );
                           })}
 
+                          {/* Temperature Lines */}
                           {(() => {
                             const getX = (i: number) => 62 + i * 43;
-                            const getY = (temp: number) => 200 - (temp + 10) * 3;
+                            const getY = (temp: number) => 200 - (temp + 20) * 3.5;
                             const dayPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ');
                             const nightPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ');
                             return (
@@ -833,15 +837,15 @@ function App() {
                           })()}
 
                           {selectedCountry.climate.map((cl, i) => (
-                            <text key={`label-${i}`} x={62 + i * 43} y="225" textAnchor="middle" className="chart-month-text">
+                            <text key={`label-${i}`} x={62 + i * 43} y="240" textAnchor="middle" className="chart-month-text">
                               {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
                             </text>
                           ))}
                         </svg>
 
                         <div className="chart-legend-combined">
-                          <span className="legend-item"><i className="legend-line day"></i> Temperatura dzień</span>
-                          <span className="legend-item"><i className="legend-line night"></i> Temperatura noc</span>
+                          <span className="legend-item"><i className="legend-line day"></i> Dzień</span>
+                          <span className="legend-item"><i className="legend-line night"></i> Noc</span>
                           <span className="legend-item"><i className="legend-rect rain"></i> Opady (mm)</span>
                         </div>
                       </div>
