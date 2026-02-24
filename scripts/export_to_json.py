@@ -65,7 +65,8 @@ def export_all():
                 "voltage": c.practical.voltage if c.practical else None,
                 "water_safe": c.practical.tap_water_safe if c.practical else None,
                 "driving_side": c.practical.driving_side if c.practical else "",
-                "card_acceptance": c.practical.card_acceptance if c.practical else ""
+                "card_acceptance": c.practical.card_acceptance if c.practical else "",
+                "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None
             },
 
             "entry": {
@@ -82,6 +83,17 @@ def export_all():
                 "icon": c.weather.condition_icon if c.weather else ""
             },
             
+            "embassies": [
+                {
+                    "type": e.type,
+                    "city": e.city,
+                    "address": e.address,
+                    "phone": e.phone,
+                    "email": e.email,
+                    "website": e.website
+                } for e in c.embassies
+            ],
+
             "attractions": [
                 {"name": a.name, "category": a.category} for a in c.attractions[:10]
             ],

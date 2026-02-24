@@ -189,6 +189,17 @@ class PracticalInfo(Base):
     tipping_culture = Column(Text)
     internet_notes = Column(Text)
     esim_available = Column(Boolean)
+    emergency_numbers = Column(Text) # JSON string with police, ambulance, fire
+
+    @property
+    def emergency(self):
+        import json
+        if self.emergency_numbers:
+            try:
+                return json.loads(self.emergency_numbers)
+            except:
+                return None
+        return None
 
     def __repr__(self):
         return f"<PracticalInfo(country_id={self.country_id}, plugs='{self.plug_types}')>"

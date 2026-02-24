@@ -49,6 +49,8 @@ jobs:
           curl -X POST "http://localhost:8000/api/admin/sync-rest-countries"
           echo "Syncing static data (plugs, driving side)..."
           curl -X POST "http://localhost:8000/api/admin/sync-static-info"
+          echo "Syncing emergency numbers..."
+          curl -X POST "http://localhost:8000/api/admin/sync-emergency"
           echo "Syncing UNESCO World Heritage sites..."
           curl -X POST "http://localhost:8000/api/admin/sync-unesco-sites"
 

@@ -1,6 +1,7 @@
-from pydantic import BaseModel
-from typing import List, Optional
+from pydantic import BaseModel, field_validator
+from typing import List, Optional, Dict, Any
 from datetime import datetime, date
+import json
 
 class LanguageSchema(BaseModel):
     name: str
@@ -9,6 +10,13 @@ class LanguageSchema(BaseModel):
 
     class Config:
         from_attributes = True
+
+class EmergencyNumbersSchema(BaseModel):
+    police: Optional[str] = None
+    ambulance: Optional[str] = None
+    fire: Optional[str] = None
+    dispatch: Optional[str] = None
+    member_112: bool = False
 
 class CurrencySchema(BaseModel):
     code: str
@@ -115,6 +123,24 @@ class PracticalSchema(BaseModel):
     tipping_culture: Optional[str]
     internet_notes: Optional[str]
     esim_available: Optional[bool]
+    emergency: Optional[EmergencyNumbersSchema] = None
+
+    @field_validator("emergency", mode="before")
+    @classmethod
+    def parse_emergency(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            try:
+                return json.loads(v)
+            except:
+                return None
+        return v
+
+    @field_validator("plug_types", mode="before")
+    @classmethod
+    def parse_plugs(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            return [x.strip() for x in v.split(",") if x.strip()]
+        return v or []
 
     class Config:
         from_attributes = True

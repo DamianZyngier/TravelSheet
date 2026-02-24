@@ -42,6 +42,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Hanoi",
+        "address": "3 Chua Mot Cot, Hanoi",
+        "phone": "+84 24 384 520 27 lub +84 24 384 537 28",
+        "email": "hanoi.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Da",
+        "address": "331 Chuong Duong, Ngu Hanh Son, Da Nang, Vietnam",
+        "phone": "+84 (0) 934 891 746",
+        "email": "peter.frieske@cvr.com.vn",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Hanoi",
+        "address": "5 Chua Mot Cot (wejście od ul. Ba Huyen Thanh Quan - od zachodniej strony), Ba Dinh, Ha Noi, Vietnam",
+        "phone": "+84 24 3845 2027 lub +84 24 3845 3728  (odpowiedzi na zapytania w sprawach wizowych, prawnych i paszportowych udzielane są od poniedziałku do piątku w godzinach: 15:00-16:00)",
+        "email": "hanoi.amb.wk@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -88,6 +114,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -134,6 +161,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -180,6 +208,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -226,6 +255,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -272,6 +302,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": "+56 22 824 5000",
+        "email": "santiago.konsul@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Chile",
+        "address": "Mar del Plata 2055, Providencia, Santiago de Chile",
+        "phone": "+56 22 824 5000",
+        "email": "santiago.secretaria@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Las Añañucas 1060, La Serena",
+        "phone": "56 51 2 204 330, 56 51 2 204 399,",
+        "email": "jpozo@userena.cl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Concón",
+        "address": "Avenida Borgoño #21950, Concón",
+        "phone": "+56 9 8412 4474",
+        "email": "consuladopolonia.quintaregion@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Punta",
+        "address": "General Salvo 0176",
+        "phone": "+56 61 2225912; +56 9 4276 9637 + 56 9 35118001",
+        "email": "victorfajardoumag@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -318,6 +390,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Budapeszcie",
+        "address": "1068 Budapest, Városligeti fasor 16.",
+        "phone": "+36 1 413 82 00",
+        "email": "budapeszt.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Segedynie",
+        "address": "6741 Szeged, Rákóczi tér 1.",
+        "phone": null,
+        "email": "konsulszeged@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -385,6 +475,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Bogocie",
+        "address": "Edificio Cusezar, Calle 116 No. 7-15, piso 11, oficina 1103",
+        "phone": "+57 601 2140400",
+        "email": "bog.amb@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Cali",
+        "address": "calle 19 norte # 5 n 35 oficina 807 (Clinica de Occidente), Cali - Valle del Cauca, Colombia",
+        "phone": "+57 602 6677749 ext. 127",
+        "email": "masvera57@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kartagenie",
+        "address": "Cra. 2 No. 11 - 41 Edificio Grupo Area, oficina 1601, Bocagrande, Cartagena de Indias, Colombia",
+        "phone": "+57 605 6652990",
+        "email": "benny.schuster@ibsseguros.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Medellin",
+        "address": "calle 29 No. 41-105 oficina 1206 - Edificio Soho, Medellín - Antioquia, Colombia",
+        "phone": "+57 604 3205310",
+        "email": "gmrestrepos@outlook.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "St",
+        "address": "West Indies Oil Ltd., Friars Hill Road, P.O. Box 230, St. John’s, Antigua",
+        "phone": "+1 268-464-8485",
+        "email": "ggeorges@westindiesoil.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -431,6 +563,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -477,6 +610,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -523,6 +657,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -569,6 +704,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Richelieus Allé 12, 2900 Hellerup",
+        "phone": "+45 39 46 77 00",
+        "email": "copenhagen.info@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Aarhus",
+        "address": "Mariane Thomsens Gade 1C, 8., 8000 Aarhus C",
+        "phone": "+45 87 34 34 34",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -615,6 +768,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -661,6 +815,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -707,6 +862,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Meksyku",
+        "address": "Calle Cracovia 40, Colonia San Ángel, 01000 Ciudad de México",
+        "phone": "+52 55 5481 2050",
+        "email": "meksyk.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Acapulco",
+        "address": null,
+        "phone": null,
+        "email": "consuladopoloniaacapulco@outlook.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -774,6 +947,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Inverness",
+        "address": "Spectrum Centre, 1 Margaret Street, Inverness, IV1 1LS",
+        "phone": "(+44) 7703 357546",
+        "email": "zosia@polishconsulateinv.org",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kingston",
+        "address": "41, North Bar Without, Beverley, HU17 7AG, East Yorkshire and its Branch for Scientific and Educational Cooperation, Wharfe, University of Hull, HU6 7RX",
+        "phone": "(+44) (0)1482 465799",
+        "email": "J.R.Carby-Hall@hull.ac.uk",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Newry",
+        "address": "Newry Town Hall, Bank Parade, Newry, County Down, BT34 1DQ",
+        "phone": "(+44) 7836 734040",
+        "email": "jerome@polishconsulateni.org",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "St",
+        "address": "Vibertis House, Don Street, St Helier, JE4 8ZQ, Jersey",
+        "phone": "(+44) 1534 529204, (+44) 7700 811719",
+        "email": "magda.chmielewska@hotmail.co.uk",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Trowbridge",
+        "address": "27 Broadmead, Trowbridge, BA14 9BX",
+        "phone": "(+44) 1225 353265",
+        "email": "simon.selby09@bathspa.ac.uk",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -820,6 +1035,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Antalyi",
+        "address": "Fener Mahallesi, 1969 Sokak No:32/4, 07100 Antalya",
+        "phone": "+90 549 497 7977",
+        "email": "konsulatantalya@hotmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bursie",
+        "address": "Nilϋfer Mah., O.S.B 75. Yıl Bulvarı No:4, 16140 Işıktepe – Bursa​​​​​​​",
+        "phone": "+ 90 224 219 18 00",
+        "email": "fdurmaz@durmazlar.com.tr",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Gaziantep",
+        "address": "Ogretmenevi Mahallesi, Ordu Caddesi No: 70/1, Sahinbey – Gaziantep",
+        "phone": "+90 534 820 43 30",
+        "email": "Honorary@pldconsulgaziantep.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Izmirze",
+        "address": "Kültür Mahallesi, 1377 sokak 3/2, 35220 Alsancak – İzmir",
+        "phone": "+90 232 464 58 64",
+        "email": "cborovali@borovali.com.tr",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -866,6 +1115,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -912,6 +1162,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -958,6 +1209,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Avenida Nicolás Copérnico, Quinta Ámbar, Sector Valle Arriba, Urbanización Las Mercedes, Caracas 1060",
+        "phone": "+58 212 991 61 67",
+        "email": "caracas.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Hacienda Santa Teresa, Salon Terruno, Carretera Panamericana, El Consejo",
+        "phone": "+58 244 4002790",
+        "email": "info@provive.com.ve",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -1004,6 +1273,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1050,6 +1320,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1096,6 +1367,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1142,6 +1414,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1188,6 +1461,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1234,6 +1508,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Luksemburgu",
+        "address": "24 Rue Guillaume Schneider, L-2522 Luxembourg, Luksemburg",
+        "phone": "+352 26 00 32",
+        "email": "luksemburg.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Luksemburgu",
+        "address": "24 Rue Guillaume Schneider, L-2522 Luxembourg, Luksemburg",
+        "phone": "+ 352 26 00 32 32",
+        "email": "luksemburg.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -1301,6 +1593,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1347,6 +1640,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1393,6 +1687,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1439,6 +1734,56 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "bukareszt.wk.dyzurny@msz.gov.pl",
+        "phone": null,
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Bukareszcie",
+        "address": "Aleea Alexandru 23, 011821, sector 1, Bukareszt",
+        "phone": "+40 21 30 82 200 (centrala)",
+        "email": "bukareszt.wpe@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Braszowie",
+        "address": "Piaţa Sfatului nr.1, 500031 Braşov",
+        "phone": "+40 736 649 263 i +40 736 646 374",
+        "email": "konsulat.brasov@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Klużu",
+        "address": "Str. Republicii nr 10, Cluj-Napoca, judeţul Cluj",
+        "phone": "+40 722 466 433",
+        "email": "konsulat.clujnapoca@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Timi",
+        "address": "Calea Torontalului nr 69, VOX Technology Park, building B, 7th floor, office 731, 300668",
+        "phone": "+40 742 355 036",
+        "email": "konsul.timisoara@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Bukareszcie",
+        "address": "Aleea Alexandru 23, 011821, sector 1, Bukareszt",
+        "phone": null,
+        "email": "bukareszt.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -1506,6 +1851,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Atenach",
+        "address": "Chryssanthemon 22, 154 52 Paleo Psychiko",
+        "phone": "+30 210 6797 700",
+        "email": "ateny.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "ul. Ioanni Kazouli 16,  85-100 Rodos",
+        "phone": "+30 22410 70220",
+        "email": "katerina.aspraki@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Heraklionie",
+        "address": "ul. 1821 nr 39, 712-01 Heraklion, Kreta",
+        "phone": "+30 2810 221786",
+        "email": "konsulat.rp@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Salonikach",
+        "address": "ul. Tsimiski 78, 546-22 Thessaloniki",
+        "phone": "+30 2310 288205, +30 6944 799 535",
+        "email": "prx1@otenet.gr",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Atenach",
+        "address": "Kontoleontos 1, 154 52 Paleo Psychiko",
+        "phone": null,
+        "email": "ateny.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -1552,6 +1939,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1598,6 +1986,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -1665,6 +2054,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1711,6 +2101,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1757,6 +2148,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Calgary",
+        "address": "6224-29 Street SE, Calgary, Alberta T2C 1W3",
+        "phone": "+1 (403) 291 34 55, +1 (403) 608 97 26 lub +1 (403) 478 19 69",
+        "email": "calgary@polishconsulate.ca",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Edmonton",
+        "address": "10960 104 St NW Edmonton, Alberta T5H 3Z9",
+        "phone": "+1 (780) 940-0177",
+        "email": "john.szumlas@aagi.ca",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Halifax",
+        "address": "14 Samuel Terrace, Hali",
+        "phone": "+1 (902) 219 04 08",
+        "email": "polishconsulhalifax@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Windsor",
+        "address": "2050 Willistead Cr., Windsor, Ontario N8Y 1K5",
+        "phone": "+1 (226) 773 5286",
+        "email": "polishconsulwindsor@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -1803,6 +2228,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1849,6 +2275,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1895,6 +2322,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1941,6 +2369,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -1987,6 +2416,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2033,6 +2463,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2079,6 +2510,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2125,6 +2557,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Singapurze",
+        "address": "435 Orchard Road, #17-01/02/03 Wisma Atria, Singapur 238877",
+        "phone": "+ 65 6235 9478",
+        "email": "singapore.secretary@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Singapurze",
+        "address": "435 Orchard Road, #17-01/02/03 Wisma Atria, Singapur 238877",
+        "phone": "+ 65 6235 9478",
+        "email": "singapore.consulate@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -2171,6 +2621,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2217,6 +2668,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2263,6 +2715,80 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat",
+        "city": "Vigo",
+        "address": "Calle García Barbón, 63/2D, 36201 Vigo (Pontevedra)",
+        "phone": "+34 981 555 888, +34 649 402 000",
+        "email": "consuladopoloniagalicia@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Andorze",
+        "address": "Calle Prat de la Creu 59-65, Blok A, 5 piętro; 500 Andorra de la Vella",
+        "phone": "+37 688 52 88",
+        "email": "consol@consolatpoloniaandorra.org",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Burgos",
+        "address": "Plaza del Rey San Fernando, 4, 2º IZDA, 09003 Burgos",
+        "phone": "+34 603 55 75 89",
+        "email": "consulado@polonia-cylyc.es",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Las",
+        "address": "Calle Triana 104, 5 piętro, mieszkanie D; 35002 Las Palmas de Gran Canaria",
+        "phone": "+34 928 366 982",
+        "email": "consul@polonia.nom.es",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Maladze",
+        "address": "Avda. José Ortega y Gasset 112, 29006 Malaga",
+        "phone": "+34 952 00 38 44",
+        "email": "consulado.polonia.malaga@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Murcji",
+        "address": "Calle Cormorán 13; 30110 Murcja",
+        "phone": "+34 968 825 132",
+        "email": "consuladopoloniamurcia@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Palmie",
+        "address": "Carrer dels Fideus 7, 07001 Palma",
+        "phone": "+34 971 52 99 33",
+        "email": "info@consuladopoloniabaleares.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Pamplonie",
+        "address": "Avda. Pio XII 1, 4 i 5 piętro; 31002 Pamplona",
+        "phone": "+34 948 221 303",
+        "email": "polska-consulado@gimex.es",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Walencji",
+        "address": "Avda. de las Cortes Valencinas 26, Blok 5, klatka 1, 1 piętro, nr 3; 46015 Walencja",
+        "phone": "+34 963 580 002",
+        "email": "consulpolvalencia@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -2330,6 +2856,64 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "info.poland@blshelpline.com",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Republice",
+        "address": "9th Floor, DelRosarioLaw Centre, 21st Drive corner 20th Drive, Bonifacio Global City, City of Taguig 1630, Metro Manila",
+        "phone": "+63 2 53182700",
+        "email": "manila.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Generalny",
+        "city": "San",
+        "address": "Unit 101, Levy P Laus Corporate Center, Laus Group, Jose Abad Santos Avenue, San Fernando, Pampanga",
+        "phone": "+63 2 527-74-91, +63 2 527-15-82 24, +63 2 527-1582",
+        "email": "mailadmin@uplines.net",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Cebu",
+        "address": "Rm. 102 Advent Business Center. Acacia Street, Lahug, Cebu City 6000",
+        "phone": "+63 32 233 68 08, +63 998 792 1239",
+        "email": "duranocarmel@yahoo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Davao",
+        "address": "",
+        "phone": "",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kororze",
+        "address": "2nd Floor RT Building Unit 212, Ernguul Road, Medalaii Hamlet, Koror, Republika Palau",
+        "phone": "(+680) 775 -7003, (+680) 488-1425",
+        "email": "utmetuchl@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Puerto",
+        "address": "True Care Blgd., Solid Road, Brgy. San Manuel, Puerto Princesa, Palawan",
+        "phone": "+63 961 071 7893",
+        "email": "polishconsulate.mimaropa@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -2376,6 +2960,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -2443,6 +3028,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2489,6 +3075,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2535,6 +3122,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Baku",
+        "address": "Azerbejdżan, AZ-1000, Baku ul. Kichik Gala 2, Icheri Sheher (Stare Miasto)",
+        "phone": "+994 12 505 53 60",
+        "email": "baku.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Baku",
+        "address": "Azerbejdżan, AZ-1000, Baku ul. Kichik Gala 2, Icheri Sheher (Stare Miasto)",
+        "phone": "+994 12 505 53 60",
+        "email": "baku.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -2581,6 +3186,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2627,6 +3233,88 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Via Jacopo Da Diacceto 32, 50123 Firenze",
+        "phone": "+39 055 9060152",
+        "email": "firenze@consolato-onorariofirenzepolonia.eu",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Ankonie",
+        "address": "Via Montebello 58/a, 60121 Ancona",
+        "phone": "+39 348 120 4886",
+        "email": "consolatopoloniamarche@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bolonii",
+        "address": "Via del Pratello 21, 40122 Bologna",
+        "phone": "+39 051 082 6625",
+        "email": "info@consolatopoloniabologna.eu",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Brindisi",
+        "address": "Vico De’ Lubelli 4, 72100 Brindisi",
+        "phone": "+39 335 7679898",
+        "email": "info@consolatopoloniabrindisi.eu",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Cagliari",
+        "address": "Piazza L’unione Sarda 5, 09122 Cagliari",
+        "phone": "+39 070 88 75079",
+        "email": "info@consolatopoloniacagliari.it",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Genui",
+        "address": "Piazza Tommaseo 4/5, 16129 Genova",
+        "phone": "+39 010 310 6275",
+        "email": "conpoloniage@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Neapolu",
+        "address": "Viale Gramsci 12, 80122 Napoli",
+        "phone": null,
+        "email": "segreteria@consolatopolonianapoli.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Palermo",
+        "address": "Via de Amicis 15, 90143 Palermo",
+        "phone": "+39 0919783210",
+        "email": "df@davidefarina.it",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "San",
+        "address": "Via XXV Marzo 71, 47895 Domagnano - San Marino",
+        "phone": "+39 3317071150 - 3493180795",
+        "email": "consolatopoloniasanmarino@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Wenecji",
+        "address": "Via Cappuccina 36, 30172 Mestre",
+        "phone": "+39 3357942953",
+        "email": "consolatopoloniavenezia@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -2694,6 +3382,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2740,6 +3429,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Algierze",
+        "address": null,
+        "phone": "+213 21 60 95 88",
+        "email": "algier@mon.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Algierze",
+        "address": "Rue Olof Palme, Nouveau-Paradou, Hydra - Algier",
+        "phone": "+213 21 60 99 50",
+        "email": "algier.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Algierze",
+        "address": null,
+        "phone": "+213 21 60 99 51",
+        "email": "algier.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -2786,6 +3501,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -2853,6 +3569,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2899,6 +3616,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Reykjaviku",
+        "address": "Islandia, 105 Reykjavík, Þórunnartun 2",
+        "phone": "+354 520 50 50",
+        "email": "reykjavik.info@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -2945,6 +3672,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -2991,6 +3719,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3037,6 +3766,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": null,
+        "phone": "+55 11 3151-5599",
+        "email": "consuladodapolonia.sp@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Belo",
+        "address": "Av. Do Contorno 6241, Savassi, CEP: 30110-039 Belo Horizonte - MG",
+        "phone": "+55 31 3225-9750",
+        "email": "fernando.oliveira@consuladodapoloniamg.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Manaus",
+        "address": "Rua João Valério, 250 Premium Center, no. 20 – São Geraldo, CEP: 69053-358 , Manaus – AM",
+        "phone": "+55 92 3636-8336",
+        "email": "consuladopolonia.am@josemoura.com.br",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Porto",
+        "address": "Av. Presidente Roosevelt, 929 sala 201, Navegantes, CEP: 90230-002, Porto Alegre – RS",
+        "phone": "+55 51 98147-0940",
+        "email": "auss@terra.com.br",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Salwadorze",
+        "address": "Av. Tancredo Neves 1632, Torre Norte, sala 1616, 41820-000 Salvador - BA",
+        "phone": null,
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3083,6 +3854,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Unit 605-607, 6th Floor, Athenee Tower, Wireless Road, Lumpini, Pathumwan, Bangkok 10330, Tajlandia",
+        "phone": "+66 2 079 7300 (poniedziałek - piątek 8:15 - 16:15)",
+        "email": "bangkok.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "",
+        "address": "Impiana Private Villas Kata Noi, 10 Kata Noi Road, Kata Noi, Phuket 83150",
+        "phone": "+66 76 076 330 070, +66 91 55 99999",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Phnom",
+        "address": "No. C15-C16, Street Betong, Sras Chak, Daun Penh, Phnom Penh, Cambodia",
+        "phone": "+855 767757777",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Wientian",
+        "address": "No. 249, Unit 16, 23 Singha Road, Access No. 11, Nongbone Village, Xaysettha District, Vientiane Capital, Lao PDR",
+        "phone": "+856 30 9151697",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Bangkoku",
+        "address": "Unit 605-607, 6th Floor, Athenee Tower, 63 Wireless Road, Lumpini, Pathumwan, Bangkok 10330, Tajlandia",
+        "phone": "+66 2 079 7300 (poniedziałek-piątek 9:00-10:00, 14:00-15:00)",
+        "email": "bangkok.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3129,6 +3942,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3175,6 +3989,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "telaviv.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Tel",
+        "address": "16 Soutine St., Tel Awiw 6468408, Izrael",
+        "phone": "+972 3 725 3111",
+        "email": "telaviv.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Hajfie",
+        "address": "85 She’erit Hapeta St., 34987 Hajfa, Izrael",
+        "phone": "+972 482 456 61",
+        "email": "oded@chemovil.co.il",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Tel",
+        "address": "16 Soutine St., Tel Awiw 6468408, Izrael",
+        "phone": "+972 3 725 3111",
+        "email": "telaviv.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3221,6 +4069,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3267,6 +4116,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3313,6 +4163,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3359,6 +4210,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3405,6 +4257,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Damaszku",
+        "address": "Ave. President Suleiman Frangieh 52, P.O. Box 40-215 Baabda, Beirut",
+        "phone": null,
+        "email": "damaszek.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3451,6 +4313,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3497,6 +4360,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Bratysławie",
+        "address": "ul. Paulínyho 7, 81491 Bratysława, Słowacja",
+        "phone": "+421 2 5949 0211",
+        "email": "bratyslawa.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Koszycach",
+        "address": "Mlynská 25, 040 01 Košice",
+        "phone": "+421 915 934 617",
+        "email": "office@konsulat.sk",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Liptowskim",
+        "address": "Námestie osloboditeľov 1, 031 01 Liptovský Mikuláš",
+        "phone": "+421 44 55 28 810, +421908662294",
+        "email": "konzul@verex.sk",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Preszowie",
+        "address": "Hlavná 139, 080 01 Prešov",
+        "phone": "+421 948 085 677, +421 918 802 762",
+        "email": "plkonzulpo@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Bratysławie",
+        "address": "ul. Paulínyho 7, 81491 Bratysława, Słowacja",
+        "phone": "+421 2 5949 0211",
+        "email": "bratyslawa.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -3564,6 +4469,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3610,6 +4516,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3656,6 +4563,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3702,6 +4610,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Podgoricy",
+        "address": "ul. Kozaračka 79, 81000 Podgorica, Czarnogóra",
+        "phone": "+382 20 608 320",
+        "email": "podgorica.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3748,6 +4666,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3794,6 +4713,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Dosze",
+        "address": "West Bay, Al-Qutaifiya, zone 66, str. no 913, bldg. no 152, Doha , State of Qatar",
+        "phone": "+974 44 11 32 30",
+        "email": "doha.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3840,6 +4769,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3886,6 +4816,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "taszkent.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Taszkencie",
+        "address": "Uzbekistan, Taszkent, Firdavsiy 66, 100084",
+        "phone": "+998 78 120 86 51",
+        "email": "taszkent.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Taszkencie",
+        "address": "Uzbekistan, Taszkent, Firdavsiy 66, 100084",
+        "phone": "+998 78 120 86 52; +998 78 120 86 53",
+        "email": "taszkent.rk.wiza@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -3932,6 +4888,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -3978,6 +4935,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "ul. Karlavägen 35, 114 31 Sztokholm",
+        "phone": "+46 8 50 57 50 00",
+        "email": "sztokholm.amb.info@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Östra Hamngatan 52, 411 09 Göteborg",
+        "phone": "+46 70 61 81 629",
+        "email": "goran.hult@sensa.se",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "",
+        "address": "Prästgårdsgatan 5, 172 32 Sundbyberg",
+        "phone": "+46 8 52 51 34 00",
+        "email": "sztokholm.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -4045,6 +5028,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4091,6 +5075,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4137,6 +5122,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4183,6 +5169,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4229,6 +5216,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4275,6 +5263,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4321,6 +5310,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4367,6 +5357,56 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "H.R. Jl. Rasuna Said Kav.X Blok IV/3, 12950 Jakarta, Indonesia",
+        "phone": "+62 21 25 25 939, +62 21 25 25 940",
+        "email": "dzakarta.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Generalny",
+        "city": "Dili",
+        "address": "Rua S. Jose, Delta 1, Comoro, Dili, Timor Leste",
+        "phone": "+67 0 33 122 64",
+        "email": "zeenat.aluwihare@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Abiansemal",
+        "address": "Jl. Raya Pengembungan-Bongkasa; Banjar Kutaraga, Bongkasa; Abiansemal; Badung; Bali 80532 / The Ayung Terrace Private Resort",
+        "phone": "+62  816 911 328",
+        "email": "honcon.pl.bali@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bandung",
+        "address": "Jl. Bukit Pakar Utara No. 75, Bandung 40198",
+        "phone": "+62 22 250-37-65, +62 811 205 266",
+        "email": "consulpolbdg@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Medan",
+        "address": "Jl. Masdulhak No. 9A, Medan 20152",
+        "phone": "+62 61 457 10 67, +62 61 452 58 39",
+        "email": "jonnernapitupulu@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Surabai",
+        "address": "Jl. Bogowonto 45, Surabaya 60241",
+        "phone": "+62 31 995 345 55/ 995 409 08",
+        "email": "consul@surabayapolandconsulate.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -4413,6 +5453,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Brukseli",
+        "address": "Avenue des Gaulois 29 / Galliërslaan 29, 1040 Etterbeek",
+        "phone": "+32 2 780 45 00 (nie dotyczy informacji w sprawach paszportów, prawnych, wiz i obsługi polskich obywateli)",
+        "email": "bebruamb2@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bilzen",
+        "address": "Tomstraat 101, 3700 Tongeren-Borgloon",
+        "phone": "+32 (0) 89 629560",
+        "email": "jean.biesmans@tectumgroup.be",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Deinze",
+        "address": "Drève de Linkebeek 21,1640 Rhode -Saint-Genèse",
+        "phone": "+32 (0) 2 467 62 20",
+        "email": "jc.wibo@jcwibo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Genval",
+        "address": "Fontaine Fonteny 10, 1332 Genval",
+        "phone": "+32 (0) 474 29 94 97",
+        "email": "philippe_godfroid@me.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Brukseli",
+        "address": "Rue des Francs 28 / Frankenstraat 28, 1040 Bruksela",
+        "phone": null,
+        "email": "bruksela.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -4480,6 +5562,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Brnie",
+        "address": "Jánská 449/12, 612 00 Brno",
+        "phone": "+420 731 451 233",
+        "email": "petr.mrkyvka@law.muni.cz",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -4547,6 +5639,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4593,6 +5686,80 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Panamie",
+        "address": null,
+        "phone": "+507 368 0250.",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Panamie",
+        "address": "Av. Balboa y Calle Aquilino de la Guardia, PH BICSA Financial Center, Oficina 3202, Piso 32, Ciudad de Panamá, República de Panamá. Apartado postal 0816.",
+        "phone": "+507 368 0250  faks: +5073680266.",
+        "email": "panama.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Generalny",
+        "city": "Puerto",
+        "address": "Guayacanes 15, Costambar, Puerto Plata, Dominikana",
+        "phone": "+180 9 970 73 03, +180 9 974 63 93 (w nagłych wypadkach)",
+        "email": "konsul@dominikana.konsulat.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Generalny",
+        "city": "San",
+        "address": "Calle L-3 no. 10, Zona Industrial Merliot, Antiguo Cuscatlán, La Libertad, San Salvador",
+        "phone": "+503 2251 9790, +503 2251 9797 (w nagłych przypadkach)",
+        "email": "elsalvador@consulpolonia.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Colón",
+        "address": "Provincia de Colón, Distrito de Colón, Corregimiento de Nueva Providencia, Urbanización Nueva Italia, Calle Transístmica, Edificio Parque del Recuerdo",
+        "phone": "+507 280 1040, +507 6671 0216",
+        "email": "josed@grupopalermo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Gwatemali",
+        "address": "1a. Calle 17-61, zona 15, Vista Hermosa 2, Casa 18-72, La Hondonada, Guatemala, Guatemala 01015",
+        "phone": "+502 55550775 (również w przypadkach nagłych)",
+        "email": "lernereva@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Port",
+        "address": "Rue Saint Laurent Tara’s, Laboule 12 en Pétion-Ville, HT6140, Haiti.",
+        "phone": "+50929406212- +50937594449 i +50933664449 (również w nagłych przypadkach)",
+        "email": "ssuccar@lissadelaw.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Santo",
+        "address": "Torre Empresarial AIRD 4to.Piso, Ave. Sarasota No. 20, Santo Domingo, República Dominicana.",
+        "phone": "+180 9 472 2072",
+        "email": "g.vega@claro.net.do",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Tegucigalpie",
+        "address": "Avis Rent a Car, Ave. República de Chile, Colonia Palmira, Tegucigalpa, Honduras, Apartado Postal 1208",
+        "phone": "+504 2239 9880, +504 9990 1025",
+        "email": "pamy.marinakys@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -4639,6 +5806,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4685,6 +5853,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4731,6 +5900,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4777,6 +5947,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4823,6 +5994,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -4890,6 +6062,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -4936,6 +6109,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Tunisie",
+        "address": "Le Grand Boulevard de la Corniche, 2045 Les Berges du Lac II, Tunis",
+        "phone": null,
+        "email": "tunis.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Susie",
+        "address": "Sousse - Chatt Meriem",
+        "phone": "+ 216 98 400 760",
+        "email": "drazizfredj@yahoo.fr",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Tunisie",
+        "address": "Le Grand Boulevard de la Corniche, 2045 Les Berges du Lac II, Tunis (wejście do Konsulatu od Avenue Beji Caid Essebsi )",
+        "phone": "+216 71 196 191 (w godzinach pracy urzędu)",
+        "email": "tunis.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -4982,6 +6181,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5028,6 +6228,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5074,6 +6275,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5120,6 +6322,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5166,6 +6369,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5212,6 +6416,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Kuala",
+        "address": "No 10, Lorong Damai 9, 55000 Kuala Lumpur, Malaysia",
+        "phone": "+60 3 2161 0805, +60 3 2161 0780",
+        "email": "kualalumpur.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bandar",
+        "address": "c/o: Laksamana College of Business, Roof Top, Plaza Abdul Razak, Jalan Laksamana Abdul Razak, Km2 Jalan Tutong, Bandar Seri Begawan BA 1712, Brunei Darussalam",
+        "phone": "673-2238816",
+        "email": "bogusia@laksamanacollege.edu.bn",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "George",
+        "address": "No 8 Green Hall, 10200 George Town, Penang",
+        "phone": "+60 12 489 9315",
+        "email": "suppiahmanikkam@yahoo.co.uk",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kuching",
+        "address": "Lot 154-156 2nd floor, Jalan Sungai Padungan, 93100 Kuching, Sarawak",
+        "phone": "+6082 413877",
+        "email": "pol.kch@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Kuala",
+        "address": "No 10, Lorong Damai 9, 55000 Kuala Lumpur, Malaysia",
+        "phone": "+60 3 2161 0805, +60 3 2161 0780",
+        "email": "kualalumpur.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -5258,6 +6504,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5304,6 +6551,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5350,6 +6598,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5396,6 +6645,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5442,6 +6692,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5488,6 +6739,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5534,6 +6786,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "ryojikan@kobe-polmeiyo.com",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Tokio",
+        "address": "Japonia, Tokio, 2-13-5 Mita, Meguro-ku, 153-0062",
+        "phone": "+81 3 57947020",
+        "email": "tokio.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -5580,6 +6850,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5626,6 +6897,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5672,6 +6944,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Zagrzebiu",
+        "address": "Miramarska 23, 10000 Zagreb",
+        "phone": "+385 1 48 99 444",
+        "email": "hrzagamb@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Splicie",
+        "address": "Split, Kliška 29, 21000",
+        "phone": "+385 21 778 776, +385 91 438 0558",
+        "email": "pol-kon@st.ht.hr",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Zagrzebiu",
+        "address": "Miramarska 23, 10000 Zagreb, piętro 5",
+        "phone": "+385 1 48 99 414",
+        "email": "zagrzeb.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -5739,6 +7037,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5785,6 +7084,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5831,6 +7131,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Lublanie",
+        "address": "Bežigrad 10, 1000 Lublana",
+        "phone": "+386 1 436 54 50",
+        "email": "lublana.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Nowej",
+        "address": "Tumova ulica št. 5",
+        "phone": "00386 (0) 41 604-120",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -5898,6 +7216,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5944,6 +7263,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -5990,6 +7310,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Bejrucie",
+        "address": "Ave. President Suleiman Frangieh 52,",
+        "phone": "+961 5468 152",
+        "email": "bejrut.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -6036,6 +7366,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Valletcie",
+        "address": "Phoenix Business Centre, Level 2, Old Railway Track, Santa Venera SVR 9022",
+        "phone": "+356 27793002",
+        "email": "valletta.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Valletcie",
+        "address": "Phoenix Business Centre, Level 2, Old Railway Track, Santa Venera SVR 9022",
+        "phone": "+356 27793002",
+        "email": "valletta.amb.wk@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -6103,6 +7451,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6149,6 +7498,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Belgradzie",
+        "address": "Ul. Neznanog junaka 1a, 11040 Belgrad",
+        "phone": "+ 381 11 206 53 01",
+        "email": "belgrad.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Niszu",
+        "address": "Vojvode Tankosicia 9, 18000 Nisz",
+        "phone": "+381 18 300615; +381 18 300616; +381 60 2302007",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Belgradzie",
+        "address": "Ul. Neznanog junaka 1a, 11040 Belgrad",
+        "phone": null,
+        "email": "belgrad.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -6216,6 +7591,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Rydze",
+        "address": "Mednieku iela 6B, LV-1010 Ryga, Łotwa",
+        "phone": "+371 6 703 15 00",
+        "email": "ryga.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Rydze",
+        "address": "Mednieku iela 6B, LV-1010 Ryga, Łotwa",
+        "phone": "+371 6 703 15 14",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -6283,6 +7676,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6329,6 +7723,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "nikozja.kg.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Nikozji",
+        "address": "ul. Kennedy Avenue 12-14, Office 601, 1087 Nicosia, Cyprus",
+        "phone": "+357 22 753 517",
+        "email": "nikozja.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Limassol",
+        "address": "Matrix Tower II, Second Floor, Spyrou Kyprianou 15, 4001 Limassol",
+        "phone": "+357 22 27 10 00",
+        "email": "info@papaphilippou.eu",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -6375,6 +7795,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6421,6 +7842,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6467,6 +7889,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Bagdadzie",
+        "address": "British Embassy, International Zone, Bagdad",
+        "phone": "+964 780 905 10 68",
+        "email": "bagdad.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -6513,6 +7945,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6559,6 +7992,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6605,6 +8039,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6651,6 +8086,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6697,6 +8133,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Oniashvili 24, 0160 Tbilisi, Gruzja",
+        "phone": "+ 995 322 92 03 98",
+        "email": "tbilisi.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -6743,6 +8189,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6789,6 +8236,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6835,6 +8283,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Libii",
+        "address": "Le Grand Boulevard de la Corniche, 2045 Les Berges du Lac II, Tunis",
+        "phone": "+216 71 196 193",
+        "email": "trypolis.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Tunisie",
+        "address": "Le Grand Boulevard de la Corniche, 2045 Les Berges du Lac II, Tunis (wejście do Konsulatu od Avenue le Lac Nord)",
+        "phone": "+216 71 196 191 (w godzinach pracy urzędu)",
+        "email": "tunis.amb.wk@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -6881,6 +8347,72 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Hietzinger Hauptstraße 42C, 1130 Wiedeń",
+        "phone": null,
+        "email": "wieden.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Wydział Konsularny i Polonii",
+        "phone": null,
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Graz",
+        "address": "Joanneumring 3, 8010 Graz",
+        "phone": "+43 0 664 9666799",
+        "email": "cc-pl@tcm-international.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Innsbrucku",
+        "address": "Fallmerayerstrasse 8, 6020 Innsbruck",
+        "phone": "+43 0 512 346 206",
+        "email": "honorarkonsul.sprenger@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Klagenfurcie",
+        "address": "Waagplatz 6, 9020 Klagenfurt",
+        "phone": "+43 463 / 50 40 40",
+        "email": "honorarkonsulat@lanker.at",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Linz",
+        "address": "Mozartstraße 20, 4020 Linz",
+        "phone": "+43 0 732 780 02 310",
+        "email": "ooe@honorarkonsul-pl.at",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Salzburgu",
+        "address": "Petersbrunnstraße 13, 5020 Salzburg",
+        "phone": "+43 662 84 12 02",
+        "email": "salzburg@konsulat-polen.at",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "",
+        "address": null,
+        "phone": "+43 1 87015100 - godziny przyjmowania połączeń (w sprawach rozpoczętych w urzędzie) w dni robocze: w poniedziałek w godz. 10:00-12:00, od wtorku do piątku w godz. 14:00-16:00",
+        "email": "wieden.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -6948,6 +8480,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -6994,6 +8527,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Dej. Belay Zeleke Road, Gulele sub-City, Kebele 08, House No 583, P.O.Box 27207/ 1000 Addis Ababa",
+        "phone": "+251 11 157 41 89; +251 11 157 41 90",
+        "email": "secretariat.addisababa@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Addis",
+        "address": "Dej. Belay Zeleke Road, Gulele sub-City, Kebele 08, House No 583, P.O.Box 27207/ 1000 Addis Ababa",
+        "phone": "+251 11 157 41 89, +251 11 157 41 90",
+        "email": "addisabeba.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -7040,6 +8591,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7086,6 +8638,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Asmarze",
+        "address": "Tiravolo, Zip code: 1A746, Ruba Hadas Street no. 55 PO.Box 5631 Asmara, Eritrea",
+        "phone": "+ 291-1-182472",
+        "email": "polconasmara2018@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Chartumie",
+        "address": "Altaef 394/51, Chartum, Sudan",
+        "phone": "+ 249912353565",
+        "email": "samoline2005@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Kairze",
+        "address": "5 El-Aziz Osman, Zamalek, Egipt, Kair",
+        "phone": "+20 227355416",
+        "email": "cairo.secretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Kairze",
+        "address": "5 El-Aziz Osman, Zamalek, Egipt, Kair",
+        "phone": "+20 227367456",
+        "email": "kair.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -7132,6 +8718,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7178,6 +8765,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7224,6 +8812,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7270,6 +8859,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7316,6 +8906,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Tiranie",
+        "address": "Rruga e Bogdanëve 50; 1001 Tirana",
+        "phone": "+355 445 100 20",
+        "email": "tirana.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Tiranie",
+        "address": "Rruga e Bogdanëve 50; 1001 Tirana",
+        "phone": "+355 445 100 37",
+        "email": "tirana.wk.dyzurny@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -7383,6 +8991,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7429,6 +9038,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7475,6 +9085,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7521,6 +9132,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7567,6 +9179,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7613,6 +9226,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -7680,6 +9294,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7726,6 +9341,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "daressalaam.amb.sekretariat@msz.gov.pl",
+        "phone": null,
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "daressalaam.visa@msz.gov.pl",
+        "phone": null,
+        "email": "daressalaam.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Dar",
+        "address": "Mtwara rd 15, Oysterbay, P.O. Box 249, Dar es Salaam",
+        "phone": "+255 22 222 1050",
+        "email": "daressalaam.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kigali",
+        "address": "Avenue de la Justice, P.O. Box 3246, Kigali, Rwanda",
+        "phone": "+250 788 300 340",
+        "email": "cngarambe@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -7772,6 +9421,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "sofia.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Sofii",
+        "address": "ul. Chan Krum 46, 1000 Sofia, BG",
+        "phone": "+359 2 902 34 00",
+        "email": "sofia.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Nesebyrze",
+        "address": "ul. Mladost 62, 8230 Nesebyr",
+        "phone": "+ 359 893 550 105",
+        "email": "khnesebar@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Sofii",
+        "address": "ul. Chan Krum 46, 1000 Sofia, BG",
+        "phone": "+359 2 902 34 15;",
+        "email": "sofia.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -7839,6 +9522,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -7885,6 +9569,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Alexanderstraat 25, 2514 JM Den Haag). Można je również umieścić bezpośrednio w skrzynce pocztowej Ambasady znajdującej się od strony ulicy Javastraat.",
+        "phone": null,
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Hadze",
+        "address": "Alexanderstraat 25, 2514 JM Den Haag",
+        "phone": "+31 70 79 90 110",
+        "email": "haga.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Oosterbeek",
+        "address": "Dorpsstraat 67, 6661 EH Elst",
+        "phone": "+31 26 3799984",
+        "email": "HCPolen@baltussen.onl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Hadze",
+        "address": "Alexanderstraat 25, 2514 JM Den Haag",
+        "phone": null,
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -7952,6 +9670,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Via dei Delfini 16 int. 3, 00186 Rzym",
+        "phone": "+39 0 66990958",
+        "email": "watykan.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -8019,6 +9747,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8065,6 +9794,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Helsinkach",
+        "address": "Armas Lindgrenin tie 21, 00570 Helsinki",
+        "phone": "+358 9 618 28 120",
+        "email": "helsinki.amb.info@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Jyv",
+        "address": "Ahlmaninkatu 2E, 40100 Jyväskylä",
+        "phone": "+358 400 642 569",
+        "email": "hannu.tolvanen@valdicre.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kuopio",
+        "address": "c/o Hydroline Oy, Omakotitie 47, 70600 Kuopio",
+        "phone": "+358 405 051 625",
+        "email": "mikko.laakkonen@hydroline.fi",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Tampere",
+        "address": "c/o Business Tampere, Kelloportinkatu 1 B, 33100 Tampere",
+        "phone": "+358 40 502 8836",
+        "email": "matti.sommarberg@elisanet.fi",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Turku",
+        "address": "c/o Etacom Oy, Niuskalankatu 2, 20380 Turku",
+        "phone": "+358 2 478 0352",
+        "email": "jari.rastas@kolumbus.fi",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -8111,6 +9882,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8157,6 +9929,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8203,6 +9976,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8249,6 +10023,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8295,6 +10070,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Bernie",
+        "address": "Elfenstrasse 9, Postfach, 3000 Bern 16",
+        "phone": "+41313580240",
+        "email": "berno.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bazylei",
+        "address": "Lange Gasse 90, 4052 Basel",
+        "phone": "+41 618 264 602",
+        "email": "danielpfirter@bluewin.ch",
+        "website": "https://polconsul-basel.ch/"
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Lugano",
+        "address": "Viale C. Cattaneo 1, 6900 Lugano",
+        "phone": "+41 79 226 19 64",
+        "email": "corp@aequilag.ch",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -8362,6 +10163,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8408,6 +10210,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -8475,6 +10278,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Ammanie",
+        "address": "No 3 , Mahmoud Seif Al-Din Al-Irani St., P.O.Box 942050, Amman 11194",
+        "phone": "+962 6 551 25 93, +962 6 551 25 96",
+        "email": "amman.amb.sekretariat@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -8521,6 +10334,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8567,6 +10381,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Peru",
+        "address": "Av. Salaverry 1978, Jesús María - Lima 11, Perú",
+        "phone": "+51 1 471 3920, +51 1 471 3925, +51 1 470 0424",
+        "email": "lima.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Arequipa",
+        "address": "Jerusalén 401-B, Cercado Arequipa, Peru",
+        "phone": "+51 54 206217",
+        "email": "consuladopolonia@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Callao",
+        "address": "Calle Agua Marina 210, Bellavista, Callao, Peru",
+        "phone": "+51 1 247 44 46",
+        "email": "consuladopolonia.callao@yahoo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Quito",
+        "address": "Bernardo de Legarda Oe9/125 y Cesar Borja Oe9/125 y Cesar Borja, Quito – Cumbayá",
+        "phone": "+593 2 3564356, 593 999781292",
+        "email": "consulado.honorario.polonia.quito@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Santa",
+        "address": "Calle Velasco 542 - Santa Cruz de la Sierra",
+        "phone": "+591 750 62521; +591 3 335 2009; +591 72167000",
+        "email": "anita.ender@bcdtravel.com.bo",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -8613,6 +10469,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8659,6 +10516,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8705,6 +10563,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8751,6 +10610,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "dakar.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Dakarze",
+        "address": "Route des Almadies, Immeuble „Les Jardins des Almadies”, App. 4/A, B.P. 14419 Peytavin Dakar, Senegal",
+        "phone": "+221 33 859 57 70",
+        "email": "dakar.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Gambii",
+        "address": "40 Kairaba Avenue, PO BOX 2646 Serrekunda, Kanifing Municipality, Ksmd, The Gambia",
+        "phone": null,
+        "email": "info@honorarypolishconsulgambia.gm",
+        "website": "https://honorarypolishconsulgambia.gm/"
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Dakarze",
+        "address": "Route des Almadies, Immeuble „Les Jardins des Almadies”, App. 4/A, B.P. 14419 Peytavin Dakar, Senegal",
+        "phone": "+221 33 859 57 70",
+        "email": "dakar.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -8797,6 +10690,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8843,6 +10737,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -8889,6 +10784,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Wilnie",
+        "address": "ul. Šv. Jono 3, LT-01123 Wilno",
+        "phone": "+370 5 2194 700",
+        "email": "vilnius.embassy@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Wilnie",
+        "address": "ul. Šv. Jono 3, LT-01123 Wilno",
+        "phone": "+370 5 2194 731",
+        "email": "wilno.amb.wk@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -8956,6 +10869,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Mongolii",
+        "address": "ICC Tower, 17th floor, Jamiyan Gun Street 9",
+        "phone": "+976 7711 0591",
+        "email": "ulanbator.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Erdenet",
+        "address": "Sukhbaatar Avenue, 2nd micro district, Selenge hotel Building , Suite no 61025, Erdenet, Mongolia",
+        "phone": null,
+        "email": "honoraryconsulpoland@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9002,6 +10933,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9048,6 +10980,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Biszkeku",
+        "address": "Gogola 28a, 720021 Biszkek, Republika Kirgistanu",
+        "phone": "+996 220 559 629",
+        "email": "konsulat.pl.kgz@gmail.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9094,6 +11036,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9140,6 +11083,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9186,6 +11130,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": "+972 2 2775459",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9232,6 +11186,64 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": null,
+        "phone": null,
+        "email": "buenosaires.wk.dyzurny@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Buenos",
+        "address": "Alejandro María de Aguado 2870, C1425CEB Buenos Aires, Argentyna",
+        "phone": "+ 54 11 4808 1700",
+        "email": "buenosaires.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Comodoro",
+        "address": "c/ Sarmiento 180, 9000 Comodoro Rivadavia, Chubut, Argentyna",
+        "phone": "+54 9 297 6212248",
+        "email": "monicacristinamickiewicz@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Córdoba",
+        "address": "c/ Cumbres Negras 2280, Barrio Parque Capital, 5011, Córdoba, Córdoba, Argentina",
+        "phone": "+549 351 5460794",
+        "email": "consuladopolonia.cba@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Ober",
+        "address": "c/ Ucrania 734, 3362 Obera, Misiones, Argentina",
+        "phone": "+54 37 5540 2507",
+        "email": "mimarsrl@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Rosario",
+        "address": "Bv. Oroño 275, 2000 Rosario, Santa Fé, Argentina",
+        "phone": "+54 34 1425 1964",
+        "email": "b.moszoro@hotmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Asunción",
+        "address": "Edificio LIDER IV, Estrella no 692, casi Juan E. O'Ieary, oficina 164, CP 1225, Asunción, República del Paraguay",
+        "phone": "+595 981 555545",
+        "email": "consulpol@goldenline.com.py",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9278,6 +11290,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9324,6 +11337,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9370,6 +11384,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Erywaniu",
+        "address": "Hanrapetutyan 44/1, 0010 Erywań, Armenia",
+        "phone": null,
+        "email": "erywan.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "",
+        "address": "Hanrapetutyan 44/1, 0010 Erywań, Armenia",
+        "phone": null,
+        "email": "erywan.amb.wk@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9416,6 +11448,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Luandzie",
+        "address": "Rua Damiao de Gois 64, C.P. 1340, Luanda, Republika Angoli",
+        "phone": "+ 244 222 32 71 99",
+        "email": "luanda.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Luandzie",
+        "address": "Rua Damiao de Gois 64, C.P. 1340, Luanda, Republika Angoli",
+        "phone": "+ 244 222 32 71 99",
+        "email": "consul.luanda@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9462,6 +11512,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9508,6 +11559,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9554,6 +11606,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9600,6 +11653,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Tallinnie",
+        "address": "Suur-Karja 1/ Vana Turg 2, 10140 Tallinn",
+        "phone": "+3726278206",
+        "email": "eetalamb@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -9667,6 +11730,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9713,6 +11777,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9759,6 +11824,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Abudży",
+        "address": "10, River Niger St., off Danube St., Maitama, Abudża, Nigeria",
+        "phone": null,
+        "email": "abuja.secretary@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "31 Bendu’s Drive, Beach Road, Freetown, Sierra Leone",
+        "phone": "+232 77 809 809, +232 30 918 918",
+        "email": "info@polandconsulsl.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Akrze",
+        "address": "Boundary Road 37, East Legon, P.O. Box CT 231, Accra, Ghana",
+        "phone": null,
+        "email": "polandconsulate.ghana@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Jaunde",
+        "address": "Rue 1381 Nouvelle Route Bastos, B.P. 20158, Cameroun, Yaoundé",
+        "phone": "+237 699 924 424",
+        "email": "consulat_pol_cam@yahoo.fr",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Abudży",
+        "address": "10, River Niger St., off Danube St., Maitama, Abudża, Nigeria",
+        "phone": "+234 805 200 0204",
+        "email": "abuja.consulate@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9805,6 +11912,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9851,6 +11959,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Rabacie",
+        "address": "23, av. Oqbah, B.P. 425, 10 090 Rabat. Maroc",
+        "phone": "+212 537 77 17 94",
+        "email": "rabat.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Agadirze",
+        "address": "Université internationale d’Agadir, Bab El Madina,Tillila,  Agadir",
+        "phone": "+212 661 282 626",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Marrakeszu",
+        "address": "Résidence Akensouss, 23 Rue Tarik Ibn Zyad, Appt 25, 5e Etage, Guéliz, Marrakech, Maroc",
+        "phone": "+212 666 512 707",
+        "email": "lahcenzelmat@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat",
+        "city": "Nawakszut",
+        "address": "Ilot V, n° 33 Sud, BP 6579, Nouakchott, Mauritanie",
+        "phone": "+222 (4524) 11 09, +222 (4524) 11 10",
+        "email": "ouldoumar@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Rabacie",
+        "address": "23, av. Oqbah, B.P. 425, 10 090 Rabat. Maroc",
+        "phone": "+212 537 77 11 73",
+        "email": "rabat.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -9897,6 +12047,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9943,6 +12094,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -9989,6 +12141,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10035,6 +12188,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10081,6 +12235,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10127,6 +12282,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kilkenny",
+        "address": "15A, Hebron Business Park, Kilkenny, Co. Kilkenny",
+        "phone": "+353 86 325 5840",
+        "email": "polishconsular.kilkenny@twilight.ie",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Limerick",
+        "address": "25 Glentworth Street, Limerick, Co. Limerick",
+        "phone": "+353 61 416 469",
+        "email": "polishconsulatelimerick@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Dublinie",
+        "address": "4-8 Eden Quay, Dublin 1, D01 N5W8",
+        "phone": "+353 1 283 08 55",
+        "email": "dublin@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -10194,6 +12375,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Islamabadzie",
+        "address": "Street 24, G-5/4, Diplomatic Enclave II 44-000, Islamabad (P.O. Box 1032)",
+        "phone": "+92 51 2600844, +92 51 2600848, +92 51 2600851",
+        "email": "islamabad.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Islamabadzie",
+        "address": "Street 24, G-5/4, Diplomatic Enclave II, Islamabad",
+        "phone": null,
+        "email": "islamabad.konsul@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Karaczi",
+        "address": "Baig Tower, Plot No. E-6, Floor 6,",
+        "phone": "+92 312 222 2228",
+        "email": "secretary2@thebaigs.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Lahaur",
+        "address": "Plot No.109/M 22 & 23, Block D,",
+        "phone": "+92 42 35143335, 35143336",
+        "email": "ahmad.hasnain@alliedmarketing.com.pk",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -10240,6 +12455,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10286,6 +12502,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10332,6 +12549,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10378,6 +12596,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Generalny",
+        "city": "Dhace",
+        "address": "Erectors House (10th Floor), 18 Kemal Ataturk Avenue, Banani, Dhaka 1213",
+        "phone": "+ 88 02 222275422 - 25 /",
+        "email": "polcondhaka@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Generalny",
+        "city": "Katmandu",
+        "address": "Dhobighat, Nayabato, Lalitpur, Nepal, P.O. Box 363",
+        "phone": "+977 1 5526904, +977 1 5553572",
+        "email": "lmg@golchha.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bengaluru",
+        "address": "No 42/2 8th Main Road, 5th Cross, RMV Extension, Sadashivanagar, Bangalore 560080, Indie",
+        "phone": "+ 91 80 2361 7805",
+        "email": "polishhc.bangalore@yahoo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kalkucie",
+        "address": "Emami Tower, 687 Anandapur, E M Bypass, Kolkata 700 107, India",
+        "phone": "+ 91 33 6613 6424",
+        "email": "mail@polandconsulatekol.org",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -10424,6 +12676,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10470,6 +12723,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10516,6 +12770,48 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.",
+        "phone": null,
+        "email": "iod@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Uerdinger Straße 58, 40474 Düsseldorf",
+        "phone": "+ 49 211 97 63 11 44",
+        "email": "honorarkonsul@polen-nrw.de",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Konstancji",
+        "address": "Sigismundstrasse 19, 78462 Konstanz",
+        "phone": "+49 7531 804 20 18",
+        "email": "bw@honorarkonsulat-polen.de",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Lipsku",
+        "address": "Wächterstraße 15, 04107 Leipzig",
+        "phone": "+49 341 442418 83",
+        "email": "info@honorarkonsulat-polen-sachsen.de",
+        "website": "https://honorarkonsulat-polen-sachsen.de/"
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Lubece",
+        "address": "Zum Hafenplatz 1, 243570 Lübeck Travemünde",
+        "phone": "+49 4502 801300",
+        "email": "info@konsul-polen-sh.de",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -10583,6 +12879,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10629,6 +12926,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10675,6 +12973,136 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Anchorage",
+        "address": "8433 Moorland Street, Anchorage, AK 99502. Adres do korespondencji: P.O. Box 220228 , Anchorage, Alaska 99522",
+        "phone": "+1 907 344 4722",
+        "email": "stanb@kirbyalaska.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Atlanta",
+        "address": "",
+        "phone": "faks:",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Baltimore",
+        "address": "1627 Eastern Avenue, Suite 100, Baltimore, MD 21231",
+        "phone": "+1 410 204 4575",
+        "email": "rppp@polishconsulatemd.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Charlottesville",
+        "address": "513 N. Main Street, Gordonsville, VA 22942. Adres do korespondencji: P.O. Box 26, Somerset, VA 22972",
+        "phone": "+1 434 906 0108",
+        "email": "Robert.joskowiak@polishconsulateva.us",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Denver",
+        "address": "528 Williams St. Denver, Denver, Colorado 80218",
+        "phone": "+1 303 485 6620; +1 303 517 1278 (nagłe wypadki)",
+        "email": "tskotnicki@aol.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Detroit",
+        "address": "150 W Jefferson Avenue, Suite 2500, Detroit, Michigan 48226",
+        "phone": "+1 313 496 7600",
+        "email": "Consulate@PLinDetroit.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Filadelfii",
+        "address": "812 Lombard St #12, Philadelphia, PA 19147",
+        "phone": "+1 215 627 1391",
+        "email": "dziecko2@comcast.net",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Honolulu",
+        "address": "2825 South King Street, #2701, Honolulu, Hawaii 96826",
+        "phone": "+1 808 955 4567",
+        "email": "bozenajarnot@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Manchester",
+        "address": "73 Forest Street, Manchester-by-the-Sea, MA 01944",
+        "phone": "+1 978 317 6978",
+        "email": "mdphdjd@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Miami",
+        "address": "1440 79th Street Causeway, Suite 117, Miami, Florida 33141",
+        "phone": "+1 305 866 0077",
+        "email": "polconsulfl@yahoo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Newark",
+        "address": "113 University Avenue, Newark, NJ 07102",
+        "phone": "+1 973 433 9594",
+        "email": "honoraryconsul@raschwartz.info",
+        "website": "http://www.nj.info.pl/"
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Pittsburgh",
+        "address": "501 Grant Street, Suite 300, Pittsburgh, PA 15219",
+        "phone": "+1 412 454 5002",
+        "email": "mateusz.saykiewicz@troutman.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Raleigh",
+        "address": "2620 Mayview Road, Raleigh, North Carolina 27607",
+        "phone": "+1 919 233 5200",
+        "email": "afountain@mindspring.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Rancho",
+        "address": "16212 Avenida Cuesta Los Osos, Rancho Santa Fe, CA 92067. Adres do korespondencji: P.O. Box 9727, Rancho Santa Fe, CA 92067",
+        "phone": "+1 619 417 0454",
+        "email": "behaider@yahoo.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Saint",
+        "address": "120 S Central Avenue #1200, Clayton, Missouri 63105",
+        "phone": "+1 314 439 6883",
+        "email": "KHRPSTL@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Seattle",
+        "address": "3907 47th Avenue NE, Seattle, Washington 98105",
+        "phone": "+1 206 948 8064",
+        "email": "polishconsulseattle@outlook.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -10721,6 +13149,40 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "58, Red Hill Road (off Limuru Road), P.O. BOX 352, 00621 Nairobi, Kenia",
+        "phone": "+254 20 712 00 19; +254 20 712 00 20",
+        "email": "nairobi.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": null,
+        "phone": "+248 2 613 159",
+        "email": "hconsulseychelles@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Omnicane House, Mon Trésor Business Gateway, New Airport Access Rd, Plaine Magnien",
+        "phone": "+230 660-0600",
+        "email": "polandconsultate@intnet.mu",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kampali",
+        "address": "Las Vegas Garden Hotel, Hamis Kiggundu Rd., Bunga - Kawuku, P.O. Box 1569, Kampala, Uganda",
+        "phone": "+256 712 439 003",
+        "email": "info@polandconsulateug.com",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -10767,6 +13229,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10813,6 +13276,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10859,6 +13323,56 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "Olav Kyrres plass 1, 0273 Oslo",
+        "phone": "+47 24 110 850",
+        "email": "oslo.info@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "",
+        "address": "Nedre Klokkersundvegen 41, 6015 Ålesund",
+        "phone": "+47 91 61 51 77",
+        "email": "ksandli007@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Kristiansand",
+        "address": "Lagmannsholmen 7, 4610 Kristiansand",
+        "phone": "+47 46 41 10 00",
+        "email": "thomas.granfeldt@seafront.no",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Rjukan",
+        "address": "Sam Eydesgt 93A, 3660 Rjukan",
+        "phone": "+47 48 30 05 64",
+        "email": "adv.lykke@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Stavanger",
+        "address": "Strandkaien 28, 4001 Stavanger",
+        "phone": "+47 51 84 12 20",
+        "email": "konsulhonorowy@tingmann.no",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Trondheim",
+        "address": "Innherredsveien 101, 7503 Stjørdal",
+        "phone": "+47 478 734 89",
+        "email": "hjordis@medbroen.no",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -10905,6 +13419,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10951,6 +13466,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -10997,6 +13513,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11043,6 +13560,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11089,6 +13607,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11135,6 +13654,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11181,6 +13701,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -11248,6 +13769,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11294,6 +13816,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11340,6 +13863,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Lizbonie",
+        "address": "Av. das Descobertas, 2, 1400-092 Lisboa, Portugal",
+        "phone": "+351 213 041 410",
+        "email": "lizbona.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Porto",
+        "address": "Av. Dom João II, 4430-022 Vila Nova de Gaia",
+        "phone": "+351 22 377 51 99 ext. 399",
+        "email": "geral@consuladopoloniaporto.pt",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -11407,6 +13948,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11453,6 +13995,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11499,6 +14042,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11545,6 +14089,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11591,6 +14136,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11637,6 +14183,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11683,6 +14230,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11729,6 +14277,56 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Adelajdzie",
+        "address": "94 Henley Beach Rd, Mile End SA 5031, Australia",
+        "phone": "+61 451 924 711",
+        "email": "polishconsuladelaide@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Brisbane",
+        "address": "758 Robinson Road West, Aspley, QLD 4034",
+        "phone": "+61 7 3263 1310",
+        "email": "polishconsulbrisbane@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Hobart",
+        "address": "7 Waverley Ave., Mt. Stuart, Tasmania 7000",
+        "phone": "+61 3 62281040",
+        "email": "polishconsultas@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Melbourne",
+        "address": "80 South Road, Brighton, Vic 3186",
+        "phone": "+61 0 402 003 006",
+        "email": "andrzejsoszynski@polishconsulatevic.net",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Papua",
+        "address": ": PO Box 1317, Boroko, NCD, Papua Nowa Gwinea",
+        "phone": "+ 675 7366 6636",
+        "email": "janczuba@icloud.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Perth",
+        "address": "-",
+        "phone": "-",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -11775,6 +14373,24 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Teheranie",
+        "address": "No. 2, Pirouz Alley, Nelson Mandela Boulevard (Africa Blv.), 1917663113 Tehran, Iran",
+        "phone": "+98 21 88 78 72  63, +98 21 88 78 72 64",
+        "email": "teheran.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Teheranie",
+        "address": "No. 2, Pirouz Alley, Nelson Mandela Boulevard (Africa Blv.), 1917663113 Tehran, Iran",
+        "phone": null,
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -11821,6 +14437,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11867,6 +14484,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -11913,6 +14531,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": [
       {
@@ -11980,6 +14599,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -12026,6 +14646,16 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "Hawanie",
+        "address": "Calle G No. 452 esquina 19, Vedado, 10 400 La Habana",
+        "phone": "+53 7 833 2406, +53 7 833 2440",
+        "email": null,
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   },
@@ -12072,6 +14702,80 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Bordeaux",
+        "address": "6 rue Nicolas Leblanc, ZA Saint-Exupéry, 33700 Mérignac, Francja",
+        "phone": "+33 6 80 97 46 25",
+        "email": "contact@pologne-consulat-bordeaux.org",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Lille",
+        "address": "31 rue des Fossés, 59000 Lille",
+        "phone": "+33 06 72 41 06 07",
+        "email": "consulatpolognelille@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Monako",
+        "address": "“Château Perigord”, 6, Lacets Saint-Léon, MC 98000 Principauté de Monaco",
+        "phone": "+377640624031",
+        "email": "info@alessandrogiulianifood.mc",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Montpellier",
+        "address": "32, rue de l'Aiguillerie, 34000 Montpellier, Francja",
+        "phone": "+33 09 81 77 84 99",
+        "email": "consulatpolognemtp@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Nancy",
+        "address": "2, rue du Grand Verger, 54000 Nancy, Francja",
+        "phone": "+33 3 72 14 82 72",
+        "email": "consulat.nancy@numericable.fr",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Nevers",
+        "address": "Château de Prye, 58160 La Fermeté, Francja",
+        "phone": "+33 6 49 67 28 28",
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Nicei",
+        "address": "205, Avenue de la Lanterne, 06200 Nicea, Francja",
+        "phone": "+33 4 93 71 47 28",
+        "email": "forkasiewicz@gmail.com",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Tours",
+        "address": "10, rue Léonard de Vinci, 37000 Tours, Francja",
+        "phone": "+33 6 14 98 34 41",
+        "email": "konsulatrp.tours@yahoo.fr",
+        "website": null
+      },
+      {
+        "type": "Konsulat Honorowy",
+        "city": "Troyes",
+        "address": "6, rue Vauluisant, 10000 Troyes, Francja",
+        "phone": "+33 6 32 79 42 99",
+        "email": "konsulatrp.troyes@orange.fr",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": [
       {
@@ -12139,6 +14843,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -12185,6 +14890,7 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [],
     "attractions": [],
     "holidays": []
   },
@@ -12231,6 +14937,32 @@
       "condition": "",
       "icon": ""
     },
+    "embassies": [
+      {
+        "type": "Ambasada",
+        "city": "",
+        "address": "kuwejt.amb.sekretariat@msz.gov.pl",
+        "phone": null,
+        "email": null,
+        "website": null
+      },
+      {
+        "type": "Ambasada",
+        "city": "Kuwejcie",
+        "address": "Al-Jabriya, Block 7, Street 3, Villa 20  P.O. Box 5066 Safat, 13051 Kuwait",
+        "phone": "+965 253 11 571",
+        "email": "kuwejt.amb.sekretariat@msz.gov.pl",
+        "website": null
+      },
+      {
+        "type": "Wydział Konsularny",
+        "city": "Kuwejcie",
+        "address": "Al-Jabriya, Block 7, Street 3, Villa 20  P.O. Box 5066 Safat, 13051 Kuwait",
+        "phone": null,
+        "email": "kuwejt.konsul@msz.gov.pl",
+        "website": null
+      }
+    ],
     "attractions": [],
     "holidays": []
   }

@@ -53,6 +53,10 @@ jobs:
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-static-info"
 
+      - name: Sync Embassies
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-embassies"
+
       - name: Export to JSON
         run: |
           python scripts/export_to_json.py

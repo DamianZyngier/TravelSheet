@@ -113,6 +113,22 @@ async def sync_unesco_sites(db: Session = Depends(get_db)):
     result = await sync_unesco_sites(db)
     return result
 
+@app.post("/api/admin/sync-embassies")
+async def sync_embassies(db: Session = Depends(get_db)):
+    """Admin endpoint - sync Polish embassies and consulates"""
+    from .scrapers.embassies import scrape_embassies
+
+    result = await scrape_embassies(db)
+    return result
+
+@app.post("/api/admin/sync-emergency")
+async def sync_emergency(db: Session = Depends(get_db)):
+    """Admin endpoint - sync emergency numbers"""
+    from .scrapers.emergency import sync_emergency_numbers
+
+    result = await sync_emergency_numbers(db)
+    return result
+
 @app.post("/api/admin/update-weather/{iso_code}")
 async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - update weather for specific country"""

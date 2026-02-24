@@ -32,7 +32,22 @@ interface CountryData {
     plug_types: string;
     driving_side: string;
     water_safe: boolean | null;
+    emergency?: {
+      police: string | null;
+      ambulance: string | null;
+      fire: string | null;
+      dispatch: string | null;
+      member_112?: boolean;
+    } | null;
   };
+  embassies?: {
+    type: string;
+    city: string;
+    address: string;
+    phone: string;
+    email: string;
+    website: string;
+  }[];
   entry?: {
     visa_required: boolean | null;
     passport_required: boolean | null;
@@ -544,12 +559,57 @@ function App() {
                   </div>
                 </div>
 
+                <div className="info-block full-width emergency-section-box">
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <label>Telefony alarmowe</label>
+                    {selectedCountry.practical.emergency?.member_112 && (
+                      <span className="emergency-112-badge" title="Europejski numer alarmowy 112 działa w tym kraju">
+                        🇪🇺 112
+                      </span>
+                    )}
+                  </div>
+                  <div className="emergency-grid">
+                    <div className="emergency-item-box">
+                      <span className="emergency-icon">🚓</span>
+                      <span className="emergency-label">Policja</span>
+                      <span className="emergency-num">{selectedCountry.practical.emergency?.police || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                    </div>
+                    <div className="emergency-item-box">
+                      <span className="emergency-icon">🚑</span>
+                      <span className="emergency-label">Pogotowie</span>
+                      <span className="emergency-num">{selectedCountry.practical.emergency?.ambulance || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                    </div>
+                    <div className="emergency-item-box">
+                      <span className="emergency-icon">🚒</span>
+                      <span className="emergency-label">Straż</span>
+                      <span className="emergency-num">{selectedCountry.practical.emergency?.fire || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="info-block">
                   <label>Ruch drogowy</label>
                   <span>
                     {selectedCountry.practical.driving_side === 'right' ? 'Prawostronny' : 'Lewostronny'}
                   </span>
                 </div>
+
+                {selectedCountry.embassies && selectedCountry.embassies.length > 0 && (
+                  <div className="info-block full-width embassy-section">
+                    <label>Polskie placówki dyplomatyczne</label>
+                    <div className="embassy-list">
+                      {selectedCountry.embassies.map((emb, idx) => (
+                        <div key={idx} className="embassy-item">
+                          <strong>{emb.type} {emb.city ? `w ${emb.city}` : ''}</strong>
+                          {emb.address && <p>📍 {emb.address}</p>}
+                          {emb.phone && <p>📞 {emb.phone}</p>}
+                          {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
+                          {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className={`safety-info risk-${selectedCountry.safety.risk_level}`}>

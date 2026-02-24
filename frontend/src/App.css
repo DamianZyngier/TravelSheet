@@ -555,3 +555,106 @@
   border: 2px dashed #e2e8f0;
   border-radius: 12px;
 }
+
+/* Embassy Section Styles */
+.embassy-section {
+  border-top: 1px solid #edf2f7;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.embassy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.embassy-item {
+  padding: 1.25rem;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.embassy-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.embassy-item p {
+  margin: 0.25rem 0;
+  color: #4a5568;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.embassy-item a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.embassy-item a:hover {
+  text-decoration: underline;
+}
+
+/* Emergency Numbers Styles */
+.emergency-section-box {
+  margin-top: 1rem;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.emergency-item-box {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.emergency-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.emergency-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #c53030;
+  font-weight: 700;
+}
+
+.emergency-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-top: 0.25rem;
+}
+
+.emergency-112-badge {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+  margin-top: -8px;
+  vertical-align: middle;
+}
