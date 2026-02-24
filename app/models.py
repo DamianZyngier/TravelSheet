@@ -81,6 +81,7 @@ class SafetyInfo(Base):
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
     risk_level = Column(String(50))
     summary = Column(Text)
+    risk_details = Column(Text)
     full_url = Column(Text)
     last_checked = Column(TIMESTAMP, server_default=func.now())
 

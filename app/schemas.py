@@ -26,6 +26,7 @@ class CurrencySchema(BaseModel):
 class SafetySchema(BaseModel):
     risk_level: Optional[str]
     summary: Optional[str]
+    risk_details: Optional[str]
     full_url: Optional[str]
     last_checked: Optional[datetime]
 

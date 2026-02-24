@@ -164,12 +164,30 @@ async def scrape_country(db: Session, iso_code: str):
     else:
         risk_phrase = f"MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju ({country_name})."
 
+    # Extract additional details (all alerts and travel advisory descriptions)
+    risk_details_list = []
+    
+    # Priority 1: Main travel advisory description
+    advisory_el = soup.select_one('.travel-advisory--description')
+    if advisory_el:
+        risk_details_list.append(advisory_el.get_text().strip())
+        
+    # Priority 2: Other alerts (alert-danger, alert-info)
+    alerts = soup.select('.alert-danger, .alert-warning')
+    for alert in alerts:
+        text = alert.get_text().strip()
+        if text and text not in risk_details_list:
+            risk_details_list.append(text)
+            
+    risk_details = "\n\n".join(risk_details_list)
+    
     # Update Safety
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
     safety.risk_level, safety.summary, safety.full_url = risk_level, risk_phrase, final_url
+    safety.risk_details = risk_details
 
     # Docs & Visa
     passport_req, temp_passport_req, id_card_req, visa_req = True, True, False, False
@@ -234,7 +252,9 @@ async def scrape_all_with_cache(db: Session):
         try:
             logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
             res = await scrape_country(db, country.iso_alpha2)
-            if "error" in res: results["errors"] += 1
+            if "error" in res: 
+                results["errors"] += 1
+                results["details"].append(f"{country.iso_alpha2}: {res['error']}")
             else: results["success"] += 1
             await asyncio.sleep(0.5) 
         except Exception as e:

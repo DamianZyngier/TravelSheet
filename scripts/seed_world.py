@@ -14,44 +14,44 @@ async def seed_all():
     models.Base.metadata.create_all(bind=engine)
     
     db = SessionLocal()
-    print("🚀 Starting full database seeding...")
+    print("Starting full database seeding...")
 
     # 1. Sync all countries from REST Countries
-    print("🌍 Step 1: Syncing all countries from REST Countries...")
+    print("Step 1: Syncing all countries from REST Countries...")
     res = await rest_countries.sync_countries(db)
     if 'error' in res:
-        print(f"❌ Error in Step 1: {res['error']}")
+        print(f"Error in Step 1: {res['error']}")
     else:
-        print(f"✅ Synced {res['synced']} countries.")
+        print(f"Synced {res['synced']} countries.")
 
     # 2. Sync currency exchange rates
-    print("💰 Step 2: Syncing currency exchange rates...")
+    print("Step 2: Syncing currency exchange rates...")
     res = await exchange_rates.sync_rates(db)
     if 'error' in res:
-        print(f"❌ Error in Step 2: {res['error']}")
+        print(f"Error in Step 2: {res['error']}")
     else:
-        print(f"✅ Updated {res['updated']} rates.")
+        print(f"Updated {res['updated']} rates.")
 
     # 3. Sync static data (plugs, water, etc.)
-    print("🔌 Step 3: Syncing static data (plugs, water, driving side)...")
+    print("Step 3: Syncing static data (plugs, water, driving side)...")
     res = static_info.sync_static_data(db)
     if 'error' in res:
-        print(f"❌ Error in Step 3: {res['error']}")
+        print(f"Error in Step 3: {res['error']}")
     else:
-        print(f"✅ Synced {res['synced']} static records.")
+        print(f"Synced {res['synced']} static records.")
 
     # 4. Sync UNESCO sites
-    print("🏛️ Step 4: Syncing UNESCO World Heritage sites...")
+    print("Step 4: Syncing UNESCO World Heritage sites...")
     res = await attractions.sync_unesco_sites(db)
     if 'error' in res:
-        print(f"❌ Error in Step 4: {res['error']}")
+        print(f"Error in Step 4: {res['error']}")
     else:
-        print(f"✅ Synced {res['synced']} UNESCO sites.")
+        print(f"Synced {res['synced']} UNESCO sites.")
 
     # 5. Sync per-country details (Gov.pl, Holidays, Weather)
     # We'll do this for a subset or all depending on time
     countries = db.query(models.Country).all()
-    print(f"🔍 Step 5: Syncing details for {len(countries)} countries (with rate limits)...")
+    print(f"Step 5: Syncing details for {len(countries)} countries (with rate limits)...")
 
     for i, country in enumerate(countries):
         iso2 = country.iso_alpha2
@@ -81,19 +81,19 @@ async def seed_all():
         #await asyncio.sleep(1)
 
     # 6. Summary of database content
-    print("\n📊 Database Summary:")
+    print("\nDatabase Summary:")
     
     entities = [
-        ("🏳️  Countries", models.Country),
-        ("🗣️  Languages", models.Language),
-        ("💰 Currencies", models.Currency),
-        ("🏛️  Attractions", models.Attraction),
-        ("📅 Holidays", models.Holiday),
-        ("🔌 Practical Info", models.PracticalInfo),
-        ("⚖️  Laws & Customs", models.LawAndCustom),
-        ("🛂 Safety Info", models.SafetyInfo),
-        ("🏦 Embassies", models.Embassy),
-        ("🌡️  Weather", models.Weather)
+        ("Countries", models.Country),
+        ("Languages", models.Language),
+        ("Currencies", models.Currency),
+        ("Attractions", models.Attraction),
+        ("Holidays", models.Holiday),
+        ("Practical Info", models.PracticalInfo),
+        ("Laws & Customs", models.LawAndCustom),
+        ("Safety Info", models.SafetyInfo),
+        ("Embassies", models.Embassy),
+        ("Weather", models.Weather)
     ]
 
     for label, model in entities:
@@ -105,7 +105,7 @@ async def seed_all():
         print(f"{label:18} {count:4} records. Samples: [{sample_str}]")
 
     db.close()
-    print("\n🏁 Seeding completed!")
+    print("\nSeeding completed!")
 
 if __name__ == "__main__":
     asyncio.run(seed_all())

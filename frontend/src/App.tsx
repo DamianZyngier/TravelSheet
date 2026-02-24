@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
 import './App.css'
 
@@ -19,6 +19,7 @@ interface CountryData {
   safety: {
     risk_level: string;
     risk_text: string;
+    risk_details: string;
     url: string;
   };
   currency: {
@@ -40,6 +41,32 @@ interface CountryData {
   };
 }
 
+function ExpandableText({ text }: { text: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  if (!text) return null;
+
+  const paragraphs = text.split('\n\n');
+  // Lower threshold to 150 characters or multiple paragraphs
+  const hasMore = text.length > 150 || paragraphs.length > 1;
+
+  if (!hasMore) return <div className="risk-details-text">{text}</div>;
+
+  return (
+    <div className={`expandable-text-container ${isExpanded ? 'expanded' : ''}`}>
+      <div className="risk-details-text">
+        {isExpanded ? text : (text.slice(0, 150) + '...')}
+      </div>
+      {!isExpanded && <div className="text-gradient"></div>}
+      <button 
+        className="show-more-btn" 
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        {isExpanded ? 'Pokaż mniej' : 'Pokaż więcej'}
+      </button>
+    </div>
+  );
+}
+
 function App() {
   const [countries, setCountries] = useState<Record<string, CountryData>>({});
   const [loading, setLoading] = useState(true);
@@ -51,6 +78,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   
   const [mapPosition, setMapPosition] = useState({ coordinates: [0, 0] as [number, number], zoom: 1 });
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const SAFETY_LABELS: Record<string, string> = {
     'low': 'Bezpiecznie',
@@ -158,7 +186,7 @@ function App() {
     if (country && country.longitude !== null && country.latitude !== null) {
       setMapPosition({ 
         coordinates: [country.longitude, country.latitude], 
-        zoom: 4 
+        zoom: 12 
       });
     } else {
       setMapPosition({ coordinates: [0, 0], zoom: 1 });
@@ -179,18 +207,60 @@ function App() {
   }, [countries]);
 
   const countryList = useMemo(() => {
+    // Słownik aliasów dla wyszukiwania
+    const ALIASES: Record<string, string[]> = {
+      'US': ['usa', 'stany', 'ameryka'],
+      'GB': ['uk', 'anglia', 'wielka brytania', 'brytania'],
+      'DE': ['niemcy', 'deutschland'],
+      'PL': ['polska', 'poland'],
+      'AE': ['zea', 'emiraty'],
+      'NL': ['holandia'],
+    };
+
     return Object.values(countries)
       .filter(c => {
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
         const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
-        const matchSearch = c.name_pl.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                            c.iso2.toLowerCase().includes(searchQuery.toLowerCase());
+        
+        const searchLower = searchQuery.toLowerCase();
+        const countryAliases = ALIASES[c.iso2] || [];
+        
+        const matchSearch = c.name_pl.toLowerCase().includes(searchLower) || 
+                            c.name.toLowerCase().includes(searchLower) ||
+                            c.iso2.toLowerCase().includes(searchLower) ||
+                            c.iso3.toLowerCase().includes(searchLower) ||
+                            countryAliases.some(alias => alias.includes(searchLower));
         
         return matchSafety && matchContinent && matchSearch;
       })
       .sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
   }, [countries, filterSafety, filterContinent, searchQuery]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl + F: Focus search
+      if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+
+      // Backspace: Return to list (only if not in an input and a country is selected)
+      if (e.key === 'Backspace' && selectedCountry) {
+        const target = e.target as HTMLElement;
+        if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+          handleSelectCountry(null);
+        }
+      }
+
+      // Enter: Select single result
+      if (e.key === 'Enter' && !selectedCountry && countryList.length === 1) {
+        handleSelectCountry(countryList[0]);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedCountry, countryList, handleSelectCountry]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
 
@@ -202,13 +272,17 @@ function App() {
         <>
           <header className="main-header">
             <div className="header-content">
-              <div className="logo-section">
-                <h1>🌍 TravelSheet</h1>
-                <p>Twoje centrum bezpiecznych podróży</p>
+              <div className="logo-section" onClick={() => handleSelectCountry(null)} style={{ cursor: 'pointer' }}>
+                <img src="/logo-no-text.png" alt="TripSheet" className="app-logo" />
+                <div className="logo-text">
+                  <span className="logo-brand">TripSheet</span>
+                  <p>Twoje centrum bezpiecznych podróży</p>
+                </div>
               </div>
               
               <div className="controls-section">
                 <input 
+                  ref={searchInputRef}
                   type="text" 
                   placeholder="Szukaj kraju..." 
                   value={searchQuery}
@@ -287,12 +361,14 @@ function App() {
               
               <div className="detail-map-container">
                 <ComposableMap 
+                  key={selectedCountry.iso2}
                   projectionConfig={{ scale: 140 }}
                   style={{ width: "100%", height: "100%" }}
                 >
                   <ZoomableGroup
                     center={mapPosition.coordinates}
                     zoom={mapPosition.zoom}
+                    maxZoom={40}
                     onMoveEnd={(pos) => setMapPosition(pos)}
                   >
                     <Geographies geography={geoUrl}>
@@ -301,7 +377,8 @@ function App() {
                           const isSelected = 
                             geo.id === selectedCountry.iso3 || 
                             geo.properties?.iso_a3 === selectedCountry.iso3 ||
-                            geo.properties?.name === selectedCountry.name;
+                            geo.properties?.name === selectedCountry.name ||
+                            (selectedCountry.iso3 === "USA" && (geo.id === "USA" || geo.properties?.name === "United States of America"));
                           
                           return (
                             <Geography
@@ -323,23 +400,31 @@ function App() {
                     
                     {selectedCountry.longitude !== null && selectedCountry.latitude !== null && (
                       <Marker coordinates={[selectedCountry.longitude, selectedCountry.latitude]}>
-                        <circle r={4} fill="#F56565" stroke="#fff" strokeWidth={1} />
-                        <text
-                          textAnchor="middle"
-                          y={-10}
-                          style={{ fontFamily: "system-ui", fill: "#E53E3E", fontSize: "10px", fontWeight: "bold" }}
-                        >
-                          📍
-                        </text>
+                        {/* Outer white glow/border - constant screen size */}
+                        <circle 
+                          r={0.1} 
+                          fill="none" 
+                          stroke="#fff" 
+                          strokeWidth={10}
+                          vectorEffect="non-scaling-stroke" 
+                        />
+                        {/* Inner red dot - constant screen size */}
+                        <circle 
+                          r={0.1} 
+                          fill="none" 
+                          stroke="#F56565" 
+                          strokeWidth={7}
+                          vectorEffect="non-scaling-stroke" 
+                        />
                       </Marker>
                     )}
                   </ZoomableGroup>
                 </ComposableMap>
                 
                 <div className="map-controls">
-                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: prev.zoom * 1.5 }))}>+</button>
-                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: prev.zoom / 1.5 }))}>-</button>
-                  <button onClick={() => setMapPosition({ coordinates: [selectedCountry.longitude || 0, selectedCountry.latitude || 0], zoom: 4 })}>🎯</button>
+                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: Math.min(prev.zoom * 1.5, 40) }))}>+</button>
+                  <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: Math.max(prev.zoom / 1.5, 1) }))}>-</button>
+                  <button onClick={() => setMapPosition({ coordinates: [selectedCountry.longitude || 0, selectedCountry.latitude || 0], zoom: 12 })}>🎯</button>
                 </div>
               </div>
             </div>
@@ -437,6 +522,13 @@ function App() {
                 <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
                 <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
                 <p className="risk-summary-text">{selectedCountry.safety.risk_text}</p>
+                
+                {selectedCountry.safety.risk_details && (
+                  <div className="risk-details-box">
+                    <ExpandableText text={selectedCountry.safety.risk_details} />
+                  </div>
+                )}
+
                 {selectedCountry.safety.url && (
                   <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
                     Zobacz pełny komunikat MSZ na gov.pl →

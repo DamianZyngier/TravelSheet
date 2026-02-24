@@ -11,7 +11,7 @@ from app import models
 
 def export_all():
     db = SessionLocal()
-    print("📦 Eksportuję dane z SQLite do docs/data.json...")
+    print("Eksportuję dane z SQLite do docs/data.json...")
 
     # Pobieramy wszystko z relacjami
     countries = db.query(models.Country).options(
@@ -50,6 +50,7 @@ def export_all():
             "safety": {
                 "risk_level": c.safety.risk_level if c.safety else "unknown",
                 "risk_text": c.safety.summary if c.safety else "Brak danych",
+                "risk_details": c.safety.risk_details if c.safety else "",
                 "url": c.safety.full_url if c.safety else ""
             },
             
@@ -102,7 +103,7 @@ def export_all():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     db.close()
-    print(f"✅ Eksport zakończony! Plik docs/data.json zawiera {len(output)} krajów.")
+    print(f"Eksport zakończony! Plik docs/data.json zawiera {len(output)} krajów.")
 
 if __name__ == "__main__":
     export_all()
