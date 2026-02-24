@@ -104,6 +104,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   
   const [mapPosition, setMapPosition] = useState({ coordinates: [0, 0] as [number, number], zoom: 1 });
+  const [chartTooltip, setChartTooltip] = useState<{ x: number, y: number, text: string, visible: boolean }>({ x: 0, y: 0, text: '', visible: false });
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const SAFETY_LABELS: Record<string, string> = {
@@ -607,10 +608,19 @@ function App() {
                 {selectedCountry.climate && selectedCountry.climate.length > 0 && (
                   <div className="info-block full-width climate-section">
                     <label>Typowa pogoda (średnie miesięczne)</label>
-                    <div className="combined-chart-container">
+                    <div className="combined-chart-container" onMouseLeave={() => setChartTooltip(prev => ({ ...prev, visible: false }))}>
                       <div className="chart-y-axis-label left">Temperatura (°C)</div>
                       <div className="chart-y-axis-label right">Opady (mm)</div>
                       
+                      {chartTooltip.visible && (
+                        <div 
+                          className="chart-custom-tooltip" 
+                          style={{ left: chartTooltip.x, top: chartTooltip.y }}
+                        >
+                          {chartTooltip.text}
+                        </div>
+                      )}
+
                       <svg viewBox="0 0 600 240" className="combined-svg-chart">
                         {/* Grid lines & Y-Axis Labels */}
                         {[0, 10, 20, 30, 40].map(temp => {
@@ -623,7 +633,7 @@ function App() {
                           );
                         })}
 
-                        {/* Rain Axis Labels (Right side) */}
+                        {/* Rain Axis Labels */}
                         {(() => {
                           const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
                           return [0, 0.5, 1].map(p => (
@@ -639,21 +649,32 @@ function App() {
                           ));
                         })()}
 
-                        {/* Rain Bars (Precipitation) */}
+                        {/* Rain Bars */}
                         {selectedCountry.climate.map((cl, i) => {
                           const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
                           const barHeight = (cl.rain / maxRain) * 160;
+                          const x = 50 + i * 43;
+                          const y = 200 - barHeight;
                           return (
                             <rect
                               key={`rain-${i}`}
-                              x={50 + i * 43}
-                              y={200 - barHeight}
+                              x={x}
+                              y={y}
                               width="24"
                               height={barHeight}
                               className="chart-bar-rain"
-                            >
-                              <title>Opady: {cl.rain}mm</title>
-                            </rect>
+                              onMouseEnter={(e) => setChartTooltip({
+                                visible: true,
+                                text: `${cl.rain} mm`,
+                                x: e.nativeEvent.offsetX,
+                                y: e.nativeEvent.offsetY - 30
+                              })}
+                              onMouseMove={(e) => setChartTooltip(prev => ({
+                                ...prev,
+                                x: e.nativeEvent.offsetX,
+                                y: e.nativeEvent.offsetY - 30
+                              }))}
+                            />
                           );
                         })}
 
@@ -672,12 +693,34 @@ function App() {
                               
                               {selectedCountry.climate.map((cl, i) => (
                                 <g key={`dots-${i}`}>
-                                  <circle cx={getX(i)} cy={getY(cl.temp_day)} r="3.5" className="chart-dot-day">
-                                    <title>Dzień: {cl.temp_day}°C</title>
-                                  </circle>
-                                  <circle cx={getX(i)} cy={getY(cl.temp_night)} r="3.5" className="chart-dot-night">
-                                    <title>Noc: {cl.temp_night}°C</title>
-                                  </circle>
+                                  <circle 
+                                    cx={getX(i)} cy={getY(cl.temp_day)} r="4" className="chart-dot-day"
+                                    onMouseEnter={(e) => setChartTooltip({
+                                      visible: true,
+                                      text: `Dzień: ${cl.temp_day}°C`,
+                                      x: e.nativeEvent.offsetX,
+                                      y: e.nativeEvent.offsetY - 30
+                                    })}
+                                    onMouseMove={(e) => setChartTooltip(prev => ({
+                                      ...prev,
+                                      x: e.nativeEvent.offsetX,
+                                      y: e.nativeEvent.offsetY - 30
+                                    }))}
+                                  />
+                                  <circle 
+                                    cx={getX(i)} cy={getY(cl.temp_night)} r="4" className="chart-dot-night"
+                                    onMouseEnter={(e) => setChartTooltip({
+                                      visible: true,
+                                      text: `Noc: ${cl.temp_night}°C`,
+                                      x: e.nativeEvent.offsetX,
+                                      y: e.nativeEvent.offsetY - 30
+                                    })}
+                                    onMouseMove={(e) => setChartTooltip(prev => ({
+                                      ...prev,
+                                      x: e.nativeEvent.offsetX,
+                                      y: e.nativeEvent.offsetY - 30
+                                    }))}
+                                  />
                                 </g>
                               ))}
                             </>
