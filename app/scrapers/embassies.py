@@ -85,18 +85,29 @@ def parse_embassy_page(html, country_id):
     
     for element in content.descendants:
         if element.name in ['h2', 'h3']:
+            header_text = element.get_text().strip()
+            # Stop if we hit data protection sections
+            if any(term in header_text.lower() for term in ["ochrona danych", "rodo", "przetwarzanie danych"]):
+                break
             if current_section["content"].strip():
                 sections.append(current_section)
-            current_section = {"title": element.get_text().strip(), "content": ""}
+            current_section = {"title": header_text, "content": ""}
         elif element.name is None: # text node
             current_section["content"] += element
             
     if current_section["content"].strip():
-        sections.append(current_section)
+        # Final check for data protection terms in content if no more headers
+        if not any(term in current_section["content"].lower() for term in ["prezes urzędu ochrony danych", "stawki 2"]):
+            sections.append(current_section)
 
     # If no headers found, treat whole content as one section
     if not sections:
-        sections = [{"title": "Placówka", "content": content.get_text()}]
+        text = content.get_text()
+        # Clean text from GDPR stuff if no headers present
+        gdpr_start = re.search(r'(Ochrona danych osobowych|RODO|Informacja o przetwarzaniu)', text, re.I)
+        if gdpr_start:
+            text = text[:gdpr_start.start()]
+        sections = [{"title": "Placówka", "content": text}]
 
     for section in sections:
         title = section["title"]
@@ -110,6 +121,14 @@ def parse_embassy_page(html, country_id):
         
         # Only add if we have at least an address or contact info
         if address_match or phone_match or email_match:
+            addr = address_match.group(1).strip() if address_match else None
+            
+            # CRITICAL: Skip if address is PUODO/Warsaw for a foreign country
+            if addr and "00-193 Warszawa" in addr:
+                continue
+            if addr and "Stawki 2" in addr:
+                continue
+            
             # Detect type from title
             m_type = "Ambasada"
             if "konsulat honorowy" in title.lower(): m_type = "Konsulat Honorowy"

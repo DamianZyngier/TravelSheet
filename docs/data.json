@@ -4403,14 +4403,6 @@
       },
       {
         "type": "Konsulat Honorowy",
-        "city": "",
-        "address": "ul. Ioanni Kazouli 16,  85-100 Rodos",
-        "phone": "+30 22410 70220",
-        "email": "katerina.aspraki@gmail.com",
-        "website": null
-      },
-      {
-        "type": "Konsulat Honorowy",
         "city": "Heraklionie",
         "address": "ul. 1821 nr 39, 712-01 Heraklion, Kreta",
         "phone": "+30 2810 221786",
@@ -21543,14 +21535,6 @@
       "icon": ""
     },
     "embassies": [
-      {
-        "type": "Ambasada",
-        "city": "",
-        "address": "Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.",
-        "phone": null,
-        "email": "iod@msz.gov.pl",
-        "website": null
-      },
       {
         "type": "Konsulat Honorowy",
         "city": "",
