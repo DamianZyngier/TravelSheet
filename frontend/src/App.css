@@ -993,6 +993,12 @@
   gap: 0.4rem;
 }
 
+.holiday-month-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
 .holiday-month-header {
   margin: 0 0 0.25rem 0;
   font-size: 0.85rem;

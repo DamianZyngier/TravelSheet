@@ -126,7 +126,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null);
-  const [isHolidaysExpanded, setIsHolidaysExpanded] = useState(false);
   
   const [filterSafety, setFilterSafety] = useState<string>('all');
   const [filterContinent, setFilterContinent] = useState<string>('all');
@@ -348,7 +347,6 @@ function App() {
 
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
-    setIsHolidaysExpanded(false); // Reset holidays state
     
     if (country && country.longitude !== null && country.latitude !== null) {
       const { zoom } = getMapSettings(country);
@@ -1089,38 +1087,20 @@ function App() {
                       </div>
                       
                       <div className="holiday-container">
-                        {!isHolidaysExpanded ? (
-                          <div className="compact-holiday-grid">
-                            {selectedCountry.holidays
+                        <div className="expanded-holiday-list">
+                          {Object.entries(
+                            [...selectedCountry.holidays]
                               .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                              .slice(0, 3)
-                              .map((h, idx) => (
-                                <div key={idx} className="holiday-mini-card">
-                                  <span className="mini-card-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short' })}</span>
-                                  <span className="mini-card-name">{h.name}</span>
-                                </div>
-                              ))
-                            }
-                            {selectedCountry.holidays.length > 3 && (
-                              <button className="expand-holidays-btn" onClick={() => setIsHolidaysExpanded(true)}>
-                                +{selectedCountry.holidays.length - 3} więcej
-                              </button>
-                            )}
-                          </div>
-                        ) : (
-                          <div className="expanded-holiday-list">
-                            {Object.entries(
-                              [...selectedCountry.holidays]
-                                .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                                .reduce((acc, h) => {
-                                  const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
-                                  if (!acc[month]) acc[month] = [];
-                                  acc[month].push(h);
-                                  return acc;
-                                }, {} as Record<string, typeof selectedCountry.holidays>)
-                            ).map(([month, monthHolidays]) => (
-                              <div key={month} className="holiday-month-group">
-                                <h5 className="holiday-month-header">{month}</h5>
+                              .reduce((acc, h) => {
+                                const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
+                                if (!acc[month]) acc[month] = [];
+                                acc[month].push(h);
+                                return acc;
+                              }, {} as Record<string, typeof selectedCountry.holidays>)
+                          ).map(([month, monthHolidays]) => (
+                            <div key={month} className="holiday-month-group">
+                              <h5 className="holiday-month-header">{month}</h5>
+                              <div className="holiday-month-items">
                                 {monthHolidays.map((h, idx) => (
                                   <div key={idx} className="holiday-item">
                                     <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric' })}</span>
@@ -1128,12 +1108,9 @@ function App() {
                                   </div>
                                 ))}
                               </div>
-                            ))}
-                            <button className="collapse-holidays-btn" onClick={() => setIsHolidaysExpanded(false)}>
-                              Pokaż mniej
-                            </button>
-                          </div>
-                        )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}
