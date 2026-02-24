@@ -12,8 +12,18 @@
     "population": 101343800,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 16.166667,
     "longitude": 107.833333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Vietnamese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wietnam).",
@@ -196,8 +206,18 @@
     "population": 292354,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 4.0,
     "longitude": -53.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -338,8 +358,26 @@
     "population": 41349,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.033333,
     "longitude": -63.05,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -480,8 +518,18 @@
     "population": 39471,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.431383,
     "longitude": -64.62305,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -622,8 +670,26 @@
     "population": 11781559,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -6.0,
     "longitude": 147.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Hiri Motu",
+        "is_official": true
+      },
+      {
+        "name": "Tok Pisin",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Papua-Nowa Gwinea).",
@@ -809,8 +875,18 @@
     "population": 20206953,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -30.0,
     "longitude": -71.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Chile).",
@@ -1061,8 +1137,18 @@
     "population": 9539502,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 47.0,
     "longitude": 20.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Hungarian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Węgry).",
@@ -1273,8 +1359,18 @@
     "population": 53057212,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 4.0,
     "longitude": -72.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kolumbia).",
@@ -1529,8 +1625,22 @@
     "population": 1066809,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 11.5,
     "longitude": 43.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Dżibuti).",
@@ -1671,8 +1781,22 @@
     "population": 107566,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 12.5,
     "longitude": -69.966667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      },
+      {
+        "name": "Papiamento",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -1813,8 +1937,22 @@
     "population": 100179,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -20.0,
     "longitude": -175.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Tongan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Tonga).",
@@ -1955,8 +2093,18 @@
     "population": 6011488,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 56.0,
     "longitude": 10.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Danish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Dania).",
@@ -2171,8 +2319,18 @@
     "population": 1692,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -10.5,
     "longitude": 105.666667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -2313,8 +2471,18 @@
     "population": 10771504,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 19.0,
     "longitude": -70.666667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Dominikana).",
@@ -2508,8 +2676,18 @@
     "population": 130575786,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 23.0,
     "longitude": -102.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Meksyk).",
@@ -2704,8 +2882,18 @@
     "population": 69281437,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 54.0,
     "longitude": -2.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zjednoczone Królestwo).",
@@ -2944,8 +3132,18 @@
     "population": 85664944,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 39.0,
     "longitude": 35.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Turkish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Turcja).",
@@ -3164,8 +3362,18 @@
     "population": 1822612,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 41.833333,
     "longitude": 22.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Macedonian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Macedonia Północna).",
@@ -3355,8 +3563,18 @@
     "population": 32862000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 49.0,
     "longitude": 32.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Ukrainian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Ukraina).",
@@ -3542,8 +3760,18 @@
     "population": 28517000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.0,
     "longitude": -66.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Wenezuela).",
@@ -3838,8 +4066,18 @@
     "population": 24070553,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.0,
     "longitude": -2.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Burkina Faso).",
@@ -3980,8 +4218,26 @@
     "population": 3607000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": 39.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Tigrinya",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Erytrea).",
@@ -4122,8 +4378,26 @@
     "population": 600904,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 24.5,
     "longitude": -13.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Berber",
+        "is_official": true
+      },
+      {
+        "name": "Hassaniya",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4264,8 +4538,26 @@
     "population": 103267,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 49.25,
     "longitude": -2.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Jèrriais",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4443,8 +4735,18 @@
     "population": 10562,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.5,
     "longitude": -63.416667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4585,8 +4887,26 @@
     "population": 681973,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 49.75,
     "longitude": 6.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "German",
+        "is_official": true
+      },
+      {
+        "name": "Luxembourgish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Luksemburg).",
@@ -4793,8 +5113,18 @@
     "population": 896175,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -21.15,
     "longitude": 55.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -4935,8 +5265,22 @@
     "population": 10643,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -8.0,
     "longitude": 178.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Tuvaluan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Tuvalu).",
@@ -5077,8 +5421,18 @@
     "population": 5309625,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 10.0,
     "longitude": -84.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kostaryka).",
@@ -5264,8 +5618,18 @@
     "population": 19036031,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 46.0,
     "longitude": 25.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Romanian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Rumunia).",
@@ -5524,8 +5888,18 @@
     "population": 10400720,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 39.0,
     "longitude": 22.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Greek",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Grecja).",
@@ -5781,8 +6155,74 @@
     "population": 17073087,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -20.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chewa",
+        "is_official": true
+      },
+      {
+        "name": "Chibarwe",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Kalanga",
+        "is_official": true
+      },
+      {
+        "name": "Khoisan",
+        "is_official": true
+      },
+      {
+        "name": "Ndau",
+        "is_official": true
+      },
+      {
+        "name": "Northern Ndebele",
+        "is_official": true
+      },
+      {
+        "name": "Shona",
+        "is_official": true
+      },
+      {
+        "name": "Sotho",
+        "is_official": true
+      },
+      {
+        "name": "Tonga",
+        "is_official": true
+      },
+      {
+        "name": "Tsonga",
+        "is_official": true
+      },
+      {
+        "name": "Tswana",
+        "is_official": true
+      },
+      {
+        "name": "Venda",
+        "is_official": true
+      },
+      {
+        "name": "Xhosa",
+        "is_official": true
+      },
+      {
+        "name": "Zimbabwean Sign Language",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zimbabwe).",
@@ -5976,8 +6416,18 @@
     "population": 38423,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 43.733333,
     "longitude": 7.4,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Monako).",
@@ -6167,8 +6617,18 @@
     "population": 2530,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 78.0,
     "longitude": 20.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Norwegian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -6358,8 +6818,18 @@
     "population": 87146,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.35,
     "longitude": -64.933333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -6500,8 +6970,22 @@
     "population": 41651653,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 60.0,
     "longitude": -95.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kanada).",
@@ -6800,8 +7284,18 @@
     "population": 33742380,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.0,
     "longitude": -2.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Ghana).",
@@ -6987,8 +7481,18 @@
     "population": 31719275,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.0,
     "longitude": -5.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -7129,8 +7633,18 @@
     "population": 51316756,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 22.0,
     "longitude": 98.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Burmese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mjanma).",
@@ -7271,8 +7785,18 @@
     "population": 4927532,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 20.0,
     "longitude": -12.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mauretania).",
@@ -7413,8 +7937,22 @@
     "population": 2825544,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.25,
     "longitude": -77.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Jamaican Patois",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Jamajka).",
@@ -7596,8 +8134,18 @@
     "population": 15786898,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 7.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Sudan).",
@@ -7738,8 +8286,18 @@
     "population": 455500,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 4.5,
     "longitude": 114.666667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Malay",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Brunei).",
@@ -7880,8 +8438,30 @@
     "population": 6110200,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 1.366667,
     "longitude": 103.8,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chinese",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Malay",
+        "is_official": true
+      },
+      {
+        "name": "Tamil",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Singapur).",
@@ -8080,8 +8660,18 @@
     "population": 0,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -54.4208,
     "longitude": 3.3464,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Norwegian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -8222,8 +8812,26 @@
     "population": 5324700,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -41.0,
     "longitude": 174.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Māori",
+        "is_official": true
+      },
+      {
+        "name": "New Zealand Sign Language",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nowa Zelandia).",
@@ -8457,8 +9065,30 @@
     "population": 49315949,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 40.0,
     "longitude": -4.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Basque",
+        "is_official": true
+      },
+      {
+        "name": "Catalan",
+        "is_official": true
+      },
+      {
+        "name": "Galician",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Hiszpania).",
@@ -8817,8 +9447,22 @@
     "population": 114123600,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.0,
     "longitude": 122.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Filipino",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Filipiny).",
@@ -9089,8 +9733,18 @@
     "population": 37392000,
     "timezone": "UTC+01:00",
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": "Warszawa, Łódź, Szczecin, Lublin, Bydgoszcz",
+    "ethnic_groups": null,
     "latitude": 52.0,
     "longitude": 20.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Polish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -9314,8 +9968,26 @@
     "population": 6142180,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -1.0,
     "longitude": 15.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Kikongo",
+        "is_official": true
+      },
+      {
+        "name": "Lingala",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kongo).",
@@ -9501,8 +10173,18 @@
     "population": 264596,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -21.5,
     "longitude": 165.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -9643,8 +10325,18 @@
     "population": 10241722,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 40.5,
     "longitude": 47.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Azerbaijani",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Azerbejdżan).",
@@ -9802,8 +10494,18 @@
     "population": 23317031,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 23.5,
     "longitude": 121.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chinese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Tajwan).",
@@ -9944,8 +10646,22 @@
     "population": 58927633,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 42.833333,
     "longitude": 12.833333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Catalan",
+        "is_official": true
+      },
+      {
+        "name": "Italian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Włochy).",
@@ -10250,8 +10966,18 @@
     "population": 30654,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 60.116667,
     "longitude": 19.9,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Swedish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10457,8 +11183,18 @@
     "population": 47400000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 28.0,
     "longitude": 3.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Algieria).",
@@ -10624,8 +11360,18 @@
     "population": 88406,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 42.5,
     "longitude": 1.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Catalan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Andora).",
@@ -10823,8 +11569,18 @@
     "population": 50828,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 21.75,
     "longitude": -71.583333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -10965,8 +11721,18 @@
     "population": 391810,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 65.0,
     "longitude": -18.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Icelandic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Islandia).",
@@ -11181,8 +11947,22 @@
     "population": 19340757,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": 19.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czad).",
@@ -11323,8 +12103,18 @@
     "population": 398165,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 25.0343,
     "longitude": -77.3963,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bahamy).",
@@ -11510,8 +12300,18 @@
     "population": 213421037,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -10.0,
     "longitude": -55.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Brazylia).",
@@ -11770,8 +12570,18 @@
     "population": 65859640,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": 100.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Thai",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tajlandia).",
@@ -11953,8 +12763,18 @@
     "population": 105564,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 6.916667,
     "longitude": 158.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mikronezja).",
@@ -12095,8 +12915,22 @@
     "population": 10134800,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 31.47,
     "longitude": 35.13,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "Hebrew",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Izrael).",
@@ -12270,8 +13104,18 @@
     "population": 16010,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.25,
     "longitude": -63.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -12412,8 +13256,18 @@
     "population": 67408,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.416667,
     "longitude": -61.333333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Dominika).",
@@ -12554,8 +13408,18 @@
     "population": 22395489,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 17.0,
     "longitude": -4.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Mali).",
@@ -12696,8 +13560,18 @@
     "population": 34090466,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -18.25,
     "longitude": 35.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Mozambik).",
@@ -12875,8 +13749,18 @@
     "population": 25620000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 35.0,
     "longitude": 38.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Syria).",
@@ -13026,8 +13910,18 @@
     "population": 32684503,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": 48.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Jemen).",
@@ -13168,8 +14062,18 @@
     "population": 5413813,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 48.666667,
     "longitude": 19.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Slovak",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Słowacja).",
@@ -13412,8 +14316,18 @@
     "population": 349925,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 14.666667,
     "longitude": -61.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -13554,8 +14468,18 @@
     "population": 110872,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.25,
     "longitude": -61.2,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Saint Vincent i Grenadyny).",
@@ -13696,8 +14620,18 @@
     "population": 772975,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 5.0,
     "longitude": -59.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gujana).",
@@ -13883,8 +14817,18 @@
     "population": 623327,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 42.5,
     "longitude": 19.3,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Montenegrin",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czarnogóra).",
@@ -14115,8 +15059,18 @@
     "population": 38000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 36.133333,
     "longitude": -5.35,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -14306,8 +15260,18 @@
     "population": 3173024,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 25.5,
     "longitude": 51.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Katar).",
@@ -14384,8 +15348,18 @@
     "population": 209607,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 1.0,
     "longitude": 7.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Świętego Tomasza i Książęca).",
@@ -14453,8 +15427,22 @@
     "population": 37859698,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 41.0,
     "longitude": 64.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Russian",
+        "is_official": true
+      },
+      {
+        "name": "Uzbek",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Uzbekistan).",
@@ -14547,8 +15535,18 @@
     "population": 0,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -54.5,
     "longitude": -37.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -14616,8 +15614,18 @@
     "population": 10605098,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 62.0,
     "longitude": 15.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Swedish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Szwecja).",
@@ -14775,8 +15783,22 @@
     "population": 11680,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -0.533333,
     "longitude": 166.916667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Nauru",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nauru).",
@@ -14844,8 +15866,18 @@
     "population": 320901,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -12.833333,
     "longitude": 45.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -14913,8 +15945,18 @@
     "population": 6803886,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.0,
     "longitude": -85.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nikaragua).",
@@ -15031,8 +16073,18 @@
     "population": 0,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -6.0,
     "longitude": 71.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -15100,8 +16152,26 @@
     "population": 321409,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -16.0,
     "longitude": 167.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Bislama",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Vanuatu).",
@@ -15169,8 +16239,18 @@
     "population": 1408280000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 35.0,
     "longitude": 105.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chinese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Chiny).",
@@ -15279,8 +16359,18 @@
     "population": 25950000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 40.0,
     "longitude": 127.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Korean",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Korea Północna).",
@@ -15348,8 +16438,18 @@
     "population": 284438782,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -5.0,
     "longitude": 120.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Indonesian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Indonezja).",
@@ -15499,8 +16599,26 @@
     "population": 11825551,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 50.833333,
     "longitude": 4.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "German",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Belgia).",
@@ -15666,8 +16784,22 @@
     "population": 10882341,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 49.75,
     "longitude": 15.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Czech",
+        "is_official": true
+      },
+      {
+        "name": "Slovak",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Czechy).",
@@ -15797,8 +16929,22 @@
     "population": 6470307,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 7.0,
     "longitude": 21.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Sango",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Republika Środkowoafrykańska).",
@@ -15866,8 +17012,18 @@
     "population": 4064780,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 9.0,
     "longitude": -80.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Panama).",
@@ -16061,8 +17217,18 @@
     "population": 11294243,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 24.0,
     "longitude": 54.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Emiraty Arabskie).",
@@ -16130,8 +17296,22 @@
     "population": 1781308,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 12.0,
     "longitude": -15.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      },
+      {
+        "name": "Upper Guinea Creole",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gwinea Bissau).",
@@ -16199,8 +17379,18 @@
     "population": 13224860,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 9.5,
     "longitude": 2.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Benin).",
@@ -16325,8 +17515,22 @@
     "population": 2188,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -29.033333,
     "longitude": 167.95,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Norfuk",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -16394,8 +17598,18 @@
     "population": 2749076,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 47.0,
     "longitude": 29.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Romanian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Mołdawia).",
@@ -16528,8 +17742,22 @@
     "population": 205557,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -13.583333,
     "longitude": -172.333333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Samoan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Samoa).",
@@ -16597,8 +17825,18 @@
     "population": 11972169,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 34.0,
     "longitude": 9.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tunezja).",
@@ -16724,8 +17962,18 @@
     "population": 18103660,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -2.0,
     "longitude": -77.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Ekwador).",
@@ -16838,8 +18086,18 @@
     "population": 26312034,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 16.0,
     "longitude": 8.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Niger).",
@@ -16936,8 +18194,22 @@
     "population": 15040,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -21.233333,
     "longitude": -159.766667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Cook Islands Māori",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Cooka).",
@@ -17005,8 +18277,26 @@
     "population": 47329,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.2,
     "longitude": 145.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Carolinian",
+        "is_official": true
+      },
+      {
+        "name": "Chamorro",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -17074,8 +18364,18 @@
     "population": 103603,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 17.05,
     "longitude": -61.8,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Antigua i Barbuda).",
@@ -17143,8 +18443,22 @@
     "population": 34231700,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 2.5,
     "longitude": 112.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Malay",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Malezja).",
@@ -17253,8 +18567,18 @@
     "population": 378561,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 16.25,
     "longitude": -61.583333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -17322,8 +18646,18 @@
     "population": 5343630,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 21.0,
     "longitude": 57.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Oman).",
@@ -17391,8 +18725,18 @@
     "population": 51159889,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 37.0,
     "longitude": 127.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Korean",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Korea Południowa).",
@@ -17521,8 +18865,18 @@
     "population": 35,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -25.066667,
     "longitude": -130.1,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -17590,8 +18944,26 @@
     "population": 3422000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 44.0,
     "longitude": 18.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Bosnian",
+        "is_official": true
+      },
+      {
+        "name": "Croatian",
+        "is_official": true
+      },
+      {
+        "name": "Serbian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bośnia i Hercegowina).",
@@ -17720,8 +19092,22 @@
     "population": 2116427,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -29.5,
     "longitude": 28.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Sotho",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Lesotho).",
@@ -17834,8 +19220,18 @@
     "population": 123210000,
     "timezone": "UTC+09:00",
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": "Tokio, Chiba, Okayama, Toyama, Naha",
+    "ethnic_groups": null,
     "latitude": 36.0,
     "longitude": 138.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Japanese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Japonia).",
@@ -18084,8 +19480,22 @@
     "population": 7057841,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 40.0,
     "longitude": 60.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Russian",
+        "is_official": true
+      },
+      {
+        "name": "Turkmen",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Turkmenistan).",
@@ -18153,8 +19563,26 @@
     "population": 156115,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 12.116667,
     "longitude": -68.933333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Papiamento",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -18222,8 +19650,18 @@
     "population": 3866233,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 45.166667,
     "longitude": 15.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Croatian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Chorwacja).",
@@ -18373,8 +19811,22 @@
     "population": 54885,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 62.0,
     "longitude": -7.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Danish",
+        "is_official": true
+      },
+      {
+        "name": "Faroese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -18511,8 +19963,18 @@
     "population": 784043,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 27.5,
     "longitude": 90.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dzongkha",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Bhutan).",
@@ -18580,8 +20042,18 @@
     "population": 2130638,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 46.116667,
     "longitude": 14.816667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Slovene",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Słowenia).",
@@ -18751,8 +20223,18 @@
     "population": 7647000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.0,
     "longitude": 105.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Lao",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Laos).",
@@ -18820,8 +20302,26 @@
     "population": 64781,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 49.466667,
     "longitude": -2.583333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Guernésiais",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -18926,8 +20426,22 @@
     "population": 5490000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 33.833333,
     "longitude": 35.833333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Liban).",
@@ -19004,8 +20518,22 @@
     "population": 574250,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 35.9375,
     "longitude": 14.3754,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Maltese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Malta).",
@@ -19147,8 +20675,18 @@
     "population": 84738,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 19.3133,
     "longitude": -81.2546,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -19216,8 +20754,18 @@
     "population": 6567783,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 44.0,
     "longitude": 21.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Serbian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Serbia).",
@@ -19355,8 +20903,18 @@
     "population": 1829000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 57.0,
     "longitude": 25.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Latvian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Łotwa).",
@@ -19498,8 +21056,34 @@
     "population": 112832000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": null,
     "longitude": 25.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Kikongo",
+        "is_official": true
+      },
+      {
+        "name": "Lingala",
+        "is_official": true
+      },
+      {
+        "name": "Swahili",
+        "is_official": true
+      },
+      {
+        "name": "Tshiluba",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Demokratyczna Republika Konga).",
@@ -19612,8 +21196,22 @@
     "population": 1442614,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 35.0,
     "longitude": 33.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Greek",
+        "is_official": true
+      },
+      {
+        "name": "Turkish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Cypr).",
@@ -19775,8 +21373,18 @@
     "population": 2469296,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -1.0,
     "longitude": 11.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Gabon).",
@@ -19889,8 +21497,18 @@
     "population": 9077691,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.5,
     "longitude": -11.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Sierra Leone).",
@@ -19958,8 +21576,26 @@
     "population": 46118793,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 33.0,
     "longitude": 44.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "Aramaic",
+        "is_official": true
+      },
+      {
+        "name": "Sorani",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Irak).",
@@ -20036,8 +21672,22 @@
     "population": 2359609,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -22.0,
     "longitude": 24.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Tswana",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Botswana).",
@@ -20150,8 +21800,26 @@
     "population": 31980,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 12.18,
     "longitude": -68.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Papiamento",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -20219,8 +21887,22 @@
     "population": 19655000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 10.0,
     "longitude": 49.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "Somali",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Somalia).",
@@ -20288,8 +21970,26 @@
     "population": 1243741,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -20.283333,
     "longitude": 57.55,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Mauritian Creole",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mauritius).",
@@ -20357,8 +22057,18 @@
     "population": 4000921,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 42.0,
     "longitude": 43.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Georgian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gruzja).",
@@ -20504,8 +22214,22 @@
     "population": 31727042,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -20.0,
     "longitude": 47.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Malagasy",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Madagaskar).",
@@ -20614,8 +22338,18 @@
     "population": 0,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 19.3,
     "longitude": 166.633333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -20683,8 +22417,18 @@
     "population": 7459000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 25.0,
     "longitude": 17.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Libia).",
@@ -20769,8 +22513,18 @@
     "population": 9200931,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 47.333333,
     "longitude": 13.333333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "German",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Austria).",
@@ -20964,8 +22718,22 @@
     "population": 1681,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -19.033333,
     "longitude": -169.866667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Niuean",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Niue).",
@@ -21033,8 +22801,18 @@
     "population": 111652998,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.0,
     "longitude": 38.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Amharic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Etiopia).",
@@ -21119,8 +22897,22 @@
     "population": 29442327,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 6.0,
     "longitude": 12.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kamerun).",
@@ -21188,8 +22980,18 @@
     "population": 107271260,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 27.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Egipt).",
@@ -21335,8 +23137,22 @@
     "population": 16733,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 7.5,
     "longitude": 134.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Palauan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Palau).",
@@ -21404,8 +23220,18 @@
     "population": 184100,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.883333,
     "longitude": -60.966667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Saint Lucia).",
@@ -21473,8 +23299,22 @@
     "population": 3203295,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.25,
     "longitude": -66.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -21627,8 +23467,26 @@
     "population": 43844000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 33.0,
     "longitude": 65.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dari",
+        "is_official": true
+      },
+      {
+        "name": "Pashto",
+        "is_official": true
+      },
+      {
+        "name": "Turkmen",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Afganistan).",
@@ -21696,8 +23554,18 @@
     "population": 2363314,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 41.0,
     "longitude": 20.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Albanian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Albania).",
@@ -21839,8 +23707,18 @@
     "population": 146028325,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 60.0,
     "longitude": 100.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Russian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Rosja).",
@@ -21961,8 +23839,18 @@
     "population": 109021,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 12.116667,
     "longitude": -61.666667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Grenada).",
@@ -22083,8 +23971,22 @@
     "population": 1585566,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 42.666667,
     "longitude": 21.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Albanian",
+        "is_official": true
+      },
+      {
+        "name": "Serbian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kosowo).",
@@ -22146,8 +24048,22 @@
     "population": 12332788,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -3.5,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Kirundi",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Burundi).",
@@ -22215,8 +24131,26 @@
     "population": 919901,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -12.166667,
     "longitude": 44.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "Comorian",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Komory).",
@@ -22284,8 +24218,22 @@
     "population": 9109280,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 53.0,
     "longitude": 28.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Belarusian",
+        "is_official": true
+      },
+      {
+        "name": "Russian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Białoruś).",
@@ -22394,8 +24342,18 @@
     "population": 0,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -53.0818,
     "longitude": 73.5042,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -22463,8 +24421,22 @@
     "population": 68153004,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -6.0,
     "longitude": 35.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Swahili",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tanzania).",
@@ -22581,8 +24553,18 @@
     "population": 6437360,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 43.0,
     "longitude": 25.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Bulgarian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Bułgaria).",
@@ -22744,8 +24726,18 @@
     "population": 6029976,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.833333,
     "longitude": -88.916667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Salwador).",
@@ -22918,8 +24910,18 @@
     "population": 18100436,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 52.5,
     "longitude": 5.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Holandia).",
@@ -23065,8 +25067,22 @@
     "population": 882,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 41.9,
     "longitude": 12.45,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Italian",
+        "is_official": true
+      },
+      {
+        "name": "Latin",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Watykan).",
@@ -23204,8 +25220,22 @@
     "population": 21763170,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 7.0,
     "longitude": 81.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Sinhala",
+        "is_official": true
+      },
+      {
+        "name": "Tamil",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Sri Lanka).",
@@ -23273,8 +25303,22 @@
     "population": 5650325,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 64.0,
     "longitude": 26.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Finnish",
+        "is_official": true
+      },
+      {
+        "name": "Swedish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Finlandia).",
@@ -23444,8 +25488,18 @@
     "population": 279500,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -17.6797,
     "longitude": -149.4068,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -23513,8 +25567,18 @@
     "population": 515132,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 3.25,
     "longitude": 73.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Maldivian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Malediwy).",
@@ -23582,8 +25646,22 @@
     "population": 6109644,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -23.0,
     "longitude": -58.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Guaraní",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Paragwaj).",
@@ -23700,8 +25778,22 @@
     "population": 1235549,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -26.5,
     "longitude": 31.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Swazi",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -23769,8 +25861,30 @@
     "population": 9082848,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 47.0,
     "longitude": 8.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Italian",
+        "is_official": true
+      },
+      {
+        "name": "Romansh",
+        "is_official": true
+      },
+      {
+        "name": "Swiss German",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Szwajcaria).",
@@ -23996,8 +26110,26 @@
     "population": 900869,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -17.7134,
     "longitude": 178.065,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Fiji Hindi",
+        "is_official": true
+      },
+      {
+        "name": "Fijian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Fidżi).",
@@ -24065,8 +26197,58 @@
     "population": 63100945,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -29.0,
     "longitude": 24.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Afrikaans",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Northern Sotho",
+        "is_official": true
+      },
+      {
+        "name": "Southern Ndebele",
+        "is_official": true
+      },
+      {
+        "name": "Southern Sotho",
+        "is_official": true
+      },
+      {
+        "name": "Swazi",
+        "is_official": true
+      },
+      {
+        "name": "Tsonga",
+        "is_official": true
+      },
+      {
+        "name": "Tswana",
+        "is_official": true
+      },
+      {
+        "name": "Venda",
+        "is_official": true
+      },
+      {
+        "name": "Xhosa",
+        "is_official": true
+      },
+      {
+        "name": "Zulu",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -24183,8 +26365,18 @@
     "population": 11734000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 31.0,
     "longitude": 36.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Jordania).",
@@ -24261,8 +26453,26 @@
     "population": 417634,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 17.25,
     "longitude": -88.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Belizean Creole",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Belize).",
@@ -24391,8 +26601,26 @@
     "population": 34350244,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -10.0,
     "longitude": -76.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Aymara",
+        "is_official": true
+      },
+      {
+        "name": "Quechua",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Peru).",
@@ -24569,8 +26797,22 @@
     "population": 10499000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 39.0,
     "longitude": 71.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Russian",
+        "is_official": true
+      },
+      {
+        "name": "Tajik",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Tadżykistan).",
@@ -24638,8 +26880,18 @@
     "population": 14363931,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 11.0,
     "longitude": -10.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Gwinea).",
@@ -24707,8 +26959,18 @@
     "population": 750325,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -8.0,
     "longitude": 159.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Salomona).",
@@ -24776,8 +27038,18 @@
     "population": 18593258,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 14.0,
     "longitude": -14.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Senegal).",
@@ -24878,8 +27150,18 @@
     "population": 56542,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 72.0,
     "longitude": -40.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Greenlandic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -25012,8 +27294,22 @@
     "population": 84530,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 54.25,
     "longitude": -4.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Manx",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -25122,8 +27418,18 @@
     "population": 2894886,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 56.0,
     "longitude": 24.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Lithuanian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Litwa).",
@@ -25265,8 +27571,18 @@
     "population": 3544835,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 46.0,
     "longitude": 105.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Mongolian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Mongolia).",
@@ -25392,8 +27708,30 @@
     "population": 11365333,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -17.0,
     "longitude": -65.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Aymara",
+        "is_official": true
+      },
+      {
+        "name": "Guaraní",
+        "is_official": true
+      },
+      {
+        "name": "Quechua",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Boliwia).",
@@ -25510,8 +27848,22 @@
     "population": 20426568,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 48.0196,
     "longitude": 66.9237,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Kazakh",
+        "is_official": true
+      },
+      {
+        "name": "Russian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kazachstan).",
@@ -25641,8 +27993,18 @@
     "population": 400,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -49.25,
     "longitude": 69.167,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -25710,8 +28072,22 @@
     "population": 7527500,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 22.267,
     "longitude": 114.188,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chinese",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Hongkong).",
@@ -25848,8 +28224,18 @@
     "population": 5483450,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 31.9,
     "longitude": 35.2,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Palestyna).",
@@ -25926,8 +28312,22 @@
     "population": 46735004,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -34.0,
     "longitude": -64.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Guaraní",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Argentyna).",
@@ -26117,8 +28517,22 @@
     "population": 49710,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -14.333333,
     "longitude": -170.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Samoan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -26186,8 +28600,18 @@
     "population": 31496,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 18.0708,
     "longitude": -63.0501,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -26255,8 +28679,18 @@
     "population": 3076200,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 40.0,
     "longitude": 45.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Armenian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Armenia).",
@@ -26398,8 +28832,18 @@
     "population": 36170961,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -12.5,
     "longitude": 18.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Angola).",
@@ -26484,8 +28928,18 @@
     "population": 8095498,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 8.0,
     "longitude": 1.166667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Togo).",
@@ -26553,8 +29007,22 @@
     "population": 42418,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 9.0,
     "longitude": 168.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Marshallese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Wyspy Marshalla).",
@@ -26622,8 +29090,18 @@
     "population": 1594654,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 26.0,
     "longitude": 50.55,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Bahrajn).",
@@ -26691,8 +29169,18 @@
     "population": 1369995,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 59.0,
     "longitude": 26.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Estonian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Estonia).",
@@ -26818,8 +29306,18 @@
     "population": 4386,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 16.75,
     "longitude": -62.2,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -26932,8 +29430,26 @@
     "population": 1668768,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 2.0,
     "longitude": 10.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Portuguese",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gwinea Równikowa).",
@@ -27001,8 +29517,18 @@
     "population": 223800000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 10.0,
     "longitude": 8.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Nigeria).",
@@ -27152,8 +29678,18 @@
     "population": 64055,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 32.333333,
     "longitude": -64.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -27221,8 +29757,22 @@
     "population": 36828330,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 32.0,
     "longitude": -5.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "Berber",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Maroko).",
@@ -27372,8 +29922,50 @@
     "population": 3022401,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -22.0,
     "longitude": 17.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Afrikaans",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "German",
+        "is_official": true
+      },
+      {
+        "name": "Herero",
+        "is_official": true
+      },
+      {
+        "name": "Khoekhoe",
+        "is_official": true
+      },
+      {
+        "name": "Kwangali",
+        "is_official": true
+      },
+      {
+        "name": "Lozi",
+        "is_official": true
+      },
+      {
+        "name": "Ndonga",
+        "is_official": true
+      },
+      {
+        "name": "Tswana",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Namibia).",
@@ -27494,8 +30086,18 @@
     "population": 3662,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -51.75,
     "longitude": -59.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -27563,8 +30165,26 @@
     "population": 122729,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -4.583333,
     "longitude": 55.666667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Seychellois Creole",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Seszele).",
@@ -27685,8 +30305,18 @@
     "population": 19693423,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -15.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Zambia).",
@@ -27754,8 +30384,18 @@
     "population": 17577760,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.0,
     "longitude": 105.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Khmer",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Kambodża).",
@@ -27823,8 +30463,22 @@
     "population": 5458600,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 53.0,
     "longitude": -8.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Irish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Irlandia).",
@@ -27962,8 +30616,22 @@
     "population": 241499431,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 30.0,
     "longitude": 70.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Urdu",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Pakistan).",
@@ -28064,8 +30732,26 @@
     "population": 153836,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.466667,
     "longitude": 144.783333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chamorro",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -28133,8 +30819,22 @@
     "population": 685900,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 22.166667,
     "longitude": 113.55,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chinese",
+        "is_official": true
+      },
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -28202,8 +30902,18 @@
     "population": 29911840,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 28.0,
     "longitude": 84.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Nepali",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Nepal).",
@@ -28271,8 +30981,26 @@
     "population": 1417492000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 20.0,
     "longitude": 77.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Hindi",
+        "is_official": true
+      },
+      {
+        "name": "Tamil",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Indie).",
@@ -28394,8 +31122,22 @@
     "population": 7281800,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 41.0,
     "longitude": 75.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Kyrgyz",
+        "is_official": true
+      },
+      {
+        "name": "Russian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kirgistan).",
@@ -28463,8 +31205,22 @@
     "population": 11867032,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 19.0,
     "longitude": -72.416667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Haitian Creole",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Haiti).",
@@ -28532,8 +31288,18 @@
     "population": 83491249,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 51.0,
     "longitude": 9.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "German",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Niemcy).",
@@ -28731,8 +31497,26 @@
     "population": 14104969,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -2.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "French",
+        "is_official": true
+      },
+      {
+        "name": "Kinyarwanda",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Rwanda).",
@@ -28800,8 +31584,18 @@
     "population": 11620,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -13.3,
     "longitude": -176.2,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -28869,8 +31663,18 @@
     "population": 340110988,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 38.0,
     "longitude": -97.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Stany Zjednoczone).",
@@ -29088,8 +31892,22 @@
     "population": 53330978,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 1.0,
     "longitude": 38.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Swahili",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Kenia).",
@@ -29206,8 +32024,18 @@
     "population": 2422712,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.466667,
     "longitude": -16.566667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gambia).",
@@ -29275,8 +32103,18 @@
     "population": 169828911,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 24.0,
     "longitude": 90.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Bengali",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "high",
       "risk_text": "MSZ odradza podróże, które nie są konieczne do tego kraju (Bangladesz).",
@@ -29344,8 +32182,26 @@
     "population": 5606944,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 62.0,
     "longitude": 10.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Norwegian Bokmål",
+        "is_official": true
+      },
+      {
+        "name": "Norwegian Nynorsk",
+        "is_official": true
+      },
+      {
+        "name": "Sami",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Norwegia).",
@@ -29462,8 +32318,18 @@
     "population": 267800,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 13.166667,
     "longitude": -59.533333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Barbados).",
@@ -29531,8 +32397,18 @@
     "population": 51320,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 17.333333,
     "longitude": -62.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Saint Kitts i Nevis).",
@@ -29600,8 +32476,22 @@
     "population": 120740,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 1.416667,
     "longitude": 173.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Gilbertese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kiribati).",
@@ -29669,8 +32559,22 @@
     "population": 1391221,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -8.833333,
     "longitude": 125.916667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      },
+      {
+        "name": "Tetum",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Timor Wschodni).",
@@ -29738,8 +32642,18 @@
     "population": 35300280,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 25.0,
     "longitude": 45.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Arabia Saudyjska).",
@@ -29807,8 +32721,18 @@
     "population": 593,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -12.1642,
     "longitude": 96.871,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -29876,8 +32800,18 @@
     "population": 34132,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 43.766667,
     "longitude": 12.416667,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Italian",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (San Marino).",
@@ -30018,8 +32952,22 @@
     "population": 45905417,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 1.0,
     "longitude": 32.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Swahili",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Uganda).",
@@ -30087,8 +33035,18 @@
     "population": 5819,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 46.833333,
     "longitude": -56.333333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -30156,8 +33114,18 @@
     "population": 10749635,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 39.5,
     "longitude": -8.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Portugalia).",
@@ -30867,8 +33835,18 @@
     "population": 5651,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -15.95,
     "longitude": -5.72,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -30936,8 +33914,22 @@
     "population": 20734262,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -13.5,
     "longitude": 34.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Chewa",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Malawi).",
@@ -31005,8 +33997,26 @@
     "population": 2608,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -9.0,
     "longitude": -172.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      },
+      {
+        "name": "Samoan",
+        "is_official": true
+      },
+      {
+        "name": "Tokelauan",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -31074,8 +34084,18 @@
     "population": 9892632,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": -86.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Honduras).",
@@ -31143,8 +34163,18 @@
     "population": 3499451,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -33.0,
     "longitude": -56.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Urugwaj).",
@@ -31212,8 +34242,18 @@
     "population": 491233,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 16.5388,
     "longitude": -23.0418,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Portuguese",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Republika Zielonego Przylądka).",
@@ -31281,8 +34321,13 @@
     "population": 1300,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -90.0,
     "longitude": null,
+    "religions": [],
+    "languages": [],
     "safety": {
       "risk_level": "unknown",
       "risk_text": "Brak danych",
@@ -31350,8 +34395,18 @@
     "population": 27536874,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": -27.0,
     "longitude": 133.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Australia).",
@@ -31468,8 +34523,18 @@
     "population": 85961000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 32.0,
     "longitude": 53.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Persian (Farsi)",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Iran).",
@@ -31554,8 +34619,22 @@
     "population": 51662000,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.0,
     "longitude": 30.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      },
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "critical",
       "risk_text": "MSZ odradza wszelkie podróże do tego kraju (Sudan).",
@@ -31623,8 +34702,18 @@
     "population": 18079810,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 15.5,
     "longitude": -90.25,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Gwatemala).",
@@ -31692,8 +34781,18 @@
     "population": 40900,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 47.266667,
     "longitude": 9.533333,
+    "religions": [],
+    "languages": [
+      {
+        "name": "German",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Liechtenstein).",
@@ -31814,8 +34913,18 @@
     "population": 1367764,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 10.6918,
     "longitude": -61.2225,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Trynidad i Tobago).",
@@ -31883,8 +34992,18 @@
     "population": 9748007,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 21.5,
     "longitude": -80.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Spanish",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Kuba).",
@@ -31961,8 +35080,18 @@
     "population": 66351959,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 46.0,
     "longitude": 2.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "French",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Francja).",
@@ -32201,8 +35330,18 @@
     "population": 616500,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 4.0,
     "longitude": -56.0,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Dutch",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "low",
       "risk_text": "MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju (Surinam).",
@@ -32270,8 +35409,18 @@
     "population": 5248621,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 6.5,
     "longitude": -9.5,
+    "religions": [],
+    "languages": [
+      {
+        "name": "English",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Liberia).",
@@ -32339,8 +35488,18 @@
     "population": 4881254,
     "timezone": null,
     "national_dish": null,
+    "phone_code": null,
+    "largest_cities": null,
+    "ethnic_groups": null,
     "latitude": 29.5,
     "longitude": 45.75,
+    "religions": [],
+    "languages": [
+      {
+        "name": "Arabic",
+        "is_official": true
+      }
+    ],
     "safety": {
       "risk_level": "medium",
       "risk_text": "MSZ zaleca zachowanie szczególnej ostrożności podczas podróży do tego kraju (Kuwejt).",

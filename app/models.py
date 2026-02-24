@@ -23,6 +23,9 @@ class Country(Base):
     longitude = Column(DECIMAL(10, 6))
     timezone = Column(String(255))
     national_dish = Column(String(255))
+    phone_code = Column(String(50))
+    largest_cities = Column(Text) # Store as comma-separated or JSON
+    ethnic_groups = Column(Text) # Store as comma-separated or JSON
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 

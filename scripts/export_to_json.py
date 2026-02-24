@@ -47,8 +47,19 @@ def export_all():
             "population": c.population,
             "timezone": c.timezone,
             "national_dish": c.national_dish,
+            "phone_code": c.phone_code,
+            "largest_cities": c.largest_cities,
+            "ethnic_groups": c.ethnic_groups,
             "latitude": float(c.latitude) if c.latitude else None,
             "longitude": float(c.longitude) if c.longitude else None,
+            
+            "religions": [
+                {"name": r.name, "percentage": float(r.percentage)} for r in c.religions
+            ],
+            
+            "languages": [
+                {"name": l.name, "is_official": l.is_official} for l in c.languages
+            ],
             
             "safety": {
                 "risk_level": c.safety.risk_level if c.safety else "unknown",

@@ -1368,3 +1368,53 @@
   padding-top: 8px;
 }
 
+
+/* Basic Info Section Styles */
+.basic-info-section {
+  border-top: 1px solid #edf2f7;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.basic-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.info-item-box {
+  padding: 0.75rem 1rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.info-item-box.full {
+  grid-column: 1 / -1;
+}
+
+.info-item-box strong {
+  color: #718096;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.religion-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 4px;
+}
+
+.religion-badge {
+  background-color: #ebf8ff;
+  color: #2c5282;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+

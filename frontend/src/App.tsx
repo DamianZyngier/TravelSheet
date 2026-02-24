@@ -19,6 +19,12 @@ interface CountryData {
   longitude: number | null;
   timezone: string | null;
   national_dish: string | null;
+  population: number | null;
+  phone_code: string | null;
+  largest_cities: string | null;
+  ethnic_groups: string | null;
+  religions: { name: string; percentage: number }[];
+  languages: { name: string; is_official: boolean }[];
   safety: {
     risk_level: string;
     risk_text: string;
@@ -130,6 +136,7 @@ function App() {
   const SECTIONS = [
     { id: 'summary', label: 'Podsumowanie', icon: '📝' },
     { id: 'docs', label: 'Dokumenty', icon: '🛂' },
+    { id: 'info', label: 'Informacje', icon: 'ℹ️' },
     { id: 'currency', label: 'Waluta', icon: '💰' },
     { id: 'plugs', label: 'Gniazdka', icon: '🔌' },
     { id: 'emergency', label: 'Telefony', icon: '🚨' },
@@ -617,6 +624,50 @@ function App() {
                         <strong>Wiza turystyczna</strong>
                         <span>{selectedCountry.entry?.visa_required ? '🛂 WYMAGANA' : '🆓 NIEPOTRZEBNA'}</span>
                       </div>
+                    </div>
+                  </div>
+
+                  <div id="info" className="info-block full-width basic-info-section scroll-mt">
+                    <label>Podstawowe informacje</label>
+                    <div className="basic-info-grid">
+                      <div className="info-item-box">
+                        <strong>Ludność:</strong>
+                        <span>{selectedCountry.population?.toLocaleString() || 'Brak danych'}</span>
+                      </div>
+                      <div className="info-item-box">
+                        <strong>Nr kierunkowy:</strong>
+                        <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
+                      </div>
+                      {selectedCountry.largest_cities && (
+                        <div className="info-item-box full">
+                          <strong>Największe miasta:</strong>
+                          <span>{selectedCountry.largest_cities}</span>
+                        </div>
+                      )}
+                      {selectedCountry.ethnic_groups && (
+                        <div className="info-item-box full">
+                          <strong>Grupy etniczne:</strong>
+                          <span>{selectedCountry.ethnic_groups}</span>
+                        </div>
+                      )}
+                      {selectedCountry.languages.length > 0 && (
+                        <div className="info-item-box full">
+                          <strong>Języki:</strong>
+                          <span>{selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ')}</span>
+                        </div>
+                      )}
+                      {selectedCountry.religions.length > 0 && (
+                        <div className="info-item-box full">
+                          <strong>Religie:</strong>
+                          <div className="religion-badges">
+                            {selectedCountry.religions.sort((a,b) => b.percentage - a.percentage).map((r, i) => (
+                              <span key={i} className="religion-badge">
+                                {r.name}: <strong>{r.percentage.toFixed(1)}%</strong>
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
 

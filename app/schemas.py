@@ -173,6 +173,9 @@ class CountryDetail(BaseModel):
     population: Optional[int]
     timezone: Optional[str] = None
     national_dish: Optional[str] = None
+    phone_code: Optional[str] = None
+    largest_cities: Optional[str] = None
+    ethnic_groups: Optional[str] = None
 
     # Grouped Info
     languages: List[LanguageSchema] = []
