@@ -37,6 +37,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -190,6 +196,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -317,6 +329,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -446,6 +464,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -574,6 +598,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -701,6 +731,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
     },
     "entry": {
       "visa_required": false,
@@ -870,6 +906,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": false,
@@ -1061,6 +1103,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -1230,6 +1278,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -1357,6 +1411,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -1486,6 +1546,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -1613,6 +1679,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 80.0,
+      "restaurants": 76.0,
+      "groceries": 84.0,
+      "ratio_to_pl": 1.9
     },
     "entry": {
       "visa_required": false,
@@ -1759,6 +1831,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -1887,6 +1965,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -2014,6 +2098,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": false,
@@ -2189,6 +2279,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 70.0,
+      "restaurants": 66.5,
+      "groceries": 73.5,
+      "ratio_to_pl": 1.67
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -2358,6 +2454,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -2519,6 +2621,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -2647,6 +2755,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -2774,6 +2888,12 @@
         "dispatch": "171",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
     },
     "entry": {
       "visa_required": false,
@@ -2920,6 +3040,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -3047,6 +3173,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
     },
     "entry": {
       "visa_required": false,
@@ -3176,6 +3308,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -3303,6 +3441,12 @@
         "dispatch": "999",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -3432,6 +3576,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -3559,6 +3709,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 82.0,
+      "restaurants": 77.9,
+      "groceries": 86.1,
+      "ratio_to_pl": 1.95
     },
     "entry": {
       "visa_required": false,
@@ -3754,6 +3910,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -3881,6 +4043,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -4010,6 +4178,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -4137,6 +4311,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
     },
     "entry": {
       "visa_required": false,
@@ -4380,6 +4560,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -4541,6 +4727,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -4668,6 +4860,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 95.0,
+      "restaurants": 90.25,
+      "groceries": 99.75,
+      "ratio_to_pl": 2.26
     },
     "entry": {
       "visa_required": false,
@@ -4846,6 +5044,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -4974,6 +5178,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -5101,6 +5311,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 70.0,
+      "restaurants": 66.5,
+      "groceries": 73.5,
+      "ratio_to_pl": 1.67
     },
     "entry": {
       "visa_required": false,
@@ -5263,6 +5479,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -5390,6 +5612,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": null,
@@ -5519,6 +5747,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -5646,6 +5880,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -5775,6 +6015,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -5902,6 +6148,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -6031,6 +6283,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 50.0,
+      "restaurants": 47.5,
+      "groceries": 52.5,
+      "ratio_to_pl": 1.19
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -6158,6 +6416,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 82.0,
+      "restaurants": 77.9,
+      "groceries": 86.1,
+      "ratio_to_pl": 1.95
     },
     "entry": {
       "visa_required": false,
@@ -6304,6 +6568,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -6432,6 +6702,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 72.0,
+      "restaurants": 68.4,
+      "groceries": 75.6,
+      "ratio_to_pl": 1.71
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -6559,6 +6835,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 58.0,
+      "restaurants": 55.1,
+      "groceries": 60.9,
+      "ratio_to_pl": 1.38
     },
     "entry": {
       "visa_required": false,
@@ -6978,6 +7260,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -7162,6 +7450,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": null,
@@ -7348,6 +7642,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -7476,6 +7776,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -7603,6 +7909,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
     },
     "entry": {
       "visa_required": false,
@@ -7749,6 +8061,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -7876,6 +8194,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -8179,6 +8503,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -8306,6 +8636,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
     },
     "entry": {
       "visa_required": false,
@@ -8459,6 +8795,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -8645,6 +8987,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -8772,6 +9120,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 85.0,
+      "restaurants": 80.75,
+      "groceries": 89.25,
+      "ratio_to_pl": 2.02
     },
     "entry": {
       "visa_required": false,
@@ -8910,6 +9264,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -9038,6 +9398,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 85.0,
+      "restaurants": 80.75,
+      "groceries": 89.25,
+      "ratio_to_pl": 2.02
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -9165,6 +9531,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
     },
     "entry": {
       "visa_required": false,
@@ -9335,6 +9707,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -9504,6 +9882,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -9631,6 +10015,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
     },
     "entry": {
       "visa_required": false,
@@ -9793,6 +10183,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -9920,6 +10316,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
     },
     "entry": {
       "visa_required": false,
@@ -10049,6 +10451,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -10177,6 +10585,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -10304,6 +10718,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
     },
     "entry": {
       "visa_required": false,
@@ -10442,6 +10862,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -10569,6 +10995,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
     },
     "entry": {
       "visa_required": false,
@@ -10796,6 +11228,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -10923,6 +11361,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -11052,6 +11496,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -11179,6 +11629,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": false,
@@ -11317,6 +11773,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -11445,6 +11907,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -11509,6 +11977,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -11563,6 +12037,12 @@
         "dispatch": "03",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
     },
     "entry": {
       "visa_required": false,
@@ -11644,6 +12124,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -11698,6 +12184,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 72.0,
+      "restaurants": 68.4,
+      "groceries": 75.6,
+      "ratio_to_pl": 1.71
     },
     "entry": {
       "visa_required": false,
@@ -11832,6 +12324,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -11886,6 +12384,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -11942,6 +12446,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -11996,6 +12506,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -12052,6 +12568,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12106,6 +12628,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
     },
     "entry": {
       "visa_required": false,
@@ -12162,6 +12690,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12216,6 +12750,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -12320,6 +12860,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -12466,6 +13012,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12587,6 +13139,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12641,6 +13199,12 @@
         "dispatch": "911",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
     },
     "entry": {
       "visa_required": false,
@@ -12770,6 +13334,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12824,6 +13394,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -12880,6 +13456,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -12935,6 +13517,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -12989,6 +13577,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -13098,6 +13692,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13152,6 +13752,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
     },
     "entry": {
       "visa_required": false,
@@ -13233,6 +13839,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13287,6 +13899,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -13343,6 +13961,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13397,6 +14021,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -13453,6 +14083,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 60.0,
+      "restaurants": 57.0,
+      "groceries": 63.0,
+      "ratio_to_pl": 1.43
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13507,6 +14143,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
     },
     "entry": {
       "visa_required": false,
@@ -13604,6 +14246,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -13658,6 +14306,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 50.0,
+      "restaurants": 47.5,
+      "groceries": 52.5,
+      "ratio_to_pl": 1.19
     },
     "entry": {
       "visa_required": false,
@@ -13714,6 +14368,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13768,6 +14428,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -13824,6 +14490,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13879,6 +14551,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -13933,6 +14611,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -14144,6 +14828,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -14199,6 +14889,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -14253,6 +14949,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
     },
     "entry": {
       "visa_required": false,
@@ -14387,6 +15089,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -14442,6 +15150,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -14496,6 +15210,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 52.0,
+      "restaurants": 49.4,
+      "groceries": 54.6,
+      "ratio_to_pl": 1.24
     },
     "entry": {
       "visa_required": false,
@@ -14626,6 +15346,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -14681,6 +15407,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -14735,6 +15467,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
     },
     "entry": {
       "visa_required": false,
@@ -14799,6 +15537,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 60.0,
+      "restaurants": 57.0,
+      "groceries": 63.0,
+      "ratio_to_pl": 1.43
     },
     "entry": {
       "visa_required": false,
@@ -14929,6 +15673,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -14983,6 +15733,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
     },
     "entry": {
       "visa_required": false,
@@ -15100,6 +15856,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
     },
     "entry": {
       "visa_required": false,
@@ -15234,6 +15996,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15288,6 +16056,12 @@
         "dispatch": "199",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
     },
     "entry": {
       "visa_required": false,
@@ -15369,6 +16143,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15424,6 +16204,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15478,6 +16264,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -15543,6 +16335,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15597,6 +16395,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -15653,6 +16457,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15708,6 +16518,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15762,6 +16578,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -15827,6 +16649,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -15882,6 +16710,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -15936,6 +16770,12 @@
         "dispatch": "193",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -16008,6 +16848,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 68.0,
+      "restaurants": 64.6,
+      "groceries": 71.4,
+      "ratio_to_pl": 1.62
     },
     "entry": {
       "visa_required": false,
@@ -16182,6 +17028,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16236,6 +17088,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
     },
     "entry": {
       "visa_required": false,
@@ -16309,6 +17167,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16363,6 +17227,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
     },
     "entry": {
       "visa_required": false,
@@ -16452,6 +17322,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16506,6 +17382,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -16562,6 +17444,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -16617,6 +17505,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16671,6 +17565,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -16809,6 +17709,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16864,6 +17770,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 60.0,
+      "restaurants": 57.0,
+      "groceries": 63.0,
+      "ratio_to_pl": 1.43
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -16912,6 +17824,12 @@
       "driving_side": "",
       "card_acceptance": "",
       "emergency": null
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": false,
@@ -16968,6 +17886,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -17023,6 +17947,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -17077,6 +18007,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
     },
     "entry": {
       "visa_required": false,
@@ -17170,6 +18106,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -17224,6 +18166,12 @@
         "dispatch": "112",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -17312,6 +18260,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
     },
     "entry": {
       "visa_required": false,
@@ -17474,6 +18428,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -17528,6 +18488,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 72.0,
+      "restaurants": 68.4,
+      "groceries": 75.6,
+      "ratio_to_pl": 1.71
     },
     "entry": {
       "visa_required": false,
@@ -17661,6 +18627,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": false,
@@ -17831,6 +18803,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 30.0,
+      "restaurants": 28.5,
+      "groceries": 31.5,
+      "ratio_to_pl": 0.71
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -17885,6 +18863,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 72.0,
+      "restaurants": 68.4,
+      "groceries": 75.6,
+      "ratio_to_pl": 1.71
     },
     "entry": {
       "visa_required": false,
@@ -17982,6 +18966,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -18036,6 +19026,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -18092,6 +19088,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18147,6 +19149,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -18201,6 +19209,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 98.0,
+      "restaurants": 93.1,
+      "groceries": 102.9,
+      "ratio_to_pl": 2.33
     },
     "entry": {
       "visa_required": false,
@@ -18439,6 +19453,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18493,6 +19513,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": null,
@@ -18602,6 +19628,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 50.0,
+      "restaurants": 47.5,
+      "groceries": 52.5,
+      "ratio_to_pl": 1.19
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18666,6 +19698,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18720,6 +19758,12 @@
         "dispatch": "011",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -18817,6 +19861,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18871,6 +19921,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
     },
     "entry": {
       "visa_required": false,
@@ -18927,6 +19983,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -18981,6 +20043,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": false,
@@ -19070,6 +20138,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -19125,6 +20199,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -19179,6 +20259,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 48.0,
+      "restaurants": 45.6,
+      "groceries": 50.4,
+      "ratio_to_pl": 1.14
     },
     "entry": {
       "visa_required": false,
@@ -19309,6 +20395,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -19381,6 +20473,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -19435,6 +20533,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -19500,6 +20604,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -19555,6 +20665,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -19609,6 +20725,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": false,
@@ -19673,6 +20795,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -19786,6 +20914,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -19841,6 +20975,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -19895,6 +21035,12 @@
         "dispatch": "911",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
     },
     "entry": {
       "visa_required": false,
@@ -19968,6 +21114,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20040,6 +21192,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20094,6 +21252,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -20150,6 +21314,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20204,6 +21374,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 52.0,
+      "restaurants": 49.4,
+      "groceries": 54.6,
+      "ratio_to_pl": 1.24
     },
     "entry": {
       "visa_required": false,
@@ -20318,6 +21494,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -20373,6 +21555,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 50.0,
+      "restaurants": 47.5,
+      "groceries": 52.5,
+      "ratio_to_pl": 1.19
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20427,6 +21615,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -20524,6 +21718,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -20578,6 +21778,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -20675,6 +21881,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 38.0,
+      "restaurants": 36.1,
+      "groceries": 39.9,
+      "ratio_to_pl": 0.9
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20729,6 +21941,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -20785,6 +22003,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 72.0,
+      "restaurants": 68.4,
+      "groceries": 75.6,
+      "ratio_to_pl": 1.71
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20839,6 +22063,12 @@
         "dispatch": "999",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -20895,6 +22125,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -20949,6 +22185,12 @@
         "dispatch": "999",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
     },
     "entry": {
       "visa_required": false,
@@ -21071,6 +22313,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 22.0,
+      "restaurants": 20.9,
+      "groceries": 23.1,
+      "ratio_to_pl": 0.52
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -21159,6 +22407,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -21213,6 +22467,12 @@
         "dispatch": "999",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
     },
     "entry": {
       "visa_required": null,
@@ -21269,6 +22529,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -21323,6 +22589,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
     },
     "entry": {
       "visa_required": false,
@@ -21412,6 +22684,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -21467,6 +22745,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -21521,6 +22805,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 68.0,
+      "restaurants": 64.6,
+      "groceries": 71.4,
+      "ratio_to_pl": 1.62
     },
     "entry": {
       "visa_required": false,
@@ -21691,6 +22981,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -21746,6 +23042,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -21800,6 +23102,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
     },
     "entry": {
       "visa_required": false,
@@ -21985,6 +23293,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22073,6 +23387,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 28.0,
+      "restaurants": 26.6,
+      "groceries": 29.4,
+      "ratio_to_pl": 0.67
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22128,6 +23448,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22182,6 +23508,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 85.0,
+      "restaurants": 80.75,
+      "groceries": 89.25,
+      "ratio_to_pl": 2.02
     },
     "entry": {
       "visa_required": false,
@@ -22287,6 +23619,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 78.0,
+      "restaurants": 74.1,
+      "groceries": 81.9,
+      "ratio_to_pl": 1.86
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22341,6 +23679,12 @@
         "dispatch": "911",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
     },
     "entry": {
       "visa_required": false,
@@ -22397,6 +23741,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22451,6 +23801,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
     },
     "entry": {
       "visa_required": false,
@@ -22507,6 +23863,12 @@
         "member_112": true
       }
     },
+    "costs": {
+      "index": 52.0,
+      "restaurants": 49.4,
+      "groceries": 54.6,
+      "ratio_to_pl": 1.24
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22562,6 +23924,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -22616,6 +23984,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 65.0,
+      "restaurants": 61.75,
+      "groceries": 68.25,
+      "ratio_to_pl": 1.55
     },
     "entry": {
       "visa_required": false,
@@ -22745,6 +24119,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 32.0,
+      "restaurants": 30.4,
+      "groceries": 33.6,
+      "ratio_to_pl": 0.76
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -22800,6 +24180,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -22854,6 +24240,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 52.0,
+      "restaurants": 49.4,
+      "groceries": 54.6,
+      "ratio_to_pl": 1.24
     },
     "entry": {
       "visa_required": false,
@@ -23552,6 +24944,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -23606,6 +25004,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 25.0,
+      "restaurants": 23.75,
+      "groceries": 26.25,
+      "ratio_to_pl": 0.6
     },
     "entry": {
       "visa_required": false,
@@ -23662,6 +25066,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -23716,6 +25126,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
     },
     "entry": {
       "visa_required": false,
@@ -23772,6 +25188,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -23826,6 +25248,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
     },
     "entry": {
       "visa_required": false,
@@ -23882,6 +25310,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": null,
+      "restaurants": null,
+      "groceries": null,
+      "ratio_to_pl": null
+    },
     "entry": {
       "visa_required": null,
       "passport_required": true,
@@ -23936,6 +25370,12 @@
         "dispatch": null,
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 75.0,
+      "restaurants": 71.25,
+      "groceries": 78.75,
+      "ratio_to_pl": 1.79
     },
     "entry": {
       "visa_required": false,
@@ -24041,6 +25481,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24113,6 +25559,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 35.0,
+      "restaurants": 33.25,
+      "groceries": 36.75,
+      "ratio_to_pl": 0.83
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24168,6 +25620,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24222,6 +25680,12 @@
         "dispatch": "",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 95.0,
+      "restaurants": 90.25,
+      "groceries": 99.75,
+      "ratio_to_pl": 2.26
     },
     "entry": {
       "visa_required": false,
@@ -24331,6 +25795,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 55.0,
+      "restaurants": 52.25,
+      "groceries": 57.75,
+      "ratio_to_pl": 1.31
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24385,6 +25855,12 @@
         "dispatch": "26811",
         "member_112": false
       }
+    },
+    "costs": {
+      "index": 40.0,
+      "restaurants": 38.0,
+      "groceries": 42.0,
+      "ratio_to_pl": 0.95
     },
     "entry": {
       "visa_required": false,
@@ -24449,6 +25925,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 70.0,
+      "restaurants": 66.5,
+      "groceries": 73.5,
+      "ratio_to_pl": 1.67
     },
     "entry": {
       "visa_required": false,
@@ -24655,6 +26137,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 45.0,
+      "restaurants": 42.75,
+      "groceries": 47.25,
+      "ratio_to_pl": 1.07
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24710,6 +26198,12 @@
         "member_112": false
       }
     },
+    "costs": {
+      "index": 42.0,
+      "restaurants": 39.9,
+      "groceries": 44.1,
+      "ratio_to_pl": 1.0
+    },
     "entry": {
       "visa_required": false,
       "passport_required": true,
@@ -24764,6 +26258,12 @@
         "dispatch": "",
         "member_112": true
       }
+    },
+    "costs": {
+      "index": 52.0,
+      "restaurants": 49.4,
+      "groceries": 54.6,
+      "ratio_to_pl": 1.24
     },
     "entry": {
       "visa_required": false,

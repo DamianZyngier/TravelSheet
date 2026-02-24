@@ -40,6 +40,12 @@ interface CountryData {
       member_112?: boolean;
     } | null;
   };
+  costs?: {
+    index: number | null;
+    restaurants: number | null;
+    groceries: number | null;
+    ratio_to_pl: number | null;
+  };
   embassies?: {
     type: string;
     city: string;
@@ -595,6 +601,48 @@ function App() {
                       <span className="emergency-label">Straż</span>
                       <span className="emergency-num">{selectedCountry.practical.emergency?.fire || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
                     </div>
+                  </div>
+                </div>
+
+                <div className="info-block full-width costs-section-box">
+                  <label>Ceny w porównaniu do Polski</label>
+                  <div className="costs-container">
+                    {selectedCountry.costs?.ratio_to_pl ? (
+                      <>
+                        <div className="costs-main-info">
+                          <span className={`costs-badge ${
+                            selectedCountry.costs.ratio_to_pl < 0.7 ? 'much-cheaper' :
+                            selectedCountry.costs.ratio_to_pl < 0.9 ? 'cheaper' :
+                            selectedCountry.costs.ratio_to_pl < 1.1 ? 'similar' :
+                            selectedCountry.costs.ratio_to_pl < 1.5 ? 'expensive' : 'much-expensive'
+                          }`}>
+                            {selectedCountry.costs.ratio_to_pl < 0.7 ? 'Znacznie taniej niż w PL' :
+                             selectedCountry.costs.ratio_to_pl < 0.9 ? 'Taniej niż w PL' :
+                             selectedCountry.costs.ratio_to_pl < 1.1 ? 'Ceny zbliżone do PL' :
+                             selectedCountry.costs.ratio_to_pl < 1.5 ? 'Drożej niż w PL' : 'Znacznie drożej niż w PL'}
+                          </span>
+                          <span className="costs-ratio">
+                            Index: <strong>{(selectedCountry.costs.ratio_to_pl * 100).toFixed(0)}%</strong> cen w Polsce
+                          </span>
+                        </div>
+                        <div className="costs-grid">
+                          <div className="cost-item">
+                            <span className="cost-icon">🍔</span>
+                            <span className="cost-label">Restauracje</span>
+                            <div className="cost-bar-bg">
+                              <div className="cost-bar-fill" style={{ width: `${Math.min(100, (selectedCountry.costs.restaurants || 0) / 1.2)}%` }}></div>
+                            </div>
+                          </div>
+                          <div className="cost-item">
+                            <span className="cost-icon">🛒</span>
+                            <span className="cost-label">Zakupy</span>
+                            <div className="cost-bar-bg">
+                              <div className="cost-bar-fill" style={{ width: `${Math.min(100, (selectedCountry.costs.groceries || 0) / 1.2)}%` }}></div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    ) : 'Brak danych o kosztach'}
                   </div>
                 </div>
 

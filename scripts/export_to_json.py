@@ -26,7 +26,8 @@ def export_all():
         joinedload(models.Country.weather),
         joinedload(models.Country.climate),
         joinedload(models.Country.holidays),
-        joinedload(models.Country.laws_and_customs)
+        joinedload(models.Country.laws_and_customs),
+        joinedload(models.Country.costs)
     ).all()
 
     output = {}
@@ -67,6 +68,13 @@ def export_all():
                 "driving_side": c.practical.driving_side if c.practical else "",
                 "card_acceptance": c.practical.card_acceptance if c.practical else "",
                 "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None
+            },
+
+            "costs": {
+                "index": float(c.costs.index_overall) if c.costs else None,
+                "restaurants": float(c.costs.index_restaurants) if c.costs else None,
+                "groceries": float(c.costs.index_groceries) if c.costs else None,
+                "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs else None
             },
 
             "entry": {

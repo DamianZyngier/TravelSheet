@@ -105,6 +105,14 @@ async def sync_static_info(db: Session = Depends(get_db)):
     result = sync_static_data(db)
     return result
 
+@app.post("/api/admin/sync-costs")
+async def sync_costs_endpoint(db: Session = Depends(get_db)):
+    """Admin endpoint - sync cost of living indices"""
+    from .scrapers.costs import sync_costs
+
+    result = sync_costs(db)
+    return result
+
 @app.post("/api/admin/sync-unesco-sites")
 async def sync_unesco_sites(db: Session = Depends(get_db)):
     """Admin endpoint - sync UNESCO World Heritage sites"""

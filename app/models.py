@@ -40,6 +40,7 @@ class Country(Base):
     climate = relationship("Climate", back_populates="country", cascade="all, delete-orphan")
     holidays = relationship("Holiday", back_populates="country", cascade="all, delete-orphan")
     laws_and_customs = relationship("LawAndCustom", back_populates="country", cascade="all, delete-orphan")
+    costs = relationship("CostOfLiving", back_populates="country", uselist=False, cascade="all, delete-orphan")
 
 class Language(Base):
     __tablename__ = "languages"
@@ -247,6 +248,25 @@ class LawAndCustom(Base):
         return f"<LawAndCustom(cat='{self.category}', title='{self.title[:20]}...')>"
 
     country = relationship("Country", back_populates="laws_and_customs")
+
+class CostOfLiving(Base):
+    __tablename__ = "cost_of_living"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    
+    # Indices (usually relative to NY=100)
+    index_overall = Column(DECIMAL(10, 2))
+    index_restaurants = Column(DECIMAL(10, 2))
+    index_groceries = Column(DECIMAL(10, 2))
+    
+    # Comparison to Poland (calculated during sync)
+    # 1.0 means same as Poland, 1.2 means 20% more expensive
+    ratio_to_poland = Column(DECIMAL(10, 2))
+    
+    last_updated = Column(TIMESTAMP, server_default=func.now())
+
+    country = relationship("Country", back_populates="costs")
 
 # Update Country model with new relationships
 # I will need to replace the whole file content to ensure consistency.
