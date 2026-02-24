@@ -617,12 +617,26 @@ function App() {
 
                 {selectedCountry.holidays && selectedCountry.holidays.length > 0 && (
                   <div className="info-block full-width holiday-section">
-                    <label>Najbliższe święta i dni wolne</label>
+                    <label>Święta i dni wolne</label>
                     <div className="holiday-list">
-                      {selectedCountry.holidays.map((h, idx) => (
-                        <div key={idx} className="holiday-item">
-                          <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric', month: 'long' })}</span>
-                          <span className="holiday-name">{h.name}</span>
+                      {Object.entries(
+                        [...selectedCountry.holidays]
+                          .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+                          .reduce((acc, h) => {
+                            const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
+                            if (!acc[month]) acc[month] = [];
+                            acc[month].push(h);
+                            return acc;
+                          }, {} as Record<string, typeof selectedCountry.holidays>)
+                      ).map(([month, monthHolidays]) => (
+                        <div key={month} className="holiday-month-group">
+                          <h5 className="holiday-month-header">{month}</h5>
+                          {monthHolidays.map((h, idx) => (
+                            <div key={idx} className="holiday-item">
+                              <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric' })}</span>
+                              <span className="holiday-name">{h.name}</span>
+                            </div>
+                          ))}
                         </div>
                       ))}
                     </div>

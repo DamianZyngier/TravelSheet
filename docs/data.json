@@ -460,6 +460,38 @@
     "attractions": [],
     "holidays": [
       {
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-03-15"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "State Foundation Day",
+        "date": "2026-08-20"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-10-23"
+      },
+      {
         "name": "All Saints' Day",
         "date": "2026-11-01"
       },
@@ -468,16 +500,8 @@
         "date": "2026-12-25"
       },
       {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Good Friday",
-        "date": "2026-04-03"
-      },
-      {
-        "name": "Labour Day",
-        "date": "2026-05-01"
+        "name": "Second Day of Christmas",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -988,24 +1012,32 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Benito Juárez's birthday",
-        "date": "2026-03-16"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
         "name": "Constitution Day",
         "date": "2026-02-02"
       },
       {
-        "name": "Independence Day",
-        "date": "2026-09-16"
+        "name": "Benito Juárez's birthday",
+        "date": "2026-03-16"
       },
       {
         "name": "Labour Day",
         "date": "2026-05-01"
+      },
+      {
+        "name": "Independence Day",
+        "date": "2026-09-16"
+      },
+      {
+        "name": "Revolution Day",
+        "date": "2026-11-16"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -1711,24 +1743,52 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints",
-        "date": "2026-11-01"
+        "name": "New Year",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Mayday",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Europe Day",
+        "date": "2026-05-09"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
+        "name": "Whit Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Grand Duke's Birthday",
+        "date": "2026-06-23"
+      },
+      {
         "name": "Assumption",
         "date": "2026-08-15"
       },
       {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
+        "name": "All Saints",
+        "date": "2026-11-01"
       },
       {
         "name": "Christmas Day",
         "date": "2026-12-25"
+      },
+      {
+        "name": "Boxing Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -1997,24 +2057,68 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Children's Day",
-        "date": "2026-06-01"
-      },
-      {
-        "name": "Day of the Unification of the Romanian Principalities",
-        "date": "2026-01-24"
+        "name": "New Year",
+        "date": "2026-01-01"
       },
       {
         "name": "Epiphany",
         "date": "2026-01-06"
       },
       {
+        "name": "Saint John the Baptist Day",
+        "date": "2026-01-07"
+      },
+      {
+        "name": "Day of the Unification of the Romanian Principalities",
+        "date": "2026-01-24"
+      },
+      {
+        "name": "Orthodox Good Friday",
+        "date": "2026-04-10"
+      },
+      {
+        "name": "Orthodox Easter Sunday",
+        "date": "2026-04-12"
+      },
+      {
+        "name": "Orthodox Easter Monday",
+        "date": "2026-04-13"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Orthodox Pentecost Sunday",
+        "date": "2026-05-31"
+      },
+      {
+        "name": "Children's Day",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Orthodox Pentecost Monday",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Saint Andrew's Day",
+        "date": "2026-11-30"
+      },
+      {
+        "name": "National Day of Romania",
+        "date": "2026-12-01"
+      },
+      {
         "name": "First Christmas Day",
         "date": "2026-12-25"
+      },
+      {
+        "name": "Second Christmas Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -2221,24 +2325,52 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-02"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Saint Dévote's Day",
+        "date": "2026-01-27"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension's Day",
         "date": "2026-05-14"
       },
       {
-        "name": "Assumption's Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Whit Monday",
+        "date": "2026-05-25"
       },
       {
         "name": "Corpus Christi",
         "date": "2026-06-04"
+      },
+      {
+        "name": "Assumption's Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-02"
+      },
+      {
+        "name": "Prince's Day",
+        "date": "2026-11-19"
+      },
+      {
+        "name": "Immaculate Conception's Day",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -3121,24 +3253,220 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Virgen de la Candelaria",
+        "date": "2026-02-02"
+      },
+      {
+        "name": "Shrove Tuesday",
+        "date": "2026-02-13"
       },
       {
         "name": "Andalusia Day",
         "date": "2026-02-28"
       },
       {
+        "name": "Regional Holiday on the Balearic Islands",
+        "date": "2026-03-02"
+      },
+      {
+        "name": "Regional Holiday in Melilla",
+        "date": "2026-03-13"
+      },
+      {
+        "name": "St Joseph's Day",
+        "date": "2026-03-19"
+      },
+      {
+        "name": "End of Ramadan (Eid al-Fitr)",
+        "date": "2026-03-20"
+      },
+      {
+        "name": "Maundy Thursday",
+        "date": "2026-04-02"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
         "name": "Aragon Day",
         "date": "2026-04-23"
+      },
+      {
+        "name": "Regional Holiday in Castile and León",
+        "date": "2026-04-23"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Regional Holiday in Madrid",
+        "date": "2026-05-02"
+      },
+      {
+        "name": "Galician Letters Day",
+        "date": "2026-05-17"
+      },
+      {
+        "name": "Feast of Sacrifice (Eid al-Adha)",
+        "date": "2026-05-27"
+      },
+      {
+        "name": "Regional Holiday on the Canary Islands",
+        "date": "2026-05-30"
+      },
+      {
+        "name": "Regional Holiday in Castilla-La Mancha",
+        "date": "2026-05-31"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
+      },
+      {
+        "name": "Regional Holiday in La Rioja ",
+        "date": "2026-06-09"
+      },
+      {
+        "name": "Regional Holiday in Murcia",
+        "date": "2026-06-09"
+      },
+      {
+        "name": "St Anthony",
+        "date": "2026-06-13"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-19"
+      },
+      {
+        "name": "St John's Day",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "National Day of Galicia",
+        "date": "2026-07-25"
+      },
+      {
+        "name": "Saint James' Day",
+        "date": "2026-07-25"
+      },
+      {
+        "name": "Cantabrian Institutions Day",
+        "date": "2026-07-28"
+      },
+      {
+        "name": "Nuestra Señora de Las Nieves",
+        "date": "2026-08-05"
+      },
+      {
+        "name": "Nuestra Señora de África",
+        "date": "2026-08-05"
       },
       {
         "name": "Assumption of Mary",
         "date": "2026-08-15"
       },
       {
+        "name": "Regional Holiday in Ceuta",
+        "date": "2026-09-02"
+      },
+      {
         "name": "Asturias Day",
         "date": "2026-09-08"
+      },
+      {
+        "name": "Día de Ntra. Sra. Virgen de la Victoria",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "Nuestra Señora del Pino",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "Regional Holiday in Extremadura",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "National Day of Catalonia",
+        "date": "2026-09-11"
+      },
+      {
+        "name": "Nuestra Señora de Los Volcanes",
+        "date": "2026-09-15"
+      },
+      {
+        "name": "Regional Holiday in Cantabria",
+        "date": "2026-09-15"
+      },
+      {
+        "name": "Regional Holiday in Meilla",
+        "date": "2026-09-17"
+      },
+      {
+        "name": "Nuestra Señora de la Peña",
+        "date": "2026-09-18"
+      },
+      {
+        "name": "Nuestra Señora de Los Reyes",
+        "date": "2026-09-24"
+      },
+      {
+        "name": "Nuestra Señora de Guadalupe",
+        "date": "2026-10-05"
+      },
+      {
+        "name": "Regional Holiday in Valencia",
+        "date": "2026-10-09"
+      },
+      {
+        "name": "Spanish National Day",
+        "date": "2026-10-12"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Monday following All Saints' Day",
+        "date": "2026-11-02"
+      },
+      {
+        "name": "San Francisco Javier",
+        "date": "2026-12-03"
+      },
+      {
+        "name": "Constitution Day",
+        "date": "2026-12-06"
+      },
+      {
+        "name": "Monday following Constitution Day",
+        "date": "2026-12-07"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "St Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -3307,8 +3635,52 @@
     "attractions": [],
     "holidays": [
       {
+        "name": "Nowy Rok",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Święto Trzech Króli",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Wielkanoc",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Drugi Dzień Wielkanocy",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Święto Pracy",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Święto Narodowe Trzeciego Maja",
+        "date": "2026-05-03"
+      },
+      {
+        "name": "Zielone Świątki",
+        "date": "2026-05-24"
+      },
+      {
         "name": "Boże Ciało",
         "date": "2026-06-04"
+      },
+      {
+        "name": "Wniebowzięcie Najświętszej Maryi Panny",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Wszystkich Świętych",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Narodowe Święto Niepodległości",
+        "date": "2026-11-11"
+      },
+      {
+        "name": "Wigilia Bożego Narodzenia",
+        "date": "2026-12-24"
       },
       {
         "name": "Boże Narodzenie",
@@ -3317,14 +3689,6 @@
       {
         "name": "Drugi Dzień Bożego Narodzenia",
         "date": "2026-12-26"
-      },
-      {
-        "name": "Drugi Dzień Wielkanocy",
-        "date": "2026-04-06"
-      },
-      {
-        "name": "Narodowe Święto Niepodległości",
-        "date": "2026-11-11"
       }
     ]
   },
@@ -3696,24 +4060,96 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
-      },
-      {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Epiphany",
+        "date": "2026-01-06"
       },
       {
         "name": "Easter Monday",
         "date": "2026-04-06"
       },
       {
-        "name": "Epiphany",
-        "date": "2026-01-06"
+        "name": "Feast of St Mark",
+        "date": "2026-04-25"
+      },
+      {
+        "name": "Liberation Day",
+        "date": "2026-04-25"
+      },
+      {
+        "name": "Sardinia's Day",
+        "date": "2026-04-28"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Republic Day",
+        "date": "2026-06-02"
+      },
+      {
+        "name": "St. John the Baptist",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "Saints Peter and Paul",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "Saint Rosalia",
+        "date": "2026-07-15"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "St. Januarius",
+        "date": "2026-09-19"
+      },
+      {
+        "name": "St. Petronius",
+        "date": "2026-10-04"
+      },
+      {
+        "name": "St. Saturninus",
+        "date": "2026-10-30"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "St. Justus",
+        "date": "2026-11-03"
+      },
+      {
+        "name": "St. Nicholas",
+        "date": "2026-12-06"
+      },
+      {
+        "name": "St. Ambrose",
+        "date": "2026-12-07"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "St. Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -3904,24 +4340,60 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
+        "name": "Epiphany",
+        "date": "2026-01-06"
       },
       {
         "name": "Carnival",
         "date": "2026-02-16"
       },
       {
+        "name": "Constitution Day",
+        "date": "2026-03-14"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "National Holiday",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
         "name": "Christmas Day",
         "date": "2026-12-25"
       },
       {
-        "name": "Constitution Day",
-        "date": "2026-03-14"
+        "name": "St. Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -4909,24 +5381,60 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints’ Day",
-        "date": "2026-11-01"
+        "name": "Day of the Slovak Republic",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Epiphany",
+        "date": "2026-01-06"
       },
       {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Day of Victory over fascism",
+        "date": "2026-05-08"
+      },
+      {
+        "name": "St. Cyril and Methodius Day",
+        "date": "2026-07-05"
+      },
+      {
+        "name": "Slovak National Uprising anniversary",
+        "date": "2026-08-29"
       },
       {
         "name": "Day of Our Lady of the Seven Sorrows",
         "date": "2026-09-15"
       },
       {
+        "name": "All Saints’ Day",
+        "date": "2026-11-01"
+      },
+      {
         "name": "Day of Struggle for Freedom and Democracy",
         "date": "2026-11-17"
+      },
+      {
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Second Christmas Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -5538,24 +6046,56 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-10-31"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
+        "name": "Whit Sunday",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-06-06"
+      },
+      {
+        "name": "Midsummer Day",
+        "date": "2026-06-20"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-10-31"
       },
       {
         "name": "Christmas Day",
         "date": "2026-12-25"
       },
       {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
+        "name": "Boxing Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -6135,20 +6675,48 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
+        "name": "Easter",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
+        "name": "Pentecost",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-07-21"
+      },
+      {
         "name": "Assumption Day",
         "date": "2026-08-15"
+      },
+      {
+        "name": "All Saints Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Armistice Day",
+        "date": "2026-11-11"
       },
       {
         "name": "Christmas Day",
@@ -6219,24 +6787,60 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Day of the Restoration of the Independent Czech State",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Liberation Day",
+        "date": "2026-05-08"
+      },
+      {
+        "name": "St. Cyril and Methodius Day",
+        "date": "2026-07-05"
+      },
+      {
+        "name": "Day of the Burning of Jan Hus",
+        "date": "2026-07-06"
       },
       {
         "name": "Czech Statehood Day",
         "date": "2026-09-28"
       },
       {
+        "name": "Independence Day",
+        "date": "2026-10-28"
+      },
+      {
         "name": "Day of Struggle for Freedom and Democracy",
         "date": "2026-11-17"
       },
       {
-        "name": "Day of the Burning of Jan Hus",
-        "date": "2026-07-06"
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Second Christmas Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -6691,24 +7295,56 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Birth of Jesus Christ (Christmas in a new style)",
-        "date": "2026-12-25"
+        "name": "New Year",
+        "date": "2026-01-01"
       },
       {
         "name": "Birth of Jesus Christ (Christmas in the old style)",
         "date": "2026-01-07"
       },
       {
-        "name": "Children's Day",
-        "date": "2026-06-01"
+        "name": "International Women's Day",
+        "date": "2026-03-08"
+      },
+      {
+        "name": "Orthodox Easter Sunday",
+        "date": "2026-04-12"
+      },
+      {
+        "name": "Orthodox Easter Monday",
+        "date": "2026-04-13"
       },
       {
         "name": "Commemoration Day (Radonitsa)",
         "date": "2026-04-20"
       },
       {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
         "name": "Europe Day",
         "date": "2026-05-09"
+      },
+      {
+        "name": "Victory Day",
+        "date": "2026-05-09"
+      },
+      {
+        "name": "Children's Day",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Independence Day of the Republic of Moldova",
+        "date": "2026-08-27"
+      },
+      {
+        "name": "National Language Day",
+        "date": "2026-08-31"
+      },
+      {
+        "name": "Birth of Jesus Christ (Christmas in a new style)",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -7792,16 +8428,48 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "2026-05-30"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
       },
       {
         "name": "Anti-Fascist Struggle Day",
         "date": "2026-06-22"
       },
       {
+        "name": "Victory and Homeland Thanksgiving Day and the Day of Croatian Defenders",
+        "date": "2026-08-05"
+      },
+      {
         "name": "Assumption Day",
         "date": "2026-08-15"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Remembrance Day",
+        "date": "2026-11-18"
       },
       {
         "name": "Christmas",
@@ -7992,24 +8660,60 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
+        "name": "New Year Holiday",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Prešeren Day",
+        "date": "2026-02-08"
       },
       {
-        "name": "Day of Remembrance for the Dead",
-        "date": "2026-11-01"
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
       },
       {
         "name": "Day of Uprising Against the Occupation",
         "date": "2026-04-27"
       },
       {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-02"
+      },
+      {
+        "name": "Whit Sunday",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "2026-06-25"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Reformation Day",
+        "date": "2026-10-31"
+      },
+      {
+        "name": "Day of Remembrance for the Dead",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Independence and Unity Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -8255,12 +8959,16 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Feast of St. Joseph",
-        "date": "2026-03-19"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
         "name": "Feast of St. Paul's Shipwreck",
         "date": "2026-02-10"
+      },
+      {
+        "name": "Feast of St. Joseph",
+        "date": "2026-03-19"
       },
       {
         "name": "Freedom Day",
@@ -8271,8 +8979,40 @@
         "date": "2026-04-03"
       },
       {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
+        "name": "Worker's Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "​Sette Giugno",
+        "date": "2026-06-07"
+      },
+      {
+        "name": "​​​Feast of St.Peter and St.Paul",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "​​​Feast of the Assumption",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "​​​Feast of Our Lady of Victories",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "​​​Independence Day",
+        "date": "2026-09-21"
+      },
+      {
+        "name": "​Feast of the Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "​​​Republic Day",
+        "date": "2026-12-13"
+      },
+      {
+        "name": "​​​​Christmas Day",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -8409,16 +9149,20 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Armistice Day",
-        "date": "2026-11-11"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
         "name": "Christmas (Orthodox)",
         "date": "2026-01-07"
       },
       {
-        "name": "Easter Monday (Orthodox)",
-        "date": "2026-04-13"
+        "name": "Sovereignty Day",
+        "date": "2026-02-15"
+      },
+      {
+        "name": "Good Friday (Orthodox)",
+        "date": "2026-04-10"
       },
       {
         "name": "Easter Saturday (Orthodox)",
@@ -8427,6 +9171,18 @@
       {
         "name": "Easter Sunday (Orthodox)",
         "date": "2026-04-12"
+      },
+      {
+        "name": "Easter Monday (Orthodox)",
+        "date": "2026-04-13"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Armistice Day",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -8501,24 +9257,64 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Good Friday",
+        "date": "2026-04-03"
       },
       {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Day of the Restoration of Independence",
+        "date": "2026-05-04"
+      },
+      {
+        "name": "Mother's Day",
+        "date": "2026-05-10"
+      },
+      {
+        "name": "Pentecost",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Midsummer's Eve",
+        "date": "2026-06-23"
+      },
+      {
+        "name": "Midsummer Day",
+        "date": "2026-06-24"
       },
       {
         "name": "Day of the Proclamation of the Republic of Latvia",
         "date": "2026-11-18"
       },
       {
-        "name": "Day of the Restoration of Independence",
-        "date": "2026-05-04"
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "2nd Day of Christmas",
+        "date": "2026-12-26"
+      },
+      {
+        "name": "New Year's Eve",
+        "date": "2026-12-31"
       }
     ]
   },
@@ -9403,24 +10199,56 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
+      },
+      {
         "name": "Assumption Day",
         "date": "2026-08-15"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-10-26"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
       },
       {
         "name": "Christmas Day",
         "date": "2026-12-25"
       },
       {
-        "name": "Corpus Christi",
-        "date": "2026-06-04"
+        "name": "St Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -9977,24 +10805,68 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
+        "name": "New Year's Day Holiday",
+        "date": "2026-01-02"
       },
       {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
+        "name": "Summer Day",
+        "date": "2026-03-16"
       },
       {
         "name": "Eid al-Fitr (Holiday of Breaking the Fast)",
         "date": "2026-03-20"
       },
       {
+        "name": "Nowruz (Persian New Year)",
+        "date": "2026-03-23"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Orthodox Easter Sunday",
+        "date": "2026-04-12"
+      },
+      {
+        "name": "Orthodox Easter Monday",
+        "date": "2026-04-13"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
         "name": "Eid ul-Adha (Feast of Sacrifice)",
         "date": "2026-05-26"
+      },
+      {
+        "name": "Mother Teresa Day",
+        "date": "2026-10-19"
+      },
+      {
+        "name": "Flag and Independence Day",
+        "date": "2026-11-30"
+      },
+      {
+        "name": "Liberation Day",
+        "date": "2026-11-30"
+      },
+      {
+        "name": "Youth Day",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -10316,24 +11188,40 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Catholic Christmas",
-        "date": "2026-12-25"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
         "name": "Christmas (Orthodox Christmas)",
         "date": "2026-01-07"
       },
       {
-        "name": "Day of the Republic",
-        "date": "2026-07-03"
+        "name": "Women's Day",
+        "date": "2026-03-08"
       },
       {
         "name": "Labour Day",
         "date": "2026-05-01"
       },
       {
-        "name": "New Year's Day",
-        "date": "2026-01-01"
+        "name": "Victory Day",
+        "date": "2026-05-09"
+      },
+      {
+        "name": "Radunitsa",
+        "date": "2026-05-14"
+      },
+      {
+        "name": "Day of the Republic",
+        "date": "2026-07-03"
+      },
+      {
+        "name": "October Revolution Day",
+        "date": "2026-11-07"
+      },
+      {
+        "name": "Catholic Christmas",
+        "date": "2026-12-25"
       }
     ]
   },
@@ -10565,6 +11453,42 @@
     "attractions": [],
     "holidays": [
       {
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Euro Adoption Day",
+        "date": "2026-01-02"
+      },
+      {
+        "name": "Bulgaria’s Liberation from the Ottoman Empire",
+        "date": "2026-03-03"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-10"
+      },
+      {
+        "name": "Holy Saturday",
+        "date": "2026-04-11"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-12"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-13"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "St. George's Day, and the Bulgarian Army’s Day",
+        "date": "2026-05-06"
+      },
+      {
         "name": "Bulgarian Education and Culture, and Slavic Script Day",
         "date": "2026-05-24"
       },
@@ -10573,8 +11497,20 @@
         "date": "2026-05-25"
       },
       {
-        "name": "Bulgaria’s Liberation from the Ottoman Empire",
-        "date": "2026-03-03"
+        "name": "Unification Day",
+        "date": "2026-09-06"
+      },
+      {
+        "name": "Unification Day (Observed)",
+        "date": "2026-09-07"
+      },
+      {
+        "name": "Independence Day",
+        "date": "2026-09-22"
+      },
+      {
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
       },
       {
         "name": "Christmas Day",
@@ -10583,6 +11519,10 @@
       {
         "name": "Christmas Day",
         "date": "2026-12-26"
+      },
+      {
+        "name": "Christmas Day (Observed)",
+        "date": "2026-12-28"
       }
     ]
   },
@@ -10727,24 +11667,48 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Ascension Day",
-        "date": "2026-05-14"
+        "name": "New Year’s Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
+        "name": "Good Friday",
+        "date": "2026-04-03"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
       },
       {
         "name": "Easter Monday",
         "date": "2026-04-06"
       },
       {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
+        "name": "King’s Day",
+        "date": "2026-04-27"
+      },
+      {
+        "name": "Liberation Day",
+        "date": "2026-05-05"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "2026-05-14"
+      },
+      {
+        "name": "Whit Sunday",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Boxing Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -10811,6 +11775,78 @@
     "attractions": [],
     "holidays": [
       {
+        "name": "Solemnity of Mary, Mother of God",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Anniversary of the foundation of Vatican City",
+        "date": "2026-02-11"
+      },
+      {
+        "name": "Saint Joseph",
+        "date": "2026-03-19"
+      },
+      {
+        "name": "Maundy Thursday",
+        "date": "2026-04-02"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Saturday",
+        "date": "2026-04-04"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Easter Tuesday",
+        "date": "2026-04-07"
+      },
+      {
+        "name": "Saint Joseph the Worker",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Anniversary of the election of Pope Leo XIV",
+        "date": "2026-05-08"
+      },
+      {
+        "name": "Saints Peter and Paul",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "Vigil of the Assumption",
+        "date": "2026-08-14"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Saint Stephen of Hungary",
+        "date": "2026-08-16"
+      },
+      {
+        "name": "Nativity of Mary",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "Saint Robert Bellarmine's Day",
+        "date": "2026-09-17"
+      },
+      {
         "name": "All Saints’ Day",
         "date": "2026-11-01"
       },
@@ -10819,16 +11855,28 @@
         "date": "2026-11-02"
       },
       {
-        "name": "Anniversary of the election of Pope Leo XIV",
-        "date": "2026-05-08"
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
       },
       {
-        "name": "Anniversary of the foundation of Vatican City",
-        "date": "2026-02-11"
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
       },
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "New Year's Eve",
+        "date": "2026-12-26"
+      },
+      {
+        "name": "Saint Stephen's Day",
+        "date": "2026-12-26"
+      },
+      {
+        "name": "Saint John the Evangelist",
+        "date": "2026-12-27"
       }
     ]
   },
@@ -11276,24 +12324,160 @@
     "attractions": [],
     "holidays": [
       {
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Berchtold's Day",
+        "date": "2026-01-02"
+      },
+      {
+        "name": "Berchtold's Day",
+        "date": "2026-01-02"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "St Anthony's Day",
+        "date": "2026-01-17"
+      },
+      {
+        "name": "Meinrad Day",
+        "date": "2026-01-21"
+      },
+      {
+        "name": "Candlemas",
+        "date": "2026-02-02"
+      },
+      {
         "name": "Agathe's day",
         "date": "2026-02-05"
       },
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "Establishment of the Republic",
+        "date": "2026-03-01"
       },
       {
-        "name": "Angel consecration",
-        "date": "2026-09-14"
+        "name": "St Joseph's Day",
+        "date": "2026-03-19"
+      },
+      {
+        "name": "St Benedict",
+        "date": "2026-03-21"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Näfels Ride",
+        "date": "2026-04-09"
+      },
+      {
+        "name": "Sechseläuten",
+        "date": "2026-04-20"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Saint Sigismund",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
+      },
+      {
+        "name": "Celebration of independence",
+        "date": "2026-06-23"
+      },
+      {
+        "name": "Saints Peter and Paul",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "Independence Day",
+        "date": "2026-08-01"
+      },
+      {
         "name": "Assumption Day",
         "date": "2026-08-15"
+      },
+      {
+        "name": "Jeûne genevois",
+        "date": "2026-09-10"
+      },
+      {
+        "name": "Angel consecration",
+        "date": "2026-09-14"
+      },
+      {
+        "name": "Knabenschiessen",
+        "date": "2026-09-14"
+      },
+      {
+        "name": "Fast Monday",
+        "date": "2026-09-20"
+      },
+      {
+        "name": "Federal Day of Thanksgiving, Repentance and Prayer",
+        "date": "2026-09-20"
+      },
+      {
+        "name": "St. Mauritius Day",
+        "date": "2026-09-22"
+      },
+      {
+        "name": "Saint Nicholas of Flüe Day",
+        "date": "2026-09-25"
+      },
+      {
+        "name": "St Gallus' Day",
+        "date": "2026-10-16"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "St Martin's Day",
+        "date": "2026-11-11"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "St Stephen's Day",
+        "date": "2026-12-26"
+      },
+      {
+        "name": "Restoration of the Republic",
+        "date": "2026-12-31"
       }
     ]
   },
@@ -11405,16 +12589,16 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "New Year’s Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Day of Goodwill",
-        "date": "2026-12-26"
+        "name": "Human Rights Day",
+        "date": "2026-03-21"
       },
       {
-        "name": "Day of Reconciliation",
-        "date": "2026-12-16"
+        "name": "Good Friday",
+        "date": "2026-04-03"
       },
       {
         "name": "Family Day",
@@ -11423,6 +12607,38 @@
       {
         "name": "Freedom Day",
         "date": "2026-04-27"
+      },
+      {
+        "name": "Workers' Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Youth Day",
+        "date": "2026-06-16"
+      },
+      {
+        "name": "National Women's Day",
+        "date": "2026-08-09"
+      },
+      {
+        "name": "National Women's Day observed",
+        "date": "2026-08-10"
+      },
+      {
+        "name": "Heritage Day",
+        "date": "2026-09-24"
+      },
+      {
+        "name": "Day of Reconciliation",
+        "date": "2026-12-16"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Day of Goodwill",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -12066,8 +13282,40 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Day of restoration of the Lithuanian state",
+        "date": "2026-02-16"
+      },
+      {
+        "name": "Day of Restoration of Independence of Lithuania",
+        "date": "2026-03-11"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Midsummer Day",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-07-06"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
       },
       {
         "name": "All Saints' Day",
@@ -12078,12 +13326,16 @@
         "date": "2026-11-02"
       },
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
       },
       {
         "name": "Christmas Day",
         "date": "2026-12-25"
+      },
+      {
+        "name": "2nd Day of Christmas",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -13032,24 +14284,52 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "Boxing Day",
-        "date": "2026-12-26"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Independence Day",
+        "date": "2026-02-24"
       },
       {
-        "name": "Christmas Eve",
-        "date": "2026-12-24"
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Spring Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Pentecost",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Victory Day",
+        "date": "2026-06-23"
+      },
+      {
+        "name": "Midsummer Day",
+        "date": "2026-06-24"
       },
       {
         "name": "Day of Restoration of Independence",
         "date": "2026-08-20"
       },
       {
-        "name": "Easter Sunday",
-        "date": "2026-04-05"
+        "name": "Christmas Eve",
+        "date": "2026-12-24"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Boxing Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -13754,24 +15034,44 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "August Holiday",
-        "date": "2026-08-03"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Saint Brigid's Day",
+        "date": "2026-02-02"
+      },
+      {
+        "name": "Saint Patrick's Day",
+        "date": "2026-03-17"
       },
       {
         "name": "Easter Monday",
         "date": "2026-04-06"
       },
       {
+        "name": "May Day",
+        "date": "2026-05-04"
+      },
+      {
         "name": "June Holiday",
         "date": "2026-06-01"
       },
       {
-        "name": "May Day",
-        "date": "2026-05-04"
+        "name": "August Holiday",
+        "date": "2026-08-03"
+      },
+      {
+        "name": "October Holiday",
+        "date": "2026-10-26"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "St. Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -14314,24 +15614,84 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "2nd Day of Christmas",
-        "date": "2026-12-26"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "International Women's Day",
+        "date": "2026-03-08"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
+        "name": "Pentecost Sunday",
+        "date": "2026-05-24"
+      },
+      {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
+      },
+      {
+        "name": "High Festival of Peace",
+        "date": "2026-08-08"
+      },
+      {
         "name": "Assumption Day",
         "date": "2026-08-15"
       },
       {
+        "name": "World Children's Day",
+        "date": "2026-09-20"
+      },
+      {
+        "name": "Day of German Unity",
+        "date": "2026-10-03"
+      },
+      {
+        "name": "Reformation Day",
+        "date": "2026-10-31"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Repentance Day",
+        "date": "2026-11-18"
+      },
+      {
         "name": "Christmas Day",
         "date": "2026-12-25"
+      },
+      {
+        "name": "2nd Day of Christmas",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -15302,16 +16662,40 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "Solemnity of Mary, the Holy Mother of God",
+        "date": "2026-01-01"
       },
       {
-        "name": "All Souls' Day",
-        "date": "2026-11-02"
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Saint Agatha's Day",
+        "date": "2026-02-05"
       },
       {
         "name": "Anniversary of the 1906 Arengo and commemoration of the Militia",
         "date": "2026-03-25"
+      },
+      {
+        "name": "Investiture of the Captains Regent (Heads of State)",
+        "date": "2026-04-01"
+      },
+      {
+        "name": "Easter",
+        "date": "2026-04-05"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
       },
       {
         "name": "Anniversary of the Fall of Fascism and Day of Freedom",
@@ -15320,6 +16704,34 @@
       {
         "name": "Assumption of the Virgin Day",
         "date": "2026-08-15"
+      },
+      {
+        "name": "San Marino National Holiday / Foundation of the Republic (301 A.D.)",
+        "date": "2026-09-03"
+      },
+      {
+        "name": "Investiture of the Captains Regent (Heads of State)",
+        "date": "2026-10-01"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "All Souls' Day",
+        "date": "2026-11-02"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Saint Stephen’s Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -15502,24 +16914,628 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
       },
       {
-        "name": "Assumption Day",
-        "date": "2026-08-15"
+        "name": "Municipal holiday",
+        "date": "2026-01-11"
       },
       {
-        "name": "Azores Day",
-        "date": "2026-05-25"
+        "name": "Municipal holiday",
+        "date": "2026-01-13"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-01-14"
+      },
+      {
+        "name": "St Amaro's Day",
+        "date": "2026-01-15"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-01-20"
+      },
+      {
+        "name": "St Vincent's Day",
+        "date": "2026-01-22"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-02-02"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-02-10"
+      },
+      {
+        "name": "Carnival",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-02-18"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-02"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-04"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-05"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-08"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-12"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-03-19"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-02"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Sunday",
+        "date": "2026-04-05"
       },
       {
         "name": "Battle of Atoleiros",
         "date": "2026-04-06"
       },
       {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-07"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-10"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-11"
+      },
+      {
+        "name": "Monday after the first Sunday after Easter",
+        "date": "2026-04-13"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-22"
+      },
+      {
+        "name": "St George's Day",
+        "date": "2026-04-23"
+      },
+      {
+        "name": "Liberty Day",
+        "date": "2026-04-25"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-04-26"
+      },
+      {
+        "name": "Labor Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-02"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-03"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-04"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-08"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-12"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-13"
+      },
+      {
+        "name": "Day of St Giles of Santarém",
+        "date": "2026-05-14"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-14"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-15"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-17"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-21"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-22"
+      },
+      {
+        "name": "Birthday of Sacadura Cabral",
+        "date": "2026-05-23"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-23"
+      },
+      {
+        "name": "Azores Day",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "2026-05-25"
+      },
+      {
+        "name": "Whit Tuesday",
+        "date": "2026-05-26"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-05-29"
+      },
+      {
+        "name": "Birthday of José Falcão",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-01"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "2026-06-04"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-04"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-05"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-07"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-09"
+      },
+      {
+        "name": "Portugal Day",
+        "date": "2026-06-10"
+      },
+      {
+        "name": "St Anthony's Day",
+        "date": "2026-06-13"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-14"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-22"
+      },
+      {
+        "name": "Battle of São Mamede",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "St Day of Nuno de Santa Maria",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "St John's Day",
+        "date": "2026-06-24"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-28"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "St Peter's Day",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "St Peter's Day",
+        "date": "2026-06-29"
+      },
+      {
+        "name": "Madeira Day",
+        "date": "2026-07-01"
+      },
+      {
+        "name": "Battle of the Côa",
+        "date": "2026-07-02"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-03"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-04"
+      },
+      {
         "name": "Battle of Salgadela",
         "date": "2026-07-07"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-08"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-10"
+      },
+      {
+        "name": "Day of Benedict of Nursia",
+        "date": "2026-07-11"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "Birthday of António José de Almeid",
+        "date": "2026-07-17"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-20"
+      },
+      {
+        "name": "St Mary Magdalene's Day",
+        "date": "2026-07-22"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-24"
+      },
+      {
+        "name": "St Christina's Day",
+        "date": "2026-07-24"
+      },
+      {
+        "name": "Day of St Thomas of Mira",
+        "date": "2026-07-25"
+      },
+      {
+        "name": "St Christopher's Day",
+        "date": "2026-07-25"
+      },
+      {
+        "name": "St James' Day",
+        "date": "2026-07-25"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-26"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-07-27"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-06"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-10"
+      },
+      {
+        "name": "St Lawrence's Day",
+        "date": "2026-08-10"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-11"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-13"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-14"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Birthday of Couto Jardim",
+        "date": "2026-08-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-16"
+      },
+      {
+        "name": "St Roch's Day",
+        "date": "2026-08-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-17"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-19"
+      },
+      {
+        "name": "Day of St Bernard of Clairvaux",
+        "date": "2026-08-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-21"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-22"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-24"
+      },
+      {
+        "name": "St Bartholomew's Day",
+        "date": "2026-08-24"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-25"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-28"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-08-29"
+      },
+      {
+        "name": "Conquest of the city from the Moors",
+        "date": "2026-09-03"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-07"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-11"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-15"
+      },
+      {
+        "name": "St Euphemia's Day",
+        "date": "2026-09-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-19"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-21"
+      },
+      {
+        "name": "St Matthew's Day",
+        "date": "2026-09-21"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-22"
+      },
+      {
+        "name": "Day of St Michael the Archangel",
+        "date": "2026-09-29"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-09-29"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-05"
+      },
+      {
+        "name": "Republic Day",
+        "date": "2026-10-05"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-07"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-09"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-11"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-15"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-16"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-20"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-22"
+      },
+      {
+        "name": "St Catherine's Day",
+        "date": "2026-10-25"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-10-27"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-11-06"
+      },
+      {
+        "name": "St Martin's Day",
+        "date": "2026-11-11"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-11-19"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-11-23"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-11-24"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-11-27"
+      },
+      {
+        "name": "St Andrew's Day",
+        "date": "2026-11-30"
+      },
+      {
+        "name": "Independence Day",
+        "date": "2026-12-01"
+      },
+      {
+        "name": "Immaculate Conception Day",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Municipal holiday",
+        "date": "2026-12-11"
+      },
+      {
+        "name": "Christmas",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "Boxing Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -16237,24 +18253,56 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "All Saints' Day",
-        "date": "2026-11-01"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Epiphany",
+        "date": "2026-01-06"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
+      },
+      {
+        "name": "Labour Day",
+        "date": "2026-05-01"
       },
       {
         "name": "Ascension Day",
         "date": "2026-05-14"
       },
       {
-        "name": "Christmas Day",
-        "date": "2026-12-25"
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
       },
       {
         "name": "Corpus Christi",
         "date": "2026-06-04"
       },
       {
-        "name": "Easter Monday",
-        "date": "2026-04-06"
+        "name": "National Day (Assumption)",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Nativity of Mary",
+        "date": "2026-09-08"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "2026-12-08"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "St. Stephen's Day",
+        "date": "2026-12-26"
       }
     ]
   },
@@ -16502,16 +18550,40 @@
     "attractions": [],
     "holidays": [
       {
-        "name": "2nd day of Christmas",
-        "date": "2026-12-26"
+        "name": "New Year's Day",
+        "date": "2026-01-01"
+      },
+      {
+        "name": "Good Friday",
+        "date": "2026-04-03"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "2026-04-06"
       },
       {
         "name": "Abolition of slavery",
         "date": "2026-04-27"
       },
       {
+        "name": "Labour Day",
+        "date": "2026-05-01"
+      },
+      {
+        "name": "Victory Day",
+        "date": "2026-05-08"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "2026-05-14"
+      },
+      {
         "name": "Abolition of slavery",
         "date": "2026-05-22"
+      },
+      {
+        "name": "Pentecost Monday",
+        "date": "2026-05-25"
       },
       {
         "name": "Abolition of slavery",
@@ -16520,6 +18592,38 @@
       {
         "name": "Abolition of slavery",
         "date": "2026-06-10"
+      },
+      {
+        "name": "National Day",
+        "date": "2026-07-14"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "2026-08-15"
+      },
+      {
+        "name": "Abolition of slavery",
+        "date": "2026-10-09"
+      },
+      {
+        "name": "All Saints Day",
+        "date": "2026-11-01"
+      },
+      {
+        "name": "Armistice Day",
+        "date": "2026-11-11"
+      },
+      {
+        "name": "Abolition of slavery",
+        "date": "2026-12-20"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "2026-12-25"
+      },
+      {
+        "name": "2nd day of Christmas",
+        "date": "2026-12-26"
       }
     ]
   },

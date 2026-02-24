@@ -669,24 +669,40 @@
 .holiday-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.25rem;
   margin-top: 0.75rem;
+}
+
+.holiday-month-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.holiday-month-header {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  color: #2b6cb0;
+  font-weight: 800;
+  border-bottom: 1px solid #ebf8ff;
+  padding-bottom: 2px;
 }
 
 .holiday-item {
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   background-color: #f7fafc;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .holiday-date {
   font-weight: 700;
   color: #2d3748;
-  min-width: 140px;
+  min-width: 40px;
 }
 
 .holiday-name {

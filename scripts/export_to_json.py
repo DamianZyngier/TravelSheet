@@ -99,7 +99,8 @@ def export_all():
             ],
             
             "holidays": [
-                {"name": h.name, "date": str(h.date)} for h in c.holidays[:5]
+                {"name": h.name, "date": str(h.date)} 
+                for h in sorted(c.holidays, key=lambda x: x.date)
             ]
         }
         output[c.iso_alpha2] = country_data
