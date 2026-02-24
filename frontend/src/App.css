@@ -885,7 +885,35 @@
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
+}
+
+.health-full-info {
+  padding: 1.25rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.health-full-info strong {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #718096;
+  margin-bottom: 0.75rem;
+}
+
+.health-summary-vax {
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
+}
+
+.health-msz-link {
+  font-size: 0.8rem;
+  color: #3182ce;
+  text-decoration: underline;
+  align-self: flex-start;
 }
 
 .health-item {

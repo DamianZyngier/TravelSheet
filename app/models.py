@@ -193,6 +193,7 @@ class PracticalInfo(Base):
     emergency_numbers = Column(Text) # JSON string with police, ambulance, fire
     vaccinations_required = Column(Text)
     vaccinations_suggested = Column(Text)
+    health_info = Column(Text)
 
     @property
     def emergency(self):

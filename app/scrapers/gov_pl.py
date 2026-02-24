@@ -241,37 +241,35 @@ async def scrape_country(db: Session, iso_code: str):
     entry.visa_required = visa_req
 
     # Health & Vaccinations
-    vaccines_req, vaccines_sug = "", ""
+    vaccines_req, vaccines_sug, health_full = "", "", ""
     health_section = soup.find(string=re.compile(r'^Zdrowie$', re.I)) or soup.find(string=re.compile(r'Informacje dotyczące zdrowia', re.I))
     if health_section:
-        health_text = ""
+        health_text_list = []
         curr = health_section.parent
         # Look ahead for a few paragraphs or until next major header
-        for _ in range(12):
+        for _ in range(25): # Increased range to capture full content
             if curr:
                 txt = curr.get_text().strip()
-                if txt: health_text += txt + "\n"
+                if txt: health_text_list.append(txt)
                 curr = curr.find_next_sibling()
+                # Stop if we hit a major section header (h2 or h3)
                 if curr and curr.name in ['h2', 'h3']: break
         
-        # Simple extraction logic
-        # Required usually mentions "szczepienia obowiązkowe" or "żółta febra"
-        if "żółtą febrę" in health_text.lower() or "żółtej febry" in health_text.lower():
-            if "obowiązkowe" in health_text.lower() or "wymagane" in health_text.lower():
-                vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane w określonych sytuacjach)"
+        health_full = "\n\n".join(health_text_list)
+        health_text_lower = health_full.lower()
         
-        # Suggested usually lists many diseases
+        # Simple extraction logic for structured fields (compatibility)
+        if "żółtą febrę" in health_text_lower or "żółtej febry" in health_text_lower:
+            if "obowiązkowe" in health_text_lower or "wymagane" in health_text_lower:
+                vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane)"
+        
         suggested_list = []
         for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"]:
-            if v.lower() in health_text.lower():
+            if v.lower() in health_text_lower:
                 suggested_list.append(v)
         
         if suggested_list:
-            vaccines_sug = "Zalecane szczepienia: " + ", ".join(suggested_list)
-        else:
-            # Fallback: take first 200 chars if something was found but not matched
-            if health_text.strip():
-                vaccines_sug = health_text.strip()[:300] + "..."
+            vaccines_sug = "Zalecane: " + ", ".join(suggested_list)
 
     practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
     if not practical:
@@ -279,6 +277,7 @@ async def scrape_country(db: Session, iso_code: str):
         db.add(practical)
     practical.vaccinations_required = vaccines_req
     practical.vaccinations_suggested = vaccines_sug
+    practical.health_info = health_full
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url}
