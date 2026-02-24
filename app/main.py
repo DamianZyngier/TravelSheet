@@ -129,6 +129,14 @@ async def sync_emergency(db: Session = Depends(get_db)):
     result = await sync_emergency_numbers(db)
     return result
 
+@app.post("/api/admin/sync-holidays")
+async def sync_holidays_endpoint(db: Session = Depends(get_db)):
+    """Admin endpoint - sync public holidays"""
+    from .scrapers.holidays import sync_all_holidays
+
+    result = await sync_all_holidays(db)
+    return result
+
 @app.post("/api/admin/update-weather/{iso_code}")
 async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - update weather for specific country"""

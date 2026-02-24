@@ -3,6 +3,31 @@ from sqlalchemy.orm import Session
 from .. import models
 from datetime import date
 import asyncio
+import logging
+
+logger = logging.getLogger("uvicorn")
+
+async def sync_all_holidays(db: Session):
+    """Sync holidays for all countries in the database"""
+    countries = db.query(models.Country).all()
+    results = {"synced": 0, "errors": 0}
+    
+    for country in countries:
+        try:
+            res = await sync_holidays(db, country.iso_alpha2)
+            if "error" in res:
+                logger.error(f"Error syncing holidays for {country.iso_alpha2}: {res['error']}")
+                results["errors"] += 1
+            else:
+                results["synced"] += 1
+            
+            # OpenHolidays is free but let's be polite
+            await asyncio.sleep(0.1)
+        except Exception as e:
+            logger.error(f"Failed to sync holidays for {country.iso_alpha2}: {str(e)}")
+            results["errors"] += 1
+            
+    return results
 
 async def sync_holidays(db: Session, iso2: str):
     """Sync holidays for a country from OpenHolidays API"""

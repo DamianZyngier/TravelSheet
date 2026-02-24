@@ -25,12 +25,18 @@ async def sync_emergency_numbers(db: Session):
                     data = resp.json()
                     
                     # Extract main numbers
+                    data_dict = data.get("data", {})
+                    
+                    def get_first(category):
+                        numbers = data_dict.get(category, {}).get("all", [])
+                        return numbers[0] if numbers else None
+
                     emergency_data = {
-                        "police": data.get("data", {}).get("police", {}).get("all", [None])[0],
-                        "ambulance": data.get("data", {}).get("ambulance", {}).get("all", [None])[0],
-                        "fire": data.get("data", {}).get("fire", {}).get("all", [None])[0],
-                        "dispatch": data.get("data", {}).get("dispatch", {}).get("all", [None])[0],
-                        "member_112": data.get("data", {}).get("member_112", False)
+                        "police": get_first("police"),
+                        "ambulance": get_first("ambulance"),
+                        "fire": get_first("fire"),
+                        "dispatch": get_first("dispatch"),
+                        "member_112": data_dict.get("member_112", False)
                     }
                     
                     # Update PracticalInfo

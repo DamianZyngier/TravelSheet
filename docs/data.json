@@ -28,7 +28,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "03",
+        "ambulance": "05",
+        "fire": "08",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -100,7 +107,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "112",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -147,7 +161,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -194,7 +215,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -241,7 +269,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "000",
+        "ambulance": "",
+        "fire": "110",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -288,7 +323,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "133",
+        "ambulance": "131",
+        "fire": "132",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -376,7 +418,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "107",
+        "ambulance": "104",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -461,7 +510,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "125",
+        "fire": "119",
+        "dispatch": "123",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -549,7 +605,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "351351",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -596,7 +659,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -643,7 +713,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -690,7 +767,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "114",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -750,11 +834,18 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -801,7 +892,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -848,7 +946,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "060",
+        "ambulance": "065",
+        "fire": "068",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -933,7 +1038,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1021,7 +1133,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "155",
+        "ambulance": "112",
+        "fire": "110",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1101,7 +1220,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "192",
+        "ambulance": "194",
+        "fire": "193",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1148,7 +1274,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1195,7 +1328,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "171",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1259,7 +1399,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1306,7 +1453,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1353,7 +1507,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "150",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -1400,7 +1561,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -1447,7 +1615,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -1494,7 +1669,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "113",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1579,7 +1761,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "112",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -1626,7 +1815,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1673,7 +1869,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1720,7 +1923,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1837,7 +2047,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "100",
+        "ambulance": "166",
+        "fire": "199",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1925,7 +2142,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -1972,7 +2196,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2040,7 +2271,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -2087,7 +2325,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -2134,7 +2379,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2214,7 +2466,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "776111-5",
+        "fire": "192",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2261,7 +2520,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "",
+        "fire": "180",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -2308,7 +2574,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2355,7 +2628,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "117",
+        "ambulance": "",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2402,7 +2682,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "119",
+        "ambulance": "110",
+        "fire": "110",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2449,7 +2736,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2496,7 +2790,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "993",
+        "ambulance": "991",
+        "fire": "995",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2543,7 +2844,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "995",
+        "fire": "995",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2603,11 +2911,18 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -2654,7 +2969,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "111",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2701,7 +3023,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "091",
+        "ambulance": "061",
+        "fire": "080",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2842,7 +3171,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "116",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -2946,7 +3282,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "997",
+        "ambulance": "999",
+        "fire": "998",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -3014,7 +3357,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3061,7 +3411,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -3108,7 +3465,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3172,7 +3536,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "119",
+        "fire": "119",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3219,7 +3590,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "113",
+        "ambulance": "118",
+        "fire": "115",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3364,11 +3742,18 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -3415,7 +3800,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "21606666",
+        "fire": "14",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3487,7 +3879,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "118",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3555,7 +3954,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -3602,7 +4008,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3658,7 +4071,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3705,7 +4125,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3752,7 +4179,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "192",
+        "fire": "193",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3840,7 +4274,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "191",
+        "ambulance": "191",
+        "fire": "199",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3924,11 +4365,18 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -3975,7 +4423,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "100",
+        "ambulance": "101",
+        "fire": "102",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4055,7 +4510,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -4102,7 +4564,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4149,7 +4618,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "18",
+        "ambulance": "15",
+        "fire": "17",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4196,7 +4672,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "119",
+        "ambulance": "117",
+        "fire": "198",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4243,7 +4726,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "110",
+        "fire": "113",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4299,7 +4789,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "194",
+        "ambulance": "191",
+        "fire": "191",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4346,7 +4843,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "158",
+        "ambulance": "155",
+        "fire": "150",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4455,7 +4959,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -4502,7 +5013,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4549,7 +5067,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4596,7 +5121,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "122",
+        "ambulance": "124",
+        "fire": "123",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4652,7 +5184,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "199",
+        "ambulance": "",
+        "fire": "190",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -4699,7 +5238,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4755,7 +5301,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4802,7 +5355,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "03",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -4874,7 +5434,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -4921,7 +5488,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5014,7 +5588,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5061,7 +5642,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -5108,7 +5696,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "118",
+        "ambulance": "128",
+        "fire": "115",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5151,11 +5746,18 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -5202,7 +5804,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5249,7 +5858,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "120",
+        "fire": "119",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5296,7 +5912,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5343,7 +5966,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "118",
+        "fire": "113",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5439,7 +6069,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5548,7 +6185,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "158",
+        "ambulance": "155",
+        "fire": "150",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5625,7 +6269,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5672,7 +6323,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "104",
+        "ambulance": "",
+        "fire": "103",
+        "dispatch": "911",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5792,7 +6450,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "998",
+        "fire": "997",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5839,7 +6504,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5886,7 +6558,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -5933,7 +6612,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -5980,7 +6666,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "902",
+        "ambulance": "903",
+        "fire": "901",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6048,7 +6741,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6095,7 +6795,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "197",
+        "ambulance": "190",
+        "fire": "198",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6167,7 +6874,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "101",
+        "ambulance": "131",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6214,7 +6928,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6261,7 +6982,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "998",
+        "fire": "996",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6304,11 +7032,18 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -6355,7 +7090,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6402,7 +7144,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "999",
+        "fire": "994",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6490,7 +7239,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "18",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -6537,7 +7293,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6584,7 +7347,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "119",
+        "fire": "119",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6631,7 +7401,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -6678,7 +7455,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "122",
+        "ambulance": "124",
+        "fire": "123",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6725,7 +7509,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "123",
+        "ambulance": "121",
+        "fire": "122",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6772,7 +7563,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "119",
+        "fire": "119",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6836,7 +7634,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "02",
+        "ambulance": "03",
+        "fire": "01",
+        "dispatch": null,
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -6883,7 +7688,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "444444",
+        "ambulance": "112",
+        "fire": "114",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -6930,7 +7742,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "192",
+        "ambulance": "194",
+        "fire": "193",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7023,7 +7842,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -7070,7 +7896,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "113",
+        "ambulance": "110",
+        "fire": "112",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7117,7 +7950,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "113",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7202,7 +8042,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7249,7 +8096,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -7296,7 +8150,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "113",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7352,7 +8213,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7437,7 +8305,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -7484,7 +8359,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "192",
+        "ambulance": "194",
+        "fire": "193",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7577,7 +8459,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "113",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7662,7 +8551,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7709,7 +8605,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "199",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7781,7 +8684,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "1730",
+        "ambulance": "1300‐1399",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7828,7 +8738,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "999",
+        "fire": "019",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7875,7 +8792,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7931,7 +8855,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "997",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -7978,7 +8909,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -8025,7 +8963,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8072,7 +9017,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "114",
+        "fire": "115",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8119,7 +9071,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8175,7 +9134,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8218,11 +9184,18 @@
       "rate_pln": 3.571429
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -8269,7 +9242,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "193",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8333,7 +9313,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "133",
+        "ambulance": "144",
+        "fire": "122",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8466,7 +9453,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8513,7 +9507,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "91",
+        "ambulance": "92",
+        "fire": "93",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8577,7 +9578,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8624,7 +9632,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "122",
+        "ambulance": "123",
+        "fire": "180",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8704,7 +9719,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8751,7 +9773,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8798,7 +9827,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -8845,7 +9881,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8892,7 +9935,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "129",
+        "ambulance": "127",
+        "fire": "128",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -8977,7 +10027,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9024,7 +10081,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "911",
+        "ambulance": "434",
+        "fire": "112",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9071,7 +10135,8 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "",
-      "card_acceptance": ""
+      "card_acceptance": "",
+      "emergency": null
     },
     "entry": {
       "visa_required": false,
@@ -9118,7 +10183,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9165,7 +10237,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9212,7 +10291,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9276,11 +10362,18 @@
       "rate_pln": null
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -9327,7 +10420,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "112",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9407,7 +10507,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "166",
+        "ambulance": "150",
+        "fire": "160",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9508,7 +10615,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9555,7 +10669,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9656,7 +10777,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "113",
+        "ambulance": "118",
+        "fire": "115",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9733,7 +10861,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "110",
+        "fire": "110",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9780,7 +10915,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9868,7 +11010,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -9915,7 +11064,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "119",
+        "ambulance": "102",
+        "fire": "999",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -9962,7 +11118,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "00",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10009,7 +11172,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -10056,7 +11226,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "117",
+        "ambulance": "144",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10149,7 +11326,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10196,7 +11380,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "10111",
+        "ambulance": "10177",
+        "fire": "10177",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -10264,7 +11455,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "191",
+        "ambulance": "199",
+        "fire": "199",
+        "dispatch": "911",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10320,7 +11518,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10367,7 +11572,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "011",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10455,7 +11667,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "03",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10502,7 +11721,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10549,7 +11775,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10596,7 +11829,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10676,7 +11916,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -10723,7 +11970,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -10770,7 +12024,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10855,7 +12116,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10919,7 +12187,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -10966,7 +12241,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "102",
+        "ambulance": "103",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11018,11 +12300,18 @@
       "rate_pln": 4.219409
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "No Permanent Population",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -11069,7 +12358,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11116,7 +12412,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "100",
+        "ambulance": "101",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11172,7 +12475,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "101",
+        "ambulance": "101",
+        "fire": "107",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11276,7 +12586,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -11323,7 +12640,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -11370,7 +12694,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "101",
+        "ambulance": "103",
+        "fire": "102",
+        "dispatch": "911",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11434,7 +12765,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "118",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11498,7 +12836,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "101",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11545,7 +12890,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "625 8666",
+        "ambulance": "625 4111",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11592,7 +12944,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11639,7 +12998,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "112",
+        "fire": "112",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11716,7 +13082,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "911",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -11763,7 +13136,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11810,7 +13190,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "199",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -11898,7 +13285,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -11945,7 +13339,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "19",
+        "ambulance": "15",
+        "fire": "15",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12033,7 +13434,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "1011",
+        "ambulance": "2032276",
+        "fire": "2032270",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12080,7 +13488,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -12127,7 +13542,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12174,7 +13596,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12221,7 +13650,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "117",
+        "ambulance": "119",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12268,7 +13704,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12361,7 +13804,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "15",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12441,7 +13891,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -12488,7 +13945,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": null,
@@ -12535,7 +13999,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "102",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12582,7 +14053,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "101",
+        "ambulance": "102",
+        "fire": "101",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12662,7 +14140,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "103",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12709,7 +14194,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "114",
+        "ambulance": "118",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12756,7 +14248,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12865,7 +14364,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "912",
+        "fire": "112",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -12912,7 +14418,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -12959,7 +14472,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13135,7 +14655,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13215,7 +14742,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "16",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13262,7 +14796,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "865513",
+        "ambulance": "199",
+        "fire": "9555555",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13309,7 +14850,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "113",
+        "fire": "110",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13405,7 +14953,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "211",
+        "ambulance": "511",
+        "fire": "311",
+        "dispatch": null,
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13452,7 +15007,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13499,7 +15061,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "992",
+        "ambulance": "994",
+        "fire": "993",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13546,7 +15115,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13593,7 +15169,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "997",
+        "fire": "998",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13636,11 +15219,18 @@
       "rate_pln": 2.538071
     },
     "practical": {
-      "plug_types": "",
+      "plug_types": null,
       "voltage": null,
       "water_safe": null,
-      "driving_side": "",
-      "card_acceptance": ""
+      "driving_side": null,
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -13687,7 +15277,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "118",
+        "fire": "115",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13755,7 +15352,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": null,
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13802,7 +15406,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -13849,7 +15460,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -13934,7 +15552,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "911",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -13981,7 +15606,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "997",
+        "ambulance": "998",
+        "fire": "999",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14028,7 +15660,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -14075,7 +15714,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "119",
+        "ambulance": "195",
+        "fire": "198",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14122,7 +15768,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "999",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14169,7 +15822,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "132",
+        "ambulance": "130",
+        "fire": "131",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14216,7 +15876,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": null,
@@ -14263,7 +15930,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": null,
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14359,7 +16033,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "115",
+        "fire": "123",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14423,7 +16104,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14470,7 +16158,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "110",
+        "ambulance": "123",
+        "fire": "123",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14517,7 +16212,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "112",
+        "ambulance": "144",
+        "fire": "118",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14585,7 +16287,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "999",
+        "ambulance": "990",
+        "fire": "990",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14632,7 +16341,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "26811",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14688,7 +16404,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "17",
+        "ambulance": "15",
+        "fire": "18",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14829,7 +16552,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "left",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": "",
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14876,7 +16606,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "",
+        "fire": "",
+        "dispatch": null,
+        "member_112": false
+      }
     },
     "entry": {
       "visa_required": false,
@@ -14923,7 +16660,14 @@
       "voltage": null,
       "water_safe": null,
       "driving_side": "right",
-      "card_acceptance": null
+      "card_acceptance": null,
+      "emergency": {
+        "police": "",
+        "ambulance": "777",
+        "fire": "",
+        "dispatch": "",
+        "member_112": true
+      }
     },
     "entry": {
       "visa_required": false,

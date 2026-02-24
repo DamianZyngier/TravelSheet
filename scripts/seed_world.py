@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal, engine
-from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, gov_pl
+from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, gov_pl, emergency
 from app import models
 
 async def seed_all():
@@ -47,6 +47,14 @@ async def seed_all():
         print(f"Error in Step 4: {res['error']}")
     else:
         print(f"Synced {res['synced']} UNESCO sites.")
+
+    # 4b. Sync Emergency numbers
+    print("Step 4b: Syncing emergency numbers...")
+    try:
+        res = await emergency.sync_emergency_numbers(db)
+        print(f"Synced {res.get('synced', 0)} emergency records.")
+    except Exception as e:
+        print(f"Error in Step 4b: {e}")
 
     # 5. Sync per-country details (Gov.pl, Holidays, Weather)
     # We'll do this for a subset or all depending on time

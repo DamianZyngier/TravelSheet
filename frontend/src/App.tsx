@@ -55,6 +55,10 @@ interface CountryData {
     id_card_allowed: boolean | null;
     visa_notes: string;
   };
+  holidays?: {
+    name: string;
+    date: string;
+  }[];
 }
 
 function ExpandableText({ text }: { text: string }) {
@@ -605,6 +609,20 @@ function App() {
                           {emb.phone && <p>📞 {emb.phone}</p>}
                           {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
                           {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {selectedCountry.holidays && selectedCountry.holidays.length > 0 && (
+                  <div className="info-block full-width holiday-section">
+                    <label>Najbliższe święta i dni wolne</label>
+                    <div className="holiday-list">
+                      {selectedCountry.holidays.map((h, idx) => (
+                        <div key={idx} className="holiday-item">
+                          <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric', month: 'long' })}</span>
+                          <span className="holiday-name">{h.name}</span>
                         </div>
                       ))}
                     </div>
