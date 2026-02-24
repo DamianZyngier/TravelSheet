@@ -471,9 +471,20 @@ function App() {
             </button>
             <div className="side-menu-list">
               {SECTIONS.map(s => {
-                // Approximate visibility check for menu
-                const el = document.getElementById(s.id);
-                if (s.id !== 'summary' && !el) return null;
+                // Data-driven visibility check instead of DOM check
+                let isVisible = true;
+                if (s.id === 'docs') isVisible = !!selectedCountry.entry;
+                if (s.id === 'currency') isVisible = !!selectedCountry.currency.code;
+                if (s.id === 'plugs') isVisible = !!selectedCountry.practical.plug_types;
+                if (s.id === 'emergency') isVisible = !!selectedCountry.practical.emergency;
+                if (s.id === 'costs') isVisible = !!selectedCountry.costs?.ratio_to_pl;
+                if (s.id === 'climate') isVisible = !!selectedCountry.climate?.length;
+                if (s.id === 'health') isVisible = !!(selectedCountry.practical.health_info || selectedCountry.practical.vaccinations_required);
+                if (s.id === 'holidays') isVisible = !!selectedCountry.holidays?.length;
+                if (s.id === 'embassies') isVisible = !!selectedCountry.embassies?.length;
+                if (s.id === 'attractions') isVisible = !!selectedCountry.attractions?.length;
+                
+                if (!isVisible && s.id !== 'summary' && s.id !== 'safety') return null;
                 
                 return (
                   <button 
