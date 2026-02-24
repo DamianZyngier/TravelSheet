@@ -109,7 +109,11 @@ def export_all():
             ],
 
             "attractions": [
-                {"name": a.name, "category": a.category} for a in c.attractions[:10]
+                {
+                    "name": a.name, 
+                    "category": a.category,
+                    "description": a.description
+                } for a in c.attractions[:15]
             ],
             
             "holidays": [

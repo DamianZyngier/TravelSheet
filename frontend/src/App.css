@@ -1336,3 +1336,35 @@
   color: #2d3748;
 }
 
+
+/* Enhanced Attractions Styles */
+.unesco-item-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1.25rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.unesco-item-v2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.unesco-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.unesco-description {
+  font-size: 0.8rem;
+  color: #718096;
+  line-height: 1.4;
+  border-top: 1px solid #edf2f7;
+  padding-top: 8px;
+}
+

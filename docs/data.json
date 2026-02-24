@@ -2998,15 +2998,18 @@
     "attractions": [
       {
         "name": "Ephesus",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Göreme National Park",
-        "category": "Mixed"
+        "category": "Mixed",
+        "description": null
       },
       {
         "name": "Historic Areas of Istanbul",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -5547,19 +5550,23 @@
     "attractions": [
       {
         "name": "Acropolis, Athens",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Delphi",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Meteora",
-        "category": "Mixed"
+        "category": "Mixed",
+        "description": null
       },
       {
         "name": "Mount Athos",
-        "category": "Mixed"
+        "category": "Mixed",
+        "description": null
       }
     ],
     "holidays": [
@@ -8484,15 +8491,18 @@
     "attractions": [
       {
         "name": "Alhambra, Generalife and Albayzín",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Historic Centre of Cordoba",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Works of Antoni Gaudí",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -9036,23 +9046,28 @@
     "attractions": [
       {
         "name": "Auschwitz Birkenau",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Białowieża Forest",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Kraków Historic Centre",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Warsaw Historic Centre",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Wieliczka Salt Mine",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -9957,23 +9972,28 @@
     "attractions": [
       {
         "name": "Amalfi Coast",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Historic Centre of Rome",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Pompeii",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "The Dolomites",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Venice and its Lagoon",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -11462,15 +11482,18 @@
     "attractions": [
       {
         "name": "Historic Town of Ouro Preto",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Iguaçu National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Rio de Janeiro",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -15025,15 +15048,18 @@
     "attractions": [
       {
         "name": "Imperial Palaces of the Ming and Qing Dynasties",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Mausoleum of the First Qin Emperor",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "The Great Wall",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -17652,23 +17678,28 @@
     "attractions": [
       {
         "name": "Himeji-jo",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Historic Monuments of Ancient Kyoto",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Itsukushima Shinto Shrine",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Mount Fuji",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Yakushima",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       }
     ],
     "holidays": [
@@ -20955,15 +20986,18 @@
     "attractions": [
       {
         "name": "Abu Simbel",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Ancient Thebes with its Necropolis",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Pyramids of Giza",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -22201,15 +22235,18 @@
     "attractions": [
       {
         "name": "Kilimanjaro National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Serengeti National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Stone Town of Zanzibar",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [],
@@ -24102,11 +24139,13 @@
     "attractions": [
       {
         "name": "City of Cuzco",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Historic Sanctuary of Machu Picchu",
-        "category": "Mixed"
+        "category": "Mixed",
+        "description": null
       }
     ],
     "holidays": [
@@ -27896,19 +27935,23 @@
     "attractions": [
       {
         "name": "Agra Fort",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Hampi",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Jaipur City",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Taj Mahal",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [],
@@ -28147,15 +28190,18 @@
     "attractions": [
       {
         "name": "Cologne Cathedral",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Museum Island, Berlin",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Wartburg Castle",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [
@@ -28571,19 +28617,23 @@
     "attractions": [
       {
         "name": "Grand Canyon National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Statue of Liberty",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Yellowstone National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Yosemite",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       }
     ],
     "holidays": [],
@@ -28688,15 +28738,18 @@
     "attractions": [
       {
         "name": "Lake Turkana National Parks",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       },
       {
         "name": "Lamu Old Town",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Mount Kenya National Park",
-        "category": "Natural"
+        "category": "Natural",
+        "description": null
       }
     ],
     "holidays": [],
@@ -31542,19 +31595,23 @@
     "attractions": [
       {
         "name": "Chartres Cathedral",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Mont-Saint-Michel",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Palace of Versailles",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       },
       {
         "name": "Paris, Banks of the Seine",
-        "category": "Cultural"
+        "category": "Cultural",
+        "description": null
       }
     ],
     "holidays": [

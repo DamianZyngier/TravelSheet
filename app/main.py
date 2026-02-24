@@ -129,6 +129,14 @@ async def sync_unesco_sites(db: Session = Depends(get_db)):
     result = await sync_unesco_sites(db)
     return result
 
+@app.post("/api/admin/sync-attractions-wiki")
+async def sync_attractions_wiki(db: Session = Depends(get_db)):
+    """Admin endpoint - sync top attractions from Wikidata"""
+    from .scrapers.wikidata_attractions import sync_all_wiki_attractions
+
+    result = await sync_all_wiki_attractions(db)
+    return result
+
 @app.post("/api/admin/sync-embassies")
 async def sync_embassies(db: Session = Depends(get_db)):
     """Admin endpoint - sync Polish embassies and consulates"""

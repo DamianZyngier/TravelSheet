@@ -74,6 +74,7 @@ interface CountryData {
   attractions?: {
     name: string;
     category: string;
+    description?: string;
   }[];
   climate?: {
     month: number;
@@ -963,21 +964,31 @@ function App() {
                     </div>
                   )}
 
-                  {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
-                    <div id="attractions" className="info-block full-width unesco-section scroll-mt">
-                      <label>Zabytki i obiekty UNESCO</label>
-                      <div className="unesco-grid">
-                        {selectedCountry.attractions.map((attr, idx) => (
-                          <div key={idx} className="unesco-item">
-                            <span className="unesco-icon">
-                              {attr.category === 'Cultural' ? '🏛️' : attr.category === 'Natural' ? '🌳' : '🏔️'}
-                            </span>
-                            <span className="unesco-name">{attr.name}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                                  {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
+                                    <div id="attractions" className="info-block full-width unesco-section scroll-mt">
+                                      <label>Najciekawsze miejsca i atrakcje</label>
+                                      <div className="unesco-grid">
+                                        {selectedCountry.attractions.map((attr, idx) => (
+                                          <div key={idx} className="unesco-item-v2">
+                                            <div className="unesco-item-header">
+                                              <span className="unesco-icon">
+                                                {attr.category === 'Cultural' ? '🏛️' : 
+                                                 attr.category === 'Natural' ? '🌳' : 
+                                                 attr.category === 'Mixed' ? '🏔️' : '📍'}
+                                              </span>
+                                              <span className="unesco-name">{attr.name}</span>
+                                            </div>
+                                            {attr.description && (
+                                              <div className="unesco-description">
+                                                <ExpandableText text={attr.description} />
+                                              </div>
+                                            )}
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  )}
+                  
                 </div>
 
                 <div id="safety" className={`safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
