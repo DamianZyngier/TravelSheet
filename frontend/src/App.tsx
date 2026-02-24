@@ -193,7 +193,7 @@ function App() {
 
   const formatPLN = (value: number | null) => {
     if (value === null) return 'brak danych';
-    return value.toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' PLN';
+    return value.toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 4 }) + ' PLN';
   };
 
   const getCurrencyExample = (country: CountryData) => {
@@ -626,29 +626,34 @@ function App() {
                   </div>
 
                   <div id="emergency" className="info-block full-width emergency-section-box scroll-mt">
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                      <label>Telefony alarmowe</label>
+                    <label>Telefony alarmowe</label>
+                    <div className="emergency-container">
                       {selectedCountry.practical.emergency?.member_112 && (
-                        <span className="emergency-112-badge" title="Europejski numer alarmowy 112 działa w tym kraju">
-                          🇪🇺 112
-                        </span>
+                        <div className="emergency-112-hero">
+                          <span className="hero-112-badge">🇪🇺 112</span>
+                          <div className="hero-112-text">
+                            <strong>Europejski Numer Alarmowy</strong>
+                            <p>W tym kraju pod numerem 112 uzyskasz pomoc wszystkich służb.</p>
+                          </div>
+                        </div>
                       )}
-                    </div>
-                    <div className="emergency-grid">
-                      <div className="emergency-item-box">
-                        <span className="emergency-icon">🚓</span>
-                        <span className="emergency-label">Policja</span>
-                        <span className="emergency-num">{selectedCountry.practical.emergency?.police || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
-                      </div>
-                      <div className="emergency-item-box">
-                        <span className="emergency-icon">🚑</span>
-                        <span className="emergency-label">Pogotowie</span>
-                        <span className="emergency-num">{selectedCountry.practical.emergency?.ambulance || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
-                      </div>
-                      <div className="emergency-item-box">
-                        <span className="emergency-icon">🚒</span>
-                        <span className="emergency-label">Straż</span>
-                        <span className="emergency-num">{selectedCountry.practical.emergency?.fire || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                      
+                      <div className="emergency-grid">
+                        <div className="emergency-item-box">
+                          <span className="emergency-icon">🚓</span>
+                          <span className="emergency-label">Policja</span>
+                          <span className="emergency-num">{selectedCountry.practical.emergency?.police || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                        </div>
+                        <div className="emergency-item-box">
+                          <span className="emergency-icon">🚑</span>
+                          <span className="emergency-label">Pogotowie</span>
+                          <span className="emergency-num">{selectedCountry.practical.emergency?.ambulance || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                        </div>
+                        <div className="emergency-item-box">
+                          <span className="emergency-icon">🚒</span>
+                          <span className="emergency-label">Straż</span>
+                          <span className="emergency-num">{selectedCountry.practical.emergency?.fire || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -687,10 +692,10 @@ function App() {
 
                             <div className="costs-bars-list">
                               {[
-                                { label: 'Restauracje', icon: '🍔', val: (selectedCountry.costs.restaurants || 0) / 0.42 },
-                                { label: 'Zakupy', icon: '🛒', val: (selectedCountry.costs.groceries || 0) / 0.42 },
-                                { label: 'Transport', icon: '🚌', val: (selectedCountry.costs.transport || 0) / 0.42 },
-                                { label: 'Nocleg', icon: '🏨', val: (selectedCountry.costs.accommodation || 0) / 0.42 },
+                                { label: 'Restauracje', icon: '🍔', val: selectedCountry.costs.restaurants ? selectedCountry.costs.restaurants / 0.42 : null },
+                                { label: 'Zakupy', icon: '🛒', val: selectedCountry.costs.groceries ? selectedCountry.costs.groceries / 0.42 : null },
+                                { label: 'Transport', icon: '🚌', val: selectedCountry.costs.transport ? selectedCountry.costs.transport / 0.42 : null },
+                                { label: 'Nocleg', icon: '🏨', val: selectedCountry.costs.accommodation ? selectedCountry.costs.accommodation / 0.42 : null },
                               ].map((item, idx) => (
                                 <div key={idx} className="cost-bar-row">
                                   <div className="cost-bar-label-box">
@@ -698,15 +703,19 @@ function App() {
                                     <span className="cost-bar-name">{item.label}</span>
                                   </div>
                                   <div className="cost-bar-wrapper">
-                                    <div 
-                                      className="cost-bar-fill-v2" 
-                                      style={{ 
-                                        width: `${Math.min(100, (item.val / 200) * 100)}%`,
-                                        backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : '#f56565'
-                                      }}
-                                    >
-                                      <span className="cost-bar-value">{item.val.toFixed(0)}%</span>
-                                    </div>
+                                    {item.val !== null ? (
+                                      <div 
+                                        className="cost-bar-fill-v2" 
+                                        style={{ 
+                                          width: `${Math.min(100, (item.val / 200) * 100)}%`,
+                                          backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : '#f56565'
+                                        }}
+                                      >
+                                        <span className="cost-bar-value">{item.val.toFixed(0)}%</span>
+                                      </div>
+                                    ) : (
+                                      <div className="cost-bar-no-data">Brak danych</div>
+                                    )}
                                   </div>
                                 </div>
                               ))}
@@ -714,7 +723,12 @@ function App() {
                           </div>
                           <p className="costs-disclaimer">* Wartości przybliżone w oparciu o koszty w Polsce (100%)</p>
                         </>
-                      ) : 'Brak danych o kosztach'}
+                      ) : (
+                        <div className="costs-no-data-placeholder">
+                          <span className="no-data-icon">📉</span>
+                          <p>Brak dostępnych danych statystycznych o kosztach życia dla tego kraju.</p>
+                        </div>
+                      )}
                     </div>
                   </div>
 

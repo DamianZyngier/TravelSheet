@@ -1147,3 +1147,68 @@
   background-color: #bee3f8;
   border-radius: 3px;
 }
+
+/* Refined Emergency and Costs */
+.emergency-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.emergency-112-hero {
+  background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(43, 108, 176, 0.3);
+}
+
+.hero-112-badge {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: white;
+  color: #2b6cb0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.hero-112-text strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-112-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.cost-bar-no-data {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-size: 0.7rem;
+  color: #a0aec0;
+  font-style: italic;
+  background-color: #f7fafc;
+}
+
+.costs-no-data-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #a0aec0;
+}
+
+.no-data-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
