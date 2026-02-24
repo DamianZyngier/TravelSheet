@@ -20,7 +20,7 @@
     "currency": {
       "code": "VND",
       "name": "Vietnamese đồng",
-      "rate_pln": 0.000138
+      "rate_pln": 0.000137
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -245,7 +245,7 @@
     "currency": {
       "code": "CLP",
       "name": "Chilean peso",
-      "rate_pln": 0.004142
+      "rate_pln": 0.004133
     },
     "practical": {
       "plug_types": "C, L",
@@ -290,7 +290,7 @@
     "currency": {
       "code": "HUF",
       "name": "Hungarian forint",
-      "rate_pln": 0.011107
+      "rate_pln": 0.011115
     },
     "practical": {
       "plug_types": "C, F",
@@ -335,7 +335,7 @@
     "currency": {
       "code": "COP",
       "name": "Colombian peso",
-      "rate_pln": 0.000968
+      "rate_pln": 0.000969
     },
     "practical": {
       "plug_types": "A, B",
@@ -380,7 +380,7 @@
     "currency": {
       "code": "DJF",
       "name": "Djiboutian franc",
-      "rate_pln": 0.020125
+      "rate_pln": 0.020133
     },
     "practical": {
       "plug_types": "C, E",
@@ -470,7 +470,7 @@
     "currency": {
       "code": "TOP",
       "name": "Tongan paʻanga",
-      "rate_pln": 1.526718
+      "rate_pln": 1.52439
     },
     "practical": {
       "plug_types": "I",
@@ -560,7 +560,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "",
@@ -605,7 +605,7 @@
     "currency": {
       "code": "DOP",
       "name": "Dominican peso",
-      "rate_pln": 0.058309
+      "rate_pln": 0.058411
     },
     "practical": {
       "plug_types": "A, B",
@@ -650,7 +650,7 @@
     "currency": {
       "code": "MXN",
       "name": "Mexican peso",
-      "rate_pln": 0.208768
+      "rate_pln": 0.207469
     },
     "practical": {
       "plug_types": "A, B",
@@ -740,7 +740,7 @@
     "currency": {
       "code": "TRY",
       "name": "Turkish lira",
-      "rate_pln": 0.081699
+      "rate_pln": 0.081633
     },
     "practical": {
       "plug_types": "C, F",
@@ -830,7 +830,7 @@
     "currency": {
       "code": "UAH",
       "name": "Ukrainian hryvnia",
-      "rate_pln": 0.082919
+      "rate_pln": 0.082576
     },
     "practical": {
       "plug_types": "C, F",
@@ -875,7 +875,7 @@
     "currency": {
       "code": "VES",
       "name": "Venezuelan bolívar soberano",
-      "rate_pln": 0.008824
+      "rate_pln": 0.008783
     },
     "practical": {
       "plug_types": "A, B",
@@ -920,7 +920,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -1010,7 +1010,7 @@
     "currency": {
       "code": "DZD",
       "name": "Algerian dinar",
-      "rate_pln": 0.027556
+      "rate_pln": 0.027495
     },
     "practical": {
       "plug_types": "C, E",
@@ -1235,7 +1235,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "I",
@@ -1280,7 +1280,7 @@
     "currency": {
       "code": "CRC",
       "name": "Costa Rican colón",
-      "rate_pln": 0.00748
+      "rate_pln": 0.007531
     },
     "practical": {
       "plug_types": "A, B",
@@ -1415,7 +1415,7 @@
     "currency": {
       "code": "ZWL",
       "name": "Zimbabwean dollar",
-      "rate_pln": 0.140056
+      "rate_pln": 0.13986
     },
     "practical": {
       "plug_types": "D, G",
@@ -1505,7 +1505,7 @@
     "currency": {
       "code": "NOK",
       "name": "krone",
-      "rate_pln": 0.37594
+      "rate_pln": 0.374532
     },
     "practical": {
       "plug_types": "C, F",
@@ -1595,7 +1595,7 @@
     "currency": {
       "code": "CAD",
       "name": "Canadian dollar",
-      "rate_pln": 2.617801
+      "rate_pln": 2.610966
     },
     "practical": {
       "plug_types": "A, B",
@@ -1640,7 +1640,7 @@
     "currency": {
       "code": "GHS",
       "name": "Ghanaian cedi",
-      "rate_pln": 0.325733
+      "rate_pln": 0.326797
     },
     "practical": {
       "plug_types": "D, G",
@@ -1685,7 +1685,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -1730,7 +1730,7 @@
     "currency": {
       "code": "MMK",
       "name": "Burmese kyat",
-      "rate_pln": 0.001706
+      "rate_pln": 0.0017
     },
     "practical": {
       "plug_types": "A, C, D, G, I",
@@ -1775,7 +1775,7 @@
     "currency": {
       "code": "MRU",
       "name": "Mauritanian ouguiya",
-      "rate_pln": 0.089526
+      "rate_pln": 0.089366
     },
     "practical": {
       "plug_types": "C",
@@ -1820,7 +1820,7 @@
     "currency": {
       "code": "JMD",
       "name": "Jamaican dollar",
-      "rate_pln": 0.022973
+      "rate_pln": 0.022994
     },
     "practical": {
       "plug_types": "A, B",
@@ -1865,7 +1865,7 @@
     "currency": {
       "code": "SSP",
       "name": "South Sudanese pound",
-      "rate_pln": 0.000782
+      "rate_pln": 0.00078
     },
     "practical": {
       "plug_types": "C, D",
@@ -2045,7 +2045,7 @@
     "currency": {
       "code": "NZD",
       "name": "New Zealand dollar",
-      "rate_pln": 2.141328
+      "rate_pln": 2.132196
     },
     "practical": {
       "plug_types": "I",
@@ -2135,7 +2135,7 @@
     "currency": {
       "code": "PHP",
       "name": "Philippine peso",
-      "rate_pln": 0.061652
+      "rate_pln": 0.062073
     },
     "practical": {
       "plug_types": "A, B, C",
@@ -2225,7 +2225,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -2270,7 +2270,7 @@
     "currency": {
       "code": "XPF",
       "name": "CFP franc",
-      "rate_pln": 0.035398
+      "rate_pln": 0.035348
     },
     "practical": {
       "plug_types": "C, E",
@@ -2315,7 +2315,7 @@
     "currency": {
       "code": "AZN",
       "name": "Azerbaijani manat",
-      "rate_pln": 2.109705
+      "rate_pln": 2.10084
     },
     "practical": {
       "plug_types": "C, F",
@@ -2495,7 +2495,7 @@
     "currency": {
       "code": "DZD",
       "name": "Algerian dinar",
-      "rate_pln": 0.027556
+      "rate_pln": 0.027495
     },
     "practical": {
       "plug_types": "C, F",
@@ -2630,7 +2630,7 @@
     "currency": {
       "code": "ISK",
       "name": "Icelandic króna",
-      "rate_pln": 0.029146
+      "rate_pln": 0.029104
     },
     "practical": {
       "plug_types": "C, F",
@@ -2675,7 +2675,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E, F",
@@ -2720,7 +2720,7 @@
     "currency": {
       "code": "BSD",
       "name": "Bahamian dollar",
-      "rate_pln": 3.571429
+      "rate_pln": 3.584229
     },
     "practical": {
       "plug_types": "A, B",
@@ -2810,7 +2810,7 @@
     "currency": {
       "code": "THB",
       "name": "Thai baht",
-      "rate_pln": 0.115207
+      "rate_pln": 0.11534
     },
     "practical": {
       "plug_types": "A, B, C, O",
@@ -2900,7 +2900,7 @@
     "currency": {
       "code": "ILS",
       "name": "Israeli new shekel",
-      "rate_pln": 1.148106
+      "rate_pln": 1.146789
     },
     "practical": {
       "plug_types": "C, H, M",
@@ -3035,7 +3035,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -3080,7 +3080,7 @@
     "currency": {
       "code": "MZN",
       "name": "Mozambican metical",
-      "rate_pln": 0.056275
+      "rate_pln": 0.056054
     },
     "practical": {
       "plug_types": "C, F, M",
@@ -3125,7 +3125,7 @@
     "currency": {
       "code": "SYP",
       "name": "Syrian pound",
-      "rate_pln": 0.031898
+      "rate_pln": 0.031807
     },
     "practical": {
       "plug_types": "C, E, L",
@@ -3170,7 +3170,7 @@
     "currency": {
       "code": "YER",
       "name": "Yemeni rial",
-      "rate_pln": 0.015038
+      "rate_pln": 0.014995
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -3350,7 +3350,7 @@
     "currency": {
       "code": "GYD",
       "name": "Guyanese dollar",
-      "rate_pln": 0.017117
+      "rate_pln": 0.017079
     },
     "practical": {
       "plug_types": "A, B, D, G",
@@ -3530,7 +3530,7 @@
     "currency": {
       "code": "STN",
       "name": "São Tomé and Príncipe dobra",
-      "rate_pln": 0.172414
+      "rate_pln": 0.172117
     },
     "practical": {
       "plug_types": "C, F",
@@ -3575,7 +3575,7 @@
     "currency": {
       "code": "UZS",
       "name": "Uzbekistani soʻm",
-      "rate_pln": 0.000293
+      "rate_pln": 0.000292
     },
     "practical": {
       "plug_types": "C, F",
@@ -3710,7 +3710,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "I",
@@ -3800,7 +3800,7 @@
     "currency": {
       "code": "NIO",
       "name": "Nicaraguan córdoba",
-      "rate_pln": 0.097371
+      "rate_pln": 0.097276
     },
     "practical": {
       "plug_types": "A, B",
@@ -3890,7 +3890,7 @@
     "currency": {
       "code": "VUV",
       "name": "Vanuatu vatu",
-      "rate_pln": 0.030534
+      "rate_pln": 0.030553
     },
     "practical": {
       "plug_types": "I",
@@ -4025,7 +4025,7 @@
     "currency": {
       "code": "IDR",
       "name": "Indonesian rupiah",
-      "rate_pln": 0.000212
+      "rate_pln": 0.000213
     },
     "practical": {
       "plug_types": "C, F",
@@ -4160,7 +4160,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -4205,7 +4205,7 @@
     "currency": {
       "code": "PAB",
       "name": "Panamanian balboa",
-      "rate_pln": 3.571429
+      "rate_pln": 3.584229
     },
     "practical": {
       "plug_types": "A, B",
@@ -4295,7 +4295,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C",
@@ -4340,7 +4340,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -4385,7 +4385,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "I",
@@ -4520,7 +4520,7 @@
     "currency": {
       "code": "TND",
       "name": "Tunisian dinar",
-      "rate_pln": 1.248439
+      "rate_pln": 1.246883
     },
     "practical": {
       "plug_types": "C, E",
@@ -4610,7 +4610,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "A, B, C, D, E, F",
@@ -4925,7 +4925,7 @@
     "currency": {
       "code": "KRW",
       "name": "South Korean won",
-      "rate_pln": 0.002476
+      "rate_pln": 0.002477
     },
     "practical": {
       "plug_types": "C, F",
@@ -4970,7 +4970,7 @@
     "currency": {
       "code": "NZD",
       "name": "New Zealand dollar",
-      "rate_pln": 2.141328
+      "rate_pln": 2.132196
     },
     "practical": {
       "plug_types": "I",
@@ -5015,7 +5015,7 @@
     "currency": {
       "code": "BAM",
       "name": "Bosnia and Herzegovina convertible mark",
-      "rate_pln": 2.159827
+      "rate_pln": 2.155172
     },
     "practical": {
       "plug_types": "C, F",
@@ -5060,7 +5060,7 @@
     "currency": {
       "code": "LSL",
       "name": "Lesotho loti",
-      "rate_pln": 0.223214
+      "rate_pln": 0.223714
     },
     "practical": {
       "plug_types": "M",
@@ -5105,7 +5105,7 @@
     "currency": {
       "code": "JPY",
       "name": "Japanese yen",
-      "rate_pln": 0.023121
+      "rate_pln": 0.023137
     },
     "practical": {
       "plug_types": "A, B",
@@ -5150,7 +5150,7 @@
     "currency": {
       "code": "TMT",
       "name": "Turkmenistan manat",
-      "rate_pln": 1.023541
+      "rate_pln": 1.02145
     },
     "practical": {
       "plug_types": "C, F",
@@ -5330,7 +5330,7 @@
     "currency": {
       "code": "BTN",
       "name": "Bhutanese ngultrum",
-      "rate_pln": 0.039448
+      "rate_pln": 0.039339
     },
     "practical": {
       "plug_types": "C, D, G",
@@ -5645,7 +5645,7 @@
     "currency": {
       "code": "RSD",
       "name": "Serbian dinar",
-      "rate_pln": 0.035958
+      "rate_pln": 0.03592
     },
     "practical": {
       "plug_types": "C, F",
@@ -5735,7 +5735,7 @@
     "currency": {
       "code": "CDF",
       "name": "Congolese franc",
-      "rate_pln": 0.001548
+      "rate_pln": 0.001545
     },
     "practical": {
       "plug_types": "C, E",
@@ -5825,7 +5825,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C",
@@ -5915,7 +5915,7 @@
     "currency": {
       "code": "IQD",
       "name": "Iraqi dinar",
-      "rate_pln": 0.002732
+      "rate_pln": 0.002727
     },
     "practical": {
       "plug_types": "C, D, G",
@@ -5960,7 +5960,7 @@
     "currency": {
       "code": "BWP",
       "name": "Botswana pula",
-      "rate_pln": 0.271003
+      "rate_pln": 0.265252
     },
     "practical": {
       "plug_types": "D, G, M",
@@ -6050,7 +6050,7 @@
     "currency": {
       "code": "SOS",
       "name": "Somali shilling",
-      "rate_pln": 0.006272
+      "rate_pln": 0.006263
     },
     "practical": {
       "plug_types": "C",
@@ -6095,7 +6095,7 @@
     "currency": {
       "code": "MUR",
       "name": "Mauritian rupee",
-      "rate_pln": 0.07728
+      "rate_pln": 0.07716
     },
     "practical": {
       "plug_types": "C, G",
@@ -6140,7 +6140,7 @@
     "currency": {
       "code": "GEL",
       "name": "lari",
-      "rate_pln": 1.338688
+      "rate_pln": 1.336898
     },
     "practical": {
       "plug_types": "C, F",
@@ -6185,7 +6185,7 @@
     "currency": {
       "code": "MGA",
       "name": "Malagasy ariary",
-      "rate_pln": 0.000832
+      "rate_pln": 0.000831
     },
     "practical": {
       "plug_types": "C, E",
@@ -6365,7 +6365,7 @@
     "currency": {
       "code": "NZD",
       "name": "New Zealand dollar",
-      "rate_pln": 2.141328
+      "rate_pln": 2.132196
     },
     "practical": {
       "plug_types": "I",
@@ -6410,7 +6410,7 @@
     "currency": {
       "code": "ETB",
       "name": "Ethiopian birr",
-      "rate_pln": 0.023047
+      "rate_pln": 0.022994
     },
     "practical": {
       "plug_types": "C, F",
@@ -6455,7 +6455,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -6500,7 +6500,7 @@
     "currency": {
       "code": "EGP",
       "name": "Egyptian pound",
-      "rate_pln": 0.075472
+      "rate_pln": 0.074906
     },
     "practical": {
       "plug_types": "C, F",
@@ -6680,7 +6680,7 @@
     "currency": {
       "code": "AFN",
       "name": "Afghan afghani",
-      "rate_pln": 0.056915
+      "rate_pln": 0.056721
     },
     "practical": {
       "plug_types": "C, F",
@@ -6725,7 +6725,7 @@
     "currency": {
       "code": "ALL",
       "name": "Albanian lek",
-      "rate_pln": 0.04384
+      "rate_pln": 0.043783
     },
     "practical": {
       "plug_types": "C, F",
@@ -6770,7 +6770,7 @@
     "currency": {
       "code": "RUB",
       "name": "Russian ruble",
-      "rate_pln": 0.046707
+      "rate_pln": 0.046533
     },
     "practical": {
       "plug_types": "C, F",
@@ -6905,7 +6905,7 @@
     "currency": {
       "code": "BIF",
       "name": "Burundian franc",
-      "rate_pln": 0.001207
+      "rate_pln": 0.001206
     },
     "practical": {
       "plug_types": "C, E",
@@ -6950,7 +6950,7 @@
     "currency": {
       "code": "KMF",
       "name": "Comorian franc",
-      "rate_pln": 0.008586
+      "rate_pln": 0.008575
     },
     "practical": {
       "plug_types": "C, E",
@@ -6995,7 +6995,7 @@
     "currency": {
       "code": "BYN",
       "name": "Belarusian ruble",
-      "rate_pln": 1.256281
+      "rate_pln": 1.248439
     },
     "practical": {
       "plug_types": "C, F",
@@ -7085,7 +7085,7 @@
     "currency": {
       "code": "TZS",
       "name": "Tanzanian shilling",
-      "rate_pln": 0.001383
+      "rate_pln": 0.001382
     },
     "practical": {
       "plug_types": "D, G",
@@ -7130,7 +7130,7 @@
     "currency": {
       "code": "BGN",
       "name": "Bulgarian lev",
-      "rate_pln": 1.945525
+      "rate_pln": 1.146789
     },
     "practical": {
       "plug_types": "C, F",
@@ -7310,7 +7310,7 @@
     "currency": {
       "code": "LKR",
       "name": "Sri Lankan rupee",
-      "rate_pln": 0.011574
+      "rate_pln": 0.011547
     },
     "practical": {
       "plug_types": "D, G, M",
@@ -7400,7 +7400,7 @@
     "currency": {
       "code": "XPF",
       "name": "CFP franc",
-      "rate_pln": 0.035398
+      "rate_pln": 0.035348
     },
     "practical": {
       "plug_types": "C, E",
@@ -7445,7 +7445,7 @@
     "currency": {
       "code": "MVR",
       "name": "Maldivian rufiyaa",
-      "rate_pln": 0.232019
+      "rate_pln": 0.231481
     },
     "practical": {
       "plug_types": "A, C, D, G, J, K, L",
@@ -7490,7 +7490,7 @@
     "currency": {
       "code": "PYG",
       "name": "Paraguayan guaraní",
-      "rate_pln": 0.000552
+      "rate_pln": 0.000553
     },
     "practical": {
       "plug_types": "C",
@@ -7535,7 +7535,7 @@
     "currency": {
       "code": "SZL",
       "name": "Swazi lilangeni",
-      "rate_pln": 0.223214
+      "rate_pln": 0.223714
     },
     "practical": {
       "plug_types": "M",
@@ -7625,7 +7625,7 @@
     "currency": {
       "code": "FJD",
       "name": "Fijian dollar",
-      "rate_pln": 1.615509
+      "rate_pln": 1.607717
     },
     "practical": {
       "plug_types": "I",
@@ -7670,7 +7670,7 @@
     "currency": {
       "code": "ZAR",
       "name": "South African rand",
-      "rate_pln": 0.223214
+      "rate_pln": 0.223714
     },
     "practical": {
       "plug_types": "C, M, N",
@@ -7805,7 +7805,7 @@
     "currency": {
       "code": "PEN",
       "name": "Peruvian sol",
-      "rate_pln": 1.067236
+      "rate_pln": 1.066098
     },
     "practical": {
       "plug_types": "A, C",
@@ -7850,7 +7850,7 @@
     "currency": {
       "code": "TJS",
       "name": "Tajikistani somoni",
-      "rate_pln": 0.381679
+      "rate_pln": 0.380228
     },
     "practical": {
       "plug_types": "C, F",
@@ -7895,7 +7895,7 @@
     "currency": {
       "code": "GNF",
       "name": "Guinean franc",
-      "rate_pln": 0.00041
+      "rate_pln": 0.000409
     },
     "practical": {
       "plug_types": "C, F, K",
@@ -7940,7 +7940,7 @@
     "currency": {
       "code": "SBD",
       "name": "Solomon Islands dollar",
-      "rate_pln": 0.45045
+      "rate_pln": 0.454545
     },
     "practical": {
       "plug_types": "I",
@@ -7985,7 +7985,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, D, E, K",
@@ -8255,7 +8255,7 @@
     "currency": {
       "code": "KZT",
       "name": "Kazakhstani tenge",
-      "rate_pln": 0.007202
+      "rate_pln": 0.007193
     },
     "practical": {
       "plug_types": "C, F",
@@ -8345,7 +8345,7 @@
     "currency": {
       "code": "HKD",
       "name": "Hong Kong dollar",
-      "rate_pln": 0.458716
+      "rate_pln": 0.456621
     },
     "practical": {
       "plug_types": "G",
@@ -8390,7 +8390,7 @@
     "currency": {
       "code": "EGP",
       "name": "Egyptian pound",
-      "rate_pln": 0.075472
+      "rate_pln": 0.074906
     },
     "practical": {
       "plug_types": "C, H, M",
@@ -8435,7 +8435,7 @@
     "currency": {
       "code": "ARS",
       "name": "Argentine peso",
-      "rate_pln": 0.002463
+      "rate_pln": 0.002464
     },
     "practical": {
       "plug_types": "C, I",
@@ -8570,7 +8570,7 @@
     "currency": {
       "code": "AMD",
       "name": "Armenian dram",
-      "rate_pln": 0.00951
+      "rate_pln": 0.009485
     },
     "practical": {
       "plug_types": "C, F",
@@ -8615,7 +8615,7 @@
     "currency": {
       "code": "AOA",
       "name": "Angolan kwanza",
-      "rate_pln": 0.003875
+      "rate_pln": 0.00381
     },
     "practical": {
       "plug_types": "C",
@@ -8660,7 +8660,7 @@
     "currency": {
       "code": "XOF",
       "name": "West African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C",
@@ -8885,7 +8885,7 @@
     "currency": {
       "code": "XAF",
       "name": "Central African CFA franc",
-      "rate_pln": 0.006439
+      "rate_pln": 0.006431
     },
     "practical": {
       "plug_types": "C, E",
@@ -8930,7 +8930,7 @@
     "currency": {
       "code": "NGN",
       "name": "Nigerian naira",
-      "rate_pln": 0.002665
+      "rate_pln": 0.002666
     },
     "practical": {
       "plug_types": "D, G",
@@ -8975,7 +8975,7 @@
     "currency": {
       "code": "BMD",
       "name": "Bermudian dollar",
-      "rate_pln": 3.571429
+      "rate_pln": 3.584229
     },
     "practical": {
       "plug_types": "A, B",
@@ -9020,7 +9020,7 @@
     "currency": {
       "code": "MAD",
       "name": "Moroccan dirham",
-      "rate_pln": 0.390625
+      "rate_pln": 0.389105
     },
     "practical": {
       "plug_types": "C, E",
@@ -9065,7 +9065,7 @@
     "currency": {
       "code": "NAD",
       "name": "Namibian dollar",
-      "rate_pln": 0.223214
+      "rate_pln": 0.223714
     },
     "practical": {
       "plug_types": "D, M",
@@ -9155,7 +9155,7 @@
     "currency": {
       "code": "SCR",
       "name": "Seychellois rupee",
-      "rate_pln": 0.252525
+      "rate_pln": 0.246305
     },
     "practical": {
       "plug_types": "G",
@@ -9200,7 +9200,7 @@
     "currency": {
       "code": "ZMW",
       "name": "Zambian kwacha",
-      "rate_pln": 0.189753
+      "rate_pln": 0.189036
     },
     "practical": {
       "plug_types": "C, D, G",
@@ -9245,7 +9245,7 @@
     "currency": {
       "code": "KHR",
       "name": "Cambodian riel",
-      "rate_pln": 0.000891
+      "rate_pln": 0.00089
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -9335,7 +9335,7 @@
     "currency": {
       "code": "PKR",
       "name": "Pakistani rupee",
-      "rate_pln": 0.012809
+      "rate_pln": 0.012793
     },
     "practical": {
       "plug_types": "C, D, G, M",
@@ -9470,7 +9470,7 @@
     "currency": {
       "code": "NPR",
       "name": "Nepalese rupee",
-      "rate_pln": 0.024655
+      "rate_pln": 0.024588
     },
     "practical": {
       "plug_types": "C, D, M",
@@ -9515,7 +9515,7 @@
     "currency": {
       "code": "INR",
       "name": "Indian rupee",
-      "rate_pln": 0.039448
+      "rate_pln": 0.039339
     },
     "practical": {
       "plug_types": "C, D, M",
@@ -9560,7 +9560,7 @@
     "currency": {
       "code": "KGS",
       "name": "Kyrgyzstani som",
-      "rate_pln": 0.04095
+      "rate_pln": 0.040866
     },
     "practical": {
       "plug_types": "C, F",
@@ -9605,7 +9605,7 @@
     "currency": {
       "code": "HTG",
       "name": "Haitian gourde",
-      "rate_pln": 0.027285
+      "rate_pln": 0.027241
     },
     "practical": {
       "plug_types": "A, B",
@@ -9695,7 +9695,7 @@
     "currency": {
       "code": "RWF",
       "name": "Rwandan franc",
-      "rate_pln": 0.00246
+      "rate_pln": 0.002444
     },
     "practical": {
       "plug_types": "C, E",
@@ -9740,7 +9740,7 @@
     "currency": {
       "code": "XPF",
       "name": "CFP franc",
-      "rate_pln": 0.035398
+      "rate_pln": 0.035348
     },
     "practical": {
       "plug_types": "C, E",
@@ -9830,7 +9830,7 @@
     "currency": {
       "code": "KES",
       "name": "Kenyan shilling",
-      "rate_pln": 0.027793
+      "rate_pln": 0.027716
     },
     "practical": {
       "plug_types": "G",
@@ -9875,7 +9875,7 @@
     "currency": {
       "code": "GMD",
       "name": "dalasi",
-      "rate_pln": 0.048333
+      "rate_pln": 0.048239
     },
     "practical": {
       "plug_types": "G",
@@ -9965,7 +9965,7 @@
     "currency": {
       "code": "NOK",
       "name": "Norwegian krone",
-      "rate_pln": 0.37594
+      "rate_pln": 0.374532
     },
     "practical": {
       "plug_types": "C, F",
@@ -10100,7 +10100,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "I",
@@ -10235,7 +10235,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "",
@@ -10325,7 +10325,7 @@
     "currency": {
       "code": "UGX",
       "name": "Ugandan shilling",
-      "rate_pln": 0.000998
+      "rate_pln": 0.000996
     },
     "practical": {
       "plug_types": "G",
@@ -10505,7 +10505,7 @@
     "currency": {
       "code": "MWK",
       "name": "Malawian kwacha",
-      "rate_pln": 0.002062
+      "rate_pln": 0.002051
     },
     "practical": {
       "plug_types": "G",
@@ -10550,7 +10550,7 @@
     "currency": {
       "code": "NZD",
       "name": "New Zealand dollar",
-      "rate_pln": 2.141328
+      "rate_pln": 2.132196
     },
     "practical": {
       "plug_types": "I",
@@ -10595,7 +10595,7 @@
     "currency": {
       "code": "HNL",
       "name": "Honduran lempira",
-      "rate_pln": 0.135501
+      "rate_pln": 0.135318
     },
     "practical": {
       "plug_types": "A, B",
@@ -10640,7 +10640,7 @@
     "currency": {
       "code": "UYU",
       "name": "Uruguayan peso",
-      "rate_pln": 0.092764
+      "rate_pln": 0.092421
     },
     "practical": {
       "plug_types": "C, F, L",
@@ -10685,7 +10685,7 @@
     "currency": {
       "code": "CVE",
       "name": "Cape Verdean escudo",
-      "rate_pln": 0.0383
+      "rate_pln": 0.038256
     },
     "practical": {
       "plug_types": "C, F",
@@ -10775,7 +10775,7 @@
     "currency": {
       "code": "AUD",
       "name": "Australian dollar",
-      "rate_pln": 2.538071
+      "rate_pln": 2.525253
     },
     "practical": {
       "plug_types": "I",
@@ -10865,7 +10865,7 @@
     "currency": {
       "code": "SDG",
       "name": "Sudanese pound",
-      "rate_pln": 0.007804
+      "rate_pln": 0.00787
     },
     "practical": {
       "plug_types": "C, D",
@@ -11135,7 +11135,7 @@
     "currency": {
       "code": "SRD",
       "name": "Surinamese dollar",
-      "rate_pln": 0.09542
+      "rate_pln": 0.095238
     },
     "practical": {
       "plug_types": "C, F",
@@ -11180,7 +11180,7 @@
     "currency": {
       "code": "LRD",
       "name": "Liberian dollar",
-      "rate_pln": 0.01935
+      "rate_pln": 0.019357
     },
     "practical": {
       "plug_types": "A, B, C, E, F",
@@ -11225,7 +11225,7 @@
     "currency": {
       "code": "KWD",
       "name": "Kuwaiti dinar",
-      "rate_pln": 11.709602
+      "rate_pln": 11.668611
     },
     "practical": {
       "plug_types": "C, G",
