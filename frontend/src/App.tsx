@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
+import logoNoText from './assets/logo-no-text.png'
 import './App.css'
 
 // URL do topologii świata (lekkie 110m)
@@ -306,7 +307,7 @@ function App() {
           <header className="main-header">
             <div className="header-content">
               <div className="logo-section" onClick={() => handleSelectCountry(null)} style={{ cursor: 'pointer' }}>
-                <img src="/logo-no-text.png" alt="TripSheet" className="app-logo" />
+                <img src={logoNoText} alt="TripSheet" className="app-logo" />
                 <div className="logo-text">
                   <span className="logo-brand">TripSheet</span>
                   <p>Twoje centrum bezpiecznych podróży</p>
