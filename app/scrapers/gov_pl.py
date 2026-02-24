@@ -240,6 +240,46 @@ async def scrape_country(db: Session, iso_code: str):
     entry.id_card_allowed = id_card_req
     entry.visa_required = visa_req
 
+    # Health & Vaccinations
+    vaccines_req, vaccines_sug = "", ""
+    health_section = soup.find(string=re.compile(r'^Zdrowie$', re.I)) or soup.find(string=re.compile(r'Informacje dotyczące zdrowia', re.I))
+    if health_section:
+        health_text = ""
+        curr = health_section.parent
+        # Look ahead for a few paragraphs or until next major header
+        for _ in range(12):
+            if curr:
+                txt = curr.get_text().strip()
+                if txt: health_text += txt + "\n"
+                curr = curr.find_next_sibling()
+                if curr and curr.name in ['h2', 'h3']: break
+        
+        # Simple extraction logic
+        # Required usually mentions "szczepienia obowiązkowe" or "żółta febra"
+        if "żółtą febrę" in health_text.lower() or "żółtej febry" in health_text.lower():
+            if "obowiązkowe" in health_text.lower() or "wymagane" in health_text.lower():
+                vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane w określonych sytuacjach)"
+        
+        # Suggested usually lists many diseases
+        suggested_list = []
+        for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"]:
+            if v.lower() in health_text.lower():
+                suggested_list.append(v)
+        
+        if suggested_list:
+            vaccines_sug = "Zalecane szczepienia: " + ", ".join(suggested_list)
+        else:
+            # Fallback: take first 200 chars if something was found but not matched
+            if health_text.strip():
+                vaccines_sug = health_text.strip()[:300] + "..."
+
+    practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
+    if not practical:
+        practical = models.PracticalInfo(country_id=country.id)
+        db.add(practical)
+    practical.vaccinations_required = vaccines_req
+    practical.vaccinations_suggested = vaccines_sug
+
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url}
 

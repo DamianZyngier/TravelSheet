@@ -124,6 +124,8 @@ class PracticalSchema(BaseModel):
     internet_notes: Optional[str]
     esim_available: Optional[bool]
     emergency: Optional[EmergencyNumbersSchema] = None
+    vaccinations_required: Optional[str] = None
+    vaccinations_suggested: Optional[str] = None
 
     @field_validator("emergency", mode="before")
     @classmethod

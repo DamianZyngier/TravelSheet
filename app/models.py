@@ -191,6 +191,8 @@ class PracticalInfo(Base):
     internet_notes = Column(Text)
     esim_available = Column(Boolean)
     emergency_numbers = Column(Text) # JSON string with police, ambulance, fire
+    vaccinations_required = Column(Text)
+    vaccinations_suggested = Column(Text)
 
     @property
     def emergency(self):

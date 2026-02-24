@@ -67,7 +67,9 @@ def export_all():
                 "water_safe": c.practical.tap_water_safe if c.practical else None,
                 "driving_side": c.practical.driving_side if c.practical else "",
                 "card_acceptance": c.practical.card_acceptance if c.practical else "",
-                "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None
+                "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None,
+                "vaccinations_required": c.practical.vaccinations_required if c.practical else "",
+                "vaccinations_suggested": c.practical.vaccinations_suggested if c.practical else ""
             },
 
             "costs": {

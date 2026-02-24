@@ -818,6 +818,58 @@
   text-align: center;
 }
 
+/* Health Section Styles */
+.health-section-box {
+  margin-top: 1rem;
+}
+
+.health-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.health-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: flex-start;
+  border: 1px solid #e2e8f0;
+}
+
+.health-item.mandatory {
+  background-color: #fff5f5;
+  border-left: 5px solid #f56565;
+}
+
+.health-item.suggested {
+  background-color: #f0fff4;
+  border-left: 5px solid #48bb78;
+}
+
+.health-item.neutral {
+  background-color: #f8fafc;
+  color: #718096;
+}
+
+.health-icon {
+  font-size: 1.25rem;
+}
+
+.health-text strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.health-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .emergency-112-badge {
   background-color: #2b6cb0;
   color: white;

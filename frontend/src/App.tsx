@@ -39,6 +39,8 @@ interface CountryData {
       dispatch: string | null;
       member_112?: boolean;
     } | null;
+    vaccinations_required: string;
+    vaccinations_suggested: string;
   };
   costs?: {
     index: number | null;
@@ -823,6 +825,39 @@ function App() {
                     </div>
                   </div>
                 )}
+
+                <div className="info-block full-width health-section-box">
+                  <label>Zdrowie i szczepienia</label>
+                  <div className="health-container">
+                    {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) ? (
+                      <>
+                        {selectedCountry.practical.vaccinations_required && (
+                          <div className="health-item mandatory">
+                            <span className="health-icon">🚨</span>
+                            <div className="health-text">
+                              <strong>Obowiązkowe:</strong>
+                              <p>{selectedCountry.practical.vaccinations_required}</p>
+                            </div>
+                          </div>
+                        )}
+                        {selectedCountry.practical.vaccinations_suggested && (
+                          <div className="health-item suggested">
+                            <span className="health-icon">💉</span>
+                            <div className="health-text">
+                              <strong>Zalecane:</strong>
+                              <p>{selectedCountry.practical.vaccinations_suggested}</p>
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <div className="health-item neutral">
+                        <span className="health-icon">✅</span>
+                        <p>Brak szczególnych wymogów dotyczących szczepień (sprawdź aktualny komunikat MSZ).</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
 
                 {selectedCountry.embassies && selectedCountry.embassies.length > 0 && (
                   <div className="info-block full-width embassy-section">
