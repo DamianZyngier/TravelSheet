@@ -33,7 +33,7 @@
         "police": "03",
         "ambulance": "05",
         "fire": "08",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -352,10 +352,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -492,9 +492,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -633,9 +633,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "000",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "110",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -820,7 +820,7 @@
         "police": "133",
         "ambulance": "131",
         "fire": "132",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -1070,7 +1070,7 @@
         "police": "107",
         "ambulance": "104",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -1534,7 +1534,7 @@
         "police": "17",
         "ambulance": "351351",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -1671,9 +1671,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -1811,9 +1811,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -1952,9 +1952,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "114",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -2165,10 +2165,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -2305,9 +2305,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": true
       },
@@ -2501,7 +2501,7 @@
         "police": "060",
         "ambulance": "065",
         "fire": "068",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -2692,10 +2692,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "999",
+        "police": "999",
+        "ambulance": "999",
+        "fire": "999",
+        "dispatch": "112",
         "member_112": true
       },
       "vaccinations_required": null,
@@ -2933,7 +2933,7 @@
         "police": "155",
         "ambulance": "112",
         "fire": "110",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -3135,7 +3135,7 @@
         "police": "192",
         "ambulance": "194",
         "fire": "193",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -3324,7 +3324,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -3506,9 +3506,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "171",
         "member_112": false
       },
@@ -3800,10 +3800,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -3940,10 +3940,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -4080,10 +4080,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "150",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -4220,9 +4220,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": true
       },
@@ -4397,10 +4397,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -4538,9 +4538,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "113",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -4746,7 +4746,7 @@
         "police": "17",
         "ambulance": "112",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -4883,9 +4883,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -5023,9 +5023,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": true
       },
@@ -5208,10 +5208,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -5469,7 +5469,7 @@
         "police": "100",
         "ambulance": "166",
         "fire": "199",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -5700,9 +5700,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -5896,7 +5896,7 @@
         "police": "17",
         "ambulance": "15",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -6082,10 +6082,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -6271,9 +6271,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -6411,9 +6411,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": "911",
+        "ambulance": "911",
+        "fire": "911",
         "dispatch": "911",
         "member_112": false
       },
@@ -6712,7 +6712,7 @@
         "police": "999",
         "ambulance": "776111-5",
         "fire": "192",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -6895,9 +6895,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "110",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "180",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7034,9 +7034,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -7175,9 +7175,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "117",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7317,7 +7317,7 @@
         "police": "119",
         "ambulance": "110",
         "fire": "110",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7495,10 +7495,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7638,7 +7638,7 @@
         "police": "993",
         "ambulance": "991",
         "fire": "995",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7778,7 +7778,7 @@
         "police": "999",
         "ambulance": "995",
         "fire": "995",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -7973,10 +7973,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -8113,11 +8113,11 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": "111",
+        "ambulance": "111",
+        "fire": "111",
         "dispatch": "111",
-        "member_112": true
+        "member_112": false
       },
       "vaccinations_required": null,
       "vaccinations_suggested": null,
@@ -8349,7 +8349,7 @@
         "police": "091",
         "ambulance": "061",
         "fire": "080",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -8688,9 +8688,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "116",
         "member_112": false
       },
@@ -8961,7 +8961,7 @@
         "police": "997",
         "ambulance": "999",
         "fire": "998",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -9155,10 +9155,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -9340,10 +9340,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -9483,7 +9483,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -9640,7 +9640,7 @@
         "police": "110",
         "ambulance": "119",
         "fire": "119",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -9780,7 +9780,7 @@
         "police": "113",
         "ambulance": "118",
         "fire": "115",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -10055,10 +10055,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -10263,7 +10263,7 @@
         "police": "17",
         "ambulance": "21606666",
         "fire": "14",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -10428,7 +10428,7 @@
         "police": "110",
         "ambulance": "118",
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -10622,9 +10622,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -10762,10 +10762,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -10977,9 +10977,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "17",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -11116,9 +11116,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -11301,10 +11301,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "192",
         "fire": "193",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -11546,7 +11546,7 @@
         "police": "191",
         "ambulance": "191",
         "fire": "199",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -11724,10 +11724,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -11867,7 +11867,7 @@
         "police": "100",
         "ambulance": "101",
         "fire": "102",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12037,10 +12037,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12177,9 +12177,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -12320,7 +12320,7 @@
         "police": "18",
         "ambulance": "15",
         "fire": "17",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12460,7 +12460,7 @@
         "police": "119",
         "ambulance": "117",
         "fire": "198",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12637,7 +12637,7 @@
         "police": "112",
         "ambulance": "110",
         "fire": "113",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12786,7 +12786,7 @@
         "police": "194",
         "ambulance": "191",
         "fire": "191",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -12926,7 +12926,7 @@
         "police": "158",
         "ambulance": "155",
         "fire": "150",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -13168,7 +13168,7 @@
         "police": "17",
         "ambulance": "15",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -13305,9 +13305,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -13445,9 +13445,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -13633,7 +13633,7 @@
         "police": "122",
         "ambulance": "124",
         "fire": "123",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -13861,7 +13861,7 @@
       "card_acceptance": null,
       "emergency": {
         "police": "199",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "190",
         "dispatch": "999",
         "member_112": true
@@ -14049,9 +14049,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -14125,10 +14125,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14192,9 +14192,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "03",
         "member_112": false
       },
@@ -14284,10 +14284,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14351,10 +14351,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -14508,10 +14508,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14575,10 +14575,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14645,7 +14645,7 @@
         "police": "118",
         "ambulance": "128",
         "fire": "115",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14758,10 +14758,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14825,10 +14825,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -14895,7 +14895,7 @@
         "police": "110",
         "ambulance": "120",
         "fire": "119",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -14984,10 +14984,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -15054,7 +15054,7 @@
         "police": "110",
         "ambulance": "118",
         "fire": "113",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -15203,7 +15203,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -15368,7 +15368,7 @@
         "police": "158",
         "ambulance": "155",
         "fire": "150",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -15494,10 +15494,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -15562,7 +15562,7 @@
       "card_acceptance": null,
       "emergency": {
         "police": "104",
-        "ambulance": "",
+        "ambulance": null,
         "fire": "103",
         "dispatch": "911",
         "member_112": true
@@ -15757,7 +15757,7 @@
         "police": "999",
         "ambulance": "998",
         "fire": "997",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -15821,10 +15821,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -15888,10 +15888,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16012,10 +16012,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16082,7 +16082,7 @@
         "police": "902",
         "ambulance": "903",
         "fire": "901",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16211,9 +16211,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -16281,7 +16281,7 @@
         "police": "197",
         "ambulance": "190",
         "fire": "198",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16405,8 +16405,8 @@
       "emergency": {
         "police": "101",
         "ambulance": "131",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16515,10 +16515,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16614,7 +16614,7 @@
         "police": "999",
         "ambulance": "998",
         "fire": "996",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16678,10 +16678,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16745,9 +16745,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -16815,7 +16815,7 @@
         "police": "999",
         "ambulance": "999",
         "fire": "994",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16923,7 +16923,7 @@
         "police": "17",
         "ambulance": "18",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -16987,9 +16987,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -17057,7 +17057,7 @@
         "police": "112",
         "ambulance": "119",
         "fire": "119",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -17182,10 +17182,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -17252,7 +17252,7 @@
         "police": "122",
         "ambulance": "124",
         "fire": "123",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -17380,7 +17380,7 @@
         "police": "123",
         "ambulance": "121",
         "fire": "122",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -17492,7 +17492,7 @@
         "police": "110",
         "ambulance": "119",
         "fire": "119",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": "",
@@ -17781,7 +17781,7 @@
         "police": "444444",
         "ambulance": "112",
         "fire": "114",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -17848,7 +17848,7 @@
         "police": "192",
         "ambulance": "194",
         "fire": "193",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -17994,10 +17994,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -18133,7 +18133,7 @@
         "police": "113",
         "ambulance": "110",
         "fire": "112",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -18198,9 +18198,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "113",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -18366,10 +18366,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -18433,10 +18433,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -18539,8 +18539,8 @@
       "emergency": {
         "police": "110",
         "ambulance": "113",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -18613,10 +18613,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -18754,9 +18754,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -18824,7 +18824,7 @@
         "police": "192",
         "ambulance": "194",
         "fire": "193",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -18960,8 +18960,8 @@
       "emergency": {
         "police": "110",
         "ambulance": "113",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -19099,10 +19099,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -19211,9 +19211,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "199",
         "member_112": true
       },
@@ -19375,7 +19375,7 @@
         "police": "1730",
         "ambulance": "1300‐1399",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -19487,7 +19487,7 @@
         "police": "999",
         "ambulance": "999",
         "fire": "019",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -19551,10 +19551,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -19627,9 +19627,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "997",
         "member_112": false
       },
@@ -19739,9 +19739,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -19806,10 +19806,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -19873,7 +19873,7 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "114",
         "fire": "115",
         "dispatch": "999",
@@ -19940,10 +19940,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -20085,10 +20085,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -20193,10 +20193,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -20260,9 +20260,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "193",
         "member_112": false
       },
@@ -20347,7 +20347,7 @@
         "police": "133",
         "ambulance": "144",
         "fire": "122",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -20537,10 +20537,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -20607,7 +20607,7 @@
         "police": "91",
         "ambulance": "92",
         "fire": "93",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -20688,10 +20688,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -20758,7 +20758,7 @@
         "police": "122",
         "ambulance": "123",
         "fire": "180",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -20884,9 +20884,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -20951,9 +20951,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -21018,9 +21018,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -21170,10 +21170,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21240,7 +21240,7 @@
         "police": "129",
         "ambulance": "127",
         "fire": "128",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -21381,7 +21381,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -21501,7 +21501,7 @@
         "police": "911",
         "ambulance": "434",
         "fire": "112",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21679,10 +21679,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21746,10 +21746,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21816,7 +21816,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21921,10 +21921,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -21988,9 +21988,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "112",
         "member_112": false
       },
@@ -22091,7 +22091,7 @@
         "police": "166",
         "ambulance": "150",
         "fire": "160",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -22249,9 +22249,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -22421,10 +22421,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -22569,7 +22569,7 @@
         "police": "113",
         "ambulance": "118",
         "fire": "115",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -22706,7 +22706,7 @@
         "police": "112",
         "ambulance": "110",
         "fire": "110",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -22770,10 +22770,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -22942,7 +22942,7 @@
         "police": "17",
         "ambulance": "15",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -23009,7 +23009,7 @@
         "police": "119",
         "ambulance": "102",
         "fire": "999",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -23073,9 +23073,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "00",
         "member_112": false
       },
@@ -23189,10 +23189,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -23259,7 +23259,7 @@
         "police": "117",
         "ambulance": "144",
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -23481,9 +23481,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -23551,7 +23551,7 @@
         "police": "10111",
         "ambulance": "10177",
         "fire": "10177",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -23740,9 +23740,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -23868,9 +23868,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "011",
         "member_112": false
       },
@@ -24033,10 +24033,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "03",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -24100,10 +24100,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -24167,9 +24167,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -24237,7 +24237,7 @@
         "police": "17",
         "ambulance": "15",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -24334,10 +24334,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -24466,9 +24466,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -24574,10 +24574,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -24718,7 +24718,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -24840,9 +24840,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -24959,7 +24959,7 @@
         "police": "102",
         "ambulance": "103",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -25085,10 +25085,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "No Permanent Population",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25152,9 +25152,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -25291,7 +25291,7 @@
         "police": "100",
         "ambulance": "101",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25367,7 +25367,7 @@
         "police": "101",
         "ambulance": "101",
         "fire": "107",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25553,9 +25553,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -25620,10 +25620,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25831,7 +25831,7 @@
         "police": "110",
         "ambulance": "118",
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25913,9 +25913,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "101",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -25981,8 +25981,8 @@
       "emergency": {
         "police": "625 8666",
         "ambulance": "625 4111",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26046,9 +26046,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -26116,7 +26116,7 @@
         "police": "110",
         "ambulance": "112",
         "fire": "112",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -26240,8 +26240,8 @@
       "emergency": {
         "police": "999",
         "ambulance": "911",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26350,10 +26350,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26417,10 +26417,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "199",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26566,9 +26566,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -26636,7 +26636,7 @@
         "police": "19",
         "ambulance": "15",
         "fire": "15",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26785,7 +26785,7 @@
         "police": "1011",
         "ambulance": "2032276",
         "fire": "2032270",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -26902,9 +26902,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -26969,9 +26969,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -27089,9 +27089,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -27159,7 +27159,7 @@
         "police": "117",
         "ambulance": "119",
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -27223,9 +27223,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": true
       },
@@ -27360,9 +27360,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "15",
         "member_112": false
       },
@@ -27460,9 +27460,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -27527,9 +27527,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": true
       },
@@ -27597,7 +27597,7 @@
         "police": "110",
         "ambulance": "102",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -27664,7 +27664,7 @@
         "police": "101",
         "ambulance": "102",
         "fire": "101",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -27761,9 +27761,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "103",
         "member_112": false
       },
@@ -27830,8 +27830,8 @@
       "emergency": {
         "police": "114",
         "ambulance": "118",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -27896,9 +27896,9 @@
       "card_acceptance": null,
       "emergency": {
         "police": "110",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -28079,7 +28079,7 @@
         "police": "112",
         "ambulance": "912",
         "fire": "112",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -28143,10 +28143,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -28210,9 +28210,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": "911",
+        "ambulance": "911",
+        "fire": "911",
         "dispatch": "911",
         "member_112": false
       },
@@ -28406,9 +28406,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -28509,7 +28509,7 @@
         "police": "17",
         "ambulance": "16",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -28643,7 +28643,7 @@
         "police": "112",
         "ambulance": "113",
         "fire": "110",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -28823,9 +28823,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -28893,7 +28893,7 @@
         "police": "992",
         "ambulance": "994",
         "fire": "993",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -28957,10 +28957,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -29027,7 +29027,7 @@
         "police": "999",
         "ambulance": "997",
         "fire": "998",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -29091,10 +29091,10 @@
       "driving_side": null,
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -29161,7 +29161,7 @@
         "police": "112",
         "ambulance": "118",
         "fire": "115",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -29298,10 +29298,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": null,
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": "999",
         "member_112": false
       },
       "vaccinations_required": null,
@@ -29365,10 +29365,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -29432,10 +29432,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -30141,9 +30141,9 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "911",
         "member_112": false
       },
@@ -30211,7 +30211,7 @@
         "police": "997",
         "ambulance": "998",
         "fire": "999",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30275,10 +30275,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30345,7 +30345,7 @@
         "police": "119",
         "ambulance": "195",
         "fire": "198",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30409,9 +30409,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "999",
         "member_112": false
       },
@@ -30479,7 +30479,7 @@
         "police": "132",
         "ambulance": "130",
         "fire": "131",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30543,10 +30543,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30610,11 +30610,11 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": null,
-        "member_112": false
+        "police": "000",
+        "ambulance": "000",
+        "fire": "000",
+        "dispatch": "112",
+        "member_112": true
       },
       "vaccinations_required": null,
       "vaccinations_suggested": null,
@@ -30729,7 +30729,7 @@
         "police": "110",
         "ambulance": "115",
         "fire": "123",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30810,10 +30810,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30880,7 +30880,7 @@
         "police": "110",
         "ambulance": "123",
         "fire": "123",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -30947,7 +30947,7 @@
         "police": "112",
         "ambulance": "144",
         "fire": "118",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -31067,7 +31067,7 @@
         "police": "999",
         "ambulance": "990",
         "fire": "990",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -31131,9 +31131,9 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
         "dispatch": "26811",
         "member_112": false
       },
@@ -31210,7 +31210,7 @@
         "police": "17",
         "ambulance": "15",
         "fire": "18",
-        "dispatch": "",
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
@@ -31424,10 +31424,10 @@
       "driving_side": "left",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": "",
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": null,
         "member_112": false
       },
       "vaccinations_required": null,
@@ -31491,10 +31491,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
-        "ambulance": "",
-        "fire": "",
-        "dispatch": null,
+        "police": null,
+        "ambulance": null,
+        "fire": null,
+        "dispatch": "911",
         "member_112": false
       },
       "vaccinations_required": null,
@@ -31558,10 +31558,10 @@
       "driving_side": "right",
       "card_acceptance": null,
       "emergency": {
-        "police": "",
+        "police": null,
         "ambulance": "777",
-        "fire": "",
-        "dispatch": "",
+        "fire": null,
+        "dispatch": null,
         "member_112": true
       },
       "vaccinations_required": null,
