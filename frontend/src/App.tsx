@@ -693,11 +693,13 @@ function App() {
 
                           <div className="costs-visual-chart">
                             <div className="costs-markers">
-                              {[50, 75, 100, 125, 150, 175, 200].map(p => (
+                              {[0, 50, 100, 150, 200].map(p => (
                                 <div key={p} className="marker-line-group" style={{ left: `${(p / 200) * 100}%` }}>
                                   <span className="marker-label">{p}%</span>
                                   <div className={`marker-line ${p === 100 ? 'base' : ''}`}></div>
                                 </div>
+                              ))}
+                            </div>
                               ))}
                             </div>
 

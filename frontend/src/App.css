@@ -783,7 +783,7 @@
 .costs-markers {
   position: absolute;
   top: 0;
-  left: 120px; /* Offset for labels */
+  left: 120px; /* Exact match to label width */
   right: 0;
   height: 100%;
   pointer-events: none;
@@ -795,6 +795,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateX(-50%); /* Center the line on the percentage point */
 }
 
 .marker-label {
@@ -826,14 +827,15 @@
 .cost-bar-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0; /* Removed gap for exact scale alignment */
 }
 
 .cost-bar-label-box {
-  width: 110px;
+  width: 120px; /* Exact match to marker offset */
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .cost-bar-name {
