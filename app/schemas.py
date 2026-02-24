@@ -176,6 +176,8 @@ class CountryDetail(BaseModel):
     phone_code: Optional[str] = None
     largest_cities: Optional[str] = None
     ethnic_groups: Optional[str] = None
+    wiki_summary: Optional[str] = None
+    national_symbols: Optional[str] = None
 
     # Grouped Info
     languages: List[LanguageSchema] = []

@@ -47,6 +47,8 @@ def export_all():
             "population": c.population,
             "timezone": c.timezone,
             "national_dish": c.national_dish,
+            "wiki_summary": c.wiki_summary,
+            "national_symbols": c.national_symbols,
             "phone_code": c.phone_code,
             "largest_cities": c.largest_cities,
             "ethnic_groups": c.ethnic_groups,

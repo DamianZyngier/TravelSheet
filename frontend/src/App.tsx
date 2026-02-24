@@ -19,6 +19,8 @@ interface CountryData {
   longitude: number | null;
   timezone: string | null;
   national_dish: string | null;
+  wiki_summary: string | null;
+  national_symbols: string | null;
   population: number | null;
   phone_code: string | null;
   largest_cities: string | null;
@@ -135,6 +137,7 @@ function App() {
 
   const SECTIONS = [
     { id: 'summary', label: 'Podsumowanie', icon: '📝' },
+    { id: 'discover', label: 'Poznaj kraj', icon: '✨' },
     { id: 'docs', label: 'Dokumenty', icon: '🛂' },
     { id: 'info', label: 'Informacje', icon: 'ℹ️' },
     { id: 'currency', label: 'Waluta', icon: '💰' },
@@ -580,8 +583,29 @@ function App() {
                 </div>
               </div>
 
-              <div className="detail-body">
-                <div className="info-grid">
+                          <div className="detail-body">
+                            <div id="discover" className="info-block full-width discover-section scroll-mt">
+                              <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
+                              <div className="discover-container">
+                                {selectedCountry.wiki_summary ? (
+                                  <div className="wiki-summary-text">
+                                    <ExpandableText text={selectedCountry.wiki_summary} />
+                                  </div>
+                                ) : (
+                                  <p className="no-data-text">Ładowanie opisu kraju...</p>
+                                )}
+                                
+                                {selectedCountry.national_symbols && (
+                                  <div className="national-symbols-bar">
+                                    <span className="symbols-label">Symbole narodowe:</span>
+                                    <span className="symbols-value">{selectedCountry.national_symbols}</span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+              
+                            <div className="info-grid">
+              
                   <div className="info-block">
                     <label>Kontynent</label>
                     <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>

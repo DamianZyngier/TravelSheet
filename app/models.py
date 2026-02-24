@@ -26,6 +26,8 @@ class Country(Base):
     phone_code = Column(String(50))
     largest_cities = Column(Text) # Store as comma-separated or JSON
     ethnic_groups = Column(Text) # Store as comma-separated or JSON
+    wiki_summary = Column(Text)
+    national_symbols = Column(String(255)) # e.g. animal, flower
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
