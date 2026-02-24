@@ -1477,3 +1477,94 @@
   color: #2b6cb0;
 }
 
+
+/* Enhanced Section Headers */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  background-color: #f8fafc;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid #2b6cb0;
+}
+
+.section-header label {
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+  color: #2d3748 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.section-header-icon {
+  font-size: 1.25rem;
+}
+
+/* Compact Holidays UI */
+.compact-holiday-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.holiday-mini-card {
+  padding: 0.75rem;
+  background-color: #f0f7ff;
+  border: 1px solid #bee3f8;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mini-card-date {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #2b6cb0;
+}
+
+.mini-card-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d3748;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expand-holidays-btn {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  border: 1px dashed #bee3f8;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  transition: all 0.2s;
+}
+
+.expand-holidays-btn:hover {
+  background-color: #bee3f8;
+}
+
+.collapse-holidays-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #718096;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.collapse-holidays-btn:hover {
+  background-color: #f8fafc;
+}
+

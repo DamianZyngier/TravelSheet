@@ -126,6 +126,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null);
+  const [isHolidaysExpanded, setIsHolidaysExpanded] = useState(false);
   
   const [filterSafety, setFilterSafety] = useState<string>('all');
   const [filterContinent, setFilterContinent] = useState<string>('all');
@@ -347,6 +348,7 @@ function App() {
 
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
+    setIsHolidaysExpanded(false); // Reset holidays state
     
     if (country && country.longitude !== null && country.latitude !== null) {
       const { zoom } = getMapSettings(country);
@@ -612,10 +614,14 @@ function App() {
                 </div>
               </div>
 
-                          <div className="detail-body">
-                            <div id="discover" className="info-block full-width discover-section scroll-mt">
-                              <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
-                              <div className="discover-container">
+                                      <div className="detail-body">
+                                        <div id="discover" className="info-block full-width discover-section scroll-mt">
+                                          <div className="section-header">
+                                            <span className="section-header-icon">✨</span>
+                                            <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
+                                          </div>
+                                          <div className="discover-container">
+                          
                                 {selectedCountry.wiki_summary ? (
                                   <div className="wiki-summary-text">
                                     <ExpandableText text={selectedCountry.wiki_summary} />
@@ -667,7 +673,10 @@ function App() {
                   </div>
                   
                   <div id="docs" className="info-block full-width docs-section scroll-mt">
-                    <label>Wymagane dokumenty (dla Polaków)</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">🛂</span>
+                      <label>Wymagane dokumenty (dla Polaków)</label>
+                    </div>
                     <div className="docs-grid">
                       <div className={`doc-item ${selectedCountry.entry?.passport_required ? 'doc-yes' : 'doc-no'}`}>
                         <strong>Paszport</strong>
@@ -694,7 +703,10 @@ function App() {
                   </div>
 
                   <div id="info" className="info-block full-width basic-info-section scroll-mt">
-                    <label>Podstawowe informacje</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">ℹ️</span>
+                      <label>Podstawowe informacje</label>
+                    </div>
                     <div className="basic-info-grid">
                       <div className="info-item-box">
                         <strong>Ludność:</strong>
@@ -737,9 +749,12 @@ function App() {
                     </div>
                   </div>
 
-                                                    <div id="currency" className="info-block full-width scroll-mt">
-                                                      <label>Waluta</label>
-                                                      <span>
+                  <div id="currency" className="info-block full-width scroll-mt">
+                    <div className="section-header">
+                      <span className="section-header-icon">💰</span>
+                      <label>Waluta</label>
+                    </div>
+                    <span>
                                                         {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`} <br/>
                                                         {selectedCountry.currency.rate_pln ? (
                                                           <>
@@ -750,8 +765,11 @@ function App() {
                                                         ) : 'brak danych o kursie'}
                                                       </span>
                                                     </div>
-                                                    <div id="plugs" className="info-block full-width scroll-mt">
-                    <label>Gniazdka elektryczne</label>
+                  <div id="plugs" className="info-block full-width scroll-mt">
+                    <div className="section-header">
+                      <span className="section-header-icon">🔌</span>
+                      <label>Gniazdka elektryczne</label>
+                    </div>
                     <div className="plugs-container">
                       <div className="plug-types-list">
                         {selectedCountry.practical.plug_types.split(',').map(type => (
@@ -776,7 +794,10 @@ function App() {
                   </div>
 
                   <div id="emergency" className="info-block full-width emergency-section-box scroll-mt">
-                    <label>Telefony i Łączność</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">🚨</span>
+                      <label>Telefony i Łączność</label>
+                    </div>
                     <div className="emergency-container">
                       <div className="connectivity-badges">
                         {selectedCountry.practical.emergency?.member_112 && (
@@ -819,7 +840,10 @@ function App() {
                   </div>
 
                   <div id="costs" className="info-block full-width costs-section-box scroll-mt">
-                    <label>Ceny w porównaniu do Polski</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">📊</span>
+                      <label>Ceny w porównaniu do Polski</label>
+                    </div>
                     <div className="costs-container">
                       {selectedCountry.costs?.ratio_to_pl ? (
                         <>
@@ -898,7 +922,10 @@ function App() {
                   </div>
 
                   <div id="climate" className="info-block full-width climate-section scroll-mt">
-                    <label>Typowa pogoda (średnie miesięczne)</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">🌤️</span>
+                      <label>Typowa pogoda (średnie miesięczne)</label>
+                    </div>
                     {selectedCountry.climate && selectedCountry.climate.length > 0 ? (
                       <div className="combined-chart-container" onMouseLeave={() => setChartTooltip(prev => ({ ...prev, visible: false }))}>
                         <div className="chart-y-axis-label left">Temperatura (°C)</div>
@@ -1004,7 +1031,10 @@ function App() {
                   </div>
 
                   <div id="health" className="info-block full-width health-section-box scroll-mt">
-                    <label>Zdrowie i szczepienia</label>
+                    <div className="section-header">
+                      <span className="section-header-icon">💉</span>
+                      <label>Zdrowie i szczepienia</label>
+                    </div>
                     <div className="health-container">
                       {selectedCountry.practical.health_info && (
                         <div className="health-full-info">
@@ -1053,35 +1083,67 @@ function App() {
 
                   {selectedCountry.holidays && selectedCountry.holidays.length > 0 && (
                     <div id="holidays" className="info-block full-width holiday-section scroll-mt">
-                      <label>Święta i dni wolne</label>
-                      <div className="holiday-list">
-                        {Object.entries(
-                          [...selectedCountry.holidays]
-                            .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                            .reduce((acc, h) => {
-                              const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
-                              if (!acc[month]) acc[month] = [];
-                              acc[month].push(h);
-                              return acc;
-                            }, {} as Record<string, typeof selectedCountry.holidays>)
-                        ).map(([month, monthHolidays]) => (
-                          <div key={month} className="holiday-month-group">
-                            <h5 className="holiday-month-header">{month}</h5>
-                            {monthHolidays.map((h, idx) => (
-                              <div key={idx} className="holiday-item">
-                                <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric' })}</span>
-                                <span className="holiday-name">{h.name}</span>
+                      <div className="section-header">
+                        <span className="section-header-icon">📅</span>
+                        <label>Święta i dni wolne</label>
+                      </div>
+                      
+                      <div className="holiday-container">
+                        {!isHolidaysExpanded ? (
+                          <div className="compact-holiday-grid">
+                            {selectedCountry.holidays
+                              .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+                              .slice(0, 3)
+                              .map((h, idx) => (
+                                <div key={idx} className="holiday-mini-card">
+                                  <span className="mini-card-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short' })}</span>
+                                  <span className="mini-card-name">{h.name}</span>
+                                </div>
+                              ))
+                            }
+                            {selectedCountry.holidays.length > 3 && (
+                              <button className="expand-holidays-btn" onClick={() => setIsHolidaysExpanded(true)}>
+                                +{selectedCountry.holidays.length - 3} więcej
+                              </button>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="expanded-holiday-list">
+                            {Object.entries(
+                              [...selectedCountry.holidays]
+                                .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+                                .reduce((acc, h) => {
+                                  const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
+                                  if (!acc[month]) acc[month] = [];
+                                  acc[month].push(h);
+                                  return acc;
+                                }, {} as Record<string, typeof selectedCountry.holidays>)
+                            ).map(([month, monthHolidays]) => (
+                              <div key={month} className="holiday-month-group">
+                                <h5 className="holiday-month-header">{month}</h5>
+                                {monthHolidays.map((h, idx) => (
+                                  <div key={idx} className="holiday-item">
+                                    <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric' })}</span>
+                                    <span className="holiday-name">{h.name}</span>
+                                  </div>
+                                ))}
                               </div>
                             ))}
+                            <button className="collapse-holidays-btn" onClick={() => setIsHolidaysExpanded(false)}>
+                              Pokaż mniej
+                            </button>
                           </div>
-                        ))}
+                        )}
                       </div>
                     </div>
                   )}
 
                   {selectedCountry.embassies && selectedCountry.embassies.length > 0 && (
                     <div id="embassies" className="info-block full-width embassy-section scroll-mt">
-                      <label>Polskie placówki dyplomatyczne</label>
+                      <div className="section-header">
+                        <span className="section-header-icon">🏢</span>
+                        <label>Polskie placówki dyplomatyczne</label>
+                      </div>
                       <div className="embassy-list">
                         {selectedCountry.embassies.map((emb, idx) => (
                           <div key={idx} className="embassy-item">
@@ -1096,10 +1158,13 @@ function App() {
                     </div>
                   )}
 
-                                  {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
-                                    <div id="attractions" className="info-block full-width unesco-section scroll-mt">
-                                      <label>Najciekawsze miejsca i atrakcje</label>
-                                      <div className="unesco-grid">
+                  {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
+                    <div id="attractions" className="info-block full-width unesco-section scroll-mt">
+                      <div className="section-header">
+                        <span className="section-header-icon">🏛️</span>
+                        <label>Najciekawsze miejsca i atrakcje</label>
+                      </div>
+                      <div className="unesco-grid">
                                         {selectedCountry.attractions.map((attr, idx) => (
                                           <div key={idx} className="unesco-item-v2">
                                             <div className="unesco-item-header">
