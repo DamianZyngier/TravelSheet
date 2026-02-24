@@ -612,30 +612,33 @@ function App() {
                 </div>
               </div>
 
-                                      <div className="detail-body">
-                                        <div id="discover" className="info-block full-width discover-section scroll-mt">
-                                          <div className="section-header">
-                                            <span className="section-header-icon">✨</span>
-                                            <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
-                                          </div>
-                                          <div className="discover-container">
-                          
-                                {selectedCountry.wiki_summary ? (
-                                  <div className="wiki-summary-text">
-                                    <ExpandableText text={selectedCountry.wiki_summary} />
-                                  </div>
-                                ) : (
-                                  <p className="no-data-text">Ładowanie opisu kraju...</p>
-                                )}
-                                
-                                {selectedCountry.national_symbols && (
-                                  <div className="national-symbols-bar">
-                                    <span className="symbols-label">Symbole narodowe:</span>
-                                    <span className="symbols-value">{selectedCountry.national_symbols}</span>
-                                  </div>
-                                )}
-                              </div>
-                            </div>
+                                                  <div className="detail-body">
+                                                    <div id="discover" className="info-block full-width scroll-mt">
+                                                      <div className="section-header">
+                                                        <span className="section-header-icon">✨</span>
+                                                        <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
+                                                      </div>
+                                                      
+                                                      <div className="discover-section">
+                                                        <div className="discover-container">
+                                                          {selectedCountry.wiki_summary ? (
+                                                            <div className="wiki-summary-text">
+                                                              <ExpandableText text={selectedCountry.wiki_summary} />
+                                                            </div>
+                                                          ) : (
+                                                            <p className="no-data-text">Ładowanie opisu kraju...</p>
+                                                          )}
+                                                          
+                                                          {selectedCountry.national_symbols && (
+                                                            <div className="national-symbols-bar">
+                                                              <span className="symbols-label">Symbole narodowe:</span>
+                                                              <span className="symbols-value">{selectedCountry.national_symbols}</span>
+                                                            </div>
+                                                          )}
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                      
               
                             <div className="info-grid">
               
