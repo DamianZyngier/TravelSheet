@@ -113,6 +113,14 @@ async def sync_costs_endpoint(db: Session = Depends(get_db)):
     result = sync_costs(db)
     return result
 
+@app.post("/api/admin/sync-cdc")
+async def sync_cdc_endpoint(db: Session = Depends(get_db)):
+    """Admin endpoint - sync vaccinations from CDC"""
+    from .scrapers.cdc_health import sync_all_cdc
+
+    result = await sync_all_cdc(db)
+    return result
+
 @app.post("/api/admin/sync-unesco-sites")
 async def sync_unesco_sites(db: Session = Depends(get_db)):
     """Admin endpoint - sync UNESCO World Heritage sites"""

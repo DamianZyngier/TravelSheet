@@ -168,46 +168,104 @@
 .risk-border-critical { border-top-color: #9b2c2c; }
 .risk-border-unknown { border-top-color: #a0aec0; }
 
-/* Detail View */
-.detail-view-container {
+/* Detail View Layout with Side Menu */
+.detail-view-layout {
+  display: flex;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
+  gap: 2rem;
   padding: 2rem;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.side-menu {
+  position: sticky;
+  top: 100px;
+  width: 220px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  animation: fadeIn 0.3s ease-out;
-  margin: 0 auto;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.back-button {
-  align-self: flex-start;
-  padding: 0.75rem 1.5rem;
+.side-back-button {
+  padding: 0.75rem 1.25rem;
   background-color: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   color: #4a5568;
   transition: all 0.2s;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
-.back-button:hover {
+.side-back-button:hover {
   background-color: #f7fafc;
-  border-color: #cbd5e0;
   transform: translateX(-4px);
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.side-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #718096;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.side-menu-item:hover {
+  background-color: #f8fafc;
+  color: #2b6cb0;
+}
+
+.side-menu-item.active {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  border-left-color: #3182ce;
+}
+
+.side-menu-icon {
+  font-size: 1.1rem;
+}
+
+.detail-view-content {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+}
+
+.scroll-mt {
+  scroll-margin-top: 100px;
+}
+
+/* Detail View Container legacy fix */
+.detail-view-container {
+  display: none;
 }
 
 .detail-card {
   background-color: white;
   border-radius: 16px;
-  padding: 3rem;
+  padding: 2.5rem;
   box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
   border: 1px solid #edf2f7;
 }
