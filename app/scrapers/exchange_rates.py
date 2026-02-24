@@ -8,39 +8,48 @@ logger = logging.getLogger("uvicorn")
 
 async def sync_rates(db: Session):
     """
-    Syncs currency exchange rates from NBP (National Bank of Poland) or exchangerate.host
+    Syncs currency exchange rates from NBP (National Bank of Poland).
+    Covers both Table A (major currencies) and Table B (exotic currencies).
     """
-    # Using exchangerate.host (free for basic usage)
-    url = "https://api.exchangerate.host/latest?base=PLN"
+    # NBP API URLs
+    urls = [
+        "https://api.nbp.pl/api/exchangerates/tables/A?format=json",
+        "https://api.nbp.pl/api/exchangerates/tables/B?format=json"
+    ]
+    
+    all_nbp_rates = {}
     
     async with httpx.AsyncClient(timeout=15.0) as client:
-        try:
-            resp = await client.get(url)
-            if resp.status_code != 200:
-                # Fallback to a different API if needed
-                return {"error": "Exchange rate API failed"}
-            
-            data = resp.json()
-            rates = data.get("rates", {})
-        except Exception as e:
-            return {"error": str(e)}
+        for url in urls:
+            try:
+                resp = await client.get(url)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    # data is a list with one element (the table)
+                    rates = data[0].get("rates", [])
+                    for r in rates:
+                        code = r.get("code")
+                        mid = r.get("mid")
+                        if code and mid:
+                            all_nbp_rates[code.upper()] = mid
+            except Exception as e:
+                logger.error(f"Error fetching from NBP ({url}): {e}")
 
-    if not rates:
-        return {"error": "No rates found"}
+    if not all_nbp_rates:
+        return {"error": "No rates found from NBP"}
 
     updated = 0
     currencies = db.query(models.Currency).all()
     
     for curr in currencies:
-        # exchangerate.host returns rates vs base (PLN)
-        # We want 1 CURR = X PLN, so we need 1/rate
-        rate_vs_pln = rates.get(curr.code)
-        if rate_vs_pln and rate_vs_pln != 0:
-            actual_rate = 1.0 / rate_vs_pln
-            curr.exchange_rate_pln = actual_rate
+        # NBP returns 1 CURR = X PLN (mid rate)
+        # This is exactly what we store in exchange_rate_pln
+        rate = all_nbp_rates.get(curr.code.upper())
+        if rate:
+            curr.exchange_rate_pln = rate
             curr.last_updated = func.now()
             updated += 1
 
     db.commit()
-    logger.info(f"Updated {updated} exchange rates")
+    logger.info(f"Updated {updated} exchange rates from NBP")
     return {"updated": updated}
