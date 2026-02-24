@@ -43,20 +43,12 @@ jobs:
             sleep 1
           done
 
-      - name: Sync Base Data
+      - name: Sync Data
         run: |
-          echo "Syncing countries from REST Countries..."
-          curl -X POST "http://localhost:8000/api/admin/sync-rest-countries"
-          echo "Syncing static data (plugs, driving side)..na islandii mam
-          curl -X POST "http://localhost:8000/api/admin/sync-static-info"
-          echo "Syncing emergency numbers..."
-          curl -X POST "http://localhost:8000/api/admin/sync-emergency"
-          echo "Syncing UNESCO World Heritage sites..."
-          curl -X POST "http://localhost:8000/api/admin/sync-unesco-sites"
-
-      - name: Sync Exchange Rates
-        run: |
+          echo "Syncing exchange rates..."
           curl -X POST "http://localhost:8000/api/admin/sync-exchange-rates"
+          echo "Syncing visas (Wiki)..."
+          curl -X POST "http://localhost:8000/api/admin/sync-visas"
 
       - name: Scrape All Countries (MSZ gov.pl)
         run: |

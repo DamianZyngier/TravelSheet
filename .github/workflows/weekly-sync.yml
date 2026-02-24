@@ -65,6 +65,14 @@ jobs:
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-costs"
 
+      - name: Sync Wiki Summaries
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-wiki-summaries"
+
+      - name: Sync Wiki Attractions
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-attractions-wiki"
+
       - name: Sync Embassies
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-embassies"

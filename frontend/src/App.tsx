@@ -299,6 +299,13 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Reset scroll to top when country selection changes
+  useEffect(() => {
+    if (selectedCountry) {
+      window.scrollTo(0, 0);
+    }
+  }, [selectedCountry]);
+
   const getMapSettings = (country: CountryData) => {
     const huge = ['RU', 'CA', 'US', 'CN', 'BR', 'AU', 'IN', 'AR', 'KZ', 'DZ'];
     const large = ['SA', 'MX', 'ID', 'SD', 'LY', 'MN', 'TD', 'PE', 'NE', 'AO', 'CO', 'ZA', 'ML', 'ET', 'BO', 'MR', 'EG', 'TR', 'PL', 'UA', 'FR', 'DE', 'ES', 'SE', 'NO'];
