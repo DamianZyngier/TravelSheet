@@ -546,6 +546,8 @@ function App() {
                             const isSelected = 
                               geo.id === selectedCountry.iso3 || 
                               geo.properties?.iso_a3 === selectedCountry.iso3 ||
+                              geo.properties?.ADM0_A3 === selectedCountry.iso3 ||
+                              geo.properties?.GU_A3 === selectedCountry.iso3 ||
                               geo.properties?.name === selectedCountry.name ||
                               (selectedCountry.iso3 === "USA" && (geo.id === "USA" || geo.properties?.name === "United States of America"));
                             

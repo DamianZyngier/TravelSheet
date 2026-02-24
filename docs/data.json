@@ -65,7 +65,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -742,8 +742,8 @@
       "ratio_to_pl": 1.31
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -943,7 +943,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -1208,7 +1208,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -1433,7 +1433,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -1705,8 +1705,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2024,7 +2024,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2179,7 +2179,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -2563,7 +2563,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2771,7 +2771,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -2979,8 +2979,8 @@
       "ratio_to_pl": 1.67
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa / ETA",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -3233,7 +3233,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -3466,7 +3466,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -3670,7 +3670,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -3870,7 +3870,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4178,8 +4178,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -4341,8 +4341,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5023,7 +5023,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -5403,7 +5403,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5558,7 +5558,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -5758,7 +5758,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -6031,7 +6031,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -6356,8 +6356,8 @@
       "ratio_to_pl": 0.9
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -6565,7 +6565,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -7132,7 +7132,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7444,8 +7444,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7799,8 +7799,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -7954,8 +7954,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8114,7 +8114,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8309,8 +8309,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8465,7 +8465,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -8632,7 +8632,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -9007,8 +9007,8 @@
       "ratio_to_pl": 1.71
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa / ETA",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -9268,7 +9268,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -9645,7 +9645,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10175,8 +10175,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -10530,8 +10530,8 @@
       "ratio_to_pl": 0.71
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -10862,7 +10862,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -11400,8 +11400,8 @@
       "ratio_to_pl": 0.67
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -11581,7 +11581,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -11948,7 +11948,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -12180,8 +12180,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12336,7 +12336,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12536,7 +12536,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -12809,7 +12809,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13005,7 +13005,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13163,8 +13163,8 @@
       "ratio_to_pl": 1.79
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa / ETA",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13507,7 +13507,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13661,8 +13661,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -13816,8 +13816,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14008,8 +14008,8 @@
       "ratio_to_pl": 0.71
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14172,8 +14172,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14328,7 +14328,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -14740,7 +14740,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -14894,8 +14894,8 @@
       "ratio_to_pl": 1.0
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15095,7 +15095,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -15544,7 +15544,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15635,7 +15635,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15721,7 +15721,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -15910,7 +15910,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -16085,8 +16085,8 @@
       "ratio_to_pl": 1.55
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16250,7 +16250,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16471,7 +16471,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16553,7 +16553,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16675,8 +16675,8 @@
       "ratio_to_pl": null
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16757,8 +16757,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -16930,7 +16930,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -17261,8 +17261,8 @@
       "ratio_to_pl": 0.95
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17344,7 +17344,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17552,7 +17552,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17637,8 +17637,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17719,8 +17719,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -17945,7 +17945,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -18096,7 +18096,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18178,7 +18178,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": false,
       "id_card_allowed": false,
@@ -18318,7 +18318,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18444,8 +18444,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18732,7 +18732,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -18818,7 +18818,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19023,7 +19023,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19104,8 +19104,8 @@
       "ratio_to_pl": 1.55
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19338,7 +19338,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -19485,7 +19485,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19612,7 +19612,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -19878,8 +19878,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20051,7 +20051,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -20369,8 +20369,8 @@
       "ratio_to_pl": 0.71
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20452,7 +20452,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -20635,8 +20635,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20848,8 +20848,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -20944,7 +20944,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21182,7 +21182,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21334,7 +21334,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21505,8 +21505,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21637,7 +21637,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -21812,8 +21812,8 @@
       "ratio_to_pl": 1.07
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -21939,8 +21939,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22029,8 +22029,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22125,7 +22125,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22345,8 +22345,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22436,7 +22436,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22518,7 +22518,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22681,8 +22681,8 @@
       "ratio_to_pl": 0.67
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22886,8 +22886,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -22986,7 +22986,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -23279,8 +23279,8 @@
       "ratio_to_pl": 0.67
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23382,8 +23382,8 @@
       "ratio_to_pl": 0.9
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23464,8 +23464,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23629,7 +23629,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23711,7 +23711,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -23971,8 +23971,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24054,7 +24054,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -24209,8 +24209,8 @@
       "ratio_to_pl": 0.9
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24345,7 +24345,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24563,8 +24563,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24653,8 +24653,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24740,7 +24740,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -24948,8 +24948,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25080,7 +25080,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25256,7 +25256,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25443,7 +25443,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25607,7 +25607,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -25762,8 +25762,8 @@
       "ratio_to_pl": 0.71
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -25849,7 +25849,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -26114,8 +26114,8 @@
       "ratio_to_pl": 1.55
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26201,7 +26201,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26335,12 +26335,12 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": null,
-      "visa_status": "",
-      "passport_required": true,
-      "temp_passport_allowed": true,
-      "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_required": false,
+      "visa_status": "Wiza niepotrzebna",
+      "passport_required": null,
+      "temp_passport_allowed": null,
+      "id_card_allowed": null,
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -26430,7 +26430,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -26678,7 +26678,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -26799,12 +26799,12 @@
       "ratio_to_pl": 1.0
     },
     "entry": {
-      "visa_required": null,
-      "visa_status": "",
-      "passport_required": true,
-      "temp_passport_allowed": true,
-      "id_card_allowed": false,
-      "visa_notes": ""
+      "visa_required": false,
+      "visa_status": "Wiza niepotrzebna",
+      "passport_required": null,
+      "temp_passport_allowed": null,
+      "id_card_allowed": null,
+      "visa_notes": null
     },
     "weather": {
       "temp": null,
@@ -26930,8 +26930,8 @@
       "ratio_to_pl": 1.19
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27030,7 +27030,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27181,7 +27181,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27376,7 +27376,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27457,8 +27457,8 @@
       "ratio_to_pl": 0.9
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27540,7 +27540,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -27622,7 +27622,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28011,7 +28011,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -28167,7 +28167,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28319,7 +28319,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28454,7 +28454,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -28930,7 +28930,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29302,7 +29302,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29458,7 +29458,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29556,8 +29556,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29643,7 +29643,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29724,8 +29724,8 @@
       "ratio_to_pl": 1.31
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -29807,7 +29807,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -30081,8 +30081,8 @@
       "ratio_to_pl": 1.19
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30163,8 +30163,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30414,7 +30414,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30609,8 +30609,8 @@
       "ratio_to_pl": 0.9
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30835,7 +30835,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -30970,7 +30970,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31051,8 +31051,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31138,7 +31138,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -31293,8 +31293,8 @@
       "ratio_to_pl": 0.52
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31584,8 +31584,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31674,8 +31674,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31815,7 +31815,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31901,7 +31901,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -31983,7 +31983,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -32202,8 +32202,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32366,8 +32366,8 @@
       "ratio_to_pl": 1.79
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32602,8 +32602,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32734,7 +32734,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32815,8 +32815,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -32906,7 +32906,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -33037,7 +33037,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33118,8 +33118,8 @@
       "ratio_to_pl": 1.79
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33205,7 +33205,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33291,7 +33291,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33372,8 +33372,8 @@
       "ratio_to_pl": 1.24
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33537,7 +33537,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -33695,8 +33695,8 @@
       "ratio_to_pl": 0.76
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -33860,7 +33860,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -34669,8 +34669,8 @@
       "ratio_to_pl": 0.6
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34842,7 +34842,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -34924,7 +34924,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35005,8 +35005,8 @@
       "ratio_to_pl": 1.0
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35164,8 +35164,8 @@
       "ratio_to_pl": 1.79
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35295,8 +35295,8 @@
       "ratio_to_pl": 0.83
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35481,7 +35481,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35563,7 +35563,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -35698,7 +35698,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35779,8 +35779,8 @@
       "ratio_to_pl": 0.95
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "e-Visa",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -35871,7 +35871,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": true,
@@ -36124,7 +36124,7 @@
     },
     "entry": {
       "visa_required": false,
-      "visa_status": null,
+      "visa_status": "Wiza niepotrzebna",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -36205,8 +36205,8 @@
       "ratio_to_pl": 1.0
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Wiza wymagana",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
@@ -36287,8 +36287,8 @@
       "ratio_to_pl": 1.24
     },
     "entry": {
-      "visa_required": false,
-      "visa_status": null,
+      "visa_required": true,
+      "visa_status": "Visa on arrival",
       "passport_required": true,
       "temp_passport_allowed": true,
       "id_card_allowed": false,
