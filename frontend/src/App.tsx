@@ -612,10 +612,32 @@ function App() {
                       <div className="chart-y-axis-label right">Opady (mm)</div>
                       
                       <svg viewBox="0 0 600 240" className="combined-svg-chart">
-                        {/* Grid lines */}
-                        {[0, 1, 2, 3, 4].map(i => (
-                          <line key={i} x1="40" y1={40 + i*40} x2="560" y2={40 + i*40} className="chart-grid-line" />
-                        ))}
+                        {/* Grid lines & Y-Axis Labels */}
+                        {[0, 10, 20, 30, 40].map(temp => {
+                          const y = 200 - (temp + 10) * 3;
+                          return (
+                            <g key={temp}>
+                              <line x1="40" y1={y} x2="560" y2={y} className="chart-grid-line" />
+                              <text x="35" y={y + 4} textAnchor="end" className="chart-axis-text temp">{temp}°</text>
+                            </g>
+                          );
+                        })}
+
+                        {/* Rain Axis Labels (Right side) */}
+                        {(() => {
+                          const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
+                          return [0, 0.5, 1].map(p => (
+                            <text 
+                              key={p} 
+                              x="565" 
+                              y={200 - p * 160 + 4} 
+                              textAnchor="start" 
+                              className="chart-axis-text rain"
+                            >
+                              {Math.round(p * maxRain)}
+                            </text>
+                          ));
+                        })()}
 
                         {/* Rain Bars (Precipitation) */}
                         {selectedCountry.climate.map((cl, i) => {
@@ -629,15 +651,16 @@ function App() {
                               width="24"
                               height={barHeight}
                               className="chart-bar-rain"
-                              title={`Opady: ${cl.rain}mm`}
-                            />
+                            >
+                              <title>Opady: {cl.rain}mm</title>
+                            </rect>
                           );
                         })}
 
-                        {/* Temperature Lines (connecting day and night) */}
+                        {/* Temperature Lines */}
                         {(() => {
                           const getX = (i: number) => 62 + i * 43;
-                          const getY = (temp: number) => 200 - (temp + 10) * 3; // Offset -10 to 40+ range
+                          const getY = (temp: number) => 200 - (temp + 10) * 3;
                           
                           const dayPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ');
                           const nightPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ');
@@ -647,11 +670,14 @@ function App() {
                               <path d={dayPath} className="chart-line-day" fill="none" />
                               <path d={nightPath} className="chart-line-night" fill="none" />
                               
-                              {/* Dots for emphasis */}
                               {selectedCountry.climate.map((cl, i) => (
                                 <g key={`dots-${i}`}>
-                                  <circle cx={getX(i)} cy={getY(cl.temp_day)} r="3" className="chart-dot-day" title={`Dzień: ${cl.temp_day}°C`} />
-                                  <circle cx={getX(i)} cy={getY(cl.temp_night)} r="3" className="chart-dot-night" title={`Noc: ${cl.temp_night}°C`} />
+                                  <circle cx={getX(i)} cy={getY(cl.temp_day)} r="3.5" className="chart-dot-day">
+                                    <title>Dzień: {cl.temp_day}°C</title>
+                                  </circle>
+                                  <circle cx={getX(i)} cy={getY(cl.temp_night)} r="3.5" className="chart-dot-night">
+                                    <title>Noc: {cl.temp_night}°C</title>
+                                  </circle>
                                 </g>
                               ))}
                             </>
@@ -663,7 +689,7 @@ function App() {
                           <text
                             key={`label-${i}`}
                             x={62 + i * 43}
-                            y="220"
+                            y="225"
                             textAnchor="middle"
                             className="chart-month-text"
                           >
@@ -673,8 +699,8 @@ function App() {
                       </svg>
 
                       <div className="chart-legend-combined">
-                        <span className="legend-item"><i className="legend-line day"></i> Temperatura w dzień</span>
-                        <span className="legend-item"><i className="legend-line night"></i> Temperatura w nocy</span>
+                        <span className="legend-item"><i className="legend-line day"></i> Temperatura dzień</span>
+                        <span className="legend-item"><i className="legend-line night"></i> Temperatura noc</span>
                         <span className="legend-item"><i className="legend-rect rain"></i> Opady (mm)</span>
                       </div>
                     </div>

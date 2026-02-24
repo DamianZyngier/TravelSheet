@@ -772,6 +772,19 @@
   font-weight: 600;
 }
 
+.chart-axis-text {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.chart-axis-text.temp {
+  fill: #dd6b20;
+}
+
+.chart-axis-text.rain {
+  fill: #3182ce;
+}
+
 .chart-y-axis-label {
   position: absolute;
   top: 10px;
