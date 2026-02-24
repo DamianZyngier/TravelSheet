@@ -158,7 +158,16 @@ function App() {
         const params = new URLSearchParams(window.location.search);
         const countryCode = params.get('kraj');
         if (countryCode && data[countryCode.toUpperCase()]) {
-          setSelectedCountry(data[countryCode.toUpperCase()]);
+          const country = data[countryCode.toUpperCase()];
+          setSelectedCountry(country);
+          
+          if (country.longitude !== null && country.latitude !== null) {
+            const { zoom } = getMapSettings(country);
+            setMapPosition({ 
+              coordinates: [country.longitude, country.latitude], 
+              zoom: zoom
+            });
+          }
         }
       })
       .catch(err => {
@@ -179,14 +188,38 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Dynamiczne obliczanie przybliżenia i widoczności kropki
+  const getMapSettings = (country: CountryData) => {
+    const huge = ['RU', 'CA', 'US', 'CN', 'BR', 'AU', 'IN', 'AR', 'KZ', 'DZ'];
+    const large = ['SA', 'MX', 'ID', 'SD', 'LY', 'MN', 'TD', 'PE', 'NE', 'AO', 'CO', 'ZA', 'ML', 'ET', 'BO', 'MR', 'EG', 'TR', 'PL', 'UA', 'FR', 'DE', 'ES', 'SE', 'NO'];
+    const tiny = [
+      'AD', 'MO', 'SM', 'LI', 'VA', 'MT', 'SG', 'HK', 'LU', 'MC', 'MS', 'GI', 'TC', 'VG', 'AI', 'BM', 'AW', 'SX', 'BQ', 'CW', 'PF', 'NC', 'WF', 'YT', 'RE', 'BL', 'MF', 'PM', 'FK', 'SH', 'PN', 'GS', 'IO', 'TF', 'HM', 'BV', 'CV', 'ST', 'SC', 'MU', 'KM', 'MV', 'LS', 'SZ', 'BH', 'BB', 'DM', 'GD', 'KN', 'LC', 'VC', 'AG', 'BS', 'PW', 'MH', 'FM', 'NR', 'KI', 'TO', 'WS', 'TV', 'VU'
+    ];
+
+    let zoom = 10;
+    let showDot = false; // Domyślnie ukryta
+
+    if (huge.includes(country.iso2)) {
+      zoom = 2.5;
+    } else if (large.includes(country.iso2)) {
+      zoom = 5;
+    } else if (tiny.includes(country.iso2)) {
+      zoom = 25;
+      showDot = true; // Tylko dla mikro-krajów
+    }
+
+    return { zoom, showDot };
+  };
+
   // Aktualizuj URL gdy zmienia się wybrany kraj
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
     
     if (country && country.longitude !== null && country.latitude !== null) {
+      const { zoom } = getMapSettings(country);
       setMapPosition({ 
         coordinates: [country.longitude, country.latitude], 
-        zoom: 12 
+        zoom: zoom
       });
     } else {
       setMapPosition({ coordinates: [0, 0], zoom: 1 });
@@ -265,7 +298,7 @@ function App() {
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
 
   return (
-    <div className="app-container">
+    <div className="app-container" onContextMenu={() => true}>
       {error && <div className="error-toast">{error}</div>}
       
       {!selectedCountry ? (
@@ -398,14 +431,14 @@ function App() {
                       }
                     </Geographies>
                     
-                    {selectedCountry.longitude !== null && selectedCountry.latitude !== null && (
+                    {selectedCountry.longitude !== null && selectedCountry.latitude !== null && getMapSettings(selectedCountry).showDot && (
                       <Marker coordinates={[selectedCountry.longitude, selectedCountry.latitude]}>
                         {/* Outer white glow/border - constant screen size */}
                         <circle 
                           r={0.1} 
                           fill="none" 
                           stroke="#fff" 
-                          strokeWidth={10}
+                          strokeWidth={20} 
                           vectorEffect="non-scaling-stroke" 
                         />
                         {/* Inner red dot - constant screen size */}
@@ -413,7 +446,7 @@ function App() {
                           r={0.1} 
                           fill="none" 
                           stroke="#F56565" 
-                          strokeWidth={7}
+                          strokeWidth={14} 
                           vectorEffect="non-scaling-stroke" 
                         />
                       </Marker>
@@ -424,7 +457,7 @@ function App() {
                 <div className="map-controls">
                   <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: Math.min(prev.zoom * 1.5, 40) }))}>+</button>
                   <button onClick={() => setMapPosition(prev => ({ ...prev, zoom: Math.max(prev.zoom / 1.5, 1) }))}>-</button>
-                  <button onClick={() => setMapPosition({ coordinates: [selectedCountry.longitude || 0, selectedCountry.latitude || 0], zoom: 12 })}>🎯</button>
+                  <button onClick={() => setMapPosition({ coordinates: [selectedCountry.longitude || 0, selectedCountry.latitude || 0], zoom: getMapSettings(selectedCountry).zoom })}>🎯</button>
                 </div>
               </div>
             </div>
@@ -482,7 +515,7 @@ function App() {
                     <div className="plug-types-list">
                       {selectedCountry.practical.plug_types.split(',').map(type => (
                         <div key={type} className="plug-icon-box">
-                          <span className="plug-letter">{type.trim()}</span>
+                          <span className="plug-letter">Typ {type.trim()}</span>
                           {PLUG_IMAGES[type.trim().toUpperCase()] && (
                             <div className="plug-img-wrapper">
                               <img 
