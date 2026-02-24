@@ -190,8 +190,25 @@ function App() {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Update URL hash without jumping
+      window.history.replaceState(null, '', `#${id}`);
     }
   };
+
+  // Handle initial anchor on load or country change
+  useEffect(() => {
+    if (selectedCountry && window.location.hash) {
+      const id = window.location.hash.substring(1);
+      // Small delay to ensure DOM is fully rendered
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'auto', block: 'start' });
+          setActiveSection(id);
+        }
+      }, 100);
+    }
+  }, [selectedCountry]);
 
   const SAFETY_LABELS: Record<string, string> = {
     'low': 'Bezpiecznie',
@@ -346,6 +363,7 @@ function App() {
       url.searchParams.set('kraj', country.iso2);
     } else {
       url.searchParams.delete('kraj');
+      url.hash = ''; // Clear hash when returning to list
     }
     window.history.pushState({}, '', url.toString());
   };
