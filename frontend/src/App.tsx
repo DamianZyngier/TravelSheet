@@ -695,21 +695,20 @@ function App() {
                     </div>
                   </div>
 
-                  <div id="currency" className="info-block full-width scroll-mt">
-                    <label>Waluta</label>
-                    <span>
-                      {selectedCountry.currency.name} ({selectedCountry.currency.code}) <br/>
-                      {selectedCountry.currency.rate_pln ? (
-                        <>
-                          1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
-                          <br/>
-                          <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
-                        </>
-                      ) : 'brak danych o kursie'}
-                    </span>
-                  </div>
-
-                  <div id="plugs" className="info-block full-width scroll-mt">
+                                                    <div id="currency" className="info-block full-width scroll-mt">
+                                                      <label>Waluta</label>
+                                                      <span>
+                                                        {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`} <br/>
+                                                        {selectedCountry.currency.rate_pln ? (
+                                                          <>
+                                                            1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
+                                                            <br/>
+                                                            <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
+                                                          </>
+                                                        ) : 'brak danych o kursie'}
+                                                      </span>
+                                                    </div>
+                                                    <div id="plugs" className="info-block full-width scroll-mt">
                     <label>Gniazdka elektryczne</label>
                     <div className="plugs-container">
                       <div className="plug-types-list">
