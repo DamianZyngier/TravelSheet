@@ -53,6 +53,10 @@ jobs:
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-static-info"
 
+      - name: Sync Holidays
+        run: |
+          curl -X POST "http://localhost:8000/api/admin/sync-holidays"
+
       - name: Sync Embassies
         run: |
           curl -X POST "http://localhost:8000/api/admin/sync-embassies"
