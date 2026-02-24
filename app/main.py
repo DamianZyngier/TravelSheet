@@ -137,6 +137,14 @@ async def sync_holidays_endpoint(db: Session = Depends(get_db)):
     result = await sync_all_holidays(db)
     return result
 
+@app.post("/api/admin/sync-climate")
+async def sync_climate_endpoint(force: bool = False, db: Session = Depends(get_db)):
+    """Admin endpoint - sync climate data from Open-Meteo"""
+    from .scrapers.climate import sync_all_climate
+
+    result = await sync_all_climate(db, force=force)
+    return result
+
 @app.post("/api/admin/update-weather/{iso_code}")
 async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - update weather for specific country"""

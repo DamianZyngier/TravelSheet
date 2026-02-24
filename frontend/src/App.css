@@ -710,3 +710,114 @@
   text-align: right;
   flex: 1;
 }
+
+/* Climate Section Styles */
+.climate-section {
+  border-top: 1px solid #edf2f7;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.climate-charts-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.climate-chart-box {
+  flex: 1;
+  min-width: 300px;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.chart-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.temp-chart, .rain-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.temp-bar-group, .rain-bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.temp-bars {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+}
+
+.temp-bar-day {
+  width: 8px;
+  background-color: #f6ad55;
+  border-radius: 4px 4px 0 0;
+  transition: transform 0.2s;
+}
+
+.temp-bar-night {
+  width: 8px;
+  background-color: #4299e1;
+  border-radius: 4px 4px 0 0;
+  transition: transform 0.2s;
+}
+
+.rain-bar {
+  width: 14px;
+  background-color: #63b3ed;
+  border-radius: 4px 4px 0 0;
+  transition: transform 0.2s;
+}
+
+.temp-bar-day:hover, .temp-bar-night:hover, .rain-bar:hover {
+  transform: scaleY(1.1);
+  filter: brightness(1.1);
+}
+
+.chart-month-label {
+  font-size: 0.65rem;
+  color: #a0aec0;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.legend-item {
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #718096;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.day { background-color: #f6ad55; }
+.legend-dot.night { background-color: #4299e1; }

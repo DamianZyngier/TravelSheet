@@ -101,6 +101,15 @@ def export_all():
             "holidays": [
                 {"name": h.name, "date": str(h.date)} 
                 for h in sorted(c.holidays, key=lambda x: x.date)
+            ],
+
+            "climate": [
+                {
+                    "month": cl.month,
+                    "temp_day": cl.avg_temp_max,
+                    "temp_night": cl.avg_temp_min,
+                    "rain": cl.avg_rain_mm
+                } for cl in sorted(c.climate, key=lambda x: x.month)
             ]
         }
         output[c.iso_alpha2] = country_data

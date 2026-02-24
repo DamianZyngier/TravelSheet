@@ -76,7 +76,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 20,
+        "temp_night": 14,
+        "rain": 103
+      },
+      {
+        "month": 2,
+        "temp_day": 24,
+        "temp_night": 16,
+        "rain": 84
+      },
+      {
+        "month": 3,
+        "temp_day": 25,
+        "temp_night": 17,
+        "rain": 142
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 21,
+        "rain": 12
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 21,
+        "rain": 212
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 21,
+        "rain": 201
+      },
+      {
+        "month": 7,
+        "temp_day": 27,
+        "temp_night": 20,
+        "rain": 364
+      },
+      {
+        "month": 8,
+        "temp_day": 28,
+        "temp_night": 20,
+        "rain": 147
+      },
+      {
+        "month": 9,
+        "temp_day": 26,
+        "temp_night": 19,
+        "rain": 367
+      },
+      {
+        "month": 10,
+        "temp_day": 22,
+        "temp_night": 17,
+        "rain": 896
+      },
+      {
+        "month": 11,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 455
+      },
+      {
+        "month": 12,
+        "temp_day": 18,
+        "temp_night": 14,
+        "rain": 276
+      }
+    ]
   },
   "GF": {
     "name": "French Guiana",
@@ -130,7 +204,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 206
+      },
+      {
+        "month": 2,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 107
+      },
+      {
+        "month": 3,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 171
+      },
+      {
+        "month": 4,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 298
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 503
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 258
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 198
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 96
+      },
+      {
+        "month": 9,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 28
+      },
+      {
+        "month": 10,
+        "temp_day": 33,
+        "temp_night": 22,
+        "rain": 85
+      },
+      {
+        "month": 11,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 154
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 291
+      }
+    ]
   },
   "SX": {
     "name": "Sint Maarten",
@@ -184,7 +332,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 24
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 131
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 24
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 26,
+        "rain": 56
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 27,
+        "rain": 101
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 67
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 99
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 127
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 117
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 70
+      },
+      {
+        "month": 11,
+        "temp_day": 29,
+        "temp_night": 26,
+        "rain": 223
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 61
+      }
+    ]
   },
   "VG": {
     "name": "British Virgin Islands",
@@ -238,7 +460,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 20
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 134
+      },
+      {
+        "month": 3,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 17
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 86
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 165
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 113
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 123
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 182
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 102
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 103
+      },
+      {
+        "month": 11,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 280
+      },
+      {
+        "month": 12,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 69
+      }
+    ]
   },
   "PG": {
     "name": "Papua New Guinea",
@@ -292,7 +588,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 146
+      },
+      {
+        "month": 2,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 561
+      },
+      {
+        "month": 3,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 336
+      },
+      {
+        "month": 4,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 290
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 182
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 67
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 98
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 88
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 164
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 115
+      },
+      {
+        "month": 11,
+        "temp_day": 31,
+        "temp_night": 26,
+        "rain": 149
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 409
+      }
+    ]
   },
   "CL": {
     "name": "Chile",
@@ -387,7 +757,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 20,
+        "temp_night": 9,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 21,
+        "temp_night": 10,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 20,
+        "temp_night": 9,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 18,
+        "temp_night": 7,
+        "rain": 9
+      },
+      {
+        "month": 5,
+        "temp_day": 14,
+        "temp_night": 3,
+        "rain": 38
+      },
+      {
+        "month": 6,
+        "temp_day": 13,
+        "temp_night": 3,
+        "rain": 52
+      },
+      {
+        "month": 7,
+        "temp_day": 12,
+        "temp_night": 3,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 12,
+        "temp_night": 2,
+        "rain": 40
+      },
+      {
+        "month": 9,
+        "temp_day": 16,
+        "temp_night": 4,
+        "rain": 0
+      },
+      {
+        "month": 10,
+        "temp_day": 16,
+        "temp_night": 6,
+        "rain": 4
+      },
+      {
+        "month": 11,
+        "temp_day": 18,
+        "temp_night": 7,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 19,
+        "temp_night": 8,
+        "rain": 0
+      }
+    ]
   },
   "HU": {
     "name": "Hungary",
@@ -503,6 +947,80 @@
         "name": "Second Day of Christmas",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 6,
+        "temp_night": -1,
+        "rain": 37
+      },
+      {
+        "month": 2,
+        "temp_day": 13,
+        "temp_night": 5,
+        "rain": 27
+      },
+      {
+        "month": 3,
+        "temp_day": 15,
+        "temp_night": 5,
+        "rain": 20
+      },
+      {
+        "month": 4,
+        "temp_day": 20,
+        "temp_night": 8,
+        "rain": 30
+      },
+      {
+        "month": 5,
+        "temp_day": 24,
+        "temp_night": 13,
+        "rain": 93
+      },
+      {
+        "month": 6,
+        "temp_day": 28,
+        "temp_night": 17,
+        "rain": 68
+      },
+      {
+        "month": 7,
+        "temp_day": 32,
+        "temp_night": 20,
+        "rain": 23
+      },
+      {
+        "month": 8,
+        "temp_day": 33,
+        "temp_night": 20,
+        "rain": 13
+      },
+      {
+        "month": 9,
+        "temp_day": 24,
+        "temp_night": 14,
+        "rain": 76
+      },
+      {
+        "month": 10,
+        "temp_day": 17,
+        "temp_night": 7,
+        "rain": 48
+      },
+      {
+        "month": 11,
+        "temp_day": 9,
+        "temp_night": 1,
+        "rain": 32
+      },
+      {
+        "month": 12,
+        "temp_day": 6,
+        "temp_night": 0,
+        "rain": 36
+      }
     ]
   },
   "CO": {
@@ -598,7 +1116,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 34,
+        "temp_night": 24,
+        "rain": 26
+      },
+      {
+        "month": 2,
+        "temp_day": 33,
+        "temp_night": 24,
+        "rain": 132
+      },
+      {
+        "month": 3,
+        "temp_day": 33,
+        "temp_night": 24,
+        "rain": 181
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 316
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 483
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 23,
+        "rain": 358
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 241
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 166
+      },
+      {
+        "month": 9,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 117
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 162
+      },
+      {
+        "month": 11,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 283
+      },
+      {
+        "month": 12,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 141
+      }
+    ]
   },
   "DJ": {
     "name": "Djibouti",
@@ -652,7 +1244,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 8
+      },
+      {
+        "month": 2,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 65
+      },
+      {
+        "month": 3,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 65
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 25,
+        "rain": 109
+      },
+      {
+        "month": 5,
+        "temp_day": 37,
+        "temp_night": 28,
+        "rain": 15
+      },
+      {
+        "month": 6,
+        "temp_day": 42,
+        "temp_night": 31,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 42,
+        "temp_night": 32,
+        "rain": 14
+      },
+      {
+        "month": 8,
+        "temp_day": 37,
+        "temp_night": 28,
+        "rain": 68
+      },
+      {
+        "month": 9,
+        "temp_day": 41,
+        "temp_night": 30,
+        "rain": 5
+      },
+      {
+        "month": 10,
+        "temp_day": 35,
+        "temp_night": 26,
+        "rain": 38
+      },
+      {
+        "month": 11,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 31
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 4
+      }
+    ]
   },
   "AW": {
     "name": "Aruba",
@@ -706,7 +1372,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 34
+      },
+      {
+        "month": 2,
+        "temp_day": 30,
+        "temp_night": 25,
+        "rain": 36
+      },
+      {
+        "month": 3,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 20
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 27,
+        "rain": 15
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 27,
+        "rain": 47
+      },
+      {
+        "month": 6,
+        "temp_day": 32,
+        "temp_night": 27,
+        "rain": 10
+      },
+      {
+        "month": 7,
+        "temp_day": 32,
+        "temp_night": 27,
+        "rain": 28
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 28,
+        "rain": 24
+      },
+      {
+        "month": 9,
+        "temp_day": 33,
+        "temp_night": 28,
+        "rain": 32
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 28,
+        "rain": 13
+      },
+      {
+        "month": 11,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 121
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 51
+      }
+    ]
   },
   "TO": {
     "name": "Tonga",
@@ -760,7 +1500,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 294
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 27,
+        "rain": 125
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 639
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 26,
+        "rain": 29
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 176
+      },
+      {
+        "month": 6,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 72
+      },
+      {
+        "month": 7,
+        "temp_day": 24,
+        "temp_night": 23,
+        "rain": 32
+      },
+      {
+        "month": 8,
+        "temp_day": 23,
+        "temp_night": 22,
+        "rain": 29
+      },
+      {
+        "month": 9,
+        "temp_day": 24,
+        "temp_night": 23,
+        "rain": 48
+      },
+      {
+        "month": 10,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 188
+      },
+      {
+        "month": 11,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 152
+      },
+      {
+        "month": 12,
+        "temp_day": 27,
+        "temp_night": 26,
+        "rain": 171
+      }
+    ]
   },
   "DK": {
     "name": "Denmark",
@@ -831,7 +1645,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 3,
+        "temp_night": -2,
+        "rain": 90
+      },
+      {
+        "month": 2,
+        "temp_day": 6,
+        "temp_night": 2,
+        "rain": 113
+      },
+      {
+        "month": 3,
+        "temp_day": 8,
+        "temp_night": 3,
+        "rain": 53
+      },
+      {
+        "month": 4,
+        "temp_day": 11,
+        "temp_night": 4,
+        "rain": 124
+      },
+      {
+        "month": 5,
+        "temp_day": 18,
+        "temp_night": 10,
+        "rain": 66
+      },
+      {
+        "month": 6,
+        "temp_day": 18,
+        "temp_night": 10,
+        "rain": 120
+      },
+      {
+        "month": 7,
+        "temp_day": 19,
+        "temp_night": 12,
+        "rain": 119
+      },
+      {
+        "month": 8,
+        "temp_day": 21,
+        "temp_night": 13,
+        "rain": 78
+      },
+      {
+        "month": 9,
+        "temp_day": 18,
+        "temp_night": 11,
+        "rain": 84
+      },
+      {
+        "month": 10,
+        "temp_day": 13,
+        "temp_night": 8,
+        "rain": 53
+      },
+      {
+        "month": 11,
+        "temp_day": 8,
+        "temp_night": 3,
+        "rain": 41
+      },
+      {
+        "month": 12,
+        "temp_day": 6,
+        "temp_night": 3,
+        "rain": 69
+      }
+    ]
   },
   "CX": {
     "name": "Christmas Island",
@@ -885,7 +1773,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 144
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 50
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 171
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 154
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 42
+      },
+      {
+        "month": 6,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 26
+      },
+      {
+        "month": 7,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 48
+      },
+      {
+        "month": 8,
+        "temp_day": 25,
+        "temp_night": 23,
+        "rain": 19
+      },
+      {
+        "month": 9,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 28
+      },
+      {
+        "month": 10,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 30
+      },
+      {
+        "month": 11,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 134
+      },
+      {
+        "month": 12,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 366
+      }
+    ]
   },
   "DO": {
     "name": "Dominican Republic",
@@ -939,7 +1901,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 21,
+        "temp_night": 12,
+        "rain": 70
+      },
+      {
+        "month": 2,
+        "temp_day": 21,
+        "temp_night": 11,
+        "rain": 51
+      },
+      {
+        "month": 3,
+        "temp_day": 23,
+        "temp_night": 13,
+        "rain": 65
+      },
+      {
+        "month": 4,
+        "temp_day": 22,
+        "temp_night": 14,
+        "rain": 256
+      },
+      {
+        "month": 5,
+        "temp_day": 23,
+        "temp_night": 14,
+        "rain": 166
+      },
+      {
+        "month": 6,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 94
+      },
+      {
+        "month": 7,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 84
+      },
+      {
+        "month": 8,
+        "temp_day": 25,
+        "temp_night": 16,
+        "rain": 80
+      },
+      {
+        "month": 9,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 70
+      },
+      {
+        "month": 10,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 76
+      },
+      {
+        "month": 11,
+        "temp_day": 22,
+        "temp_night": 14,
+        "rain": 133
+      },
+      {
+        "month": 12,
+        "temp_day": 21,
+        "temp_night": 13,
+        "rain": 127
+      }
+    ]
   },
   "MX": {
     "name": "Mexico",
@@ -1039,6 +2075,80 @@
         "name": "Christmas Day",
         "date": "2026-12-25"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 22,
+        "temp_night": 7,
+        "rain": 4
+      },
+      {
+        "month": 2,
+        "temp_day": 23,
+        "temp_night": 8,
+        "rain": 38
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 10,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 29,
+        "temp_night": 12,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 33,
+        "temp_night": 17,
+        "rain": 2
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 16,
+        "rain": 60
+      },
+      {
+        "month": 7,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 174
+      },
+      {
+        "month": 8,
+        "temp_day": 28,
+        "temp_night": 15,
+        "rain": 36
+      },
+      {
+        "month": 9,
+        "temp_day": 24,
+        "temp_night": 14,
+        "rain": 130
+      },
+      {
+        "month": 10,
+        "temp_day": 24,
+        "temp_night": 11,
+        "rain": 6
+      },
+      {
+        "month": 11,
+        "temp_day": 26,
+        "temp_night": 10,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 22,
+        "temp_night": 7,
+        "rain": 24
+      }
     ]
   },
   "GB": {
@@ -1134,7 +2244,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 4,
+        "temp_night": 0,
+        "rain": 132
+      },
+      {
+        "month": 2,
+        "temp_day": 7,
+        "temp_night": 2,
+        "rain": 123
+      },
+      {
+        "month": 3,
+        "temp_day": 7,
+        "temp_night": 2,
+        "rain": 124
+      },
+      {
+        "month": 4,
+        "temp_day": 9,
+        "temp_night": 3,
+        "rain": 137
+      },
+      {
+        "month": 5,
+        "temp_day": 15,
+        "temp_night": 8,
+        "rain": 79
+      },
+      {
+        "month": 6,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 86
+      },
+      {
+        "month": 7,
+        "temp_day": 16,
+        "temp_night": 9,
+        "rain": 87
+      },
+      {
+        "month": 8,
+        "temp_day": 16,
+        "temp_night": 10,
+        "rain": 119
+      },
+      {
+        "month": 9,
+        "temp_day": 13,
+        "temp_night": 8,
+        "rain": 124
+      },
+      {
+        "month": 10,
+        "temp_day": 11,
+        "temp_night": 6,
+        "rain": 87
+      },
+      {
+        "month": 11,
+        "temp_day": 7,
+        "temp_night": 2,
+        "rain": 63
+      },
+      {
+        "month": 12,
+        "temp_day": 6,
+        "temp_night": 3,
+        "rain": 119
+      }
+    ]
   },
   "TR": {
     "name": "Turkey",
@@ -1221,7 +2405,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 6,
+        "temp_night": -3,
+        "rain": 56
+      },
+      {
+        "month": 2,
+        "temp_day": 10,
+        "temp_night": -1,
+        "rain": 11
+      },
+      {
+        "month": 3,
+        "temp_day": 12,
+        "temp_night": 0,
+        "rain": 49
+      },
+      {
+        "month": 4,
+        "temp_day": 21,
+        "temp_night": 8,
+        "rain": 38
+      },
+      {
+        "month": 5,
+        "temp_day": 20,
+        "temp_night": 8,
+        "rain": 111
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 14,
+        "rain": 10
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 16,
+        "rain": 16
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 16,
+        "rain": 6
+      },
+      {
+        "month": 9,
+        "temp_day": 25,
+        "temp_night": 13,
+        "rain": 26
+      },
+      {
+        "month": 10,
+        "temp_day": 18,
+        "temp_night": 6,
+        "rain": 5
+      },
+      {
+        "month": 11,
+        "temp_day": 10,
+        "temp_night": -1,
+        "rain": 26
+      },
+      {
+        "month": 12,
+        "temp_day": 7,
+        "temp_night": -2,
+        "rain": 48
+      }
+    ]
   },
   "MK": {
     "name": "North Macedonia",
@@ -1275,7 +2533,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 8,
+        "temp_night": -2,
+        "rain": 23
+      },
+      {
+        "month": 2,
+        "temp_day": 13,
+        "temp_night": 2,
+        "rain": 16
+      },
+      {
+        "month": 3,
+        "temp_day": 16,
+        "temp_night": 5,
+        "rain": 67
+      },
+      {
+        "month": 4,
+        "temp_day": 22,
+        "temp_night": 9,
+        "rain": 78
+      },
+      {
+        "month": 5,
+        "temp_day": 23,
+        "temp_night": 12,
+        "rain": 76
+      },
+      {
+        "month": 6,
+        "temp_day": 32,
+        "temp_night": 18,
+        "rain": 19
+      },
+      {
+        "month": 7,
+        "temp_day": 34,
+        "temp_night": 20,
+        "rain": 7
+      },
+      {
+        "month": 8,
+        "temp_day": 34,
+        "temp_night": 20,
+        "rain": 14
+      },
+      {
+        "month": 9,
+        "temp_day": 26,
+        "temp_night": 14,
+        "rain": 49
+      },
+      {
+        "month": 10,
+        "temp_day": 21,
+        "temp_night": 9,
+        "rain": 39
+      },
+      {
+        "month": 11,
+        "temp_day": 12,
+        "temp_night": 2,
+        "rain": 54
+      },
+      {
+        "month": 12,
+        "temp_day": 8,
+        "temp_night": 1,
+        "rain": 88
+      }
+    ]
   },
   "UA": {
     "name": "Ukraine",
@@ -1329,7 +2661,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 1,
+        "temp_night": -5,
+        "rain": 63
+      },
+      {
+        "month": 2,
+        "temp_day": 7,
+        "temp_night": 0,
+        "rain": 52
+      },
+      {
+        "month": 3,
+        "temp_day": 9,
+        "temp_night": 0,
+        "rain": 88
+      },
+      {
+        "month": 4,
+        "temp_day": 19,
+        "temp_night": 8,
+        "rain": 96
+      },
+      {
+        "month": 5,
+        "temp_day": 21,
+        "temp_night": 9,
+        "rain": 9
+      },
+      {
+        "month": 6,
+        "temp_day": 26,
+        "temp_night": 16,
+        "rain": 88
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 19,
+        "rain": 7
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 17,
+        "rain": 16
+      },
+      {
+        "month": 9,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 14
+      },
+      {
+        "month": 10,
+        "temp_day": 16,
+        "temp_night": 7,
+        "rain": 68
+      },
+      {
+        "month": 11,
+        "temp_day": 6,
+        "temp_night": 0,
+        "rain": 38
+      },
+      {
+        "month": 12,
+        "temp_day": 3,
+        "temp_night": -1,
+        "rain": 50
+      }
+    ]
   },
   "VE": {
     "name": "Venezuela",
@@ -1400,7 +2806,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 36,
+        "temp_night": 26,
+        "rain": 3
+      },
+      {
+        "month": 2,
+        "temp_day": 37,
+        "temp_night": 26,
+        "rain": 30
+      },
+      {
+        "month": 3,
+        "temp_day": 38,
+        "temp_night": 27,
+        "rain": 1
+      },
+      {
+        "month": 4,
+        "temp_day": 37,
+        "temp_night": 26,
+        "rain": 53
+      },
+      {
+        "month": 5,
+        "temp_day": 34,
+        "temp_night": 26,
+        "rain": 162
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 333
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 419
+      },
+      {
+        "month": 8,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 209
+      },
+      {
+        "month": 9,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 150
+      },
+      {
+        "month": 10,
+        "temp_day": 33,
+        "temp_night": 25,
+        "rain": 47
+      },
+      {
+        "month": 11,
+        "temp_day": 34,
+        "temp_night": 25,
+        "rain": 35
+      },
+      {
+        "month": 12,
+        "temp_day": 35,
+        "temp_night": 26,
+        "rain": 4
+      }
+    ]
   },
   "BF": {
     "name": "Burkina Faso",
@@ -1454,7 +2934,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 34,
+        "temp_night": 17,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 36,
+        "temp_night": 20,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 41,
+        "temp_night": 25,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 41,
+        "temp_night": 28,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 40,
+        "temp_night": 28,
+        "rain": 70
+      },
+      {
+        "month": 6,
+        "temp_day": 37,
+        "temp_night": 26,
+        "rain": 111
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 247
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 268
+      },
+      {
+        "month": 9,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 200
+      },
+      {
+        "month": 10,
+        "temp_day": 34,
+        "temp_night": 23,
+        "rain": 45
+      },
+      {
+        "month": 11,
+        "temp_day": 34,
+        "temp_night": 18,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 32,
+        "temp_night": 16,
+        "rain": 0
+      }
+    ]
   },
   "ER": {
     "name": "Eritrea",
@@ -1508,7 +3062,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 26,
+        "temp_night": 11,
+        "rain": 4
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 11,
+        "rain": 1
+      },
+      {
+        "month": 3,
+        "temp_day": 30,
+        "temp_night": 13,
+        "rain": 34
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 14,
+        "rain": 9
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 16,
+        "rain": 5
+      },
+      {
+        "month": 6,
+        "temp_day": 31,
+        "temp_night": 17,
+        "rain": 10
+      },
+      {
+        "month": 7,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 197
+      },
+      {
+        "month": 8,
+        "temp_day": 23,
+        "temp_night": 15,
+        "rain": 302
+      },
+      {
+        "month": 9,
+        "temp_day": 27,
+        "temp_night": 13,
+        "rain": 6
+      },
+      {
+        "month": 10,
+        "temp_day": 27,
+        "temp_night": 13,
+        "rain": 36
+      },
+      {
+        "month": 11,
+        "temp_day": 24,
+        "temp_night": 12,
+        "rain": 8
+      },
+      {
+        "month": 12,
+        "temp_day": 24,
+        "temp_night": 10,
+        "rain": 0
+      }
+    ]
   },
   "EH": {
     "name": "Western Sahara",
@@ -1562,7 +3190,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 13,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 14,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 13,
+        "rain": 1
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 17,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 32,
+        "temp_night": 16,
+        "rain": 0
+      },
+      {
+        "month": 6,
+        "temp_day": 33,
+        "temp_night": 17,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 40,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 40,
+        "temp_night": 24,
+        "rain": 1
+      },
+      {
+        "month": 9,
+        "temp_day": 35,
+        "temp_night": 21,
+        "rain": 5
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 19,
+        "rain": 1
+      },
+      {
+        "month": 11,
+        "temp_day": 31,
+        "temp_night": 17,
+        "rain": 4
+      },
+      {
+        "month": 12,
+        "temp_day": 24,
+        "temp_night": 12,
+        "rain": 0
+      }
+    ]
   },
   "JE": {
     "name": "Jersey",
@@ -1616,7 +3318,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 9,
+        "temp_night": 5,
+        "rain": 87
+      },
+      {
+        "month": 2,
+        "temp_day": 11,
+        "temp_night": 8,
+        "rain": 127
+      },
+      {
+        "month": 3,
+        "temp_day": 11,
+        "temp_night": 7,
+        "rain": 89
+      },
+      {
+        "month": 4,
+        "temp_day": 13,
+        "temp_night": 9,
+        "rain": 69
+      },
+      {
+        "month": 5,
+        "temp_day": 16,
+        "temp_night": 12,
+        "rain": 61
+      },
+      {
+        "month": 6,
+        "temp_day": 17,
+        "temp_night": 13,
+        "rain": 35
+      },
+      {
+        "month": 7,
+        "temp_day": 19,
+        "temp_night": 15,
+        "rain": 78
+      },
+      {
+        "month": 8,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 52
+      },
+      {
+        "month": 9,
+        "temp_day": 18,
+        "temp_night": 14,
+        "rain": 94
+      },
+      {
+        "month": 10,
+        "temp_day": 16,
+        "temp_night": 13,
+        "rain": 110
+      },
+      {
+        "month": 11,
+        "temp_day": 13,
+        "temp_night": 10,
+        "rain": 114
+      },
+      {
+        "month": 12,
+        "temp_day": 11,
+        "temp_night": 8,
+        "rain": 78
+      }
+    ]
   },
   "BL": {
     "name": "Saint Barthélemy",
@@ -1670,7 +3446,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 25
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 120
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 19
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 26,
+        "rain": 60
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 27,
+        "rain": 111
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 102
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 109
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 136
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 120
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 65
+      },
+      {
+        "month": 11,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 235
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 58
+      }
+    ]
   },
   "LU": {
     "name": "Luxembourg",
@@ -1790,6 +3640,80 @@
         "name": "Boxing Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 4,
+        "temp_night": -1,
+        "rain": 99
+      },
+      {
+        "month": 2,
+        "temp_day": 9,
+        "temp_night": 4,
+        "rain": 116
+      },
+      {
+        "month": 3,
+        "temp_day": 11,
+        "temp_night": 4,
+        "rain": 94
+      },
+      {
+        "month": 4,
+        "temp_day": 13,
+        "temp_night": 5,
+        "rain": 68
+      },
+      {
+        "month": 5,
+        "temp_day": 18,
+        "temp_night": 9,
+        "rain": 163
+      },
+      {
+        "month": 6,
+        "temp_day": 20,
+        "temp_night": 11,
+        "rain": 70
+      },
+      {
+        "month": 7,
+        "temp_day": 23,
+        "temp_night": 13,
+        "rain": 92
+      },
+      {
+        "month": 8,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 58
+      },
+      {
+        "month": 9,
+        "temp_day": 19,
+        "temp_night": 11,
+        "rain": 115
+      },
+      {
+        "month": 10,
+        "temp_day": 15,
+        "temp_night": 8,
+        "rain": 93
+      },
+      {
+        "month": 11,
+        "temp_day": 8,
+        "temp_night": 3,
+        "rain": 62
+      },
+      {
+        "month": 12,
+        "temp_day": 5,
+        "temp_night": 0,
+        "rain": 58
+      }
     ]
   },
   "RE": {
@@ -1844,7 +3768,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 17,
+        "temp_night": 13,
+        "rain": 1220
+      },
+      {
+        "month": 2,
+        "temp_day": 16,
+        "temp_night": 11,
+        "rain": 477
+      },
+      {
+        "month": 3,
+        "temp_day": 16,
+        "temp_night": 11,
+        "rain": 306
+      },
+      {
+        "month": 4,
+        "temp_day": 16,
+        "temp_night": 11,
+        "rain": 417
+      },
+      {
+        "month": 5,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 93
+      },
+      {
+        "month": 6,
+        "temp_day": 12,
+        "temp_night": 6,
+        "rain": 193
+      },
+      {
+        "month": 7,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 30
+      },
+      {
+        "month": 8,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 25
+      },
+      {
+        "month": 9,
+        "temp_day": 14,
+        "temp_night": 6,
+        "rain": 56
+      },
+      {
+        "month": 10,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 76
+      },
+      {
+        "month": 11,
+        "temp_day": 16,
+        "temp_night": 8,
+        "rain": 130
+      },
+      {
+        "month": 12,
+        "temp_day": 17,
+        "temp_night": 8,
+        "rain": 128
+      }
+    ]
   },
   "TV": {
     "name": "Tuvalu",
@@ -1898,7 +3896,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 304
+      },
+      {
+        "month": 2,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 509
+      },
+      {
+        "month": 3,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 241
+      },
+      {
+        "month": 4,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 270
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 292
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 347
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 265
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 26,
+        "rain": 415
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 26,
+        "rain": 257
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 168
+      },
+      {
+        "month": 11,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 175
+      },
+      {
+        "month": 12,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 365
+      }
+    ]
   },
   "CR": {
     "name": "Costa Rica",
@@ -1952,7 +4024,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 22,
+        "temp_night": 15,
+        "rain": 56
+      },
+      {
+        "month": 2,
+        "temp_day": 22,
+        "temp_night": 15,
+        "rain": 135
+      },
+      {
+        "month": 3,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 51
+      },
+      {
+        "month": 4,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 198
+      },
+      {
+        "month": 5,
+        "temp_day": 24,
+        "temp_night": 17,
+        "rain": 354
+      },
+      {
+        "month": 6,
+        "temp_day": 23,
+        "temp_night": 17,
+        "rain": 489
+      },
+      {
+        "month": 7,
+        "temp_day": 22,
+        "temp_night": 17,
+        "rain": 470
+      },
+      {
+        "month": 8,
+        "temp_day": 23,
+        "temp_night": 16,
+        "rain": 421
+      },
+      {
+        "month": 9,
+        "temp_day": 23,
+        "temp_night": 16,
+        "rain": 490
+      },
+      {
+        "month": 10,
+        "temp_day": 22,
+        "temp_night": 16,
+        "rain": 570
+      },
+      {
+        "month": 11,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 639
+      },
+      {
+        "month": 12,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 357
+      }
+    ]
   },
   "RO": {
     "name": "Romania",
@@ -2120,6 +4266,80 @@
         "name": "Second Christmas Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 3,
+        "temp_night": -5,
+        "rain": 38
+      },
+      {
+        "month": 2,
+        "temp_day": 10,
+        "temp_night": 1,
+        "rain": 56
+      },
+      {
+        "month": 3,
+        "temp_day": 12,
+        "temp_night": 2,
+        "rain": 79
+      },
+      {
+        "month": 4,
+        "temp_day": 17,
+        "temp_night": 6,
+        "rain": 59
+      },
+      {
+        "month": 5,
+        "temp_day": 19,
+        "temp_night": 9,
+        "rain": 72
+      },
+      {
+        "month": 6,
+        "temp_day": 26,
+        "temp_night": 15,
+        "rain": 88
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 17,
+        "rain": 89
+      },
+      {
+        "month": 8,
+        "temp_day": 27,
+        "temp_night": 16,
+        "rain": 90
+      },
+      {
+        "month": 9,
+        "temp_day": 21,
+        "temp_night": 11,
+        "rain": 73
+      },
+      {
+        "month": 10,
+        "temp_day": 16,
+        "temp_night": 5,
+        "rain": 35
+      },
+      {
+        "month": 11,
+        "temp_day": 7,
+        "temp_night": -1,
+        "rain": 41
+      },
+      {
+        "month": 12,
+        "temp_day": 4,
+        "temp_night": -2,
+        "rain": 36
+      }
     ]
   },
   "GR": {
@@ -2215,7 +4435,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 9,
+        "temp_night": 2,
+        "rain": 82
+      },
+      {
+        "month": 2,
+        "temp_day": 12,
+        "temp_night": 5,
+        "rain": 59
+      },
+      {
+        "month": 3,
+        "temp_day": 14,
+        "temp_night": 6,
+        "rain": 74
+      },
+      {
+        "month": 4,
+        "temp_day": 19,
+        "temp_night": 9,
+        "rain": 67
+      },
+      {
+        "month": 5,
+        "temp_day": 20,
+        "temp_night": 11,
+        "rain": 85
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 19,
+        "rain": 10
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 21,
+        "rain": 29
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 20,
+        "rain": 45
+      },
+      {
+        "month": 9,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 91
+      },
+      {
+        "month": 10,
+        "temp_day": 20,
+        "temp_night": 11,
+        "rain": 8
+      },
+      {
+        "month": 11,
+        "temp_day": 13,
+        "temp_night": 5,
+        "rain": 130
+      },
+      {
+        "month": 12,
+        "temp_day": 10,
+        "temp_night": 4,
+        "rain": 128
+      }
+    ]
   },
   "ZW": {
     "name": "Zimbabwe",
@@ -2269,7 +4563,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 19,
+        "rain": 162
+      },
+      {
+        "month": 2,
+        "temp_day": 31,
+        "temp_night": 19,
+        "rain": 29
+      },
+      {
+        "month": 3,
+        "temp_day": 31,
+        "temp_night": 20,
+        "rain": 38
+      },
+      {
+        "month": 4,
+        "temp_day": 28,
+        "temp_night": 17,
+        "rain": 43
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 13,
+        "rain": 3
+      },
+      {
+        "month": 6,
+        "temp_day": 24,
+        "temp_night": 11,
+        "rain": 25
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 10,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 13,
+        "rain": 8
+      },
+      {
+        "month": 9,
+        "temp_day": 32,
+        "temp_night": 16,
+        "rain": 7
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 18,
+        "rain": 10
+      },
+      {
+        "month": 11,
+        "temp_day": 33,
+        "temp_night": 20,
+        "rain": 84
+      },
+      {
+        "month": 12,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 130
+      }
+    ]
   },
   "MC": {
     "name": "Monaco",
@@ -2372,6 +4740,80 @@
         "name": "Christmas Day",
         "date": "2026-12-25"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 11,
+        "temp_night": 1,
+        "rain": 73
+      },
+      {
+        "month": 2,
+        "temp_day": 13,
+        "temp_night": 3,
+        "rain": 191
+      },
+      {
+        "month": 3,
+        "temp_day": 14,
+        "temp_night": 4,
+        "rain": 276
+      },
+      {
+        "month": 4,
+        "temp_day": 16,
+        "temp_night": 6,
+        "rain": 76
+      },
+      {
+        "month": 5,
+        "temp_day": 18,
+        "temp_night": 9,
+        "rain": 118
+      },
+      {
+        "month": 6,
+        "temp_day": 23,
+        "temp_night": 14,
+        "rain": 97
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 18,
+        "rain": 18
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 19,
+        "rain": 20
+      },
+      {
+        "month": 9,
+        "temp_day": 22,
+        "temp_night": 12,
+        "rain": 179
+      },
+      {
+        "month": 10,
+        "temp_day": 19,
+        "temp_night": 11,
+        "rain": 325
+      },
+      {
+        "month": 11,
+        "temp_day": 15,
+        "temp_night": 5,
+        "rain": 36
+      },
+      {
+        "month": 12,
+        "temp_day": 11,
+        "temp_night": 1,
+        "rain": 14
+      }
     ]
   },
   "SJ": {
@@ -2426,7 +4868,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -11,
+        "temp_night": -15,
+        "rain": 28
+      },
+      {
+        "month": 2,
+        "temp_day": -7,
+        "temp_night": -12,
+        "rain": 41
+      },
+      {
+        "month": 3,
+        "temp_day": -12,
+        "temp_night": -16,
+        "rain": 6
+      },
+      {
+        "month": 4,
+        "temp_day": -9,
+        "temp_night": -12,
+        "rain": 12
+      },
+      {
+        "month": 5,
+        "temp_day": -2,
+        "temp_night": -5,
+        "rain": 28
+      },
+      {
+        "month": 6,
+        "temp_day": 1,
+        "temp_night": 0,
+        "rain": 33
+      },
+      {
+        "month": 7,
+        "temp_day": 5,
+        "temp_night": 4,
+        "rain": 38
+      },
+      {
+        "month": 8,
+        "temp_day": 8,
+        "temp_night": 6,
+        "rain": 57
+      },
+      {
+        "month": 9,
+        "temp_day": 4,
+        "temp_night": 2,
+        "rain": 72
+      },
+      {
+        "month": 10,
+        "temp_day": 2,
+        "temp_night": 0,
+        "rain": 78
+      },
+      {
+        "month": 11,
+        "temp_day": -2,
+        "temp_night": -4,
+        "rain": 72
+      },
+      {
+        "month": 12,
+        "temp_day": -5,
+        "temp_night": -8,
+        "rain": 29
+      }
+    ]
   },
   "VI": {
     "name": "United States Virgin Islands",
@@ -2480,7 +4996,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 22
+      },
+      {
+        "month": 2,
+        "temp_day": 25,
+        "temp_night": 23,
+        "rain": 127
+      },
+      {
+        "month": 3,
+        "temp_day": 25,
+        "temp_night": 24,
+        "rain": 16
+      },
+      {
+        "month": 4,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 94
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 197
+      },
+      {
+        "month": 6,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 138
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 133
+      },
+      {
+        "month": 8,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 216
+      },
+      {
+        "month": 9,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 108
+      },
+      {
+        "month": 10,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 115
+      },
+      {
+        "month": 11,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 259
+      },
+      {
+        "month": 12,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 99
+      }
+    ]
   },
   "CA": {
     "name": "Canada",
@@ -2567,7 +5157,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -18,
+        "temp_night": -26,
+        "rain": 37
+      },
+      {
+        "month": 2,
+        "temp_day": -19,
+        "temp_night": -27,
+        "rain": 7
+      },
+      {
+        "month": 3,
+        "temp_day": -15,
+        "temp_night": -23,
+        "rain": 18
+      },
+      {
+        "month": 4,
+        "temp_day": -4,
+        "temp_night": -12,
+        "rain": 11
+      },
+      {
+        "month": 5,
+        "temp_day": 3,
+        "temp_night": -2,
+        "rain": 50
+      },
+      {
+        "month": 6,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 131
+      },
+      {
+        "month": 7,
+        "temp_day": 19,
+        "temp_night": 10,
+        "rain": 54
+      },
+      {
+        "month": 8,
+        "temp_day": 20,
+        "temp_night": 12,
+        "rain": 74
+      },
+      {
+        "month": 9,
+        "temp_day": 14,
+        "temp_night": 8,
+        "rain": 120
+      },
+      {
+        "month": 10,
+        "temp_day": 2,
+        "temp_night": -1,
+        "rain": 64
+      },
+      {
+        "month": 11,
+        "temp_day": -5,
+        "temp_night": -11,
+        "rain": 48
+      },
+      {
+        "month": 12,
+        "temp_day": -15,
+        "temp_night": -20,
+        "rain": 31
+      }
+    ]
   },
   "GH": {
     "name": "Ghana",
@@ -2621,7 +5285,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 35,
+        "temp_night": 21,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 36,
+        "temp_night": 23,
+        "rain": 6
+      },
+      {
+        "month": 3,
+        "temp_day": 36,
+        "temp_night": 25,
+        "rain": 129
+      },
+      {
+        "month": 4,
+        "temp_day": 36,
+        "temp_night": 24,
+        "rain": 151
+      },
+      {
+        "month": 5,
+        "temp_day": 34,
+        "temp_night": 24,
+        "rain": 184
+      },
+      {
+        "month": 6,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 162
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 88
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 58
+      },
+      {
+        "month": 9,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 194
+      },
+      {
+        "month": 10,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 221
+      },
+      {
+        "month": 11,
+        "temp_day": 33,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 34,
+        "temp_night": 20,
+        "rain": 0
+      }
+    ]
   },
   "CI": {
     "name": "Ivory Coast",
@@ -2675,7 +5413,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 35,
+        "temp_night": 19,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 36,
+        "temp_night": 21,
+        "rain": 39
+      },
+      {
+        "month": 3,
+        "temp_day": 36,
+        "temp_night": 24,
+        "rain": 57
+      },
+      {
+        "month": 4,
+        "temp_day": 35,
+        "temp_night": 24,
+        "rain": 68
+      },
+      {
+        "month": 5,
+        "temp_day": 34,
+        "temp_night": 24,
+        "rain": 94
+      },
+      {
+        "month": 6,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 168
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 125
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 241
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 164
+      },
+      {
+        "month": 10,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 250
+      },
+      {
+        "month": 11,
+        "temp_day": 34,
+        "temp_night": 20,
+        "rain": 1
+      },
+      {
+        "month": 12,
+        "temp_day": 35,
+        "temp_night": 19,
+        "rain": 0
+      }
+    ]
   },
   "MM": {
     "name": "Myanmar",
@@ -2729,7 +5541,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 26,
+        "temp_night": 8,
+        "rain": 1
+      },
+      {
+        "month": 2,
+        "temp_day": 29,
+        "temp_night": 9,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 32,
+        "temp_night": 12,
+        "rain": 8
+      },
+      {
+        "month": 4,
+        "temp_day": 35,
+        "temp_night": 18,
+        "rain": 19
+      },
+      {
+        "month": 5,
+        "temp_day": 33,
+        "temp_night": 20,
+        "rain": 154
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 265
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 21,
+        "rain": 422
+      },
+      {
+        "month": 8,
+        "temp_day": 28,
+        "temp_night": 20,
+        "rain": 514
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 20,
+        "rain": 223
+      },
+      {
+        "month": 10,
+        "temp_day": 28,
+        "temp_night": 18,
+        "rain": 154
+      },
+      {
+        "month": 11,
+        "temp_day": 25,
+        "temp_night": 15,
+        "rain": 139
+      },
+      {
+        "month": 12,
+        "temp_day": 25,
+        "temp_night": 12,
+        "rain": 6
+      }
+    ]
   },
   "MR": {
     "name": "Mauritania",
@@ -2783,7 +5669,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 13,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 29,
+        "temp_night": 15,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 31,
+        "temp_night": 16,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 35,
+        "temp_night": 21,
+        "rain": 8
+      },
+      {
+        "month": 5,
+        "temp_day": 38,
+        "temp_night": 23,
+        "rain": 0
+      },
+      {
+        "month": 6,
+        "temp_day": 40,
+        "temp_night": 27,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 40,
+        "temp_night": 28,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 39,
+        "temp_night": 28,
+        "rain": 23
+      },
+      {
+        "month": 9,
+        "temp_day": 36,
+        "temp_night": 26,
+        "rain": 23
+      },
+      {
+        "month": 10,
+        "temp_day": 36,
+        "temp_night": 24,
+        "rain": 0
+      },
+      {
+        "month": 11,
+        "temp_day": 32,
+        "temp_night": 18,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 26,
+        "temp_night": 14,
+        "rain": 0
+      }
+    ]
   },
   "JM": {
     "name": "Jamaica",
@@ -2837,7 +5797,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 26,
+        "temp_night": 18,
+        "rain": 18
+      },
+      {
+        "month": 2,
+        "temp_day": 24,
+        "temp_night": 16,
+        "rain": 36
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 18,
+        "rain": 47
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 18,
+        "rain": 120
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 19,
+        "rain": 142
+      },
+      {
+        "month": 6,
+        "temp_day": 27,
+        "temp_night": 20,
+        "rain": 102
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 20,
+        "rain": 276
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 20,
+        "rain": 111
+      },
+      {
+        "month": 9,
+        "temp_day": 28,
+        "temp_night": 20,
+        "rain": 128
+      },
+      {
+        "month": 10,
+        "temp_day": 27,
+        "temp_night": 20,
+        "rain": 109
+      },
+      {
+        "month": 11,
+        "temp_day": 25,
+        "temp_night": 19,
+        "rain": 175
+      },
+      {
+        "month": 12,
+        "temp_day": 25,
+        "temp_night": 18,
+        "rain": 26
+      }
+    ]
   },
   "SS": {
     "name": "South Sudan",
@@ -2891,7 +5925,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 37,
+        "temp_night": 23,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 39,
+        "temp_night": 26,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 41,
+        "temp_night": 28,
+        "rain": 1
+      },
+      {
+        "month": 4,
+        "temp_day": 39,
+        "temp_night": 27,
+        "rain": 27
+      },
+      {
+        "month": 5,
+        "temp_day": 38,
+        "temp_night": 26,
+        "rain": 60
+      },
+      {
+        "month": 6,
+        "temp_day": 35,
+        "temp_night": 24,
+        "rain": 31
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 138
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 164
+      },
+      {
+        "month": 9,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 61
+      },
+      {
+        "month": 10,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 60
+      },
+      {
+        "month": 11,
+        "temp_day": 35,
+        "temp_night": 24,
+        "rain": 12
+      },
+      {
+        "month": 12,
+        "temp_day": 38,
+        "temp_night": 25,
+        "rain": 0
+      }
+    ]
   },
   "BN": {
     "name": "Brunei",
@@ -2945,7 +6053,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 293
+      },
+      {
+        "month": 2,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 220
+      },
+      {
+        "month": 3,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 346
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 495
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 535
+      },
+      {
+        "month": 6,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 363
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 161
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 502
+      },
+      {
+        "month": 9,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 112
+      },
+      {
+        "month": 10,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 243
+      },
+      {
+        "month": 11,
+        "temp_day": 31,
+        "temp_night": 23,
+        "rain": 417
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 390
+      }
+    ]
   },
   "SG": {
     "name": "Singapore",
@@ -3016,7 +6198,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 29,
+        "temp_night": 23,
+        "rain": 559
+      },
+      {
+        "month": 2,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 180
+      },
+      {
+        "month": 3,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 243
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 330
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 25,
+        "rain": 441
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 322
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 25,
+        "rain": 135
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 276
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 253
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 305
+      },
+      {
+        "month": 11,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 537
+      },
+      {
+        "month": 12,
+        "temp_day": 31,
+        "temp_night": 24,
+        "rain": 273
+      }
+    ]
   },
   "BV": {
     "name": "Bouvet Island",
@@ -3070,7 +6326,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -1,
+        "temp_night": -2,
+        "rain": 98
+      },
+      {
+        "month": 2,
+        "temp_day": -1,
+        "temp_night": -2,
+        "rain": 50
+      },
+      {
+        "month": 3,
+        "temp_day": -1,
+        "temp_night": -2,
+        "rain": 119
+      },
+      {
+        "month": 4,
+        "temp_day": -1,
+        "temp_night": -3,
+        "rain": 76
+      },
+      {
+        "month": 5,
+        "temp_day": -2,
+        "temp_night": -4,
+        "rain": 89
+      },
+      {
+        "month": 6,
+        "temp_day": -2,
+        "temp_night": -4,
+        "rain": 134
+      },
+      {
+        "month": 7,
+        "temp_day": -3,
+        "temp_night": -5,
+        "rain": 103
+      },
+      {
+        "month": 8,
+        "temp_day": -5,
+        "temp_night": -7,
+        "rain": 133
+      },
+      {
+        "month": 9,
+        "temp_day": -3,
+        "temp_night": -6,
+        "rain": 90
+      },
+      {
+        "month": 10,
+        "temp_day": -3,
+        "temp_night": -5,
+        "rain": 112
+      },
+      {
+        "month": 11,
+        "temp_day": -3,
+        "temp_night": -5,
+        "rain": 75
+      },
+      {
+        "month": 12,
+        "temp_day": -3,
+        "temp_night": -4,
+        "rain": 72
+      }
+    ]
   },
   "NZ": {
     "name": "New Zealand",
@@ -3124,7 +6454,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 31
+      },
+      {
+        "month": 2,
+        "temp_day": 21,
+        "temp_night": 15,
+        "rain": 29
+      },
+      {
+        "month": 3,
+        "temp_day": 18,
+        "temp_night": 13,
+        "rain": 40
+      },
+      {
+        "month": 4,
+        "temp_day": 17,
+        "temp_night": 12,
+        "rain": 129
+      },
+      {
+        "month": 5,
+        "temp_day": 14,
+        "temp_night": 9,
+        "rain": 75
+      },
+      {
+        "month": 6,
+        "temp_day": 13,
+        "temp_night": 9,
+        "rain": 116
+      },
+      {
+        "month": 7,
+        "temp_day": 12,
+        "temp_night": 8,
+        "rain": 133
+      },
+      {
+        "month": 8,
+        "temp_day": 13,
+        "temp_night": 9,
+        "rain": 152
+      },
+      {
+        "month": 9,
+        "temp_day": 14,
+        "temp_night": 10,
+        "rain": 70
+      },
+      {
+        "month": 10,
+        "temp_day": 15,
+        "temp_night": 11,
+        "rain": 147
+      },
+      {
+        "month": 11,
+        "temp_day": 17,
+        "temp_night": 12,
+        "rain": 82
+      },
+      {
+        "month": 12,
+        "temp_day": 20,
+        "temp_night": 14,
+        "rain": 64
+      }
+    ]
   },
   "ES": {
     "name": "Spain",
@@ -3468,6 +6872,80 @@
         "name": "St Stephen's Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 77
+      },
+      {
+        "month": 2,
+        "temp_day": 15,
+        "temp_night": 5,
+        "rain": 47
+      },
+      {
+        "month": 3,
+        "temp_day": 17,
+        "temp_night": 6,
+        "rain": 104
+      },
+      {
+        "month": 4,
+        "temp_day": 21,
+        "temp_night": 8,
+        "rain": 14
+      },
+      {
+        "month": 5,
+        "temp_day": 25,
+        "temp_night": 12,
+        "rain": 6
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 17,
+        "rain": 20
+      },
+      {
+        "month": 7,
+        "temp_day": 36,
+        "temp_night": 21,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 36,
+        "temp_night": 22,
+        "rain": 21
+      },
+      {
+        "month": 9,
+        "temp_day": 27,
+        "temp_night": 15,
+        "rain": 19
+      },
+      {
+        "month": 10,
+        "temp_day": 21,
+        "temp_night": 12,
+        "rain": 104
+      },
+      {
+        "month": 11,
+        "temp_day": 18,
+        "temp_night": 8,
+        "rain": 26
+      },
+      {
+        "month": 12,
+        "temp_day": 12,
+        "temp_night": 2,
+        "rain": 8
+      }
     ]
   },
   "PH": {
@@ -3579,7 +7057,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 60
+      },
+      {
+        "month": 2,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 37
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 44
+      },
+      {
+        "month": 4,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 27
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 210
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 303
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 434
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 211
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 28,
+        "rain": 343
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 403
+      },
+      {
+        "month": 11,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 188
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 461
+      }
+    ]
   },
   "PL": {
     "name": "Poland",
@@ -3690,6 +7242,80 @@
         "name": "Drugi Dzień Bożego Narodzenia",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 2,
+        "temp_night": -3,
+        "rain": 63
+      },
+      {
+        "month": 2,
+        "temp_day": 9,
+        "temp_night": 3,
+        "rain": 60
+      },
+      {
+        "month": 3,
+        "temp_day": 11,
+        "temp_night": 3,
+        "rain": 32
+      },
+      {
+        "month": 4,
+        "temp_day": 16,
+        "temp_night": 6,
+        "rain": 36
+      },
+      {
+        "month": 5,
+        "temp_day": 23,
+        "temp_night": 11,
+        "rain": 41
+      },
+      {
+        "month": 6,
+        "temp_day": 25,
+        "temp_night": 14,
+        "rain": 71
+      },
+      {
+        "month": 7,
+        "temp_day": 27,
+        "temp_night": 16,
+        "rain": 63
+      },
+      {
+        "month": 8,
+        "temp_day": 26,
+        "temp_night": 16,
+        "rain": 106
+      },
+      {
+        "month": 9,
+        "temp_day": 23,
+        "temp_night": 13,
+        "rain": 70
+      },
+      {
+        "month": 10,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 30
+      },
+      {
+        "month": 11,
+        "temp_day": 7,
+        "temp_night": 2,
+        "rain": 29
+      },
+      {
+        "month": 12,
+        "temp_day": 5,
+        "temp_night": 1,
+        "rain": 29
+      }
     ]
   },
   "CG": {
@@ -3744,7 +7370,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 31,
+        "temp_night": 21,
+        "rain": 129
+      },
+      {
+        "month": 2,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 166
+      },
+      {
+        "month": 3,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 214
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 169
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 165
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 80
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 21,
+        "rain": 18
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 66
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 169
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 21,
+        "rain": 342
+      },
+      {
+        "month": 11,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 221
+      },
+      {
+        "month": 12,
+        "temp_day": 31,
+        "temp_night": 21,
+        "rain": 61
+      }
+    ]
   },
   "NC": {
     "name": "New Caledonia",
@@ -3798,7 +7498,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 185
+      },
+      {
+        "month": 2,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 203
+      },
+      {
+        "month": 3,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 301
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 20,
+        "rain": 164
+      },
+      {
+        "month": 5,
+        "temp_day": 24,
+        "temp_night": 17,
+        "rain": 26
+      },
+      {
+        "month": 6,
+        "temp_day": 25,
+        "temp_night": 17,
+        "rain": 38
+      },
+      {
+        "month": 7,
+        "temp_day": 23,
+        "temp_night": 17,
+        "rain": 119
+      },
+      {
+        "month": 8,
+        "temp_day": 24,
+        "temp_night": 15,
+        "rain": 33
+      },
+      {
+        "month": 9,
+        "temp_day": 26,
+        "temp_night": 17,
+        "rain": 34
+      },
+      {
+        "month": 10,
+        "temp_day": 27,
+        "temp_night": 18,
+        "rain": 72
+      },
+      {
+        "month": 11,
+        "temp_day": 29,
+        "temp_night": 19,
+        "rain": 110
+      },
+      {
+        "month": 12,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 195
+      }
+    ]
   },
   "AZ": {
     "name": "Azerbaijan",
@@ -3869,7 +7643,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 10,
+        "temp_night": 0,
+        "rain": 44
+      },
+      {
+        "month": 2,
+        "temp_day": 12,
+        "temp_night": 3,
+        "rain": 11
+      },
+      {
+        "month": 3,
+        "temp_day": 15,
+        "temp_night": 5,
+        "rain": 87
+      },
+      {
+        "month": 4,
+        "temp_day": 24,
+        "temp_night": 12,
+        "rain": 37
+      },
+      {
+        "month": 5,
+        "temp_day": 25,
+        "temp_night": 14,
+        "rain": 85
+      },
+      {
+        "month": 6,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 67
+      },
+      {
+        "month": 7,
+        "temp_day": 34,
+        "temp_night": 23,
+        "rain": 178
+      },
+      {
+        "month": 8,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 21
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 18,
+        "rain": 24
+      },
+      {
+        "month": 10,
+        "temp_day": 22,
+        "temp_night": 12,
+        "rain": 71
+      },
+      {
+        "month": 11,
+        "temp_day": 16,
+        "temp_night": 6,
+        "rain": 31
+      },
+      {
+        "month": 12,
+        "temp_day": 11,
+        "temp_night": 2,
+        "rain": 10
+      }
+    ]
   },
   "TW": {
     "name": "Taiwan",
@@ -3923,7 +7771,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 10,
+        "temp_night": 2,
+        "rain": 16
+      },
+      {
+        "month": 2,
+        "temp_day": 14,
+        "temp_night": 4,
+        "rain": 25
+      },
+      {
+        "month": 3,
+        "temp_day": 13,
+        "temp_night": 5,
+        "rain": 84
+      },
+      {
+        "month": 4,
+        "temp_day": 17,
+        "temp_night": 8,
+        "rain": 103
+      },
+      {
+        "month": 5,
+        "temp_day": 17,
+        "temp_night": 9,
+        "rain": 187
+      },
+      {
+        "month": 6,
+        "temp_day": 18,
+        "temp_night": 10,
+        "rain": 245
+      },
+      {
+        "month": 7,
+        "temp_day": 20,
+        "temp_night": 10,
+        "rain": 888
+      },
+      {
+        "month": 8,
+        "temp_day": 19,
+        "temp_night": 10,
+        "rain": 312
+      },
+      {
+        "month": 9,
+        "temp_day": 19,
+        "temp_night": 10,
+        "rain": 220
+      },
+      {
+        "month": 10,
+        "temp_day": 17,
+        "temp_night": 10,
+        "rain": 712
+      },
+      {
+        "month": 11,
+        "temp_day": 16,
+        "temp_night": 8,
+        "rain": 127
+      },
+      {
+        "month": 12,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 54
+      }
+    ]
   },
   "IT": {
     "name": "Italy",
@@ -4151,6 +8073,80 @@
         "name": "St. Stephen's Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 10,
+        "temp_night": 1,
+        "rain": 42
+      },
+      {
+        "month": 2,
+        "temp_day": 13,
+        "temp_night": 1,
+        "rain": 79
+      },
+      {
+        "month": 3,
+        "temp_day": 14,
+        "temp_night": 3,
+        "rain": 135
+      },
+      {
+        "month": 4,
+        "temp_day": 18,
+        "temp_night": 5,
+        "rain": 59
+      },
+      {
+        "month": 5,
+        "temp_day": 20,
+        "temp_night": 8,
+        "rain": 112
+      },
+      {
+        "month": 6,
+        "temp_day": 26,
+        "temp_night": 13,
+        "rain": 64
+      },
+      {
+        "month": 7,
+        "temp_day": 32,
+        "temp_night": 16,
+        "rain": 14
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 17,
+        "rain": 29
+      },
+      {
+        "month": 9,
+        "temp_day": 23,
+        "temp_night": 12,
+        "rain": 100
+      },
+      {
+        "month": 10,
+        "temp_day": 20,
+        "temp_night": 10,
+        "rain": 143
+      },
+      {
+        "month": 11,
+        "temp_day": 14,
+        "temp_night": 3,
+        "rain": 35
+      },
+      {
+        "month": 12,
+        "temp_day": 9,
+        "temp_night": 0,
+        "rain": 125
+      }
     ]
   },
   "AX": {
@@ -4205,7 +8201,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -1,
+        "temp_night": -6,
+        "rain": 51
+      },
+      {
+        "month": 2,
+        "temp_day": 1,
+        "temp_night": -2,
+        "rain": 72
+      },
+      {
+        "month": 3,
+        "temp_day": 4,
+        "temp_night": -1,
+        "rain": 32
+      },
+      {
+        "month": 4,
+        "temp_day": 6,
+        "temp_night": 1,
+        "rain": 53
+      },
+      {
+        "month": 5,
+        "temp_day": 17,
+        "temp_night": 7,
+        "rain": 8
+      },
+      {
+        "month": 6,
+        "temp_day": 19,
+        "temp_night": 12,
+        "rain": 72
+      },
+      {
+        "month": 7,
+        "temp_day": 20,
+        "temp_night": 15,
+        "rain": 80
+      },
+      {
+        "month": 8,
+        "temp_day": 20,
+        "temp_night": 15,
+        "rain": 52
+      },
+      {
+        "month": 9,
+        "temp_day": 17,
+        "temp_night": 11,
+        "rain": 70
+      },
+      {
+        "month": 10,
+        "temp_day": 11,
+        "temp_night": 7,
+        "rain": 101
+      },
+      {
+        "month": 11,
+        "temp_day": 6,
+        "temp_night": 2,
+        "rain": 56
+      },
+      {
+        "month": 12,
+        "temp_day": 4,
+        "temp_night": 0,
+        "rain": 51
+      }
+    ]
   },
   "DZ": {
     "name": "Algeria",
@@ -4284,7 +8354,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 22,
+        "temp_night": 9,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 23,
+        "temp_night": 10,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 14,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 18,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 37,
+        "temp_night": 24,
+        "rain": 1
+      },
+      {
+        "month": 6,
+        "temp_day": 43,
+        "temp_night": 30,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 43,
+        "temp_night": 31,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 42,
+        "temp_night": 30,
+        "rain": 0
+      },
+      {
+        "month": 9,
+        "temp_day": 38,
+        "temp_night": 26,
+        "rain": 4
+      },
+      {
+        "month": 10,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 11,
+        "temp_day": 27,
+        "temp_night": 16,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 20,
+        "temp_night": 8,
+        "rain": 0
+      }
+    ]
   },
   "AD": {
     "name": "Andorra",
@@ -4395,6 +8539,80 @@
         "name": "St. Stephen's Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 10,
+        "temp_night": 1,
+        "rain": 38
+      },
+      {
+        "month": 2,
+        "temp_day": 12,
+        "temp_night": 1,
+        "rain": 56
+      },
+      {
+        "month": 3,
+        "temp_day": 11,
+        "temp_night": 1,
+        "rain": 152
+      },
+      {
+        "month": 4,
+        "temp_day": 14,
+        "temp_night": 3,
+        "rain": 95
+      },
+      {
+        "month": 5,
+        "temp_day": 16,
+        "temp_night": 5,
+        "rain": 177
+      },
+      {
+        "month": 6,
+        "temp_day": 22,
+        "temp_night": 10,
+        "rain": 93
+      },
+      {
+        "month": 7,
+        "temp_day": 27,
+        "temp_night": 14,
+        "rain": 19
+      },
+      {
+        "month": 8,
+        "temp_day": 27,
+        "temp_night": 15,
+        "rain": 28
+      },
+      {
+        "month": 9,
+        "temp_day": 18,
+        "temp_night": 8,
+        "rain": 78
+      },
+      {
+        "month": 10,
+        "temp_day": 16,
+        "temp_night": 7,
+        "rain": 147
+      },
+      {
+        "month": 11,
+        "temp_day": 13,
+        "temp_night": 3,
+        "rain": 26
+      },
+      {
+        "month": 12,
+        "temp_day": 9,
+        "temp_night": -1,
+        "rain": 29
+      }
     ]
   },
   "TC": {
@@ -4449,7 +8667,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 25
+      },
+      {
+        "month": 2,
+        "temp_day": 25,
+        "temp_night": 23,
+        "rain": 65
+      },
+      {
+        "month": 3,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 28
+      },
+      {
+        "month": 4,
+        "temp_day": 26,
+        "temp_night": 24,
+        "rain": 24
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 153
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 145
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 67
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 76
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 46
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 160
+      },
+      {
+        "month": 11,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 194
+      },
+      {
+        "month": 12,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 96
+      }
+    ]
   },
   "IS": {
     "name": "Iceland",
@@ -4512,7 +8804,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -5,
+        "temp_night": -12,
+        "rain": 67
+      },
+      {
+        "month": 2,
+        "temp_day": -6,
+        "temp_night": -13,
+        "rain": 75
+      },
+      {
+        "month": 3,
+        "temp_day": -4,
+        "temp_night": -9,
+        "rain": 67
+      },
+      {
+        "month": 4,
+        "temp_day": -3,
+        "temp_night": -9,
+        "rain": 53
+      },
+      {
+        "month": 5,
+        "temp_day": 2,
+        "temp_night": -2,
+        "rain": 53
+      },
+      {
+        "month": 6,
+        "temp_day": 7,
+        "temp_night": 1,
+        "rain": 77
+      },
+      {
+        "month": 7,
+        "temp_day": 11,
+        "temp_night": 5,
+        "rain": 72
+      },
+      {
+        "month": 8,
+        "temp_day": 7,
+        "temp_night": 2,
+        "rain": 104
+      },
+      {
+        "month": 9,
+        "temp_day": 4,
+        "temp_night": -3,
+        "rain": 80
+      },
+      {
+        "month": 10,
+        "temp_day": -1,
+        "temp_night": -7,
+        "rain": 80
+      },
+      {
+        "month": 11,
+        "temp_day": -3,
+        "temp_night": -8,
+        "rain": 85
+      },
+      {
+        "month": 12,
+        "temp_day": -5,
+        "temp_night": -12,
+        "rain": 109
+      }
+    ]
   },
   "TD": {
     "name": "Chad",
@@ -4566,7 +8932,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 30,
+        "temp_night": 16,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 32,
+        "temp_night": 19,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 39,
+        "temp_night": 25,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 41,
+        "temp_night": 27,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 43,
+        "temp_night": 30,
+        "rain": 0
+      },
+      {
+        "month": 6,
+        "temp_day": 41,
+        "temp_night": 30,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 36,
+        "temp_night": 27,
+        "rain": 40
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 149
+      },
+      {
+        "month": 9,
+        "temp_day": 34,
+        "temp_night": 24,
+        "rain": 43
+      },
+      {
+        "month": 10,
+        "temp_day": 37,
+        "temp_night": 25,
+        "rain": 10
+      },
+      {
+        "month": 11,
+        "temp_day": 31,
+        "temp_night": 18,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 16,
+        "rain": 0
+      }
+    ]
   },
   "BS": {
     "name": "Bahamas",
@@ -4620,7 +9060,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 25,
+        "temp_night": 22,
+        "rain": 26
+      },
+      {
+        "month": 2,
+        "temp_day": 24,
+        "temp_night": 20,
+        "rain": 47
+      },
+      {
+        "month": 3,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 79
+      },
+      {
+        "month": 4,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 16
+      },
+      {
+        "month": 5,
+        "temp_day": 29,
+        "temp_night": 25,
+        "rain": 68
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 26,
+        "rain": 90
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 27,
+        "rain": 69
+      },
+      {
+        "month": 8,
+        "temp_day": 31,
+        "temp_night": 27,
+        "rain": 148
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 27,
+        "rain": 63
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 26,
+        "rain": 115
+      },
+      {
+        "month": 11,
+        "temp_day": 27,
+        "temp_night": 24,
+        "rain": 32
+      },
+      {
+        "month": 12,
+        "temp_day": 25,
+        "temp_night": 22,
+        "rain": 30
+      }
+    ]
   },
   "BR": {
     "name": "Brazil",
@@ -4715,7 +9229,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 367
+      },
+      {
+        "month": 2,
+        "temp_day": 29,
+        "temp_night": 22,
+        "rain": 261
+      },
+      {
+        "month": 3,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 237
+      },
+      {
+        "month": 4,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 173
+      },
+      {
+        "month": 5,
+        "temp_day": 31,
+        "temp_night": 20,
+        "rain": 4
+      },
+      {
+        "month": 6,
+        "temp_day": 32,
+        "temp_night": 19,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 33,
+        "temp_night": 19,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 35,
+        "temp_night": 20,
+        "rain": 0
+      },
+      {
+        "month": 9,
+        "temp_day": 36,
+        "temp_night": 21,
+        "rain": 12
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 141
+      },
+      {
+        "month": 11,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 363
+      },
+      {
+        "month": 12,
+        "temp_day": 29,
+        "temp_night": 21,
+        "rain": 337
+      }
+    ]
   },
   "TH": {
     "name": "Thailand",
@@ -4810,7 +9398,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 32,
+        "temp_night": 21,
+        "rain": 5
+      },
+      {
+        "month": 2,
+        "temp_day": 35,
+        "temp_night": 23,
+        "rain": 16
+      },
+      {
+        "month": 3,
+        "temp_day": 37,
+        "temp_night": 25,
+        "rain": 36
+      },
+      {
+        "month": 4,
+        "temp_day": 40,
+        "temp_night": 28,
+        "rain": 2
+      },
+      {
+        "month": 5,
+        "temp_day": 36,
+        "temp_night": 27,
+        "rain": 209
+      },
+      {
+        "month": 6,
+        "temp_day": 35,
+        "temp_night": 27,
+        "rain": 168
+      },
+      {
+        "month": 7,
+        "temp_day": 33,
+        "temp_night": 26,
+        "rain": 254
+      },
+      {
+        "month": 8,
+        "temp_day": 33,
+        "temp_night": 26,
+        "rain": 259
+      },
+      {
+        "month": 9,
+        "temp_day": 33,
+        "temp_night": 26,
+        "rain": 213
+      },
+      {
+        "month": 10,
+        "temp_day": 32,
+        "temp_night": 24,
+        "rain": 201
+      },
+      {
+        "month": 11,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 89
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 21,
+        "rain": 2
+      }
+    ]
   },
   "FM": {
     "name": "Micronesia",
@@ -4864,7 +9526,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 28,
+        "temp_night": 24,
+        "rain": 118
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 24,
+        "rain": 254
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 24,
+        "rain": 229
+      },
+      {
+        "month": 4,
+        "temp_day": 28,
+        "temp_night": 24,
+        "rain": 524
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 24,
+        "rain": 588
+      },
+      {
+        "month": 6,
+        "temp_day": 28,
+        "temp_night": 23,
+        "rain": 568
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 23,
+        "rain": 629
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 23,
+        "rain": 569
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 23,
+        "rain": 512
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 23,
+        "rain": 513
+      },
+      {
+        "month": 11,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 259
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 355
+      }
+    ]
   },
   "IL": {
     "name": "Israel",
@@ -4951,7 +9687,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 27
+      },
+      {
+        "month": 2,
+        "temp_day": 14,
+        "temp_night": 7,
+        "rain": 24
+      },
+      {
+        "month": 3,
+        "temp_day": 19,
+        "temp_night": 9,
+        "rain": 30
+      },
+      {
+        "month": 4,
+        "temp_day": 25,
+        "temp_night": 14,
+        "rain": 24
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 15,
+        "rain": 8
+      },
+      {
+        "month": 6,
+        "temp_day": 35,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 33,
+        "temp_night": 21,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 20,
+        "rain": 0
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 18,
+        "rain": 0
+      },
+      {
+        "month": 10,
+        "temp_day": 26,
+        "temp_night": 15,
+        "rain": 2
+      },
+      {
+        "month": 11,
+        "temp_day": 19,
+        "temp_night": 11,
+        "rain": 13
+      },
+      {
+        "month": 12,
+        "temp_day": 16,
+        "temp_night": 8,
+        "rain": 7
+      }
+    ]
   },
   "AI": {
     "name": "Anguilla",
@@ -5005,7 +9815,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 24
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 25,
+        "rain": 99
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 25,
+        "rain": 31
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 26,
+        "rain": 57
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 27,
+        "rain": 120
+      },
+      {
+        "month": 6,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 85
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 111
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 27,
+        "rain": 125
+      },
+      {
+        "month": 9,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 93
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 28,
+        "rain": 77
+      },
+      {
+        "month": 11,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 229
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 26,
+        "rain": 53
+      }
+    ]
   },
   "DM": {
     "name": "Dominica",
@@ -5059,7 +9943,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 25,
+        "temp_night": 20,
+        "rain": 128
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 20,
+        "rain": 66
+      },
+      {
+        "month": 3,
+        "temp_day": 26,
+        "temp_night": 20,
+        "rain": 88
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 21,
+        "rain": 79
+      },
+      {
+        "month": 5,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 107
+      },
+      {
+        "month": 6,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 137
+      },
+      {
+        "month": 7,
+        "temp_day": 27,
+        "temp_night": 22,
+        "rain": 213
+      },
+      {
+        "month": 8,
+        "temp_day": 27,
+        "temp_night": 22,
+        "rain": 194
+      },
+      {
+        "month": 9,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 167
+      },
+      {
+        "month": 10,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 113
+      },
+      {
+        "month": 11,
+        "temp_day": 27,
+        "temp_night": 21,
+        "rain": 174
+      },
+      {
+        "month": 12,
+        "temp_day": 26,
+        "temp_night": 20,
+        "rain": 101
+      }
+    ]
   },
   "ML": {
     "name": "Mali",
@@ -5113,7 +10071,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 31,
+        "temp_night": 15,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 32,
+        "temp_night": 16,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 36,
+        "temp_night": 21,
+        "rain": 0
+      },
+      {
+        "month": 4,
+        "temp_day": 39,
+        "temp_night": 26,
+        "rain": 0
+      },
+      {
+        "month": 5,
+        "temp_day": 42,
+        "temp_night": 29,
+        "rain": 2
+      },
+      {
+        "month": 6,
+        "temp_day": 41,
+        "temp_night": 30,
+        "rain": 1
+      },
+      {
+        "month": 7,
+        "temp_day": 38,
+        "temp_night": 28,
+        "rain": 9
+      },
+      {
+        "month": 8,
+        "temp_day": 36,
+        "temp_night": 26,
+        "rain": 31
+      },
+      {
+        "month": 9,
+        "temp_day": 34,
+        "temp_night": 25,
+        "rain": 102
+      },
+      {
+        "month": 10,
+        "temp_day": 38,
+        "temp_night": 25,
+        "rain": 0
+      },
+      {
+        "month": 11,
+        "temp_day": 34,
+        "temp_night": 20,
+        "rain": 0
+      },
+      {
+        "month": 12,
+        "temp_day": 29,
+        "temp_night": 15,
+        "rain": 0
+      }
+    ]
   },
   "MZ": {
     "name": "Mozambique",
@@ -5167,7 +10199,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 86
+      },
+      {
+        "month": 2,
+        "temp_day": 35,
+        "temp_night": 23,
+        "rain": 56
+      },
+      {
+        "month": 3,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 69
+      },
+      {
+        "month": 4,
+        "temp_day": 31,
+        "temp_night": 21,
+        "rain": 67
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 18,
+        "rain": 23
+      },
+      {
+        "month": 6,
+        "temp_day": 28,
+        "temp_night": 18,
+        "rain": 19
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 17,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 31,
+        "temp_night": 18,
+        "rain": 33
+      },
+      {
+        "month": 9,
+        "temp_day": 33,
+        "temp_night": 20,
+        "rain": 6
+      },
+      {
+        "month": 10,
+        "temp_day": 34,
+        "temp_night": 21,
+        "rain": 21
+      },
+      {
+        "month": 11,
+        "temp_day": 36,
+        "temp_night": 23,
+        "rain": 38
+      },
+      {
+        "month": 12,
+        "temp_day": 38,
+        "temp_night": 24,
+        "rain": 23
+      }
+    ]
   },
   "SY": {
     "name": "Syria",
@@ -5230,7 +10336,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 12,
+        "temp_night": 5,
+        "rain": 48
+      },
+      {
+        "month": 2,
+        "temp_day": 12,
+        "temp_night": 5,
+        "rain": 14
+      },
+      {
+        "month": 3,
+        "temp_day": 16,
+        "temp_night": 7,
+        "rain": 22
+      },
+      {
+        "month": 4,
+        "temp_day": 25,
+        "temp_night": 13,
+        "rain": 14
+      },
+      {
+        "month": 5,
+        "temp_day": 26,
+        "temp_night": 14,
+        "rain": 24
+      },
+      {
+        "month": 6,
+        "temp_day": 35,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 7,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 8,
+        "temp_day": 34,
+        "temp_night": 22,
+        "rain": 0
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 18,
+        "rain": 2
+      },
+      {
+        "month": 10,
+        "temp_day": 23,
+        "temp_night": 13,
+        "rain": 0
+      },
+      {
+        "month": 11,
+        "temp_day": 16,
+        "temp_night": 8,
+        "rain": 10
+      },
+      {
+        "month": 12,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 13
+      }
+    ]
   },
   "YE": {
     "name": "Yemen",
@@ -5284,7 +10464,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 23,
+        "temp_night": 11,
+        "rain": 0
+      },
+      {
+        "month": 2,
+        "temp_day": 26,
+        "temp_night": 14,
+        "rain": 0
+      },
+      {
+        "month": 3,
+        "temp_day": 27,
+        "temp_night": 16,
+        "rain": 10
+      },
+      {
+        "month": 4,
+        "temp_day": 29,
+        "temp_night": 18,
+        "rain": 14
+      },
+      {
+        "month": 5,
+        "temp_day": 32,
+        "temp_night": 20,
+        "rain": 8
+      },
+      {
+        "month": 6,
+        "temp_day": 33,
+        "temp_night": 22,
+        "rain": 10
+      },
+      {
+        "month": 7,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 4
+      },
+      {
+        "month": 8,
+        "temp_day": 30,
+        "temp_night": 20,
+        "rain": 57
+      },
+      {
+        "month": 9,
+        "temp_day": 32,
+        "temp_night": 20,
+        "rain": 8
+      },
+      {
+        "month": 10,
+        "temp_day": 29,
+        "temp_night": 17,
+        "rain": 2
+      },
+      {
+        "month": 11,
+        "temp_day": 26,
+        "temp_night": 14,
+        "rain": 2
+      },
+      {
+        "month": 12,
+        "temp_day": 22,
+        "temp_night": 9,
+        "rain": 0
+      }
+    ]
   },
   "SK": {
     "name": "Slovakia",
@@ -5436,6 +10690,80 @@
         "name": "Second Christmas Day",
         "date": "2026-12-26"
       }
+    ],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": -1,
+        "temp_night": -6,
+        "rain": 66
+      },
+      {
+        "month": 2,
+        "temp_day": 4,
+        "temp_night": -2,
+        "rain": 74
+      },
+      {
+        "month": 3,
+        "temp_day": 7,
+        "temp_night": -1,
+        "rain": 42
+      },
+      {
+        "month": 4,
+        "temp_day": 11,
+        "temp_night": 2,
+        "rain": 88
+      },
+      {
+        "month": 5,
+        "temp_day": 15,
+        "temp_night": 6,
+        "rain": 94
+      },
+      {
+        "month": 6,
+        "temp_day": 19,
+        "temp_night": 9,
+        "rain": 168
+      },
+      {
+        "month": 7,
+        "temp_day": 21,
+        "temp_night": 12,
+        "rain": 76
+      },
+      {
+        "month": 8,
+        "temp_day": 23,
+        "temp_night": 12,
+        "rain": 47
+      },
+      {
+        "month": 9,
+        "temp_day": 16,
+        "temp_night": 8,
+        "rain": 134
+      },
+      {
+        "month": 10,
+        "temp_day": 10,
+        "temp_night": 2,
+        "rain": 45
+      },
+      {
+        "month": 11,
+        "temp_day": 2,
+        "temp_night": -5,
+        "rain": 30
+      },
+      {
+        "month": 12,
+        "temp_day": 0,
+        "temp_night": -5,
+        "rain": 21
+      }
     ]
   },
   "MQ": {
@@ -5490,7 +10818,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 27,
+        "temp_night": 23,
+        "rain": 126
+      },
+      {
+        "month": 2,
+        "temp_day": 28,
+        "temp_night": 22,
+        "rain": 73
+      },
+      {
+        "month": 3,
+        "temp_day": 28,
+        "temp_night": 23,
+        "rain": 84
+      },
+      {
+        "month": 4,
+        "temp_day": 29,
+        "temp_night": 24,
+        "rain": 60
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 25,
+        "rain": 79
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 25,
+        "rain": 170
+      },
+      {
+        "month": 7,
+        "temp_day": 29,
+        "temp_night": 25,
+        "rain": 200
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 24,
+        "rain": 209
+      },
+      {
+        "month": 9,
+        "temp_day": 29,
+        "temp_night": 24,
+        "rain": 175
+      },
+      {
+        "month": 10,
+        "temp_day": 30,
+        "temp_night": 24,
+        "rain": 107
+      },
+      {
+        "month": 11,
+        "temp_day": 29,
+        "temp_night": 24,
+        "rain": 194
+      },
+      {
+        "month": 12,
+        "temp_day": 28,
+        "temp_night": 23,
+        "rain": 126
+      }
+    ]
   },
   "VC": {
     "name": "Saint Vincent and the Grenadines",
@@ -5544,7 +10946,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 24,
+        "temp_night": 20,
+        "rain": 165
+      },
+      {
+        "month": 2,
+        "temp_day": 25,
+        "temp_night": 21,
+        "rain": 46
+      },
+      {
+        "month": 3,
+        "temp_day": 25,
+        "temp_night": 21,
+        "rain": 63
+      },
+      {
+        "month": 4,
+        "temp_day": 27,
+        "temp_night": 22,
+        "rain": 67
+      },
+      {
+        "month": 5,
+        "temp_day": 27,
+        "temp_night": 23,
+        "rain": 103
+      },
+      {
+        "month": 6,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 152
+      },
+      {
+        "month": 7,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 204
+      },
+      {
+        "month": 8,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 159
+      },
+      {
+        "month": 9,
+        "temp_day": 27,
+        "temp_night": 22,
+        "rain": 98
+      },
+      {
+        "month": 10,
+        "temp_day": 27,
+        "temp_night": 23,
+        "rain": 93
+      },
+      {
+        "month": 11,
+        "temp_day": 26,
+        "temp_night": 22,
+        "rain": 151
+      },
+      {
+        "month": 12,
+        "temp_day": 25,
+        "temp_night": 21,
+        "rain": 87
+      }
+    ]
   },
   "GY": {
     "name": "Guyana",
@@ -5598,7 +11074,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 31,
+        "temp_night": 22,
+        "rain": 57
+      },
+      {
+        "month": 2,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 39
+      },
+      {
+        "month": 3,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 62
+      },
+      {
+        "month": 4,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 177
+      },
+      {
+        "month": 5,
+        "temp_day": 30,
+        "temp_night": 23,
+        "rain": 511
+      },
+      {
+        "month": 6,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 472
+      },
+      {
+        "month": 7,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 345
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 22,
+        "rain": 254
+      },
+      {
+        "month": 9,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 50
+      },
+      {
+        "month": 10,
+        "temp_day": 33,
+        "temp_night": 23,
+        "rain": 59
+      },
+      {
+        "month": 11,
+        "temp_day": 32,
+        "temp_night": 23,
+        "rain": 99
+      },
+      {
+        "month": 12,
+        "temp_day": 30,
+        "temp_night": 22,
+        "rain": 124
+      }
+    ]
   },
   "ME": {
     "name": "Montenegro",
@@ -5661,7 +11211,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 9,
+        "temp_night": 1,
+        "rain": 187
+      },
+      {
+        "month": 2,
+        "temp_day": 12,
+        "temp_night": 4,
+        "rain": 170
+      },
+      {
+        "month": 3,
+        "temp_day": 14,
+        "temp_night": 5,
+        "rain": 194
+      },
+      {
+        "month": 4,
+        "temp_day": 18,
+        "temp_night": 8,
+        "rain": 115
+      },
+      {
+        "month": 5,
+        "temp_day": 21,
+        "temp_night": 12,
+        "rain": 154
+      },
+      {
+        "month": 6,
+        "temp_day": 27,
+        "temp_night": 17,
+        "rain": 56
+      },
+      {
+        "month": 7,
+        "temp_day": 31,
+        "temp_night": 19,
+        "rain": 34
+      },
+      {
+        "month": 8,
+        "temp_day": 32,
+        "temp_night": 20,
+        "rain": 18
+      },
+      {
+        "month": 9,
+        "temp_day": 23,
+        "temp_night": 14,
+        "rain": 166
+      },
+      {
+        "month": 10,
+        "temp_day": 20,
+        "temp_night": 10,
+        "rain": 134
+      },
+      {
+        "month": 11,
+        "temp_day": 13,
+        "temp_night": 4,
+        "rain": 180
+      },
+      {
+        "month": 12,
+        "temp_day": 10,
+        "temp_night": 2,
+        "rain": 213
+      }
+    ]
   },
   "GI": {
     "name": "Gibraltar",
@@ -5715,7 +11339,81 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 17,
+        "temp_night": 12,
+        "rain": 105
+      },
+      {
+        "month": 2,
+        "temp_day": 17,
+        "temp_night": 12,
+        "rain": 72
+      },
+      {
+        "month": 3,
+        "temp_day": 17,
+        "temp_night": 11,
+        "rain": 219
+      },
+      {
+        "month": 4,
+        "temp_day": 19,
+        "temp_night": 13,
+        "rain": 36
+      },
+      {
+        "month": 5,
+        "temp_day": 21,
+        "temp_night": 14,
+        "rain": 9
+      },
+      {
+        "month": 6,
+        "temp_day": 23,
+        "temp_night": 17,
+        "rain": 16
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 19,
+        "rain": 1
+      },
+      {
+        "month": 8,
+        "temp_day": 28,
+        "temp_night": 21,
+        "rain": 15
+      },
+      {
+        "month": 9,
+        "temp_day": 25,
+        "temp_night": 18,
+        "rain": 27
+      },
+      {
+        "month": 10,
+        "temp_day": 21,
+        "temp_night": 16,
+        "rain": 192
+      },
+      {
+        "month": 11,
+        "temp_day": 19,
+        "temp_night": 15,
+        "rain": 87
+      },
+      {
+        "month": 12,
+        "temp_day": 16,
+        "temp_night": 12,
+        "rain": 20
+      }
+    ]
   },
   "QA": {
     "name": "Qatar",
@@ -5778,7 +11476,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "ST": {
     "name": "São Tomé and Príncipe",
@@ -5832,7 +11531,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "UZ": {
     "name": "Uzbekistan",
@@ -5911,7 +11611,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GS": {
     "name": "South Georgia",
@@ -5965,7 +11666,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SE": {
     "name": "Sweden",
@@ -6097,7 +11799,8 @@
         "name": "Boxing Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "NR": {
     "name": "Nauru",
@@ -6151,7 +11854,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "YT": {
     "name": "Mayotte",
@@ -6205,7 +11909,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NI": {
     "name": "Nicaragua",
@@ -6259,7 +11964,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IO": {
     "name": "British Indian Ocean Territory",
@@ -6313,7 +12019,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "VU": {
     "name": "Vanuatu",
@@ -6367,7 +12074,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CN": {
     "name": "China",
@@ -6421,7 +12129,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KP": {
     "name": "North Korea",
@@ -6475,7 +12184,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "ID": {
     "name": "Indonesia",
@@ -6578,7 +12288,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BE": {
     "name": "Belgium",
@@ -6722,7 +12433,8 @@
         "name": "Christmas Day",
         "date": "2026-12-25"
       }
-    ]
+    ],
+    "climate": []
   },
   "CZ": {
     "name": "Czechia",
@@ -6842,7 +12554,8 @@
         "name": "Second Christmas Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "CF": {
     "name": "Central African Republic",
@@ -6896,7 +12609,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PA": {
     "name": "Panama",
@@ -7023,7 +12737,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AE": {
     "name": "United Arab Emirates",
@@ -7077,7 +12792,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GW": {
     "name": "Guinea-Bissau",
@@ -7131,7 +12847,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BJ": {
     "name": "Benin",
@@ -7185,7 +12902,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NF": {
     "name": "Norfolk Island",
@@ -7239,7 +12957,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MD": {
     "name": "Moldova",
@@ -7346,7 +13065,8 @@
         "name": "Birth of Jesus Christ (Christmas in a new style)",
         "date": "2026-12-25"
       }
-    ]
+    ],
+    "climate": []
   },
   "WS": {
     "name": "Samoa",
@@ -7400,7 +13120,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TN": {
     "name": "Tunisia",
@@ -7479,7 +13200,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "EC": {
     "name": "Ecuador",
@@ -7533,7 +13255,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NE": {
     "name": "Niger",
@@ -7587,7 +13310,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CK": {
     "name": "Cook Islands",
@@ -7641,7 +13365,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MP": {
     "name": "Northern Mariana Islands",
@@ -7695,7 +13420,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AG": {
     "name": "Antigua and Barbuda",
@@ -7749,7 +13475,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MY": {
     "name": "Malaysia",
@@ -7844,7 +13571,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GP": {
     "name": "Guadeloupe",
@@ -7898,7 +13626,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "OM": {
     "name": "Oman",
@@ -7952,7 +13681,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KR": {
     "name": "South Korea",
@@ -8006,7 +13736,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PN": {
     "name": "Pitcairn Islands",
@@ -8060,7 +13791,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BA": {
     "name": "Bosnia and Herzegovina",
@@ -8114,7 +13846,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LS": {
     "name": "Lesotho",
@@ -8168,7 +13901,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "JP": {
     "name": "Japan",
@@ -8239,7 +13973,81 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": [
+      {
+        "month": 1,
+        "temp_day": 6,
+        "temp_night": -3,
+        "rain": 52
+      },
+      {
+        "month": 2,
+        "temp_day": 8,
+        "temp_night": -2,
+        "rain": 137
+      },
+      {
+        "month": 3,
+        "temp_day": 8,
+        "temp_night": -2,
+        "rain": 166
+      },
+      {
+        "month": 4,
+        "temp_day": 18,
+        "temp_night": 7,
+        "rain": 112
+      },
+      {
+        "month": 5,
+        "temp_day": 20,
+        "temp_night": 10,
+        "rain": 205
+      },
+      {
+        "month": 6,
+        "temp_day": 23,
+        "temp_night": 14,
+        "rain": 262
+      },
+      {
+        "month": 7,
+        "temp_day": 28,
+        "temp_night": 19,
+        "rain": 167
+      },
+      {
+        "month": 8,
+        "temp_day": 29,
+        "temp_night": 20,
+        "rain": 123
+      },
+      {
+        "month": 9,
+        "temp_day": 27,
+        "temp_night": 18,
+        "rain": 24
+      },
+      {
+        "month": 10,
+        "temp_day": 20,
+        "temp_night": 11,
+        "rain": 149
+      },
+      {
+        "month": 11,
+        "temp_day": 14,
+        "temp_night": 4,
+        "rain": 116
+      },
+      {
+        "month": 12,
+        "temp_day": 6,
+        "temp_night": -3,
+        "rain": 22
+      }
+    ]
   },
   "TM": {
     "name": "Turkmenistan",
@@ -8293,7 +14101,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CW": {
     "name": "Curaçao",
@@ -8347,7 +14156,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "HR": {
     "name": "Croatia",
@@ -8479,7 +14289,8 @@
         "name": "Christmas",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "FO": {
     "name": "Faroe Islands",
@@ -8533,7 +14344,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BT": {
     "name": "Bhutan",
@@ -8587,7 +14399,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SI": {
     "name": "Slovenia",
@@ -8715,7 +14528,8 @@
         "name": "Independence and Unity Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "LA": {
     "name": "Laos",
@@ -8769,7 +14583,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GG": {
     "name": "Guernsey",
@@ -8823,7 +14638,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LB": {
     "name": "Lebanon",
@@ -8886,7 +14702,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MT": {
     "name": "Malta",
@@ -9014,7 +14831,8 @@
         "name": "​​​​Christmas Day",
         "date": "2026-12-25"
       }
-    ]
+    ],
+    "climate": []
   },
   "KY": {
     "name": "Cayman Islands",
@@ -9068,7 +14886,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "RS": {
     "name": "Serbia",
@@ -9184,7 +15003,8 @@
         "name": "Armistice Day",
         "date": "2026-11-11"
       }
-    ]
+    ],
+    "climate": []
   },
   "LV": {
     "name": "Latvia",
@@ -9316,7 +15136,8 @@
         "name": "New Year's Eve",
         "date": "2026-12-31"
       }
-    ]
+    ],
+    "climate": []
   },
   "CD": {
     "name": "DR Congo",
@@ -9370,7 +15191,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CY": {
     "name": "Cyprus",
@@ -9449,7 +15271,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GA": {
     "name": "Gabon",
@@ -9503,7 +15326,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SL": {
     "name": "Sierra Leone",
@@ -9557,7 +15381,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IQ": {
     "name": "Iraq",
@@ -9620,7 +15445,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BW": {
     "name": "Botswana",
@@ -9674,7 +15500,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BQ": {
     "name": "Caribbean Netherlands",
@@ -9728,7 +15555,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SO": {
     "name": "Somalia",
@@ -9782,7 +15610,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MU": {
     "name": "Mauritius",
@@ -9836,7 +15665,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GE": {
     "name": "Georgia",
@@ -9899,7 +15729,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MG": {
     "name": "Madagascar",
@@ -9953,7 +15784,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "UM": {
     "name": "United States Minor Outlying Islands",
@@ -10007,7 +15839,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LY": {
     "name": "Libya",
@@ -10078,7 +15911,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AT": {
     "name": "Austria",
@@ -10250,7 +16084,8 @@
         "name": "St Stephen's Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "NU": {
     "name": "Niue",
@@ -10304,7 +16139,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "ET": {
     "name": "Ethiopia",
@@ -10375,7 +16211,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CM": {
     "name": "Cameroon",
@@ -10429,7 +16266,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "EG": {
     "name": "Egypt",
@@ -10516,7 +16354,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PW": {
     "name": "Palau",
@@ -10570,7 +16409,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LC": {
     "name": "Saint Lucia",
@@ -10624,7 +16464,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PR": {
     "name": "Puerto Rico",
@@ -10678,7 +16519,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AF": {
     "name": "Afghanistan",
@@ -10732,7 +16574,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AL": {
     "name": "Albania",
@@ -10868,7 +16711,8 @@
         "name": "Christmas Day",
         "date": "2026-12-25"
       }
-    ]
+    ],
+    "climate": []
   },
   "RU": {
     "name": "Russia",
@@ -10922,7 +16766,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GD": {
     "name": "Grenada",
@@ -10976,7 +16821,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "XK": {
     "name": "Kosovo",
@@ -11024,7 +16870,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BI": {
     "name": "Burundi",
@@ -11078,7 +16925,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KM": {
     "name": "Comoros",
@@ -11132,7 +16980,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BY": {
     "name": "Belarus",
@@ -11223,7 +17072,8 @@
         "name": "Catholic Christmas",
         "date": "2026-12-25"
       }
-    ]
+    ],
+    "climate": []
   },
   "HM": {
     "name": "Heard Island and McDonald Islands",
@@ -11277,7 +17127,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TZ": {
     "name": "Tanzania",
@@ -11364,7 +17215,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BG": {
     "name": "Bulgaria",
@@ -11524,7 +17376,8 @@
         "name": "Christmas Day (Observed)",
         "date": "2026-12-28"
       }
-    ]
+    ],
+    "climate": []
   },
   "SV": {
     "name": "El Salvador",
@@ -11578,7 +17431,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NL": {
     "name": "Netherlands",
@@ -11710,7 +17564,8 @@
         "name": "Boxing Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "VA": {
     "name": "Vatican City",
@@ -11878,7 +17733,8 @@
         "name": "Saint John the Evangelist",
         "date": "2026-12-27"
       }
-    ]
+    ],
+    "climate": []
   },
   "LK": {
     "name": "Sri Lanka",
@@ -11932,7 +17788,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "FI": {
     "name": "Finland",
@@ -12027,7 +17884,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PF": {
     "name": "French Polynesia",
@@ -12081,7 +17939,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MV": {
     "name": "Maldives",
@@ -12135,7 +17994,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PY": {
     "name": "Paraguay",
@@ -12189,7 +18049,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SZ": {
     "name": "Eswatini",
@@ -12243,7 +18104,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CH": {
     "name": "Switzerland",
@@ -12479,7 +18341,8 @@
         "name": "Restoration of the Republic",
         "date": "2026-12-31"
       }
-    ]
+    ],
+    "climate": []
   },
   "FJ": {
     "name": "Fiji",
@@ -12533,7 +18396,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "ZA": {
     "name": "South Africa",
@@ -12640,7 +18504,8 @@
         "name": "Day of Goodwill",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "JO": {
     "name": "Jordan",
@@ -12703,7 +18568,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BZ": {
     "name": "Belize",
@@ -12757,7 +18623,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PE": {
     "name": "Peru",
@@ -12852,7 +18719,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TJ": {
     "name": "Tajikistan",
@@ -12906,7 +18774,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GN": {
     "name": "Guinea",
@@ -12960,7 +18829,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SB": {
     "name": "Solomon Islands",
@@ -13014,7 +18884,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SN": {
     "name": "Senegal",
@@ -13101,7 +18972,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GL": {
     "name": "Greenland",
@@ -13155,7 +19027,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IM": {
     "name": "Isle of Man",
@@ -13209,7 +19082,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LT": {
     "name": "Lithuania",
@@ -13337,7 +19211,8 @@
         "name": "2nd Day of Christmas",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "MN": {
     "name": "Mongolia",
@@ -13408,7 +19283,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BO": {
     "name": "Bolivia",
@@ -13462,7 +19338,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KZ": {
     "name": "Kazakhstan",
@@ -13525,7 +19402,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TF": {
     "name": "French Southern and Antarctic Lands",
@@ -13579,7 +19457,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "HK": {
     "name": "Hong Kong",
@@ -13633,7 +19512,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PS": {
     "name": "Palestine",
@@ -13696,7 +19576,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AR": {
     "name": "Argentina",
@@ -13807,7 +19688,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AS": {
     "name": "American Samoa",
@@ -13861,7 +19743,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MF": {
     "name": "Saint Martin",
@@ -13915,7 +19798,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AM": {
     "name": "Armenia",
@@ -13986,7 +19870,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AO": {
     "name": "Angola",
@@ -14057,7 +19942,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TG": {
     "name": "Togo",
@@ -14111,7 +19997,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MH": {
     "name": "Marshall Islands",
@@ -14165,7 +20052,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BH": {
     "name": "Bahrain",
@@ -14219,7 +20107,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "EE": {
     "name": "Estonia",
@@ -14331,7 +20220,8 @@
         "name": "Boxing Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "MS": {
     "name": "Montserrat",
@@ -14385,7 +20275,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GQ": {
     "name": "Equatorial Guinea",
@@ -14439,7 +20330,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NG": {
     "name": "Nigeria",
@@ -14534,7 +20426,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BM": {
     "name": "Bermuda",
@@ -14588,7 +20481,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MA": {
     "name": "Morocco",
@@ -14683,7 +20577,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NA": {
     "name": "Namibia",
@@ -14737,7 +20632,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "FK": {
     "name": "Falkland Islands",
@@ -14791,7 +20687,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SC": {
     "name": "Seychelles",
@@ -14845,7 +20742,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "ZM": {
     "name": "Zambia",
@@ -14899,7 +20797,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KH": {
     "name": "Cambodia",
@@ -14953,7 +20852,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IE": {
     "name": "Ireland",
@@ -15073,7 +20973,8 @@
         "name": "St. Stephen's Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "PK": {
     "name": "Pakistan",
@@ -15160,7 +21061,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GU": {
     "name": "Guam",
@@ -15214,7 +21116,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MO": {
     "name": "Macau",
@@ -15268,7 +21171,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NP": {
     "name": "Nepal",
@@ -15322,7 +21226,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IN": {
     "name": "India",
@@ -15409,7 +21314,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KG": {
     "name": "Kyrgyzstan",
@@ -15463,7 +21369,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "HT": {
     "name": "Haiti",
@@ -15517,7 +21424,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "DE": {
     "name": "Germany",
@@ -15693,7 +21601,8 @@
         "name": "2nd Day of Christmas",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "RW": {
     "name": "Rwanda",
@@ -15747,7 +21656,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "WF": {
     "name": "Wallis and Futuna",
@@ -15801,7 +21711,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "US": {
     "name": "United States",
@@ -15984,7 +21895,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KE": {
     "name": "Kenya",
@@ -16071,7 +21983,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GM": {
     "name": "Gambia",
@@ -16125,7 +22038,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BD": {
     "name": "Bangladesh",
@@ -16179,7 +22093,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "NO": {
     "name": "Norway",
@@ -16282,7 +22197,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "BB": {
     "name": "Barbados",
@@ -16336,7 +22252,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KN": {
     "name": "Saint Kitts and Nevis",
@@ -16390,7 +22307,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KI": {
     "name": "Kiribati",
@@ -16444,7 +22362,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TL": {
     "name": "Timor-Leste",
@@ -16498,7 +22417,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SA": {
     "name": "Saudi Arabia",
@@ -16552,7 +22472,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CC": {
     "name": "Cocos (Keeling) Islands",
@@ -16606,7 +22527,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SM": {
     "name": "San Marino",
@@ -16733,7 +22655,8 @@
         "name": "Saint Stephen’s Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "UG": {
     "name": "Uganda",
@@ -16787,7 +22710,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PM": {
     "name": "Saint Pierre and Miquelon",
@@ -16841,7 +22765,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "PT": {
     "name": "Portugal",
@@ -17537,7 +23462,8 @@
         "name": "Boxing Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "SH": {
     "name": "Saint Helena, Ascension and Tristan da Cunha",
@@ -17591,7 +23517,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "MW": {
     "name": "Malawi",
@@ -17645,7 +23572,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "TK": {
     "name": "Tokelau",
@@ -17699,7 +23627,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "HN": {
     "name": "Honduras",
@@ -17753,7 +23682,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "UY": {
     "name": "Uruguay",
@@ -17807,7 +23737,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CV": {
     "name": "Cape Verde",
@@ -17861,7 +23792,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AQ": {
     "name": "Antarctica",
@@ -17915,7 +23847,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "AU": {
     "name": "Australia",
@@ -18018,7 +23951,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "IR": {
     "name": "Iran",
@@ -18089,7 +24023,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "SD": {
     "name": "Sudan",
@@ -18143,7 +24078,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "GT": {
     "name": "Guatemala",
@@ -18197,7 +24133,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LI": {
     "name": "Liechtenstein",
@@ -18304,7 +24241,8 @@
         "name": "St. Stephen's Day",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "TT": {
     "name": "Trinidad and Tobago",
@@ -18358,7 +24296,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "CU": {
     "name": "Cuba",
@@ -18421,7 +24360,8 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "FR": {
     "name": "France",
@@ -18625,7 +24565,8 @@
         "name": "2nd day of Christmas",
         "date": "2026-12-26"
       }
-    ]
+    ],
+    "climate": []
   },
   "SR": {
     "name": "Suriname",
@@ -18679,7 +24620,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "LR": {
     "name": "Liberia",
@@ -18733,7 +24675,8 @@
     },
     "embassies": [],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   },
   "KW": {
     "name": "Kuwait",
@@ -18812,6 +24755,7 @@
       }
     ],
     "attractions": [],
-    "holidays": []
+    "holidays": [],
+    "climate": []
   }
 }

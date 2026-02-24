@@ -59,6 +59,12 @@ interface CountryData {
     name: string;
     date: string;
   }[];
+  climate?: {
+    month: number;
+    temp_day: number;
+    temp_night: number;
+    rain: number;
+  }[];
 }
 
 function ExpandableText({ text }: { text: string }) {
@@ -597,6 +603,66 @@ function App() {
                     {selectedCountry.practical.driving_side === 'right' ? 'Prawostronny' : 'Lewostronny'}
                   </span>
                 </div>
+
+                {selectedCountry.climate && selectedCountry.climate.length > 0 && (
+                  <div className="info-block full-width climate-section">
+                    <label>Typowa pogoda (średnie miesięczne)</label>
+                    <div className="climate-charts-container">
+                      {/* Temperature Chart */}
+                      <div className="climate-chart-box">
+                        <span className="chart-title">Temperatura (°C)</span>
+                        <div className="temp-chart">
+                          {selectedCountry.climate.map((cl, idx) => (
+                            <div key={idx} className="temp-bar-group">
+                              <div className="temp-bars">
+                                <div 
+                                  className="temp-bar-day" 
+                                  style={{ height: `${Math.max(2, (cl.temp_day + 10) * 2)}px` }}
+                                  title={`Dzień: ${cl.temp_day}°C`}
+                                ></div>
+                                <div 
+                                  className="temp-bar-night" 
+                                  style={{ height: `${Math.max(2, (cl.temp_night + 10) * 2)}px` }}
+                                  title={`Noc: ${cl.temp_night}°C`}
+                                ></div>
+                              </div>
+                              <span className="chart-month-label">
+                                {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="chart-legend">
+                          <span className="legend-item"><i className="legend-dot day"></i> Dzień</span>
+                          <span className="legend-item"><i className="legend-dot night"></i> Noc</span>
+                        </div>
+                      </div>
+
+                      {/* Rain Chart */}
+                      <div className="climate-chart-box">
+                        <span className="chart-title">Opady (mm)</span>
+                        <div className="rain-chart">
+                          {selectedCountry.climate.map((cl, idx) => {
+                            const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]));
+                            const height = (cl.rain / (maxRain || 1)) * 60;
+                            return (
+                              <div key={idx} className="rain-bar-group">
+                                <div 
+                                  className="rain-bar" 
+                                  style={{ height: `${Math.max(2, height)}px` }}
+                                  title={`Opady: ${cl.rain}mm`}
+                                ></div>
+                                <span className="chart-month-label">
+                                  {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {selectedCountry.embassies && selectedCountry.embassies.length > 0 && (
                   <div className="info-block full-width embassy-section">
