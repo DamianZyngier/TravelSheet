@@ -4,7 +4,7 @@ import logoNoText from './assets/logo-no-text.png'
 import './App.css'
 
 // URL do topologii świata (lekkie 110m)
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
 interface CountryData {
   name: string;
@@ -355,7 +355,11 @@ function App() {
     let zoom = 10;
     let showDot = false;
 
-    if (huge.includes(country.iso2)) {
+    if (country.iso2 === 'AU') {
+      zoom = 2.5; // Australia needs wider view
+    } else if (country.iso2 === 'NZ') {
+      zoom = 8; // NZ needs slightly more context
+    } else if (huge.includes(country.iso2)) {
       zoom = 2.5;
     } else if (large.includes(country.iso2)) {
       zoom = 5;
@@ -583,7 +587,10 @@ function App() {
                 <div className="detail-map-container">
                   <ComposableMap 
                     key={selectedCountry.iso2}
-                    projectionConfig={{ scale: 140 }}
+                    projection="geoMercator"
+                    projectionConfig={{ 
+                      scale: 100
+                    }}
                     style={{ width: "100%", height: "100%" }}
                   >
                     <ZoomableGroup
