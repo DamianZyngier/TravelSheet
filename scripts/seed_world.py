@@ -48,54 +48,44 @@ async def seed_all():
     else:
         print(f"Synced {res['synced']} UNESCO sites.")
 
-        # 4b. Sync Emergency numbers
-        print("Step 4b: Syncing emergency numbers...")
-        try:
-            res = await emergency.sync_emergency_numbers(db)
-            print(f"Synced {res.get('synced', 0)} emergency records.")
-        except Exception as e:
-            print(f"Error in Step 4b: {e}")
+    # 4b. Sync Emergency numbers
+    print("Step 4b: Syncing emergency numbers...")
+    try:
+        res = await emergency.sync_emergency_numbers(db)
+        print(f"Synced {res.get('synced', 0)} emergency records.")
+    except Exception as e:
+        print(f"Error in Step 4b: {e}")
+
+    # 4c. Sync Costs
+    print("Step 4c: Syncing cost of living indices...")
+    try:
+        res = costs.sync_costs(db)
+        print(f"Synced {res.get('synced', 0)} cost records.")
+    except Exception as e:
+        print(f"Error in Step 4c: {e}")
     
-        # 4c. Sync Costs
-        print("Step 4c: Syncing cost of living indices...")
-        try:
-            res = costs.sync_costs(db)
-            print(f"Synced {res.get('synced', 0)} cost records.")
-        except Exception as e:
-            print(f"Error in Step 4c: {e}")
-    
-        # 5. Sync per-country details
-     (Gov.pl, Holidays, Weather)
-    # We'll do this for a subset or all depending on time
+    # 5. Sync per-country details (MSZ Gov.pl, Holidays, Weather)
     countries = db.query(models.Country).all()
-    print(f"Step 5: Syncing details for {len(countries)} countries (with rate limits)...")
+    if not countries:
+        print("No countries found in database to sync details for.")
+    else:
+        print(f"Step 5: Syncing details for {len(countries)} countries (with rate limits)...")
 
-    for i, country in enumerate(countries):
-        iso2 = country.iso_alpha2
-        name = country.name_pl or country.name
-        print(f"[{i+1}/{len(countries)}] Processing {name} ({iso2})...")
-        
-        # Gov.pl (MSZ)
-        try:
-            await msz_gov_pl.scrape_country(db, iso2)
-        except Exception as e: 
-            print(f"  - MSZ Error for {iso2}: {e}")
-            pass
+        for i, country in enumerate(countries):
+            iso2 = country.iso_alpha2
+            name = country.name_pl or country.name
+            print(f"[{i+1}/{len(countries)}] Processing {name} ({iso2})...")
+            
+            # Gov.pl (MSZ)
+            try:
+                await msz_gov_pl.scrape_country(db, iso2)
+            except Exception as e: 
+                print(f"  - MSZ Error for {iso2}: {e}")
 
-        # Holidays
-        try:
-            await holidays.sync_holidays(db, iso2)
-        except: pass
-
-        # Weather (Only if API key is present)
-        #if os.getenv("OPENWEATHER_API_KEY"):
-        #    try:
-        #        await weather.update_weather(db, iso2)
-        #    except: pass
-
-        # Rate limiting: MSZ & OpenHolidays don't have strict limits, but let's be kind.
-        # OpenWeather has 60/min
-        #await asyncio.sleep(1)
+            # Holidays
+            try:
+                await holidays.sync_holidays(db, iso2)
+            except: pass
 
     # 6. Summary of database content
     print("\nDatabase Summary:")
