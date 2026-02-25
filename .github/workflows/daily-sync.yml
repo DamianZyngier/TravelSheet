@@ -33,7 +33,7 @@ jobs:
           rm -f travel_cheatsheet.db
           # Redirect to log file for later viewing
           nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > uvicorn.log 2>&1 &
-          # Wait for API to be ready
+          # Wait for API to be ready 
           for i in {1..30}; do
             if curl -s http://localhost:8000/health > /dev/null; then
               echo "API is ready!"
