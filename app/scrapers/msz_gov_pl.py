@@ -5,6 +5,7 @@ from .. import models, crud
 import asyncio
 import re
 import logging
+from sqlalchemy import func
 from .utils import MSZ_GOV_PL_MANUAL_MAPPING, clean_polish_name, slugify, get_headers
 
 logger = logging.getLogger("uvicorn")
@@ -17,16 +18,31 @@ async def fetch_directory_slugs():
     url = "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"
     headers = get_headers()
     slugs = {}
-    async with httpx.AsyncClient(timeout=30.0) as client:
+    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
         try:
             response = await client.get(url, headers=headers)
             response.raise_for_status()
-            matches = re.findall(r'<a href="/web/dyplomacja/([^"]+)">\s*<div>\s*<div class="title">([^<]+)', response.text)
-            for slug, name in matches:
-                name_clean = clean_polish_name(name)
-                slug_clean = slug.strip().split('?')[0].strip('/')
-                if slug_clean and name_clean:
-                    slugs[name_clean] = slug_clean
+            soup = BeautifulSoup(response.text, 'html.parser')
+            # The directory uses <li> elements with <a> inside
+            links = soup.select('div.article-content ul li a')
+            if not links:
+                # Fallback to a broader selector if structure changed
+                links = soup.select('a[href*="/web/dyplomacja/"]')
+            
+            for a in links:
+                href = a.get('href', '')
+                title_div = a.select_one('.title') or a
+                if href:
+                    name = title_div.get_text().strip()
+                    # Extract slug from /web/dyplomacja/slug
+                    slug_match = re.search(r'/web/dyplomacja/([^/?#\s]+)', href)
+                    if slug_match:
+                        slug = slug_match.group(1)
+                        if slug != "informacje-dla-podrozujacych":
+                            name_clean = clean_polish_name(name)
+                            slugs[name_clean] = slug
+            
+            _SLUG_CACHE.update(slugs)
             logger.info(f"Fetched {len(slugs)} slugs from MSZ directory")
             return slugs
         except Exception as e:
@@ -35,53 +51,63 @@ async def fetch_directory_slugs():
 
 async def scrape_country(db: Session, iso_code: str):
     """Scrape MSZ data for specific country"""
-    if iso_code == 'PL':
+    if iso_code.upper() == 'PL':
         return {"status": "skipped", "reason": "Home country"}
 
-    country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso_code).first()
+    country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso_code.upper()).first()
     if not country:
         return {"error": "Country not found in DB"}
 
     name_pl = clean_polish_name(country.name_pl or country.name)
-    slug = _SLUG_CACHE.get(name_pl) or MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
     
+    # 1. Try from cache (directory page)
+    slug = _SLUG_CACHE.get(name_pl)
+    
+    # 2. Try from manual mapping
     if not slug:
-        # If not in directory/mapping, only try one best guess
-        guessed_slug = slugify(name_pl).replace('-', '')
-        urls_to_try = [f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"]
-    else:
-        # Optimized list based on tests
-        # Pattern 1 is the most universal (14/20)
-        # Pattern 3 catches UK and others (7/20)
-        # Pattern 2 catches specific subpages (4/20)
+        slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
+    
+    urls_to_try = []
+    if slug:
+        # If we have a slug, these are the most likely patterns
         urls_to_try = [
+            f"https://www.gov.pl/web/dyplomacja/{slug}",
             f"https://www.gov.pl/web/{slug}/informacje-dla-podrozujacych",
             f"https://www.gov.pl/web/{slug}/idp",
-            f"https://www.gov.pl/web/dyplomacja/{slug}",
         ]
+    else:
+        # Guessed slug as fallback
+        guessed_slug = slugify(name_pl).replace('-', '')
+        urls_to_try = [f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"]
 
     headers = get_headers()
     response_text = None
     final_url = None
+    last_status = None
 
     async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
         for i, url in enumerate(urls_to_try):
             try:
                 response = await client.get(url, headers=headers)
+                last_status = response.status_code
                 if response.status_code == 200:
                     curr_url = str(response.url).rstrip('/')
+                    # Ignore redirects to the main page or directory page
                     if curr_url in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
                         continue
                     
+                    # Basic validation that we are on a travel advisory page
                     if any(kw in response.text.lower() for kw in ["bezpieczeństwo", "ostrzeżenia", "informacje dla podróżujących"]):
                         response_text = response.text
                         final_url = str(response.url)
                         logger.info(f"  - Pattern {i+1} worked: {url}")
-                        break # Found it! Stop checking other URLs
-            except: continue
+                        break 
+            except Exception as e: 
+                last_status = str(e)
+                continue
 
     if not response_text:
-        return {"error": f"No valid MSZ page found for {iso_code}"}
+        return {"error": f"No valid MSZ page found for {iso_code}. Last status: {last_status}"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
     risk_level = "low"
@@ -100,6 +126,31 @@ async def scrape_country(db: Session, iso_code: str):
         elif 'odradzamy podróże, które nie są konieczne' in text_l: risk_level = 'high'
         elif 'odradzamy wszelkie podróże' in text_l: risk_level = 'critical'
     
+    # Text summary extraction
+    risk_summary = ""
+    summary_container = soup.select_one('.editor-content')
+    if summary_container:
+        # Usually the first paragraph or strong text is the risk summary
+        first_p = summary_container.select_one('p')
+        if first_p:
+            risk_summary = first_p.get_text().strip()
+    
+    if not risk_summary:
+        risk_summary = f"MSZ zaleca {risk_level} poziom ostrożności podczas podróży do tego kraju ({country.name_pl or country.name})."
+
+    # Save to database
+    safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
+    if not safety:
+        safety = models.SafetyInfo(country_id=country.id)
+        db.add(safety)
+    
+    safety.risk_level = risk_level
+    safety.summary = risk_summary
+    safety.full_url = final_url
+    safety.last_checked = func.now()
+    
+    db.commit()
+    return {"status": "success", "risk": risk_level}
     page_text = soup.get_text().lower()
     if 'odradza wszelkie podróże' in page_text or 'odradzamy wszelkie podróże' in page_text: 
         risk_level = 'critical'
@@ -240,14 +291,19 @@ async def scrape_all_with_cache(db: Session):
             if "error" in res: 
                 results["errors"] += 1
                 logger.warning(f"  - Skip: {res['error']}")
+                results["details"].append(f"{country.iso_alpha2}: {res['error']}")
+            elif res.get("status") == "skipped":
+                results["success"] += 1
+                logger.info(f"  - Skipped: {res.get('reason')}")
             else: 
                 results["success"] += 1
-                logger.info(f"  - OK: Risk {res['risk_level']}")
+                logger.info(f"  - OK: Risk {res.get('risk_level', 'unknown')}")
             
             await asyncio.sleep(1.0) 
         except Exception as e:
             results["errors"] += 1
-            results["details"].append(f"{country.iso_alpha2}: {str(e)}")
-            logger.error(f"  - CRITICAL ERROR: {str(e)}")
+            err_msg = f"{country.iso_alpha2} CRITICAL: {str(e)}"
+            results["details"].append(err_msg)
+            logger.error(f"  - {err_msg}")
             
     return results

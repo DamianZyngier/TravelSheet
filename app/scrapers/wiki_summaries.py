@@ -1,9 +1,11 @@
 import httpx
 from sqlalchemy.orm import Session
+from sqlalchemy.sql import func
 from .. import models
 import asyncio
 import logging
 import re
+from .utils import get_headers
 
 logger = logging.getLogger("uvicorn")
 
@@ -15,10 +17,10 @@ async def sync_wiki_summary(db: Session, country_iso2: str):
     if not country: return {"error": "Country not found"}
 
     name_pl = country.name_pl or country.name
-    
-    # 1. Fetch Wikipedia Summary (Polish)
-    # Using the official REST API for summaries
-    wiki_url = f"https://pl.wikipedia.org/api/rest_v1/page/summary/{name_pl.replace(' ', '_')}"
+    # Clean name for Wikipedia (e.g. "Włochy" is correct, but "Vietnam" might need "Wietnam")
+    wiki_title = name_pl.replace(' ', '_')
+    wiki_url = f"https://pl.wikipedia.org/api/rest_v1/page/summary/{wiki_title}"
+    headers = get_headers()
     
     # 2. Wikidata Query for symbols
     wikidata_query = f"""
@@ -31,17 +33,21 @@ async def sync_wiki_summary(db: Session, country_iso2: str):
     LIMIT 1
     """
 
-    async with httpx.AsyncClient(timeout=15.0) as client:
+    async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         # Wikipedia Part
         try:
-            wiki_resp = await client.get(wiki_url)
+            wiki_resp = await client.get(wiki_url, headers=headers)
             if wiki_resp.status_code == 200:
                 country.wiki_summary = wiki_resp.json().get("extract")
-        except: pass
+                logger.info(f"Summary for {country_iso2} fetched successfully.")
+            else:
+                logger.warning(f"Wikipedia summary for {wiki_title} ({country_iso2}) returned {wiki_resp.status_code}")
+        except Exception as e:
+            logger.error(f"Wikipedia summary error for {country_iso2}: {e}")
 
         # Wikidata Part
         try:
-            wd_resp = await client.get("https://query.wikidata.org/sparql", params={'query': wikidata_query})
+            wd_resp = await client.get("https://query.wikidata.org/sparql", params={'query': wikidata_query}, headers=headers)
             if wd_resp.status_code == 200:
                 bindings = wd_resp.json().get("results", {}).get("bindings", [])
                 if bindings:
@@ -53,14 +59,20 @@ async def sync_wiki_summary(db: Session, country_iso2: str):
                     if flower and not flower.startswith("Q"): symbols.append(f"Kwiat: {flower}")
                     if symbols:
                         country.national_symbols = " • ".join(symbols)
-        except: pass
+        except Exception as e:
+            logger.error(f"Wikidata symbols error for {country_iso2}: {e}")
 
     db.commit()
     return {"status": "success"}
 
 async def sync_all_summaries(db: Session):
     countries = db.query(models.Country).all()
+    results = {"success": 0, "errors": 0}
     for c in countries:
-        await sync_wiki_summary(db, c.iso_alpha2)
+        res = await sync_wiki_summary(db, c.iso_alpha2)
+        if "error" in res:
+            results["errors"] += 1
+        else:
+            results["success"] += 1
         await asyncio.sleep(0.3)
-    return {"status": "done"}
+    return results

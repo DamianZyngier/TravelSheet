@@ -1,0 +1,50 @@
+name: Monthly Data Sync
+
+on:
+  schedule:
+    # Pierwszego dnia każdego miesiąca o 4:00 UTC
+    - cron: '0 4 1 * *'
+  workflow_dispatch:
+
+jobs:
+  monthly-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Sync Weather
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        run: |
+          # Weather is expensive/limited, so we run it monthly
+          python scripts/sync_weather.py
+
+      - name: Export to JSON
+        run: |
+          python scripts/export_to_json.py
+
+      - name: Pull latest changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull origin master --rebase
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: monthly weather sync [skip ci]"
+          file_pattern: 'docs/data.json'

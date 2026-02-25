@@ -28,6 +28,7 @@ class Country(Base):
     ethnic_groups = Column(Text) # Store as comma-separated or JSON
     wiki_summary = Column(Text)
     national_symbols = Column(String(255)) # e.g. animal, flower
+    unesco_count = Column(Integer, default=0)
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
@@ -42,6 +43,7 @@ class Country(Base):
     embassies = relationship("Embassy", back_populates="country", cascade="all, delete-orphan")
     entry_req = relationship("EntryRequirement", back_populates="country", uselist=False, cascade="all, delete-orphan")
     attractions = relationship("Attraction", back_populates="country", cascade="all, delete-orphan")
+    unesco_places = relationship("UnescoPlace", back_populates="country", cascade="all, delete-orphan")
     practical = relationship("PracticalInfo", back_populates="country", uselist=False, cascade="all, delete-orphan")
     weather = relationship("Weather", back_populates="country", uselist=False, cascade="all, delete-orphan")
     climate = relationship("Climate", back_populates="country", cascade="all, delete-orphan")
@@ -152,6 +154,23 @@ class Attraction(Base):
         return f"<Attraction(name='{self.name}', cat='{self.category}')>"
 
     country = relationship("Country", back_populates="attractions")
+
+class UnescoPlace(Base):
+    __tablename__ = "unesco_places"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    unesco_id = Column(String(20)) # Official UNESCO ID
+    name = Column(String(255), nullable=False)
+    description = Column(Text)
+    category = Column(String(50)) # Cultural, Natural, Mixed
+    year = Column(Integer) # Year of inscription
+    image_url = Column(String(500))
+
+    def __repr__(self):
+        return f"<UnescoPlace(name='{self.name}', cat='{self.category}')>"
+
+    country = relationship("Country", back_populates="unesco_places")
 
 class Religion(Base):
     __tablename__ = "religions"

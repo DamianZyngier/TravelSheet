@@ -1342,22 +1342,71 @@
   color: #2d3748;
 }
 
+.unesco-type-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #718096;
+  background-color: #edf2f7;
+  padding: 2px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-left: 32px; /* Align with name start */
+}
+
 
 /* Enhanced Attractions Styles */
 .unesco-item-v2 {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 1.25rem;
+  flex-direction: row; /* Horizontal layout */
+  gap: 16px;
+  padding: 1rem;
   background-color: #f8fafc;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
-  transition: transform 0.2s;
+  transition: all 0.2s;
+  overflow: hidden;
 }
 
-.unesco-item-v2:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+.unesco-item-v2.has-link {
+  cursor: pointer;
+}
+
+.unesco-item-v2.has-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border-color: #bee3f8;
+  background-color: #f0f9ff;
+}
+
+.unesco-item-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.unesco-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.unesco-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.unesco-official-link {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #3182ce;
+  font-weight: 700;
 }
 
 .unesco-item-header {

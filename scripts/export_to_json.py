@@ -22,6 +22,7 @@ def export_all():
         joinedload(models.Country.embassies),
         joinedload(models.Country.entry_req),
         joinedload(models.Country.attractions),
+        joinedload(models.Country.unesco_places),
         joinedload(models.Country.practical),
         joinedload(models.Country.weather),
         joinedload(models.Country.climate),
@@ -54,6 +55,7 @@ def export_all():
             "ethnic_groups": c.ethnic_groups,
             "latitude": float(c.latitude) if c.latitude else None,
             "longitude": float(c.longitude) if c.longitude else None,
+            "unesco_count": c.unesco_count or 0,
             
             "religions": [
                 {"name": r.name, "percentage": float(r.percentage)} for r in c.religions
@@ -123,6 +125,16 @@ def export_all():
                     "email": e.email,
                     "website": e.website
                 } for e in c.embassies
+            ],
+
+            "unesco_places": [
+                {
+                    "name": u.name,
+                    "category": u.category,
+                    "unesco_id": u.unesco_id,
+                    "image_url": u.image_url,
+                    "description": u.description
+                } for u in c.unesco_places
             ],
 
             "attractions": [

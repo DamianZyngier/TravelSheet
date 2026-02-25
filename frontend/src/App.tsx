@@ -17,6 +17,7 @@ interface CountryData {
   flag_url: string;
   latitude: number | null;
   longitude: number | null;
+  unesco_count: number;
   timezone: string | null;
   national_dish: string | null;
   wiki_summary: string | null;
@@ -88,6 +89,13 @@ interface CountryData {
     category: string;
     description?: string;
   }[];
+  unesco_places?: {
+    name: string;
+    category: string;
+    unesco_id?: string;
+    image_url?: string;
+    description?: string;
+  }[];
   climate?: {
     month: number;
     temp_day: number;
@@ -134,6 +142,7 @@ function App() {
   const [mapPosition, setMapPosition] = useState({ coordinates: [0, 0] as [number, number], zoom: 1 });
   const [chartTooltip, setChartTooltip] = useState<{ x: number, y: number, text: string, visible: boolean }>({ x: 0, y: 0, text: '', visible: false });
   const [activeSection, setActiveSection] = useState('summary');
+  const [isUnescoExpanded, setIsUnescoExpanded] = useState(false);
   
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -150,7 +159,8 @@ function App() {
     { id: 'health', label: 'Zdrowie', icon: '💉' },
     { id: 'holidays', label: 'Święta', icon: '📅' },
     { id: 'embassies', label: 'Ambasady', icon: '🏢' },
-    { id: 'attractions', label: 'Atrakcje', icon: '🏛️' },
+    { id: 'attractions', label: 'Atrakcje', icon: '📍' },
+    { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️' },
     { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️' },
   ];
 
@@ -347,6 +357,7 @@ function App() {
 
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
+    setIsUnescoExpanded(false);
     
     if (country && country.longitude !== null && country.latitude !== null) {
       const { zoom } = getMapSettings(country);
@@ -523,6 +534,7 @@ function App() {
                 if (s.id === 'holidays') isVisible = !!selectedCountry.holidays?.length;
                 if (s.id === 'embassies') isVisible = !!selectedCountry.embassies?.length;
                 if (s.id === 'attractions') isVisible = !!selectedCountry.attractions?.length;
+                if (s.id === 'unesco') isVisible = !!selectedCountry.unesco_places?.length;
                 
                 if (!isVisible && s.id !== 'summary' && s.id !== 'safety') return null;
                 
@@ -619,17 +631,17 @@ function App() {
                                                         <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
                                                       </div>
                                                       
-                                                      <div className="discover-section">
-                                                        <div className="discover-container">
-                                                          {selectedCountry.wiki_summary ? (
-                                                            <div className="wiki-summary-text">
-                                                              <ExpandableText text={selectedCountry.wiki_summary} />
-                                                            </div>
-                                                          ) : (
-                                                            <p className="no-data-text">Ładowanie opisu kraju...</p>
-                                                          )}
-                                                          
-                                                          {selectedCountry.national_symbols && (
+                                                                            <div className="discover-section">
+                                                                              <div className="discover-container">
+                                                                                {selectedCountry.wiki_summary ? (
+                                                                                  <div className="wiki-summary-text">
+                                                                                    <ExpandableText text={selectedCountry.wiki_summary} />
+                                                                                  </div>
+                                                                                ) : (
+                                                                                  <p className="no-data-text">Brak dostępnego opisu dla tego kraju.</p>
+                                                                                )}
+                                                                                {selectedCountry.national_symbols && (
+                                                      
                                                             <div className="national-symbols-bar">
                                                               <span className="symbols-label">Symbole narodowe:</span>
                                                               <span className="symbols-value">{selectedCountry.national_symbols}</span>
@@ -1141,18 +1153,14 @@ function App() {
                   {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
                     <div id="attractions" className="info-block full-width unesco-section scroll-mt">
                       <div className="section-header">
-                        <span className="section-header-icon">🏛️</span>
+                        <span className="section-header-icon">📍</span>
                         <label>Najciekawsze miejsca i atrakcje</label>
                       </div>
                       <div className="unesco-grid">
                                         {selectedCountry.attractions.map((attr, idx) => (
                                           <div key={idx} className="unesco-item-v2">
                                             <div className="unesco-item-header">
-                                              <span className="unesco-icon">
-                                                {attr.category === 'Cultural' ? '🏛️' : 
-                                                 attr.category === 'Natural' ? '🌳' : 
-                                                 attr.category === 'Mixed' ? '🏔️' : '📍'}
-                                              </span>
+                                              <span className="unesco-icon">✨</span>
                                               <span className="unesco-name">{attr.name}</span>
                                             </div>
                                             {attr.description && (
@@ -1165,6 +1173,61 @@ function App() {
                                       </div>
                                     </div>
                                   )}
+
+                  {selectedCountry.unesco_places && selectedCountry.unesco_places.length > 0 && (
+                    <div id="unesco" className="info-block full-width unesco-section scroll-mt">
+                      <div className="section-header">
+                        <span className="section-header-icon">🏛️</span>
+                        <label>Lista UNESCO ({selectedCountry.unesco_count})</label>
+                      </div>
+                      <div className="unesco-grid">
+                        {(isUnescoExpanded ? selectedCountry.unesco_places : selectedCountry.unesco_places.slice(0, 10)).map((place, idx) => (
+                          <div key={idx} className="unesco-item-v2 has-link" onClick={() => {
+                            if (place.unesco_id) window.open(`https://whc.unesco.org/en/list/${place.unesco_id}`, '_blank');
+                          }}>
+                            {place.image_url && (
+                              <div className="unesco-item-image">
+                                <img src={place.image_url} alt={place.name} loading="lazy" />
+                              </div>
+                            )}
+                            <div className="unesco-item-content">
+                              <div className="unesco-item-header">
+                                <span className="unesco-icon">
+                                  {place.category === 'Cultural' ? '🏛️' : 
+                                   place.category === 'Natural' ? '🌳' : 
+                                   place.category === 'Mixed' ? '🏔️' : '📍'}
+                                </span>
+                                <div className="unesco-name">{place.name}</div>
+                              </div>
+                              <div className="unesco-type-badge">{place.category}</div>
+                              
+                              {place.description && (
+                                <div className="unesco-description" onClick={(e) => e.stopPropagation()}>
+                                  <ExpandableText text={place.description} />
+                                </div>
+                              )}
+
+                              {place.unesco_id && (
+                                <div className="unesco-official-link">
+                                  Zobacz oficjalną stronę UNESCO →
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      {selectedCountry.unesco_places.length > 10 && (
+                        <button 
+                          className="expand-holidays-btn" 
+                          style={{ marginTop: '1rem', width: '100%' }}
+                          onClick={() => setIsUnescoExpanded(!isUnescoExpanded)}
+                        >
+                          {isUnescoExpanded ? 'Pokaż mniej' : `Pokaż pozostałe (${selectedCountry.unesco_places.length - 10})`}
+                        </button>
+                      )}
+                    </div>
+                  )}
                   
                 </div>
 

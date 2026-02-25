@@ -6,21 +6,23 @@ import logging
 
 logger = logging.getLogger("uvicorn")
 
-async def sync_wiki_attractions(db: Session, country_iso2: str):
-    country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
-    if not country: return {"error": "Country not found"}
-
-    # Refined SPARQL
+async def sync_wiki_attractions_batch(db: Session, countries: list[models.Country]):
+    """Sync attractions for a batch of countries to speed up process"""
+    if not countries: return
+    
+    country_map = {c.iso_alpha2.upper(): c for c in countries}
+    isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
+    
     query = f"""
-    SELECT DISTINCT ?item ?itemLabel ?itemDescription ?sitelinks WHERE {{
+    SELECT DISTINCT ?countryISO ?item ?itemLabel ?itemDescription ?sitelinks WHERE {{
+      VALUES ?countryISO {{ {isos} }}
+      ?country wdt:P297 ?countryISO.
       ?item wdt:P31/wdt:P279* wd:Q570116; 
             wdt:P17 ?country.
-      ?country wdt:P297 "{country_iso2.upper()}".
       ?item wikibase:sitelinks ?sitelinks.
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     ORDER BY DESC(?sitelinks)
-    LIMIT 15
     """
 
     url = "https://query.wikidata.org/sparql"
@@ -29,17 +31,25 @@ async def sync_wiki_attractions(db: Session, country_iso2: str):
         "Accept": "application/sparql-results+json"
     }
 
-    async with httpx.AsyncClient(timeout=30.0) as client:
+    async with httpx.AsyncClient(timeout=60.0) as client:
         try:
             resp = await client.get(url, params={'query': query}, headers=headers)
             if resp.status_code != 200:
-                return {"error": f"Wikidata error {resp.status_code}"}
+                logger.error(f"Wikidata batch error {resp.status_code}")
+                return
             
             data = resp.json()
             results = data.get("results", {}).get("bindings", [])
             
             synced = 0
+            # To avoid huge number of attractions, we'll only take top 10 per country from the results
+            counts = {iso: 0 for iso in country_map.keys()}
+            
             for res in results:
+                iso = res.get("countryISO", {}).get("value")
+                if not iso or counts[iso] >= 10: continue
+                
+                country = country_map[iso]
                 name = res.get("itemLabel", {}).get("value")
                 description = res.get("itemDescription", {}).get("value")
                 
@@ -60,19 +70,26 @@ async def sync_wiki_attractions(db: Session, country_iso2: str):
                         is_unique=False
                     ))
                     synced += 1
+                    counts[iso] += 1
             
             db.commit()
-            return {"status": "success", "synced": synced}
+            logger.info(f"Batch sync: Added {synced} attractions for {len(countries)} countries.")
         except Exception as e:
-            return {"error": str(e)}
+            logger.error(f"Batch sync error: {e}")
 
 async def sync_all_wiki_attractions(db: Session):
     countries = db.query(models.Country).all()
-    total = {"synced_countries": 0, "total_attractions": 0}
-    for c in countries:
-        res = await sync_wiki_attractions(db, c.iso_alpha2)
-        if "status" in res:
-            total["synced_countries"] += 1
-            total["total_attractions"] += res["synced"]
-        await asyncio.sleep(1.0)
+    total = {"synced_countries": len(countries), "total_attractions": 0}
+    
+    # Process in batches of 10 countries
+    batch_size = 10
+    for i in range(0, len(countries), batch_size):
+        batch = countries[i : i + batch_size]
+        logger.info(f"Syncing Wiki attractions batch {i//batch_size + 1}/{(len(countries)+batch_size-1)//batch_size}")
+        await sync_wiki_attractions_batch(db, batch)
+        # Still sleep a bit to be nice to Wikidata
+        await asyncio.sleep(2.0)
+        
+    # Count total at the end
+    total["total_attractions"] = db.query(models.Attraction).filter(models.Attraction.category == 'Wiki Attraction').count()
     return total

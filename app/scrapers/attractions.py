@@ -1,54 +1,100 @@
+import httpx
 from sqlalchemy.orm import Session
 from .. import models
 import logging
+import json
+import os
 
 logger = logging.getLogger("uvicorn")
 
-# Static UNESCO Data for major countries (Fallback since API is often blocking)
-UNESCO_DATA = {
-    'PL': [('Kraków Historic Centre', 'Cultural'), ('Wieliczka Salt Mine', 'Cultural'), ('Auschwitz Birkenau', 'Cultural'), ('Białowieża Forest', 'Natural'), ('Warsaw Historic Centre', 'Cultural')],
-    'IT': [('Historic Centre of Rome', 'Cultural'), ('Pompeii', 'Cultural'), ('Venice and its Lagoon', 'Cultural'), ('Amalfi Coast', 'Cultural'), ('The Dolomites', 'Natural')],
-    'FR': [('Palace of Versailles', 'Cultural'), ('Mont-Saint-Michel', 'Cultural'), ('Paris, Banks of the Seine', 'Cultural'), ('Chartres Cathedral', 'Cultural')],
-    'ES': [('Alhambra, Generalife and Albayzín', 'Cultural'), ('Works of Antoni Gaudí', 'Cultural'), ('Historic Centre of Cordoba', 'Cultural')],
-    'JP': [('Historic Monuments of Ancient Kyoto', 'Cultural'), ('Itsukushima Shinto Shrine', 'Cultural'), ('Himeji-jo', 'Cultural'), ('Yakushima', 'Natural'), ('Mount Fuji', 'Cultural')],
-    'EG': [('Pyramids of Giza', 'Cultural'), ('Ancient Thebes with its Necropolis', 'Cultural'), ('Abu Simbel', 'Cultural')],
-    'US': [('Grand Canyon National Park', 'Natural'), ('Statue of Liberty', 'Cultural'), ('Yellowstone National Park', 'Natural'), ('Yosemite', 'Natural')],
-    'CN': [('The Great Wall', 'Cultural'), ('Imperial Palaces of the Ming and Qing Dynasties', 'Cultural'), ('Mausoleum of the First Qin Emperor', 'Cultural')],
-    'GR': [('Acropolis, Athens', 'Cultural'), ('Meteora', 'Mixed'), ('Delphi', 'Cultural'), ('Mount Athos', 'Mixed')],
-    'TR': [('Historic Areas of Istanbul', 'Cultural'), ('Göreme National Park', 'Mixed'), ('Ephesus', 'Cultural')],
-    'IN': [('Taj Mahal', 'Cultural'), ('Agra Fort', 'Cultural'), ('Jaipur City', 'Cultural'), ('Hampi', 'Cultural')],
-    'KE': [('Mount Kenya National Park', 'Natural'), ('Lake Turkana National Parks', 'Natural'), ('Lamu Old Town', 'Cultural')],
-    'TZ': [('Serengeti National Park', 'Natural'), ('Kilimanjaro National Park', 'Natural'), ('Stone Town of Zanzibar', 'Cultural')],
-    'PE': [('Historic Sanctuary of Machu Picchu', 'Mixed'), ('City of Cuzco', 'Cultural')],
-    'BR': [('Iguaçu National Park', 'Natural'), ('Historic Town of Ouro Preto', 'Cultural'), ('Rio de Janeiro', 'Cultural')],
-    'DE': [('Cologne Cathedral', 'Cultural'), ('Museum Island, Berlin', 'Cultural'), ('Wartburg Castle', 'Cultural')]
-}
-
 async def sync_unesco_sites(db: Session):
-    """Sync UNESCO sites using static data fallback"""
-    synced = 0
+    """Sync UNESCO sites using static data fallback from json file"""
+    synced_sites = 0
+    synced_countries = 0
+    errors = []
     
-    # Process static data
-    for iso, sites in UNESCO_DATA.items():
-        country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso).first()
-        if not country: continue
+    # Path to fallback data
+    fallback_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'unesco_fallback.json')
+    
+    try:
+        if not os.path.exists(fallback_path):
+            error_msg = f"Fallback file not found at {fallback_path}"
+            logger.error(error_msg)
+            return {"status": "error", "message": error_msg}
+
+        with open(fallback_path, 'r', encoding='utf-8') as f:
+            unesco_fallback = json.load(f)
+    except json.JSONDecodeError as e:
+        error_msg = f"Failed to parse unesco_fallback.json: {e}"
+        logger.error(error_msg)
+        return {"status": "error", "message": error_msg}
+    except Exception as e:
+        error_msg = f"Failed to load unesco_fallback.json: {e}"
+        logger.error(error_msg)
+        return {"status": "error", "message": error_msg}
+
+    # Process fallback data
+    for iso, sites in unesco_fallback.items():
+        country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso.upper()).first()
+        if not country:
+            continue
         
-        for name, category in sites:
-            existing = db.query(models.Attraction).filter(
-                models.Attraction.country_id == country.id,
-                models.Attraction.name == name
-            ).first()
+        try:
+            # Clear existing unesco places for this country to avoid duplicates on re-run
+            db.query(models.UnescoPlace).filter(models.UnescoPlace.country_id == country.id).delete()
             
-            if not existing:
-                db.add(models.Attraction(
+            # Update total count
+            country.unesco_count = len(sites)
+            
+            # Add all sites
+            for site_data in sites:
+                name = ""
+                category = ""
+                uid = None
+                img = None
+                description = None
+                
+                if isinstance(site_data, list):
+                    name = site_data[0]
+                    category = site_data[1]
+                else: # Dict format
+                    name = site_data.get("name")
+                    category = site_data.get("category")
+                    uid = site_data.get("id")
+                    img = site_data.get("image")
+                    description = site_data.get("description")
+
+                db.add(models.UnescoPlace(
                     country_id=country.id,
+                    unesco_id=str(uid) if uid else None,
                     name=name,
                     category=category,
-                    is_must_see=True,
-                    is_unique=True
+                    image_url=img,
+                    description=description
                 ))
-                synced += 1
+                synced_sites += 1
+            
+            synced_countries += 1
+        except Exception as e:
+            err = f"Error syncing {iso}: {str(e)}"
+            logger.error(err)
+            errors.append(err)
     
     db.commit()
-    logger.info(f"Synced {synced} UNESCO sites from static data")
-    return {"status": "success", "synced": synced}
+    logger.info(f"UNESCO Sync: Processed {synced_countries} countries, {synced_sites} sites total.")
+    if errors:
+        logger.warning(f"UNESCO Sync encountered {len(errors)} errors.")
+
+    return {
+        "status": "success", 
+        "countries_synced": synced_countries, 
+        "sites_synced": synced_sites,
+        "errors": errors
+    }
+
+async def sync_attractions_placeholder(db: Session):
+    """
+    Placeholder for general attractions (not UNESCO).
+    Currently we use Wikidata attractions scraper for this.
+    """
+    return {"status": "info", "message": "General attractions are synced via Wikidata scraper"}

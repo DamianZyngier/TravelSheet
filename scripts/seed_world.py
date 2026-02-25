@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal, engine
-from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, msz_gov_pl, emergency, climate, costs
+from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, msz_gov_pl, emergency, climate, costs, wiki_summaries, wikidata_attractions
 from app import models
 
 async def seed_all():
@@ -52,7 +52,7 @@ async def seed_all():
     print("Step 4: Syncing UNESCO World Heritage sites...")
     try:
         res = await attractions.sync_unesco_sites(db)
-        print(f"Synced {res.get('synced', 0)} UNESCO sites.")
+        print(f"Synced {res.get('sites_synced', 0)} UNESCO sites.")
     except Exception as e:
         print(f"Error in Step 4: {e}")
 
@@ -82,10 +82,14 @@ async def seed_all():
     # Weekly sync calls individual endpoints for full coverage
     for i, country in enumerate(countries[:20]): # Limit to first 20 for basic seeding
         iso2 = country.iso_alpha2
+        print(f"[{i+1}/20] Syncing details for {country.name_pl or country.name} ({iso2})...")
         try:
             await msz_gov_pl.scrape_country(db, iso2)
             await holidays.sync_holidays(db, iso2)
-        except: pass
+            await wiki_summaries.sync_wiki_summary(db, iso2)
+            await wikidata_attractions.sync_wiki_attractions_batch(db, [country])
+        except Exception as e: 
+            print(f"  - Error: {e}")
 
     # 6. Summary of database content
     print("\nDatabase Summary:")
@@ -94,6 +98,7 @@ async def seed_all():
         ("Languages", models.Language),
         ("Currencies", models.Currency),
         ("Attractions", models.Attraction),
+        ("Unesco Places", models.UnescoPlace),
         ("Holidays", models.Holiday),
         ("Practical Info", models.PracticalInfo),
         ("Safety Info", models.SafetyInfo),

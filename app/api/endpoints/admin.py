@@ -108,12 +108,12 @@ async def sync_climate_endpoint(force: bool = False, db: Session = Depends(get_d
     result = await sync_all_climate(db, force=force)
     return result
 
-@router.post("/update-weather/{iso_code}")
-async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
-    """Admin endpoint - update weather for specific country"""
-    from ...scrapers.weather import update_weather
+@router.post("/update-all-weather")
+async def update_all_weather_endpoint(db: Session = Depends(get_db)):
+    """Admin endpoint - update weather for all countries"""
+    from ...scrapers.weather import update_all_weather
 
-    result = await update_weather(db, iso_code.upper())
+    result = await update_all_weather(db)
     return result
 
 @router.post("/scrape-msz-gov-pl/{iso_code}")
