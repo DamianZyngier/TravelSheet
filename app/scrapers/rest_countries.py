@@ -7,52 +7,59 @@ from .utils import translate_to_pl, get_headers
 
 logger = logging.getLogger("uvicorn")
 
-async def sync_countries(db: Session):
-    """
-    Syncs base country list from REST Countries API.
-    Uses exactly 10 fields to comply with API limits.
-    """
-    # Reduced to exactly 10 fields to avoid 400 error
-    fields = "name,cca2,cca3,capital,region,continents,latlng,translations,languages,currencies"
-    url = f"https://restcountries.com/v3.1/all?fields={fields}"
-    
-    logger.info(f"Fetching countries from {url}...")
-    
-    data = None
-    last_error = None
+async def fetch_data(url):
     async with httpx.AsyncClient(timeout=40.0, follow_redirects=True) as client:
         for attempt in range(3):
             try:
                 resp = await client.get(url, headers=get_headers())
                 if resp.status_code == 200:
-                    data = resp.json()
-                    break
+                    return resp.json()
                 else:
-                    last_error = f"HTTP {resp.status_code}: {resp.text[:100]}"
                     logger.error(f"Attempt {attempt+1}: REST Countries returned {resp.status_code}")
                     if attempt < 2: await asyncio.sleep(2)
             except Exception as e:
-                last_error = str(e)
                 logger.error(f"Attempt {attempt+1} failed: {e}")
                 if attempt < 2: await asyncio.sleep(2)
+    return None
 
-    if not data:
-        logger.error(f"All attempts to fetch from REST Countries failed. Last error: {last_error}")
-        return {"error": f"Failed to fetch REST Countries after 3 attempts. {last_error}"}
+async def sync_countries(db: Session):
+    """
+    Syncs base country list from REST Countries API.
+    Handles the 10-field limit by making multiple requests.
+    """
+    # Request 1: Basic info
+    fields1 = "name,cca2,cca3,capital,region,continents,latlng,translations,languages,currencies"
+    url1 = f"https://restcountries.com/v3.1/all?fields={fields1}"
+    
+    # Request 2: Extra info (population, idd)
+    fields2 = "cca2,population,idd"
+    url2 = f"https://restcountries.com/v3.1/all?fields={fields2}"
+    
+    logger.info("Fetching country data from REST Countries (Part 1)...")
+    data1 = await fetch_data(url1)
+    
+    logger.info("Fetching country data from REST Countries (Part 2)...")
+    data2 = await fetch_data(url2)
 
-    logger.info(f"Successfully fetched {len(data)} countries from API.")
+    if not data1:
+        return {"error": "Failed to fetch primary country data"}
+
+    # Merge data by ISO2
+    extra_info = {item.get("cca2"): item for item in data2} if data2 else {}
 
     results = {"synced": 0, "updated": 0, "skipped": 0, "errors": []}
     
-    for i, country_data in enumerate(data):
+    for i, country_data in enumerate(data1):
         try:
             iso2 = country_data.get("cca2")
             if not iso2:
                 results["skipped"] += 1
                 continue
             
+            extra = extra_info.get(iso2, {})
+            
             if (i+1) % 50 == 0:
-                logger.info(f"Processing country {i+1}/{len(data)}: {iso2}")
+                logger.info(f"Processing country {i+1}/{len(data1)}: {iso2}")
 
             country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()
             
@@ -73,6 +80,13 @@ async def sync_countries(db: Session):
             lat = coords[0] if len(coords) > 0 else None
             lon = coords[1] if len(coords) > 1 else None
 
+            # Population & Phone Code
+            population = extra.get("population")
+            idd = extra.get("idd", {})
+            root = idd.get("root", "")
+            suffixes = idd.get("suffixes", [])
+            phone_code = f"{root}{suffixes[0]}" if root and suffixes else (root if root else None)
+
             if not country:
                 country = models.Country(
                     iso_alpha2=iso2,
@@ -84,7 +98,9 @@ async def sync_countries(db: Session):
                     region=region,
                     flag_url=flag_url,
                     latitude=lat,
-                    longitude=lon
+                    longitude=lon,
+                    population=population,
+                    phone_code=phone_code
                 )
                 db.add(country)
                 db.flush()
@@ -93,6 +109,8 @@ async def sync_countries(db: Session):
                 country.flag_url = flag_url
                 country.latitude = lat
                 country.longitude = lon
+                country.population = population
+                country.phone_code = phone_code
                 results["updated"] += 1
 
             # Languages

@@ -82,8 +82,24 @@ def parse_unesco_records(records):
         }
         
         iso_codes_raw = rec.get('iso_codes')
+        iso_codes = []
         if iso_codes_raw:
-            for iso in [c.strip().upper() for c in iso_codes_raw.split(',')]:
+            iso_codes = [c.strip().upper() for c in iso_codes_raw.split(',')]
+            
+        is_transnational = len(iso_codes) > 1
+
+        site_obj = {
+            "name": rec.get('name_en'),
+            "category": rec.get('category'),
+            "is_danger": danger_val,
+            "is_transnational": is_transnational,
+            "id": uid,
+            "image": img_url,
+            "description": clean_html(rec.get('short_description_en'))
+        }
+        
+        if iso_codes:
+            for iso in iso_codes:
                 if not iso: continue
                 if iso not in unesco_data_dict:
                     unesco_data_dict[iso] = []
@@ -129,6 +145,7 @@ async def sync_unesco_sites(db: Session):
                     name=site["name"],
                     category=site["category"],
                     is_danger=site.get("is_danger", False),
+                    is_transnational=site.get("is_transnational", False),
                     image_url=site["image"],
                     description=site["description"]
                 ))

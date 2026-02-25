@@ -70,6 +70,7 @@ class UnescoPlaceSchema(BaseModel):
     description: Optional[str]
     category: Optional[str]
     is_danger: bool
+    is_transnational: bool
     year: Optional[int]
     image_url: Optional[str]
 

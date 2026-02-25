@@ -78,11 +78,9 @@ async def seed_all():
     countries = db.query(models.Country).all()
     print(f"Step 5: Syncing details for {len(countries)} countries...")
 
-    # We use a smaller subset for per-country details in seed script to avoid long runs
-    # Weekly sync calls individual endpoints for full coverage
-    for i, country in enumerate(countries[:20]): # Limit to first 20 for basic seeding
+    for i, country in enumerate(countries):
         iso2 = country.iso_alpha2
-        print(f"[{i+1}/20] Syncing details for {country.name_pl or country.name} ({iso2})...")
+        print(f"[{i+1}/{len(countries)}] Syncing details for {country.name_pl or country.name} ({iso2})...")
         try:
             await msz_gov_pl.scrape_country(db, iso2)
             await holidays.sync_holidays(db, iso2)

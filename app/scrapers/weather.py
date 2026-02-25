@@ -4,6 +4,9 @@ import asyncio
 from sqlalchemy.orm import Session
 from .. import models
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClient = None):
     """Fetch current weather for country capital using OpenWeatherMap"""
@@ -11,12 +14,20 @@ async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClie
     api_key = os.getenv("OPENWEATHER_API_KEY")
     if not api_key:
         return {"error": "OPENWEATHER_API_KEY not set"}
+    
+    api_key = api_key.strip() # Clean potential whitespace
 
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
     if not country or not country.capital:
         return {"error": "Country or capital not found"}
 
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={country.capital},{country_iso2}&appid={api_key}&units=metric"
+    # Use params dict for safer encoding
+    params = {
+        "q": f"{country.capital},{country_iso2}",
+        "appid": api_key,
+        "units": "metric"
+    }
+    url = "https://api.openweathermap.org/data/2.5/weather"
 
     # Use provided client or create new one
     close_client = False
@@ -25,9 +36,12 @@ async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClie
         close_client = True
 
     try:
-        response = await client.get(url)
+        response = await client.get(url, params=params)
+        if response.status_code == 401:
+            return {"error": f"Invalid API Key (401). Body: {response.text}"}
         if response.status_code == 429:
             return {"error": "Rate limit exceeded"}
+        
         response.raise_for_status()
         data = response.json()
         

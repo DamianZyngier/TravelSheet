@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
 import logoNoText from './assets/logo-no-text.png'
 import './App.css'
@@ -314,18 +314,26 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
+  }, []);
+
+  // Sync state with URL on back/forward
+  useEffect(() => {
+    if (Object.keys(countries).length === 0) return;
 
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
       const countryCode = params.get('kraj');
-      if (!countryCode) {
-        setSelectedCountry(null);
+      
+      if (countryCode && countries[countryCode.toUpperCase()]) {
+        handleSelectCountry(countries[countryCode.toUpperCase()], true);
+      } else {
+        handleSelectCountry(null, true);
       }
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [countries]);
 
   // Reset scroll to top when country selection changes
   useEffect(() => {
@@ -356,7 +364,7 @@ function App() {
     return { zoom, showDot };
   };
 
-  const handleSelectCountry = (country: CountryData | null) => {
+  const handleSelectCountry = useCallback((country: CountryData | null, skipHistory: boolean = false) => {
     setSelectedCountry(country);
     setIsUnescoExpanded(false);
     
@@ -370,15 +378,17 @@ function App() {
       setMapPosition({ coordinates: [0, 0], zoom: 1 });
     }
 
-    const url = new URL(window.location.href);
-    if (country) {
-      url.searchParams.set('kraj', country.iso2);
-    } else {
-      url.searchParams.delete('kraj');
-      url.hash = ''; // Clear hash when returning to list
+    if (!skipHistory) {
+      const url = new URL(window.location.href);
+      if (country) {
+        url.searchParams.set('kraj', country.iso2);
+      } else {
+        url.searchParams.delete('kraj');
+        url.hash = ''; // Clear hash when returning to list
+      }
+      window.history.pushState({}, '', url.toString());
     }
-    window.history.pushState({}, '', url.toString());
-  };
+  }, [countries]); // Dependencies for callback
 
   const continents = useMemo(() => {
     const set = new Set(Object.values(countries).map(c => c.continent).filter(Boolean));
@@ -664,6 +674,22 @@ function App() {
                     <span>{selectedCountry.capital || 'Brak danych'}</span>
                   </div>
                   
+                  {selectedCountry.weather?.temp !== null && (
+                    <div className="info-block weather-top-block">
+                      <label>Pogoda teraz</label>
+                      <div className="weather-brief">
+                        {selectedCountry.weather?.icon && (
+                          <img 
+                            src={`https://openweathermap.org/img/wn/${selectedCountry.weather.icon}.png`} 
+                            alt={selectedCountry.weather.condition} 
+                            className="weather-mini-icon"
+                          />
+                        )}
+                        <span className="weather-temp-main">{Math.round(selectedCountry.weather?.temp || 0)}°C</span>
+                      </div>
+                    </div>
+                  )}
+
                   {selectedCountry.timezone && (
                     <div className="info-block">
                       <label>Strefa czasowa</label>
@@ -1202,6 +1228,7 @@ function App() {
                               </div>
                               <div className="unesco-badges-container" style={{ display: 'flex', gap: '8px', marginLeft: '32px' }}>
                                 <div className={`unesco-type-badge ${place.category?.toLowerCase() || ''}`}>{place.category}</div>
+                                {place.is_transnational && <div className="unesco-type-badge transnational">MIĘDZYNARODOWE</div>}
                                 {place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
                               </div>
                               
