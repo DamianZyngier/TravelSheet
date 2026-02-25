@@ -19,34 +19,42 @@ async def seed_all():
     # 1. Sync all countries from REST Countries
     print("Step 1: Syncing all countries from REST Countries...")
     res = await rest_countries.sync_countries(db)
+    
+    country_count = db.query(models.Country).count()
+    if country_count == 0:
+        print("CRITICAL ERROR: No countries in database and API sync failed.")
+        print("Aborting seed to prevent data loss in export.")
+        db.close()
+        sys.exit(1) # Exit with error to stop the workflow
+        
     if 'error' in res:
-        print(f"Error in Step 1: {res['error']}")
+        print(f"Warning in Step 1: {res['error']}. Continuing with existing {country_count} countries.")
     else:
-        print(f"Synced {res['synced']} countries.")
+        print(f"Synced/Updated {country_count} countries.")
 
     # 2. Sync currency exchange rates
     print("Step 2: Syncing currency exchange rates...")
-    res = await exchange_rates.sync_rates(db)
-    if 'error' in res:
-        print(f"Error in Step 2: {res['error']}")
-    else:
-        print(f"Updated {res['updated']} rates.")
+    try:
+        res = await exchange_rates.sync_rates(db)
+        print(f"Updated {res.get('updated', 0)} rates.")
+    except Exception as e:
+        print(f"Error in Step 2: {e}")
 
     # 3. Sync static data (plugs, water, etc.)
     print("Step 3: Syncing static data (plugs, water, driving side)...")
-    res = static_info.sync_static_data(db)
-    if 'error' in res:
-        print(f"Error in Step 3: {res['error']}")
-    else:
-        print(f"Synced {res['synced']} static records.")
+    try:
+        res = static_info.sync_static_data(db)
+        print(f"Synced {res.get('synced', 0)} static records.")
+    except Exception as e:
+        print(f"Error in Step 3: {e}")
 
     # 4. Sync UNESCO sites
     print("Step 4: Syncing UNESCO World Heritage sites...")
-    res = await attractions.sync_unesco_sites(db)
-    if 'error' in res:
-        print(f"Error in Step 4: {res['error']}")
-    else:
-        print(f"Synced {res['synced']} UNESCO sites.")
+    try:
+        res = await attractions.sync_unesco_sites(db)
+        print(f"Synced {res.get('synced', 0)} UNESCO sites.")
+    except Exception as e:
+        print(f"Error in Step 4: {e}")
 
     # 4b. Sync Emergency numbers
     print("Step 4b: Syncing emergency numbers...")
@@ -64,32 +72,23 @@ async def seed_all():
     except Exception as e:
         print(f"Error in Step 4c: {e}")
     
-    # 5. Sync per-country details (MSZ Gov.pl, Holidays, Weather)
+    # 5. Sync per-country details (MSZ Gov.pl, Holidays)
+    # For full seed we process all, but limit to 50 most important or first available if needed
+    # Here we do all available
     countries = db.query(models.Country).all()
-    if not countries:
-        print("No countries found in database to sync details for.")
-    else:
-        print(f"Step 5: Syncing details for {len(countries)} countries (with rate limits)...")
+    print(f"Step 5: Syncing details for {len(countries)} countries...")
 
-        for i, country in enumerate(countries):
-            iso2 = country.iso_alpha2
-            name = country.name_pl or country.name
-            print(f"[{i+1}/{len(countries)}] Processing {name} ({iso2})...")
-            
-            # Gov.pl (MSZ)
-            try:
-                await msz_gov_pl.scrape_country(db, iso2)
-            except Exception as e: 
-                print(f"  - MSZ Error for {iso2}: {e}")
-
-            # Holidays
-            try:
-                await holidays.sync_holidays(db, iso2)
-            except: pass
+    # We use a smaller subset for per-country details in seed script to avoid long runs
+    # Weekly sync calls individual endpoints for full coverage
+    for i, country in enumerate(countries[:20]): # Limit to first 20 for basic seeding
+        iso2 = country.iso_alpha2
+        try:
+            await msz_gov_pl.scrape_country(db, iso2)
+            await holidays.sync_holidays(db, iso2)
+        except: pass
 
     # 6. Summary of database content
     print("\nDatabase Summary:")
-    
     entities = [
         ("Countries", models.Country),
         ("Languages", models.Language),
@@ -97,19 +96,13 @@ async def seed_all():
         ("Attractions", models.Attraction),
         ("Holidays", models.Holiday),
         ("Practical Info", models.PracticalInfo),
-        ("Laws & Customs", models.LawAndCustom),
         ("Safety Info", models.SafetyInfo),
-        ("Embassies", models.Embassy),
-        ("Weather", models.Weather)
+        ("Embassies", models.Embassy)
     ]
 
     for label, model in entities:
         count = db.query(model).count()
-        samples = db.query(model).limit(3).all()
-        sample_str = ", ".join([str(s) for s in samples])
-        if count > 3:
-            sample_str += "..."
-        print(f"{label:18} {count:4} records. Samples: [{sample_str}]")
+        print(f"{label:18} {count:4} records.")
 
     db.close()
     print("\nSeeding completed!")

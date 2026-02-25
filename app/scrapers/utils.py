@@ -5,7 +5,6 @@ from deep_translator import GoogleTranslator
 logger = logging.getLogger("uvicorn")
 
 # Manual mapping for countries and their subdomains on gov.pl
-# Only including countries that are known to have their own pages
 MSZ_GOV_PL_MANUAL_MAPPING = {
     'AF': 'afganistan', 'AL': 'albania', 'DZ': 'algieria', 'AD': 'andora', 'AO': 'angola', 
     'AR': 'argentyna', 'AM': 'armenia', 'AU': 'australia', 'AT': 'austria', 'AZ': 'azerbejdzan',
@@ -97,5 +96,6 @@ def slugify(text: str) -> str:
 
 def get_headers():
     return {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json"
     }

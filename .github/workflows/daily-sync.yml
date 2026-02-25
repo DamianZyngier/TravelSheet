@@ -43,6 +43,10 @@ jobs:
             sleep 1
           done
 
+      - name: Initial Seed
+        run: |
+          python scripts/seed_world.py
+
       - name: Sync Data
         run: |
           echo "Syncing exchange rates..."
