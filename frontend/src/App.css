@@ -1347,12 +1347,33 @@
   font-size: 0.65rem;
   text-transform: uppercase;
   font-weight: 800;
-  color: #718096;
-  background-color: #edf2f7;
   padding: 2px 8px;
   border-radius: 4px;
   align-self: flex-start;
-  margin-left: 32px; /* Align with name start */
+}
+
+.unesco-type-badge.cultural {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+}
+
+.unesco-type-badge.natural {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #dcfce7;
+}
+
+.unesco-type-badge.mixed {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fef3c7;
+}
+
+.unesco-type-badge.danger {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fee2e2;
 }
 
 

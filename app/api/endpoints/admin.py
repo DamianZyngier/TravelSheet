@@ -47,7 +47,7 @@ async def sync_cdc_endpoint(db: Session = Depends(get_db)):
 @router.post("/sync-unesco-sites")
 async def sync_unesco_sites(db: Session = Depends(get_db)):
     """Admin endpoint - sync UNESCO World Heritage sites"""
-    from ...scrapers.attractions import sync_unesco_sites
+    from ...scrapers.unesco import sync_unesco_sites
 
     result = await sync_unesco_sites(db)
     return result

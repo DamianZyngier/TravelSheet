@@ -164,6 +164,7 @@ class UnescoPlace(Base):
     name = Column(String(255), nullable=False)
     description = Column(Text)
     category = Column(String(50)) # Cultural, Natural, Mixed
+    is_danger = Column(Boolean, default=False)
     year = Column(Integer) # Year of inscription
     image_url = Column(String(500))
 

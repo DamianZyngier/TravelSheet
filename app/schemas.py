@@ -64,6 +64,18 @@ class AttractionSchema(BaseModel):
     class Config:
         from_attributes = True
 
+class UnescoPlaceSchema(BaseModel):
+    unesco_id: Optional[str]
+    name: str
+    description: Optional[str]
+    category: Optional[str]
+    is_danger: bool
+    year: Optional[int]
+    image_url: Optional[str]
+
+    class Config:
+        from_attributes = True
+
 # Basic response (lista krajów)
 class CountryBasic(BaseModel):
     iso_alpha2: str
@@ -75,6 +87,7 @@ class CountryBasic(BaseModel):
     region: Optional[str]
     flag_emoji: Optional[str]
     flag_url: Optional[str]
+    unesco_count: int = 0
 
     class Config:
         from_attributes = True
@@ -179,6 +192,7 @@ class CountryDetail(BaseModel):
     ethnic_groups: Optional[str] = None
     wiki_summary: Optional[str] = None
     national_symbols: Optional[str] = None
+    unesco_count: int = 0
 
     # Grouped Info
     languages: List[LanguageSchema] = []
@@ -186,6 +200,7 @@ class CountryDetail(BaseModel):
     safety: Optional[SafetySchema]
     embassies: List[EmbassySchema] = []
     attractions: List[AttractionSchema] = []
+    unesco_places: List[UnescoPlaceSchema] = []
     
     # New Fields
     religions: List[ReligionSchema] = []

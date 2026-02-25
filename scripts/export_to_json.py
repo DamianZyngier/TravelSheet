@@ -131,6 +131,7 @@ def export_all():
                 {
                     "name": u.name,
                     "category": u.category,
+                    "is_danger": u.is_danger,
                     "unesco_id": u.unesco_id,
                     "image_url": u.image_url,
                     "description": u.description

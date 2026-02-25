@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal, engine
-from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, msz_gov_pl, emergency, climate, costs, wiki_summaries, wikidata_attractions
+from app.scrapers import rest_countries, exchange_rates, static_info, unesco, holidays, weather, msz_gov_pl, emergency, climate, costs, wiki_summaries, wikidata_attractions
 from app import models
 
 async def seed_all():
@@ -51,7 +51,7 @@ async def seed_all():
     # 4. Sync UNESCO sites
     print("Step 4: Syncing UNESCO World Heritage sites...")
     try:
-        res = await attractions.sync_unesco_sites(db)
+        res = await unesco.sync_unesco_sites(db)
         print(f"Synced {res.get('sites_synced', 0)} UNESCO sites.")
     except Exception as e:
         print(f"Error in Step 4: {e}")

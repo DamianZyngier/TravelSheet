@@ -92,6 +92,7 @@ interface CountryData {
   unesco_places?: {
     name: string;
     category: string;
+    is_danger?: boolean;
     unesco_id?: string;
     image_url?: string;
     description?: string;
@@ -1199,7 +1200,10 @@ function App() {
                                 </span>
                                 <div className="unesco-name">{place.name}</div>
                               </div>
-                              <div className="unesco-type-badge">{place.category}</div>
+                              <div className="unesco-badges-container" style={{ display: 'flex', gap: '8px', marginLeft: '32px' }}>
+                                <div className={`unesco-type-badge ${place.category?.toLowerCase() || ''}`}>{place.category}</div>
+                                {place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
+                              </div>
                               
                               {place.description && (
                                 <div className="unesco-description" onClick={(e) => e.stopPropagation()}>

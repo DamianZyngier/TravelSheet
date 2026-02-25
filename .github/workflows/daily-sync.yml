@@ -53,6 +53,8 @@ jobs:
           curl -s -X POST "http://localhost:8000/api/admin/sync-exchange-rates" | jq .
           echo "Syncing visas (Wiki)..."
           curl -s -X POST "http://localhost:8000/api/admin/sync-visas" | jq .
+          echo "Syncing UNESCO sites..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-unesco-sites" | jq .
 
       - name: Scrape All Countries (MSZ gov.pl)
         run: |
