@@ -7,4 +7,6 @@ pydantic-settings==2.1.0
 httpx==0.26.0
 beautifulsoup4==4.12.3
 python-dotenv==1.0.0
-alembic==1.13.1deep-translator
+alembic==1.13.1
+deep-translator
+requests
