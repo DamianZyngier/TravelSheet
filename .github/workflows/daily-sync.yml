@@ -71,7 +71,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash
           git pull origin master --rebase
+          git stash pop || echo "Nothing to pop"
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
