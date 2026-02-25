@@ -208,6 +208,7 @@ function App() {
   const handleSelectCountry = (country: CountryData | null) => {
     setSelectedCountry(country);
     setShowLicense(false);
+    setActiveSection('summary');
     if (country && country.longitude !== null && country.latitude !== null) {
       setMapPosition({ coordinates: [country.longitude, country.latitude], zoom: 5 });
     }
@@ -226,6 +227,7 @@ function App() {
   }, [countries, filterSafety, filterContinent, searchQuery]);
 
   const scrollToSection = (id: string) => {
+    setActiveSection(id);
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
