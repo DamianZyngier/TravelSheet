@@ -5,64 +5,17 @@ from .. import models, crud
 import asyncio
 import re
 import logging
+from .utils import GOV_PL_MANUAL_MAPPING, clean_polish_name, slugify, get_headers
 
 logger = logging.getLogger("uvicorn")
 
 # Global cache for slugs
 _SLUG_CACHE = {}
 
-# Manual mapping for countries and their subdomains on gov.pl
-MANUAL_MAPPING = {
-    'AF': 'afganistan', 'AL': 'albania', 'DZ': 'algieria', 'AD': 'andora', 'AO': 'angola', 
-    'AR': 'argentyna', 'AM': 'armenia', 'AU': 'australia', 'AT': 'austria', 'AZ': 'azerbejdzan',
-    'BS': 'bahamy', 'BH': 'bahrajn', 'BD': 'bangladesz', 'BB': 'barbados', 'BE': 'belgia',
-    'BZ': 'belize', 'BJ': 'benin', 'BT': 'bhutan', 'BY': 'bialorus', 'BO': 'boliwia',
-    'BA': 'bosnia-i-hercegowina', 'BW': 'botswana', 'BR': 'brazylia', 'BN': 'brunei-darussalam', 'BG': 'bulgaria',
-    'BF': 'burkina-faso', 'BI': 'burundi', 'CL': 'chile', 'CN': 'chiny', 'HR': 'chorwacja',
-    'CY': 'cypr', 'TD': 'czad', 'CZ': 'czechy', 'DK': 'dania', 'DM': 'dominika',
-    'DO': 'dominikana', 'DJ': 'dzibuti', 'EG': 'egipt', 'EC': 'ekwador', 'ER': 'erytrea',
-    'EE': 'estonia', 'ET': 'etiopia', 'PH': 'filipiny', 'FI': 'finlandia', 'FR': 'francja',
-    'GA': 'gabon', 'GM': 'gambia', 'GH': 'ghana', 'GR': 'grecja', 'GD': 'grenada',
-    'GE': 'gruzja', 'GY': 'gujana', 'GN': 'gwinea', 'GW': 'gwineabissau', 'GQ': 'gwinearownikowa',
-    'HT': 'haiti', 'ES': 'hiszpania', 'NL': 'holandia', 'HN': 'honduras', 'IN': 'indie',
-    'ID': 'indonezja', 'IQ': 'irak', 'IR': 'iran', 'IE': 'irlandia', 'IS': 'islandia',
-    'IL': 'izrael', 'JM': 'jamajka', 'JP': 'japonia', 'YE': 'jemen', 'JO': 'jordania',
-    'KH': 'kambodza', 'CM': 'kamerun', 'CA': 'kanada', 'QA': 'katar', 'KZ': 'kazachstan',
-    'KE': 'kenia', 'KG': 'kirgistan', 'CO': 'kolumbia', 'KM': 'komory', 'CG': 'kongo-brazzaville',
-    'CD': 'kongo-kinszasa', 'KP': 'korea-polnocna', 'KR': 'republika-korei', 'XK': 'kosowo', 'CR': 'kostaryka',
-    'CU': 'kuba', 'KW': 'kuwejt', 'LA': 'laos', 'LS': 'lesotho', 'LB': 'liban',
-    'LR': 'liberia', 'LY': 'libia', 'LI': 'liechtenstein', 'LT': 'litwa', 'LU': 'luksemburg',
-    'LV': 'lotwa', 'MK': 'macedonia-polnocna', 'MG': 'madagaskar', 'MY': 'malezja', 'MW': 'malawi',
-    'MV': 'malediwy', 'ML': 'bamako', 'MT': 'malta', 'MA': 'maroko', 'MR': 'mauretania',
-    'MU': 'mauritius', 'MX': 'meksyk', 'MD': 'moldawia', 'MC': 'monako', 'MN': 'mongolia',
-    'ME': 'czarnogora', 'MZ': 'mozambik', 'MM': 'mjanma', 'NA': 'namibia', 'NP': 'nepal',
-    'DE': 'niemcy', 'NE': 'niger', 'NG': 'nigeria', 'NI': 'nikaragua', 'NO': 'norwegia',
-    'NZ': 'nowa-zelandia', 'OM': 'oman', 'PK': 'pakistan', 'PA': 'panama', 'PG': 'papua-nowa-gwinea',
-    'PY': 'paragwaj', 'PE': 'peru', 'PT': 'portugalia', 'RU': 'rosja', 'RW': 'rwanda',
-    'RO': 'rumunia', 'SV': 'salwador', 'WS': 'samoa', 'SM': 'san-marino', 'SA': 'arabia-saudyjska',
-    'SN': 'senegal', 'RS': 'serbia', 'SC': 'seszele', 'SL': 'sierraleone', 'SG': 'singapur',
-    'SK': 'slowacja', 'SI': 'slowenia', 'SO': 'somalia', 'LK': 'srilanka', 'US': 'usa',
-    'SD': 'sudan', 'SR': 'surinam', 'SY': 'syria', 'SZ': 'suazi', 'TJ': 'tadzykistan',
-    'TH': 'tajlandia', 'TW': 'tajwan', 'TZ': 'tanzania', 'TL': 'timor-wschodni', 'TG': 'togo',
-    'TO': 'tonga', 'TT': 'trynidaditobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
-    'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
-    'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielkabrytania', 'VN': 'wietnam',
-    'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
-    'AE': 'zjednoczone-emiraty-arabskie'
-}
-
-def clean_name(name):
-    if not name: return ""
-    name = re.sub(r'\(.*?\)', '', name)
-    name = name.split(',')[0]
-    return name.strip().lower()
-
 async def fetch_directory_slugs():
     """Fetch all country slugs from the directory page"""
     url = "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
+    headers = get_headers()
     slugs = {}
     async with httpx.AsyncClient(timeout=30.0) as client:
         try:
@@ -70,7 +23,7 @@ async def fetch_directory_slugs():
             response.raise_for_status()
             matches = re.findall(r'<a href="/web/dyplomacja/([^"]+)">\s*<div>\s*<div class="title">([^<]+)', response.text)
             for slug, name in matches:
-                name_clean = clean_name(name)
+                name_clean = clean_polish_name(name)
                 slug_clean = slug.strip().split('?')[0].strip('/')
                 if slug_clean and name_clean:
                     slugs[name_clean] = slug_clean
@@ -89,12 +42,11 @@ async def scrape_country(db: Session, iso_code: str):
     if not country:
         return {"error": "Country not found in DB"}
 
-    name_pl = clean_name(country.name_pl or country.name)
-    slug = _SLUG_CACHE.get(name_pl) or MANUAL_MAPPING.get(iso_code.upper())
+    name_pl = clean_polish_name(country.name_pl or country.name)
+    slug = _SLUG_CACHE.get(name_pl) or GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
     
     if not slug:
-        slug = name_pl.replace(' ', '').replace('ą', 'a').replace('ć', 'c').replace('ę', 'e').replace('ł', 'l').replace('ń', 'n').replace('ó', 'o').replace('ś', 's').replace('ź', 'z').replace('ż', 'z')
-        slug = re.sub(r'[^a-z0-9]', '', slug)
+        slug = slugify(name_pl).replace('-', '') # MSZ often uses no hyphens in slugs
 
     urls_to_try = [
         f"https://www.gov.pl/web/dyplomacja/{slug}",
@@ -102,10 +54,7 @@ async def scrape_country(db: Session, iso_code: str):
         f"https://www.gov.pl/web/{slug}/informacje-dla-podrozujacych",
     ]
 
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
-
+    headers = get_headers()
     response_text = None
     final_url = None
 
@@ -164,15 +113,12 @@ async def scrape_country(db: Session, iso_code: str):
     else:
         risk_phrase = f"MSZ zaleca zachowanie zwykłej ostrożności podczas podróży do tego kraju ({country_name})."
 
-    # Extract additional details (all alerts and travel advisory descriptions)
+    # Extract additional details
     risk_details_list = []
-    
-    # Priority 1: Main travel advisory description
     advisory_el = soup.select_one('.travel-advisory--description')
     if advisory_el:
         risk_details_list.append(advisory_el.get_text().strip())
         
-    # Priority 2: Other alerts (alert-danger, alert-info)
     alerts = soup.select('.alert-danger, .alert-warning')
     for alert in alerts:
         text = alert.get_text().strip()
@@ -246,19 +192,16 @@ async def scrape_country(db: Session, iso_code: str):
     if health_section:
         health_text_list = []
         curr = health_section.parent
-        # Look ahead for a few paragraphs or until next major header
-        for _ in range(25): # Increased range to capture full content
+        for _ in range(25):
             if curr:
                 txt = curr.get_text().strip()
                 if txt: health_text_list.append(txt)
                 curr = curr.find_next_sibling()
-                # Stop if we hit a major section header (h2 or h3)
                 if curr and curr.name in ['h2', 'h3']: break
         
         health_full = "\n\n".join(health_text_list)
         health_text_lower = health_full.lower()
         
-        # Simple extraction logic for structured fields (compatibility)
         if "żółtą febrę" in health_text_lower or "żółtej febry" in health_text_lower:
             if "obowiązkowe" in health_text_lower or "wymagane" in health_text_lower:
                 vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane)"

@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+from sqlalchemy.sql import func
 from typing import List, Optional
 from . import models
 

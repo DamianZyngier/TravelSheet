@@ -82,7 +82,7 @@ def export_all():
                 "water_safe": c.practical.tap_water_safe if c.practical else None,
                 "driving_side": c.practical.driving_side if c.practical else "",
                 "card_acceptance": c.practical.card_acceptance if c.practical else "",
-                "emergency": json.loads(c.practical.emergency_numbers) if c.practical and c.practical.emergency_numbers else None,
+                "emergency": None, # Will be set below
                 "vaccinations_required": c.practical.vaccinations_required if c.practical else "",
                 "vaccinations_suggested": c.practical.vaccinations_suggested if c.practical else "",
                 "health_info": c.practical.health_info if c.practical else "",
@@ -147,6 +147,14 @@ def export_all():
                 } for cl in sorted(c.climate, key=lambda x: x.month)
             ]
         }
+        
+        # Safe emergency numbers parsing
+        if c.practical and c.practical.emergency_numbers:
+            try:
+                country_data["practical"]["emergency"] = json.loads(c.practical.emergency_numbers)
+            except:
+                pass
+
         output[c.iso_alpha2] = country_data
 
     # Zapisujemy do folderu docs (dla GitHub Pages)

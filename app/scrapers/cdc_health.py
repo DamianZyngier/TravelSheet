@@ -4,26 +4,14 @@ from sqlalchemy.orm import Session
 from .. import models
 import asyncio
 import logging
-import re
+from .utils import CDC_MAPPING, slugify, get_headers
 
 logger = logging.getLogger("uvicorn")
-
-CDC_MAPPING = {
-    'RU': 'russia', 'US': 'united-states', 'GB': 'united-kingdom',
-    'KR': 'south-korea', 'KP': 'north-korea', 'AE': 'united-arab-emirates',
-    'CD': 'democratic-republic-of-the-congo', 'CG': 'republic-of-the-congo',
-    'CI': 'cote-divoire', 'SZ': 'eswatini'
-}
 
 def get_cdc_slug(country):
     if country.iso_alpha2 in CDC_MAPPING:
         return CDC_MAPPING[country.iso_alpha2]
-    
-    # Clean name: remove special chars, replace spaces with hyphens
-    slug = country.name.lower()
-    slug = re.sub(r'[^a-z\s-]', '', slug)
-    slug = slug.replace(' ', '-')
-    return slug
+    return slugify(country.name)
 
 async def sync_cdc_health(db: Session, country_iso2: str):
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
@@ -34,14 +22,13 @@ async def sync_cdc_health(db: Session, country_iso2: str):
     
     async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
         try:
-            resp = await client.get(url)
+            resp = await client.get(url, headers=get_headers())
             if resp.status_code != 200:
                 return {"error": f"CDC returned {resp.status_code} for {slug}"}
             
             soup = BeautifulSoup(resp.text, 'html.parser')
             vax_table = soup.select_one('table.vax-list-table')
             
-            # If not found, try alternative slug (sometimes CDC uses different names)
             if not vax_table:
                 return {"error": "No vax table found"}
 

@@ -4,25 +4,9 @@ from .. import models
 from datetime import date
 import asyncio
 import logging
-from deep_translator import GoogleTranslator
+from .utils import translate_to_pl, get_headers
 
 logger = logging.getLogger("uvicorn")
-
-# In-memory cache for translations to avoid redundant API calls
-translation_cache = {}
-
-def translate_to_pl(text: str) -> str:
-    if not text: return text
-    if text in translation_cache:
-        return translation_cache[text]
-    
-    try:
-        translated = GoogleTranslator(source='auto', target='pl').translate(text)
-        translation_cache[text] = translated
-        return translated
-    except Exception as e:
-        logger.error(f"Translation error for '{text}': {e}")
-        return text
 
 async def sync_all_holidays(db: Session):
     """Sync holidays for all countries using Nager.Date API"""
@@ -37,7 +21,6 @@ async def sync_all_holidays(db: Session):
             else:
                 results["synced"] += 1
             
-            # Nager.Date is free, but let's be polite
             await asyncio.sleep(0.2)
         except Exception as e:
             logger.error(f"Failed to sync holidays for {country.iso_alpha2}: {str(e)}")
@@ -49,12 +32,12 @@ async def sync_holidays(db: Session, iso2: str):
     """Sync holidays for a country from Nager.Date API with automatic translation"""
     current_year = date.today().year
     
-    # Nager.Date API: https://date.nager.at/api/v3/PublicHolidays/2024/JP
+    # Nager.Date API
     url = f"https://date.nager.at/api/v3/PublicHolidays/{current_year}/{iso2.upper()}"
 
     async with httpx.AsyncClient(timeout=15.0) as client:
         try:
-            response = await client.get(url)
+            response = await client.get(url, headers=get_headers())
             if response.status_code != 200:
                 return {"error": f"API returned {response.status_code} for {iso2}"}
             holidays_data = response.json()
@@ -76,7 +59,6 @@ async def sync_holidays(db: Session, iso2: str):
     for h in holidays_data:
         try:
             original_name = h.get('name') or h.get('localName')
-            # Translate if it's not already in Polish (Nager mostly returns English/Local)
             name_pl = translate_to_pl(original_name)
             
             holiday = models.Holiday(

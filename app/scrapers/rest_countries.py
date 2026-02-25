@@ -2,23 +2,9 @@ import httpx
 from sqlalchemy.orm import Session
 from .. import models
 import logging
-import asyncio
-from deep_translator import GoogleTranslator
+from .utils import translate_to_pl, get_headers
 
 logger = logging.getLogger("uvicorn")
-
-# Caching for translations
-translation_cache = {}
-
-def translate_to_pl(text: str) -> str:
-    if not text: return text
-    if text in translation_cache: return translation_cache[text]
-    try:
-        translated = GoogleTranslator(source='auto', target='pl').translate(text)
-        translation_cache[text] = translated
-        return translated
-    except:
-        return text
 
 async def sync_countries(db: Session):
     """
@@ -29,7 +15,7 @@ async def sync_countries(db: Session):
     
     async with httpx.AsyncClient(timeout=30.0) as client:
         try:
-            resp = await client.get(url)
+            resp = await client.get(url, headers=get_headers())
             resp.raise_for_status()
             data = resp.json()
         except Exception as e:
