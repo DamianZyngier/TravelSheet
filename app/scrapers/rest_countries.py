@@ -10,10 +10,10 @@ logger = logging.getLogger("uvicorn")
 async def sync_countries(db: Session):
     """
     Syncs base country list from REST Countries API.
-    Uses fields filter to reduce data size and avoid 400 errors.
+    Uses exactly 10 fields to comply with API limits.
     """
-    # Optimized URL with fields to avoid 400 errors
-    fields = "name,cca2,cca3,capital,flags,population,region,continents,latlng,translations,languages,currencies"
+    # Reduced to exactly 10 fields to avoid 400 error
+    fields = "name,cca2,cca3,capital,region,continents,latlng,translations,languages,currencies"
     url = f"https://restcountries.com/v3.1/all?fields={fields}"
     
     logger.info(f"Fetching countries from {url}...")
@@ -35,7 +35,6 @@ async def sync_countries(db: Session):
                 if attempt < 2: await asyncio.sleep(2)
 
     if not data:
-        # Fallback to absolute minimum if API fails but we need a list
         logger.error("All attempts to fetch from REST Countries failed.")
         return {"error": "Failed to fetch REST Countries after 3 attempts"}
 
@@ -59,16 +58,15 @@ async def sync_countries(db: Session):
         capital_list = country_data.get("capital", [])
         capital = capital_list[0] if capital_list else None
         
-        # Flag and other details
-        flag_url = country_data.get("flags", {}).get("png") or country_data.get("flags", {}).get("svg")
-        population = country_data.get("population")
+        # Flag URL - construction from reliable flagcdn.com instead of API
+        flag_url = f"https://flagcdn.com/w320/{iso2.lower()}.png"
+        
         region = country_data.get("region")
         
         continents = country_data.get("continents", [])
         continent = continents[0] if continents else None
         
-        coords = country_data.get("latlng", [None, None])
-        # Sometimes it returns empty list
+        coords = country_data.get("latlng", [])
         lat = coords[0] if len(coords) > 0 else None
         lon = coords[1] if len(coords) > 1 else None
 
@@ -82,7 +80,6 @@ async def sync_countries(db: Session):
                 continent=continent,
                 region=region,
                 flag_url=flag_url,
-                population=population,
                 latitude=lat,
                 longitude=lon
             )
@@ -91,7 +88,6 @@ async def sync_countries(db: Session):
             results["synced"] += 1
         else:
             # Update existing basic info
-            country.population = population
             country.flag_url = flag_url
             country.latitude = lat
             country.longitude = lon
