@@ -11,12 +11,14 @@ logger = logging.getLogger("uvicorn")
 
 async def sync_all_visas(db: Session):
     url = "https://en.wikipedia.org/wiki/Visa_requirements_for_Polish_citizens"
+    logger.info(f"Syncing visas from {url}...")
     headers = get_headers()
     
     async with httpx.AsyncClient(timeout=30.0) as client:
         try:
             resp = await client.get(url, headers=headers)
             if resp.status_code != 200:
+                logger.error(f"Wiki returned status {resp.status_code}")
                 return {"error": f"Wiki returned {resp.status_code}"}
             
             soup = BeautifulSoup(resp.content, 'html.parser')
@@ -32,10 +34,12 @@ async def sync_all_visas(db: Session):
                         break
             
             if not target_table:
+                logger.error("Could not find main visa table on Wikipedia page")
                 return {"error": "Could not find main visa table"}
 
             synced = 0
             rows = target_table.find_all('tr')
+            logger.info(f"Found visa table with {len(rows)} rows. Processing...")
             
             for row in rows:
                 cols = row.find_all(['td', 'th'])

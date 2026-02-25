@@ -5,11 +5,9 @@ from .. import models
 import asyncio
 import re
 import logging
+from .utils import MSZ_GOV_PL_MANUAL_MAPPING, clean_polish_name, get_headers, slugify
 
 logger = logging.getLogger("uvicorn")
-
-# Use mapping from gov_pl or define a similar one
-from .gov_pl import MANUAL_MAPPING, clean_name
 
 async def scrape_embassies(db: Session):
     """
@@ -25,12 +23,11 @@ async def scrape_embassies(db: Session):
                 
             try:
                 iso2 = country.iso_alpha2
-                name_pl = clean_name(country.name_pl or country.name)
-                slug = MANUAL_MAPPING.get(iso2.upper())
+                name_pl = clean_polish_name(country.name_pl or country.name)
+                slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso2.upper())
                 
                 if not slug:
-                    slug = name_pl.replace(' ', '').replace('ą', 'a').replace('ć', 'c').replace('ę', 'e').replace('ł', 'l').replace('ń', 'n').replace('ó', 'o').replace('ś', 's').replace('ź', 'z').replace('ż', 'z')
-                    slug = re.sub(r'[^a-z0-9]', '', slug)
+                    slug = slugify(name_pl).replace('-', '')
 
                 # Extended URL list to catch more mission types
                 urls = [
@@ -40,9 +37,10 @@ async def scrape_embassies(db: Session):
                 ]
                 
                 all_missions = []
+                headers = get_headers()
                 for url in urls:
                     try:
-                        resp = await client.get(url)
+                        resp = await client.get(url, headers=headers)
                         if resp.status_code == 200:
                             missions = parse_embassy_page(resp.text, country.id)
                             if missions:
@@ -78,7 +76,6 @@ def parse_embassy_page(html, country_id):
         return None
 
     # Strategy: Split by headers (h2, h3, strong) to find individual missions
-    # Many gov.pl pages use <h2> for mission types
     
     sections = []
     current_section = {"title": "Ambasada", "content": ""}

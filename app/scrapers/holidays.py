@@ -11,13 +11,17 @@ logger = logging.getLogger("uvicorn")
 async def sync_all_holidays(db: Session):
     """Sync holidays for all countries using Nager.Date API"""
     countries = db.query(models.Country).all()
+    logger.info(f"Syncing holidays for {len(countries)} countries...")
     results = {"synced": 0, "errors": 0}
     
-    for country in countries:
+    for i, country in enumerate(countries):
         try:
+            if (i+1) % 20 == 0:
+                logger.info(f"[{i+1}/{len(countries)}] Syncing {country.iso_alpha2} holidays...")
             res = await sync_holidays(db, country.iso_alpha2)
             if "error" in res:
                 results["errors"] += 1
+                logger.error(f"  - Error for {country.iso_alpha2}: {res['error']}")
             else:
                 results["synced"] += 1
             
@@ -26,6 +30,7 @@ async def sync_all_holidays(db: Session):
             logger.error(f"Failed to sync holidays for {country.iso_alpha2}: {str(e)}")
             results["errors"] += 1
             
+    logger.info(f"Holiday sync completed: {results['synced']} success, {results['errors']} errors.")
     return results
 
 async def sync_holidays(db: Session, iso2: str):

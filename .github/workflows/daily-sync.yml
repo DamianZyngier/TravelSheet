@@ -46,9 +46,9 @@ jobs:
       - name: Sync Data
         run: |
           echo "Syncing exchange rates..."
-          curl -X POST "http://localhost:8000/api/admin/sync-exchange-rates"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-exchange-rates" | jq .
           echo "Syncing visas (Wiki)..."
-          curl -X POST "http://localhost:8000/api/admin/sync-visas"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-visas" | jq .
 
       - name: Scrape All Countries (MSZ gov.pl)
         run: |

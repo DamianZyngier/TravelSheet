@@ -12,21 +12,27 @@ async def sync_countries(db: Session):
     Translates languages and currency names to Polish.
     """
     url = "https://restcountries.com/v3.1/all"
+    logger.info(f"Fetching countries from {url}...")
     
     async with httpx.AsyncClient(timeout=30.0) as client:
         try:
             resp = await client.get(url, headers=get_headers())
             resp.raise_for_status()
             data = resp.json()
+            logger.info(f"Successfully fetched {len(data)} countries from API.")
         except Exception as e:
+            logger.error(f"Failed to fetch REST Countries: {e}")
             return {"error": f"Failed to fetch REST Countries: {e}"}
 
     results = {"synced": 0, "updated": 0}
     
-    for country_data in data:
+    for i, country_data in enumerate(data):
         iso2 = country_data.get("cca2")
         if not iso2: continue
         
+        if i % 50 == 0:
+            logger.info(f"Processing country {i}/{len(data)}: {iso2}")
+
         country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()
         
         # Build basic data

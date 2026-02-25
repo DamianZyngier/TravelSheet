@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal, engine
-from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, gov_pl, emergency, climate, costs
+from app.scrapers import rest_countries, exchange_rates, static_info, attractions, holidays, weather, msz_gov_pl, emergency, climate, costs
 from app import models
 
 async def seed_all():
@@ -77,7 +77,7 @@ async def seed_all():
         
         # Gov.pl (MSZ)
         try:
-            await gov_pl.scrape_country(db, iso2)
+            await msz_gov_pl.scrape_country(db, iso2)
         except Exception as e: 
             print(f"  - MSZ Error for {iso2}: {e}")
             pass

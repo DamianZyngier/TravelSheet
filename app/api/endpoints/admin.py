@@ -116,18 +116,18 @@ async def update_weather_endpoint(iso_code: str, db: Session = Depends(get_db)):
     result = await update_weather(db, iso_code.upper())
     return result
 
-@router.post("/scrape-gov-pl/{iso_code}")
+@router.post("/scrape-msz-gov-pl/{iso_code}")
 async def scrape_gov_pl(iso_code: str, db: Session = Depends(get_db)):
     """Admin endpoint - scrape MSZ data for specific country"""
-    from ...scrapers.gov_pl import scrape_country
+    from ...scrapers.msz_gov_pl import scrape_country
 
     result = await scrape_country(db, iso_code.upper())
     return result
 
-@router.post("/scrape-all-gov-pl")
+@router.post("/scrape-all-msz-gov-pl")
 async def scrape_all_gov_pl(db: Session = Depends(get_db)):
     """Admin endpoint - scrape data for ALL countries (with rate limiting and slug cache)"""
-    from ...scrapers.gov_pl import scrape_all_with_cache
+    from ...scrapers.msz_gov_pl import scrape_all_with_cache
 
     results = await scrape_all_with_cache(db)
     return results

@@ -41,49 +41,53 @@ jobs:
             sleep 1
           done
 
+      - name: Initial Seed
+        run: |
+          python scripts/seed_world.py
+
       - name: Sync REST Countries
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-rest-countries"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-rest-countries" | jq .
 
       - name: Sync UNESCO sites
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-unesco-sites"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-unesco-sites" | jq .
 
       - name: Sync Static Info
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-static-info"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-static-info" | jq .
 
       - name: Sync Holidays
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-holidays"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-holidays" | jq .
 
       - name: Sync Climate
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-climate"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-climate" | jq .
 
       - name: Sync Costs
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-costs"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-costs" | jq .
 
       - name: Sync Wiki Summaries
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-wiki-summaries"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-wiki-summaries" | jq .
 
       - name: Sync Wiki Attractions
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-attractions-wiki"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
 
       - name: Sync Emergency
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-emergency"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-emergency" | jq .
 
       - name: Sync Health (CDC)
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-cdc"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-cdc" | jq .
 
       - name: Sync Embassies
         run: |
-          curl -X POST "http://localhost:8000/api/admin/sync-embassies"
+          curl -s -X POST "http://localhost:8000/api/admin/sync-embassies" | jq .
 
       - name: Export to JSON
         run: |
@@ -101,4 +105,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: weekly full sync [skip ci]"
-          file_pattern: 'docs/data.json travel_cheatsheet.db'
+          file_pattern: 'docs/data.json'

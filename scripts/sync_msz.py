@@ -7,7 +7,7 @@ import logging
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal
-from app.scrapers import gov_pl
+from app.scrapers import msz_gov_pl
 
 # Configure logging for CI
 logging.basicConfig(
@@ -20,7 +20,7 @@ async def run_sync():
     print("Starting MSZ (gov.pl) synchronization script...")
     db = SessionLocal()
     try:
-        results = await gov_pl.scrape_all_with_cache(db)
+        results = await msz_gov_pl.scrape_all_with_cache(db)
         print("\n--- SYNC SUMMARY ---")
         print(f"Successes: {results['success']}")
         print(f"Errors: {results['errors']}")
