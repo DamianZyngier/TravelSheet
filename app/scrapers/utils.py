@@ -70,11 +70,26 @@ def translate_to_pl(text: str) -> str:
     
     try:
         translated = GoogleTranslator(source='auto', target='pl').translate(text)
+        translated = normalize_polish_text(translated) # Clean up translation
         _TRANSLATION_CACHE[text] = translated
         return translated
     except Exception as e:
         logger.error(f"Translation error for '{text}': {e}")
         return text
+
+def normalize_polish_text(text: str) -> str:
+    """Fix common errors in Polish text/names from external APIs or scrapers."""
+    if not text: return text
+    
+    # Specific fix for Ivory Coast capitalization issue
+    text = text.replace("WybrzeŻe", "Wybrzeże")
+    text = text.replace("WYBRZEŻE", "Wybrzeże")
+    
+    # Fix common spacing/punctuation issues from translations
+    text = text.replace(" .", ".")
+    text = text.replace(" ,", ",")
+    
+    return text.strip()
 
 def clean_polish_name(name: str) -> str:
     if not name: return ""

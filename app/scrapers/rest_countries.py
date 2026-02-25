@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from .. import models
 import logging
 import asyncio
-from .utils import translate_to_pl, get_headers
+from .utils import translate_to_pl, get_headers, normalize_polish_text
 
 logger = logging.getLogger("uvicorn")
 
@@ -21,6 +21,10 @@ async def fetch_data(url):
                 logger.error(f"Attempt {attempt+1} failed: {e}")
                 if attempt < 2: await asyncio.sleep(2)
     return None
+
+def normalize_polish_name(name: str) -> str:
+    """Fix common errors in Polish country names from external APIs."""
+    return normalize_polish_text(name)
 
 async def sync_countries(db: Session):
     """
@@ -66,6 +70,7 @@ async def sync_countries(db: Session):
             # Build basic data
             name_en = country_data.get("name", {}).get("common")
             name_pl = country_data.get("translations", {}).get("pol", {}).get("common") or name_en
+            name_pl = normalize_polish_text(name_pl)
             
             capital_list = country_data.get("capital", [])
             capital = capital_list[0] if capital_list else None
@@ -106,6 +111,7 @@ async def sync_countries(db: Session):
                 db.flush()
                 results["synced"] += 1
             else:
+                country.name_pl = name_pl # Ensure name is updated if fixed
                 country.flag_url = flag_url
                 country.latitude = lat
                 country.longitude = lon

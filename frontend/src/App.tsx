@@ -335,10 +335,13 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, [countries]);
 
-  // Reset scroll to top when country selection changes
+  // Reset scroll to top and update document title when country selection changes
   useEffect(() => {
     if (selectedCountry) {
       window.scrollTo(0, 0);
+      document.title = `TripSheet - ${selectedCountry.name_pl}`;
+    } else {
+      document.title = 'TripSheet';
     }
   }, [selectedCountry]);
 
@@ -598,6 +601,7 @@ function App() {
                               geo.properties?.ADM0_A3 === selectedCountry.iso3 ||
                               geo.properties?.GU_A3 === selectedCountry.iso3 ||
                               geo.properties?.name === selectedCountry.name ||
+                              (selectedCountry.iso3 === "CIV" && (geo.properties?.name === "Côte d'Ivoire" || geo.properties?.name === "Cote d'Ivoire")) ||
                               (selectedCountry.iso3 === "USA" && (geo.id === "USA" || geo.properties?.name === "United States of America"));
                             
                             return (

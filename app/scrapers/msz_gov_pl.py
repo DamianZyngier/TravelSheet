@@ -6,7 +6,7 @@ import asyncio
 import re
 import logging
 from sqlalchemy import func
-from .utils import MSZ_GOV_PL_MANUAL_MAPPING, clean_polish_name, slugify, get_headers
+from .utils import MSZ_GOV_PL_MANUAL_MAPPING, clean_polish_name, slugify, get_headers, normalize_polish_text
 
 logger = logging.getLogger("uvicorn")
 
@@ -142,6 +142,8 @@ async def scrape_country(db: Session, iso_code: str):
             'critical': 'odradzane wszelkie podróże'
         }
         risk_summary = f"MSZ zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju ({country.name_pl})."
+    
+    risk_summary = normalize_polish_text(risk_summary)
 
     # Risk Details
     risk_details_list = []
@@ -216,8 +218,12 @@ async def scrape_country(db: Session, iso_code: str):
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
-    safety.risk_level, safety.summary, safety.full_url = risk_level, risk_summary, final_url
-    safety.risk_details = risk_details
+    
+    # Apply normalization to all Polish output
+    safety.risk_level = risk_level
+    safety.risk_text = normalize_polish_text(risk_summary)
+    safety.risk_details = normalize_polish_text(risk_details)
+    safety.url = final_url
     safety.last_checked = func.now()
 
     # Entry
@@ -232,7 +238,9 @@ async def scrape_country(db: Session, iso_code: str):
     if not practical:
         practical = models.PracticalInfo(country_id=country.id)
         db.add(practical)
-    practical.health_info, practical.vaccinations_required, practical.vaccinations_suggested = health_full, vaccines_req, vaccines_sug
+    practical.health_info = normalize_polish_text(health_full)
+    practical.vaccinations_required = normalize_polish_text(vaccines_req)
+    practical.vaccinations_suggested = normalize_polish_text(vaccines_sug)
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url}
