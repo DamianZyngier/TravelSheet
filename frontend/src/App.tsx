@@ -150,6 +150,17 @@ interface CountryData {
   };
 }
 
+const getLongNameClass = (name: string, type: 'h3' | 'h2') => {
+  if (type === 'h3') {
+    if (name.length > 25) return 'font-very-small';
+    if (name.length > 18) return 'font-small';
+  } else {
+    if (name.length > 30) return 'font-very-small';
+    if (name.length > 20) return 'font-small';
+  }
+  return '';
+};
+
 function ExpandableText({ text }: { text: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [hasMore, setHasMore] = useState(false);
@@ -589,7 +600,7 @@ function App() {
                         className="main-flag-img" 
                         style={{ objectFit: 'contain' }}
                       />
-                      <h3>{country.name_pl}</h3>
+                      <h3 className={getLongNameClass(country.name_pl, 'h3')}>{country.name_pl}</h3>
                       <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
                       <span className={`risk-badge risk-${country.safety.risk_level}`}>
                         {SAFETY_LABELS[country.safety.risk_level] || country.safety.risk_level}
@@ -621,7 +632,7 @@ function App() {
                     <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
                     <div className="nav-info">
                       <span className="nav-label">Poprzedni</span>
-                      <span className="nav-name">{prevCountry?.name_pl}</span>
+                      <span className={`nav-name ${getLongNameClass(prevCountry?.name_pl || '', 'h3')}`}>{prevCountry?.name_pl}</span>
                     </div>
                     <span className="nav-arrow">←</span>
                   </button>
@@ -629,7 +640,7 @@ function App() {
                     <span className="nav-arrow">→</span>
                     <div className="nav-info">
                       <span className="nav-label">Następny</span>
-                      <span className="nav-name">{nextCountry?.name_pl}</span>
+                      <span className={`nav-name ${getLongNameClass(nextCountry?.name_pl || '', 'h3')}`}>{nextCountry?.name_pl}</span>
                     </div>
                     <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
                   </button>
@@ -663,7 +674,7 @@ function App() {
                   style={{ objectFit: 'contain' }}
                 />
                 <div className="detail-titles">
-                  <h2>{selectedCountry.name_pl}</h2>
+                  <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
                   <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
                 </div>
                 
