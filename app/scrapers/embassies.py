@@ -16,7 +16,7 @@ async def scrape_embassies(db: Session):
     countries = db.query(models.Country).all()
     results = {"synced_countries": 0, "total_missions": 0, "errors": 0}
 
-    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+    async with httpx.AsyncClient(timeout=30.0, follow_redirects=False) as client:
         for country in countries:
             if country.iso_alpha2 == 'PL':
                 continue
@@ -29,37 +29,90 @@ async def scrape_embassies(db: Session):
                 if not slug:
                     slug = slugify(name_pl).replace('-', '')
 
-                # Extended URL list to catch more mission types
-                urls = [
-                    f"https://www.gov.pl/web/{slug}/ambasada",
-                    f"https://www.gov.pl/web/{slug}/placowki",
-                    f"https://www.gov.pl/web/{slug}/konsulaty-honorowe",
-                ]
-                
-                all_missions = []
                 headers = get_headers()
-                for url in urls:
+                if "Accept" in headers: del headers["Accept"]
+                headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+
+                discovered_urls = set()
+                
+                async def discover_from_url(target_url, depth=0):
+                    if depth > 1: return
+                    try:
+                        resp = await client.get(target_url, headers=headers)
+                        if resp.status_code == 200:
+                            soup = BeautifulSoup(resp.text, 'html.parser')
+                            # 1. Discover from menu
+                            menu = soup.select_one('#unit-menu-list') or soup.select_one('.unit-menu')
+                            # 2. Discover from main content (especially for 'placowki' list)
+                            content = soup.select_one('.editor-content') or soup.select_one('.art-prev') or soup.select_one('article')
+                            
+                            elements_to_search = []
+                            if menu: elements_to_search.append(menu)
+                            if content: elements_to_search.append(content)
+                            
+                            for root in elements_to_search:
+                                for a in root.select('a'):
+                                    href = a.get('href', '')
+                                    text = a.get_text().lower()
+                                    if any(kw in text or kw in href.lower() for kw in ["ambasada", "konsulat", "placowki", "placówki", "wydzial", "wydział"]):
+                                        full_url = ""
+                                        if href.startswith('/'): full_url = f"https://www.gov.pl{href}"
+                                        elif href.startswith('http') and f"/web/{slug}" in href: full_url = href
+                                        
+                                        if full_url and full_url not in discovered_urls:
+                                            # Avoid adding the directory itself to the final scrape list if we are going to recurse
+                                            if "placowki" in full_url.lower() and depth == 0:
+                                                await discover_from_url(full_url, depth + 1)
+                                            discovered_urls.add(full_url)
+                    except Exception as e:
+                        logger.debug(f"Discovery failed for {target_url}: {e}")
+
+                # 1. Start discovery from homepage
+                await discover_from_url(f"https://www.gov.pl/web/{slug}")
+
+                # 2. Add fallback/guessed URLs
+                fallback_patterns = [
+                    "ambasada", "ambasada-rp", "placowki", "konsulaty-honorowe", "wydzial-konsularny"
+                ]
+                for p in fallback_patterns:
+                    discovered_urls.add(f"https://www.gov.pl/web/{slug}/{p}")
+
+                all_missions = []
+                for url in discovered_urls:
                     try:
                         resp = await client.get(url, headers=headers)
+                        # Handle redirects manually
+                        if resp.status_code in [301, 302]:
+                            loc = resp.headers.get("location", "")
+                            if loc == "/" or loc == "https://www.gov.pl/": continue
+                            target = loc if loc.startswith("http") else f"https://www.gov.pl{loc}"
+                            resp = await client.get(target, headers=headers)
+
                         if resp.status_code == 200:
+                            # Verify it's not the homepage
+                            if "Portal Gov.pl" in resp.text and "Polska w" not in resp.text and slug not in resp.text.lower():
+                                continue
+                                
                             missions = parse_embassy_page(resp.text, country.id)
                             if missions:
-                                # Merge while avoiding duplicates based on address/type
                                 for m in missions:
-                                    if not any(existing.address == m.address and existing.type == m.type for existing in all_missions):
+                                    # Deduplicate
+                                    if not any(existing.type == m.type and (existing.address == m.address or existing.email == m.email) for existing in all_missions):
                                         all_missions.append(m)
                     except: continue
-                
+
                 if all_missions:
-                    # Clear old ones and save new ones
                     db.query(models.Embassy).filter(models.Embassy.country_id == country.id).delete()
                     for emb in all_missions:
                         db.add(emb)
                     db.commit()
                     results["synced_countries"] += 1
                     results["total_missions"] += len(all_missions)
+                    logger.info(f"Synced {len(all_missions)} missions for {country.iso_alpha2}")
+                else:
+                    logger.warning(f"No missions found for {country.iso_alpha2}")
                 
-                await asyncio.sleep(0.05)
+                await asyncio.sleep(0.1)
                 
             except Exception as e:
                 logger.error(f"Error scraping missions for {country.iso_alpha2}: {e}")
@@ -135,7 +188,8 @@ def parse_embassy_page(html, country_id):
             
             # Extract city from title or address
             city = ""
-            city_match = re.search(r'w\s+([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)', title)
+            # Support accented characters in city names (e.g. Brasílii)
+            city_match = re.search(r'w\s+([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźżA-Za-z\u00C0-\u017F]+)', title)
             if city_match: city = city_match.group(1)
             
             mission = models.Embassy(

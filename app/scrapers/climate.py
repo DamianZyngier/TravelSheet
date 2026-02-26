@@ -47,13 +47,27 @@ async def sync_all_climate(db: Session, force: bool = False):
                     min_temps = daily.get("temperature_2m_min", [])
                     precip = daily.get("precipitation_sum", [])
                     
+                    if not times or len(times) < 300: # We expect ~365 days
+                        logger.warning(f"Incomplete climate data for {country.iso_alpha2}")
+                        results["errors"] += 1
+                        continue
+
                     for i in range(len(times)):
-                        month = int(times[i].split("-")[1])
-                        if max_temps[i] is not None: monthly_stats[month]["temp_max"].append(max_temps[i])
-                        if min_temps[i] is not None: monthly_stats[month]["temp_min"].append(min_temps[i])
-                        if precip[i] is not None: monthly_stats[month]["rain"].append(precip[i])
+                        try:
+                            month = int(times[i].split("-")[1])
+                            if i < len(max_temps) and max_temps[i] is not None: monthly_stats[month]["temp_max"].append(max_temps[i])
+                            if i < len(min_temps) and min_temps[i] is not None: monthly_stats[month]["temp_min"].append(min_temps[i])
+                            if i < len(precip) and precip[i] is not None: monthly_stats[month]["rain"].append(precip[i])
+                        except: continue
                     
-                    # Clear existing records
+                    # Validate: do we have data for all 12 months?
+                    months_with_data = [m for m in range(1, 13) if monthly_stats[m]["temp_max"]]
+                    if len(months_with_data) < 12:
+                        logger.warning(f"Incomplete monthly data ({len(months_with_data)}/12 months) for {country.iso_alpha2}, skipping update.")
+                        results["errors"] += 1
+                        continue
+
+                    # Clear existing records ONLY after we are sure we have new data
                     db.query(models.Climate).filter(models.Climate.country_id == country.id).delete()
                     
                     # Calculate and save averages
@@ -77,7 +91,7 @@ async def sync_all_climate(db: Session, force: bool = False):
                     
                     db.commit()
                     results["synced"] += 1
-                    logger.info(f"Synced climate for {country.iso_alpha2}")
+                    logger.info(f"Synced climate for {country.iso_alpha2} ({len(months_with_data)} months)")
                 elif resp.status_code == 429:
                     logger.warning(f"Rate limit hit for {country.iso_alpha2}, stopping sync.")
                     return results
