@@ -1672,24 +1672,24 @@
  }  
  
 .data-source-footer {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
   border-top: 1px dashed #edf2f7;
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   color: #a0aec0;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.3rem;
   justify-content: flex-end;
   align-items: center;
 }
 
 .data-source-link {
-  color: #718096;
+  color: #a0aec0;
   text-decoration: none;
   font-weight: 400;
 }
 
 .data-source-link:hover {
   text-decoration: underline;
-  color: #4a5568;
+  color: #718096;
 }
