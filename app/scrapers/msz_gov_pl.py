@@ -10,14 +10,14 @@ from .utils import MSZ_GOV_PL_MANUAL_MAPPING, clean_polish_name, slugify, get_he
 
 logger = logging.getLogger("uvicorn")
 
-# Global cache for slugs
-_SLUG_CACHE = {}
+# Global cache for URLs
+_URL_CACHE = {}
 
-async def fetch_directory_slugs():
-    """Fetch all country slugs from the directory page"""
+async def fetch_country_urls():
+    """Fetch all country URLs from the directory page"""
     url = "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"
     headers = get_headers()
-    slugs = {}
+    urls = {}
     async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
         try:
             response = await client.get(url, headers=headers)
@@ -31,20 +31,25 @@ async def fetch_directory_slugs():
             
             for a in links:
                 href = a.get('href', '')
+                if not href: continue
+                
+                if not href.startswith('http'):
+                    href = "https://www.gov.pl" + href
+                
                 title_div = a.select_one('.title') or a
-                if href:
-                    name = title_div.get_text().strip()
-                    # Extract slug from /web/dyplomacja/slug
-                    slug_match = re.search(r'/web/dyplomacja/([^/?#\s]+)', href)
-                    if slug_match:
-                        slug = slug_match.group(1)
-                        if slug != "informacje-dla-podrozujacych":
-                            name_clean = clean_polish_name(name)
-                            slugs[name_clean] = slug
+                name = title_div.get_text().strip()
+                
+                # Filter out the directory page itself
+                if href.rstrip('/').endswith("informacje-dla-podrozujacych") and "/web/dyplomacja" in href:
+                    if href.count('/') <= 5: # It's the main directory link
+                        continue
+
+                name_clean = clean_polish_name(name)
+                urls[name_clean] = href
             
-            _SLUG_CACHE.update(slugs)
-            logger.info(f"Fetched {len(slugs)} slugs from MSZ directory")
-            return slugs
+            _URL_CACHE.update(urls)
+            logger.info(f"Fetched {len(urls)} URLs from MSZ directory")
+            return urls
         except Exception as e:
             logger.error(f"Error fetching directory: {e}")
             return {}
@@ -60,41 +65,35 @@ async def scrape_country(db: Session, iso_code: str):
 
     name_pl = clean_polish_name(country.name_pl or country.name)
     
-    # 1. Get slug
-    slug = _SLUG_CACHE.get(name_pl) or MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
+    # 1. Get URL from cache or manual mapping
+    final_url = _URL_CACHE.get(name_pl)
     
-    urls_to_try = []
-    if slug:
-        urls_to_try = [
-            f"https://www.gov.pl/web/dyplomacja/{slug}",
-            f"https://www.gov.pl/web/{slug}/informacje-dla-podrozujacych",
-            f"https://www.gov.pl/web/{slug}/idp",
-        ]
-    else:
-        guessed_slug = slugify(name_pl).replace('-', '')
-        urls_to_try = [f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"]
+    if not final_url:
+        slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
+        if slug:
+            final_url = f"https://www.gov.pl/web/dyplomacja/{slug}"
+        else:
+            guessed_slug = slugify(name_pl).replace('-', '')
+            final_url = f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"
 
     headers = get_headers()
     response_text = None
-    final_url = None
 
     async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
-        for i, url in enumerate(urls_to_try):
-            try:
-                response = await client.get(url, headers=headers)
-                if response.status_code == 200:
-                    curr_url = str(response.url).rstrip('/')
-                    if curr_url in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
-                        continue
-                    
+        try:
+            response = await client.get(final_url, headers=headers)
+            if response.status_code == 200:
+                curr_url = str(response.url).rstrip('/')
+                # Avoid being redirected back to the directory
+                if curr_url not in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
                     if any(kw in response.text.lower() for kw in ["bezpieczeństwo", "ostrzeżenia", "informacje dla podróżujących"]):
                         response_text = response.text
                         final_url = str(response.url)
-                        break 
-            except: continue
+        except Exception as e:
+            logger.error(f"Error fetching {final_url}: {e}")
 
     if not response_text:
-        return {"error": f"No valid MSZ page found for {iso_code}"}
+        return {"error": f"No valid MSZ page found for {iso_code} at {final_url}"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
     
@@ -246,8 +245,8 @@ async def scrape_country(db: Session, iso_code: str):
     return {"status": "success", "risk_level": risk_level, "url": final_url}
 
 async def scrape_all_with_cache(db: Session):
-    global _SLUG_CACHE
-    _SLUG_CACHE = await fetch_directory_slugs()
+    global _URL_CACHE
+    _URL_CACHE = await fetch_country_urls()
     countries = db.query(models.Country).all()
     results = {"success": 0, "errors": 0, "details": []}
     

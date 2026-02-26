@@ -161,6 +161,35 @@ const getLongNameClass = (name: string, type: 'h3' | 'h2') => {
   return '';
 };
 
+function LinkifyOdyseusz({ text }: { text: string }) {
+  if (!text) return null;
+  
+  // Regex to find "systemie Odyseusz" (ignoring case and potential non-breaking spaces)
+  const parts = text.split(/(systemie\s+Odyseusz|systemie Odyseusz)/gi);
+  
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (part.toLowerCase().includes('systemie') && part.toLowerCase().includes('odyseusz')) {
+          return (
+            <a 
+              key={i} 
+              href="https://odyseusz.msz.gov.pl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="odyseusz-link"
+              style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 'bold' }}
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      })}
+    </>
+  );
+}
+
 function ExpandableText({ text }: { text: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [hasMore, setHasMore] = useState(false);
@@ -181,7 +210,7 @@ function ExpandableText({ text }: { text: string }) {
         ref={textRef}
         className="risk-details-text line-clamp"
       >
-        {text}
+        <LinkifyOdyseusz text={text} />
       </div>
       {hasMore && (
         <button 
@@ -870,18 +899,31 @@ function App() {
                           {selectedCountry.population && selectedCountry.area ? (
                             <>
                               {(selectedCountry.population / selectedCountry.area).toFixed(1)} os./km²
-                              <br />
                               {(() => {
                                 const density = selectedCountry.population / selectedCountry.area;
-                                const polandDensity = 120; // ok. 120 os./km2
+                                const polandDensity = 120; 
                                 const ratio = density / polandDensity;
-                                if (ratio > 1.2) return <span style={{ color: '#f56565', fontSize: '0.75rem', fontWeight: 'bold' }}>🔴 Gęściej niż w PL</span>;
-                                if (ratio < 0.8) return <span style={{ color: '#48bb78', fontSize: '0.75rem', fontWeight: 'bold' }}>🟢 Rzadziej niż w PL</span>;
-                                return <span style={{ color: '#4299e1', fontSize: '0.75rem', fontWeight: 'bold' }}>🔵 Podobnie jak w PL</span>;
+                                if (ratio > 1.1) {
+                                  return <span style={{ color: '#f56565', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
+                                    ({ratio.toFixed(1)}x gęściej)
+                                  </span>;
+                                } else if (ratio < 0.9) {
+                                  return <span style={{ color: '#48bb78', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
+                                    ({(1/ratio).toFixed(1)}x rzadziej)
+                                  </span>;
+                                } else {
+                                  return <span style={{ color: '#4299e1', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
+                                    (podobnie)
+                                  </span>;
+                                }
                               })()}
                             </>
                           ) : 'Brak danych'}
                         </span>
+                      </div>
+                      <div className="info-item-box">
+                        <strong>Języki:</strong>
+                        <span>{selectedCountry.languages?.length > 0 ? selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ') : 'Brak danych'}</span>
                       </div>
                       <div className="info-item-box">
                         <strong>Nr kierunkowy:</strong>
@@ -897,12 +939,6 @@ function App() {
                         <div className="info-item-box full">
                           <strong>Grupy etniczne:</strong>
                           <span>{selectedCountry.ethnic_groups}</span>
-                        </div>
-                      )}
-                      {selectedCountry.languages?.length > 0 && (
-                        <div className="info-item-box full">
-                          <strong>Języki:</strong>
-                          <span>{selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ')}</span>
                         </div>
                       )}
                       {selectedCountry.religions?.length > 0 && (
@@ -1223,20 +1259,20 @@ function App() {
                       {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) && (
                         <div className="health-summary-vax">
                           {selectedCountry.practical.vaccinations_required && (
-                            <div className="health-item mandatory">
+                            <div className="health-item mandatory" style={{ backgroundColor: '#fed7d7', borderLeft: '5px solid #f56565' }}>
                               <span className="health-icon">🚨</span>
                               <div className="health-text">
-                                <strong>Obowiązkowe:</strong>
-                                <p>{selectedCountry.practical.vaccinations_required}</p>
+                                <strong style={{ color: '#822727' }}>Obowiązkowe:</strong>
+                                <p>{selectedCountry.practical.vaccinations_required.replace(/szczepienie przeciw /gi, '').replace(/szczepienie przeciwko /gi, '').replace(/Obowiązkowe: /gi, '')}</p>
                               </div>
                             </div>
                           )}
                           {selectedCountry.practical.vaccinations_suggested && (
-                            <div className="health-item suggested">
+                            <div className="health-item suggested" style={{ backgroundColor: '#fefcbf', borderLeft: '5px solid #ecc94b' }}>
                               <span className="health-icon">💉</span>
                               <div className="health-text">
-                                <strong>Zalecane:</strong>
-                                <p>{selectedCountry.practical.vaccinations_suggested}</p>
+                                <strong style={{ color: '#744210' }}>Zalecane:</strong>
+                                <p>{selectedCountry.practical.vaccinations_suggested.replace(/Zalecane: /gi, '')}</p>
                               </div>
                             </div>
                           )}
@@ -1244,10 +1280,8 @@ function App() {
                       )}
 
                       {!selectedCountry.practical.health_info && !selectedCountry.practical.vaccinations_required && !selectedCountry.practical.vaccinations_suggested && (
-                        <div className="health-item neutral">
-                          <span className="health-icon">✅</span>
-                          <p>Brak szczegółowych informacji o zdrowiu (sprawdź aktualny komunikat MSZ).</p>
-                        </div>
+                                                <div className="no-data-msg">Brak szczegółowych informacji o zdrowiu (sprawdź aktualny komunikat MSZ).</div>
+
                       )}
 
                       {selectedCountry.safety.url && (
@@ -1415,7 +1449,7 @@ function App() {
                 <div id="safety" className={`safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
                   <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
                   <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
-                  <p className="risk-summary-text">{selectedCountry.safety.risk_text}</p>
+                  <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
                   {selectedCountry.safety.risk_details && (
                     <div className="risk-details-box">
                       <ExpandableText text={selectedCountry.safety.risk_details} />

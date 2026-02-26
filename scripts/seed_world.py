@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal, engine
-from app.scrapers import rest_countries, exchange_rates, static_info, unesco, holidays, weather, msz_gov_pl, emergency, climate, costs, wiki_summaries, wikidata_attractions
+from app.scrapers import rest_countries, exchange_rates, static_info, unesco, holidays, weather, msz_gov_pl, emergency, climate, costs, wiki_summaries, wikidata_attractions, embassies
 from app import models
 
 async def seed_all():
@@ -72,11 +72,25 @@ async def seed_all():
     except Exception as e:
         print(f"Error in Step 4c: {e}")
     
-    # 5. Sync per-country details (MSZ Gov.pl, Holidays)
-    # For full seed we process all, but limit to 50 most important or first available if needed
-    # Here we do all available
+    # 5. Sync climate data (Open-Meteo)
+    print("Step 5: Syncing climate data (this may take a few minutes)...")
+    try:
+        res = await climate.sync_all_climate(db)
+        print(f"Synced climate for {res.get('synced', 0)} countries.")
+    except Exception as e:
+        print(f"Error in Step 5: {e}")
+
+    # 6. Sync current weather (OpenWeatherMap)
+    print("Step 6: Syncing current weather...")
+    try:
+        # Note: requires OPENWEATHER_API_KEY env var
+        await weather.update_all_weather(db)
+    except Exception as e:
+        print(f"Error in Step 6: {e}")
+
+    # 7. Sync per-country details (MSZ Gov.pl, Holidays)
     countries = db.query(models.Country).all()
-    print(f"Step 5: Syncing details for {len(countries)} countries...")
+    print(f"Step 7: Syncing details for {len(countries)} countries...")
 
     for i, country in enumerate(countries):
         iso2 = country.iso_alpha2
@@ -89,7 +103,15 @@ async def seed_all():
         except Exception as e: 
             print(f"  - Error: {e}")
 
-    # 6. Summary of database content
+    # 8. Sync Embassies
+    print("Step 8: Syncing Polish diplomatic missions...")
+    try:
+        res = await embassies.scrape_embassies(db)
+        print(f"Synced missions for {res.get('synced_countries', 0)} countries.")
+    except Exception as e:
+        print(f"Error in Step 8: {e}")
+
+    # 9. Summary of database content
     print("\nDatabase Summary:")
     entities = [
         ("Countries", models.Country),

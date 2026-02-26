@@ -35,7 +35,7 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
     'RO': 'rumunia', 'SV': 'salwador', 'WS': 'samoa', 'SM': 'san-marino', 'SA': 'arabia-saudyjska',
     'SN': 'senegal', 'RS': 'serbia', 'SC': 'seszele', 'SL': 'sierraleone', 'SG': 'singapur',
     'SK': 'slowacja', 'SI': 'slowenia', 'SO': 'somalia', 'LK': 'srilanka', 'US': 'usa',
-    'SD': 'sudan', 'SR': 'surinam', 'SY': 'syria', 'SZ': 'suazi', 'TJ': 'tadzykistan',
+    'SD': 'sudan', 'SR': 'surinam', 'SY': 'syria', 'SZ': 'eswatini', 'TJ': 'tadzykistan',
     'TH': 'tajlandia', 'TW': 'tajwan', 'TZ': 'tanzania', 'TL': 'timor-wschodni', 'TG': 'togo',
     'TO': 'tonga', 'TT': 'trynidaditobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
     'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
@@ -108,6 +108,10 @@ def normalize_polish_text(text: str) -> str:
     # Specific fix for Ivory Coast capitalization issue
     text = text.replace("WybrzeŻe", "Wybrzeże")
     text = text.replace("WYBRZEŻE", "Wybrzeże")
+    
+    # Fix Suazi -> Eswatini
+    text = text.replace("Suazi", "Eswatini")
+    text = text.replace("SUAZI", "ESWATINI")
     
     # Fix common spacing/punctuation issues from translations
     text = text.replace(" .", ".")
