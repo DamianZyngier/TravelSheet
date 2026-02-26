@@ -994,6 +994,13 @@
 .health-item.neutral {
   background-color: #f8fafc;
   color: #718096;
+  align-items: center;
+}
+
+.health-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .health-icon {
@@ -1008,8 +1015,6 @@
 
 .health-text p {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
 }
 
 .emergency-112-badge {
