@@ -1,4 +1,4 @@
-.app-container {
+﻿.app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -1645,32 +1645,32 @@
 }
 
 
- . w e a t h e r - b r i e f   { 
-     d i s p l a y :   f l e x ; 
-     a l i g n - i t e m s :   c e n t e r ; 
-     g a p :   0 . 5 r e m ; 
-     m a r g i n - t o p :   0 . 2 5 r e m ; 
- } 
- 
- . w e a t h e r - m i n i - i c o n   { 
-     w i d t h :   3 2 p x ; 
-     h e i g h t :   3 2 p x ; 
-     b a c k g r o u n d :   r g b a ( 0 , 0 , 0 , 0 . 0 5 ) ; 
-     b o r d e r - r a d i u s :   5 0 % ; 
- } 
- 
- . w e a t h e r - t e m p - m a i n   { 
-     f o n t - w e i g h t :   7 0 0 ; 
-     f o n t - s i z e :   1 . 1 r e m ; 
-     c o l o r :   # 2 d 3 7 4 8 ; 
- }  
- 
- . u n e s c o - t y p e - b a d g e . t r a n s n a t i o n a l   { 
-     b a c k g r o u n d - c o l o r :   # e b f 8 f f ; 
-     c o l o r :   # 2 c 5 2 8 2 ; 
-     b o r d e r :   1 p x   s o l i d   # b e e 3 f 8 ; 
- }  
- 
+.weather-brief {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.weather-mini-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+}
+
+.weather-temp-main {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.unesco-type-badge.transnational {
+  background-color: #ebf8ff;
+  color: #2c5282;
+  border: 1px solid #bee3f8;
+}
+
 .data-source-footer {
   margin-top: 0.3rem;
   padding-top: 0.3rem;
