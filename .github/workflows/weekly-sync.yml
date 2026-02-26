@@ -28,78 +28,15 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Start API in background
+      - name: Basic Database Seed
+        run: |
+          python scripts/seed_db.py
+
+      - name: Full Data Synchronization
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
-          uvicorn app.main:app --host 0.0.0.0 --port 8000 &
-          # Wait for API to be ready
-          for i in {1..30}; do
-            if curl -s http://localhost:8000/health > /dev/null; then
-              echo "API is ready!"
-              break
-            fi
-            echo "Waiting for API..."
-            sleep 1
-          done
-
-      - name: Initial Seed
-        run: |
-          python scripts/seed_world.py
-
-      - name: Sync REST Countries
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-rest-countries" | jq .
-
-      - name: Sync UNESCO sites
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-unesco-sites" | jq .
-
-      - name: Sync Static Info
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-static-info" | jq .
-
-      - name: Sync Holidays
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-holidays" | jq .
-
-      - name: Sync Climate
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-climate" | jq .
-
-      - name: Sync Weather
-        env:
-          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/update-all-weather" | jq .
-
-      - name: Sync Costs
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-costs" | jq .
-
-      - name: Sync Wiki Summaries
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-wiki-summaries" | jq .
-
-      - name: Sync Wiki Attractions
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
-
-      - name: Sync Emergency
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-emergency" | jq .
-
-      - name: Sync Health (CDC)
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-cdc" | jq .
-
-      - name: Sync Embassies
-        run: |
-          curl -s -X POST "http://localhost:8000/api/admin/sync-embassies" | jq .
-
-      - name: Export to JSON
-        run: |
-          python scripts/export_to_json.py
+          python scripts/sync_all.py
 
       - name: Pull latest changes
         run: |
