@@ -45,16 +45,28 @@ jobs:
 
       - name: Initial Seed
         run: |
-          python scripts/seed_world.py
+          python scripts/seed_db.py
 
       - name: Sync Data
         run: |
           echo "Syncing exchange rates..."
           curl -s -X POST "http://localhost:8000/api/admin/sync-exchange-rates" | jq .
+          echo "Syncing static info..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-static-info" | jq .
+          echo "Syncing emergency numbers..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-emergency" | jq .
+          echo "Syncing costs..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-costs" | jq .
           echo "Syncing visas (Wiki)..."
           curl -s -X POST "http://localhost:8000/api/admin/sync-visas" | jq .
           echo "Syncing UNESCO sites..."
           curl -s -X POST "http://localhost:8000/api/admin/sync-unesco-sites" | jq .
+          echo "Syncing holidays..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-holidays" | jq .
+          echo "Syncing wiki summaries..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-wiki-summaries" | jq .
+          echo "Syncing wiki attractions..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
 
       - name: Scrape All Countries (MSZ gov.pl)
         run: |
