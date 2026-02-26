@@ -183,7 +183,6 @@ function ExpandableText({ text }: { text: string }) {
       >
         {text}
       </div>
-      {hasMore && !isExpanded && <div className="text-gradient"></div>}
       {hasMore && (
         <button 
           className="show-more-btn" 
