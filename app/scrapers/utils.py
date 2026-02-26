@@ -60,17 +60,41 @@ WIKI_NAME_MAP = {
     "Congo": "CG"
 }
 
+# Known translation fixes for common automated errors
+CURRENCY_FIXES = {
+    "Brazilian real": "Real brazylijski",
+    "Brazylijski prawdziwy": "Real brazylijski",
+    "Prawdziwy brazylijski": "Real brazylijski",
+    "Prawdziw brazylijski": "Real brazylijski",
+    "South African rand": "Rand południowoafrykański",
+    "United States dollar": "Dolar amerykański",
+    "Euro": "Euro",
+    "British pound": "Funt brytyjski",
+    "Polish złoty": "Złoty polski",
+    "Złoty": "Złoty"
+}
+
 # In-memory cache for translations to avoid redundant API calls
 _TRANSLATION_CACHE = {}
 
 def translate_to_pl(text: str) -> str:
     if not text: return text
+    
+    # Check for known fixes first
+    if text in CURRENCY_FIXES:
+        return CURRENCY_FIXES[text]
+    
     if text in _TRANSLATION_CACHE:
         return _TRANSLATION_CACHE[text]
     
     try:
         translated = GoogleTranslator(source='auto', target='pl').translate(text)
         translated = normalize_polish_text(translated) # Clean up translation
+        
+        # Check if translation result is in fixes
+        if translated in CURRENCY_FIXES:
+            translated = CURRENCY_FIXES[translated]
+            
         _TRANSLATION_CACHE[text] = translated
         return translated
     except Exception as e:
