@@ -29,6 +29,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Start API in background
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
           uvicorn app.main:app --host 0.0.0.0 --port 8000 &
           # Wait for API to be ready
@@ -64,6 +66,12 @@ jobs:
       - name: Sync Climate
         run: |
           curl -s -X POST "http://localhost:8000/api/admin/sync-climate" | jq .
+
+      - name: Sync Weather
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        run: |
+          curl -s -X POST "http://localhost:8000/api/admin/update-all-weather" | jq .
 
       - name: Sync Costs
         run: |

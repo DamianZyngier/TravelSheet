@@ -4,7 +4,7 @@ import App from './App'
 
 // Mock fetch
 const mockFetch = vi.fn()
-global.fetch = mockFetch
+vi.stubGlobal('fetch', mockFetch)
 
 describe('App Smoke Test', () => {
   beforeEach(() => {

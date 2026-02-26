@@ -3,7 +3,7 @@ import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "re
 import logoNoText from './assets/logo-no-text.png'
 import './App.css'
 
-// URL do topologii świata (lekkie 110m)
+// URL do topologii świata
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
 interface CountryData {
@@ -93,6 +93,7 @@ interface CountryData {
     name: string;
     category: string;
     is_danger?: boolean;
+    is_transnational?: boolean;
     unesco_id?: string;
     image_url?: string;
     description?: string;
@@ -103,6 +104,11 @@ interface CountryData {
     temp_night: number;
     rain: number;
   }[];
+  weather?: {
+    temp: number | null;
+    condition: string;
+    icon: string;
+  };
 }
 
 function ExpandableText({ text }: { text: string }) {
