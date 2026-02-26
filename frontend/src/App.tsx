@@ -595,20 +595,20 @@ function App() {
               return (
                 <div className="country-navigation">
                   <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
-                    <span className="nav-arrow">←</span>
                     <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
                     <div className="nav-info">
                       <span className="nav-label">Poprzedni</span>
                       <span className="nav-name">{prevCountry?.name_pl}</span>
                     </div>
+                    <span className="nav-arrow">←</span>
                   </button>
                   <button className="nav-button next" onClick={() => navigateCountry('next')}>
                     <span className="nav-arrow">→</span>
-                    <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
                     <div className="nav-info">
                       <span className="nav-label">Następny</span>
                       <span className="nav-name">{nextCountry?.name_pl}</span>
                     </div>
+                    <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
                   </button>
                 </div>
               );
