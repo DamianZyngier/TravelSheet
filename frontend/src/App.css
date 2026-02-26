@@ -1701,7 +1701,6 @@
   flex-direction: column;
   gap: 8px;
   margin: 1rem 0;
-  padding: 0 1.5rem;
 }
 
 .nav-button {
@@ -1738,6 +1737,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
+  width: 100%; /* Ensure it takes available space */
 }
 
 .nav-label {
@@ -1745,6 +1745,10 @@
   color: #718096;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .nav-name {
@@ -1754,6 +1758,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 100%;
+  display: block;
 }
 
 .nav-arrow {

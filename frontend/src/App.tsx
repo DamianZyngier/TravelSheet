@@ -289,7 +289,8 @@ function App() {
     return null;
   };
 
-  const checkPlugs = (types: string) => {
+  const checkPlugs = (types: string | null) => {
+    if (!types) return { text: 'Brak danych o gniazdkach', class: 'plugs-none', warning: false };
     const plugList = types.split(',').map(t => t.trim().toUpperCase());
     const isSameAsPoland = plugList.every(t => ['C', 'E', 'F'].includes(t));
     const hasPolishCompatible = plugList.some(t => ['C', 'E', 'F'].includes(t));
@@ -841,13 +842,13 @@ function App() {
                           <span>{selectedCountry.ethnic_groups}</span>
                         </div>
                       )}
-                      {selectedCountry.languages.length > 0 && (
+                      {selectedCountry.languages?.length > 0 && (
                         <div className="info-item-box full">
                           <strong>Języki:</strong>
                           <span>{selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ')}</span>
                         </div>
                       )}
-                      {selectedCountry.religions.length > 0 && (
+                      {selectedCountry.religions?.length > 0 && (
                         <div className="info-item-box full">
                           <strong>Religie:</strong>
                           <div className="religion-badges">
@@ -887,7 +888,7 @@ function App() {
                     </div>
                     <div className="plugs-container">
                       <div className="plug-types-list">
-                        {selectedCountry.practical.plug_types.split(',').map(type => (
+                        {selectedCountry.practical.plug_types ? selectedCountry.practical.plug_types.split(',').map(type => (
                           <div key={type} className="plug-icon-box">
                             <span className="plug-letter">Typ {type.trim()}</span>
                             {PLUG_IMAGES[type.trim().toUpperCase()] && (
@@ -899,7 +900,7 @@ function App() {
                               </div>
                             )}
                           </div>
-                        ))}
+                        )) : <div className="no-data-msg">Brak danych o typach gniazdek</div>}
                       </div>
                       <div className={`plug-comparison ${checkPlugs(selectedCountry.practical.plug_types).class}`}>
                         {checkPlugs(selectedCountry.practical.plug_types).warning && '⚠️ '}
@@ -1078,7 +1079,7 @@ function App() {
                           })()}
 
                           {/* Rain Bars */}
-                          {selectedCountry.climate.map((cl, i) => {
+                          {selectedCountry.climate?.map((cl, i) => {
                             const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
                             const barHeight = (cl.rain / maxRain) * 180;
                             return (
@@ -1108,13 +1109,13 @@ function App() {
                           {(() => {
                             const getX = (i: number) => 62 + i * 43;
                             const getY = (temp: number) => 200 - (temp + 20) * 3.5;
-                            const dayPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ');
-                            const nightPath = selectedCountry.climate.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ');
+                            const dayPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ') || '';
+                            const nightPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ') || '';
                             return (
                               <>
                                 <path d={dayPath} className="chart-line-day" fill="none" />
                                 <path d={nightPath} className="chart-line-night" fill="none" />
-                                {selectedCountry.climate.map((cl, i) => (
+                                {selectedCountry.climate?.map((cl, i) => (
                                   <g key={`dots-${i}`}>
                                     <circle cx={getX(i)} cy={getY(cl.temp_day)} r="4" className="chart-dot-day"
                                       onMouseEnter={(e) => setChartTooltip({ visible: true, text: `Dzień: ${cl.temp_day}°C`, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 })}
@@ -1130,7 +1131,7 @@ function App() {
                             );
                           })()}
 
-                          {selectedCountry.climate.map((cl, i) => (
+                          {selectedCountry.climate?.map((cl, i) => (
                             <text key={`label-${i}`} x={62 + i * 43} y="240" textAnchor="middle" className="chart-month-text">
                               {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
                             </text>
@@ -1210,19 +1211,19 @@ function App() {
                       <div className="holiday-container">
                         <div className="expanded-holiday-list">
                           {Object.entries(
-                            [...selectedCountry.holidays]
+                            ([...selectedCountry.holidays])
                               .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
                               .reduce((acc, h) => {
                                 const month = new Date(h.date).toLocaleDateString('pl-PL', { month: 'long' });
                                 if (!acc[month]) acc[month] = [];
                                 acc[month].push(h);
                                 return acc;
-                              }, {} as Record<string, typeof selectedCountry.holidays>)
+                              }, {} as Record<string, any[]>)
                           ).map(([month, monthHolidays]) => (
                             <div key={month} className="holiday-month-group">
                               <h5 className="holiday-month-header">{month}</h5>
                               <div className="holiday-month-items">
-                                {monthHolidays.map((h, idx) => (
+                                {(monthHolidays as any[]).map((h, idx) => (
                                   <div key={idx} className="holiday-item">
                                     <span className="holiday-date">{new Date(h.date).toLocaleDateString('pl-PL', { day: 'numeric' })}</span>
                                     <span className="holiday-name">{h.name}</span>
