@@ -61,6 +61,7 @@ interface CountryData {
   wiki_summary: string | null;
   national_symbols: string | null;
   population: number | null;
+  area: number | null;
   phone_code: string | null;
   largest_cities: string | null;
   ethnic_groups: string | null;
@@ -151,25 +152,35 @@ interface CountryData {
 
 function ExpandableText({ text }: { text: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [hasMore, setHasMore] = useState(false);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      const { scrollHeight, clientHeight } = textRef.current;
+      setHasMore(scrollHeight > clientHeight);
+    }
+  }, [text]);
+
   if (!text) return null;
-
-  const paragraphs = text.split('\n\n');
-  const hasMore = text.length > 150 || paragraphs.length > 1;
-
-  if (!hasMore) return <div className="risk-details-text">{text}</div>;
 
   return (
     <div className={`expandable-text-container ${isExpanded ? 'expanded' : ''}`}>
-      <div className="risk-details-text">
-        {isExpanded ? text : (text.slice(0, 150) + '...')}
-      </div>
-      {!isExpanded && <div className="text-gradient"></div>}
-      <button 
-        className="show-more-btn" 
-        onClick={() => setIsExpanded(!isExpanded)}
+      <div 
+        ref={textRef}
+        className="risk-details-text line-clamp"
       >
-        {isExpanded ? 'Pokaż mniej' : 'Pokaż więcej'}
-      </button>
+        {text}
+      </div>
+      {hasMore && !isExpanded && <div className="text-gradient"></div>}
+      {hasMore && (
+        <button 
+          className="show-more-btn" 
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? 'Pokaż mniej' : 'Pokaż więcej'}
+        </button>
+      )}
     </div>
   );
 }
@@ -522,14 +533,25 @@ function App() {
               </div>
               
               <div className="controls-section">
-                <input 
-                  ref={searchInputRef}
-                  type="text" 
-                  placeholder="Szukaj kraju..." 
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  className="search-input"
-                />
+                <div className="search-container">
+                  <input 
+                    ref={searchInputRef}
+                    type="text" 
+                    placeholder="Szukaj kraju..." 
+                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}
+                    className="search-input"
+                  />
+                  {searchQuery && (
+                    <button 
+                      className="clear-input-btn" 
+                      onClick={() => setSearchQuery('')}
+                      title="Wyczyść szukanie"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
                 
                 <div className="filter-group">
                   <select value={filterContinent} onChange={e => setFilterContinent(e.target.value)}>
@@ -825,6 +847,25 @@ function App() {
                       <div className="info-item-box">
                         <strong>Ludność:</strong>
                         <span>{selectedCountry.population?.toLocaleString() || 'Brak danych'}</span>
+                      </div>
+                      <div className="info-item-box">
+                        <strong>Gęstość zaludnienia:</strong>
+                        <span>
+                          {selectedCountry.population && selectedCountry.area ? (
+                            <>
+                              {(selectedCountry.population / selectedCountry.area).toFixed(1)} os./km²
+                              <br />
+                              {(() => {
+                                const density = selectedCountry.population / selectedCountry.area;
+                                const polandDensity = 120; // ok. 120 os./km2
+                                const ratio = density / polandDensity;
+                                if (ratio > 1.2) return <span style={{ color: '#f56565', fontSize: '0.75rem', fontWeight: 'bold' }}>🔴 Gęściej niż w PL</span>;
+                                if (ratio < 0.8) return <span style={{ color: '#48bb78', fontSize: '0.75rem', fontWeight: 'bold' }}>🟢 Rzadziej niż w PL</span>;
+                                return <span style={{ color: '#4299e1', fontSize: '0.75rem', fontWeight: 'bold' }}>🔵 Podobnie jak w PL</span>;
+                              })()}
+                            </>
+                          ) : 'Brak danych'}
+                        </span>
                       </div>
                       <div className="info-item-box">
                         <strong>Nr kierunkowy:</strong>

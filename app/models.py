@@ -19,6 +19,7 @@ class Country(Base):
     flag_emoji = Column(String(10))
     flag_url = Column(Text)
     population = Column(Integer)
+    area = Column(DECIMAL(15, 2))
     latitude = Column(DECIMAL(10, 6))
     longitude = Column(DECIMAL(10, 6))
     timezone = Column(String(255))

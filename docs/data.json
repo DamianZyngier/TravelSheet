@@ -10,6 +10,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sk.png",
     "population": 5413813,
+    "area": 49037.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Słowacja, Republika Słowacka – unitarne państwo śródlądowe w Europie Środkowej. Graniczy z Austrią (106,7 km), Polską (541,1 km), Czechami (251,8 km), Ukrainą (97,8 km) oraz Węgrami (654,8 km). Łączna długość granicy lądowej wynosi 1652,2 km. Do 31 grudnia 1992 wchodziła w skład Czechosłowacji. Od 19 stycznia 1993 członek ONZ, od 29 marca 2004 członek NATO, od 1 maja 2004 należy do Unii Europejskiej, a od 1 stycznia 2009 – do strefy euro. Jest również członkiem Grupy Wyszehradzkiej. Stolicą państwa jest Bratysława, położona nad Dunajem przy granicy z Austrią i Węgrami.",
@@ -35,8 +36,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -280,6 +281,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gs.png",
     "population": 0,
+    "area": 3903.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Georgia Południowa i Sandwich Południowy – brytyjskie terytorium zamorskie na południowym Oceanie Atlantyckim. Leży niedaleko południowego koła podbiegunowego.",
@@ -305,8 +307,8 @@
     },
     "currency": {
       "code": "GBP",
-      "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "name": "Funt brytyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -365,6 +367,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mw.png",
     "population": 20734262,
+    "area": 118484.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Malawi, Republika Malawi dawniej Niasa – państwo we wschodniej Afryce, bez dostępu do morza. Graniczy z Tanzanią, Mozambikiem i Zambią.",
@@ -394,8 +397,8 @@
     },
     "currency": {
       "code": "MWK",
-      "name": "Kwacha malawijska",
-      "rate_pln": 0.002063
+      "name": "Malawijski poranek",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -493,6 +496,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tj.png",
     "population": 10499000,
+    "area": 143100.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tadżykistan, Republika Tadżykistanu – państwo w środkowej Azji ze stolicą w Duszanbe. Tadżykistan graniczy z Uzbekistanem, Kirgistanem, Chinami i Afganistanem.",
@@ -522,8 +526,8 @@
     },
     "currency": {
       "code": "TJS",
-      "name": "Somoni (Tadżykistan)",
-      "rate_pln": 0.3785
+      "name": "Somoni Tadżykistanu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -649,6 +653,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tf.png",
     "population": 400,
+    "area": 7747.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Francuskie Terytoria Południowe i Antarktyczne – francuskie terytorium zależne obejmujące antarktyczne wyspy wulkaniczne, położone w południowej części Oceanu Indyjskiego. Położone są one częściowo u wybrzeży Afryki, a część leży niemal w równej odległości od kontynentów Afryki, Australii i Antarktydy, w pobliżu 43°S i 67°E. W ich skład wchodzi również sektor Antarktydy obejmujący Ziemię Adeli, przy czym roszczenia wobec Ziemi Adeli nie są uznawane przez niektóre państwa.",
@@ -674,8 +679,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -734,6 +739,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/so.png",
     "population": 19655000,
+    "area": 637657.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Somalia, Federalna Republika Somalii – państwo w północno-wschodniej części Afryki położone na Półwyspie Somalijskim. Przylega do Oceanu Indyjskiego i Zatoki Adeńskiej. Na północnym zachodzie graniczy z Dżibuti, na zachodzie z Etiopią, zaś na południowym zachodzie z Kenią.",
@@ -764,7 +770,7 @@
     "currency": {
       "code": "SOS",
       "name": "Szyling somalijski",
-      "rate_pln": 0.006271
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -834,6 +840,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nr.png",
     "population": 11680,
+    "area": 21.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nauru, oficjalnie Republika Nauru początkowo nazywana Pleasant Island – wyspiarskie mikropaństwo położone w zachodniej części Oceanu Spokojnego, w Mikronezji, w odległości około 42 km na południe od równika. Jest najmniejszą republiką na świecie, zarówno pod względem wielkości, jak i liczby ludności oraz trzecim, po Watykanie i Monako, najmniejszym państwem na świecie. Wielkość wyłącznej strefy ekonomicznej wynosi 308 480 km², natomiast powierzchnia wód terytorialnych to 41 km².",
@@ -864,7 +871,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -923,6 +930,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/al.png",
     "population": 2363314,
+    "area": 28748.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Albania, Republika Albanii – państwo w południowo-wschodniej Europie na Bałkanach. Albania na zachodzie ma dostęp do Morza Adriatyckiego, a na południowym zachodzie do Morza Jońskiego. Stolicą kraju jest Tirana, jest to również finansowe centrum kraju.",
@@ -948,8 +956,8 @@
     },
     "currency": {
       "code": "ALL",
-      "name": "Lek (Albania)",
-      "rate_pln": 0.043779
+      "name": "lek albański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -1118,6 +1126,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gm.png",
     "population": 2422712,
+    "area": 10689.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gambia – państwo położone w zachodniej części kontynentu afrykańskiego. Od północy, południa i wschodu graniczy z Senegalem. Od zachodu ma dostęp do Oceanu Atlantyckiego, przy ujściu rzeki Gambii. Dawniej kolonia brytyjska, niepodległość uzyskała w 1965. Stolicą jest Bandżul. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -1143,8 +1152,8 @@
     },
     "currency": {
       "code": "GMD",
-      "name": "Dalasi (Gambia)",
-      "rate_pln": 0.0483
+      "name": "dalasi",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -1275,6 +1284,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gl.png",
     "population": 56542,
+    "area": 2166086.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Grenlandia – autonomiczne terytorium zależne Danii, zlokalizowane w Ameryce Północnej, na wyspie o tej samej nazwie, zajmującej obszar 2 166 086 km² i będącej największą wyspą na świecie nie będącą kontynentem. Terytorium Grenlandii pokryte jest w 81% przez lądolód grenlandzki. Według danych na 2026 rok, zamieszkiwało ją 55 695 osób, spośród których ok. 89% stanowili Inuici.",
@@ -1300,8 +1310,8 @@
     },
     "currency": {
       "code": "DKK",
-      "name": "Korona duńska",
-      "rate_pln": 0.5646
+      "name": "korona",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, K",
@@ -1425,6 +1435,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mx.png",
     "population": 130575786,
+    "area": 1964375.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Meksyk, oficjalnie Meksykańskie Stany Zjednoczone – państwo w Ameryce Północnej. Sąsiaduje ze Stanami Zjednoczonymi, z Oceanem Spokojnym, Zatoką Meksykańską i Morzem Karaibskim oraz z Gwatemalą i Belize.",
@@ -1451,7 +1462,7 @@
     "currency": {
       "code": "MXN",
       "name": "Peso meksykańskie",
-      "rate_pln": 0.2084
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -1923,6 +1934,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bd.png",
     "population": 169828911,
+    "area": 147570.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bangladesz, Ludowa Republika Bangladeszu – państwo w Azji Południowej, położone nad Zatoką Bengalską i graniczące z zachodu, północy i wschodu z Indiami, a na południowym wschodzie z Mjanmą. Jest jednym z najgęściej zaludnionych krajów świata i zarazem jednym z najbiedniejszych państw Azji. Stolicą Bangladeszu jest Dhaka.",
@@ -1948,8 +1960,8 @@
     },
     "currency": {
       "code": "BDT",
-      "name": "Taka (Bangladesz)",
-      "rate_pln": 0.029279
+      "name": "Stopa Bangladeszu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, G, K",
@@ -2087,6 +2099,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ir.png",
     "population": 85961000,
+    "area": 1648195.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Iran, pełna nazwa Islamska Republika Iranu, w Europie dawniej znany jako Persja – państwo na Bliskim Wschodzie, leżące między Morzem Kaspijskim na północy a Zatoką Perską i Zatoką Omańską na południu.",
@@ -2112,8 +2125,8 @@
     },
     "currency": {
       "code": "IRR",
-      "name": "Rial irański",
-      "rate_pln": 3e-06
+      "name": "rial irański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -2485,6 +2498,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/si.png",
     "population": 2130638,
+    "area": 20273.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Słowenia, Republika Słowenii – państwo położone w Europie Południowej nad morzem Adriatyckim, graniczy od zachodu z Włochami, od północy z Austrią, od wschodu z Węgrami oraz od południa z Chorwacją. Stolicą i największym miastem kraju jest Lublana. Słowenia jest najzamożniejszym oraz najbardziej rozwiniętym, szczególnie pod względem gospodarczym, państwem byłej Jugosławii i jednocześnie jednym z najbardziej zamożnych i rozwiniętych krajów Europy Środkowo-Wschodniej. Językiem urzędowym jest język słoweński.",
@@ -2510,8 +2524,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -2752,6 +2766,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ad.png",
     "population": 88406,
+    "area": 468.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Andora, Księstwo Andory, nazwa historyczna (tradycyjna): Doliny Andory – małe państwo w południowo-zachodniej Europie, bez dostępu do morza. Leży w Pirenejach, granicząc od północy z Francją, a od południa z Hiszpanią.",
@@ -2777,8 +2792,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -2925,6 +2940,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ss.png",
     "population": 15786898,
+    "area": 619745.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Sudan, oficjalnie Republika Sudanu – państwo położone w północno-wschodniej części Afryki nad Morzem Czerwonym.",
@@ -2951,7 +2967,7 @@
     "currency": {
       "code": "SSP",
       "name": "Funt południowosudański",
-      "rate_pln": 0.000785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D",
@@ -3010,6 +3026,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/je.png",
     "population": 103267,
+    "area": 116.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Jersey, oficjalnie Baliwat Jersey – dependencja korony brytyjskiej obejmująca administracyjnie wyspę Jersey, jedną z Wysp Normandzkich, oraz kilkadziesiąt sąsiednich, niezamieszkanych wysepek.",
@@ -3043,8 +3060,8 @@
     },
     "currency": {
       "code": "GBP",
-      "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "name": "Funt brytyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -3146,6 +3163,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bz.png",
     "population": 417634,
+    "area": 22966.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Belize – państwo w Ameryce Środkowej leżące na półwyspie Jukatan, nad Morzem Karaibskim, od północy graniczące z Meksykiem, a na zachodzie z Gwatemalą (266 km). Jego stolicą jest Belmopan.",
@@ -3179,8 +3197,8 @@
     },
     "currency": {
       "code": "BZD",
-      "name": "Dolar belizeński",
-      "rate_pln": 1.779
+      "name": "Dolar Belize",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, G",
@@ -3310,6 +3328,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/im.png",
     "population": 84530,
+    "area": 572.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspa Man – dependencja korony brytyjskiej znajdująca się na wyspie Man, należącej do archipelagu Wysp Brytyjskich i położonej na Morzu Irlandzkim między Wielką Brytanią a Irlandią. Jako terytorium nie jest prawnie częścią Zjednoczonego Królestwa Wielkiej Brytanii i Irlandii Północnej, nie była też częścią Unii Europejskiej przed Brexitem.",
@@ -3339,8 +3358,8 @@
     },
     "currency": {
       "code": "GBP",
-      "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "name": "Funt brytyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -3446,6 +3465,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ai.png",
     "population": 16010,
+    "area": 91.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Anguilla – terytorium zamorskie Wielkiej Brytanii na Morzu Karaibskim w archipelagu Wysp Nawietrznych. Składa się z wysp Anguilla, Sombero oraz kilku mniejszych. Najbliższym obcym terytorium jest oddalona o około 7 km na południe wyspa Sint Maarten/Saint-Martin należąca po części do Francji i Holandii.",
@@ -3472,7 +3492,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -3531,6 +3551,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mk.png",
     "population": 1822612,
+    "area": 25713.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Macedonia Północna – państwo w Europie Południowej na Półwyspie Bałkańskim, powstałe w wyniku rozpadu Jugosławii, obejmujące swoim terytorium około 38% historyczno-geograficznego regionu Macedonia. Do 12 lutego 2019 nazwa państwa brzmiała Macedonia. Od 27 marca 2020 Macedonia Północna jest członkiem NATO.",
@@ -3556,8 +3577,8 @@
     },
     "currency": {
       "code": "MKD",
-      "name": "Denar (Macedonia Północna)",
-      "rate_pln": 0.068429
+      "name": "pieniądze",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -3684,6 +3705,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cu.png",
     "population": 9748007,
+    "area": 109884.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kuba, Republika Kuby – państwo wyspiarskie w Ameryce Północnej, położone w archipelagu Wielkich Antyli, na wyspie Kuba oraz szeregu otaczających ją mniejszych wysepek. Największe pod względem powierzchni państwo na Karaibach (110 860 km²), zamieszkane przez 11 032 343 osoby (2021). Stolicą i największym miastem jest Hawana.",
@@ -3888,6 +3910,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/zm.png",
     "population": 19693423,
+    "area": 752612.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Zambia, oficjalnie Republika Zambii – państwo śródlądowe w południowej Afryce. Zajmuje powierzchnię 752 618 km², a zamieszkane jest przez 20 799 116 osób.",
@@ -3913,8 +3936,8 @@
     },
     "currency": {
       "code": "ZMW",
-      "name": "Kwacha zambijska",
-      "rate_pln": 0.1901
+      "name": "Zambijski poranek",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, G",
@@ -3983,6 +4006,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gg.png",
     "population": 64781,
+    "area": 78.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Guernsey – terytorium obejmujące wyspę Guernsey i kilkanaście mniejszych wysp w archipelagu Wysp Normandzkich, położonych na kanale La Manche, nieopodal wybrzeża Francji.",
@@ -4016,8 +4040,8 @@
     },
     "currency": {
       "code": "GBP",
-      "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "name": "Funt brytyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -4113,6 +4137,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ps.png",
     "population": 5483450,
+    "area": 6220.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Palestyna – region geograficzny w zachodniej Azji. Obejmuje on obszar o różnie określanych granicach. Współcześnie nazwa Palestyna odnoszona jest najczęściej do obszaru terytorium mandatowego Wielkiej Brytanii z lat 1920–1947, odpowiadającego obecnym terytoriom państwa Izrael oraz Strefy Gazy i Zachodniego Brzegu Jordanu. Terytorium to nie pokrywa się z obszarem Palestyny historycznej, obejmującym północną i środkową część obecnego państwa Izrael oraz zachodnią część Jordanii.",
@@ -4139,7 +4164,7 @@
     "currency": {
       "code": "EGP",
       "name": "Funt egipski",
-      "rate_pln": 0.0744
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, H, M",
@@ -4244,6 +4269,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/np.png",
     "population": 29911840,
+    "area": 147181.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nepal, oficjalnie Federalna Demokratyczna Republika Nepalu – demokratyczna republika federalna w Azji Południowej, położona w środkowej części Himalajów, granicząca na północy z Chinami, a na południu, wschodzie i zachodzie z Indiami, bez dostępu do morza.",
@@ -4270,7 +4296,7 @@
     "currency": {
       "code": "NPR",
       "name": "Rupia nepalska",
-      "rate_pln": 0.024592
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, M",
@@ -4366,6 +4392,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sx.png",
     "population": 41349,
+    "area": 34.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "",
@@ -4459,6 +4486,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bo.png",
     "population": 11365333,
+    "area": 1098581.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Boliwia, oficjalnie Wielonarodowe Państwo Boliwia – państwo śródlądowe w środkowo-zachodniej części Ameryki Południowej, graniczy z Brazylią na północy i wschodzie, Paragwajem i Argentyną na południu oraz z Chile i Peru na zachodzie. Konstytucyjną stolicą jest Sucre, siedzibą rządu jest La Paz.",
@@ -4496,8 +4524,8 @@
     },
     "currency": {
       "code": "BOB",
-      "name": "Boliwiano (Boliwia)",
-      "rate_pln": 0.5159
+      "name": "Boliviano boliwijskie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C",
@@ -4669,6 +4697,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/re.png",
     "population": 896175,
+    "area": 2511.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Reunion – departament zamorski Francji, zajmujący wyspę o tej samej nazwie. Znajduje się na Oceanie Indyjskim, położona około 700 km na wschód od Madagaskaru i 174 km na południowy zachód od Mauritiusu.",
@@ -4694,8 +4723,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -4754,6 +4783,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kp.png",
     "population": 25950000,
+    "area": 120538.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Korea Północna, oficjalna nazwa Koreańska Republika Ludowo-Demokratyczna, w skrócie KRLD – państwo w Azji Wschodniej, powstałe w północnej części Półwyspu Koreańskiego po II wojnie światowej na terenach zajętych przez Armię Czerwoną. Jedno z nielicznych na świecie państw totalitarnych.",
@@ -4867,6 +4897,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ec.png",
     "population": 18103660,
+    "area": 276841.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Ekwador – państwo w Ameryce Południowej położone nad Oceanem Spokojnym, jedno z czterech państw powstałych w wyniku rozpadu Wielkiej Kolumbii w 1830 r. Sąsiaduje od północy z Kolumbią, a od południa z Peru. W skład Ekwadoru wchodzą także położone na Oceanie Spokojnym Wyspy Galapagos – są jego największą atrakcją turystyczną. Nazwa kraju pochodzi od hiszpańskiego słowa oznaczającego równik.",
@@ -4893,7 +4924,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -5043,6 +5074,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ma.png",
     "population": 36828330,
+    "area": 446550.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Maroko, Królestwo Marokańskie – państwo położone w północno-zachodniej Afryce ze stolicą w Rabacie, należące do państw Maghrebu. Maroko od północy otacza Morze Śródziemne, a od zachodu Ocean Atlantycki. Na wschodzie graniczy z Algierią, a na południu ze spornym terytorium Sahary Zachodniej. Maroko rości sobie również prawo do hiszpańskich eksklaw Ceuty, Melilli i Peñón de Vélez de la Gomera oraz kilku małych wysp u wybrzeży kontrolowanych przez Hiszpanię. Zajmuje powierzchnię 446 300 km² lub 710 850 km² z populacją około 37 milionów. Oficjalną i dominującą religią jest islam, a językami urzędowymi są arabski i berberyjski; powszechnie używa się również marokańskiego dialektu arabskiego i francuskiego. Marokańska tożsamość i kultura jest żywą mieszanką kultur berberyjskich, arabskich i europejskich. Stolicą kraju jest Rabat, a największym miastem Casablanca.",
@@ -5073,7 +5105,7 @@
     "currency": {
       "code": "MAD",
       "name": "Dirham marokański",
-      "rate_pln": 0.39
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -5255,6 +5287,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mn.png",
     "population": 3544835,
+    "area": 1564110.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mongolia – państwo śródlądowe w środkowowschodniej Azji. Od północy graniczy z Rosją, a od wschodu, zachodu i południa z Chinami. Stolicą i największym miastem jest Ułan Bator, gdzie zamieszkuje ok. 47% populacji całego kraju. Mongolia jest republiką parlamentarną.",
@@ -5280,8 +5313,8 @@
     },
     "currency": {
       "code": "MNT",
-      "name": "Tugrik (Mongolia)",
-      "rate_pln": 0.001002
+      "name": "mongolski tögrög",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -5436,6 +5469,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/rw.png",
     "population": 14104969,
+    "area": 26338.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Rwanda – państwo w środkowo-wschodniej Afryce o powierzchni 26,4 tys. km². Rwanda graniczy z: Burundi, Demokratyczną Republiką Konga, Tanzanią i Ugandą. W 2024 roku w Rwandzie mieszkało 13,6 mln osób. Językami urzędowymi są: rwanda, angielski i francuski. Stolicą państwa jest Kigali. Od 2006 roku Rwanda podzielona jest na 5 prowincji. Walutą Rwandy jest frank rwandyjski.",
@@ -5469,8 +5503,8 @@
     },
     "currency": {
       "code": "RWF",
-      "name": "Frank rwandyjski",
-      "rate_pln": 0.002455
+      "name": "frankofon rwandyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -5548,6 +5582,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bj.png",
     "population": 13224860,
+    "area": 112622.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Benin, oficjalnie Republika Beninu – państwo w Afryce nad Zatoką Gwinejską. Graniczy z Burkina Faso, Nigrem, Nigerią i Togo, członek Unii Afrykańskiej i ECOWAS.",
@@ -5573,8 +5608,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -5718,6 +5753,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sm.png",
     "population": 34132,
+    "area": 61.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "San Marino, Republika San Marino, również znana jako Najjaśniejsza Republika San Marino – państwo śródlądowe w Europie Południowej, stanowiące enklawę na obszarze Włoch. Jego stolicą jest miasto San Marino.",
@@ -5743,8 +5779,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, L",
@@ -5886,6 +5922,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tt.png",
     "population": 1367764,
+    "area": 5130.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Trynidad i Tobago – wyspiarskie państwo Ameryki Południowej w archipelagu Małych Antyli. Obejmuje dwie główne wyspy, Trynidad i Tobago, oraz szereg mniejszych.",
@@ -5912,7 +5949,7 @@
     "currency": {
       "code": "TTD",
       "name": "Dolar Trynidadu i Tobago",
-      "rate_pln": 0.5271
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -5971,6 +6008,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ax.png",
     "population": 30654,
+    "area": 1580.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Alandzkie – archipelag i jednostka administracyjna Finlandii, położony na Morzu Bałtyckim u wejścia do Zatoki Botnickiej, stanowi obszar szwedzkojęzyczny. Posiada dużą autonomię, a status wysp jest gwarantowany międzynarodowo, ostatnio przez traktat akcesyjny do Unii Europejskiej.",
@@ -5996,8 +6034,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -6121,6 +6159,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/jp.png",
     "population": 123210000,
+    "area": 377930.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Japonia  – państwo wyspiarskie położone na wąskim łańcuchu wysp na zachodnim Pacyfiku, u wschodnich wybrzeży Azji, o długości 3,3 tys. km.",
@@ -6146,8 +6185,8 @@
     },
     "currency": {
       "code": "JPY",
-      "name": "Jen (Japonia)",
-      "rate_pln": 0.022857
+      "name": "Jen japoński",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -6506,6 +6545,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tv.png",
     "population": 10643,
+    "area": 26.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tuvalu lub Tuwalu – państwo położone na Oceanie Spokojnym w zachodniej Polinezji, Tuvalu tworzy archipelag po angielsku zwany Tuvalu Islands, po polsku zaś Wyspami Lagunowymi.",
@@ -6536,7 +6576,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -6595,6 +6635,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/af.png",
     "population": 43844000,
+    "area": 652230.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Afganistan – śródlądowe państwo unitarne położone w Azji Południowej, ze stolicą w Kabulu. Graniczy pod względem długości granic kolejno z: Pakistanem, Iranem, Tadżykistanem, Turkmenistanem, Uzbekistanem i Chinami. Afganistan jest de facto kontrolowany przez talibów jako Islamski Emirat Afganistanu od 15 sierpnia 2021, czyli od upadku Islamskiej Republiki Afganistanu, uznawanej na arenie międzynarodowej.",
@@ -6628,8 +6669,8 @@
     },
     "currency": {
       "code": "AFN",
-      "name": "Afgani (Afganistan)",
-      "rate_pln": 0.056195
+      "name": "Afgańczyk afgan",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -6707,6 +6748,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pe.png",
     "population": 34350244,
+    "area": 1285216.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Peru, oficjalnie Republika Peru – państwo w zachodniej części Ameryki Południowej, nad Oceanem Spokojnym. Leży na półkuli południowej, rozciąga się od równika w kierunku zwrotnika Koziorożca. Graniczy z Ekwadorem na północnym zachodzie, Kolumbią na północnym wschodzie, Brazylią na wschodzie, Boliwią na południowym wschodzie, Chile na południu oraz Pacyfikiem na zachodzie.",
@@ -6740,8 +6782,8 @@
     },
     "currency": {
       "code": "PEN",
-      "name": "Sol (Peru)",
-      "rate_pln": 1.0648
+      "name": "Sol peruwiański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C",
@@ -6975,6 +7017,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bt.png",
     "population": 784043,
+    "area": 38394.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bhutan, oficjalnie Królestwo Bhutanu – państwo śródlądowe w Azji Południowej, we wschodnich Himalajach, graniczące na północy, zachodzie i wschodzie z Chinami, a na południu z Indiami. Oficjalna nazwa Druk Jul oznacza Królestwo Smoka.",
@@ -7060,6 +7103,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/vi.png",
     "population": 87146,
+    "area": 347.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Dziewicze Stanów Zjednoczonych – terytorium zależne Stanów Zjednoczonych w Ameryce Środkowej, w basenie Morza Karaibskiego, obejmujące 3 duże wyspy wulkaniczne i kilkadziesiąt mniejszych wysepek koralowych w południowej części archipelagu Wysp Dziewiczych. Największe wyspy to: Saint Croix – 214,7 km², Saint Thomas – 80,9 km² i Saint John – 50,8 km².",
@@ -7086,7 +7130,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -7145,6 +7189,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/me.png",
     "population": 623327,
+    "area": 13812.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Czarnogóra – państwo unitarne w Europie Południowej powstałe po rozpadzie Serbii i Czarnogóry. Wcześniej republika związkowa Socjalistycznej Federacyjnej Republiki Jugosławii (1945–1992), Federalnej Republiki Jugosławii (1992–2003) oraz Serbii i Czarnogóry (2003–2006). Leży na pobrzeżu Morza Adriatyckiego i graniczy z Serbią, Kosowem, Chorwacją, Bośnią i Hercegowiną oraz Albanią. Stolicą i największym miastem jest Podgorica.",
@@ -7170,8 +7215,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -7348,6 +7393,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sn.png",
     "population": 18593258,
+    "area": 196722.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Senegal – państwo w zachodniej Afryce nad Oceanem Atlantyckim. Graniczy z Mauretanią, Mali, Gwineą, Gwineą Bissau i Gambią. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -7373,8 +7419,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, E, K",
@@ -7497,6 +7543,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/eg.png",
     "population": 107271260,
+    "area": 1002450.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Egipt, nazwa oficjalna Arabska Republika Egiptu – państwo położone w północno-wschodniej Afryce z półwyspem Synaj w zachodniej Azji. Egipt graniczy z Izraelem i Palestyną na północnym wschodzie, Sudanem na południu i Libią na zachodzie. Od północy rozpościera się Morze Śródziemne, a na wschodzie Morze Czerwone.",
@@ -7523,7 +7570,7 @@
     "currency": {
       "code": "EGP",
       "name": "Funt egipski",
-      "rate_pln": 0.0744
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -7675,6 +7722,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sc.png",
     "population": 122729,
+    "area": 452.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Seszele, oficjalnie: Republika Seszeli – państwo wyspiarskie na Oceanie Indyjskim, ok. 1600 km od wybrzeży Afryki, położone na północny wschód od Madagaskaru. Najbliższe państwa i terytoria zamorskie to Mauritius i Reunion na południu oraz Malediwy na północnym wschodzie.",
@@ -7709,7 +7757,7 @@
     "currency": {
       "code": "SCR",
       "name": "Rupia seszelska",
-      "rate_pln": 0.2578
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -7840,6 +7888,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lu.png",
     "population": 681973,
+    "area": 2586.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Luksemburg, Wielkie Księstwo Luksemburga – państwo położone w Europie Zachodniej. Jest demokratyczną monarchią konstytucyjną rządzoną przez wielkiego księcia i premiera. Graniczy z Francją od południa, Niemcami od wschodu oraz Belgią od zachodu i północy. Państwo członkowskie Unii Europejskiej oraz NATO.",
@@ -7873,8 +7922,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -7992,6 +8041,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/hm.png",
     "population": 0,
+    "area": 412.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Heard i McDonalda – australijskie terytorium obejmujące dwie niezamieszkane wyspy położone na południowym Oceanie Indyjskim 53°06′S 72°31′E, mniej więcej w 2/3 drogi pomiędzy Madagaskarem i Antarktydą. Są wyspami wulkanicznymi i pod względem geologicznym stanowią wynurzoną część Wyniesienia Kergueleńskiego.",
@@ -8077,6 +8127,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sy.png",
     "population": 25620000,
+    "area": 185180.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Syria, nazwa oficjalna: Syryjska Republika Arabska – państwo arabskie na Bliskim Wschodzie.",
@@ -8103,7 +8154,7 @@
     "currency": {
       "code": "SYP",
       "name": "Funt syryjski",
-      "rate_pln": 0.030972
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, L",
@@ -8217,6 +8268,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tg.png",
     "population": 8095498,
+    "area": 56785.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Togo, Republika Togijska – państwo w zachodniej Afryce nad Zatoką Gwinejską. Graniczy z Ghaną, Beninem i Burkina Faso. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -8242,8 +8294,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -8312,6 +8364,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tm.png",
     "population": 7057841,
+    "area": 488100.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Turkmenistan, Republika Turkmenistanu – państwo położone w Azji Środkowej, na północ od gór Kopet-Dag, pomiędzy Morzem Kaspijskim a Amu-darią. Kraj rozciąga się na 1100 km od wschodu do zachodu oraz na 650 km z północy na południe. Większość mieszkańców stanowią Turkmeni. Turkmenistan graniczy z Afganistanem, Iranem, Uzbekistanem i Kazachstanem.",
@@ -8341,8 +8394,8 @@
     },
     "currency": {
       "code": "TMT",
-      "name": "Nowy manat (Turkmenistan)",
-      "rate_pln": 1.0226
+      "name": "Manat turkmeński",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -8447,6 +8500,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ck.png",
     "population": 15040,
+    "area": 236.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Cooka – samorządne terytorium stowarzyszone Nowej Zelandii na południowym Oceanie Spokojnym w Polinezji obejmujące wyspy o tej samej nazwie.",
@@ -8536,6 +8590,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nu.png",
     "population": 1681,
+    "area": 260.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Niue – terytorium stowarzyszone Nowej Zelandii, położone na wyspie koralowej na Oceanie Spokojnym w Polinezji. Nazwa pochodzi od dwóch słów: niu oraz e.",
@@ -8566,7 +8621,7 @@
     "currency": {
       "code": "NZD",
       "name": "Dolar nowozelandzki",
-      "rate_pln": 2.1371
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -8625,6 +8680,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mv.png",
     "population": 515132,
+    "area": 300.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Malediwy – archipelag oraz państwo wyspiarskie o tej samej nazwie, położone na Oceanie Indyjskim, ok. 500 km na południowy zachód od południowego krańca Indii.",
@@ -8650,8 +8706,8 @@
     },
     "currency": {
       "code": "MVR",
-      "name": "Rupia (Malediwy)",
-      "rate_pln": 0.2314
+      "name": "Malediwscy bandyci",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, D, G, J, K, L",
@@ -8710,6 +8766,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/no.png",
     "population": 5606944,
+    "area": 386224.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Norwegia, oficjalnie Królestwo Norwegii – państwo w Europie Północnej będące monarchią konstytucyjną, którego terytorium obejmuje zachodnią i północną część Półwyspu Skandynawskiego, Jan Mayen, Svalbard, Wyspę Bouveta i Lofoty. Ma łączną powierzchnię 385 207 km² i liczy 5 594 340 mieszkańców (2015). Graniczy ze Szwecją, Finlandią i Rosją. Kraj ma również granicę morską z Danią. Stolicą Norwegii jest Oslo. Długa, licząca ponad 20 tys. kilometrów linia brzegowa znana jest z charakterystycznych zatok, tzw. fiordów. Nazwa kraju pochodzi od staronordyckiego nord vegen.",
@@ -8743,8 +8800,8 @@
     },
     "currency": {
       "code": "NOK",
-      "name": "Korona norweska",
-      "rate_pln": 0.3735
+      "name": "korona norweska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -8925,6 +8982,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/it.png",
     "population": 58927633,
+    "area": 301336.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Włochy, Republika Włoska – państwo unitarne położone w Europie Południowej, głównie na Półwyspie Apenińskim, będące członkiem Unii Europejskiej oraz wielu organizacji, m.in.: ONZ, NATO, należące do grupy siedmiu najbardziej uprzemysłowionych i bogatych państw świata – G7.",
@@ -8954,8 +9012,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, L",
@@ -9621,6 +9679,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cr.png",
     "population": 5309625,
+    "area": 51100.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kostaryka – państwo w Ameryce Centralnej nad Morzem Karaibskim i Oceanem Spokojnym. Graniczy od północy z Nikaraguą na odcinku 309 km i od południa z Panamą – 330 km. Łączna długość wybrzeża karaibskiego i pacyficznego wynosi 1290 km.",
@@ -9646,8 +9705,8 @@
     },
     "currency": {
       "code": "CRC",
-      "name": "Colon kostarykański",
-      "rate_pln": 0.007544
+      "name": "Okrężnica kostarykańska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -9788,6 +9847,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gr.png",
     "population": 10400720,
+    "area": 131990.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Grecja, Republika Grecka – państwo położone w południowo-wschodniej części Europy, na południowym krańcu Półwyspu Bałkańskiego. Graniczy z czterema państwami: Albanią, Macedonią Północną i Bułgarią od północy oraz Turcją od wschodu. Ma dostęp do czterech mórz: Egejskiego i Kreteńskiego od wschodu, Jońskiego od zachodu oraz Śródziemnego od południa. Grecja ma dziesiątą pod względem długości linię brzegową na świecie, o długości 14 880 km. Poza częścią kontynentalną w skład Grecji wchodzi około 2500 wysp, w tym 165 zamieszkanych. Najważniejsze to Kreta, Dodekanez, Cyklady i Wyspy Jońskie. Najwyższym szczytem jest wysoki na 2918 m n.p.m. Mitikas w masywie Olimpu.",
@@ -9813,8 +9873,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -10115,6 +10175,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/in.png",
     "population": 1417492000,
+    "area": 3287263.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Indie, Republika Indii – państwo położone w Azji Południowej, zajmujące większość subkontynentu indyjskiego. Jest największym państwem świata pod względem liczby ludności oraz siódmym pod względem powierzchni; jest także najludniejszą demokracją świata. Stolicą jest Nowe Delhi.",
@@ -10149,7 +10210,7 @@
     "currency": {
       "code": "INR",
       "name": "Rupia indyjska",
-      "rate_pln": 0.039342
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, M",
@@ -10605,6 +10666,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pw.png",
     "population": 16733,
+    "area": 459.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Palau, Republika Palau – wyspiarskie państwo samorządowe, stowarzyszone ze Stanami Zjednoczonymi, położone na Oceanie Spokojnym, w Oceanii oraz w Mikronezji, ok. 1160 km na południe od Guam, ok. 800 km na wschód od Filipin i 3200 km na południe od Tokio. Obejmuje zachodnią część archipelagu Karolinów oraz 4 pojedyncze wyspy koralowe i atol Helen.",
@@ -10635,7 +10697,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -10704,6 +10766,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/zw.png",
     "population": 17073087,
+    "area": 390757.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Zimbabwe, oficjalnie Republika Zimbabwe – państwo śródlądowe położone w południowej Afryce. Zajmuje powierzchnię 390 757 km², a zamieszkane jest przez 17 150 352 osoby.",
@@ -10944,6 +11007,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ag.png",
     "population": 103603,
+    "area": 442.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Antigua i Barbuda – wyspiarskie państwo na Morzu Karaibskim, w archipelagu Małych Antyli. Głową państwa jest król Wielkiej Brytanii, reprezentowany na wyspach przez gubernatora generalnego. Podstawą gospodarki jest turystyka. Do lat 70. XX wieku w gospodarce dominowało rolnictwo przemysłowe. Podział administracyjny jest nietypowy. Antigua, zamieszkana przez 98% ludności, jest podzielona na 6 okręgów, natomiast pozostałe wyspy są dependencjami.",
@@ -10970,7 +11034,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -11039,6 +11103,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ve.png",
     "population": 28517000,
+    "area": 916445.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wenezuela, oficjalnie Boliwariańska Republika Wenezueli – państwo związkowe położone w północnej części Ameryki Południowej. Zajmuje powierzchnię 916 445 km², a zamieszkane jest przez 30 518 260 osób.",
@@ -11064,8 +11129,8 @@
     },
     "currency": {
       "code": "VES",
-      "name": "Boliwar soberano (Wenezuela)",
-      "rate_pln": 0.0087
+      "name": "Wenezuelski suwerenny boliwar",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -11289,6 +11354,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bs.png",
     "population": 398165,
+    "area": 13943.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bahamy, Wspólnota Bahamów – państwo wyspiarskie, położone na archipelagu Bahamy należącym do Indii Zachodnich na Oceanie Atlantyckim.",
@@ -11314,8 +11380,8 @@
     },
     "currency": {
       "code": "BSD",
-      "name": "Dolar bahamski",
-      "rate_pln": 3.5785
+      "name": "dolar bahamski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -11419,6 +11485,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pt.png",
     "population": 10749635,
+    "area": 92090.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Portugalia, Republika Portugalska – państwo europejskie położone w zachodniej części Europy Południowej na południowym zachodzie Półwyspu Iberyjskiego, gdzie od północy i wschodu graniczy z Hiszpanią, a od zachodu i południa Portugalię oblewają wody Oceanu Atlantyckiego. Dodatkowo w skład Portugalii wchodzą dwa archipelagi wysp położonych na Oceanie Atlantyckim – Azory i Madera, co czyni Portugalię najdalej na zachód położonym państwem Europy. Portugalia jest członkiem Unii Europejskiej oraz NATO.",
@@ -11444,8 +11511,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -11727,6 +11794,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fi.png",
     "population": 5650325,
+    "area": 338455.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Finlandia, Republika Finlandii – państwo unitarne w Europie Północnej, będące republiką. Graniczy od zachodu ze Szwecją, od północy z Norwegią i od wschodu z Rosją. Od zachodu i południa ma ponadto dostęp do Morza Bałtyckiego. Zaliczana do krajów nordyckich. Jej stolicą są Helsinki, które wraz z miastami Espoo i Vantaa tworzą obszar metropolitalny; kolejnym największym obszarem miejskim jest Tampere, położone około 180 kilometrów na północ od Helsinek.",
@@ -11756,8 +11824,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -11941,6 +12009,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mh.png",
     "population": 42418,
+    "area": 181.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Marshalla – państwo wyspiarskie na Oceanie Spokojnym, położone na północ od Nauru i Kiribati, na wschód od Mikronezji oraz na południe od amerykańskiej wyspy Wake.",
@@ -11971,7 +12040,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -12040,6 +12109,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ca.png",
     "population": 41651653,
+    "area": 9984670.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kanada – państwo położone w Ameryce Północnej, rozciągające się od Oceanu Atlantyckiego na wschodzie do Oceanu Spokojnego na zachodzie i Oceanu Arktycznego na północy. Na południu i północnym zachodzie graniczy ze Stanami Zjednoczonymi, granice morskie: na północy z należącą do Danii Grenlandią i na wschodzie z wyspami Saint-Pierre i Miquelon, wspólnotą zamorską Francji. Drugie państwo świata pod względem powierzchni oraz 38. pod względem ludności.\nKanada jest członkiem ONZ, NAFTA, Wspólnoty Narodów, Frankofonii, NATO, G7, APEC. Stolicą Kanady jest Ottawa, a największym miastem Toronto.",
@@ -12070,7 +12140,7 @@
     "currency": {
       "code": "CAD",
       "name": "Dolar kanadyjski",
-      "rate_pln": 2.6136
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -12453,6 +12523,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cy.png",
     "population": 1442614,
+    "area": 9251.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Cypr, Republika Cypryjska – państwo w zachodniej Azji położone na wyspie Cypr leżącej we wschodniej części Morza Śródziemnego. Poprzez wody terytorialne graniczy z oddaloną o 70 km na północ Turcją. Jest członkiem Unii Europejskiej, ma wprowadzoną walutę euro. Największymi miastami kraju są: Limassol oraz Nikozja (stolica).",
@@ -12482,8 +12553,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -12639,6 +12710,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/at.png",
     "population": 9200931,
+    "area": 83871.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Austria, Republika Austrii – państwo śródlądowe położone w Europie Środkowej, federacja dziewięciu krajów związkowych ze stolicą w Wiedniu. Od 1995 Austria należy do Unii Europejskiej.",
@@ -12664,8 +12736,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -12894,6 +12966,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kh.png",
     "population": 17577760,
+    "area": 181035.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kambodża, Królestwo Kambodży – państwo w południowo-wschodniej Azji, na Półwyspie Indochińskim, nad Zatoką Tajlandzką. Graniczy od zachodu i północy z Tajlandią, od północy z Laosem (541 km), a od wschodu z Wietnamem (930 km).",
@@ -12919,8 +12992,8 @@
     },
     "currency": {
       "code": "KHR",
-      "name": "Riel (Kambodża)",
-      "rate_pln": 0.000892
+      "name": "riel kambodżański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -13025,6 +13098,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ci.png",
     "population": 31719275,
+    "area": 322463.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": null,
@@ -13050,8 +13124,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -13156,6 +13230,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/vc.png",
     "population": 110872,
+    "area": 389.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint Vincent i Grenadyny – wyspiarskie państwo na Morzu Karaibskim, w archipelagu Małych Antyli. Oprócz wyspy Saint Vincent obejmuje położoną na południe od niej północną część archipelagu Grenadyny.",
@@ -13182,7 +13257,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, E, G, I",
@@ -13241,6 +13316,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/il.png",
     "population": 10134800,
+    "area": 21937.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Izrael, oficjalnie Państwo Izrael – państwo na Bliskim Wschodzie, położone w Azji Zachodniej na wschodnim brzegu Morza Śródziemnego. Graniczy na północy z Libanem, na północnym wschodzie z Syrią, na wschodzie z Jordanią i na południowym zachodzie z Egiptem. Przylegają do niego również Palestyna, czyli Zachodni Brzeg, oraz Strefa Gazy, kontrolowane przez tymczasową strukturę administracyjną: Palestyńskie Władze Narodowe zwane potocznie Autonomią Palestyńską. Zewnętrzne granice Palestyny są kontrolowane przez władze izraelskie. Izrael pomimo stosunkowo małej powierzchni jest dość zróżnicowany demograficznie. W populacji liczącej 7,66 miliona większość stanowią Żydzi (75%). Drugą co do wielkości grupę stanowią Arabowie (20%). Mniejszą grupą etniczną są Samarytanie. Pod względem wyznaniowym w Izraelu występuje duże zróżnicowanie – obok żydów mieszkają również muzułmanie (Arabowie), chrześcijanie i druzowie, jak również inne mniejsze grupy religijne.",
@@ -13271,7 +13347,7 @@
     "currency": {
       "code": "ILS",
       "name": "Nowy izraelski szekel",
-      "rate_pln": 1.1547
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, H, M",
@@ -13412,6 +13488,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ht.png",
     "population": 11867032,
+    "area": 27750.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Haiti, Republika Haiti – państwo w Ameryce Środkowej, na Karaibach, zajmujące zachodnią część wyspy Haiti, w archipelagu Wielkich Antyli, którą dzieli z Dominikaną. Na zachodzie i południu otoczone jest przez Morze Karaibskie, a na północy przez Ocean Atlantycki. Powierzchnia kraju wynosi 27 750 km², a liczba ludności – 11 198 240 (2021). Stolicą i największym miastem jest Port-au-Prince.",
@@ -13441,8 +13518,8 @@
     },
     "currency": {
       "code": "HTG",
-      "name": "Gourde (Haiti)",
-      "rate_pln": 0.0273
+      "name": "Gourde haitańska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -13592,6 +13669,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mz.png",
     "population": 34090466,
+    "area": 801590.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mozambik, Republika Mozambiku – państwo położone w południowo-wschodniej Afryce. Graniczy z Południową Afryką, Eswatini, Zimbabwe, Zambią, Malawi i Tanzanią.",
@@ -13617,8 +13695,8 @@
     },
     "currency": {
       "code": "MZN",
-      "name": "Metical (Mozambik)",
-      "rate_pln": 0.056
+      "name": "Metyk Mozambiku",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, M",
@@ -13733,6 +13811,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fr.png",
     "population": 66351959,
+    "area": 543908.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Francja, Republika Francuska – państwo, którego część metropolitalna znajduje się w Europie Zachodniej oraz częściowo w Europie Południowej, posiadające także terytoria na innych kontynentach. Francja metropolitalna rozciąga się od Morza Śródziemnego na południu do kanału La Manche i Morza Północnego na północy, oraz od Renu na wschodzie do Oceanu Atlantyckiego na zachodzie. Francuzi często nazywają swój kraj l’Hexagone (sześciokąt) – pochodzi to od kształtu Francji metropolitalnej.",
@@ -13758,8 +13837,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -14350,6 +14429,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lk.png",
     "population": 21763170,
+    "area": 65610.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Sri Lanka, oficjalnie Demokratyczno-Socjalistyczna Republika Sri Lanki – państwo w Azji Południowej, na wyspie Cejlon wraz z mniejszymi przybrzeżnymi wyspami. Oddzielone od Półwyspu Indyjskiego Cieśniną Palk i Zatoką Mannar. Od wschodu oblewane przez Zatokę Bengalską, od południa otwartym Oceanem Indyjskim. Największe miasta kraju to: Kolombo, Dehiwala, Moratuwa, Dżafna, Kandy, Galle, Kalmunai.",
@@ -14379,8 +14459,8 @@
     },
     "currency": {
       "code": "LKR",
-      "name": "Rupia lankijska",
-      "rate_pln": 0.011566
+      "name": "Rupia Sri Lanki",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G, M",
@@ -14512,6 +14592,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/br.png",
     "population": 213421037,
+    "area": 8515767.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Brazylia, oficjalnie Federacyjna Republika Brazylii – państwo w Ameryce Południowej, położone we wschodniej części kontynentu, nad Oceanem Atlantyckim. Największe i najludniejsze państwo tego kontynentu, a jednocześnie jedno z największych i najludniejszych państw świata. Zajmuje obszar 8 515 767 km², a zamieszkane jest przez 217 240 060 ludzi. Stolicą kraju jest Brasília.",
@@ -14537,8 +14618,8 @@
     },
     "currency": {
       "code": "BRL",
-      "name": "Real (Brazylia)",
-      "rate_pln": 0.6945
+      "name": "Real brazylijski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "N",
@@ -14884,6 +14965,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kn.png",
     "population": 51320,
+    "area": 261.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint Kitts i Nevis, Federacja Saint Kitts i Nevis ; także jako Saint Christopher i Nevis, Federacja Saint Christopher i Nevis – państwo w Ameryce Środkowej na Morzu Karaibskim.",
@@ -14910,7 +14992,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, D, G",
@@ -14979,6 +15061,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sa.png",
     "population": 35300280,
+    "area": 2149690.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Arabia Saudyjska, Królestwo Arabii Saudyjskiej – państwo położone w zachodniej Azji, na Półwyspie Arabskim. Stolica znajduje się w Rijadzie.",
@@ -15004,8 +15087,8 @@
     },
     "currency": {
       "code": "SAR",
-      "name": "Rial saudyjski",
-      "rate_pln": 0.9537
+      "name": "Rial Saudyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -15137,6 +15220,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pk.png",
     "population": 241499431,
+    "area": 796095.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Pakistan, Islamska Republika Pakistanu – państwo w południowej części Azji, położone wzdłuż Indusu i liczące ponad 200 milionów mieszkańców.",
@@ -15167,7 +15251,7 @@
     "currency": {
       "code": "PKR",
       "name": "Rupia pakistańska",
-      "rate_pln": 0.0128
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, G, M",
@@ -15281,6 +15365,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/hk.png",
     "population": 7527500,
+    "area": 1104.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Hongkong, oficjalnie: Specjalny Region Administracyjny Hongkong – miasto i specjalny region administracyjny Chińskiej Republiki Ludowej, znajdujący się nad Morzem Południowochińskim, w Delcie Rzeki Perłowej. Zajmuje m.in. półwysep Koulun oraz liczne wyspy, w tym dwie największe: Lantau i Hongkong.",
@@ -15311,7 +15396,7 @@
     "currency": {
       "code": "HKD",
       "name": "Dolar Hongkongu",
-      "rate_pln": 0.4576
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -15370,6 +15455,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/us.png",
     "population": 340110988,
+    "area": 9525067.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Stany Zjednoczone Ameryki, Stany Zjednoczone, potocznie Ameryka, do 11 lipca 1778 Stany Zjednoczone Ameryki Północnej – państwo federacyjne w Ameryce Północnej składające się z 50 stanów i stołecznego Dystryktu Kolumbii. Część kontynentalna graniczy z Kanadą na północy i Meksykiem na południu, natomiast stan Alaska usytuowany jest na północnym zachodzie, a archipelag Hawajów na Oceanie Spokojnym. Ponadto Stany Zjednoczone władają tak zwanymi terytoriami zorganizowanymi i różnymi mniejszymi niezamieszkanymi wyspami na Pacyfiku. Trzecie pod względem liczby ludności i czwarte pod względem powierzchni państwo na świecie. Jego trzy największe obszary metropolitalne to Nowy Jork, Los Angeles i Chicago, a trzy najbardziej zaludnione stany to Kalifornia, Teksas i Floryda.",
@@ -15396,7 +15482,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -15690,6 +15776,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mr.png",
     "population": 4927532,
+    "area": 1030700.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mauretania, nazwa oficjalna Islamska Republika Mauretańska – państwo w północno-zachodniej Afryce, nad Atlantykiem. Graniczy z Senegalem, Mali, Algierią i Saharą Zachodnią. Znaczną część kraju stanowią pustynne terytoria saharyjskie.",
@@ -15715,8 +15802,8 @@
     },
     "currency": {
       "code": "MRU",
-      "name": "Ouguiya (Mauretania)",
-      "rate_pln": 0.0894
+      "name": "Ouguiya mauretańska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -15794,6 +15881,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sr.png",
     "population": 616500,
+    "area": 163820.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Surinam – państwo w północno-wschodniej części Ameryki Południowej, położone nad Oceanem Atlantyckim.",
@@ -15820,7 +15908,7 @@
     "currency": {
       "code": "SRD",
       "name": "Dolar surinamski",
-      "rate_pln": 0.0945
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -15907,6 +15995,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mu.png",
     "population": 1243741,
+    "area": 2040.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mauritius, Republika Mauritiusu – państwo wyspiarskie położone w południowo-zachodniej części Oceanu Indyjskiego, w archipelagu Maskarenów, około 900 km na wschód od Madagaskaru i ok. 170 km na północny wschód od Reunionu. Poza samą wyspą Mauritius do Republiki Mauritiusu należą także: wyspa Rodrigues, archipelag Cargados Carajos i Wyspy Agalega.",
@@ -15940,8 +16029,8 @@
     },
     "currency": {
       "code": "MUR",
-      "name": "Rupia Mauritiusu",
-      "rate_pln": 0.0771
+      "name": "Rupia Mauritiusa",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, G",
@@ -16019,6 +16108,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bi.png",
     "population": 12332788,
+    "area": 27834.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Burundi, oficjalnie Republika Burundi – państwo śródlądowe położone w Afryce Wschodniej. Graniczy z Rwandą od północy, Tanzanią od wschodu i południa, oraz z Demokratyczną Republiką Konga od zachodu.",
@@ -16048,8 +16138,8 @@
     },
     "currency": {
       "code": "BIF",
-      "name": "Frank burundyjski",
-      "rate_pln": 0.001206
+      "name": "frank burundyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -16108,6 +16198,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/py.png",
     "population": 6109644,
+    "area": 406752.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Paragwaj, Republika Paragwaju – państwo śródlądowe w Ameryce Południowej, sąsiadujące z Argentyną, Boliwią i Brazylią.",
@@ -16137,8 +16228,8 @@
     },
     "currency": {
       "code": "PYG",
-      "name": "Guarani (Paragwaj)",
-      "rate_pln": 0.000555
+      "name": "Paragwajskie Guarani",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -16207,6 +16298,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/az.png",
     "population": 10241722,
+    "area": 86600.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Azerbejdżan, Republika Azerbejdżanu – państwo położone na Kaukazie Południowym z wybrzeżem nad Morzem Kaspijskim. Graniczące z Rosją na północy, Gruzją na północnym zachodzie, Armenią na zachodzie, Iranem na południu oraz Turcją poprzez eksklawę – Nachiczewańską Republikę Autonomiczną. Eksklawa ta jest ograniczona przez Armenię na północy i wschodzie, Iran na południu i zachodzie oraz ma – biegnącą odcinkiem rzeki Araks – kilkunastokilometrową granicę z Turcją na północnym zachodzie.",
@@ -16233,7 +16325,7 @@
     "currency": {
       "code": "AZN",
       "name": "Manat azerbejdżański",
-      "rate_pln": 2.1046
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -16338,6 +16430,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/do.png",
     "population": 10771504,
+    "area": 48671.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Dominikana, oficjalnie: Republika Dominikańska – drugie co do wielkości państwo na Morzu Karaibskim. Zajmuje około 2/3 powierzchni wyspy Haiti, dzieląc ją z położoną po zachodniej stronie Republiką Haiti.",
@@ -16363,8 +16456,8 @@
     },
     "currency": {
       "code": "DOP",
-      "name": "Peso dominikańskie",
-      "rate_pln": 0.0589
+      "name": "peso dominikańskie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -16433,6 +16526,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gd.png",
     "population": 109021,
+    "area": 344.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Grenada – państwo wyspiarskie na wyspie Grenada i części wysp archipelagu Grenadyn na Morzu Karaibskim.",
@@ -16459,7 +16553,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -16518,6 +16612,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kw.png",
     "population": 4881254,
+    "area": 17818.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kuwejt, Państwo Kuwejt – państwo położone w południowo-zachodniej Azji, na północno-zachodnim wybrzeżu Zatoki Perskiej. Graniczy z Irakiem (242 km) i Arabią Saudyjską (222 km) – łączna długość granic lądowych wynosi 464 km, ponadto 499 km wybrzeża morskiego.",
@@ -16544,7 +16639,7 @@
     "currency": {
       "code": "KWD",
       "name": "Dinar kuwejcki",
-      "rate_pln": 11.711
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, G",
@@ -16603,6 +16698,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ua.png",
     "population": 32862000,
+    "area": 603550.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Ukraina – państwo unitarne, położone w Europie Wschodniej. Graniczy od północy z Białorusią, od zachodu z Polską, Słowacją i Węgrami, od południa oblewają ją wody morza Czarnego i morza Azowskiego oraz graniczy z Rumunią i Mołdawią, a od północnego wschodu i wschodu z Rosją. Stolicą Ukrainy jest Kijów.",
@@ -16628,8 +16724,8 @@
     },
     "currency": {
       "code": "UAH",
-      "name": "Hrywna (Ukraina)",
-      "rate_pln": 0.0827
+      "name": "Hrywna ukraińska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -16761,6 +16857,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bf.png",
     "population": 24070553,
+    "area": 272967.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Burkina Faso – państwo śródlądowe w Afryce Zachodniej. Dawniej Górna Wolta, w 1984 roku prezydent Thomas Sankara nadał mu nową nazwę, która oznacza „kraj prawych ludzi” w językach mossi i diula, będących głównymi rdzennymi językami kraju.",
@@ -16786,8 +16883,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -16883,6 +16980,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/vu.png",
     "population": 321409,
+    "area": 12189.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Republika Vanuatu – państwo w Oceanii. Położone na 198 wyspach Nowych Hebrydów, z których 65 jest zamieszkanych. Położone jest ok. 800 km na północny zachód od Fidżi i na północny wschód od Nowej Kaledonii. Dawniej terytorium kraju było kondominium francusko-brytyjskim znanym pod nazwą Nowe Hebrydy.",
@@ -16916,8 +17014,8 @@
     },
     "currency": {
       "code": "VUV",
-      "name": "Vatu (Vanuatu)",
-      "rate_pln": 0.02987
+      "name": "Vanuatu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -16986,6 +17084,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tw.png",
     "population": 23317031,
+    "area": 36197.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "",
@@ -17012,7 +17111,7 @@
     "currency": {
       "code": "TWD",
       "name": "Nowy dolar tajwański",
-      "rate_pln": 0.1141
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -17071,6 +17170,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/dk.png",
     "population": 6011488,
+    "area": 43094.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Dania – państwo położone w Europie Północnej (Skandynawia), najmniejsze z państw nordyckich. Wraz z Grenlandią oraz Wyspami Owczymi tworzy Wspólnotowe Królestwo Danii. Kontynentalna Dania graniczy od południa z Niemcami, zaś przez cieśninę Sund sąsiaduje ze Szwecją. Posiada też granicę z Kanadą na wyspie Hansa. Dania jest członkiem Unii Europejskiej, NATO oraz ONZ.",
@@ -17096,8 +17196,8 @@
     },
     "currency": {
       "code": "DKK",
-      "name": "Korona duńska",
-      "rate_pln": 0.5646
+      "name": "korona duńska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, F, K",
@@ -17265,6 +17365,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gf.png",
     "population": 292354,
+    "area": 83534.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gujana Francuska – francuskie terytorium zależne o statusie departamentu zamorskiego, położone w północno-wschodniej części Ameryki Południowej, nad Oceanem Atlantyckim, graniczące na zachodzie z Surinamem, a na południu i południowym wschodzie z Brazylią. Gujana Francuska, jako integralna część Francji, należy do Unii Europejskiej.",
@@ -17290,8 +17391,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -17350,6 +17451,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/co.png",
     "population": 53057212,
+    "area": 1141748.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kolumbia, Republika Kolumbii – państwo w północno-zachodniej części Ameryki Południowej. Jest czwartym pod względem powierzchni państwem na tym kontynencie, a drugim pod względem liczby ludności.",
@@ -17375,8 +17477,8 @@
     },
     "currency": {
       "code": "COP",
-      "name": "Peso kolumbijskie",
-      "rate_pln": 0.000966
+      "name": "peso kolumbijskie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -17517,6 +17619,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sb.png",
     "population": 750325,
+    "area": 28896.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Salomona – państwo wyspiarskie w zachodniej Oceanii, na wschód od Nowej Gwinei, członek Wspólnoty Narodów. Państwo Wysp Salomona obejmuje wschodnią część archipelagu o tej samej nazwie. Należą do niego atole Rennell i Ontong Java oraz wyspy Santa Cruz, Duff, Reef i inne.",
@@ -17543,7 +17646,7 @@
     "currency": {
       "code": "SBD",
       "name": "Dolar Wysp Salomona",
-      "rate_pln": 0.4438
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -17612,6 +17715,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ph.png",
     "population": 114123600,
+    "area": 342353.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Filipiny, oficjalnie Republika Filipin – państwo wyspiarskie w Azji Południowo-Wschodniej, położone na Archipelagu Filipińskim na Oceanie Spokojnym.",
@@ -17641,8 +17745,8 @@
     },
     "currency": {
       "code": "PHP",
-      "name": "Peso filipińskie",
-      "rate_pln": 0.0622
+      "name": "peso filipińskie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C",
@@ -17756,6 +17860,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/de.png",
     "population": 83491249,
+    "area": 357114.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Niemcy; Republika Federalna Niemiec, RFN – państwo federacyjne położone w zachodniej i środkowej Europie. Składa się z 16 krajów związkowych (landów), spośród których jeden to jego stolica i zarazem największe miasto – Berlin. Państwo ma powierzchnię 357 578 km² i panuje w nim klimat umiarkowany. Z ponad 84 milionami mieszkańców jest najludniejszym państwem Unii Europejskiej. Stanowi czołowe pod względem gospodarczym i politycznym państwo Europy. Stanowi część strefy Schengen i strefy euro, jest członkiem ONZ, OECD, G7, G20. Po Stanach Zjednoczonych Niemcy są drugim krajem docelowym migracji na świecie. Niemiecka gospodarka stanowi jedną z największych na świecie. Niemcy mają także bogatą historię i dziedzictwo kulturowe.",
@@ -17781,8 +17886,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -18337,6 +18442,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gq.png",
     "population": 1668768,
+    "area": 28051.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gwinea Równikowa ; oficjalna nazwa państwa Republika Gwinei Równikowej – państwo położone w centralnej Afryce. Jest to jedno z najmniejszych państw tego kontynentu oraz jedyne, gdzie językiem urzędowym jest hiszpański. W czasach kolonialnych występowało pod nazwą Gwinea Hiszpańska. Graniczy od północy z Kamerunem oraz od południa i wschodu z Gabonem. Wybrzeża państwa oblewają wody Zatoki Gwinejskiej będącej częścią Oceanu Atlantyckiego. Wody terytorialne od zachodu dzieli z Wyspami Świętego Tomasza i Książęcą oddalonymi od niej o ok. 230 km. Terytorium Gwinei Równikowej składa się z dwóch części: kontynentalnej i wyspiarskiej. Kontynentalna część państwa, zwana Rio Muni lub Mbini, leży na półkuli północnej, a należąca doń wyspa Annobón na południowej.",
@@ -18370,8 +18476,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -18430,6 +18536,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ke.png",
     "population": 53330978,
+    "area": 580367.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kenia – państwo położone we wschodniej Afryce nad Oceanem Indyjskim. Leży na równiku. Graniczy od północy z Somalią, Etiopią i Sudanem Południowym, od zachodu z Ugandą, a od południa z Tanzanią. Jest 47. krajem świata pod względem powierzchni i 29. pod względem liczby ludności. Stolicą i największym miastem Kenii jest Nairobi.",
@@ -18460,7 +18567,7 @@
     "currency": {
       "code": "KES",
       "name": "Szyling kenijski",
-      "rate_pln": 0.027746
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -18592,6 +18699,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/om.png",
     "population": 5343630,
+    "area": 309500.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Oman, Sułtanat Omanu – państwo w Azji, leżące na Półwyspie Arabskim, nad Morzem Arabskim i Zatoką Omańską. Graniczy ze Zjednoczonymi Emiratami Arabskimi, Arabią Saudyjską i Jemenem. Stolica mieści się w mieście Maskat. Oman należy do Ligi Państw Arabskich.",
@@ -18617,8 +18725,8 @@
     },
     "currency": {
       "code": "OMR",
-      "name": "Rial omański",
-      "rate_pln": 9.2935
+      "name": "rial omański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, G",
@@ -18723,6 +18831,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/vn.png",
     "population": 101343800,
+    "area": 331212.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wietnam, Socjalistyczna Republika Wietnamu − państwo w Azji Południowo-Wschodniej, położone na Półwyspie Indochińskim i graniczące z Chińską Republiką Ludową, Laosem i Kambodżą. Ma ponad 102 mln mieszkańców i jest piętnastym co do wielkości populacji państwem świata.",
@@ -18748,8 +18857,8 @@
     },
     "currency": {
       "code": "VND",
-      "name": "Dong (Wietnam)",
-      "rate_pln": 0.000137
+      "name": "Dong wietnamski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -18890,6 +18999,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ml.png",
     "population": 22395489,
+    "area": 1240192.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mali, oficjalnie Republika Mali – śródlądowe państwo położone w Afryce Zachodniej, siódme co do wielkości w Afryce, ze stolicą w Bamako. Graniczy z Algierią na północy, Nigrem i Burkina Faso na wschodzie, Wybrzeżem Kości Słoniowej i Gwineą na południu oraz z Senegalem i Mauretanią na zachodzie. Członek Unii Afrykańskiej.",
@@ -18915,8 +19025,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -19012,6 +19122,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ch.png",
     "population": 9082848,
+    "area": 41284.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Szwajcaria, Konfederacja Szwajcarska – państwo federacyjne w Europie Zachodniej. Jest jednym z niewielu państw, w których obowiązują szeroko stosowane formy demokracji bezpośredniej. Szwajcaria od kongresu wiedeńskiego w 1815 roku jest państwem neutralnym. Do Organizacji Narodów Zjednoczonych przystąpiła dopiero 10 września 2002 po przegłosowaniu tej decyzji w referendum minimalną większością 52% głosów.",
@@ -19049,8 +19160,8 @@
     },
     "currency": {
       "code": "CHF",
-      "name": "Frank szwajcarski",
-      "rate_pln": 4.6225
+      "name": "frank szwajcarski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, J",
@@ -19227,6 +19338,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sv.png",
     "population": 6029976,
+    "area": 21041.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Salwador, oficjalnie Republika Salwadoru – państwo w Ameryce Północnej, leżące nad Oceanem Spokojnym. Jego stolicą jest San Salvador. Graniczy z Gwatemalą (203 km) i Hondurasem (342 km).",
@@ -19253,7 +19365,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -19322,6 +19434,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/am.png",
     "population": 3076200,
+    "area": 29743.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Armenia, Republika Armenii – państwo śródlądowe położone w zachodniej Azji, na Kaukazie Południowym. Najstarsze państwo chrześcijańskie na świecie. Armenia graniczy od północy z Gruzją, od południa z Iranem i z azerską eksklawą Nachiczewan, od wschodu z Azerbejdżanem, od zachodu z Turcją. Niepodległość uzyskała w 1991 w związku z rozpadem ZSRR. Stolicą Armenii jest obecnie Erywań, który jest też największym miastem w kraju. Od 1991 Armenia należy do Wspólnoty Niepodległych Państw, a od 2015 do Euroazjatyckiej Unii Gospodarczej.",
@@ -19347,8 +19460,8 @@
     },
     "currency": {
       "code": "AMD",
-      "name": "Dram (Armenia)",
-      "rate_pln": 0.009503
+      "name": "Ormiański dramat",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -19435,6 +19548,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fo.png",
     "population": 54885,
+    "area": 1393.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Owcze – wulkaniczny archipelag położony na Oceanie Atlantyckim przy granicy z Morzem Norweskim, między Wielką Brytanią, Islandią a Norwegią. Jednocześnie jest to terytorium autonomiczne Królestwa Danii.",
@@ -19464,8 +19578,8 @@
     },
     "currency": {
       "code": "DKK",
-      "name": "Korona duńska",
-      "rate_pln": 0.5646
+      "name": "korona duńska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, F, K",
@@ -19524,6 +19638,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ug.png",
     "population": 45905417,
+    "area": 241550.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Uganda – państwo położone we wschodniej Afryce nad Jeziorem Wiktorii, o pow. 241 tys. km². Graniczy z Sudanem Południowym, Demokratyczną Republiką Konga, Rwandą, Tanzanią i Kenią. Nazwa kraju pochodzi od plemienia Buganda, zajmującego regiony na jego południu. Tam też znajduje się stolica Ugandy, Kampala. Kraj jest słabo rozwinięty, ludność zajmuje się głównie rolnictwem i hodowlą. Nie posiada dostępu do morza.",
@@ -19554,7 +19669,7 @@
     "currency": {
       "code": "UGX",
       "name": "Szyling ugandyjski",
-      "rate_pln": 0.000994
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -19641,6 +19756,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/es.png",
     "population": 49315949,
+    "area": 505992.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Hiszpania, Królestwo Hiszpanii – państwo w zachodniej części Europy Południowej, położone głównie na Półwyspie Iberyjskim, obejmujące także Baleary na Morzu Śródziemnym, Wyspy Kanaryjskie na Oceanie Atlantyckim oraz mniejsze wysepki i tereny w północnej Afryce.",
@@ -19678,8 +19794,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -20189,6 +20305,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gu.png",
     "population": 153836,
+    "area": 549.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Guam – wyspa w południowej części archipelagu Marianów w Mikronezji, terytorium nieinkorporowane Stanów Zjednoczonych, ze stolicą w Hagåtña.",
@@ -20223,7 +20340,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -20282,6 +20399,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pa.png",
     "population": 4064780,
+    "area": 75417.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Panama, Republika Panamy – państwo w Ameryce Centralnej, położone na Przesmyku Panamskim, łączącym Amerykę Północną i Południową, pomiędzy Morzem Karaibskim na północy a Oceanem Spokojnym na południu. Graniczy z Kostaryką na zachodzie i Kolumbią na wschodzie. Powierzchnia kraju wynosi 75 420 km², a liczba ludności – 3 928 646 (2021). Stolicą i największym miastem jest miasto Panama.",
@@ -20307,8 +20425,8 @@
     },
     "currency": {
       "code": "PAB",
-      "name": "Balboa (Panama)",
-      "rate_pln": 3.5785
+      "name": "balboa panamska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -20413,6 +20531,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/yt.png",
     "population": 320901,
+    "area": 374.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Majotta – francuski departament i region zamorski położony w Kanale Mozambickim na Oceanie Indyjskim.",
@@ -20438,8 +20557,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -20498,6 +20617,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ne.png",
     "population": 26312034,
+    "area": 1267000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Niger, Republika Nigru – państwo położone w Afryce Zachodniej na Saharze, bez dostępu do morza. Niger liczy ponad 1,3 mln km² powierzchni. Graniczy z Algierią, Libią, Czadem, Nigerią, Beninem, Burkina Faso i z Mali. W 2011 roku w państwie mieszkało 15 306 252 osób. Kraj uzyskał niepodległość 3 sierpnia 1960 roku. Językiem urzędowym jest hausa. Niger dzieli się na 7 departamentów i jeden dystrykt stołeczny. Stolicą jest Niamey.",
@@ -20523,8 +20643,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C, D, E, F",
@@ -20611,6 +20731,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tz.png",
     "population": 68153004,
+    "area": 947303.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tanzania, Zjednoczona Republika Tanzanii – państwo we wschodniej Afryce powstałe z połączenia dawnych kolonii brytyjskich: Tanganiki oraz brytyjskiego Zanzibaru, co symbolizowała nazwa utworzona z pierwszych sylab nazw obu krajów TAN+ZAN. W skład Tanzanii jako republiki federacyjnej weszła również wyspa Pemba położona blisko Zanzibaru. Stolicą Tanzanii jest Dodoma, do 1981 roku było nią Dar es Salaam.",
@@ -20641,7 +20762,7 @@
     "currency": {
       "code": "TZS",
       "name": "Szyling tanzański",
-      "rate_pln": 0.001398
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G",
@@ -20764,6 +20885,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cw.png",
     "population": 156115,
+    "area": 444.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Curaçao, Kraj Curaçao – kraj autonomiczny Holandii w Ameryce Południowej i jedna z wulkanicznych Wysp Zawietrznych w archipelagu Małych Antyli. Wchodzi w skład wysp ABC oraz wysp CAS. Stolicą wyspy jest miasto Willemstad, nazywane małym Amsterdamem. Do wyspy należy również wyspa Klein Curaçao. Nie należy do strefy Schengen, ani do Unii Europejskiej.",
@@ -20857,6 +20979,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ws.png",
     "population": 205557,
+    "area": 2842.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Samoa – państwo w Oceanii, obejmujące zachodnią część Wysp Samoa. Do 1997 znane było jako Samoa Zachodnie.",
@@ -20886,8 +21009,8 @@
     },
     "currency": {
       "code": "WST",
-      "name": "Tala (Samoa)",
-      "rate_pln": 1.3203
+      "name": "Dolar Samoański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -20946,6 +21069,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ao.png",
     "population": 36170961,
+    "area": 1246700.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Angola, Republika Angoli – państwo w południowo-zachodniej Afryce nad Oceanem Atlantyckim, członek Unii Afrykańskiej. Sąsiaduje z Demokratyczną Republiką Konga, Namibią, Kongiem oraz Zambią. W przeszłości była kolonią portugalską. Posiada znaczne zasoby surowców naturalnych, w tym ropy naftowej i diamentów.",
@@ -20971,8 +21095,8 @@
     },
     "currency": {
       "code": "AOA",
-      "name": "Kwanza (Angola)",
-      "rate_pln": 0.003894
+      "name": "Najpierw Angola",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -21041,6 +21165,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bb.png",
     "population": 267800,
+    "area": 430.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Barbados – państwo wyspiarskie w Ameryce Środkowej, zajmujące wyspę o tej samej nazwie, położoną w archipelagu Małych Antyli, na Oceanie Atlantyckim. Najbardziej na wschód wysunięta wyspa Karaibów. Powierzchnia kraju wynosi 430 km², a liczba ludności – 294 560 (2020). Stolicą i największym miastem jest Bridgetown. Językiem urzędowym jest angielski.",
@@ -21066,8 +21191,8 @@
     },
     "currency": {
       "code": "BBD",
-      "name": "Dolar barbadoski",
-      "rate_pln": 1.7764
+      "name": "Dolar Barbadosu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -21136,6 +21261,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tl.png",
     "population": 1391221,
+    "area": 14874.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Timor Wschodni, Demokratyczna Republika Timoru Wschodniego – państwo na wyspie Timor w Archipelagu Malajskim. Od zachodu graniczy z Indonezją. Do 1975 roku kolonia portugalska pod nazwą Timor Portugalski. W 1976 został anektowany przez Indonezję, która okupowała jego terytorium do 1999. Od 1999 do 2002 pod administracją Organizacji Narodów Zjednoczonych. Niepodległość uzyskał 20 maja 2002 r., stając się jednocześnie pierwszym suwerennym państwem powstałym w XXI w. Obok Filipin jest drugim krajem Azji Południowo-Wschodniej, w którym dominującym wyznaniem jest katolicyzm.",
@@ -21166,7 +21292,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, F, I",
@@ -21225,6 +21351,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mo.png",
     "population": 685900,
+    "area": 30.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Makau lub Makao, oficjalnie Specjalny Region Administracyjny Makau – jeden z dwóch specjalnych regionów administracyjnych Chińskiej Republiki Ludowej, znajdujący się na wschodnim wybrzeżu Chin. Makau leży po zachodniej stronie estuarium Rzeki Perłowej, graniczy od północy z prowincją Guangdong, natomiast od południa i wschodu otoczone jest wodami Morza Południowochińskiego. Gospodarka opiera się głównie na turystyce i hazardzie, jednak prężnie rozwijają się także niektóre gałęzie przemysłu, m.in. przemysł odzieżowy, elektroniczny, zabawkarski. Makau zalicza się do najbogatszych regionów na świecie.",
@@ -21254,8 +21381,8 @@
     },
     "currency": {
       "code": "MOP",
-      "name": "Pataca (Makau)",
-      "rate_pln": 0.444
+      "name": "Pataca z Makau",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G, M",
@@ -21314,6 +21441,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cf.png",
     "population": 6470307,
+    "area": 622984.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Republika Środkowoafrykańska – państwo śródlądowe w środkowej Afryce, w dorzeczach rzek Konga i Szari. Graniczy z Kamerunem, Czadem, Sudanem, Sudanem Południowym, Demokratyczną Republiką Konga i Kongiem.",
@@ -21343,8 +21471,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -21422,6 +21550,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pm.png",
     "population": 5819,
+    "area": 242.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint-Pierre i Miquelon – wspólnota zamorska Francji, obejmująca archipelag o tej samej nazwie, położony na Oceanie Atlantyckim, w Ameryce Północnej u południowych wybrzeży Nowej Fundlandii.",
@@ -21447,8 +21576,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -21507,6 +21636,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/st.png",
     "population": 209607,
+    "area": 964.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Świętego Tomasza i Książęca – państwo w Zatoce Gwinejskiej na północ od równika, składające się z pięciu wysp, z których trzy są zamieszkane.",
@@ -21532,8 +21662,8 @@
     },
     "currency": {
       "code": "STN",
-      "name": "Dobra (Wyspy Świętego Tomasza i Książęca)",
-      "rate_pln": 0.1704
+      "name": "Debel Wysp Świętego Tomasza i Książęcej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -21592,6 +21722,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/to.png",
     "population": 100179,
+    "area": 747.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tonga, Królestwo Tonga – państwo leżące na archipelagu o tej samej nazwie, w Polinezji na południowym Pacyfiku, położone w jednej trzeciej drogi pomiędzy Nową Zelandią a Hawajami, na południe od Samoa, na zachód od Niue i na wschód od Fidżi. Jedno z nielicznych państw pozaeuropejskich, które nigdy nie utraciły suwerenności.",
@@ -21621,8 +21752,8 @@
     },
     "currency": {
       "code": "TOP",
-      "name": "Pa'anga (Tonga)",
-      "rate_pln": 1.5119
+      "name": "Wpływ Tonga",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -21681,6 +21812,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/uz.png",
     "population": 37859698,
+    "area": 447400.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Uzbekistan, Republika Uzbekistanu – państwo położone w Azji Środkowej, członek Wspólnoty Niepodległych Państw. Jest jednym z dwóch krajów podwójnie śródlądowych.",
@@ -21710,8 +21842,8 @@
     },
     "currency": {
       "code": "UZS",
-      "name": "Sum (Uzbekistan)",
-      "rate_pln": 0.000294
+      "name": "Sum uzbecki",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -21834,6 +21966,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bv.png",
     "population": 0,
+    "area": 49.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspa Bouveta – należące do Norwegii terytorium zależne, będące bezludną, wulkaniczną wyspą na południowym Atlantyku, na południowy zachód od Przylądka Dobrej Nadziei.",
@@ -21919,6 +22052,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/va.png",
     "population": 882,
+    "area": 0.49,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Watykan, Państwo Watykańskie – miasto-państwo w Europie Południowej, na Półwyspie Apenińskim, enklawa na terytorium Włoch, w Rzymie. Najmniejsze uznawane państwo świata pod względem powierzchni i najmniejsze niepodległe państwo pod względem liczby ludności.",
@@ -21948,8 +22082,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, L",
@@ -22027,6 +22161,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/aw.png",
     "population": 107566,
+    "area": 180.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Aruba – kraj autonomiczny Holandii w Ameryce Południowej i jedna z wulkanicznych Wysp Zawietrznych, w archipelagu Małych Antyli, zamykającego od wschodu Morze Karaibskie, ok. 25 km na północ od Wenezueli. Wchodzi w skład wysp ABC oraz wysp CAS. Aruba ma powierzchnię 180 km² i zamieszkiwana jest przez 108 066 osób. Posiada własną konstytucję, walutę, rząd, własną autonomię ale nie ma suwerenności. Nie należy do strefy Schengen, ani do Unii Europejskiej. Stolicą i zarazem największym miastem wyspy jest Oranjestad. Zarządzającym jest król holenderski reprezentowany przez tutejszego gubernatora. Poza tym do Aruby należą dwie prywatne wyspy Palm Island o pow. 0,10 km² oraz Renaissance o pow. 0,48 km², leżące przy zachodnim brzegu wyspy.",
@@ -22056,8 +22191,8 @@
     },
     "currency": {
       "code": "AWG",
-      "name": "Florin arubański",
-      "rate_pln": 1.9767
+      "name": "Floren arubański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, F",
@@ -22116,6 +22251,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/id.png",
     "population": 284438782,
+    "area": 1904569.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Indonezja, oficjalnie Republika Indonezji – wyspiarskie państwo unitarne położone w Azji Południowo-Wschodniej oraz w Oceanii, którego stolicą jest Dżakarta. Położona na równiku, między Oceanem Spokojnym a Indyjskim, jest największym krajem wyspiarskim na świecie z ok. 17 tys. wysp. Jest 14. pod względem powierzchni krajem i 7. wliczając tereny morskie. Jest 4. krajem na świecie pod względem liczby ludności, z ponad 275-milionową populacją oraz największą liczbą wyznawców islamu na świecie. Najbardziej zaludnioną wyspę na świecie, Jawę, zamieszkuje ponad połowa ludności kraju.",
@@ -22142,7 +22278,7 @@
     "currency": {
       "code": "IDR",
       "name": "Rupia indonezyjska",
-      "rate_pln": 0.000213
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -22292,6 +22428,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ru.png",
     "population": 146028325,
+    "area": 17098246.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Rosja, Federacja Rosyjska – państwo federacyjne rozciągające się od Europy Wschodniej przez północną część Azji do Oceanu Spokojnego, składające się według swojej konstytucji z 85 podmiotów federalnych.",
@@ -22318,7 +22455,7 @@
     "currency": {
       "code": "RUB",
       "name": "Rubel rosyjski",
-      "rate_pln": 0.0469
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -22675,6 +22812,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/km.png",
     "population": 919901,
+    "area": 1862.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Komory, oficjalnie Związek Komorów – wyspiarskie państwo w północnej części Kanału Mozambickiego, zlokalizowane na części archipelagu Komorów, pomiędzy północną częścią Madagaskaru a północno-wschodnią częścią Mozambiku. Najbliższymi państwami są Mozambik, Tanzania, Madagaskar oraz Seszele.",
@@ -22709,7 +22847,7 @@
     "currency": {
       "code": "KMF",
       "name": "Frank Komorów",
-      "rate_pln": 0.008541
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -22768,6 +22906,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cz.png",
     "population": 10882341,
+    "area": 78865.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Czechy, Republika Czeska – unitarne państwo śródlądowe w Europie Środkowej, istniejące od 1 stycznia 1993, po podziale Czechosłowacji na Czechy i Słowację. Od północy graniczy z Polską, od zachodu i północnego zachodu z Niemcami, od południa z Austrią, a od wschodu ze Słowacją. Stolicą i największym miastem Czech jest Praga. Państwo składa się z trzech historycznych krain – Czech właściwych, Moraw i Śląska Czeskiego. Na powierzchni 78 866 km² żyje ponad 10,5 mln osób, z czego 94% to Czesi. Państwo czeskie dzieli się na czternaście krajów. Czechy są republiką parlamentarną, demokratycznym państwem prawa o liberalnym systemie rządów, opartym na swobodnej rywalizacji partii i ruchów politycznych. Głową państwa jest prezydent. Naczelnym organem władzy ustawodawczej jest parlament z Izbą Poselską i Senatem, władzy wykonawczej rząd z czternastoma ministerstwami, a władzy sądowniczej Sąd Konstytucyjny i Sąd Najwyższy. Czechy są członkiem wielu organizacji międzynarodowych, m.in. ONZ, Unii Europejskiej, NATO, strefy Schengen, Rady Europy, OECD i Grupy Wyszehradzkiej.",
@@ -22797,8 +22936,8 @@
     },
     "currency": {
       "code": "CZK",
-      "name": "Korona czeska",
-      "rate_pln": 0.1742
+      "name": "korona czeska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -23011,6 +23150,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ar.png",
     "population": 46735004,
+    "area": 2780400.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Argentyna, oficjalnie Republika Argentyńska – państwo w Ameryce Południowej, w południowo-wschodniej części kontynentu, nad Oceanem Atlantyckim. Graniczy z Chile na zachodzie, Boliwią i Paragwajem na północy, Brazylią i Urugwajem na północnym wschodzie. Nazwa „Argentyna” pochodzi od łacińskiego argentum i jest związana z legendą o górach pełnych srebra, która była powszechna pośród pierwszych europejskich odkrywców Niziny La Platy.",
@@ -23041,7 +23181,7 @@
     "currency": {
       "code": "ARS",
       "name": "Peso argentyńskie",
-      "rate_pln": 0.002593
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, I",
@@ -23209,6 +23349,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/za.png",
     "population": 63100945,
+    "area": 1221037.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Południowa Afryka, oficjalnie Republika Południowej Afryki, RPA – państwo położone na południowym krańcu Afryki, u styku Oceanu Atlantyckiego i Oceanu Indyjskiego. Zajmuje powierzchnię 1 219 090 km² i liczy 56 978 635 mieszkańców (2021).",
@@ -23274,8 +23415,8 @@
     },
     "currency": {
       "code": "ZAR",
-      "name": "Rand (Republika Południowej Afryki)",
-      "rate_pln": 0.2246
+      "name": "Rand południowoafrykański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, M, N",
@@ -23443,6 +23584,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ki.png",
     "population": 120740,
+    "area": 811.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Republika Kiribati – państwo wyspiarskie na Oceanie Spokojnym. W skład tego państwa o powierzchni 726 km² wchodzą 32 atole i 1 wyspa koralowa Banaba, rozsiane na powierzchni przeszło 3,5 mln km² wokół równika. Przez obszar ten przechodzi 180 południk, co powoduje że Kiribati jest jedynym krajem na świecie położonym na wszystkich 4 ćwiartkach kuli ziemskiej.",
@@ -23473,7 +23615,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -23542,6 +23684,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tr.png",
     "population": 85664944,
+    "area": 783562.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Turcja, Republika Turcji – państwo położone w Azji Zachodniej, a częściowo również w Europie Południowo-Wschodniej, ze stolicą w Ankarze. Graniczy w Europie z Bułgarią i Grecją, natomiast w Azji z Syrią, Irakiem, Iranem, Azerbejdżanem, Armenią i Gruzją. Część europejska – wschodnia Tracja – stanowi 3% powierzchni i oddzielona jest od części azjatyckiej Morzem Marmara oraz cieśninami Bosfor i Dardanele. Turcję od północy otacza Morze Czarne, od zachodu Morze Egejskie i Morze Marmara, a od południa Morze Śródziemne. Republika Turcji została proklamowana w 1923 roku, poprzedzającym ją państwem było Imperium Osmańskie.",
@@ -23567,8 +23710,8 @@
     },
     "currency": {
       "code": "TRY",
-      "name": "Lira turecka",
-      "rate_pln": 0.0815
+      "name": "lira turecka",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -23826,6 +23969,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cc.png",
     "population": 593,
+    "area": 14.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspy Kokosowe – dwa atole koralowe na Oceanie Indyjskim stanowiące terytorium zewnętrzne Australii, położone 1100 km na południowy zachód od Sumatry. Geograficznie stanowią część Azji Południowo-Wschodniej, jednak ze względu na obecną przynależność polityczną, terytorium to niekiedy jest zaliczane do Oceanii. Do 1955 roku terytorium było zarządzane, zależnie od okresu, z brytyjskiego Cejlonu bądź Singapuru.",
@@ -23852,7 +23996,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -23911,6 +24055,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mp.png",
     "population": 47329,
+    "area": 464.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mariany Północne – terytorium zorganizowane nieinkorporowane Stanów Zjednoczonych o statusie wspólnoty, położone w północno-zachodniej Oceanii.",
@@ -23945,7 +24090,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -24004,6 +24149,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/li.png",
     "population": 40900,
+    "area": 160.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Liechtenstein, Księstwo Liechtensteinu – państwo unitarne położone w Europie Zachodniej, w dolinie górnego Renu, w Alpach Retyckich, między Austrią a Szwajcarią.",
@@ -24029,8 +24175,8 @@
     },
     "currency": {
       "code": "CHF",
-      "name": "Frank szwajcarski",
-      "rate_pln": 4.6225
+      "name": "frank szwajcarski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, J",
@@ -24089,6 +24235,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ng.png",
     "population": 223800000,
+    "area": 923768.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nigeria, Federalna Republika Nigerii – państwo w Afryce Zachodniej nad Zatoką Gwinejską, najludniejsze na kontynencie afrykańskim. Nazwa kraju pochodzi od rzeki Niger. Po raz pierwszy pojawiła się w brytyjskiej gazecie The Times w 1897 roku. Państwo sąsiaduje z Beninem, Nigrem, Czadem i Kamerunem. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -24114,8 +24261,8 @@
     },
     "currency": {
       "code": "NGN",
-      "name": "Naira (Nigeria)",
-      "rate_pln": 0.002643
+      "name": "Naira nigeryjska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G",
@@ -24193,6 +24340,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/as.png",
     "population": 49710,
+    "area": 199.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Samoa Amerykańskie, Terytorium Samoa Amerykańskiego – terytorium nieinkorporowane Stanów Zjednoczonych zajmujące wschodnią część Wysp Samoa oraz wyspę Swains na Oceanie Spokojnym. Zachodnią część wysp zajmuje niepodległe państwo Samoa.",
@@ -24223,7 +24371,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, I",
@@ -24282,6 +24430,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/is.png",
     "population": 391810,
+    "area": 103000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Islandia – nordyckie państwo położone na północy Grzbietu Śródatlantyckiego, na wyspie Islandia i kilku mniejszych wyspach, m.in. archipelagu Vestmannaeyjar w północnej części Oceanu Atlantyckiego. Stolicą państwa i największym miastem jest Reykjavík, w którym mieszkało około 36% z 404 610 mieszkańców kraju (2024). Islandia jest kulturowo i politycznie powiązana z Europą. Językiem urzędowym kraju jest język islandzki.",
@@ -24307,8 +24456,8 @@
     },
     "currency": {
       "code": "ISK",
-      "name": "Korona islandzka",
-      "rate_pln": 0.029273
+      "name": "korona islandzkia",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -24395,6 +24544,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/wf.png",
     "population": 11620,
+    "area": 142.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wallis i Futuna – wspólnota zamorska Francji w Oceanii, obejmująca wyspy wulkaniczne Wallis oraz Futuna i Alofi oraz około 20 innych. Znajduje się w Polinezji, na północny wschód od wysp Fidżi oraz na zachód od Samoa.",
@@ -24420,8 +24570,8 @@
     },
     "currency": {
       "code": "XPF",
-      "name": "Frank CFP  ",
-      "rate_pln": 0.03535
+      "name": "frank CFP",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -24480,6 +24630,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mf.png",
     "population": 31496,
+    "area": 53.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint-Martin – terytorium zależne Francji leżące w Małych Antylach zajmujące północną część wyspy o tej samej nazwie oraz kilka mniejszych wysepek. Stolicą Saint-Martin jest miasto Marigot.",
@@ -24505,8 +24656,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -24565,6 +24716,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/by.png",
     "population": 9109280,
+    "area": 207600.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Białoruś, Republika Białorusi – państwo w Europie Wschodniej. Graniczy z Polską, Litwą, Łotwą, Rosją i Ukrainą. W odróżnieniu od swoich sąsiadów nie ma dostępu do morza. Jest największym pod względem powierzchni państwem śródlądowym w Europie.",
@@ -24594,8 +24746,8 @@
     },
     "currency": {
       "code": "BYN",
-      "name": "Rubel białoruski",
-      "rate_pln": 1.2503
+      "name": "rubel białoruski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -24691,6 +24843,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bq.png",
     "population": 31980,
+    "area": 328.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Antyle Holenderskie – istniejące w latach 1848–2010 holenderskie terytorium autonomiczne w Małych Antylach obejmujące 5 wysp na Morzu Karaibskim: dwie większe u wybrzeży Wenezueli – Curaçao (444 km²) i Bonaire (288 km²), oraz trzy mniejsze na wschód od Portoryko – Sabę (13 km²), Sint Eustatius (21 km²) i południową część Sint Maarten (34 km²). Do 1986 w skład Antyli Holenderskich wchodziła również wyspa Aruba.",
@@ -24725,7 +24878,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -24784,6 +24937,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lc.png",
     "population": 184100,
+    "area": 616.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint Lucia – państwo w Ameryce Środkowej na Morzu Karaibskim, na wyspie o tej samej nazwie należącej do archipelagu Wysp Nawietrznych, części Małych Antyli.",
@@ -24810,7 +24964,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -24879,6 +25033,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/md.png",
     "population": 2749076,
+    "area": 33847.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mołdawia, Republika Mołdawii – państwo europejskie położone na terenach historycznej Besarabii oraz częściowo na lewym brzegu Dniestru.",
@@ -24904,8 +25059,8 @@
     },
     "currency": {
       "code": "MDL",
-      "name": "Lej Mołdawii",
-      "rate_pln": 0.2088
+      "name": "lej mołdawski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -24974,6 +25129,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mc.png",
     "population": 38423,
+    "area": 2.02,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Monako, oficjalnie Księstwo Monako – miasto-państwo położone w Europie Południowej nad Morzem Śródziemnym w obrębie Riwiery Francuskiej.",
@@ -24999,8 +25155,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, F",
@@ -25059,6 +25215,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gp.png",
     "population": 378561,
+    "area": 1628.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gwadelupa – departament zamorski Francji w Ameryce Środkowej, położony na kilku większych i kilkudziesięciu mniejszych wyspach w Małych Antylach m.in.:Gwadelupa \nMarie-Galante\nLa Désirade\nLes Saintes",
@@ -25084,8 +25241,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, E",
@@ -25144,6 +25301,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nl.png",
     "population": 18100436,
+    "area": 41865.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Holandia, Królestwo Niderlandów – państwo położone w zachodniej Europie, południowej części Ameryki Północnej i północnej części Ameryki Południowej (Karaiby), będące monarchią parlamentarną. Złożone jest z kraju europejskiego Holandii oraz trzech krajów autonomicznych: Aruby, Curaçao i Sint Maarten, jak również trzech gmin zamorskich: Bonaire, Saba i Sint Eustatius tzw. Karaiby Holenderskie. Jest członkiem Unii Europejskiej (UE), Organizacji Narodów Zjednoczonych (ONZ) i Organizacji Traktatu Północnoatlantyckiego (NATO).",
@@ -25169,8 +25327,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -25347,6 +25505,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/et.png",
     "population": 111652998,
+    "area": 1104300.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Etiopia, oficjalnie Federalna Demokratyczna Republika Etiopii, dawniej Abisynia – państwo położone we wschodniej Afryce. Od południa graniczy z Kenią, na zachodzie z Sudanem i Sudanem Południowym, na wschodzie z Dżibuti i Somalią, a na północnym wschodzie z Erytreą.",
@@ -25373,7 +25532,7 @@
     "currency": {
       "code": "ETB",
       "name": "Birr etiopski",
-      "rate_pln": 0.0231
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -25541,6 +25700,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/hu.png",
     "population": 9539502,
+    "area": 93028.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Węgry – państwo śródlądowe w Europie Środkowej, od 1955 członek ONZ, od 1999 członek NATO, od 2004 członek Unii Europejskiej. Jest również członkiem Grupy Wyszehradzkiej. Graniczy ze Słowacją, Słowenią, Austrią, Chorwacją, Serbią, Rumunią i Ukrainą.",
@@ -25566,8 +25726,8 @@
     },
     "currency": {
       "code": "HUF",
-      "name": "Forint (Węgry)",
-      "rate_pln": 0.011201
+      "name": "forint węgierski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -25699,6 +25859,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ni.png",
     "population": 6803886,
+    "area": 130373.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nikaragua, Republika Nikaragui – państwo w Ameryce Środkowej, położone między Hondurasem na północy a Kostaryką na południu. Na zachodzie na długości 320 km oblewają ją wody Oceanu Spokojnego, a na wschodzie na długości 480 km – wody Morza Karaibskiego.",
@@ -25724,8 +25885,8 @@
     },
     "currency": {
       "code": "NIO",
-      "name": "Cordoba oro (Nikaragua)",
-      "rate_pln": 0.0972
+      "name": "Kordoba Nikaragui",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -25803,6 +25964,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gn.png",
     "population": 14363931,
+    "area": 245857.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gwinea, Republika Gwinei – państwo położone w zachodniej Afryce nad Oceanem Atlantyckim. Graniczy z Gwineą Bissau na północnym zachodzie, Senegalem na północy, Mali na północnym wschodzie, Wybrzeżem Kości Słoniowej na wschodzie oraz Liberią i Sierra Leone na południu. Jest członkiem Unii Afrykańskiej i ECOWAS.",
@@ -25828,8 +25990,8 @@
     },
     "currency": {
       "code": "GNF",
-      "name": "Frank gwinejski",
-      "rate_pln": 0.000408
+      "name": "frank gwinejski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, K",
@@ -25898,6 +26060,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gw.png",
     "population": 1781308,
+    "area": 36125.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gwinea Bissau, Republika Gwinei Bissau – państwo położone w zachodniej Afryce, nad Oceanem Atlantyckim. Graniczy z Senegalem od północy i Gwineą od wschodu. Do Gwinei Bissau należą również liczne przybrzeżne wyspy, z których największe skupione są w Archipelagu Bijagós. Państwo jest członkiem Unii Afrykańskiej i ECOWAS.",
@@ -25927,8 +26090,8 @@
     },
     "currency": {
       "code": "XOF",
-      "name": "Frank CFA BCEAO ",
-      "rate_pln": 0.00645
+      "name": "Frank CFA z Afryki Zachodniej",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -25997,6 +26160,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nz.png",
     "population": 5324700,
+    "area": 268838.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nowa Zelandia – państwo wyspiarskie położone na południowo-zachodnim Pacyfiku, w Australazji, na południowy wschód od Australii. Składa się z dwóch głównych wysp oraz szeregu mniejszych, w tym wyspy Stewart i wysp Chatham. W skład Nowej Zelandii wchodzą również terytoria stowarzyszone z Nową Zelandią lub od niej zależne: Wyspy Cooka i Niue, które są samorządne oraz Tokelau i Dependencja Rossa. Stolicą jest Wellington, natomiast największym miastem jest Auckland, w którym mieszka 1,5 mln osób.",
@@ -26031,7 +26195,7 @@
     "currency": {
       "code": "NZD",
       "name": "Dolar nowozelandzki",
-      "rate_pln": 2.1371
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -26118,6 +26282,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/qa.png",
     "population": 3173024,
+    "area": 11586.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Katar, oficjalnie Państwo Katar – państwo położone w Azji Południowo-Zachodniej we wschodniej części Półwyspu Arabskiego nad Zatoką Perską. Stolicą Kataru jest Doha. Inne większe miasta to Ar-Rajjan, Musajid, Al-Wakra, Chaur, Duchan, Umm Bab. Powierzchnia Kataru wynosi 11,6 tys. km²; graniczy on tylko z Arabią Saudyjską. Językiem urzędowym jest język arabski, ale w użyciu jest także angielski. Katar podzielony jest na siedem okręgów.",
@@ -26143,8 +26308,8 @@
     },
     "currency": {
       "code": "QAR",
-      "name": "Rial katarski",
-      "rate_pln": 0.9817
+      "name": "Rial Katarski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -26213,6 +26378,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/dj.png",
     "population": 1066809,
+    "area": 23200.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Dżibuti, Republika Dżibuti – państwo we wschodniej Afryce, nad Zatoką Adeńską i cieśniną Bab al-Mandab. Graniczy z Somalią, Etiopią i Erytreą.",
@@ -26242,8 +26408,8 @@
     },
     "currency": {
       "code": "DJF",
-      "name": "Frank Dżibuti",
-      "rate_pln": 0.020092
+      "name": "frank dżibutyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -26302,6 +26468,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sd.png",
     "population": 51662000,
+    "area": 1886068.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Sudan, oficjalnie Republika Sudanu – państwo położone w północno-wschodniej części Afryki nad Morzem Czerwonym.",
@@ -26332,7 +26499,7 @@
     "currency": {
       "code": "SDG",
       "name": "Funt sudański",
-      "rate_pln": 0.005962
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D",
@@ -26419,6 +26586,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bl.png",
     "population": 10562,
+    "area": 21.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Saint-Barthélemy – terytorium zależne Francji leżące w Małych Antylach zajmujące wyspę o tej samej nazwie oraz kilka mniejszych wysepek. Terytorium zostało utworzone 22 lutego 2007 roku, a do tego czasu było jedną z jednostek administracyjnych wchodzących w skład Gwadelupy. Jako część Gwadelupy, będącej regionem zamorskim Francji, Saint-Barthélemy wchodziło w skład Unii Europejskiej. Administracyjnie Saint-Barthélemy stanowi jedną gminę, która w czasach przynależności do Gwadelupy wchodziła w skład okręgu Saint-Martin i Saint-Barthélemy.",
@@ -26444,8 +26612,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -26504,6 +26672,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/xk.png",
     "population": 1585566,
+    "area": 10908.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kosowo, Republika Kosowa – państwo w południowej Europie ze stolicą w Prisztinie o ograniczonym uznaniu na arenie międzynarodowej, które jednostronnie ogłosiło niepodległość 17 lutego 2008 roku.",
@@ -26533,8 +26702,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -26587,6 +26756,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/uy.png",
     "population": 3499451,
+    "area": 181034.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Urugwaj – państwo w Ameryce Południowej, nad Atlantykiem, graniczące z Argentyną od zachodu i Brazylią od północy. Stolicą państwa jest Montevideo, port atlantycki u ujścia La Platy. Po drugiej stronie tego estuarium leży stolica Argentyny – Buenos Aires. Dawniej Urugwaj stanowił część Wicekrólestwa La Platy i nosił nazwę Banda Oriental.",
@@ -26612,8 +26782,8 @@
     },
     "currency": {
       "code": "UYU",
-      "name": "Peso urugwajskie",
-      "rate_pln": 0.0932
+      "name": "Waga urugwajska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F, L",
@@ -26700,6 +26870,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kg.png",
     "population": 7281800,
+    "area": 199951.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kirgistan, Republika Kirgiska – państwo w Azji Środkowej. Graniczy z Chinami (858 km), Kazachstanem (1051 km), Tadżykistanem (870 km) i Uzbekistanem (1099 km).",
@@ -26729,8 +26900,8 @@
     },
     "currency": {
       "code": "KGS",
-      "name": "Som (Kirgistan)",
-      "rate_pln": 0.0409
+      "name": "Jestem Kirgizem",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -26817,6 +26988,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ge.png",
     "population": 4000921,
+    "area": 69700.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gruzja – państwo położone na pograniczu Europy i Azji, w Kaukazie Południowym. Graniczy na północy z Rosją, na południu z Armenią i Turcją, a na wschodzie z Azerbejdżanem; zachodnią granicę kraju wyznacza wybrzeże Morza Czarnego. Stolicą Gruzji jest Tbilisi, przy czym w latach 2012–2018 siedzibą parlamentu było Kutaisi, a sądu konstytucyjnego – Batumi.",
@@ -26842,8 +27014,8 @@
     },
     "currency": {
       "code": "GEL",
-      "name": "Lari (Gruzja)",
-      "rate_pln": 1.3385
+      "name": "uruchomić",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -26939,6 +27111,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/th.png",
     "population": 65859640,
+    "area": 513120.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tajlandia, Królestwo Tajlandii – państwo w południowo-wschodniej Azji, graniczące z Laosem i Kambodżą na wschodzie, z Malezją na południu oraz z Mjanmą (Birmą) na zachodzie i północnym zachodzie. Dawniej państwo nosiło nazwę Syjam jako oficjalną do 11 maja 1949. Określenie „Thai” (ไทย) znaczy po tajsku „wolny”.",
@@ -26964,8 +27137,8 @@
     },
     "currency": {
       "code": "THB",
-      "name": "Bat (Tajlandia)",
-      "rate_pln": 0.1151
+      "name": "Bat tajski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C, O",
@@ -27097,6 +27270,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ky.png",
     "population": 84738,
+    "area": 264.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "",
@@ -27182,6 +27356,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gt.png",
     "population": 18079810,
+    "area": 108889.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gwatemala – państwo w Ameryce Środkowej, położone nad Oceanem Atlantyckim i Oceanem Spokojnym. Graniczy z Salwadorem (203 km), Hondurasem (256 km), Meksykiem (962 km), Belize (266 km) – łączna długość granic wynosi 1687 km, ponadto 400 km wybrzeża morskiego.",
@@ -27207,8 +27382,8 @@
     },
     "currency": {
       "code": "GTQ",
-      "name": "Quetzal (Gwatemala)",
-      "rate_pln": 0.4664
+      "name": "Quetzal gwatemalski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -27304,6 +27479,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nf.png",
     "population": 2188,
+    "area": 36.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspa Norfolk – australijskie terytorium zależne składające się z wyspy Norfolk i dwóch mniejszych wysepek: Philip i Nepean. Położone jest na Morzu Fidżi, na Oceanie Spokojnym pomiędzy Australią, Nową Zelandią i Nową Kaledonią.",
@@ -27334,7 +27510,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -27393,6 +27569,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gy.png",
     "population": 772975,
+    "area": 214969.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gujana, oficjalnie Kooperacyjna Republika Gujany – państwo w północnej części Ameryki Południowej, w obrębie większego regionu również zwanego Gujaną. Jedno z najmniejszych państw na kontynencie, zajmuje powierzchnię 214 969 km², a zamieszkane jest przez 791 739 osób.",
@@ -27419,7 +27596,7 @@
     "currency": {
       "code": "GYD",
       "name": "Dolar gujański",
-      "rate_pln": 0.017101
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, D, G",
@@ -27478,6 +27655,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lb.png",
     "population": 5490000,
+    "area": 10452.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Liban, oficjalnie Republika Libańska – państwo położone w zachodniej Azji, na obszarze Bliskiego Wschodu, nad Morzem Śródziemnym, graniczące z Syrią i Izraelem.",
@@ -27508,7 +27686,7 @@
     "currency": {
       "code": "LBP",
       "name": "Funt libański",
-      "rate_pln": 4e-05
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C, D, G",
@@ -27622,6 +27800,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lv.png",
     "population": 1829000,
+    "area": 64559.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Łotwa, Republika Łotewska – państwo w Europie Północnej, jeden z krajów bałtyckich, położony w przeważającej części w dorzeczu Dźwiny. Od północy Łotwa graniczy z Estonią, od wschodu z Rosją i Białorusią, a od południa z Litwą. Łączna długość granic lądowych wynosi 1370 km. Większość zachodniej granicy Łotwy wyznacza wybrzeże Morza Bałtyckiego. Powierzchnia administracyjna Łotwy wynosi 64 573 km², co daje jej 124 miejsce na świecie i 24 w Europie. Zamieszkana przez niecałe dwa miliony ludzi (2017), zajmuje pod względem liczby ludności 147, miejsce na świecie, a 32 w Europie. Łotwa jest państwem unitarnym, w skład którego wchodzi pięć krain historycznych: Liwonia, Łatgalia, Kurlandia, Semigalia i Selonia. Administracyjnie podzielona jest na siedem miast wydzielonych oraz 36 powiatów. Jej największym miastem i stolicą jest Ryga. Inne większe miasta to Dyneburg, Lipawa, Jełgawa, Jurmała i Windawa.",
@@ -27647,8 +27826,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -27735,6 +27914,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ga.png",
     "population": 2469296,
+    "area": 267668.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gabon, Republika Gabońska – państwo położone w środkowej Afryce nad Oceanem Atlantyckim. Graniczy z Gwineą Równikową, Kamerunem i Kongiem. Stolicą i największym miastem Gabonu jest Libreville.",
@@ -27760,8 +27940,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C",
@@ -27839,6 +28019,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fk.png",
     "population": 3662,
+    "area": 12173.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Falklandy – brytyjskie terytorium zamorskie na południowym Atlantyku, około 480 km od wybrzeży Argentyny obejmujące wyspy o tej samej nazwie. Wyspy znajdują się pod administracją brytyjską, ale prawa do nich rości sobie także Argentyna.",
@@ -27924,6 +28105,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cd.png",
     "population": 112832000,
+    "area": 2344858.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Demokratyczna Republika Konga, DRK – drugie pod względem powierzchni, trzecie pod względem liczby ludności państwo Afryki, położone w jej środkowej części, w dorzeczu rzeki Kongo, u której ujścia posiada 37 km dostępu do Oceanu Atlantyckiego. Nazwa, oznaczająca myśliwy, pochodzi od ludu Bakongo. W okresie kolonialnym DRK występowała jako Wolne Państwo Kongo i Kongo Belgijskie, a po uzyskaniu niepodległości w latach 1971–1997 jako Zair. Dla odróżnienia od sąsiadującej Republiki Konga, DRK występowała również jako Kongo-Léopoldville, a obecnie jako Kongo-Kinszasa.",
@@ -27965,8 +28147,8 @@
     },
     "currency": {
       "code": "CDF",
-      "name": "Frank kongijski (Dem. Republika Konga)",
-      "rate_pln": 0.001684
+      "name": "Francuz Kongijczyk",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -28071,6 +28253,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/au.png",
     "population": 27536874,
+    "area": 7692024.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Australia, formalnie Wspólnota Australii – państwo demokratyczne, położone na półkuli południowej, obejmujące kontynent Australia, wyspę Tasmanię i inne znacznie mniejsze wyspy na Oceanach Indyjskim i Spokojnym. Stolicą kraju jest Canberra, największym miastem jest Sydney.",
@@ -28097,7 +28280,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -28346,6 +28529,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fj.png",
     "population": 900869,
+    "area": 18272.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Fidżi, Republika Fidżi – państwo wyspiarskie, położone w południowo-zachodniej części Oceanu Spokojnego na wschód od Vanuatu, zachód od Tonga i południe od Tuvalu.",
@@ -28380,7 +28564,7 @@
     "currency": {
       "code": "FJD",
       "name": "Dolar Fidżi",
-      "rate_pln": 1.6286
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -28449,6 +28633,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mt.png",
     "population": 574250,
+    "area": 316.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Malta, Republika Malty – wyspiarskie państwo-miasto położone w Europie Południowej, na Morzu Śródziemnym, 81 km na południe od Włoch. Obejmuje cały archipelag Wysp Maltańskich, jednakże większość ludności mieszka na głównej wyspie o tej samej nazwie, w zespole miejskim Valletty – stolicy Malty.",
@@ -28478,8 +28663,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -28566,6 +28751,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cx.png",
     "population": 1692,
+    "area": 135.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspa Bożego Narodzenia – australijskie terytorium zależne składające się z wyspy o tej samej nazwie. Położone jest na Oceanie Indyjskim, 380 km na południe od indonezyjskiej wyspy Jawa. Geograficznie stanowi część Azji, jednak ze względu na obecną przynależność polityczną, terytorium to niekiedy jest zaliczane do Oceanii.",
@@ -28592,7 +28778,7 @@
     "currency": {
       "code": "AUD",
       "name": "Dolar australijski",
-      "rate_pln": 2.5359
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -28651,6 +28837,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/na.png",
     "population": 3022401,
+    "area": 825615.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Namibia, Republika Namibii – państwo w południowo-zachodniej Afryce. Zajmuje powierzchnię 824 292 km², a zamieszkane jest przez 3 022 401 osób (2023).",
@@ -28709,7 +28896,7 @@
     "currency": {
       "code": "NAD",
       "name": "Dolar namibijski",
-      "rate_pln": 0.2248
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, M",
@@ -28787,6 +28974,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bn.png",
     "population": 455500,
+    "area": 5765.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Brunei, oficjalnie Państwo Brunei Darussalam – państwo położone w Azji Południowo-Wschodniej, na północnym wybrzeżu wyspy Borneo. Brunei graniczy z Malezją. Ma dostęp do Morza Południowochińskiego.",
@@ -28812,8 +29000,8 @@
     },
     "currency": {
       "code": "BND",
-      "name": "Dolar brunejski",
-      "rate_pln": 2.8274
+      "name": "Dolar Brunei",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -28872,6 +29060,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cv.png",
     "population": 491233,
+    "area": 4033.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Republika Zielonego Przylądka – państwo wyspiarskie na Oceanie Atlantyckim, położone ponad 450 km na zachód od zachodnich wybrzeży Afryki, geograficznie tożsame z Wyspami Zielonego Przylądka. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -28897,8 +29086,8 @@
     },
     "currency": {
       "code": "CVE",
-      "name": "Escudo Zielonego Przylądka",
-      "rate_pln": 0.0381
+      "name": "Tarcza Zielonego Przylądka",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -28967,6 +29156,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/aq.png",
     "population": 1300,
+    "area": 14000000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Antarktyka – część świata znajdująca się na półkuli południowej, która obejmuje Antarktydę oraz otaczający ją Ocean Południowy i położone na nim wyspy. Międzynarodowo uznawaną granicą Antarktyki jest równoleżnik 60°S.",
@@ -29047,6 +29237,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/hr.png",
     "population": 3866233,
+    "area": 56594.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Chorwacja, Republika Chorwacji – państwo leżące na pograniczu Europy Środkowej i Europy Południowej, nad Morzem Adriatyckim i graniczące od południa z Bośnią i Hercegowiną oraz Czarnogórą, od wschodu z Serbią oraz Węgrami i Słowenią od północy. Od południowego zachodu ma dostęp do Morza Adriatyckiego. Od 1 lipca 2013 należy do Unii Europejskiej jako 27. członek wspólnoty. Od 1 stycznia 2023 w strefie euro i Schengen.",
@@ -29072,8 +29263,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -29223,6 +29414,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/dz.png",
     "population": 47400000,
+    "area": 2381741.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Algieria, Algierska Republika Ludowo-Demokratyczna – 10. co do wielkości państwo świata, położone w Afryce Północnej nad Morzem Śródziemnym, członek Unii Afrykańskiej. Znaczną część obszaru Algierii zajmują wchodzące w skład Sahary pustynie oraz półpustynie.",
@@ -29248,8 +29440,8 @@
     },
     "currency": {
       "code": "DZD",
-      "name": "Dinar algierski",
-      "rate_pln": 0.027519
+      "name": "dinar algierski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -29372,6 +29564,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lr.png",
     "population": 5248621,
+    "area": 111369.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Liberia – państwo położone w Afryce Zachodniej. Sąsiaduje z Gwineą, Wybrzeżem Kości Słoniowej oraz Sierra Leone. Pod koniec lat 80. XX wieku sytuacja gospodarcza i polityczna tego kraju stała się niestabilna, co było skutkiem przewrotów wojskowych i dwóch wojen domowych. Członek Unii Afrykańskiej i ECOWAS.",
@@ -29397,8 +29590,8 @@
     },
     "currency": {
       "code": "LRD",
-      "name": "Dolar liberyjski",
-      "rate_pln": 0.0195
+      "name": "Dolar Liberyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C, E, F",
@@ -29457,6 +29650,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/hn.png",
     "population": 9892632,
+    "area": 112492.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Honduras, Republika Hondurasu – państwo w Ameryce Północnej, pomiędzy Morzem Karaibskim a Oceanem Spokojnym, o łącznej długości wybrzeża 820 km. Honduras graniczy na zachodzie z Gwatemalą, na południowym wschodzie z Nikaraguą (922 km) i na południowym zachodzie z Salwadorem (342 km). Do Hondurasu należą również przybrzeżne wyspy, z których największe to Islas de la Bahía. Od 1972 roku do Hondurasu należą Islas Santanilla.",
@@ -29482,8 +29676,8 @@
     },
     "currency": {
       "code": "HNL",
-      "name": "Lempira (Honduras)",
-      "rate_pln": 0.1352
+      "name": "Hondurasska lempira",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -29561,6 +29755,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/se.png",
     "population": 10605098,
+    "area": 450295.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Szwecja, Królestwo Szwecji – państwo w Europie Północnej, zaliczane zarówno do państw skandynawskich oraz krajów nordyckich. Jest członkiem Unii Europejskiej oraz NATO. Ma populację około 10,6 miliona osób; jest najludniejszym krajem skandynawskim. Gęstość zaludnienia jest niska i wynosi 25,8 mieszkańców na kilometr kwadratowy. Około 89% populacji zamieszkuje obszary miejskie. Mniej niż 80% mieszkańców stanowią osoby pochodzenia szwedzkiego. Graniczy z Norwegią, Finlandią oraz z Danią przez most nad cieśniną Öresund.",
@@ -29586,8 +29781,8 @@
     },
     "currency": {
       "code": "SEK",
-      "name": "Korona szwedzka",
-      "rate_pln": 0.396
+      "name": "korona szwedzka",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -29782,6 +29977,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/um.png",
     "population": 0,
+    "area": 34.2,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych, Pomniejsze Wyspy Stanów Zjednoczonych, Małe Oddalone Wyspy Stanów Zjednoczonych – zbiorcze określenie niewielkich terytoriów, w większości na Oceanie Spokojnym, należących do Stanów Zjednoczonych Ameryki i mających różny status prawny. Część z nich jest niezamieszkana, obszar niektórych objęto rezerwatami przyrody.",
@@ -29808,7 +30004,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -29867,6 +30063,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sl.png",
     "population": 9077691,
+    "area": 71740.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Sierra Leone – państwo położone w zachodniej Afryce, na wybrzeżu Oceanu Atlantyckiego. Sierra Leone na północy graniczy z Gwineą, a na południowym wschodzie z Liberią. Obecnie członek Unii Afrykańskiej i ECOWAS.",
@@ -29892,8 +30089,8 @@
     },
     "currency": {
       "code": "SLE",
-      "name": "Leone (Sierra Leone)",
-      "rate_pln": 0.1463
+      "name": "Leone",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G",
@@ -29962,6 +30159,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/io.png",
     "population": 0,
+    "area": 60.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Brytyjskie Terytorium Oceanu Indyjskiego – terytorium zależne Wielkiej Brytanii, obejmujące archipelag Czagos, z których największa to Diego Garcia.",
@@ -29988,7 +30186,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -30047,6 +30245,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/eh.png",
     "population": 600904,
+    "area": 266000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Sahara Zachodnia – dawna kolonia hiszpańska w północnej Afryce nad Oceanem Atlantyckim, od 1963 roku wpisana na listę terytoriów niesamodzielnych ONZ.",
@@ -30080,8 +30279,8 @@
     },
     "currency": {
       "code": "DZD",
-      "name": "Dinar algierski",
-      "rate_pln": 0.027519
+      "name": "dinar algierski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -30140,6 +30339,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/my.png",
     "population": 34231700,
+    "area": 330803.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Malezja – państwo w Azji Południowo-Wschodniej, na Półwyspie Malajskim i wyspie Borneo; obszar 330,803 km², ludność 34 564 810, stolica Kuala Lumpur, siedziba rządu w Putrajaya.",
@@ -30169,8 +30369,8 @@
     },
     "currency": {
       "code": "MYR",
-      "name": "Ringgit (Malezja)",
-      "rate_pln": 0.9197
+      "name": "Ringgit malezyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -30284,6 +30484,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/jm.png",
     "population": 2825544,
+    "area": 10991.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Jamajka – wyspa i państwo na Morzu Karaibskim w archipelagu Wielkich Antyli, położone na południe od Kuby i na zachód od Haiti.",
@@ -30314,7 +30515,7 @@
     "currency": {
       "code": "JMD",
       "name": "Dolar jamajski",
-      "rate_pln": 0.0229
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -30392,6 +30593,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pl.png",
     "population": 37392000,
+    "area": 312679.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Polska, Rzeczpospolita Polska (RP) – państwo unitarne w Europie Środkowej, położone między Morzem Bałtyckim na północy a Sudetami i Karpatami na południu, w przeważającej części w dorzeczu Wisły i Odry. Od północy Polska graniczy z Rosją i Litwą, od wschodu z Białorusią i Ukrainą, od południa ze Słowacją i Czechami, od zachodu z Niemcami. Większość północnej granicy Polski wyznacza wybrzeże Morza Bałtyckiego. Polska Wyłączna Strefa Ekonomiczna na Bałtyku graniczy ze strefami Danii i Szwecji. Granice z Ukrainą, Białorusią i Rosją stanowią równocześnie granicę zewnętrzną NATO, Unii Europejskiej i strefy Schengen.",
@@ -30417,7 +30619,7 @@
     },
     "currency": {
       "code": "PLN",
-      "name": "Polish złoty",
+      "name": "Złoty polski",
       "rate_pln": null
     },
     "practical": {
@@ -30631,6 +30833,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mq.png",
     "population": 349925,
+    "area": 1128.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Martynika – departament zamorski Francji, zajmujący karaibską wyspę o tej samej nazwie, położoną w archipelagu Wysp Nawietrznych w Małych Antylach, między dwoma niezależnymi państwami Dominiką na północy i Saint Lucia na południu.",
@@ -30656,8 +30859,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, E",
@@ -30716,6 +30919,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bh.png",
     "population": 1594654,
+    "area": 765.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bahrajn, oficjalnie Królestwo Bahrajnu – państwo o ustroju monarchicznym, położone w Azji, w Zatoce Perskiej, na archipelagu między Katarem a północno-wschodnim wybrzeżem Arabii Saudyjskiej. W 1971 roku uzyskał niepodległość. Od lat 30. XX wieku wydobywa się tam ropę naftową, a uzyskane dochody inwestuje na miejscu. Od 2002 roku panujący Bahrajnem używa tytułu król, wcześniej posługiwał się tytułem emir.",
@@ -30741,8 +30945,8 @@
     },
     "currency": {
       "code": "BHD",
-      "name": "Dinar bahrajski",
-      "rate_pln": 9.49
+      "name": "Dinar Bahrajnu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -30829,6 +31033,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bg.png",
     "population": 6437360,
+    "area": 110879.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bułgaria, Republika Bułgarii – państwo położone w południowo-wschodniej Europie, na Bałkanach. Graniczy z Serbią oraz Macedonią Północną od zachodu, Grecją i Turcją od południa, Morzem Czarnym od wschodu i Rumunią od północy.",
@@ -31005,6 +31210,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/iq.png",
     "population": 46118793,
+    "area": 438317.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Irak, Republika Iraku – państwo arabskie na Bliskim Wschodzie, leżące nad Zatoką Perską.",
@@ -31038,8 +31244,8 @@
     },
     "currency": {
       "code": "IQD",
-      "name": "Dinar iracki",
-      "rate_pln": 0.002731
+      "name": "dinar iracki",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, G",
@@ -31153,6 +31359,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mg.png",
     "population": 31727042,
+    "area": 587041.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Madagaskar, oficjalnie Republika Madagaskaru – państwo wyspiarskie położone na Madagaskarze w zachodniej części Oceanu Indyjskiego, u południowo-wschodnich wybrzeży Afryki. Madagaskar jest czwartą co do wielkości wyspą na świecie i pierwszą w Afryce. Po rozpadzie superkontynentu Gondwana około 88 mln lat temu Madagaskar oddzielił się od subkontynentu indyjskiego, co pozwoliło rodzimej faunie i florze ewoluować we względnej izolacji. Madagaskar ma bardzo bogaty ekosystem; ponad 90% malgaskiej dzikiej przyrody nie występuje w żadnym innym miejscu na Ziemi. Lokalna przyroda jest jednak zagrożona przez dynamicznie wzrastającą populację ludzi, rozwijającą się infrastrukturę i przemysł oraz przez zmiany klimatu.",
@@ -31182,8 +31389,8 @@
     },
     "currency": {
       "code": "MGA",
-      "name": "Ariary (Madagaskar)",
-      "rate_pln": 0.000835
+      "name": "Ariar malgaski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -31270,6 +31477,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ro.png",
     "population": 19036031,
+    "area": 238391.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Rumunia – państwo unitarne w południowo-wschodniej części Europy. Graniczy z Węgrami i Serbią na zachodzie, Bułgarią na południu wzdłuż Dunaju oraz Ukrainą i Mołdawią na północy. Kraj ma także dostęp do Morza Czarnego. Stolicą i największym miastem Rumunii jest Bukareszt.",
@@ -31295,8 +31503,8 @@
     },
     "currency": {
       "code": "RON",
-      "name": "Lej rumuński",
-      "rate_pln": 0.828
+      "name": "lej rumuński",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -31455,6 +31663,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pr.png",
     "population": 3203295,
+    "area": 8870.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Portoryko, oficjalnie Wspólnota Portoryka, Wolne Stowarzyszone Państwo Portoryko – terytorium zorganizowane nieinkorporowane Stanów Zjednoczonych o statusie „wspólnoty”, leżące na wyspie o tej samej nazwie i kilku mniejszych w Ameryce Środkowej, na Morzu Karaibskim.",
@@ -31485,7 +31694,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -31544,6 +31753,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cg.png",
     "population": 6142180,
+    "area": 342000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kongo – państwo w środkowej Afryce nad Oceanem Atlantyckim. Graniczy z Gabonem, Kamerunem, Republiką Środkowoafrykańską, Angolą (Kabinda) i Demokratyczną Republiką Konga.",
@@ -31577,8 +31787,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -31656,6 +31866,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kr.png",
     "population": 51159889,
+    "area": 100210.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Korea Południowa, właściwie Republika Korei – państwo w Azji Wschodniej, w południowej części Półwyspu Koreańskiego utworzone po II wojnie światowej na terenach zajętych przez United States Armed Forces.",
@@ -31681,8 +31892,8 @@
     },
     "currency": {
       "code": "KRW",
-      "name": "Won południowokoreański",
-      "rate_pln": 0.002496
+      "name": "Zwyciężyła Korea Południowa",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -31895,6 +32106,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tk.png",
     "population": 2608,
+    "area": 12.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tokelau – terytorium zależne Nowej Zelandii, położone na trzech atolach koralowych, należących do archipelagu wysp Tokelau.",
@@ -31929,7 +32141,7 @@
     "currency": {
       "code": "NZD",
       "name": "Dolar nowozelandzki",
-      "rate_pln": 2.1371
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -31988,6 +32200,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ye.png",
     "population": 32684503,
+    "area": 527968.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Jemen, Republika Jemeńska – państwo położone w południowo-zachodniej Azji na Półwyspie Arabskim oraz na archipelagu Sokotra we wschodniej Afryce, utworzone w 1990 roku w wyniku połączenia Jemenu Północnego z Jemenem Południowym.",
@@ -32013,8 +32226,8 @@
     },
     "currency": {
       "code": "YER",
-      "name": "Rial jemeński",
-      "rate_pln": 0.015012
+      "name": "rial jemeński",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, G",
@@ -32119,6 +32332,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/mm.png",
     "population": 51316756,
+    "area": 676578.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mjanma, Birma, nazwa oficjalna Republika Związku Mjanmy, birm. ပြည်ထောင်စု သမ္မတ မြန်မာနိုင်ငံတော်‌ trb. Pyidaungzu Thammada Myanma Naingngandaw lub Pranyhtaungcu. Sa.ma.ta. Mranma Nuingngamtau, wym. ) – państwo położone w Azji Południowo-Wschodniej nad Zatoką Bengalską i Morzem Andamańskim, wzdłuż rzeki Irawadi. Graniczy z Chinami, Tajlandią, Indiami, Laosem oraz Bangladeszem. Klimat monsunowy, połowę powierzchni zajmują lasy. Dominującą religią jest buddyzm, a grupą etniczną – Bamarowie, którzy przybyli tu około IX wieku. Początkiem państwowości birmańskiej było powstałe w XI wieku Królestwo Paganu, którego tradycje kontynuowało Taungu, a następnie dynastia Konbaung, pokonana przez Brytyjczyków. Największym miastem jest Rangun, drugie miejsce zajmuje Mandalaj. Gospodarka Mjanmy jest oparta na uprawie ryżu oraz przemyśle spożywczym i drzewnym.",
@@ -32144,8 +32358,8 @@
     },
     "currency": {
       "code": "MMK",
-      "name": "Kyat (Myanmar, Birma)",
-      "rate_pln": 0.001704
+      "name": "Kiat birmański",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, D, G, I",
@@ -32223,6 +32437,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ie.png",
     "population": 5458600,
+    "area": 70273.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Irlandia, także Republika Irlandii – państwo wyspiarskie w zachodniej części Europy, zajmujące większość terytorium wyspy Irlandia, członek Unii Europejskiej.",
@@ -32252,8 +32467,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -32331,6 +32546,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gi.png",
     "population": 38000,
+    "area": 6.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Gibraltar – brytyjskie terytorium zamorskie na południowym wybrzeżu Półwyspu Iberyjskiego, w Europie Południowej. Zajmuje powierzchnię 6,55 km² i jest zamieszkiwany przez 37 936 mieszkańców. Położony jest nad Zatoką Gibraltarską, niedaleko wyjścia Morza Śródziemnego na Ocean Atlantycki. Od północy graniczy z hiszpańskim miastem La Línea de la Concepción i zarazem comarką Campo de Gibraltar. Charakterystycznym obiektem górującym nad terytorium jest Skała Gibraltarska. W przeszłości ważna baza Royal Navy, obecnie gospodarka terytorium bazuje głównie na turystyce, handlu, usługach finansowych, sektorze żeglugi morskiej oraz podatku od zakładów bukmacherskich.",
@@ -32357,7 +32573,7 @@
     "currency": {
       "code": "GIP",
       "name": "Funt gibraltarski",
-      "rate_pln": 4.8375
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, G",
@@ -32416,6 +32632,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/jo.png",
     "population": 11734000,
+    "area": 89342.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Jordania, pełna nazwa: Haszymidzkie Królestwo Jordanii – państwo położone w Azji, w regionie Bliskiego Wschodu, ze stolicą w Ammanie.",
@@ -32442,7 +32659,7 @@
     "currency": {
       "code": "JOD",
       "name": "Dinar jordański",
-      "rate_pln": 5.0461
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "B, C, D, G, J",
@@ -32565,6 +32782,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sh.png",
     "population": 5651,
+    "area": 394.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha – brytyjskie terytorium zamorskie, które składa się z trzech części położonych na południowym Oceanie Atlantyckim, odległych od siebie o kilka tysięcy kilometrów. W jej skład wchodzą: Wyspa Świętej Heleny, Wyspa Wniebowstąpienia oraz archipelag Tristan da Cunha, do którego administracyjnie zaliczana jest również wyspa Gough.",
@@ -32591,7 +32809,7 @@
     "currency": {
       "code": "GBP",
       "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -32650,6 +32868,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bm.png",
     "population": 64055,
+    "area": 54.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bermudy – brytyjskie terytorium zamorskie obejmujące archipelag o tej samej nazwie położony w północno-zachodniej części Oceanu Atlantyckiego, oddalony o około 1000 km od wybrzeża Ameryki Północnej. W skład archipelagu wchodzi około 180 nizinnych wysp koralowych. Ośrodkiem administracyjnym terytorium jest Hamilton. Powierzchnia terytorium wynosi 53,2 km², a liczba ludności to 64 237 osób (2010). Na Bermudach na niewielką skalę rozwinął się przemysł i rolnictwo. Głównym źródłem dochodów jest turystyka.",
@@ -32735,6 +32954,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pg.png",
     "population": 11781559,
+    "area": 462840.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Papua-Nowa Gwinea, Niezależne Państwo Papui-Nowej Gwinei – po Australii, drugie co do wielkości państwo w Oceanii, leży w Melanezji, położone w większości we wschodniej części wyspy Nowa Gwinea. Papua-Nowa Gwinea graniczy z Indonezją (820 km), a konkretniej jej trzema prowincjami: Papuą, Papuą Górską i Papuą Południową.",
@@ -32768,8 +32988,8 @@
     },
     "currency": {
       "code": "PGK",
-      "name": "Kina (Papua-Nowa Gwinea)",
-      "rate_pln": 0.8319
+      "name": "Papua Nowa Gwinea",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -32838,6 +33058,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/er.png",
     "population": 3607000,
+    "area": 117600.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Erytrea, oficjalnie Państwo Erytrea – państwo w Afryce Wschodniej, położone nad Morzem Czerwonym. Graniczy z Etiopią, Dżibuti i Sudanem. Erytrea liczy 121,1 tys. km² powierzchni. W 2013 roku w Erytrei mieszkało 5,7 mln mieszkańców. Gęstość zaludnienia wynosi 47 osób na kilometr kwadratowy. W państwie obowiązują dwa języki urzędowe: arabski oraz tigrinia. W użyciu jest także język angielski. Stolicą Erytrei jest Asmara. W kraju obowiązuje waluta nakfa. Państwo dzieli się na sześć regionów. Kraj uzyskał niepodległość od Etiopii 24 maja 1993 roku.",
@@ -32871,8 +33092,8 @@
     },
     "currency": {
       "code": "ERN",
-      "name": "Nakfa (Erytrea)",
-      "rate_pln": 0.2374
+      "name": "nakfa erytrejska",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, L",
@@ -32941,6 +33162,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ly.png",
     "population": 7459000,
+    "area": 1759540.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Libia, oficjalnie Państwo Libia – państwo położone w Afryce Północnej, nad zatoką Wielka Syrta, ze stolicą w Trypolisie. Graniczy z Egiptem, Sudanem, Czadem, Nigrem, Algierią i Tunezją.",
@@ -32966,8 +33188,8 @@
     },
     "currency": {
       "code": "LYD",
-      "name": "Dinar libijski",
-      "rate_pln": 0.5654
+      "name": "dinar libijski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, D, F, L",
@@ -33072,6 +33294,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cl.png",
     "population": 20206953,
+    "area": 756102.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Chile, oficjalnie Republika Chile – państwo w Ameryce Południowej, w południowo-zachodniej części kontynentu. Zajmuje powierzchnię 756 102 km², a zamieszkane jest przez 20 213 000 osób.",
@@ -33098,7 +33321,7 @@
     "currency": {
       "code": "CLP",
       "name": "Peso chilijskie",
-      "rate_pln": 0.004156
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, L",
@@ -33221,6 +33444,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gb.png",
     "population": 69281437,
+    "area": 244376.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "",
@@ -33246,8 +33470,8 @@
     },
     "currency": {
       "code": "GBP",
-      "name": "Funt szterling",
-      "rate_pln": 4.8375
+      "name": "Funt brytyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -33622,6 +33846,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/la.png",
     "population": 7647000,
+    "area": 236800.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Laos, oficjalnie Laotańska Republika Ludowo-Demokratyczna – państwo w Azji Południowo-Wschodniej, na Półwyspie Indochińskim. Stolicą jest Wientian, główna rzeka Mekong. Na północy Laos graniczy z Mjanmą i Chinami, na wschodzie z Wietnamem, na południu z Kambodżą, a na zachodzie z Tajlandią. Laos jest państwem socjalistycznym.",
@@ -33647,8 +33872,8 @@
     },
     "currency": {
       "code": "LAK",
-      "name": "Kip (Laos)",
-      "rate_pln": 0.000167
+      "name": "Laotański kip",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B, C, E, F",
@@ -33744,6 +33969,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pn.png",
     "population": 35,
+    "area": 47.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Pitcairn – grupa czterech wysp leżących na Oceanie Spokojnym w Polinezji między Australią a Ameryką Południową, na wyspy składają się Pitcairn (4,53 km²), Henderson (37,3 km²), Ducie (0,7 km²), Oeno (0,65 km²), o łącznej powierzchni 47 km².",
@@ -33770,7 +33996,7 @@
     "currency": {
       "code": "NZD",
       "name": "Dolar nowozelandzki",
-      "rate_pln": 2.1371
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "I",
@@ -33829,6 +34055,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tc.png",
     "population": 50828,
+    "area": 948.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Turks i Caicos – terytorium zależne Wielkiej Brytanii w Ameryce Środkowej, na Oceanie Atlantyckim, na północ od wyspy Haiti. Obejmuje dwie grupy wysp: Turks i Caicos we wschodniej części archipelagu Bahamów. Wyspy, zbudowane z wapieni oolitowych, otaczają rafy koralowe. Są często nawiedzane przez huragany.",
@@ -33855,7 +34082,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -33914,6 +34141,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ms.png",
     "population": 4386,
+    "area": 102.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Montserrat – terytorium zależne Wielkiej Brytanii w Ameryce Środkowej, na wyspie Montserrat w archipelagu Małych Antyli, w basenie Morza Karaibskiego. Na skutek wybuchu wulkanu Soufrière Hills w latach 1995–1997 blisko 2/3 ludności musiało być ewakuowane.",
@@ -33940,7 +34168,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -33999,6 +34227,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cn.png",
     "population": 1408280000,
+    "area": 9706961.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Chińska Republika Ludowa, ChRL, Chiny – państwo w Azji Wschodniej, obejmujące historyczne Chiny oraz Tybet i inne ziemie w Azji Środkowej, zamieszkane w sumie przez 56 grup etnicznych. Chiny to drugie pod względem liczby ludności państwo świata o populacji przekraczającej 1,4 mld osób, co stanowi 18,4% populacji świata. Pod względem powierzchni jest 3. na świecie, a pod względem wielkości gospodarki 2. po USA i 1. pod względem PKB realnego.",
@@ -34024,8 +34253,8 @@
     },
     "currency": {
       "code": "CNY",
-      "name": "Yuan renminbi (Chiny)",
-      "rate_pln": 0.521
+      "name": "Chiński juan",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, C, I",
@@ -34625,6 +34854,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sj.png",
     "population": 2530,
+    "area": 61399.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Svalbard i Jan Mayen jest nazwą statystycznej jednostki zdefiniowaną w ISO 3166-1. Składa się z dwóch norweskich terytoriów z niezależną jurysdykcją: Svalbard i Jan Mayen. Terytoria te są połączone dla celów kategoryzacji Międzynarodowej Organizacji Normalizacyjnej (ISO), lecz nie są powiązane administracyjnie. Mimo to umieszczenie wspólnego terytorium przez ISO skutkuje krajową domeną najwyższego poziomu .sj oraz kodem ISO 3166-2:SJ. Departament Statystyki Organizacji Narodów Zjednoczonych przy tych samych kodach jak w standardzie ISO używa nazwy Wyspy Svalbard i Jan Mayen.",
@@ -34650,8 +34880,8 @@
     },
     "currency": {
       "code": "NOK",
-      "name": "Korona norweska",
-      "rate_pln": 0.3735
+      "name": "korona",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -34710,6 +34940,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/vg.png",
     "population": 39471,
+    "area": 151.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Brytyjskie Wyspy Dziewicze – brytyjskie terytorium zamorskie w Ameryce Środkowej, w basenie Morza Karaibskiego, obejmujące 36 wysp i wysepek w północnej części archipelagu Wysp Dziewiczych. Największe wyspy to: Tortola – 54 km², Anegada – 39 km², Virgin Gorda – 21 km² oraz Jost Van Dyke – 8 km².",
@@ -34736,7 +34967,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "A, B",
@@ -34795,6 +35026,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/dm.png",
     "population": 67408,
+    "area": 751.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Dominika, Wspólnota Dominiki – państwo na wyspie o takiej samej nazwie na Morzu Karaibskim w grupie Wysp Nawietrznych, pomiędzy Gwadelupą i Martyniką.",
@@ -34821,7 +35053,7 @@
     "currency": {
       "code": "XCD",
       "name": "Dolar wschodniokaraibski",
-      "rate_pln": 1.3224
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G",
@@ -34890,6 +35122,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sg.png",
     "population": 6110200,
+    "area": 710.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Singapur, oficjalnie Republika Singapuru – miasto-państwo w Azji Południowo-Wschodniej, położone na wyspie Singapur oraz kilkudziesięciu mniejszych wyspach, w pobliżu południowego krańca Półwyspu Malajskiego. Został założony przez Brytyjczyków w 1819 i uzyskał niepodległość 9 sierpnia 1965 roku. Jego nazwa pochodzi od dwóch sanskryckich słów: simha (lew) i pura (miasto), stąd niekiedy stosowana nazwa Miasto Lwa. Wizerunek posągu Merlion jest znanym symbolem Singapuru, używanym do 1997 jako logo przez tutejszą izbę turystyki.",
@@ -34928,7 +35161,7 @@
     "currency": {
       "code": "SGD",
       "name": "Dolar singapurski",
-      "rate_pln": 2.8275
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -34997,6 +35230,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ba.png",
     "population": 3422000,
+    "area": 51209.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Bośnia i Hercegowina – państwo federacyjne ze stolicą w Sarajewie położone w południowej Europie, na Półwyspie Bałkańskim. Graniczy na północy, zachodzie i południu z Chorwacją, na wschodzie z Serbią, a na południowym wschodzie z Czarnogórą. Od południowego zachodu ma dostęp do Morza Adriatyckiego.",
@@ -35030,8 +35264,8 @@
     },
     "currency": {
       "code": "BAM",
-      "name": "Wymienialna marka (Bośnia i Hercegowina)",
-      "rate_pln": 2.1546
+      "name": "Marka zamienna Bośni i Hercegowiny",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -35136,6 +35370,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/lt.png",
     "population": 2894886,
+    "area": 65300.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Litwa, Republika Litewska – państwo unitarne w Europie, jeden z krajów bałtyckich, członek Unii Europejskiej i NATO; graniczy od zachodu z Rosją, od południowego zachodu z Polską, od wschodu z Białorusią, od północy z Łotwą.",
@@ -35161,8 +35396,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -35267,6 +35502,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/be.png",
     "population": 11825551,
+    "area": 30528.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Belgia, Królestwo Belgii – państwo federacyjne w zachodniej Europie, w południowych Niderlandach. Belgia jest członkiem Unii Europejskiej, ONZ oraz NATO.",
@@ -35300,8 +35536,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -35505,6 +35741,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ee.png",
     "population": 1369995,
+    "area": 45227.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Estonia, Republika Estońska – państwo unitarne w Europie Północnej, nad Morzem Bałtyckim, nad Zatoką Fińską, nad którą leży Tallinn, stolica i największe miasto kraju, i Zatoką Ryską. Powstało po I wojnie światowej. Członek Unii Europejskiej i NATO. Graniczy z Łotwą od południa i z Rosją od wschodu oraz z Finlandią przez Zatokę Fińską. Jedno z najbardziej zinformatyzowanych państw świata.",
@@ -35530,8 +35767,8 @@
     },
     "currency": {
       "code": "EUR",
-      "name": "Euro",
-      "rate_pln": 4.2183
+      "name": "euro",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -35609,6 +35846,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ae.png",
     "population": 11294243,
+    "area": 83600.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": null,
@@ -35634,8 +35872,8 @@
     },
     "currency": {
       "code": "AED",
-      "name": "Dirham ZEA (Zjednoczone Emiraty Arabskie)",
-      "rate_pln": 0.9742
+      "name": "Dirham Zjednoczonych Emiratów Arabskich",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "G",
@@ -35713,6 +35951,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/gh.png",
     "population": 33742380,
+    "area": 238533.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Ghana – państwo w zachodniej Afryce nad Oceanem Atlantyckim. Graniczy z Togo, Burkina Faso i Wybrzeżem Kości Słoniowej. Nazwa kraju w języku Asante oznacza „Król – Wojownik”.",
@@ -35738,8 +35977,8 @@
     },
     "currency": {
       "code": "GHS",
-      "name": "Ghana cedi ",
-      "rate_pln": 0.3359
+      "name": "cedi z Ghany",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G",
@@ -35817,6 +36056,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/pf.png",
     "population": 279500,
+    "area": 4167.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Polinezja Francuska – wspólnota zamorska Francji obejmująca 5 archipelagów i ponad 150 wysp na Oceanie Spokojnym, we wschodniej części Polinezji. Łączna powierzchnia wysp to 3521 km², a ludność – 259,7 tys. mieszk. (2007). Stolicą tego terytorium jest Papeete na wyspie Tahiti.\nJęzykiem urzędowym jest język francuski.",
@@ -35842,8 +36082,8 @@
     },
     "currency": {
       "code": "XPF",
-      "name": "Frank CFP  ",
-      "rate_pln": 0.03535
+      "name": "frank CFP",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -35902,6 +36142,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/tn.png",
     "population": 11972169,
+    "area": 163610.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Tunezja, oficjalnie Republika Tunezyjska – państwo leżące w północnej Afryce, nad Morzem Śródziemnym. Graniczy z Algierią i Libią. W latach 1881–1956 pod protektoratem Francji. Od 12 listopada 1956 w ONZ, a od 1 października 1958 członek Ligi Państw Arabskich. Stolicą kraju jest Tunis, a inne większe miasta to: Safakis, Arjana, Bizerta (Banzart), Kabis (Gabés), Susa (Sousse).",
@@ -35927,8 +36168,8 @@
     },
     "currency": {
       "code": "TND",
-      "name": "Dinar tunezyjski",
-      "rate_pln": 1.2473
+      "name": "dinar tunezyjski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -36069,6 +36310,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/nc.png",
     "population": 264596,
+    "area": 18575.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Nowa Kaledonia – francuskie terytorium zamorskie o statusie wspólnoty szczególnego rodzaju w zachodniej części Oceanu Spokojnego, w Melanezji, około 1400 km na wschód od Australii i 1500 km na północny zachód od Nowej Zelandii.",
@@ -36094,8 +36336,8 @@
     },
     "currency": {
       "code": "XPF",
-      "name": "Frank CFP  ",
-      "rate_pln": 0.03535
+      "name": "frank CFP",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",
@@ -36154,6 +36396,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/sz.png",
     "population": 1235549,
+    "area": 17364.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Eswatini, dawniej: Suazi, Ngwane – śródlądowe państwo w południowej Afryce, graniczące z Mozambikiem i Południową Afryką. Siedzibą parlamentu i króla jest Lobamba.",
@@ -36183,8 +36426,8 @@
     },
     "currency": {
       "code": "SZL",
-      "name": "Lilangeni (Eswatini)",
-      "rate_pln": 0.2247
+      "name": "Suazi w słońcu",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "M",
@@ -36243,6 +36486,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/fm.png",
     "population": 105564,
+    "area": 702.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Mikronezja, Sfederowane Stany Mikronezji – państwo na Oceanie Spokojnym, obejmujące większą część wysp Mikronezji. Używana jest także błędna nazwa Federacja Mikronezji.",
@@ -36269,7 +36513,7 @@
     "currency": {
       "code": "USD",
       "name": "Dolar amerykański",
-      "rate_pln": 3.5785
+      "rate_pln": null
     },
     "practical": {
       "plug_types": null,
@@ -36338,6 +36582,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/td.png",
     "population": 19340757,
+    "area": 1284000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Czad, oficjalnie Republika Czadu – państwo śródlądowe w środkowej Afryce. Graniczy od północy z Libią, od wschodu z Sudanem, od południa z Republiką Środkowoafrykańską, od południowego zachodu z Kamerunem i Nigerią, a od zachodu z Nigrem.",
@@ -36367,8 +36612,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E, F",
@@ -36446,6 +36691,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/rs.png",
     "population": 6567783,
+    "area": 77589.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Serbia, Republika Serbii – państwo w Europie Południowej, na Półwyspie Bałkańskim, śródlądowe. Stolicą jest Belgrad, walutą dinar serbski. Historia serbskiej państwowości sięga wczesnego średniowiecza, obecna republika powstała natomiast 5 czerwca 2006 bezpośrednio po rozpadzie federacji Serbii i Czarnogóry (2003–2006), wcześniej Federacyjnej Republiki Jugosławii (1992–2003), których była krajem związkowym.",
@@ -36471,8 +36717,8 @@
     },
     "currency": {
       "code": "RSD",
-      "name": "Dinar serbski",
-      "rate_pln": 0.0359
+      "name": "dinar serbski",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -36577,6 +36823,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/ls.png",
     "population": 2116427,
+    "area": 30355.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Lesotho – państwo w południowej Afryce, będące enklawą w Republice Południowej Afryki.",
@@ -36606,8 +36853,8 @@
     },
     "currency": {
       "code": "LSL",
-      "name": "Loti (Lesotho)",
-      "rate_pln": 0.2248
+      "name": "Lesotho, pamiętaj",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "M",
@@ -36676,6 +36923,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/bw.png",
     "population": 2359609,
+    "area": 582000.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Botswana, Republika Botswany – państwo w południowej Afryce. Zajmuje powierzchnię 581 730 km², a zamieszkane jest przez 2 450 668 osób.",
@@ -36705,8 +36953,8 @@
     },
     "currency": {
       "code": "BWP",
-      "name": "Pula (Botswana)",
-      "rate_pln": 0.2718
+      "name": "Deszcz w Botswanie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "D, G, M",
@@ -36784,6 +37032,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/kz.png",
     "population": 20426568,
+    "area": 2724900.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kazachstan, Republika Kazachstanu – państwo leżące częściowo w Azji i częściowo w Europie – tereny na zachód od rzeki Emba), powstałe w 1991 w wyniku rozpadu Związku Radzieckiego, graniczące z Chinami, Kirgistanem (980 km), Turkmenistanem (380 km), Uzbekistanem (2300 km) oraz Federacją Rosyjską (6467 km). Łączna długość granic Kazachstanu wynosi 12 187 km. Kazachstan ma również dostęp do największego jeziora świata – Morza Kaspijskiego – na długości 2340 km – jest przy tym największym państwem śródlądowym na świecie pod względem powierzchni. Całkowita powierzchnia kraju wynosi 2 724 902 km².",
@@ -36813,8 +37062,8 @@
     },
     "currency": {
       "code": "KZT",
-      "name": "Tenge (Kazachstan)",
-      "rate_pln": 0.007107
+      "name": "Tenge kazachskie",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, F",
@@ -36928,6 +37177,7 @@
     "flag_emoji": null,
     "flag_url": "https://flagcdn.com/w320/cm.png",
     "population": 29442327,
+    "area": 475442.0,
     "timezone": null,
     "national_dish": null,
     "wiki_summary": "Kamerun, Republika Kamerunu – państwo w środkowej Afryce, nad Zatoką Gwinejską. Graniczy z Nigerią, Czadem, Republiką Środkowoafrykańską, Kongiem, Gabonem i Gwineą Równikową. Kamerun jest członkiem ONZ, Unii Afrykańskiej i innych organizacji międzynarodowych.",
@@ -36957,8 +37207,8 @@
     },
     "currency": {
       "code": "XAF",
-      "name": "Frank CFA BEAC",
-      "rate_pln": 0.006267
+      "name": "Frank środkowoafrykański CFA",
+      "rate_pln": null
     },
     "practical": {
       "plug_types": "C, E",

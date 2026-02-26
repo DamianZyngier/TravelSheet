@@ -46,6 +46,7 @@ def export_all():
             "flag_emoji": c.flag_emoji,
             "flag_url": c.flag_url,
             "population": c.population,
+            "area": float(c.area) if c.area else None,
             "timezone": c.timezone,
             "national_dish": c.national_dish,
             "wiki_summary": c.wiki_summary,

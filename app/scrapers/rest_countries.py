@@ -35,8 +35,8 @@ async def sync_countries(db: Session):
     fields1 = "name,cca2,cca3,capital,region,continents,latlng,translations,languages,currencies"
     url1 = f"https://restcountries.com/v3.1/all?fields={fields1}"
     
-    # Request 2: Extra info (population, idd)
-    fields2 = "cca2,population,idd"
+    # Request 2: Extra info (population, area, idd)
+    fields2 = "cca2,population,area,idd"
     url2 = f"https://restcountries.com/v3.1/all?fields={fields2}"
     
     logger.info("Fetching country data from REST Countries (Part 1)...")
@@ -85,8 +85,9 @@ async def sync_countries(db: Session):
             lat = coords[0] if len(coords) > 0 else None
             lon = coords[1] if len(coords) > 1 else None
 
-            # Population & Phone Code
+            # Population, Area & Phone Code
             population = extra.get("population")
+            area = extra.get("area")
             idd = extra.get("idd", {})
             root = idd.get("root", "")
             suffixes = idd.get("suffixes", [])
@@ -105,6 +106,7 @@ async def sync_countries(db: Session):
                     latitude=lat,
                     longitude=lon,
                     population=population,
+                    area=area,
                     phone_code=phone_code
                 )
                 db.add(country)
@@ -116,6 +118,7 @@ async def sync_countries(db: Session):
                 country.latitude = lat
                 country.longitude = lon
                 country.population = population
+                country.area = area
                 country.phone_code = phone_code
                 results["updated"] += 1
 

@@ -186,6 +186,7 @@ class CountryDetail(BaseModel):
     flag_emoji: Optional[str]
     flag_url: Optional[str]
     population: Optional[int]
+    area: Optional[float]
     timezone: Optional[str] = None
     national_dish: Optional[str] = None
     phone_code: Optional[str] = None
