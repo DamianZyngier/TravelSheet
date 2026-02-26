@@ -488,18 +488,23 @@ function App() {
       .sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
   }, [countries, filterSafety, filterContinent, searchQuery]);
 
+  const sortedFullList = useMemo(() => {
+    return Object.values(countries).sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
+  }, [countries]);
+
   const navigateCountry = (direction: 'prev' | 'next') => {
-    const currentIndex = countryList.findIndex(c => c.iso2 === selectedCountry?.iso2);
+    const list = sortedFullList;
+    const currentIndex = list.findIndex(c => c.iso2 === selectedCountry?.iso2);
     if (currentIndex === -1) return;
 
     let nextIndex;
     if (direction === 'prev') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : countryList.length - 1;
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : list.length - 1;
     } else {
-      nextIndex = currentIndex < countryList.length - 1 ? currentIndex + 1 : 0;
+      nextIndex = currentIndex < list.length - 1 ? currentIndex + 1 : 0;
     }
 
-    handleSelectCountry(countryList[nextIndex]);
+    handleSelectCountry(list[nextIndex]);
   };
 
   useEffect(() => {
@@ -622,9 +627,10 @@ function App() {
             </button>
 
             {(() => {
-              const currentIndex = countryList.findIndex(c => c.iso2 === selectedCountry?.iso2);
-              const prevCountry = currentIndex > 0 ? countryList[currentIndex - 1] : countryList[countryList.length - 1];
-              const nextCountry = currentIndex < countryList.length - 1 ? countryList[currentIndex + 1] : countryList[0];
+              const list = sortedFullList;
+              const currentIndex = list.findIndex(c => c.iso2 === selectedCountry?.iso2);
+              const prevCountry = currentIndex > 0 ? list[currentIndex - 1] : list[list.length - 1];
+              const nextCountry = currentIndex < list.length - 1 ? list[currentIndex + 1] : list[0];
 
               return (
                 <div className="country-navigation">
