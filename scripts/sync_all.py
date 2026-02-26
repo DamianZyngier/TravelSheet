@@ -80,7 +80,7 @@ async def run_full_sync():
         # 7. Climate
         print("--- [7/13] Climate Data ---")
         try:
-            cl_res = await climate.sync_all_climate(db)
+            cl_res = await climate.sync_all_climate(db, force=True)
             print(f"✅ Climate data synced.\n")
         except Exception as e:
             print(f"❌ Climate Sync Error: {e}\n")
@@ -120,7 +120,7 @@ async def run_full_sync():
         # 12. Embassies
         print("--- [12/13] Polish Embassies ---")
         try:
-            emb_res = await embassies.sync_all_embassies(db)
+            emb_res = await embassies.scrape_embassies(db)
             print(f"✅ Embassies updated.\n")
         except Exception as e:
             print(f"❌ Embassies Sync Error: {e}\n")
