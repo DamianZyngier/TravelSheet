@@ -465,6 +465,20 @@ function App() {
       .sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
   }, [countries, filterSafety, filterContinent, searchQuery]);
 
+  const navigateCountry = (direction: 'prev' | 'next') => {
+    const currentIndex = countryList.findIndex(c => c.iso2 === selectedCountry?.iso2);
+    if (currentIndex === -1) return;
+
+    let nextIndex;
+    if (direction === 'prev') {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : countryList.length - 1;
+    } else {
+      nextIndex = currentIndex < countryList.length - 1 ? currentIndex + 1 : 0;
+    }
+
+    handleSelectCountry(countryList[nextIndex]);
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
@@ -570,8 +584,36 @@ function App() {
         <div className="detail-view-layout">
           <aside className="side-menu">
             <button className="side-back-button" onClick={() => handleSelectCountry(null)}>
-              ← Powrót
+              ← Powrót do listy
             </button>
+
+            {(() => {
+              const currentIndex = countryList.findIndex(c => c.iso2 === selectedCountry?.iso2);
+              const prevCountry = currentIndex > 0 ? countryList[currentIndex - 1] : countryList[countryList.length - 1];
+              const nextCountry = currentIndex < countryList.length - 1 ? countryList[currentIndex + 1] : countryList[0];
+
+              return (
+                <div className="country-navigation">
+                  <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
+                    <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
+                    <div className="nav-info">
+                      <span className="nav-label">Poprzedni</span>
+                      <span className="nav-name">{prevCountry?.name_pl}</span>
+                    </div>
+                    <span className="nav-arrow">←</span>
+                  </button>
+                  <button className="nav-button next" onClick={() => navigateCountry('next')}>
+                    <span className="nav-arrow">→</span>
+                    <div className="nav-info">
+                      <span className="nav-label">Następny</span>
+                      <span className="nav-name">{nextCountry?.name_pl}</span>
+                    </div>
+                    <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
+                  </button>
+                </div>
+              );
+            })()}
+
             <div className="side-menu-list">
               {SECTIONS.map(s => {
                 // Data-driven visibility check instead of DOM check
