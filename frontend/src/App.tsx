@@ -6,6 +6,44 @@ import './App.css'
 // URL do topologii świata
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
+const CONTINENT_MAP: Record<string, string> = {
+  'Europe': 'Europa',
+  'Asia': 'Azja',
+  'Africa': 'Afryka',
+  'North America': 'Ameryka Północna',
+  'South America': 'Ameryka Południowa',
+  'Oceania': 'Oceania',
+  'Antarctica': 'Antarktyda'
+};
+
+const DATA_SOURCES = {
+  MSZ: { name: 'MSZ (gov.pl)', url: 'https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych' },
+  REST: { name: 'REST Countries', url: 'https://restcountries.com/' },
+  WIKI: { name: 'Wikipedia / Wikidata', url: 'https://www.wikipedia.org/' },
+  UNESCO: { name: 'UNESCO', url: 'https://whc.unesco.org/' },
+  CDC: { name: 'CDC Health', url: 'https://www.cdc.gov/' },
+  OWM: { name: 'OpenWeatherMap', url: 'https://openweathermap.org/' },
+  METEO: { name: 'Open-Meteo', url: 'https://open-meteo.com/' },
+  NUMBEO: { name: 'Numbeo', url: 'https://www.numbeo.com/' },
+  NAGER: { name: 'Nager.Date', url: 'https://date.nager.at/' }
+};
+
+function DataSource({ sources }: { sources: (keyof typeof DATA_SOURCES)[] }) {
+  return (
+    <div className="data-source-footer">
+      <span>Źródło: </span>
+      {sources.map((s, i) => (
+        <span key={s}>
+          <a href={DATA_SOURCES[s].url} target="_blank" rel="noopener noreferrer" className="data-source-link">
+            {DATA_SOURCES[s].name}
+          </a>
+          {i < sources.length - 1 ? ', ' : ''}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 interface CountryData {
   name: string;
   name_pl: string;
@@ -233,16 +271,6 @@ function App() {
     'high': 'Niebezpiecznie',
     'critical': 'Bardzo niebezpiecznie',
     'unknown': 'Brak danych'
-  };
-
-  const CONTINENT_MAP: Record<string, string> = {
-    'Africa': 'Afryka',
-    'Antarctica': 'Antarktyda',
-    'Asia': 'Azja',
-    'Europe': 'Europa',
-    'North America': 'Ameryka Północna',
-    'Oceania': 'Oceania',
-    'South America': 'Ameryka Południowa'
   };
 
   const formatPLN = (value: number | null) => {
@@ -675,6 +703,7 @@ function App() {
                                                               <span className="symbols-value">{selectedCountry.national_symbols}</span>
                                                             </div>
                                                           )}
+                                                          <DataSource sources={['WIKI', 'UNESCO']} />
                                                         </div>
                                                       </div>
                                                     </div>
@@ -757,6 +786,7 @@ function App() {
                                           </div>
                       
                     </div>
+                    <DataSource sources={['MSZ', 'WIKI']} />
                   </div>
 
                   <div id="info" className="info-block full-width basic-info-section scroll-mt">
@@ -804,6 +834,7 @@ function App() {
                         </div>
                       )}
                     </div>
+                    <DataSource sources={['REST', 'WIKI', 'CDC']} />
                   </div>
 
                   <div id="currency" className="info-block full-width scroll-mt">
@@ -821,6 +852,7 @@ function App() {
                                                           </>
                                                         ) : 'brak danych o kursie'}
                                                       </span>
+                                                      <DataSource sources={['REST', 'WIKI']} />
                                                     </div>
                   <div id="plugs" className="info-block full-width scroll-mt">
                     <div className="section-header">
@@ -848,6 +880,7 @@ function App() {
                         {checkPlugs(selectedCountry.practical.plug_types).text}
                       </div>
                     </div>
+                    <DataSource sources={['REST', 'WIKI']} />
                   </div>
 
                   <div id="emergency" className="info-block full-width emergency-section-box scroll-mt">
@@ -894,6 +927,7 @@ function App() {
                         </div>
                       </div>
                     </div>
+                    <DataSource sources={['MSZ', 'WIKI']} />
                   </div>
 
                   <div id="costs" className="info-block full-width costs-section-box scroll-mt">
@@ -976,6 +1010,7 @@ function App() {
                         </div>
                       )}
                     </div>
+                    <DataSource sources={['NUMBEO']} />
                   </div>
 
                   <div id="climate" className="info-block full-width climate-section scroll-mt">
@@ -1085,6 +1120,7 @@ function App() {
                     ) : (
                       <p className="no-data-text">Brak danych klimatycznych dla tego kraju.</p>
                     )}
+                    <DataSource sources={['METEO', 'OWM']} />
                   </div>
 
                   <div id="health" className="info-block full-width health-section-box scroll-mt">
@@ -1215,6 +1251,7 @@ function App() {
                                           </div>
                                         ))}
                                       </div>
+                                      <DataSource sources={['WIKI']} />
                                     </div>
                                   )}
 
@@ -1264,7 +1301,7 @@ function App() {
                           </div>
                         ))}
                       </div>
-                      
+                      <DataSource sources={['UNESCO']} />
                       {selectedCountry.unesco_places.length > 10 && (
                         <button 
                           className="expand-holidays-btn" 
@@ -1293,6 +1330,7 @@ function App() {
                       Zobacz pełny komunikat MSZ na gov.pl →
                     </a>
                   )}
+                  <DataSource sources={['MSZ']} />
                 </div>
               </div>
             </div>

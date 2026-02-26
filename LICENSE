@@ -1,0 +1,32 @@
+# PROPRIETARY LICENSE - TravelSheet
+
+Copyright (c) 2026 TravelSheet. All rights reserved.
+
+## 1. OWNERSHIP AND GRANT OF LICENSE
+TravelSheet (the "Software") is the property of the Author. This is a proprietary license. The Software is licensed, not sold. Any use of this Software is subject to the terms of this license.
+
+## 2. COMMERCIAL USE AND REDISTRIBUTION
+- You are permitted to use the Software for personal or internal business purposes.
+- Any commercial resale, redistribution, or offering the Software as a service (SaaS) to third parties is strictly prohibited without prior written consent and a separate commercial agreement from the Author.
+- Access to the API or special data access is provided under separate commercial terms.
+
+## 3. RESTRICTIONS
+- You may not copy, modify, merge, publish, distribute, sublicense, or sell copies of the Software without the Author's express written permission.
+- You may not reverse engineer, decompile, or disassemble the Software.
+
+## 4. DATA SOURCES AND THIRD-PARTY TERMS
+The Software aggregates data from various public and third-party sources. Users must also comply with the respective licenses and terms of these sources:
+
+- **Ministry of Foreign Affairs (MSZ gov.pl)**: Information for travelers (Public Domain/Open Government License). https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych
+- **REST Countries API**: Basic country data. https://restcountries.com/
+- **Wikipedia / Wikidata**: Visa requirements, summaries, and attractions (Creative Commons Attribution-ShareAlike License). https://www.wikipedia.org/
+- **UNESCO World Heritage**: World Heritage sites data. https://whc.unesco.org/
+- **CDC (Centers for Disease Control and Prevention)**: Health and vaccination info. https://www.cdc.gov/
+- **OpenWeatherMap**: Current weather data. https://openweathermap.org/
+- **Open-Meteo**: Climate and historical weather data. https://open-meteo.com/
+- **Nager.Date**: Public holidays. https://date.nager.at/
+- **Numbeo**: Cost of living indices (Source for data estimations). https://www.numbeo.com/
+- **OpenStreetMap**: Map tiles and data (ODbL license). https://www.openstreetmap.org/
+
+## 5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
