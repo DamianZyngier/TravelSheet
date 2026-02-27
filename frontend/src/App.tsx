@@ -798,7 +798,7 @@ function App() {
                                                               <span className="symbols-value">{selectedCountry.national_symbols}</span>
                                                             </div>
                                                           )}
-                                                          <DataSource sources={['WIKI', 'UNESCO']} />
+                                                          <DataSource sources={['WIKI']} />
                                                         </div>
                                                       </div>
                                                     </div>
@@ -1518,6 +1518,13 @@ function App() {
                   
                 </div>
 
+                  <div id="unesco" className="info-block full-width unesco-section scroll-mt">
+                    <div className="section-header">
+                      <span className="section-header-icon">🏛️</span>
+                      <label>Lista UNESCO ({selectedCountry.unesco_count || 0})</label>
+                    </div>
+
+                    
                     <div className="section-header">
                       <span className="section-header-icon">🛡️</span>
                       <label>Bezpieczeństwo (MSZ)</label>
