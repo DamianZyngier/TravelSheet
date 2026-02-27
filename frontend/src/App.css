@@ -1924,3 +1924,121 @@
   text-overflow: ellipsis;
   line-height: 1.2;
 }
+
+/* Territory relationship styles */
+.relationship-nav-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.relationship-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.relationship-link-btn {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2d3748;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.relationship-link-btn:hover {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+.territories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.territory-mini-link {
+  padding: 4px 8px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.territory-mini-link:hover {
+  background-color: #ebf8ff;
+  border-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+/* Top relationship box styles */
+.top-relationship-box {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  background-color: #f7fafc;
+  border-radius: 12px;
+  border-left: 4px solid #3182ce;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.parent-info-line, .territories-info-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.relationship-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.relationship-text-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.relationship-text-btn:hover {
+  color: #1a365d;
+}
+
+.territories-text-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: baseline;
+  font-size: 0.9rem;
+}

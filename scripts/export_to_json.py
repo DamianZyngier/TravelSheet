@@ -22,6 +22,10 @@ def export_all():
         countries = cur.fetchall()
         print(f"Pobrano {len(countries)} krajów.")
         
+        # Mapa do szybkiego wyszukiwania nazw po ID (dla parent/territories)
+        id_to_iso = {c['id']: c['iso_alpha2'] for c in countries}
+        id_to_name_pl = {c['id']: (c['name_pl'] or c['name']) for c in countries}
+        
         output = {}
         for i, c in enumerate(countries):
             c_id = c['id']
@@ -74,6 +78,10 @@ def export_all():
             cur.execute(f"SELECT * FROM climate WHERE country_id={c_id} ORDER BY month")
             climate = cur.fetchall()
             
+            # Territories (if this is a parent)
+            cur.execute(f"SELECT id, iso_alpha2 FROM countries WHERE parent_id={c_id}")
+            territories_list = cur.fetchall()
+            
             # Budowa obiektu
             country_data = {
                 "name": c['name'],
@@ -97,6 +105,19 @@ def export_all():
                 "latitude": float(c['latitude']) if c['latitude'] else None,
                 "longitude": float(c['longitude']) if c['longitude'] else None,
                 "unesco_count": c['unesco_count'] or 0,
+                "is_independent": bool(c.get('is_independent', True)),
+                
+                "parent": {
+                    "iso2": id_to_iso.get(c['parent_id']),
+                    "name_pl": id_to_name_pl.get(c['parent_id'])
+                } if c.get('parent_id') else None,
+                
+                "territories": [
+                    {
+                        "iso2": t['iso_alpha2'],
+                        "name_pl": id_to_name_pl.get(t['id'])
+                    } for t in territories_list
+                ],
                 
                 "religions": [{"name": r['name'], "percentage": float(r['percentage'])} for r in religions],
                 "languages": [{"name": l['name'], "is_official": l['is_official']} for l in languages],

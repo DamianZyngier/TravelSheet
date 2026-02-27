@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, DECIMAL, TIMESTAMP, Text, ARRAY, ForeignKey, Date
+from sqlalchemy import Column, Integer, String, Boolean, DECIMAL, TIMESTAMP, Text, ForeignKey, Date
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .database import Base
@@ -32,11 +32,16 @@ class Country(Base):
     unesco_count = Column(Integer, default=0)
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
+    
+    # Dependency relationship (e.g. Martinique -> France)
+    parent_id = Column(Integer, ForeignKey("countries.id"), nullable=True)
+    is_independent = Column(Boolean, default=True)
 
     def __repr__(self):
         return f"<Country(name='{self.name}', iso2='{self.iso_alpha2}')>"
 
     # Relations
+    parent = relationship("Country", remote_side=[id], backref="territories")
     languages = relationship("Language", back_populates="country", cascade="all, delete-orphan")
     religions = relationship("Religion", back_populates="country", cascade="all, delete-orphan")
     currency = relationship("Currency", back_populates="country", uselist=False, cascade="all, delete-orphan")
@@ -304,6 +309,3 @@ class CostOfLiving(Base):
     last_updated = Column(TIMESTAMP, server_default=func.now())
 
     country = relationship("Country", back_populates="costs")
-
-# Update Country model with new relationships
-# I will need to replace the whole file content to ensure consistency.
