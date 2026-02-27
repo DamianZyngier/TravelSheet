@@ -2,9 +2,9 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
 import CountryGrid from './components/country/CountryGrid'
-import CountryDetail from './components/country/CountryDetail/CountryDetail'
+import CountryDetail from './components/country/CountryDetail'
 import type { CountryData } from './types'
-import { SECTIONS } from './constants'
+import { SECTIONS, ALIASES } from './constants'
 import './App.css'
 import logoNoText from './assets/logo-no-text.png'
 import { 
@@ -15,84 +15,7 @@ import {
   getMapSettings 
 } from './utils/helpers'
 
-const ALIASES: Record<string, string[]> = {
-  'GB': ['wielka brytania', 'anglia', 'szkocja', 'uk', 'united kingdom'],
-  'US': ['usa', 'stany zjednoczone', 'america', 'united states'],
-  'PL': ['polska', 'poland'],
-  'DE': ['niemcy', 'germany'],
-  'FR': ['francja', 'france'],
-  'IT': ['włochy', 'italy'],
-  'ES': ['hiszpania', 'spain'],
-  'TR': ['turcja', 'turkey'],
-  'EG': ['egipt', 'egypt'],
-  'TH': ['tajlandia', 'thailand'],
-  'AE': ['dubaj', 'zjednoczone emiraty arabskie', 'emiraty', 'uae'],
-  'LK': ['cejlon', 'sri lanka'],
-  'MV': ['malediwy', 'maldives'],
-  'SC': ['seszele', 'seychelles'],
-  'MU': ['mauritius'],
-  'TZ': ['zanzibar', 'tanzania'],
-  'KE': ['kenia', 'kenya'],
-  'DO': ['dominikana', 'dominican republic'],
-  'MX': ['meksyk', 'mexico'],
-  'CU': ['kuba', 'cuba'],
-  'CV': ['wyspy zielonego przylądka', 'cape verde'],
-  'PT': ['portugalia', 'madeira', 'madera', 'azory'],
-  'GR': ['grecja', 'kreta', 'rodos', 'zakynthos', 'corfu'],
-  'CY': ['cypr', 'cyprus'],
-  'HR': ['chorwacja', 'croatia'],
-  'ME': ['czarnogóra', 'montenegro'],
-  'AL': ['albania'],
-  'BG': ['bułgaria', 'bulgaria'],
-  'RO': ['rumunia', 'romania'],
-  'GE': ['gruzja', 'georgia'],
-  'AM': ['armenia'],
-  'JO': ['jordania', 'jordan'],
-  'IL': ['izrael', 'israel'],
-  'QA': ['katar', 'qatar'],
-  'SA': ['arabia saudyjska', 'saudi arabia'],
-  'OM': ['oman'],
-  'MA': ['maroko', 'morocco'],
-  'TN': ['tunezja', 'tunisia'],
-  'ZA': ['rpa', 'south africa'],
-  'IS': ['islandia', 'iceland'],
-  'NO': ['norwegia', 'norway'],
-  'SE': ['szwecja', 'sweden'],
-  'FI': ['finlandia', 'finland'],
-  'DK': ['dania', 'denmark'],
-  'CH': ['szwajcaria', 'switzerland'],
-  'AT': ['austria'],
-  'NL': ['holandia', 'netherlands'],
-  'BE': ['belgia', 'belgium'],
-  'IE': ['irlandia', 'ireland'],
-  'CZ': ['czechy', 'czech republic'],
-  'SK': ['słowacja', 'slovakia'],
-  'HU': ['węgry', 'hungary'],
-  'UA': ['ukraina', 'ukraine'],
-  'JP': ['japonia', 'japan'],
-  'CN': ['chiny', 'china'],
-  'KR': ['korea południowa', 'korea'],
-  'VN': ['wietnam', 'vietnam'],
-  'KH': ['kambodża', 'cambodia'],
-  'LA': ['laos'],
-  'ID': ['indonezja', 'bali', 'indonesia'],
-  'MY': ['malezja', 'malaysia'],
-  'SG': ['singapur', 'singapore'],
-  'PH': ['filipiny', 'philippines'],
-  'AU': ['australia'],
-  'NZ': ['nowa zelandia', 'new zealand'],
-  'CA': ['kanada', 'canada'],
-  'BR': ['brazylia', 'brazil'],
-  'AR': ['argentyna', 'argentina'],
-  'CL': ['czile', 'chile'],
-  'PE': ['peru'],
-  'CO': ['kolumbia', 'colombia'],
-  'CR': ['kostaryka', 'costa rica'],
-  'PA': ['panama']
-};
-
 function App() {
-  console.log("App component initializing...");
   const [countries, setCountries] = useState<Record<string, CountryData>>({})
   const [loading, setLoading] = useState(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
@@ -106,15 +29,12 @@ function App() {
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    console.log("App useEffect: Fetching data.json...");
     fetch('data.json')
       .then(res => {
-        console.log("Fetch response status:", res.status);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
       })
       .then(data => {
-        console.log("Data loaded successfully, count:", Object.keys(data).length);
         setCountries(data)
         setLoading(false)
       })
@@ -145,7 +65,6 @@ function App() {
       window.scrollTo(0, 0)
       setActiveSection('summary')
       
-      // Update URL without reloading
       const url = new URL(window.location.href);
       url.searchParams.set('country', country.iso2);
       window.history.pushState({}, '', url.toString());
@@ -153,11 +72,11 @@ function App() {
       window.scrollTo(0, 0)
       const url = new URL(window.location.href);
       url.searchParams.delete('country');
+      url.searchParams.delete('kraj');
       window.history.pushState({}, '', url.toString());
     }
   }, [])
 
-  // Handle browser back/forward buttons
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
@@ -171,7 +90,6 @@ function App() {
 
     window.addEventListener('popstate', handlePopState);
     
-    // Initial load from URL
     if (!loading && Object.keys(countries).length > 0) {
       const params = new URLSearchParams(window.location.search);
       const countryIso = params.get('country') || params.get('kraj');
@@ -307,8 +225,6 @@ function App() {
 
   return (
     <div className="app-container" onContextMenu={() => true}>
-      {error && <div className="error-toast">{error}</div>}
-      
       {!selectedCountry ? (
         <>
           <Header 
