@@ -786,8 +786,6 @@ function App() {
                 </div>
               </div>
 
-              </div>
-
               <div className="detail-body">
                 <div id="discover" className="info-block full-width scroll-mt">
                   <div className="section-header">
@@ -863,8 +861,9 @@ function App() {
                       <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
                     </div>
                   </div>
+                </div>
                   
-                  <div id="docs" className="info-block full-width docs-section scroll-mt">
+                <div id="docs" className="info-block full-width docs-section scroll-mt">
                     <div className="section-header">
                       <span className="section-header-icon">🛂</span>
                       <label>Wymagane dokumenty (dla Polaków)</label>
@@ -886,7 +885,7 @@ function App() {
                                             <strong>Wiza turystyczna</strong>
                                             <span>
                                               {selectedCountry.entry?.visa_status === 'Wiza niepotrzebna' ? '✅ NIEPOTRZEBNA' : 
-                                               selectedCountry.entry?.visa_status ? `🛂 ${selectedCountry.entry.visa_status.toUpperCase()}` : 
+                                               selectedCountry.entry?.visa_status ? `🛂 ${selectedCountry.entry.visa_status.toUpperCase()}` :
                                                selectedCountry.entry?.visa_required ? '🛂 WYMAGANA' : '🆓 NIEPOTRZEBNA'}
                                             </span>
                                           </div>
@@ -913,7 +912,7 @@ function App() {
                               {(selectedCountry.population / selectedCountry.area).toFixed(1)} os./km²
                               {(() => {
                                 const density = selectedCountry.population / selectedCountry.area;
-                                const polandDensity = 120; 
+                                const polandDensity = 120;
                                 const ratio = density / polandDensity;
                                 if (ratio > 1.1) {
                                   return <span style={{ color: '#f56565', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
@@ -1051,7 +1050,7 @@ function App() {
                           </div>
                         )}
                       </div>
-                      
+
                       <div className="emergency-grid">
                         <div className="emergency-item-box">
                           <span className="emergency-icon">🚓</span>
@@ -1124,9 +1123,9 @@ function App() {
                                     </div>
                                     <div className="cost-bar-wrapper">
                                       {item.val !== null ? (
-                                        <div 
-                                          className={`cost-bar-fill-v2 ${isOverflow ? 'overflow' : ''}`} 
-                                          style={{ 
+                                        <div
+                                          className={`cost-bar-fill-v2 ${isOverflow ? 'overflow' : ''}`}
+                                          style={{
                                             width: `${Math.min(100, (item.val / 200) * 100)}%`,
                                             backgroundColor: item.val < 90 ? '#48bb78' : item.val < 110 ? '#4299e1' : isOverflow ? '#9b2c2c' : '#f56565'
                                           }}
@@ -1165,7 +1164,7 @@ function App() {
                       <div className="combined-chart-container" onMouseLeave={() => setChartTooltip(prev => ({ ...prev, visible: false }))}>
                         <div className="chart-y-axis-label left">Temperatura (°C)</div>
                         <div className="chart-y-axis-label right">Opady (mm)</div>
-                        
+
                         {chartTooltip.visible && (
                           <div className="chart-custom-tooltip" style={{ left: chartTooltip.x, top: chartTooltip.y }}>
                             {chartTooltip.text}
@@ -1278,7 +1277,7 @@ function App() {
                           <ExpandableText text={selectedCountry.practical.health_info} />
                         </div>
                       )}
-                      
+
                       {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) && (
                         <div className="health-summary-vax">
                           {selectedCountry.practical.vaccinations_required && (
@@ -1321,7 +1320,7 @@ function App() {
                       <span className="section-header-icon">📅</span>
                       <label>Święta i dni wolne</label>
                     </div>
-                    
+
                     {selectedCountry.holidays && selectedCountry.holidays.length > 0 ? (
                       <div className="holiday-container">
                         <div className="expanded-holiday-list">
@@ -1374,7 +1373,7 @@ function App() {
 
                           const embassiesGroup = sortedAll.filter(e => e.type === 'Ambasada');
                           const consulatesAll = sortedAll.filter(e => e.type !== 'Ambasada');
-                          
+
                           const displayedConsulates = isEmbassiesExpanded ? consulatesAll : consulatesAll.slice(0, 2);
                           const hasHiddenConsulates = consulatesAll.length > 2;
 
@@ -1398,7 +1397,7 @@ function App() {
                                   </div>
                                 </div>
                               )}
-                              
+
                               {consulatesAll.length > 0 && (
                                 <div className="embassy-group">
                                   <h4 className="embassy-group-title">Konsulaty i pozostałe placówki</h4>
@@ -1407,10 +1406,10 @@ function App() {
                                   </div>
                                 </div>
                               )}
-                              
+
                               {hasHiddenConsulates && (
-                                <button 
-                                  className="section-expand-btn" 
+                                <button
+                                  className="section-expand-btn"
                                   style={{ marginTop: '1rem', width: '100%' }}
                                   onClick={() => setIsEmbassiesExpanded(!isEmbassiesExpanded)}
                                 >
@@ -1476,8 +1475,8 @@ function App() {
                               <div className="unesco-item-content">
                                 <div className="unesco-item-header">
                                   <span className="unesco-icon">
-                                    {place.category === 'Cultural' ? '🏛️' : 
-                                    place.category === 'Natural' ? '🌳' : 
+                                    {place.category === 'Cultural' ? '🏛️' :
+                                    place.category === 'Natural' ? '🌳' :
                                     place.category === 'Mixed' ? '🏔️' : '📍'}
                                   </span>
                                   <div className="unesco-name">{place.name}</div>
@@ -1487,7 +1486,7 @@ function App() {
                                   {!!place.is_transnational && <div className="unesco-type-badge transnational">MIĘDZYNARODOWE</div>}
                                   {!!place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
                                 </div>
-                                
+
                                 {place.description && (
                                   <div className="unesco-description" onClick={(e) => e.stopPropagation()}>
                                     <ExpandableText text={place.description} />
@@ -1504,14 +1503,14 @@ function App() {
                           ))}
                         </div>
                         {selectedCountry.unesco_places.length > 10 && (
-                          <button 
-                            className="section-expand-btn" 
-                            style={{ 
-                              marginTop: '0.5rem', 
-                              width: '100%', 
-                              padding: '0.4rem', 
-                              fontSize: '0.75rem', 
-                              backgroundColor: 'transparent', 
+                          <button
+                            className="section-expand-btn"
+                            style={{
+                              marginTop: '0.5rem',
+                              width: '100%',
+                              padding: '0.4rem',
+                              fontSize: '0.75rem',
+                              backgroundColor: 'transparent',
                               border: '1px solid #e2e8f0',
                               color: '#718096'
                             }}
@@ -1548,10 +1547,10 @@ function App() {
                     </div>
                     <DataSource sources={['MSZ']} />
                   </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       )}
     </div>
   )
