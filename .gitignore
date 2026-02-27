@@ -53,3 +53,4 @@ nohup.out
 # We MUST keep 'docs/' folder as it is the source for GitHub Pages
 !docs/
 !docs/data.json
+.todo

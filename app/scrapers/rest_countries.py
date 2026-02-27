@@ -22,8 +22,10 @@ async def fetch_data(url):
                 if attempt < 2: await asyncio.sleep(2)
     return None
 
-def normalize_polish_name(name: str) -> str:
+def normalize_polish_name(name: str, iso2: str = None) -> str:
     """Fix common errors in Polish country names from external APIs."""
+    if iso2 == 'SS' and name == 'Sudan':
+        return 'Sudan Południowy'
     return normalize_polish_text(name)
 
 async def sync_countries(db: Session):
@@ -70,7 +72,7 @@ async def sync_countries(db: Session):
             # Build basic data
             name_en = country_data.get("name", {}).get("common")
             name_pl = country_data.get("translations", {}).get("pol", {}).get("common") or name_en
-            name_pl = normalize_polish_text(name_pl)
+            name_pl = normalize_polish_name(name_pl, iso2)
             
             capital_list = country_data.get("capital", [])
             capital = capital_list[0] if capital_list else None

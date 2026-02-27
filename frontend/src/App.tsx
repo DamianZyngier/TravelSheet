@@ -238,6 +238,7 @@ function App() {
   const [chartTooltip, setChartTooltip] = useState<{ x: number, y: number, text: string, visible: boolean }>({ x: 0, y: 0, text: '', visible: false });
   const [activeSection, setActiveSection] = useState('summary');
   const [isUnescoExpanded, setIsUnescoExpanded] = useState(false);
+  const [isEmbassiesExpanded, setIsEmbassiesExpanded] = useState(false);
   
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -1336,16 +1337,65 @@ function App() {
                       <label>Polskie placówki dyplomatyczne</label>
                     </div>
                     {selectedCountry.embassies && selectedCountry.embassies.length > 0 ? (
-                      <div className="embassy-list">
-                        {selectedCountry.embassies.map((emb, idx) => (
-                          <div key={idx} className="embassy-item">
-                            <strong>{emb.type} {emb.city ? `w ${emb.city}` : ''}</strong>
-                            {emb.address && <p>📍 {emb.address}</p>}
-                            {emb.phone && <p>📞 {emb.phone}</p>}
-                            {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
-                            {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
-                          </div>
-                        ))}
+                      <div className="embassy-container">
+                        {(() => {
+                          const order = ['Ambasada', 'Wydział Konsularny', 'Konsulat Generalny', 'Konsulat', 'Konsulat Honorowy', 'Placówka'];
+                          const sortedAll = [...selectedCountry.embassies].sort((a, b) => {
+                            let idxA = order.indexOf(a.type);
+                            let idxB = order.indexOf(b.type);
+                            if (idxA === -1) idxA = 99;
+                            if (idxB === -1) idxB = 99;
+                            return idxA - idxB;
+                          });
+
+                          const embassiesGroup = sortedAll.filter(e => e.type === 'Ambasada');
+                          const consulatesAll = sortedAll.filter(e => e.type !== 'Ambasada');
+                          
+                          const displayedConsulates = isEmbassiesExpanded ? consulatesAll : consulatesAll.slice(0, 2);
+                          const hasHiddenConsulates = consulatesAll.length > 2;
+
+                          const renderEmbassy = (emb: any, idx: number) => (
+                            <div key={idx} className="embassy-item">
+                              <strong>{emb.type} {emb.city ? `w ${emb.city}` : ''}</strong>
+                              {emb.address && <p>📍 {emb.address}</p>}
+                              {emb.phone && <p>📞 {emb.phone}</p>}
+                              {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
+                              {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
+                            </div>
+                          );
+
+                          return (
+                            <>
+                              {embassiesGroup.length > 0 && (
+                                <div className="embassy-group">
+                                  <h4 className="embassy-group-title">Ambasada</h4>
+                                  <div className="embassy-grid">
+                                    {embassiesGroup.map(renderEmbassy)}
+                                  </div>
+                                </div>
+                              )}
+                              
+                              {consulatesAll.length > 0 && (
+                                <div className="embassy-group">
+                                  <h4 className="embassy-group-title">Konsulaty i pozostałe placówki</h4>
+                                  <div className="embassy-grid">
+                                    {displayedConsulates.map(renderEmbassy)}
+                                  </div>
+                                </div>
+                              )}
+                              
+                              {hasHiddenConsulates && (
+                                <button 
+                                  className="expand-holidays-btn" 
+                                  style={{ marginTop: '1.5rem', width: '100%' }}
+                                  onClick={() => setIsEmbassiesExpanded(!isEmbassiesExpanded)}
+                                >
+                                  {isEmbassiesExpanded ? 'Pokaż mniej' : `Pokaż pozostałe placówki (${consulatesAll.length - 2})`}
+                                </button>
+                              )}
+                            </>
+                          );
+                        })()}
                       </div>
                     ) : (
                       <div className="no-data-msg">Brak danych o polskich placówkach w tym kraju.</div>
