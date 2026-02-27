@@ -67,14 +67,17 @@ async def scrape_country(db: Session, iso_code: str):
     
     # 1. Get URL from cache or manual mapping
     final_url = _URL_CACHE.get(name_pl)
+    strategy = "1st link (directory)"
     
     if not final_url:
         slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
         if slug:
             final_url = f"https://www.gov.pl/web/dyplomacja/{slug}"
+            strategy = "2nd link (manual)"
         else:
             guessed_slug = slugify(name_pl).replace('-', '')
             final_url = f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"
+            strategy = "3rd link (guessed)"
 
     headers = get_headers()
     response_text = None
@@ -242,7 +245,7 @@ async def scrape_country(db: Session, iso_code: str):
     practical.vaccinations_suggested = normalize_polish_text(vaccines_sug)
 
     db.commit()
-    return {"status": "success", "risk_level": risk_level, "url": final_url}
+    return {"status": "success", "risk_level": risk_level, "url": final_url, "strategy": strategy}
 
 async def scrape_all_with_cache(db: Session):
     global _URL_CACHE
@@ -263,7 +266,7 @@ async def scrape_all_with_cache(db: Session):
                 logger.info(f"  - Skipped: {res.get('reason')}")
             else: 
                 results["success"] += 1
-                logger.info(f"  - OK: Risk {res.get('risk_level', 'unknown')}")
+                logger.info(f"  - {res.get('strategy', 'OK')}: Risk {res.get('risk_level', 'unknown')}")
             
             await asyncio.sleep(1.0) 
         except Exception as e:

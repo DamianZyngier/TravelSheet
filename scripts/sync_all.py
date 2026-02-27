@@ -8,6 +8,7 @@ import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal
+from app import models
 from app.scrapers import unesco, msz_gov_pl, wiki_summaries, weather, holidays, costs, cdc_health, embassies, emergency, climate, rest_countries, exchange_rates, static_info
 from scripts.export_to_json import export_all
 
@@ -112,7 +113,7 @@ async def run_full_sync():
         # 11. CDC Health Info
         print("--- [11/13] CDC Health & Vaccinations ---")
         try:
-            cdc_res = await cdc_health.sync_all_cdc_info(db)
+            cdc_res = await cdc_health.sync_all_cdc(db)
             print(f"✅ CDC info updated.\n")
         except Exception as e:
             print(f"❌ CDC Sync Error: {e}\n")

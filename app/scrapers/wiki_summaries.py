@@ -35,15 +35,23 @@ async def sync_wiki_summary(db: Session, country_iso2: str):
 
     async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         # Wikipedia Part
-        try:
-            wiki_resp = await client.get(wiki_url, headers=headers)
-            if wiki_resp.status_code == 200:
-                country.wiki_summary = wiki_resp.json().get("extract")
-                logger.info(f"Summary for {country_iso2} fetched successfully.")
-            else:
-                logger.warning(f"Wikipedia summary for {wiki_title} ({country_iso2}) returned {wiki_resp.status_code}")
-        except Exception as e:
-            logger.error(f"Wikipedia summary error for {country_iso2}: {e}")
+        for attempt in range(3):
+            try:
+                wiki_resp = await client.get(wiki_url, headers=headers)
+                if wiki_resp.status_code == 200:
+                    country.wiki_summary = wiki_resp.json().get("extract")
+                    logger.info(f"Summary for {country_iso2} fetched successfully.")
+                    break
+                elif wiki_resp.status_code == 429:
+                    wait_time = (attempt + 1) * 2
+                    logger.warning(f"Wikipedia 429 for {wiki_title}. Retrying in {wait_time}s...")
+                    await asyncio.sleep(wait_time)
+                else:
+                    logger.warning(f"Wikipedia summary for {wiki_title} ({country_iso2}) returned {wiki_resp.status_code}")
+                    break
+            except Exception as e:
+                logger.error(f"Wikipedia summary error for {country_iso2}: {e}")
+                break
 
         # Wikidata Part
         try:
@@ -74,5 +82,5 @@ async def sync_all_summaries(db: Session):
             results["errors"] += 1
         else:
             results["success"] += 1
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(1.0)
     return results

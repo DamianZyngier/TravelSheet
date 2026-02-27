@@ -139,6 +139,6 @@ def slugify(text: str) -> str:
 
 def get_headers():
     return {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "User-Agent": "TravelSheet/1.0 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
         "Accept": "application/json"
     }
