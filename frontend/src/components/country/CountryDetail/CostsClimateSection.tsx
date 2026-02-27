@@ -1,5 +1,5 @@
 import React from 'react';
-import { CountryData } from '../../../types';
+import type { CountryData } from '../../../types';
 import { DataSource } from '../../Common';
 
 interface CostsClimateSectionProps {

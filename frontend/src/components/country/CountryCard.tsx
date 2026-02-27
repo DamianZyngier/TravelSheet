@@ -1,5 +1,5 @@
 import React from 'react';
-import { CountryData } from '../../types';
+import type { CountryData } from '../../types';
 import { CONTINENT_MAP, SAFETY_LABELS } from '../../constants';
 import { getLongNameClass } from '../Common';
 

@@ -1,4 +1,4 @@
-import { CountryData } from '../types';
+import type { CountryData } from '../types';
 
 export const formatPLN = (val: number) => {
   return new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' }).format(val);
