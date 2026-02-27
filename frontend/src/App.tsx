@@ -92,6 +92,7 @@ const ALIASES: Record<string, string[]> = {
 };
 
 function App() {
+  console.log("App component initializing...");
   const [countries, setCountries] = useState<Record<string, CountryData>>({})
   const [loading, setLoading] = useState(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
@@ -105,12 +106,15 @@ function App() {
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    fetch('/data.json')
+    console.log("App useEffect: Fetching data.json...");
+    fetch('data.json')
       .then(res => {
+        console.log("Fetch response status:", res.status);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
       })
       .then(data => {
+        console.log("Data loaded successfully, count:", Object.keys(data).length);
         setCountries(data)
         setLoading(false)
       })
