@@ -814,7 +814,6 @@ function App() {
                 </div>
                                       
                 <div className="info-grid">
-              
                   <div className="info-block">
                     <label>Kontynent</label>
                     <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
