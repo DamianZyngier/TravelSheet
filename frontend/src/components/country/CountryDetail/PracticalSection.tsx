@@ -20,51 +20,53 @@ const PracticalSection: React.FC<PracticalSectionProps> = ({
 }) => {
   return (
     <>
-      <div className="info-grid">
-        <div className="info-block">
-          <label>Kontynent</label>
-          <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
-        </div>
-        <div className="info-block">
-          <label>Stolica</label>
-          <span>{selectedCountry.capital || 'Brak danych'}</span>
-        </div>
-        
-        {selectedCountry.weather?.temp !== null && (
-          <div className="info-block weather-top-block">
-            <label>Pogoda teraz</label>
-            <div className="weather-brief">
-              {selectedCountry.weather?.icon && (
-                <img 
-                  src={`https://openweathermap.org/img/wn/${selectedCountry.weather.icon}.png`} 
-                  alt={selectedCountry.weather.condition} 
-                  className="weather-mini-icon"
-                />
-              )}
-              <span className="weather-temp-main">{Math.round(selectedCountry.weather?.temp || 0)}°C</span>
+      <div className="info-block full-width">
+        <div className="info-grid">
+          <div className="info-block">
+            <label>Kontynent</label>
+            <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
+          </div>
+          <div className="info-block">
+            <label>Stolica</label>
+            <span>{selectedCountry.capital || 'Brak danych'}</span>
+          </div>
+          
+          {selectedCountry.weather?.temp !== null && (
+            <div className="info-block weather-top-block">
+              <label>Pogoda teraz</label>
+              <div className="weather-brief">
+                {selectedCountry.weather?.icon && (
+                  <img 
+                    src={`https://openweathermap.org/img/wn/${selectedCountry.weather.icon}.png`} 
+                    alt={selectedCountry.weather.condition} 
+                    className="weather-mini-icon"
+                  />
+                )}
+                <span className="weather-temp-main">{Math.round(selectedCountry.weather?.temp || 0)}°C</span>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {selectedCountry.timezone && (
+          {selectedCountry.timezone && (
+            <div className="info-block">
+              <label>Strefa czasowa</label>
+              <span>{selectedCountry.timezone}</span>
+            </div>
+          )}
+
+          {selectedCountry.national_dish && (
+            <div className="info-block">
+              <label>Potrawa narodowa</label>
+              <span>🍽️ {selectedCountry.national_dish}</span>
+            </div>
+          )}
+
           <div className="info-block">
-            <label>Strefa czasowa</label>
-            <span>{selectedCountry.timezone}</span>
-          </div>
-        )}
-
-        {selectedCountry.national_dish && (
-          <div className="info-block">
-            <label>Potrawa narodowa</label>
-            <span>🍽️ {selectedCountry.national_dish}</span>
-          </div>
-        )}
-
-        <div className="info-block">
-          <label>Ruch drogowy</label>
-          <div className="driving-info-box">
-            <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
-            <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
+            <label>Ruch drogowy</label>
+            <div className="driving-info-box">
+              <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
+              <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
+            </div>
           </div>
         </div>
       </div>
