@@ -86,8 +86,6 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           setChartTooltip={setChartTooltip}
         />
 
-        <SafetyHealthSection selectedCountry={selectedCountry} />
-
         <MiscSection 
           selectedCountry={selectedCountry}
           isEmbassiesExpanded={isEmbassiesExpanded}
@@ -95,6 +93,8 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           isUnescoExpanded={isUnescoExpanded}
           setIsUnescoExpanded={setIsUnescoExpanded}
         />
+
+        <SafetyHealthSection selectedCountry={selectedCountry} />
       </div>
     </div>
   );
