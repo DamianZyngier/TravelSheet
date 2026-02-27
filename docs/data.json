@@ -64,7 +64,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswany",
+        "name": "Tswana",
         "is_official": 1
       },
       {
@@ -131,9 +131,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.84,
+      "temp": 24.45,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -573,7 +573,7 @@
     "weather": {
       "temp": 33.23,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -803,7 +803,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.46,
+      "temp": 3.79,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -1011,7 +1011,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.62,
+      "temp": 18.95,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -1855,7 +1855,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.05,
+      "temp": 8.05,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -2150,7 +2150,7 @@
         "date": "2026-09-03"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -2329,9 +2329,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 36.29,
+      "temp": 35.25,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -2543,7 +2543,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.51,
+      "temp": 26.51,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -3038,9 +3038,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.05,
+      "temp": 15.67,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -3544,7 +3544,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.36,
+      "temp": 25.9,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -3717,9 +3717,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.53,
+      "temp": 24.03,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -3885,7 +3885,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.48,
+      "temp": 17.45,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -4192,9 +4192,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 23.08,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 28.08,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -4351,7 +4351,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.82,
+      "temp": 15.82,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -4595,9 +4595,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.03,
+      "temp": 26.61,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [
@@ -4908,7 +4908,7 @@
         "is_official": 1
       },
       {
-        "name": "Ponownie",
+        "name": "Jeszcze jeden",
         "is_official": 1
       }
     ],
@@ -4959,7 +4959,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.56,
+      "temp": 21.82,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -5122,7 +5122,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.01,
+      "temp": 15.65,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -6009,9 +6009,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.49,
+      "temp": 23.49,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -6294,7 +6294,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.0,
+      "temp": 24.0,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -6746,9 +6746,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.97,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 28.97,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -6905,7 +6905,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 11.16,
+      "temp": 11.88,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -7113,7 +7113,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -7284,9 +7284,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.48,
+      "temp": 15.48,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -7846,7 +7846,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.4,
+      "temp": 9.28,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -8116,7 +8116,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.99,
+      "temp": 24.99,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -8447,7 +8447,7 @@
         "is_official": 1
       },
       {
-        "name": "Turkmeni",
+        "name": "Turkmenów",
         "is_official": 1
       }
     ],
@@ -8498,9 +8498,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.19,
+      "temp": 11.38,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [
@@ -8684,9 +8684,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.93,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 24.48,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -8915,9 +8915,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.33,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 10.81,
+      "condition": "Clear",
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -8989,7 +8989,7 @@
         "date": "2026-01-19"
       },
       {
-        "name": "Dzień rocznicy Auckland",
+        "name": "Dzień rocznicy w Auckland",
         "date": "2026-01-26"
       },
       {
@@ -9001,7 +9001,7 @@
         "date": "2026-02-06"
       },
       {
-        "name": "Dzień rocznicowy Taranaki",
+        "name": "Dzień rocznicy Taranaki",
         "date": "2026-03-09"
       },
       {
@@ -9220,7 +9220,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.6,
+      "temp": 26.65,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -9507,7 +9507,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.99,
+      "temp": 13.48,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -9918,9 +9918,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.74,
+      "temp": 29.74,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -10114,9 +10114,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.97,
+      "temp": 20.08,
       "condition": "Rain",
-      "icon": "10d"
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [
@@ -10319,7 +10319,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.02,
+      "temp": 30.49,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -10598,7 +10598,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.34,
+      "temp": 27.22,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -10766,9 +10766,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.24,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 26.24,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -11053,9 +11053,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -2.0,
-      "condition": "Snow",
-      "icon": "13d"
+      "temp": -2.07,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -11588,7 +11588,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.34,
+      "temp": 27.45,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -11766,7 +11766,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.79,
+      "temp": 27.45,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -11937,7 +11937,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.89,
+      "temp": 17.34,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -12067,7 +12067,7 @@
         "date": "2026-08-06"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-02"
       },
       {
@@ -12226,7 +12226,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.27,
+      "temp": 16.32,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -12849,7 +12849,7 @@
         "is_official": 1
       },
       {
-        "name": "Fidżi hindi",
+        "name": "Fidżi, hindi",
         "is_official": 1
       }
     ],
@@ -13069,7 +13069,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.23,
+      "temp": 22.2,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -13247,9 +13247,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.02,
-      "condition": "Thunderstorm",
-      "icon": "11d"
+      "temp": 32.02,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -13410,9 +13410,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.98,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 21.98,
+      "condition": "Thunderstorm",
+      "icon": "11n"
     },
     "embassies": [
       {
@@ -13488,7 +13488,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -13651,9 +13651,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.39,
+      "temp": 28.22,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "03n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -13839,7 +13839,7 @@
         "date": "2026-04-06"
       },
       {
-        "name": "Święto państwowe na początku maja",
+        "name": "Początek majowego święta państwowego",
         "date": "2026-05-01"
       },
       {
@@ -14173,7 +14173,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.29,
+      "temp": 11.88,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -14501,7 +14501,7 @@
     "weather": {
       "temp": 17.42,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -14772,9 +14772,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 2.11,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 1.11,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -14968,9 +14968,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.26,
+      "temp": 27.55,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -15300,9 +15300,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.02,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 23.64,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -15595,7 +15595,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.38,
+      "temp": 25.27,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -15754,9 +15754,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.53,
+      "temp": 22.24,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -16127,9 +16127,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 2.11,
-      "condition": "Fog",
-      "icon": "50d"
+      "temp": 7.78,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -16954,7 +16954,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.88,
+      "temp": 27.13,
       "condition": "Rain",
       "icon": "09d"
     },
@@ -17113,9 +17113,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.95,
+      "temp": 30.95,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -17203,7 +17203,7 @@
         "date": "2026-07-01"
       },
       {
-        "name": "Dzień przyjazdu Jawajczyków",
+        "name": "Dzień przyjazdu Jawajczyka",
         "date": "2026-08-08"
       },
       {
@@ -17383,8 +17383,8 @@
     },
     "weather": {
       "temp": 5.03,
-      "condition": "Clouds",
-      "icon": "04d"
+      "condition": "Drizzle",
+      "icon": "09n"
     },
     "embassies": [
       {
@@ -17596,9 +17596,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.36,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 11.72,
+      "condition": "Drizzle",
+      "icon": "09d"
     },
     "embassies": [
       {
@@ -17951,7 +17951,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.33,
+      "temp": 8.66,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -18173,7 +18173,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.63,
+      "temp": 11.34,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -18511,9 +18511,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.52,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 21.82,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -18707,9 +18707,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.01,
+      "temp": 27.01,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -18866,7 +18866,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.29,
+      "temp": 28.07,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -19035,7 +19035,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.92,
+      "temp": 18.92,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -19202,7 +19202,7 @@
         "is_official": 1
       },
       {
-        "name": "Czamorro",
+        "name": "Chamorro",
         "is_official": 1
       },
       {
@@ -19257,9 +19257,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.86,
-      "condition": "Clouds",
-      "icon": "03n"
+      "temp": 24.39,
+      "condition": "Mist",
+      "icon": "50n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -19416,9 +19416,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.09,
+      "temp": 3.09,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -19677,7 +19677,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 32.0,
+      "temp": 28.0,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -19836,9 +19836,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.99,
+      "temp": 28.99,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -20049,9 +20049,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.01,
+      "temp": 22.01,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -20236,7 +20236,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.51,
+      "temp": 2.84,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -20684,7 +20684,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.95,
+      "temp": 25.51,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -20852,7 +20852,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.15,
+      "temp": 18.53,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -21514,7 +21514,7 @@
         "date": "2026-10-31"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -21681,7 +21681,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.18,
+      "temp": 30.18,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -21905,7 +21905,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -17.93,
+      "temp": -20.93,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -22177,7 +22177,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.91,
+      "temp": 12.79,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -22452,7 +22452,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -1.06,
+      "temp": -0.06,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -23453,7 +23453,7 @@
     "religions": [],
     "languages": [
       {
-        "name": "Czamorro",
+        "name": "Chamorro",
         "is_official": 1
       },
       {
@@ -23512,9 +23512,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.69,
+      "temp": 25.56,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -23671,9 +23671,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.16,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 24.51,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -24129,7 +24129,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.25,
+      "temp": 21.81,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -24361,7 +24361,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 12.8,
+      "temp": 13.25,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -24811,7 +24811,7 @@
         "date": "2026-04-06"
       },
       {
-        "name": "Święto państwowe na początku maja",
+        "name": "Początek majowego święta państwowego",
         "date": "2026-05-04"
       },
       {
@@ -25006,9 +25006,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.99,
+      "temp": 28.99,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -25520,9 +25520,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.99,
+      "temp": 21.97,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -25698,7 +25698,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -0.33,
+      "temp": -2.14,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -26040,7 +26040,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.01,
+      "temp": 14.97,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -26651,7 +26651,7 @@
         "date": "2026-04-06"
       },
       {
-        "name": "Święto państwowe na początku maja",
+        "name": "Początek majowego święta państwowego",
         "date": "2026-05-04"
       },
       {
@@ -27078,7 +27078,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 22.19,
+      "temp": 24.19,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -27237,9 +27237,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.23,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 26.91,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -27396,7 +27396,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.49,
+      "temp": 15.49,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -27670,9 +27670,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.83,
+      "temp": 11.83,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -27943,9 +27943,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.77,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 19.91,
+      "condition": "Ash",
+      "icon": "50d"
     },
     "embassies": [
       {
@@ -28034,7 +28034,7 @@
         "date": "2026-10-20"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -28205,7 +28205,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.81,
+      "temp": 28.95,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -28364,7 +28364,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 22.28,
+      "temp": 22.38,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -28523,7 +28523,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.91,
+      "temp": 2.8,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -28951,7 +28951,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.3,
+      "temp": 16.3,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -29204,9 +29204,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.42,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 25.26,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -29363,7 +29363,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 6.76,
+      "temp": 3.76,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -29746,7 +29746,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 27.22,
+      "temp": 26.67,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -29905,7 +29905,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 32.82,
+      "temp": 30.82,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -30137,7 +30137,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.88,
+      "temp": 17.43,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -30201,7 +30201,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -30368,7 +30368,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.25,
+      "temp": 10.27,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -30624,7 +30624,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 35.08,
+      "temp": 36.08,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -30852,9 +30852,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.99,
+      "temp": 26.99,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -31069,7 +31069,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.98,
+      "temp": 27.86,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -31238,7 +31238,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.37,
+      "temp": 12.11,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -31680,9 +31680,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.97,
+      "temp": 28.97,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -31843,7 +31843,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.94,
+      "temp": 23.94,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -32002,7 +32002,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.42,
+      "temp": 9.42,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -32233,7 +32233,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 6.53,
+      "temp": 16.53,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -32453,7 +32453,7 @@
         "is_official": 1
       },
       {
-        "name": "Turkmeni",
+        "name": "Turkmenów",
         "is_official": 1
       }
     ],
@@ -32504,9 +32504,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.69,
+      "temp": 13.03,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [
@@ -32709,7 +32709,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 27.96,
+      "temp": 27.86,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -32868,9 +32868,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.99,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 23.99,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -33040,9 +33040,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.47,
+      "temp": 8.12,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -33272,9 +33272,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.99,
+      "temp": 20.99,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [
@@ -33459,7 +33459,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.02,
+      "temp": 28.02,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -33869,9 +33869,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.23,
+      "temp": 28.01,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [
@@ -34053,7 +34053,7 @@
     "weather": {
       "temp": 25.19,
       "condition": "Rain",
-      "icon": "10n"
+      "icon": "09n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -34218,9 +34218,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.59,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 25.59,
+      "condition": "Rain",
+      "icon": "09n"
     },
     "embassies": [
       {
@@ -34295,7 +34295,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -34458,7 +34458,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.0,
+      "temp": 27.36,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -34872,9 +34872,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 18.89,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 20.0,
+      "condition": "Drizzle",
+      "icon": "09d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -35035,7 +35035,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.68,
+      "temp": 26.73,
       "condition": "Clouds",
       "icon": "02n"
     },
@@ -35184,7 +35184,7 @@
         "date": "2026-10-31"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -35367,7 +35367,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.79,
+      "temp": 15.61,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -35615,9 +35615,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.96,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 25.38,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -35753,7 +35753,7 @@
         "date": "2026-06-24"
       },
       {
-        "name": "Dzień Dziennikarzy",
+        "name": "Dzień Dziennikarza",
         "date": "2026-06-27"
       },
       {
@@ -35789,7 +35789,7 @@
         "date": "2026-10-12"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -35964,9 +35964,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.27,
+      "temp": 28.27,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -36199,9 +36199,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.09,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 23.09,
+      "condition": "Haze",
+      "icon": "50n"
     },
     "embassies": [
       {
@@ -36796,7 +36796,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 35.23,
+      "temp": 37.23,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -37159,7 +37159,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -0.22,
+      "temp": -0.08,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -37429,7 +37429,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.21,
+      "temp": 28.21,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -37607,7 +37607,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.58,
+      "temp": 26.58,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -37766,9 +37766,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.21,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 3.37,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -37882,7 +37882,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -38053,7 +38053,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.23,
+      "temp": 24.52,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -38257,7 +38257,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 34.16,
+      "temp": 36.16,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -38648,9 +38648,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.95,
+      "temp": 15.95,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -38879,7 +38879,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.96,
+      "temp": 26.96,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -39066,9 +39066,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.4,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 18.86,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -39234,9 +39234,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.84,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 1.84,
+      "condition": "Snow",
+      "icon": "13n"
     },
     "embassies": [
       {
@@ -39454,7 +39454,7 @@
     "area": 8870.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Portoryko, oficjalnie Wspólnota Portoryka, Wolne Stowarzyszone Państwo Portoryko – terytorium zorganizowane nieinkorporowane Stanów Zjednoczonych o statusie „wspólnoty”, leżące na wyspie o tej samej nazwie i kilku mniejszych w Ameryce Środkowej, na Morzu Karaibskim.",
     "national_symbols": null,
     "phone_code": "+1787",
     "largest_cities": null,
@@ -39520,7 +39520,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.94,
+      "temp": 27.61,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -39768,7 +39768,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.47,
+      "temp": 31.81,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -39933,7 +39933,7 @@
     "area": 71740.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Sierra Leone – państwo położone w zachodniej Afryce, na wybrzeżu Oceanu Atlantyckiego. Sierra Leone na północy graniczy z Gwineą, a na południowym wschodzie z Liberią. Obecnie członek Unii Afrykańskiej i ECOWAS.",
     "national_symbols": null,
     "phone_code": "+232",
     "largest_cities": null,
@@ -39995,9 +39995,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.84,
-      "condition": "Haze",
-      "icon": "50d"
+      "temp": 28.84,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -40126,7 +40126,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswany",
+        "name": "Tswana",
         "is_official": 1
       }
     ],
@@ -40177,9 +40177,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.95,
+      "temp": 29.95,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -40338,7 +40338,7 @@
     "area": 374.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Majotta – francuski departament i region zamorski położony w Kanale Mozambickim na Oceanie Indyjskim.",
     "national_symbols": null,
     "phone_code": "+262",
     "largest_cities": null,
@@ -40400,9 +40400,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 29.79,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 28.79,
+      "condition": "Clouds",
+      "icon": "03n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -40563,9 +40563,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.64,
-      "condition": "Drizzle",
-      "icon": "09d"
+      "temp": 1.73,
+      "condition": "Mist",
+      "icon": "50d"
     },
     "embassies": [
       {
@@ -40725,7 +40725,7 @@
         "date": "2026-06-20"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-10-31"
       },
       {
@@ -40834,7 +40834,7 @@
     "area": 116.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Jersey, oficjalnie Baliwat Jersey – dependencja korony brytyjskiej obejmująca administracyjnie wyspę Jersey, jedną z Wysp Normandzkich, oraz kilkadziesiąt sąsiednich, niezamieszkanych wysepek.",
     "national_symbols": null,
     "phone_code": "+44",
     "largest_cities": null,
@@ -40904,9 +40904,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 12.14,
-      "condition": "Fog",
-      "icon": "50d"
+      "temp": 13.25,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -40925,7 +40925,7 @@
         "date": "2026-04-06"
       },
       {
-        "name": "Święto państwowe na początku maja",
+        "name": "Początek majowego święta państwowego",
         "date": "2026-05-04"
       },
       {
@@ -41105,8 +41105,8 @@
     },
     "weather": {
       "temp": 2.66,
-      "condition": "Clouds",
-      "icon": "04d"
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -41270,7 +41270,7 @@
     "area": 450295.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Szwecja, Królestwo Szwecji – państwo w Europie Północnej, zaliczane zarówno do państw skandynawskich oraz krajów nordyckich. Jest członkiem Unii Europejskiej oraz NATO. Ma populację około 10,6 miliona osób; jest najludniejszym krajem skandynawskim. Gęstość zaludnienia jest niska i wynosi 25,8 mieszkańców na kilometr kwadratowy. Około 89% populacji zamieszkuje obszary miejskie. Mniej niż 80% mieszkańców stanowią osoby pochodzenia szwedzkiego. Graniczy z Norwegią, Finlandią oraz z Danią przez most nad cieśniną Öresund.",
     "national_symbols": null,
     "phone_code": "+46",
     "largest_cities": null,
@@ -41332,7 +41332,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 7.86,
+      "temp": 7.65,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -41554,7 +41554,7 @@
         "date": "2026-06-20"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-10-31"
       },
       {
@@ -41729,7 +41729,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.42,
+      "temp": 27.87,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -41908,7 +41908,7 @@
     "area": 513120.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Tajlandia, Królestwo Tajlandii – państwo w południowo-wschodniej Azji, graniczące z Laosem i Kambodżą na wschodzie, z Malezją na południu oraz z Mjanmą (Birmą) na zachodzie i północnym zachodzie. Dawniej państwo nosiło nazwę Syjam jako oficjalną do 11 maja 1949. Określenie „Thai” (ไทย) znaczy po tajsku „wolny”.",
     "national_symbols": null,
     "phone_code": "+66",
     "largest_cities": null,
@@ -41970,9 +41970,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.5,
+      "temp": 28.87,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -42219,7 +42219,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": -11.66,
+      "temp": -9.66,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -42381,7 +42381,7 @@
     "area": 110879.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Bułgaria, Republika Bułgarii – państwo położone w południowo-wschodniej Europie, na Bałkanach. Graniczy z Serbią oraz Macedonią Północną od zachodu, Grecją i Turcją od południa, Morzem Czarnym od wschodu i Rumunią od północy.",
     "national_symbols": null,
     "phone_code": "+359",
     "largest_cities": null,
@@ -42783,7 +42783,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.93,
+      "temp": 24.62,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -43085,7 +43085,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.52,
+      "temp": 22.51,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -43322,7 +43322,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.96,
+      "temp": 3.59,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -43621,7 +43621,7 @@
     "area": 118484.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Malawi, Republika Malawi dawniej Niasa – państwo we wschodniej Afryce, bez dostępu do morza. Graniczy z Tanzanią, Mozambikiem i Zambią.",
     "national_symbols": null,
     "phone_code": "+265",
     "largest_cities": null,
@@ -43687,7 +43687,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.11,
+      "temp": 26.11,
       "condition": "Thunderstorm",
       "icon": "11d"
     },
@@ -43884,7 +43884,7 @@
     "weather": {
       "temp": 28.2,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -43942,7 +43942,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -44105,7 +44105,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.42,
+      "temp": 21.42,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -44275,7 +44275,7 @@
     "area": 180.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Aruba – kraj autonomiczny Holandii w Ameryce Południowej i jedna z wulkanicznych Wysp Zawietrznych, w archipelagu Małych Antyli, zamykającego od wschodu Morze Karaibskie, ok. 25 km na północ od Wenezueli. Wchodzi w skład wysp ABC oraz wysp CAS. Aruba ma powierzchnię 180 km² i zamieszkiwana jest przez 108 066 osób. Posiada własną konstytucję, walutę, rząd, własną autonomię ale nie ma suwerenności. Nie należy do strefy Schengen, ani do Unii Europejskiej. Stolicą i zarazem największym miastem wyspy jest Oranjestad. Zarządzającym jest król holenderski reprezentowany przez tutejszego gubernatora. Poza tym do Aruby należą dwie prywatne wyspy Palm Island o pow. 0,10 km² oraz Renaissance o pow. 0,48 km², leżące przy zachodnim brzegu wyspy.",
     "national_symbols": null,
     "phone_code": "+297",
     "largest_cities": null,
@@ -44341,7 +44341,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 27.9,
+      "temp": 29.97,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -44500,7 +44500,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.88,
+      "temp": 14.85,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -44655,7 +44655,7 @@
     "area": 49.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Wyspa Bouveta – należące do Norwegii terytorium zależne, będące bezludną, wulkaniczną wyspą na południowym Atlantyku, na południowy zachód od Przylądka Dobrej Nadziei.",
     "national_symbols": null,
     "phone_code": "+47",
     "largest_cities": null,
@@ -44876,7 +44876,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.14,
+      "temp": 21.86,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -45054,9 +45054,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.38,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 10.36,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -45122,7 +45122,7 @@
         "date": "2026-09-08"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -45289,7 +45289,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.32,
+      "temp": 27.36,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -45386,7 +45386,7 @@
     "area": 947303.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Tanzania, Zjednoczona Republika Tanzanii – państwo we wschodniej Afryce powstałe z połączenia dawnych kolonii brytyjskich: Tanganiki oraz brytyjskiego Zanzibaru, co symbolizowała nazwa utworzona z pierwszych sylab nazw obu krajów TAN+ZAN. W skład Tanzanii jako republiki federacyjnej weszła również wyspa Pemba położona blisko Zanzibaru. Stolicą Tanzanii jest Dodoma, do 1981 roku było nią Dar es Salaam.",
     "national_symbols": null,
     "phone_code": "+255",
     "largest_cities": null,
@@ -45452,7 +45452,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.95,
+      "temp": 22.28,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -45684,9 +45684,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 0.98,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 2.98,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -45843,9 +45843,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.62,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 16.51,
+      "condition": "Clouds",
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -46281,7 +46281,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -3.19,
+      "temp": -1.19,
       "condition": "Snow",
       "icon": "13d"
     },
@@ -46480,7 +46480,7 @@
     "area": 245857.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Gwinea, Republika Gwinei – państwo położone w zachodniej Afryce nad Oceanem Atlantyckim. Graniczy z Gwineą Bissau na północnym zachodzie, Senegalem na północy, Mali na północnym wschodzie, Wybrzeżem Kości Słoniowej na wschodzie oraz Liberią i Sierra Leone na południu. Jest członkiem Unii Afrykańskiej i ECOWAS.",
     "national_symbols": null,
     "phone_code": "+224",
     "largest_cities": null,
@@ -46542,7 +46542,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.04,
+      "temp": 32.04,
       "condition": "Haze",
       "icon": "50d"
     },
@@ -46712,8 +46712,8 @@
     },
     "weather": {
       "temp": -4.09,
-      "condition": "Clouds",
-      "icon": "04d"
+      "condition": "Snow",
+      "icon": "13n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -46857,7 +46857,7 @@
     "area": 17818.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Kuwejt, Państwo Kuwejt – państwo położone w południowo-zachodniej Azji, na północno-zachodnim wybrzeżu Zatoki Perskiej. Graniczy z Irakiem (242 km) i Arabią Saudyjską (222 km) – łączna długość granic lądowych wynosi 464 km, ponadto 499 km wybrzeża morskiego.",
     "national_symbols": null,
     "phone_code": "+965",
     "largest_cities": null,
@@ -46919,9 +46919,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.2,
+      "temp": 21.1,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -47091,9 +47091,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.04,
+      "temp": 18.04,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -47379,7 +47379,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswany",
+        "name": "Tswana",
         "is_official": 1
       }
     ],
@@ -47430,9 +47430,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.27,
+      "temp": 30.27,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -47665,9 +47665,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.9,
+      "temp": 12.9,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [
@@ -47808,7 +47808,7 @@
     "area": 12189.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Republika Vanuatu – państwo w Oceanii. Położone na 198 wyspach Nowych Hebrydów, z których 65 jest zamieszkanych. Położone jest ok. 800 km na północny zachód od Fidżi i na północny wschód od Nowej Kaledonii. Dawniej terytorium kraju było kondominium francusko-brytyjskim znanym pod nazwą Nowe Hebrydy.",
     "national_symbols": null,
     "phone_code": "+678",
     "largest_cities": null,
@@ -48051,7 +48051,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.53,
+      "temp": 28.53,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -48217,7 +48217,7 @@
     "area": 459.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Palau, Republika Palau – wyspiarskie państwo samorządowe, stowarzyszone ze Stanami Zjednoczonymi, położone na Oceanie Spokojnym, w Oceanii oraz w Mikronezji, ok. 1160 km na południe od Guam, ok. 800 km na wschód od Filipin i 3200 km na południe od Tokio. Obejmuje zachodnią część archipelagu Karolinów oraz 4 pojedyncze wyspy koralowe i atol Helen.",
     "national_symbols": null,
     "phone_code": "+680",
     "largest_cities": null,
@@ -48461,7 +48461,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.97,
+      "temp": 23.76,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -48656,7 +48656,7 @@
     "area": 38394.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Bhutan, oficjalnie Królestwo Bhutanu – państwo śródlądowe w Azji Południowej, we wschodnich Himalajach, graniczące na północy, zachodzie i wschodzie z Chinami, a na południu z Indiami. Oficjalna nazwa Druk Jul oznacza Królestwo Smoka.",
     "national_symbols": null,
     "phone_code": "+975",
     "largest_cities": null,
@@ -48718,7 +48718,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 2.96,
+      "temp": 2.8,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -48903,8 +48903,8 @@
     },
     "weather": {
       "temp": 28.21,
-      "condition": "Clouds",
-      "icon": "03d"
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [
@@ -49017,7 +49017,7 @@
     "area": 2724900.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Kazachstan, Republika Kazachstanu – państwo leżące częściowo w Azji i częściowo w Europie – tereny na zachód od rzeki Emba), powstałe w 1991 w wyniku rozpadu Związku Radzieckiego, graniczące z Chinami, Kirgistanem (980 km), Turkmenistanem (380 km), Uzbekistanem (2300 km) oraz Federacją Rosyjską (6467 km). Łączna długość granic Kazachstanu wynosi 12 187 km. Kazachstan ma również dostęp do największego jeziora świata – Morza Kaspijskiego – na długości 2340 km – jest przy tym największym państwem śródlądowym na świecie pod względem powierzchni. Całkowita powierzchnia kraju wynosi 2 724 902 km².",
     "national_symbols": null,
     "phone_code": "+76",
     "largest_cities": null,
@@ -49083,7 +49083,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -23.03,
+      "temp": -24.03,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -49375,7 +49375,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.83,
+      "temp": 16.63,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -49491,7 +49491,7 @@
     "area": 6.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Gibraltar – brytyjskie terytorium zamorskie na południowym wybrzeżu Półwyspu Iberyjskiego, w Europie Południowej. Zajmuje powierzchnię 6,55 km² i jest zamieszkiwany przez 37 936 mieszkańców. Położony jest nad Zatoką Gibraltarską, niedaleko wyjścia Morza Śródziemnego na Ocean Atlantycki. Od północy graniczy z hiszpańskim miastem La Línea de la Concepción i zarazem comarką Campo de Gibraltar. Charakterystycznym obiektem górującym nad terytorium jest Skała Gibraltarska. W przeszłości ważna baza Royal Navy, obecnie gospodarka terytorium bazuje głównie na turystyce, handlu, usługach finansowych, sektorze żeglugi morskiej oraz podatku od zakładów bukmacherskich.",
     "national_symbols": null,
     "phone_code": "+350",
     "largest_cities": null,
@@ -49555,7 +49555,7 @@
     "weather": {
       "temp": 15.56,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -49761,9 +49761,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.01,
+      "temp": 30.01,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -49834,7 +49834,7 @@
         "date": "2026-08-17"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -49931,7 +49931,7 @@
     "area": 1285216.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Peru, oficjalnie Republika Peru – państwo w zachodniej części Ameryki Południowej, nad Oceanem Spokojnym. Leży na półkuli południowej, rozciąga się od równika w kierunku zwrotnika Koziorożca. Graniczy z Ekwadorem na północnym zachodzie, Kolumbią na północnym wschodzie, Brazylią na wschodzie, Boliwią na południowym wschodzie, Chile na południu oraz Pacyfikiem na zachodzie.",
     "national_symbols": null,
     "phone_code": "+51",
     "largest_cities": null,
@@ -50001,7 +50001,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.94,
+      "temp": 23.14,
       "condition": "Fog",
       "icon": "50d"
     },
@@ -50360,7 +50360,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.78,
+      "temp": 9.82,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -50640,7 +50640,7 @@
     "area": 56594.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Chorwacja, Republika Chorwacji – państwo leżące na pograniczu Europy Środkowej i Europy Południowej, nad Morzem Adriatyckim i graniczące od południa z Bośnią i Hercegowiną oraz Czarnogórą, od wschodu z Serbią oraz Węgrami i Słowenią od północy. Od południowego zachodu ma dostęp do Morza Adriatyckiego. Od 1 lipca 2013 należy do Unii Europejskiej jako 27. członek wspólnoty. Od 1 stycznia 2023 w strefie euro i Schengen.",
     "national_symbols": null,
     "phone_code": "+385",
     "largest_cities": null,
@@ -50702,7 +50702,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.16,
+      "temp": 16.61,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -50859,7 +50859,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -51034,9 +51034,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.21,
+      "temp": 29.95,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -51290,7 +51290,7 @@
     "area": 386224.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Norwegia, oficjalnie Królestwo Norwegii – państwo w Europie Północnej będące monarchią konstytucyjną, którego terytorium obejmuje zachodnią i północną część Półwyspu Skandynawskiego, Jan Mayen, Svalbard, Wyspę Bouveta i Lofoty. Ma łączną powierzchnię 385 207 km² i liczy 5 594 340 mieszkańców (2015). Graniczy ze Szwecją, Finlandią i Rosją. Kraj ma również granicę morską z Danią. Stolicą Norwegii jest Oslo. Długa, licząca ponad 20 tys. kilometrów linia brzegowa znana jest z charakterystycznych zatok, tzw. fiordów. Nazwa kraju pochodzi od staronordyckiego nord vegen.",
     "national_symbols": null,
     "phone_code": "+47",
     "largest_cities": null,
@@ -51360,7 +51360,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.91,
+      "temp": 3.64,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -51710,9 +51710,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.52,
-      "condition": "Clouds",
-      "icon": "03d"
+      "temp": 28.34,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [
@@ -51862,7 +51862,7 @@
     "area": 83871.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Austria, Republika Austrii – państwo śródlądowe położone w Europie Środkowej, federacja dziewięciu krajów związkowych ze stolicą w Wiedniu. Od 1995 Austria należy do Unii Europejskiej.",
     "national_symbols": null,
     "phone_code": "+43",
     "largest_cities": null,
@@ -51924,7 +51924,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.32,
+      "temp": 12.33,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -52159,7 +52159,7 @@
         "date": "2026-10-26"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -52338,7 +52338,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.28,
+      "temp": 17.52,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -52606,11 +52606,11 @@
         "date": "2026-09-21"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -52727,7 +52727,7 @@
     "area": 22966.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Belize – państwo w Ameryce Środkowej leżące na półwyspie Jukatan, nad Morzem Karaibskim, od północy graniczące z Meksykiem, a na zachodzie z Gwatemalą (266 km). Jego stolicą jest Belmopan.",
     "national_symbols": null,
     "phone_code": "+501",
     "largest_cities": null,
@@ -52797,9 +52797,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.34,
+      "temp": 26.5,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -53035,7 +53035,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.78,
+      "temp": 15.39,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -53294,7 +53294,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -53461,7 +53461,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.48,
+      "temp": 28.27,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -53688,7 +53688,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 27.85,
+      "temp": 28.85,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -53785,7 +53785,7 @@
     "area": 710.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Singapur, oficjalnie Republika Singapuru – miasto-państwo w Azji Południowo-Wschodniej, położone na wyspie Singapur oraz kilkudziesięciu mniejszych wyspach, w pobliżu południowego krańca Półwyspu Malajskiego. Został założony przez Brytyjczyków w 1819 i uzyskał niepodległość 9 sierpnia 1965 roku. Jego nazwa pochodzi od dwóch sanskryckich słów: simha (lew) i pura (miasto), stąd niekiedy stosowana nazwa Miasto Lwa. Wizerunek posągu Merlion jest znanym symbolem Singapuru, używanym do 1997 jako logo przez tutejszą izbę turystyki.",
     "national_symbols": null,
     "phone_code": "+65",
     "largest_cities": null,
@@ -53859,7 +53859,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.47,
+      "temp": 26.93,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -54078,7 +54078,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.8,
+      "temp": 27.8,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -54255,7 +54255,7 @@
     "area": 10908.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Kosowo, Republika Kosowa – państwo w południowej Europie ze stolicą w Prisztinie o ograniczonym uznaniu na arenie międzynarodowej, które jednostronnie ogłosiło niepodległość 17 lutego 2008 roku.",
     "national_symbols": null,
     "phone_code": "+383",
     "largest_cities": null,
@@ -54315,7 +54315,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.14,
+      "temp": 13.03,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -54475,8 +54475,8 @@
     },
     "weather": {
       "temp": 23.97,
-      "condition": "Drizzle",
-      "icon": "09n"
+      "condition": "Mist",
+      "icon": "50n"
     },
     "embassies": [
       {
@@ -54617,7 +54617,7 @@
     "area": 756102.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Chile, oficjalnie Republika Chile – państwo w Ameryce Południowej, w południowo-zachodniej części kontynentu. Zajmuje powierzchnię 756 102 km², a zamieszkane jest przez 20 213 000 osób.",
     "national_symbols": null,
     "phone_code": "+56",
     "largest_cities": null,
@@ -54679,9 +54679,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.99,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 25.08,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -55004,7 +55004,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.15,
+      "temp": 23.17,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -55192,7 +55192,7 @@
     "area": 26338.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Rwanda – państwo w środkowo-wschodniej Afryce o powierzchni 26,4 tys. km². Rwanda graniczy z: Burundi, Demokratyczną Republiką Konga, Tanzanią i Ugandą. W 2024 roku w Rwandzie mieszkało 13,6 mln osób. Językami urzędowymi są: rwanda, angielski i francuski. Stolicą państwa jest Kigali. Od 2006 roku Rwanda podzielona jest na 5 prowincji. Walutą Rwandy jest frank rwandyjski.",
     "national_symbols": null,
     "phone_code": "+250",
     "largest_cities": null,
@@ -55262,9 +55262,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.85,
+      "temp": 20.96,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -55457,9 +55457,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.94,
-      "condition": "Clouds",
-      "icon": "02d"
+      "temp": 27.94,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -55563,7 +55563,7 @@
     "area": 330803.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Malezja – państwo w Azji Południowo-Wschodniej, na Półwyspie Malajskim i wyspie Borneo; obszar 330,803 km², ludność 34 564 810, stolica Kuala Lumpur, siedziba rządu w Putrajaya.",
     "national_symbols": null,
     "phone_code": "+60",
     "largest_cities": null,
@@ -55629,7 +55629,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.75,
+      "temp": 27.75,
       "condition": "Clouds",
       "icon": "02n"
     },
@@ -55841,7 +55841,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswany",
+        "name": "Tswana",
         "is_official": 1
       },
       {
@@ -55908,7 +55908,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.92,
+      "temp": 28.36,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -56180,7 +56180,7 @@
     "area": 2149690.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Arabia Saudyjska, Królestwo Arabii Saudyjskiej – państwo położone w zachodniej Azji, na Półwyspie Arabskim. Stolica znajduje się w Rijadzie.",
     "national_symbols": null,
     "phone_code": "+966",
     "largest_cities": null,
@@ -56242,9 +56242,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.76,
+      "temp": 27.2,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -56495,7 +56495,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.41,
+      "temp": 28.83,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -56692,7 +56692,7 @@
     "area": 7747.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Francuskie Terytoria Południowe i Antarktyczne – francuskie terytorium zależne obejmujące antarktyczne wyspy wulkaniczne, położone w południowej części Oceanu Indyjskiego. Położone są one częściowo u wybrzeży Afryki, a część leży niemal w równej odległości od kontynentów Afryki, Australii i Antarktydy, w pobliżu 43°S i 67°E. W ich skład wchodzi również sektor Antarktydy obejmujący Ziemię Adeli, przy czym roszczenia wobec Ziemi Adeli nie są uznawane przez niektóre państwa.",
     "national_symbols": null,
     "phone_code": "+262",
     "largest_cities": null,
@@ -56756,7 +56756,7 @@
     "weather": {
       "temp": 8.41,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -57018,7 +57018,7 @@
     "area": 637657.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Somalia, Federalna Republika Somalii – państwo w północno-wschodniej części Afryki położone na Półwyspie Somalijskim. Przylega do Oceanu Indyjskiego i Zatoki Adeńskiej. Na północnym zachodzie graniczy z Dżibuti, na zachodzie z Etiopią, zaś na południowym zachodzie z Kenią.",
     "national_symbols": null,
     "phone_code": "+252",
     "largest_cities": null,
@@ -57084,9 +57084,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.93,
+      "temp": 27.93,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -57243,9 +57243,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.0,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 11.83,
+      "condition": "Rain",
+      "icon": "10n"
     },
     "embassies": [
       {
@@ -57673,7 +57673,7 @@
     "area": 30.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Makau lub Makao, oficjalnie Specjalny Region Administracyjny Makau – jeden z dwóch specjalnych regionów administracyjnych Chińskiej Republiki Ludowej, znajdujący się na wschodnim wybrzeżu Chin. Makau leży po zachodniej stronie estuarium Rzeki Perłowej, graniczy od północy z prowincją Guangdong, natomiast od południa i wschodu otoczone jest wodami Morza Południowochińskiego. Gospodarka opiera się głównie na turystyce i hazardzie, jednak prężnie rozwijają się także niektóre gałęzie przemysłu, m.in. przemysł odzieżowy, elektroniczny, zabawkarski. Makau zalicza się do najbogatszych regionów na świecie.",
     "national_symbols": null,
     "phone_code": "+853",
     "largest_cities": null,
@@ -57902,7 +57902,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.06,
+      "temp": 29.52,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -58036,7 +58036,7 @@
     "area": 2381741.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Algieria, Algierska Republika Ludowo-Demokratyczna – 10. co do wielkości państwo świata, położone w Afryce Północnej nad Morzem Śródziemnym, członek Unii Afrykańskiej. Znaczną część obszaru Algierii zajmują wchodzące w skład Sahary pustynie oraz półpustynie.",
     "national_symbols": null,
     "phone_code": "+213",
     "largest_cities": null,
@@ -58098,7 +58098,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.9,
+      "temp": 18.9,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -58334,7 +58334,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.24,
+      "temp": 24.24,
       "condition": "Rain",
       "icon": "10d"
     },
@@ -58431,7 +58431,7 @@
     "area": 543908.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Francja, Republika Francuska – państwo, którego część metropolitalna znajduje się w Europie Zachodniej oraz częściowo w Europie Południowej, posiadające także terytoria na innych kontynentach. Francja metropolitalna rozciąga się od Morza Śródziemnego na południu do kanału La Manche i Morza Północnego na północy, oraz od Renu na wschodzie do Oceanu Atlantyckiego na zachodzie. Francuzi często nazywają swój kraj l’Hexagone (sześciokąt) – pochodzi to od kształtu Francji metropolitalnej.",
     "national_symbols": null,
     "phone_code": "+33",
     "largest_cities": null,
@@ -58493,9 +58493,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.88,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 13.28,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [
       {
@@ -59142,7 +59142,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -59313,9 +59313,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.97,
+      "temp": 28.13,
       "condition": "Rain",
-      "icon": "09d"
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -59410,7 +59410,7 @@
     "area": 147570.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Bangladesz, Ludowa Republika Bangladeszu – państwo w Azji Południowej, położone nad Zatoką Bengalską i graniczące z zachodu, północy i wschodu z Indiami, a na południowym wschodzie z Mjanmą. Jest jednym z najgęściej zaludnionych krajów świata i zarazem jednym z najbiedniejszych państw Azji. Stolicą Bangladeszu jest Dhaka.",
     "national_symbols": null,
     "phone_code": "+880",
     "largest_cities": null,
@@ -59472,7 +59472,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.99,
+      "temp": 23.99,
       "condition": "Haze",
       "icon": "50n"
     },
@@ -59672,7 +59672,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 36.1,
+      "temp": 37.1,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -59854,7 +59854,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -6.5,
+      "temp": -2.71,
       "condition": "Snow",
       "icon": "13d"
     },
@@ -60402,9 +60402,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 30.1,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 28.1,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -60499,7 +60499,7 @@
     "area": 389.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Saint Vincent i Grenadyny – wyspiarskie państwo na Morzu Karaibskim, w archipelagu Małych Antyli. Oprócz wyspy Saint Vincent obejmuje położoną na południe od niej północną część archipelagu Grenadyny.",
     "national_symbols": null,
     "phone_code": "+1784",
     "largest_cities": null,
@@ -60561,9 +60561,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.6,
+      "temp": 28.6,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -60729,7 +60729,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.98,
+      "temp": 26.42,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -60836,7 +60836,7 @@
     "area": 4033.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Republika Zielonego Przylądka – państwo wyspiarskie na Oceanie Atlantyckim, położone ponad 450 km na zachód od zachodnich wybrzeży Afryki, geograficznie tożsame z Wyspami Zielonego Przylądka. Obecnie członek Unii Afrykańskiej i ECOWAS.",
     "national_symbols": null,
     "phone_code": "+238",
     "largest_cities": null,
@@ -60898,7 +60898,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.3,
+      "temp": 24.3,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -61067,9 +61067,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.82,
+      "temp": 26.71,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -61226,7 +61226,7 @@
     "area": 796095.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Pakistan, Islamska Republika Pakistanu – państwo w południowej części Azji, położone wzdłuż Indusu i liczące ponad 200 milionów mieszkańców.",
     "national_symbols": null,
     "phone_code": "+92",
     "largest_cities": null,
@@ -61292,7 +61292,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.93,
+      "temp": 18.91,
       "condition": "Clear",
       "icon": "01n"
     },
@@ -61531,7 +61531,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.12,
+      "temp": 16.12,
       "condition": "Clouds",
       "icon": "04n"
     },
@@ -61674,7 +61674,7 @@
     "area": 51209.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Bośnia i Hercegowina – państwo federacyjne ze stolicą w Sarajewie położone w południowej Europie, na Półwyspie Bałkańskim. Graniczy na północy, zachodzie i południu z Chorwacją, na wschodzie z Serbią, a na południowym wschodzie z Czarnogórą. Od południowego zachodu ma dostęp do Morza Adriatyckiego.",
     "national_symbols": null,
     "phone_code": "+387",
     "largest_cities": null,
@@ -61744,7 +61744,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.95,
+      "temp": 15.95,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -62019,7 +62019,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 36.31,
+      "temp": 34.83,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -62191,7 +62191,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.06,
+      "temp": 34.06,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -62298,7 +62298,7 @@
     "area": 112622.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": null,
+    "wiki_summary": "Benin, oficjalnie Republika Beninu – państwo w Afryce nad Zatoką Gwinejską. Graniczy z Burkina Faso, Nigrem, Nigerią i Togo, członek Unii Afrykańskiej i ECOWAS.",
     "national_symbols": null,
     "phone_code": "+229",
     "largest_cities": null,
@@ -62362,7 +62362,7 @@
     "weather": {
       "temp": 31.9,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -62446,7 +62446,7 @@
         "date": "2026-10-26"
       },
       {
-        "name": "Dzień Wszystkich Świętych",
+        "name": "Wszystkich Świętych",
         "date": "2026-11-01"
       },
       {
@@ -62573,7 +62573,7 @@
     "safety": {
       "risk_level": "critical",
       "risk_text": null,
-      "risk_details": "W związku z utrzymującym się napięciem na Bliskim Wschodzie MSZ odradza wszelkie podróże do Libanu.\nNie można wykluczyć, że dojdzie do dalszej eskalacji działań zbrojnych i ewentualnych ograniczeń w ruchu lotniczym, które mogłyby znacząco utrudnić opuszczenie Libanu.\nJeżeli sytuacja życiowa, rodzinna lub zawodowa nie wymaga konieczności pozostawania na terytorium Libanu, wskazane jest opuszczenie kraju.\nJednocześnie informujemy, że komunikacja lotnicza w regionie jest dostępna, a lotnisko międzynarodowe w Bejrucie nadal funkcjonuje.",
+      "risk_details": "Poziom 4: W związku z utrzymującym się napięciem na Bliskim Wschodzie MSZ odradza wszelkie podróże do Libanu.\nNie można wykluczyć, że dojdzie do dalszej eskalacji działań zbrojnych i ewentualnych ograniczeń w ruchu lotniczym, które mogłyby znacząco utrudnić opuszczenie Libanu.\nJeżeli sytuacja życiowa, rodzinna lub zawodowa nie wymaga konieczności pozostawania na terytorium Libanu, wskazane jest opuszczenie kraju.\nJednocześnie informujemy, że komunikacja lotnicza w regionie jest dostępna, a lotnisko międzynarodowe w Bejrucie nadal funkcjonuje.\nZaktualizowano w dniu 27.02.2026 r.",
       "url": null
     },
     "currency": {
@@ -62617,9 +62617,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.41,
+      "temp": 8.54,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -62848,7 +62848,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 1.92,
+      "temp": 3.92,
       "condition": "Clouds",
       "icon": "04d"
     },
