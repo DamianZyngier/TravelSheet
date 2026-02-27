@@ -122,8 +122,13 @@ function App() {
   }, [])
 
   const continents = useMemo(() => {
-    if (!countries || typeof countries !== 'object') return [];
-    return Array.from(new Set(Object.values(countries).map(c => c.continent).filter(Boolean))).sort()
+    try {
+      if (!countries || typeof countries !== 'object' || Object.keys(countries).length === 0) return [];
+      return Array.from(new Set(Object.values(countries).map(c => c?.continent).filter(Boolean))).sort()
+    } catch (e) {
+      console.error("Error computing continents:", e);
+      return [];
+    }
   }, [countries])
 
   const handleSelectCountry = useCallback((country: CountryData | null) => {
@@ -273,6 +278,28 @@ function App() {
   }, [selectedCountry, countryList, handleSelectCountry]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
+
+  if (error && Object.keys(countries).length === 0) {
+    return (
+      <div className="app-container">
+        <header className="main-header">
+          <div className="header-content">
+            <div className="logo-section">
+              <img src={logoNoText} alt="TripSheet" className="app-logo" />
+              <div className="logo-text">
+                <span className="logo-brand">TripSheet</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Coś poszło nie tak</h2>
+          <p>{error}</p>
+          <button onClick={() => window.location.reload()} className="retry-btn">Spróbuj ponownie</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container" onContextMenu={() => true}>
