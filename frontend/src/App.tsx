@@ -690,6 +690,7 @@ function App() {
                     <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
                   </button>
                 </div>
+              </>
               );
             })()}
 
@@ -785,36 +786,36 @@ function App() {
                 </div>
               </div>
 
-                                                  <div className="detail-body">
-                                                    <div id="discover" className="info-block full-width scroll-mt">
-                                                      <div className="section-header">
-                                                        <span className="section-header-icon">✨</span>
-                                                        <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
-                                                      </div>
-                                                      
-                                                                            <div className="discover-section">
-                                                                              <div className="discover-container">
-                                                                                {selectedCountry.wiki_summary ? (
-                                                                                  <div className="wiki-summary-text">
-                                                                                    <ExpandableText text={selectedCountry.wiki_summary} />
-                                                                                  </div>
-                                                                                ) : (
-                                                                                  <p className="no-data-text">Brak dostępnego opisu dla tego kraju.</p>
-                                                                                )}
-                                                                                {selectedCountry.national_symbols && (
-                                                      
-                                                            <div className="national-symbols-bar">
-                                                              <span className="symbols-label">Symbole narodowe:</span>
-                                                              <span className="symbols-value">{selectedCountry.national_symbols}</span>
-                                                            </div>
-                                                          )}
-                                                          <DataSource sources={['WIKI']} />
-                                                        </div>
-                                                      </div>
-                                                    </div>
+              </div>
+
+              <div className="detail-body">
+                <div id="discover" className="info-block full-width scroll-mt">
+                  <div className="section-header">
+                    <span className="section-header-icon">✨</span>
+                    <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
+                  </div>
+                  
+                  <div className="discover-section">
+                    <div className="discover-container">
+                      {selectedCountry.wiki_summary ? (
+                        <div className="wiki-summary-text">
+                          <ExpandableText text={selectedCountry.wiki_summary} />
+                        </div>
+                      ) : (
+                        <p className="no-data-text">Brak dostępnego opisu dla tego kraju.</p>
+                      )}
+                      {selectedCountry.national_symbols && (
+                        <div className="national-symbols-bar">
+                          <span className="symbols-label">Symbole narodowe:</span>
+                          <span className="symbols-value">{selectedCountry.national_symbols}</span>
+                        </div>
+                      )}
+                      <DataSource sources={['WIKI']} />
+                    </div>
+                  </div>
+                </div>
                                       
-              
-                            <div className="info-grid">
+                <div className="info-grid">
               
                   <div className="info-block">
                     <label>Kontynent</label>
@@ -985,17 +986,17 @@ function App() {
                       <label>Waluta</label>
                     </div>
                     <span>
-                                                        {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`} <br/>
-                                                        {selectedCountry.currency.rate_pln ? (
-                                                          <>
-                                                            1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
-                                                            <br/>
-                                                            <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
-                                                          </>
-                                                        ) : 'brak danych o kursie'}
-                                                      </span>
-                                                      <DataSource sources={['REST', 'WIKI']} />
-                                                    </div>
+                      {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`} <br/>
+                      {selectedCountry.currency.rate_pln ? (
+                        <>
+                          1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
+                          <br/>
+                          <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
+                        </>
+                      ) : 'brak danych o kursie'}
+                    </span>
+                    <DataSource sources={['REST', 'WIKI']} />
+                  </div>
                   <div id="plugs" className="info-block full-width scroll-mt">
                     <div className="section-header">
                       <span className="section-header-icon">🔌</span>
@@ -1525,8 +1526,6 @@ function App() {
                     )}
                     <DataSource sources={['UNESCO']} />
                   </div>
-                  
-                </div>
 
                   <div id="safety" className="info-block full-width scroll-mt">
                     <div className="section-header">
@@ -1549,7 +1548,6 @@ function App() {
                     </div>
                     <DataSource sources={['MSZ']} />
                   </div>
-                  <DataSource sources={['MSZ']} />
               </div>
             </div>
           </div>
