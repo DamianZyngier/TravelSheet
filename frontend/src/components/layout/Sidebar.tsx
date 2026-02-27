@@ -1,12 +1,12 @@
 import React from 'react';
 import type { CountryData } from '../../types';
 import { SECTIONS } from '../../constants';
-import { getLongNameClass } from '../Common';
+import { getLongNameClass } from '../../utils/helpers';
 
 interface SidebarProps {
   selectedCountry: CountryData;
   sortedFullList: CountryData[];
-  onSelectCountry: (country: CountryData) => void;
+  onSelectCountry: (country: CountryData | null) => void;
   activeSection: string;
   scrollToSection: (id: string) => void;
   navigateCountry: (direction: 'prev' | 'next') => void;
@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <aside className="side-menu">
-      <button className="side-back-button" onClick={() => (onSelectCountry as any)(null)}>
+      <button className="side-back-button" onClick={() => onSelectCountry(null)}>
         ← Powrót do listy
       </button>
 
@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                    if (parent) onSelectCountry(parent);
                 }}
               >
-                🇫🇷 {selectedCountry.parent.name_pl}
+                📍 {selectedCountry.parent.name_pl}
               </button>
             </div>
           )}
