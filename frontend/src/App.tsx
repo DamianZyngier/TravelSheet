@@ -662,8 +662,18 @@ function App() {
               const nextCountry = currentIndex < list.length - 1 ? list[currentIndex + 1] : list[0];
 
               return (
-                <div className="country-navigation">
-                  <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
+                <>
+                  <div className="current-country-nav-box">
+                    <img src={selectedCountry?.flag_url} alt="" className="current-nav-flag" />
+                    <div className="current-nav-info">
+                      <span className="current-nav-label">Przeglądasz:</span>
+                      <h3 className={`current-nav-name ${getLongNameClass(selectedCountry?.name_pl || '', 'h3')}`}>
+                        {selectedCountry?.name_pl}
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="country-navigation">
+                    <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
                     <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
                     <div className="nav-info">
                       <span className="nav-label">Poprzedni</span>
@@ -1518,13 +1528,6 @@ function App() {
                   
                 </div>
 
-                  <div id="unesco" className="info-block full-width unesco-section scroll-mt">
-                    <div className="section-header">
-                      <span className="section-header-icon">🏛️</span>
-                      <label>Lista UNESCO ({selectedCountry.unesco_count || 0})</label>
-                    </div>
-
-                    
                     <div className="section-header">
                       <span className="section-header-icon">🛡️</span>
                       <label>Bezpieczeństwo (MSZ)</label>
