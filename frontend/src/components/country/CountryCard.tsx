@@ -22,7 +22,12 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick }) => {
           style={{ objectFit: 'contain' }}
         />
         <h3 className={getLongNameClass(country.name_pl, 'h3')}>{country.name_pl}</h3>
-        <p className="card-continent">{CONTINENT_MAP[country.continent] || country.continent}</p>
+        <p className="card-continent">
+          {CONTINENT_MAP[country.continent] || country.continent}
+          {country.parent && (
+            <span className="card-dependency"> (zal. {country.parent.name_pl})</span>
+          )}
+        </p>
         <span className={`risk-badge risk-${country.safety.risk_level}`}>
           {SAFETY_LABELS[country.safety.risk_level] || country.safety.risk_level}
         </span>
