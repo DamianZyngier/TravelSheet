@@ -78,9 +78,11 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if manual_slug:
         strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
         
-    # 3. Link zgadywany
-    guessed_slug = slugify(name_pl).replace('-', '')
-    strategies.append(("3rd link (guessed)", f"https://www.gov.pl/web/dyplomacja/{guessed_slug}"))
+    # 3. Link zgadywany (nowy format MSZ: /web/[kraj]/idp lub /web/[kraj]/informacje-dla-podrozujacych)
+    # To jest znacznie skuteczniejsze niż stary format dyplomacja/kraj
+    simple_slug = slugify(name_pl)
+    strategies.append(("3rd link (modern)", f"https://www.gov.pl/web/{simple_slug}/idp"))
+    strategies.append(("4th link (modern-alt)", f"https://www.gov.pl/web/{simple_slug}/informacje-dla-podrozujacych"))
 
     headers = get_headers()
     response_text = None
