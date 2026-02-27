@@ -33,3 +33,14 @@ export const getMapSettings = (country: CountryData) => {
   if (area > 10000) return { zoom: 15, showDot: true };    // Izrael, Albania
   return { zoom: 25, showDot: true };                     // Malta, Singapur
 };
+
+export const getLongNameClass = (name: string, type: 'h3' | 'h2') => {
+  if (type === 'h3') {
+    if (name.length > 25) return 'font-very-small';
+    if (name.length > 18) return 'font-small';
+  } else {
+    if (name.length > 30) return 'font-very-small';
+    if (name.length > 20) return 'font-small';
+  }
+  return '';
+};
