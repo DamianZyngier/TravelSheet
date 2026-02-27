@@ -491,21 +491,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 1px solid #e2e8f0;
-  padding: 0.5rem;
-  border-radius: 8px;
-  background: white;
-  width: 70px;
-  height: 90px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  gap: 10px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s;
+  min-width: 140px;
+}
+
+.plug-type-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
 }
 
 .plug-letter {
   font-weight: 800;
-  font-size: 1rem;
-  color: #2b6cb0;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.plug-region-name {
+  font-size: 0.7rem;
+  color: #718096;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Plug Compatibility Colors */
+.plug-status-same {
+  border-color: #48bb78;
+  background-color: #f0fff4;
+}
+
+.plug-status-compatible {
+  border-color: #ecc94b;
+  background-color: #fffaf0;
+}
+
+.plug-status-different {
+  border-color: #f56565;
+  background-color: #fff5f5;
 }
 
 .plug-img {

@@ -30,6 +30,24 @@ export const SAFETY_LABELS: Record<string, string> = {
   'unknown': 'Brak danych'
 };
 
+export const PLUG_NAMES: Record<string, string> = {
+    'A': 'Standard USA / Japonia',
+    'B': 'Standard USA (z uziemieniem)',
+    'C': 'Standard Europejski (płaska)',
+    'D': 'Standard Indyjski',
+    'E': 'Standard PL / Francuski',
+    'F': 'Standard Niemiecki (Schuko)',
+    'G': 'Standard Brytyjski (UK)',
+    'H': 'Standard Izraelski',
+    'I': 'Standard Australijski',
+    'J': 'Standard Szwajcarski',
+    'K': 'Standard Duński',
+    'L': 'Standard Włoski',
+    'M': 'Standard Afrykański',
+    'N': 'Standard Brazylijski',
+    'O': 'Standard Tajlandzki'
+};
+
 export const PLUG_IMAGES: Record<string, string> = {
     'A': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-A-100x100.jpg',
     'B': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-B-100x100.jpg',

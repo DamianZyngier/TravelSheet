@@ -24,6 +24,13 @@ export const getEnlargedPlugUrl = (url: string) => {
   return url.replace('100x100', '250x250');
 };
 
+export const getPlugCompatibility = (type: string) => {
+  const t = type.trim().toUpperCase();
+  if (['C', 'E'].includes(t)) return 'plug-status-same'; // Green
+  if (t === 'F') return 'plug-status-compatible'; // Yellow
+  return 'plug-status-different'; // Red
+};
+
 export const getMapSettings = (country: CountryData) => {
   const area = Number(country.area) || 0;
   if (area > 8000000) return { zoom: 1.2, showDot: false }; // Rosja, Kanada, USA, Chiny

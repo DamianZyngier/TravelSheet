@@ -1,7 +1,8 @@
 import React from 'react';
 import type { CountryData } from '../../../types';
-import { CONTINENT_MAP, PLUG_IMAGES } from '../../../constants';
+import { CONTINENT_MAP, PLUG_IMAGES, PLUG_NAMES } from '../../../constants';
 import { DataSource } from '../../common';
+import { getPlugCompatibility } from '../../../utils/helpers';
 
 interface PracticalSectionProps {
   selectedCountry: CountryData;
@@ -126,19 +127,26 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
         </div>
         <div className="plugs-container">
           <div className="plug-types-list">
-            {selectedCountry.practical.plug_types ? selectedCountry.practical.plug_types.split(',').map(type => (
-              <div key={type} className="plug-icon-box">
-                <span className="plug-letter">Typ {type.trim()}</span>
-                {PLUG_IMAGES[type.trim().toUpperCase()] && (
-                  <div className="plug-img-wrapper">
-                    <img src={PLUG_IMAGES[type.trim().toUpperCase()]} alt={`Typ ${type}`} className="plug-img" referrerPolicy="no-referrer" />
-                    <div className="plug-img-enlarged">
-                      <img src={getEnlargedPlugUrl(PLUG_IMAGES[type.trim().toUpperCase()])} alt={`Typ ${type} powiększony`} referrerPolicy="no-referrer" />
-                    </div>
+            {selectedCountry.practical.plug_types ? selectedCountry.practical.plug_types.split(',').map(type => {
+              const cleanType = type.trim().toUpperCase();
+              const compClass = getPlugCompatibility(cleanType);
+              return (
+                <div key={type} className={`plug-icon-box ${compClass}`}>
+                  <div className="plug-type-label">
+                    <span className="plug-letter">Typ {cleanType}</span>
+                    <span className="plug-region-name">{PLUG_NAMES[cleanType] || 'Standard lokalny'}</span>
                   </div>
-                )}
-              </div>
-            )) : <div className="no-data-msg">Brak danych o typach gniazdek</div>}
+                  {PLUG_IMAGES[cleanType] && (
+                    <div className="plug-img-wrapper">
+                      <img src={PLUG_IMAGES[cleanType]} alt={`Typ ${type}`} className="plug-img" referrerPolicy="no-referrer" />
+                      <div className="plug-img-enlarged">
+                        <img src={getEnlargedPlugUrl(PLUG_IMAGES[cleanType])} alt={`Typ ${type} powiększony`} referrerPolicy="no-referrer" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            }) : <div className="no-data-msg">Brak danych o typach gniazdek</div>}
           </div>
           <div className={`plug-comparison ${checkPlugs(selectedCountry.practical.plug_types).class}`}>
             {checkPlugs(selectedCountry.practical.plug_types).warning && '⚠️ '}
