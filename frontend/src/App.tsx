@@ -1459,8 +1459,8 @@ function App() {
                                 </div>
                                 <div className="unesco-badges-container" style={{ display: 'flex', gap: '8px', marginLeft: '32px' }}>
                                   <div className={`unesco-type-badge ${place.category?.toLowerCase() || ''}`}>{place.category}</div>
-                                  {place.is_transnational && <div className="unesco-type-badge transnational">MIĘDZYNARODOWE</div>}
-                                  {place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
+                                  {!!place.is_transnational && <div className="unesco-type-badge transnational">MIĘDZYNARODOWE</div>}
+                                  {!!place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
                                 </div>
                                 
                                 {place.description && (
@@ -1481,7 +1481,15 @@ function App() {
                         {selectedCountry.unesco_places.length > 10 && (
                           <button 
                             className="section-expand-btn" 
-                            style={{ marginTop: '1rem', width: '100%' }}
+                            style={{ 
+                              marginTop: '0.5rem', 
+                              width: '100%', 
+                              padding: '0.4rem', 
+                              fontSize: '0.75rem', 
+                              backgroundColor: 'transparent', 
+                              border: '1px solid #e2e8f0',
+                              color: '#718096'
+                            }}
                             onClick={() => setIsUnescoExpanded(!isUnescoExpanded)}
                           >
                             {isUnescoExpanded ? 'Pokaż mniej' : `Pokaż pozostałe (${selectedCountry.unesco_places.length - 10})`}
@@ -1496,8 +1504,8 @@ function App() {
                   
                 </div>
 
-                <div id="safety" className={`safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
                   <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
+                <div id="safety" className={`safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
                   <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
                   <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
                   {selectedCountry.safety.risk_details && (
@@ -1510,8 +1518,8 @@ function App() {
                       Zobacz pełny komunikat MSZ na gov.pl →
                     </a>
                   )}
-                  <DataSource sources={['MSZ']} />
                 </div>
+                  <DataSource sources={['MSZ']} />
               </div>
             </div>
           </div>
