@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Changed from ./ to / to fix white screen on localhost
+  base: './', // Restore relative base for GitHub Pages
   build: {
     outDir: '../docs', // Budujemy do folderu docs w głównym katalogu
     emptyOutDir: true, // Czyścimy docs przed każdym buildem

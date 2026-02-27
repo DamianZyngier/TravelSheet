@@ -122,7 +122,8 @@ function App() {
   }, [])
 
   const continents = useMemo(() => {
-    return Array.from(new Set(Object.values(countries).map(c => c.continent))).sort()
+    if (!countries || typeof countries !== 'object') return [];
+    return Array.from(new Set(Object.values(countries).map(c => c.continent).filter(Boolean))).sort()
   }, [countries])
 
   const handleSelectCountry = useCallback((country: CountryData | null) => {
@@ -207,27 +208,30 @@ function App() {
   }, [selectedCountry]);
 
   const countryList = useMemo(() => {
+    if (!countries || typeof countries !== 'object') return [];
     return Object.values(countries)
       .filter(c => {
+        if (!c || !c.safety) return false;
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
         const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
         
         const searchLower = searchQuery.toLowerCase();
         const countryAliases = ALIASES[c.iso2] || [];
         
-        const matchSearch = c.name_pl.toLowerCase().includes(searchLower) || 
-                            c.name.toLowerCase().includes(searchLower) ||
-                            c.iso2.toLowerCase().includes(searchLower) ||
-                            c.iso3.toLowerCase().includes(searchLower) ||
+        const matchSearch = (c.name_pl || '').toLowerCase().includes(searchLower) || 
+                            (c.name || '').toLowerCase().includes(searchLower) ||
+                            (c.iso2 || '').toLowerCase().includes(searchLower) ||
+                            (c.iso3 || '').toLowerCase().includes(searchLower) ||
                             countryAliases.some(alias => alias.includes(searchLower));
         
         return matchSafety && matchContinent && matchSearch;
       })
-      .sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
+      .sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
   }, [countries, filterSafety, filterContinent, searchQuery]);
 
   const sortedFullList = useMemo(() => {
-    return Object.values(countries).sort((a, b) => a.name_pl.localeCompare(b.name_pl, 'pl'));
+    if (!countries || typeof countries !== 'object') return [];
+    return Object.values(countries).sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
   }, [countries]);
 
   const navigateCountry = (direction: 'prev' | 'next') => {
