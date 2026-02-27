@@ -954,6 +954,17 @@ function App() {
                           </div>
                         </div>
                       )}
+                      <div className="info-item-box full" style={{ backgroundColor: '#ebf8ff', border: '1px solid #bee3f8' }}>
+                        <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                          <span style={{ fontSize: '1.25rem' }}>🛡️</span>
+                          <div>
+                            <strong style={{ color: '#2b6cb0', fontSize: '0.75rem', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>System Odyseusz:</strong>
+                            <span style={{ fontSize: '0.85rem', color: '#2c5282', lineHeight: '1.4' }}>
+                              MSZ zaleca rejestrację podróży w <a href="https://odyseusz.msz.gov.pl" target="_blank" rel="noopener noreferrer" style={{ fontWeight: '700', textDecoration: 'underline' }}>systemie Odyseusz</a>. Pozwoli to służbom konsularnym na kontakt i pomoc w sytuacjach kryzysowych.
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <DataSource sources={['REST', 'WIKI', 'CDC']} />
                   </div>
@@ -1291,6 +1302,7 @@ function App() {
                         </a>
                       )}
                     </div>
+                    <DataSource sources={['CDC', 'MSZ']} />
                   </div>
 
                   <div id="holidays" className="info-block full-width holiday-section scroll-mt">
@@ -1329,6 +1341,7 @@ function App() {
                     ) : (
                       <div className="no-data-msg">Brak informacji o świętach dla tego kraju.</div>
                     )}
+                    <DataSource sources={['MSZ', 'PUBLIC']} />
                   </div>
 
                   <div id="embassies" className="info-block full-width embassy-section scroll-mt">
@@ -1504,21 +1517,24 @@ function App() {
                   
                 </div>
 
-                  <h4>🛡️ Bezpieczeństwo (MSZ)</h4>
-                <div id="safety" className={`safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
-                  <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
-                  <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
-                  {selectedCountry.safety.risk_details && (
-                    <div className="risk-details-box">
-                      <ExpandableText text={selectedCountry.safety.risk_details} />
+                  <div id="safety" className={`info-block full-width safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
+                    <div className="section-header">
+                      <span className="section-header-icon">🛡️</span>
+                      <label>Bezpieczeństwo (MSZ)</label>
                     </div>
-                  )}
-                  {selectedCountry.safety.url && (
-                    <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
-                      Zobacz pełny komunikat MSZ na gov.pl →
-                    </a>
-                  )}
-                </div>
+                    <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+                    <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
+                    {selectedCountry.safety.risk_details && (
+                      <div className="risk-details-box">
+                        <ExpandableText text={selectedCountry.safety.risk_details} />
+                      </div>
+                    )}
+                    {selectedCountry.safety.url && (
+                      <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
+                        Zobacz pełny komunikat MSZ na gov.pl →
+                      </a>
+                    )}
+                  </div>
                   <DataSource sources={['MSZ']} />
               </div>
             </div>
