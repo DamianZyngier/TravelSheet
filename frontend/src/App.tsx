@@ -105,15 +105,18 @@ function App() {
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    fetch('data.json')
-      .then(res => res.json())
+    fetch('/data.json')
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
       .then(data => {
         setCountries(data)
         setLoading(false)
       })
       .catch(err => {
         console.error("Error loading data:", err)
-        setError("Błąd ładowania danych. Spróbuj odświeżyć stronę.")
+        setError(`Błąd ładowania danych: ${err.message}`)
         setLoading(false)
       })
   }, [])
