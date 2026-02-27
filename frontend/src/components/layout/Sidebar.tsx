@@ -59,46 +59,6 @@ const Sidebar: React.FC<SidebarProps> = ({
         </button>
       </div>
 
-      {/* Territory/Parent relationship links */}
-      {(selectedCountry.parent || (selectedCountry.territories && selectedCountry.territories.length > 0)) && (
-        <div className="relationship-nav-box">
-          {selectedCountry.parent && (
-            <div className="parent-link-box">
-              <span className="relationship-label">Terytorium państwa:</span>
-              <button 
-                className="relationship-link-btn"
-                onClick={() => {
-                   const parent = sortedFullList.find(c => c.iso2 === selectedCountry.parent?.iso2);
-                   if (parent) onSelectCountry(parent);
-                }}
-              >
-                📍 {selectedCountry.parent.name_pl}
-              </button>
-            </div>
-          )}
-          
-          {selectedCountry.territories && selectedCountry.territories.length > 0 && (
-            <div className="territories-link-box">
-              <span className="relationship-label">Terytoria zależne:</span>
-              <div className="territories-grid">
-                {selectedCountry.territories.map(t => (
-                  <button 
-                    key={t.iso2}
-                    className="territory-mini-link"
-                    onClick={() => {
-                      const territory = sortedFullList.find(c => c.iso2 === t.iso2);
-                      if (territory) onSelectCountry(territory);
-                    }}
-                  >
-                    {t.name_pl}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
       <div className="side-menu-list">
         {SECTIONS.map(s => (
           <button 

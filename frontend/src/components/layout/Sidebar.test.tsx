@@ -22,30 +22,10 @@ const mockFrance: CountryData = {
 const mockList = [mockFrance, mockCountry];
 
 describe('Sidebar Component', () => {
-  it('renders territory relationship links correctly', () => {
-    const onSelect = vi.fn();
+  it('renders country navigation links', () => {
     render(
       <Sidebar 
         selectedCountry={mockCountry} 
-        sortedFullList={mockList} 
-        onSelectCountry={onSelect}
-        activeSection="summary"
-        scrollToSection={() => {}}
-        navigateCountry={() => {}}
-      />
-    );
-
-    expect(screen.getByText(/Terytorium państwa/i)).toBeInTheDocument();
-    // Use container query or specific class to find the button
-    const parentBtn = document.querySelector('.relationship-link-btn') as HTMLElement;
-    fireEvent.click(parentBtn);
-    expect(onSelect).toHaveBeenCalledWith(mockFrance);
-  });
-
-  it('renders child territories for parent countries', () => {
-    render(
-      <Sidebar 
-        selectedCountry={mockFrance} 
         sortedFullList={mockList} 
         onSelectCountry={() => {}}
         activeSection="summary"
@@ -54,9 +34,7 @@ describe('Sidebar Component', () => {
       />
     );
 
-    expect(screen.getByText(/Terytoria zależne/i)).toBeInTheDocument();
-    const territoryBtn = document.querySelector('.territory-mini-link') as HTMLElement;
-    expect(territoryBtn).toBeInTheDocument();
-    expect(territoryBtn.textContent).toContain('Martynika');
+    expect(screen.getByText(/Przeglądasz/i)).toBeInTheDocument();
+    expect(screen.getByText(/Martynika/i)).toBeInTheDocument();
   });
 });
