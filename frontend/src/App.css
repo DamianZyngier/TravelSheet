@@ -556,35 +556,40 @@
 .plugs-warn { background-color: #fefcbf; color: #744210; }
 .plugs-err { background-color: #fed7d7; color: #822727; }
 
-.risk-desc {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-
-.info-block.full-width {
-  grid-column: 1 / -1;
-}
-
-.safety-info {
+.safety-card {
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   border-left: 6px solid #e2e8f0;
   background-color: #f8fafc;
-  color: #1a202c !important; /* Force black text */
+  color: #1a202c !important; 
+  margin-top: 0.75rem;
 }
 
-.safety-info.risk-low { border-left-color: #48bb78; background-color: #f0fff4; }
-.safety-info.risk-medium { border-left-color: #ecc94b; background-color: #fffaf0; }
-.safety-info.risk-high { border-left-color: #f56565; background-color: #fff5f5; }
-.safety-info.risk-critical { border-left-color: #9b2c2c; background-color: #fff5f5; }
+.safety-card.risk-low { border-left-color: #48bb78; background-color: #f0fff4; }
+.safety-card.risk-medium { border-left-color: #ecc94b; background-color: #fffaf0; }
+.safety-card.risk-high { border-left-color: #f56565; background-color: #fff5f5; }
+.safety-card.risk-critical { border-left-color: #9b2c2c; background-color: #fff5f5; }
+
+.risk-desc {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.risk-summary-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
 
 .risk-details-box {
   margin: 1.5rem 0;
   padding: 1.25rem;
-  background: #fff5f5;
-  border: 1px solid #feb2b2;
-  border-left: 5px solid #f56565;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   font-size: 0.95rem;
   line-height: 1.6;

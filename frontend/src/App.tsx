@@ -1528,23 +1528,26 @@ function App() {
                   
                 </div>
 
+                  <div id="safety" className="info-block full-width scroll-mt">
                     <div className="section-header">
                       <span className="section-header-icon">🛡️</span>
                       <label>Bezpieczeństwo (MSZ)</label>
                     </div>
-                  <div id="safety" className={`info-block full-width safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
-                    <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
-                    <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
-                    {selectedCountry.safety.risk_details && (
-                      <div className="risk-details-box">
-                        <ExpandableText text={selectedCountry.safety.risk_details} />
-                      </div>
-                    )}
-                    {selectedCountry.safety.url && (
-                      <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
-                        Zobacz pełny komunikat MSZ na gov.pl →
-                      </a>
-                    )}
+                    <div className={`safety-card risk-${selectedCountry.safety.risk_level}`}>
+                      <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+                      <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
+                      {selectedCountry.safety.risk_details && (
+                        <div className="risk-details-box">
+                          <ExpandableText text={selectedCountry.safety.risk_details} />
+                        </div>
+                      )}
+                      {selectedCountry.safety.url && (
+                        <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
+                          Zobacz pełny komunikat MSZ na gov.pl →
+                        </a>
+                      )}
+                    </div>
+                    <DataSource sources={['MSZ']} />
                   </div>
                   <DataSource sources={['MSZ']} />
               </div>
