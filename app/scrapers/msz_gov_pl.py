@@ -54,7 +54,7 @@ async def fetch_country_urls():
             logger.error(f"Error fetching directory: {e}")
             return {}
 
-async def scrape_country(db: Session, iso_code: str):
+async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     """Scrape MSZ data for specific country"""
     if iso_code.upper() == 'PL':
         return {"status": "skipped", "reason": "Home country"}
@@ -87,23 +87,23 @@ async def scrape_country(db: Session, iso_code: str):
     strategy_used = "None"
     final_url = ""
 
-    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
-        for strat_name, url in strategies:
-            try:
-                response = await client.get(url, headers=headers)
-                if response.status_code == 200:
-                    curr_url = str(response.url).rstrip('/')
-                    # Unikaj bycia przekierowanym z powrotem do katalogu
-                    if curr_url not in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
-                        # Sprawdź czy strona faktycznie zawiera treść podróżniczą
-                        text_check = response.text.lower()
-                        if any(kw in text_check for kw in ["bezpieczeństwo", "ostrzeżenia", "informacje dla podróżujących", "idp"]):
-                            response_text = response.text
-                            final_url = str(response.url)
-                            strategy_used = strat_name
-                            break # Znaleziono działający link, przerywamy pętlę strategii
-            except Exception as e:
-                logger.error(f"Error fetching {url}: {e}")
+    for strat_name, url in strategies:
+        try:
+            # We follow redirects automatically via httpx client if configured
+            response = await client.get(url, headers=headers)
+            if response.status_code == 200:
+                curr_url = str(response.url).rstrip('/')
+                # Unikaj bycia przekierowanym z powrotem do katalogu
+                if curr_url not in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
+                    # Sprawdź czy strona faktycznie zawiera treść podróżniczą
+                    text_check = response.text.lower()
+                    if any(kw in text_check for kw in ["bezpieczeństwo", "ostrzeżenia", "informacje dla podróżujących", "idp"]):
+                        response_text = response.text
+                        final_url = str(response.url)
+                        strategy_used = strat_name
+                        break # Znaleziono działający link, przerywamy pętlę strategii
+        except Exception as e:
+            logger.debug(f"Strategy {strat_name} failed for {iso_code}: {e}")
 
     if not response_text:
         return {"error": f"No valid MSZ page found for {iso_code}"}
@@ -263,26 +263,27 @@ async def scrape_all_with_cache(db: Session):
     countries = db.query(models.Country).all()
     results = {"success": 0, "errors": 0, "details": []}
     
-    for i, country in enumerate(countries):
-        try:
-            logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
-            res = await scrape_country(db, country.iso_alpha2)
-            if "error" in res: 
+    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+        for i, country in enumerate(countries):
+            try:
+                logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
+                res = await scrape_country(db, country.iso_alpha2, client)
+                if "error" in res: 
+                    results["errors"] += 1
+                    logger.warning(f"  - Skip: {res['error']}")
+                    results["details"].append(f"{country.iso_alpha2}: {res['error']}")
+                elif res.get("status") == "skipped":
+                    results["success"] += 1
+                    logger.info(f"  - Skipped: {res.get('reason')}")
+                else: 
+                    results["success"] += 1
+                    logger.info(f"  - {res.get('strategy', 'OK')}: Risk {res.get('risk_level', 'unknown')}")
+                
+                await asyncio.sleep(1.0) 
+            except Exception as e:
                 results["errors"] += 1
-                logger.warning(f"  - Skip: {res['error']}")
-                results["details"].append(f"{country.iso_alpha2}: {res['error']}")
-            elif res.get("status") == "skipped":
-                results["success"] += 1
-                logger.info(f"  - Skipped: {res.get('reason')}")
-            else: 
-                results["success"] += 1
-                logger.info(f"  Po{res.get('strategy', 'OK')}: Risk {res.get('risk_level', 'unknown')}")
-            
-            await asyncio.sleep(1.0) 
-        except Exception as e:
-            results["errors"] += 1
-            err_msg = f"{country.iso_alpha2} CRITICAL: {str(e)}"
-            results["details"].append(err_msg)
-            logger.error(f"  - {err_msg}")
+                err_msg = f"{country.iso_alpha2} CRITICAL: {str(e)}"
+                results["details"].append(err_msg)
+                logger.error(f"  - {err_msg}")
             
     return results
