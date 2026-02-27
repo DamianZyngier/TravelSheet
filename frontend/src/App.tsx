@@ -1386,8 +1386,8 @@ function App() {
                               
                               {hasHiddenConsulates && (
                                 <button 
-                                  className="expand-holidays-btn" 
-                                  style={{ marginTop: '1.5rem', width: '100%' }}
+                                  className="section-expand-btn" 
+                                  style={{ marginTop: '1rem', width: '100%' }}
                                   onClick={() => setIsEmbassiesExpanded(!isEmbassiesExpanded)}
                                 >
                                   {isEmbassiesExpanded ? 'Pokaż mniej' : `Pokaż pozostałe placówki (${consulatesAll.length - 2})`}
@@ -1480,7 +1480,7 @@ function App() {
                         </div>
                         {selectedCountry.unesco_places.length > 10 && (
                           <button 
-                            className="expand-holidays-btn" 
+                            className="section-expand-btn" 
                             style={{ marginTop: '1rem', width: '100%' }}
                             onClick={() => setIsUnescoExpanded(!isUnescoExpanded)}
                           >

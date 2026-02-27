@@ -1699,7 +1699,7 @@
   text-overflow: ellipsis;
 }
 
-.expand-holidays-btn {
+.section-expand-btn {
   background-color: #ebf8ff;
   color: #2b6cb0;
   border: 1px dashed #bee3f8;
@@ -1711,7 +1711,7 @@
   transition: all 0.2s;
 }
 
-.expand-holidays-btn:hover {
+.section-expand-btn:hover {
   background-color: #bee3f8;
 }
 
