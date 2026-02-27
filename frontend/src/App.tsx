@@ -1341,7 +1341,7 @@ function App() {
                     ) : (
                       <div className="no-data-msg">Brak informacji o świętach dla tego kraju.</div>
                     )}
-                    <DataSource sources={['MSZ', 'PUBLIC']} />
+                    <DataSource sources={['NAGER']} />
                   </div>
 
                   <div id="embassies" className="info-block full-width embassy-section scroll-mt">
@@ -1413,6 +1413,7 @@ function App() {
                     ) : (
                       <div className="no-data-msg">Brak danych o polskich placówkach w tym kraju.</div>
                     )}
+                    <DataSource sources={['MSZ']} />
                   </div>
 
                   <div id="attractions" className="info-block full-width unesco-section scroll-mt">
@@ -1517,11 +1518,11 @@ function App() {
                   
                 </div>
 
-                  <div id="safety" className={`info-block full-width safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
                     <div className="section-header">
                       <span className="section-header-icon">🛡️</span>
                       <label>Bezpieczeństwo (MSZ)</label>
                     </div>
+                  <div id="safety" className={`info-block full-width safety-info risk-${selectedCountry.safety.risk_level} scroll-mt`}>
                     <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
                     <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
                     {selectedCountry.safety.risk_details && (
