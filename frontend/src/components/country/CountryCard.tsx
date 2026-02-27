@@ -1,7 +1,7 @@
 import React from 'react';
 import type { CountryData } from '../../types';
 import { CONTINENT_MAP, SAFETY_LABELS } from '../../constants';
-import { getLongNameClass } from '../Common';
+import { getLongNameClass } from '../../utils/helpers';
 
 interface CountryCardProps {
   country: CountryData;
