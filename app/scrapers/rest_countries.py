@@ -33,12 +33,12 @@ async def sync_countries(db: Session):
     Syncs base country list from REST Countries API.
     Handles the 10-field limit by making multiple requests.
     """
-    # Request 1: Basic info + independent status
-    fields1 = "name,cca2,cca3,capital,region,continents,latlng,translations,languages,currencies,independent"
+    # Request 1: Identity and Location
+    fields1 = "name,cca2,cca3,capital,region,continents,latlng,translations,independent"
     url1 = f"https://restcountries.com/v3.1/all?fields={fields1}"
     
-    # Request 2: Extra info (population, area, idd)
-    fields2 = "cca2,population,area,idd"
+    # Request 2: Practical data
+    fields2 = "cca2,languages,currencies,population,area,idd"
     url2 = f"https://restcountries.com/v3.1/all?fields={fields2}"
     
     logger.info("Fetching country data from REST Countries (Part 1)...")
@@ -47,16 +47,20 @@ async def sync_countries(db: Session):
     logger.info("Fetching country data from REST Countries (Part 2)...")
     data2 = await fetch_data(url2)
 
-    if not data1:
-        return {"error": "Failed to fetch primary country data"}
+    if not data1 or not data2:
+        return {"error": "Failed to fetch country data"}
 
-    # Merge data by ISO2
-    extra_info = {item.get("cca2"): item for item in data2} if data2 else {}
+    # Merge by cca2
+    merged_data = {}
+    for item in data1:
+        merged_data[item['cca2']] = item
+    for item in data2:
+        if item['cca2'] in merged_data:
+            merged_data[item['cca2']].update(item)
 
     results = {"synced": 0, "updated": 0, "skipped": 0, "errors": []}
     
-    # Manual parent mapping as fallback because REST Countries API is inconsistent with 'parent' field
-    # (Many dependencies like Martinique (MQ) don't have an explicit parent field in the v3.1/all response)
+    # Manual parent mapping
     MANUAL_PARENTS = {
         'MQ': 'FR', 'RE': 'FR', 'GF': 'FR', 'GP': 'FR', 'YT': 'FR', 'MF': 'FR', 'BL': 'FR', 'PM': 'FR', 'WF': 'FR', 'PF': 'FR', 'NC': 'FR', 'TF': 'FR',
         'AW': 'NL', 'CW': 'NL', 'SX': 'NL', 'BQ': 'NL',
@@ -68,17 +72,10 @@ async def sync_countries(db: Session):
         'EH': 'MA'
     }
     
-    for i, country_data in enumerate(data1):
+    for i, (iso2, country_data) in enumerate(merged_data.items()):
         try:
-            iso2 = country_data.get("cca2")
-            if not iso2:
-                results["skipped"] += 1
-                continue
-            
-            extra = extra_info.get(iso2, {})
-            
             if (i+1) % 50 == 0:
-                logger.info(f"Processing country {i+1}/{len(data1)}: {iso2}")
+                logger.info(f"Processing country {i+1}/{len(merged_data)}: {iso2}")
 
             country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()
             
@@ -90,7 +87,6 @@ async def sync_countries(db: Session):
             capital_list = country_data.get("capital", [])
             capital = capital_list[0] if capital_list else None
             
-            # Flag URL
             flag_url = f"https://flagcdn.com/w320/{iso2.lower()}.png"
             region = country_data.get("region")
             continents = country_data.get("continents", [])
@@ -100,10 +96,9 @@ async def sync_countries(db: Session):
             lat = coords[0] if len(coords) > 0 else None
             lon = coords[1] if len(coords) > 1 else None
 
-            # Population, Area & Phone Code
-            population = extra.get("population")
-            area = extra.get("area")
-            idd = extra.get("idd", {})
+            population = country_data.get("population")
+            area = country_data.get("area")
+            idd = country_data.get("idd", {})
             root = idd.get("root", "")
             suffixes = idd.get("suffixes", [])
             phone_code = f"{root}{suffixes[0]}" if root and suffixes else (root if root else None)
@@ -165,7 +160,7 @@ async def sync_countries(db: Session):
                         symbol=info.get("symbol")
                     ))
         except Exception as e:
-            err_msg = f"Error processing country {country_data.get('cca2', 'unknown')}: {str(e)}"
+            err_msg = f"Error processing country {iso2}: {str(e)}"
             logger.error(err_msg)
             results["errors"].append(err_msg)
 
