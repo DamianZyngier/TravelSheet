@@ -263,20 +263,6 @@ function App() {
           />
 
           <main className="content-area">
-            <div className="hero-intro-v2">
-              <div className="hero-icon">🗺️</div>
-              <div className="hero-content-text">
-                <h1>Witaj w TripSheet</h1>
-                <p>
-                  Twoje centrum bezpiecznych podróży. Agregujemy aktualne dane z zaufanych źródeł:
-                  <span className="source-chip msz">MSZ (gov.pl)</span>
-                  <span className="source-chip cdc">CDC Health</span>
-                  <span className="source-chip unesco">UNESCO</span>
-                  oraz <span className="source-chip wiki">Wikidata</span>.
-                </p>
-              </div>
-            </div>
-
             <CountryGrid 
               countryList={countryList} 
               onSelectCountry={handleSelectCountry}
