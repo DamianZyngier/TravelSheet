@@ -97,13 +97,13 @@ def export_all():
             if c.safety:
                 processed_data["safety"] = {
                     "risk_level": c.safety.risk_level or "unknown",
-                    "risk_text": c.safety.summary or "Brak danych",
+                    "risk_text": c.safety.summary or f"Ministerstwo Spraw Zagranicznych zaleca zachowanie ostrożności podczas podróży do tego kraju.",
                     "risk_details": c.safety.risk_details or "",
                     "url": c.safety.full_url or "",
                     "last_updated": str(c.safety.last_checked) if c.safety.last_checked else None
                 }
             else:
-                processed_data["safety"] = {"risk_level": "unknown", "risk_text": "Brak danych", "risk_details": "", "url": "", "last_updated": None}
+                processed_data["safety"] = {"risk_level": "unknown", "risk_text": "Brak danych szczegółowych.", "risk_details": "", "url": "", "last_updated": None}
             
             # Currency
             if c.currency:
