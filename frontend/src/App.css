@@ -2770,3 +2770,38 @@
   }
 }
 
+
+/* Voltage Compatibility Badge */
+.voltage-status-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.voltage-values {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.voltage-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.voltage-badge.compat-ok {
+  background: #f0fff4;
+  color: #2f855a;
+  border: 1px solid #c6f6d5;
+}
+
+.voltage-badge.compat-warn {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+

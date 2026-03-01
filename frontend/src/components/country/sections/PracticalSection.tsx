@@ -33,8 +33,17 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
           </div>
 
           <div className="info-block">
-            <label>Napięcie i częstotliwość</label>
-            <span>{selectedCountry.practical.voltage}V / {selectedCountry.practical.frequency}Hz</span>
+            <label>Napięcie i prąd</label>
+            <div className="voltage-status-box">
+              <span className="voltage-values">{selectedCountry.practical.voltage}V / {selectedCountry.practical.frequency}Hz</span>
+              {selectedCountry.practical.voltage ? (
+                <span className={`voltage-badge ${selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 ? 'compat-ok' : 'compat-warn'}`}>
+                  {selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 
+                    ? '✅ Zgodne z polskim standardem' 
+                    : '⚠️ Wymagany konwerter napięcia'}
+                </span>
+              ) : null}
+            </div>
           </div>
 
           <div className="info-block">
