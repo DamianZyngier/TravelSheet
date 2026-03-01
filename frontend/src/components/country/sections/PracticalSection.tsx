@@ -67,7 +67,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               {selectedCountry.weather.forecast.map((day, idx) => (
                 <div key={idx} className={`forecast-day-card ${idx === 0 ? 'today' : ''}`}>
                   <span className="forecast-date">
-                    {idx === 0 ? 'Dziś' : new Date(day.date).toLocaleDateString('pl-PL', { weekday: 'short', day: 'numeric', month: 'numeric' })}
+                    {idx === 0 ? 'Dziś' : new Date(day.date).toLocaleDateString('pl-PL', { weekday: 'short', day: 'numeric' })}
                   </span>
                   <img 
                     src={`https://openweathermap.org/img/wn/${day.icon}.png`} 
@@ -75,14 +75,8 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                     className="forecast-icon"
                   />
                   <div className="forecast-temps">
-                    <div className="temp-group">
-                      <span className="temp-label">dzień</span>
-                      <span className="temp-max">{Math.round(day.temp_max)}°</span>
-                    </div>
-                    <div className="temp-group">
-                      <span className="temp-label">noc</span>
-                      <span className="temp-min">{Math.round(day.temp_min)}°</span>
-                    </div>
+                    <span className="temp-max">{Math.round(day.temp_max)}°</span>
+                    <span className="temp-min">{Math.round(day.temp_min)}°</span>
                   </div>
                   <span className="forecast-condition">{day.condition}</span>
                 </div>
