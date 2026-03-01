@@ -46,6 +46,9 @@ def sync_costs(db: Session):
         # based on overall index trends
         ratio = round(index / pl_index, 2)
         
+        # Polish baseline (PLN)
+        pl_low, pl_mid, pl_high = 120.0, 300.0, 800.0
+        
         db.query(models.CostOfLiving).filter(models.CostOfLiving.country_id == country.id).delete()
         
         cost_entry = models.CostOfLiving(
@@ -55,7 +58,10 @@ def sync_costs(db: Session):
             index_groceries=index * 1.05,
             index_transport=index * 0.85,
             index_accommodation=index * 1.2, # Accommodation usually higher than groceries
-            ratio_to_poland=ratio
+            ratio_to_poland=ratio,
+            daily_budget_low=round(pl_low * ratio, 2),
+            daily_budget_mid=round(pl_mid * ratio, 2),
+            daily_budget_high=round(pl_high * ratio, 2)
         )
         db.add(cost_entry)
         synced += 1

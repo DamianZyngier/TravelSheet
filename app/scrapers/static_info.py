@@ -173,6 +173,25 @@ def sync_static_data(db: Session):
             license_info = "Polskie (Konwencja Wiedeńska)"
         elif iso2 in GENEVA_CONVENTION:
             license_info = "Międzynarodowe (Konwencja Genewska 1949)"
+            
+        # Water safety rules
+        water_safe = iso2 in RLAH_COUNTRIES or iso2 in ['US', 'CA', 'AU', 'NZ', 'JP', 'CH']
+        water_brushing = water_safe or country.continent in ['Europe', 'Americas'] and iso2 not in ['BO', 'PY', 'SR', 'GY']
+        
+        # Payment advice
+        card_acc = "Wysoka" if iso2 in RLAH_COUNTRIES or iso2 in ['US', 'CA', 'AU', 'NZ', 'JP', 'CH', 'KR'] else "Średnia"
+        if country.continent in ['Africa', 'Oceania'] and iso2 not in ['ZA', 'AU', 'NZ']:
+            card_acc = "Niska"
+            
+        exchange_curr = "USD, EUR"
+        if iso2 in RLAH_COUNTRIES: exchange_curr = "EUR (jeśli nie PLN)"
+        
+        exchange_where = "Na miejscu (kantory, banki)"
+        if iso2 in RLAH_COUNTRIES: exchange_where = "W Polsce lub bankomat"
+        
+        atm_adv = "Bankomaty są powszechne, warto mieć kartę typu Revolut."
+        if card_acc == "Niska":
+            atm_adv = "Bankomaty rzadkie, wysokie prowizje. Lepiej mieć gotówkę (USD/EUR)."
         
         if not tech and not roaming and not license_info:
             continue
@@ -184,13 +203,25 @@ def sync_static_data(db: Session):
                 practical.driving_side = tech['side']
             practical.roaming_info = roaming
             practical.license_type = license_info
+            practical.tap_water_safe = water_safe
+            practical.water_safe_for_brushing = water_brushing
+            practical.card_acceptance = card_acc
+            practical.best_exchange_currency = exchange_curr
+            practical.exchange_where = exchange_where
+            practical.atm_advice = atm_adv
         else:
             practical = models.PracticalInfo(
                 country_id=country.id,
                 plug_types=tech['plugs'] if tech else None,
                 driving_side=tech['side'] if tech else 'right',
                 roaming_info=roaming,
-                license_type=license_info
+                license_type=license_info,
+                tap_water_safe=water_safe,
+                water_safe_for_brushing=water_brushing,
+                card_acceptance=card_acc,
+                best_exchange_currency=exchange_curr,
+                exchange_where=exchange_where,
+                atm_advice=atm_adv
             )
             db.add(practical)
         synced += 1

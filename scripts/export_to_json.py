@@ -101,6 +101,8 @@ def export_all():
                 "national_dish": c['national_dish'],
                 "wiki_summary": c['wiki_summary'],
                 "national_symbols": c['national_symbols'],
+                "unique_animals": c['unique_animals'],
+                "unique_things": c['unique_things'],
                 "phone_code": c['phone_code'],
                 "largest_cities": c['largest_cities'],
                 "ethnic_groups": c['ethnic_groups'],
@@ -141,8 +143,12 @@ def export_all():
                     "plug_types": practical['plug_types'] if practical else "",
                     "voltage": practical['voltage'] if practical else None,
                     "water_safe": practical['tap_water_safe'] if practical else None,
+                    "water_safe_for_brushing": practical['water_safe_for_brushing'] if practical else None,
                     "driving_side": practical['driving_side'] if practical else "",
                     "card_acceptance": practical['card_acceptance'] if practical else "",
+                    "best_exchange_currency": practical['best_exchange_currency'] if practical else "",
+                    "exchange_where": practical['exchange_where'] if practical else "",
+                    "atm_advice": practical['atm_advice'] if practical else "",
                     "emergency": json.loads(practical['emergency_numbers']) if practical and practical['emergency_numbers'] else None,
                     "vaccinations_required": practical['vaccinations_required'] if practical else "",
                     "vaccinations_suggested": practical['vaccinations_suggested'] if practical else "",
@@ -157,7 +163,10 @@ def export_all():
                     "groceries": float(costs['index_groceries']) if costs else None,
                     "transport": float(costs['index_transport']) if costs else None,
                     "accommodation": float(costs['index_accommodation']) if costs else None,
-                    "ratio_to_pl": float(costs['ratio_to_poland']) if costs else None
+                    "ratio_to_pl": float(costs['ratio_to_poland']) if costs else None,
+                    "daily_budget_low": float(costs['daily_budget_low']) if costs and costs['daily_budget_low'] else None,
+                    "daily_budget_mid": float(costs['daily_budget_mid']) if costs and costs['daily_budget_mid'] else None,
+                    "daily_budget_high": float(costs['daily_budget_high']) if costs and costs['daily_budget_high'] else None
                 },
 
                 "entry": {

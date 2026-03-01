@@ -2095,3 +2095,115 @@
   align-items: baseline;
   font-size: 0.9rem;
 }
+
+/* New UI Elements */
+.budget-estimates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.budget-card {
+  display: flex;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.budget-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.budget-card-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.budget-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.budget-label {
+  font-size: 0.8rem;
+  color: #718096;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.budget-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin: 0.25rem 0;
+}
+
+.budget-desc {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+.currency-payment-box {
+  background: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.payment-advice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #cbd5e0;
+}
+
+.advice-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.atm-advice {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  background: #ebf8ff;
+  border-radius: 8px;
+  color: #2c5282;
+}
+
+.water-safety-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.water-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.water-item.safe { border-left: 4px solid #48bb78; }
+.water-item.unsafe { border-left: 4px solid #f56565; }
+
+.water-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.water-text strong { font-size: 0.9rem; }
+.water-text span { font-size: 0.85rem; color: #4a5568; }

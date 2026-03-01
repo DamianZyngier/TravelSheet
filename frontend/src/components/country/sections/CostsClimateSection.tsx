@@ -86,6 +86,36 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                   })}
                 </div>
               </div>
+              
+              {selectedCountry.costs.daily_budget_mid && (
+                <div className="budget-estimates-grid">
+                  <div className="budget-card low">
+                    <div className="budget-card-icon">🎒</div>
+                    <div className="budget-card-content">
+                      <span className="budget-label">Oszczędnie</span>
+                      <span className="budget-value">{selectedCountry.costs.daily_budget_low?.toFixed(0)} PLN / dzień</span>
+                      <p className="budget-desc">Hostel, jedzenie market/streetfood, transport publiczny.</p>
+                    </div>
+                  </div>
+                  <div className="budget-card mid">
+                    <div className="budget-card-icon">🏨</div>
+                    <div className="budget-card-content">
+                      <span className="budget-label">Standardowo</span>
+                      <span className="budget-value">{selectedCountry.costs.daily_budget_mid?.toFixed(0)} PLN / dzień</span>
+                      <p className="budget-desc">Hotel budget, posiłki w barach, kilka płatnych atrakcji.</p>
+                    </div>
+                  </div>
+                  <div className="budget-card high">
+                    <div className="budget-card-icon">✨</div>
+                    <div className="budget-card-content">
+                      <span className="budget-label">Komfortowo</span>
+                      <span className="budget-value">{selectedCountry.costs.daily_budget_high?.toFixed(0)} PLN / dzień</span>
+                      <p className="budget-desc">Hotel mid-range, restauracje, wynajem auta lub wycieczki.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <p className="costs-disclaimer">* Wartości przybliżone w oparciu o koszty w Polsce (100%)</p>
             </>
           ) : (

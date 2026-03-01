@@ -105,19 +105,59 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
       <div id="currency" className="info-block full-width scroll-mt">
         <div className="section-header">
           <span className="section-header-icon">💰</span>
-          <label>Waluta</label>
+          <label>Waluta i płatności</label>
         </div>
-        <span>
-          {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`} <br/>
-          {selectedCountry.currency.rate_pln ? (
-            <>
+        <div className="currency-payment-box">
+          <div className="currency-info-line">
+            <strong>Waluta:</strong> {selectedCountry.currency.name || 'Brak danych'} {selectedCountry.currency.code && `(${selectedCountry.currency.code})`}
+          </div>
+          {selectedCountry.currency.rate_pln && (
+            <div className="currency-rate-line">
               1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
-              <br/>
-              <small style={{ color: '#718096' }}>{getCurrencyExample(selectedCountry)}</small>
-            </>
-          ) : 'brak danych o kursie'}
-        </span>
+              <small className="currency-example"> ({getCurrencyExample(selectedCountry)})</small>
+            </div>
+          )}
+          <div className="payment-advice-grid">
+            <div className="advice-item">
+              <strong>Karty:</strong> <span>{selectedCountry.practical.card_acceptance || 'Średnia'}</span>
+            </div>
+            <div className="advice-item">
+              <strong>Najlepsza waluta:</strong> <span>{selectedCountry.practical.best_exchange_currency || 'USD, EUR'}</span>
+            </div>
+            <div className="advice-item">
+              <strong>Gdzie wymieniać:</strong> <span>{selectedCountry.practical.exchange_where || 'Na miejscu'}</span>
+            </div>
+          </div>
+          {selectedCountry.practical.atm_advice && (
+            <div className="atm-advice">
+              <strong>Bankomaty:</strong> {selectedCountry.practical.atm_advice}
+            </div>
+          )}
+        </div>
         <DataSource sources={['REST', 'WIKI']} />
+      </div>
+
+      <div id="water" className="info-block full-width scroll-mt">
+        <div className="section-header">
+          <span className="section-header-icon">🚰</span>
+          <label>Woda z kranu</label>
+        </div>
+        <div className="water-safety-grid">
+          <div className={`water-item ${selectedCountry.practical.water_safe ? 'safe' : 'unsafe'}`}>
+            <span className="water-icon">{selectedCountry.practical.water_safe ? '✅' : '❌'}</span>
+            <div className="water-text">
+              <strong>Do picia</strong>
+              <span>{selectedCountry.practical.water_safe ? 'Zdatna (pijalna)' : 'Niezalecana (lepiej butelkowana)'}</span>
+            </div>
+          </div>
+          <div className={`water-item ${selectedCountry.practical.water_safe_for_brushing ? 'safe' : 'unsafe'}`}>
+            <span className="water-icon">{selectedCountry.practical.water_safe_for_brushing ? '✅' : '⚠️'}</span>
+            <div className="water-text">
+              <strong>Mycie zębów</strong>
+              <span>{selectedCountry.practical.water_safe_for_brushing ? 'Bezpieczna' : 'Lepiej użyć wody butelkowanej'}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="plugs" className="info-block full-width scroll-mt">

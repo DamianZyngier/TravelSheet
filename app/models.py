@@ -29,6 +29,8 @@ class Country(Base):
     ethnic_groups = Column(Text) # Store as comma-separated or JSON
     wiki_summary = Column(Text)
     national_symbols = Column(String(255)) # e.g. animal, flower
+    unique_animals = Column(Text)
+    unique_things = Column(Text)
     unesco_count = Column(Integer, default=0)
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
@@ -231,6 +233,10 @@ class PracticalInfo(Base):
     health_info = Column(Text)
     roaming_info = Column(Text) # Info about Roam Like at Home
     license_type = Column(String(255)) # Info about driving license requirements
+    water_safe_for_brushing = Column(Boolean)
+    best_exchange_currency = Column(String(100)) # e.g. "USD, EUR"
+    exchange_where = Column(String(255)) # e.g. "Polska", "Na miejscu"
+    atm_advice = Column(Text)
 
     @property
     def emergency(self):
@@ -305,6 +311,11 @@ class CostOfLiving(Base):
     # Comparison to Poland (calculated during sync)
     # 1.0 means same as Poland, 1.2 means 20% more expensive
     ratio_to_poland = Column(DECIMAL(10, 2))
+    
+    # Estimates in PLN
+    daily_budget_low = Column(DECIMAL(10, 2)) # hostel, street food, transport
+    daily_budget_mid = Column(DECIMAL(10, 2)) # budget hotel, casual dining
+    daily_budget_high = Column(DECIMAL(10, 2)) # mid-range hotel, restaurant, attractions
     
     last_updated = Column(TIMESTAMP, server_default=func.now())
 

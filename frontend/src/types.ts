@@ -15,6 +15,8 @@ export interface CountryData {
   national_dish: string | null;
   wiki_summary: string | null;
   national_symbols: string | null;
+  unique_animals: string | null;
+  unique_things: string | null;
   population: number | null;
   area: number | null;
   phone_code: string | null;
@@ -46,8 +48,12 @@ export interface CountryData {
     plug_types: string;
     voltage: number | null;
     water_safe: boolean | null;
+    water_safe_for_brushing: boolean | null;
     driving_side: string;
     card_acceptance: string;
+    best_exchange_currency: string;
+    exchange_where: string;
+    atm_advice: string;
     emergency?: {
       police: string | null;
       ambulance: string | null;
@@ -68,6 +74,9 @@ export interface CountryData {
     transport: number | null;
     accommodation: number | null;
     ratio_to_pl: number | null;
+    daily_budget_low: number | null;
+    daily_budget_mid: number | null;
+    daily_budget_high: number | null;
   };
   embassies?: {
     type: string;

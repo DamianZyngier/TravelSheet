@@ -77,6 +77,18 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
               <span className="symbols-value">{selectedCountry.national_symbols}</span>
             </div>
           )}
+          {selectedCountry.unique_animals && (
+            <div className="national-symbols-bar">
+              <span className="symbols-label">Unikalne zwierzęta:</span>
+              <span className="symbols-value">{selectedCountry.unique_animals}</span>
+            </div>
+          )}
+          {selectedCountry.unique_things && (
+            <div className="national-symbols-bar">
+              <span className="symbols-label">Coś unikalnego:</span>
+              <span className="symbols-value">{selectedCountry.unique_things}</span>
+            </div>
+          )}
           <DataSource sources={['WIKI']} />
         </div>
       </div>
