@@ -64,12 +64,12 @@ export const MapSection: React.FC<MapSectionProps> = ({
           
           {selectedCountry.longitude !== null && selectedCountry.latitude !== null && getMapSettings(selectedCountry).showDot && (
             <Marker coordinates={[selectedCountry.longitude, selectedCountry.latitude]}>
-              {/* Outer Glow/Circle for visibility */}
-              <circle r={0.1} fill="none" stroke="#fff" strokeWidth={30} opacity={0.5} vectorEffect="non-scaling-stroke" />
-              {/* Ring around the country */}
-              <circle r={0.1} fill="none" stroke="#F56565" strokeWidth={20} vectorEffect="non-scaling-stroke" />
+              {/* Outer Glow/Circle for visibility - Larger radius, thinner stroke */}
+              <circle r={0.2} fill="none" stroke="#fff" strokeWidth={15} opacity={0.4} vectorEffect="non-scaling-stroke" />
+              {/* Ring around the country - Larger radius, thinner border */}
+              <circle r={0.2} fill="none" stroke="#F56565" strokeWidth={8} vectorEffect="non-scaling-stroke" />
               {/* Small center dot for very tiny places */}
-              <circle r={0.1} fill="#F56565" stroke="#fff" strokeWidth={2} vectorEffect="non-scaling-stroke" />
+              <circle r={0.05} fill="#F56565" stroke="#fff" strokeWidth={1} vectorEffect="non-scaling-stroke" />
             </Marker>
           )}
         </ZoomableGroup>

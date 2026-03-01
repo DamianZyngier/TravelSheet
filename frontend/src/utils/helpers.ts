@@ -37,8 +37,8 @@ export const getMapSettings = (country: CountryData) => {
   if (area > 2000000) return { zoom: 2.5, showDot: false }; // Australia, Indie
   if (area > 500000) return { zoom: 5, showDot: false };   // Francja, Hiszpania
   if (area > 100000) return { zoom: 8, showDot: false };   // Polska, Grecja
-  if (area > 30000) return { zoom: 12, showDot: false };   // Belgia, Izrael (już widać bez kropki zazwyczaj)
-  if (area > 1000) return { zoom: 20, showDot: true };     // Malta, Mauritius
+  if (area > 15000) return { zoom: 12, showDot: false };   // Belgia (30k), Izrael (22k) - widać bez kropki
+  if (area > 1000) return { zoom: 20, showDot: true };     // Katar (11k), Bahrajn (765), Malta (316)
   return { zoom: 35, showDot: true };                     // Watykan, Monako
 };
 
