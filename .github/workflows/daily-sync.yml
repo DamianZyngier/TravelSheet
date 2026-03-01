@@ -31,11 +31,12 @@ jobs:
       - name: Full Data Sync
         run: |
           rm -f travel_cheatsheet.db
-          python scripts/sync_all.py
+          python scripts/sync_all.py --mode daily
 
       - name: Validate Data Integrity
         run: |
-          python scripts/test_data_integrity.py docs/data.json --full
+          # Dla daily sync nie wymuszamy --full (ambasad/unesco), bo ich nie pobieramy od zera
+          python scripts/test_data_integrity.py docs/data.json
 
       - name: Build Frontend
         run: |
@@ -45,7 +46,7 @@ jobs:
           # Po buildzie data.json został usunięty przez emptyOutDir, więc musimy go przywrócić
           cd ..
           python scripts/export_to_json.py
-          python scripts/test_data_integrity.py docs/data.json --full
+          python scripts/test_data_integrity.py docs/data.json
 
       - name: Pull latest changes
         run: |

@@ -36,7 +36,21 @@ jobs:
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
-          python scripts/sync_all.py
+          rm -f travel_cheatsheet.db
+          python scripts/sync_all.py --mode weekly
+
+      - name: Validate Data Integrity
+        run: |
+          python scripts/test_data_integrity.py docs/data.json --full
+
+      - name: Build Frontend
+        run: |
+          cd frontend
+          npm install --legacy-peer-deps
+          npm run build
+          cd ..
+          python scripts/export_to_json.py
+          python scripts/test_data_integrity.py docs/data.json --full
 
       - name: Pull latest changes
         run: |

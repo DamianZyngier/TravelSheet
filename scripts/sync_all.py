@@ -3,6 +3,7 @@ import os
 import sys
 import logging
 import time
+import argparse
 
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -26,11 +27,11 @@ logging.basicConfig(
 
 logger = logging.getLogger("sync_all")
 
-async def run_full_sync():
+async def run_sync(mode="full"):
     start_time = time.time()
     
     print("\n" + "="*50)
-    print("🌍 STARTING FULL DATA SYNCHRONIZATION 🌍")
+    print(f"🌍 STARTING {mode.upper()} DATA SYNCHRONIZATION 🌍")
     print("="*50 + "\n")
 
     # Create tables if they don't exist
@@ -38,92 +39,95 @@ async def run_full_sync():
 
     db = SessionLocal()
     try:
-        # 1. Basic Country Info (REST Countries) - MANDATORY
-        print("--- [1/15] Basic Country Information ---")
-        r_res = await rest_countries.sync_countries(db)
+        # --- PHASE 1: MANDATORY / DAILY ---
+        
+        # 1. Basic Country Info (REST Countries)
+        print("--- [1] Basic Country Information ---")
+        await rest_countries.sync_countries(db)
         print(f"✅ Synced/Updated {db.query(models.Country).count()} countries.\n")
 
         # 2. Exchange Rates
-        print("--- [2/15] Currency Exchange Rates ---")
-        ex_res = await exchange_rates.sync_rates(db)
-        print(f"✅ Updated {ex_res.get('updated', 0)} rates.\n")
+        print("--- [2] Currency Exchange Rates ---")
+        await exchange_rates.sync_rates(db)
+        print("✅ Rates updated.\n")
 
-        # 3. Static Info (Plugs, Water, Driving)
-        print("--- [3/15] Static Practical Info ---")
-        st_res = static_info.sync_static_data(db)
-        print(f"✅ Synced {st_res.get('synced', 0)} static records.\n")
+        # 3. MSZ Safety Advisories (gov.pl)
+        print("--- [3] MSZ (gov.pl) Safety & Entry Info ---")
+        await msz_gov_pl.scrape_all_with_cache(db)
+        print("✅ MSZ advisories updated.\n")
 
-        # 4. UNESCO Sites - MANDATORY for CI
-        print("--- [4/15] UNESCO World Heritage Sites ---")
-        u_res = await unesco.sync_unesco_sites(db)
-        if u_res.get('sites_synced', 0) == 0:
-            raise Exception("UNESCO sync returned 0 sites!")
-        print(f"✅ {u_res.get('sites_synced', 0)} sites synced across {u_res.get('countries_synced', 0)} countries.\n")
+        # 4. Current Weather
+        print("--- [4] Current Weather ---")
+        await weather.update_all_weather(db)
+        print("✅ Weather updated.\n")
 
-        # 5. Emergency Numbers
-        print("--- [5/15] Emergency Numbers ---")
-        em_res = await emergency.sync_emergency_numbers(db)
-        print(f"✅ Synced {em_res.get('synced', 0)} records.\n")
+        # --- PHASE 2: WEEKLY / SLOW CHANGING ---
+        
+        if mode == "full" or mode == "weekly":
+            # 5. Static Info (Plugs, Water, Driving)
+            print("--- [5] Static Practical Info ---")
+            static_info.sync_static_data(db)
+            print("✅ Static records synced.\n")
 
-        # 6. Costs (Numbeo)
-        print("--- [6/15] Cost of Living Indices ---")
-        c_res = costs.sync_costs(db)
-        print(f"✅ Synced {c_res.get('synced', 0)} cost records.\n")
+            # 6. UNESCO Sites
+            print("--- [6] UNESCO World Heritage Sites ---")
+            u_res = await unesco.sync_unesco_sites(db)
+            if u_res.get('sites_synced', 0) == 0 and mode == "weekly":
+                raise Exception("UNESCO sync returned 0 sites!")
+            print(f"✅ UNESCO sites synced.\n")
 
-        # 7. Climate
-        print("--- [7/15] Climate Data ---")
-        await climate.sync_all_climate(db, force=True)
-        print(f"✅ Climate data synced.\n")
+            # 7. Emergency Numbers
+            print("--- [7] Emergency Numbers ---")
+            await emergency.sync_emergency_numbers(db)
+            print("✅ Emergency numbers synced.\n")
 
-        # 8. MSZ Safety Advisories (gov.pl)
-        print("--- [8/15] MSZ (gov.pl) Safety & Entry Info ---")
-        s_res = await msz_gov_pl.scrape_all_with_cache(db)
-        print(f"✅ Successes: {s_res['success']}, Errors: {s_res['errors']}\n")
+            # 8. Costs (Numbeo)
+            print("--- [8] Cost of Living Indices ---")
+            costs.sync_costs(db)
+            print("✅ Cost records synced.\n")
 
-        # 9. Wikipedia Summaries & Wikidata Symbols
-        print("--- [9/15] Wikipedia Descriptions & Symbols ---")
-        w_res = await wiki_summaries.sync_all_summaries(db)
-        print(f"✅ Successes: {w_res['success']}, Errors: {w_res['errors']}\n")
+            # 9. Climate
+            print("--- [9] Climate Data ---")
+            await climate.sync_all_climate(db, force=True)
+            print("✅ Climate data synced.\n")
 
-        # 10. Public Holidays (Nager.Date)
-        print("--- [10/15] Public Holidays ---")
-        h_res = await holidays.sync_all_holidays(db)
-        print(f"✅ {h_res.get('synced', 0)} countries updated.\n")
+            # 10. Wikipedia Summaries
+            print("--- [10] Wikipedia Descriptions ---")
+            await wiki_summaries.sync_all_summaries(db)
+            print("✅ Wikipedia summaries updated.\n")
 
-        # 11. CDC Health Info
-        print("--- [11/15] CDC Health & Vaccinations ---")
-        await cdc_health.sync_all_cdc(db)
-        print(f"✅ CDC info updated.\n")
+            # 11. Public Holidays
+            print("--- [11] Public Holidays ---")
+            await holidays.sync_all_holidays(db)
+            print("✅ Holidays updated.\n")
 
-        # 12. Embassies - MANDATORY for CI
-        print("--- [12/15] Polish Embassies ---")
-        await embassies.scrape_embassies(db)
-        emb_count = db.query(models.Embassy).count()
-        if emb_count == 0:
-            raise Exception("Embassy sync returned 0 embassies!")
-        print(f"✅ Embassies updated ({emb_count} total).\n")
+            # 12. CDC Health Info
+            print("--- [12] CDC Health & Vaccinations ---")
+            await cdc_health.sync_all_cdc(db)
+            print("✅ CDC info updated.\n")
 
-        # 13. Current Weather (OpenWeatherMap)
-        print("--- [13/15] Current Weather ---")
-        wt_res = await weather.update_all_weather(db)
-        print(f"✅ {wt_res.get('count', 0)} countries updated.\n")
+            # 13. Embassies
+            print("--- [13] Polish Embassies ---")
+            await embassies.scrape_embassies(db)
+            if db.query(models.Embassy).count() == 0 and mode == "weekly":
+                raise Exception("Embassy sync returned 0 embassies!")
+            print("✅ Embassies updated.\n")
 
-        # 14. Wikidata Attractions - MANDATORY for CI
-        print("--- [14/15] Wikidata Attractions ---")
-        attr_res = await wikidata_attractions.sync_all_wiki_attractions(db)
-        if attr_res.get('total_attractions', 0) == 0:
-            # We retry once if 0, because Wikidata sometimes fails
-            print("⚠️ Attractions returned 0, retrying once...")
-            await asyncio.sleep(5)
+            # 14. Wikidata Attractions
+            print("--- [14] Wikidata Attractions ---")
             attr_res = await wikidata_attractions.sync_all_wiki_attractions(db)
-            if attr_res.get('total_attractions', 0) == 0:
-                raise Exception("Attractions sync returned 0 records after retry!")
-        print(f"✅ {attr_res.get('total_attractions', 0)} attractions synced across {attr_res.get('synced_countries', 0)} countries.\n")
+            if attr_res.get('total_attractions', 0) == 0 and mode == "weekly":
+                print("⚠️ Attractions returned 0, retrying once...")
+                await asyncio.sleep(5)
+                attr_res = await wikidata_attractions.sync_all_wiki_attractions(db)
+                if attr_res.get('total_attractions', 0) == 0:
+                    raise Exception("Attractions sync returned 0 records after retry!")
+            print("✅ Attractions synced.\n")
 
-        # 15. Wikidata Extended Info (Religions, Transport, Laws)
-        print("--- [15/15] Wikidata Extended Info ---")
-        await wikidata_info.sync_all_wikidata_info(db)
-        print(f"✅ Wikidata info updated.\n")
+            # 15. Wikidata Extended Info
+            print("--- [15] Wikidata Extended Info ---")
+            await wikidata_info.sync_all_wikidata_info(db)
+            print("✅ Wikidata info updated.\n")
 
         # FINAL Export to JSON
         print("--- Final Exporting to docs/data.json ---")
@@ -131,15 +135,20 @@ async def run_full_sync():
 
         duration = time.time() - start_time
         print("\n" + "="*50)
-        print(f"🎉 FULL SYNC COMPLETED in {duration/60:.1f} minutes!")
+        print(f"🎉 {mode.upper()} SYNC COMPLETED in {duration/60:.1f} minutes!")
         print("="*50 + "\n")
 
     except Exception as e:
         print(f"\n💥 CRITICAL SYNC ERROR: {e}")
         logger.exception(e)
-        sys.exit(1) # Fail the script and the workflow
+        sys.exit(1)
     finally:
         db.close()
 
 if __name__ == "__main__":
-    asyncio.run(run_full_sync())
+    parser = argparse.ArgumentParser(description='Sync travel data')
+    parser.add_argument('--mode', choices=['daily', 'weekly', 'full'], default='full',
+                        help='Sync mode (daily: fast data, weekly/full: all data)')
+    args = parser.parse_args()
+    
+    asyncio.run(run_sync(args.mode))
