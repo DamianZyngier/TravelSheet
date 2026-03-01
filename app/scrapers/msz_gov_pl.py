@@ -128,6 +128,15 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
         risk_summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
     
+    # Final cleanup: Ensure it starts with "Ministerstwo Spraw Zagranicznych"
+    risk_summary = risk_summary.strip()
+    if risk_summary.lower().startswith("msz"):
+        risk_summary = "Ministerstwo Spraw Zagranicznych" + risk_summary[3:]
+    elif not risk_summary.lower().startswith("ministerstwo"):
+        if risk_summary:
+            risk_summary = risk_summary[0].lower() + risk_summary[1:]
+        risk_summary = f"Ministerstwo Spraw Zagranicznych {risk_summary}"
+
     risk_details_list = []
     advisory_el = soup.select_one('.travel-advisory--description')
     if advisory_el: risk_details_list.append(advisory_el.get_text().strip())
