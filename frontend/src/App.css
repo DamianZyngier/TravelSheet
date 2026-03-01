@@ -2805,3 +2805,14 @@
   border: 1px solid #feb2b2;
 }
 
+
+/* Fix for cut-off letters in weather forecast */
+.forecast-condition {
+  padding-bottom: 2px;
+  line-height: 1.25 !important;
+}
+
+.forecast-day-card {
+  padding-bottom: 0.75rem !important;
+}
+
