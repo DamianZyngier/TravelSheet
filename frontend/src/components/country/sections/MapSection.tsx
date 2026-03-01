@@ -42,7 +42,9 @@ export const MapSection: React.FC<MapSectionProps> = ({
                   geo.properties?.GU_A3 === selectedCountry.iso3 ||
                   geo.properties?.name === selectedCountry.name ||
                   (selectedCountry.iso3 === "CIV" && (geo.properties?.name === "Côte d'Ivoire" || geo.properties?.name === "Cote d'Ivoire")) ||
-                  (selectedCountry.iso3 === "USA" && (geo.id === "USA" || geo.properties?.name === "United States of America"));
+                  (selectedCountry.iso3 === "USA" && (geo.id === "USA" || geo.properties?.name === "United States of America")) ||
+                  (selectedCountry.iso3 === "COD" && (geo.properties?.name === "Dem. Rep. Congo" || geo.properties?.name === "Democratic Republic of the Congo")) ||
+                  (selectedCountry.iso3 === "COG" && (geo.properties?.name === "Congo" || geo.properties?.name === "Republic of the Congo"));
                 
                 return (
                   <Geography
