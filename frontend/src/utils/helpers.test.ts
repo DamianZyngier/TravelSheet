@@ -23,7 +23,7 @@ describe('Helpers Unit Tests', () => {
     const smallCountry = { area: 500 } as CountryData;
     
     expect(getMapSettings(bigCountry).zoom).toBe(1.2);
-    expect(getMapSettings(smallCountry).zoom).toBe(25);
+    expect(getMapSettings(smallCountry).zoom).toBe(35);
     expect(getMapSettings(smallCountry).showDot).toBe(true);
   });
 

@@ -72,16 +72,19 @@ export const SECTIONS = [
   { id: 'docs', label: 'Dokumenty', icon: '🛂' },
   { id: 'info', label: 'Informacje', icon: 'ℹ️' },
   { id: 'currency', label: 'Waluta', icon: '💰' },
+  { id: 'water', label: 'Woda z kranu', icon: '🚰' },
   { id: 'plugs', label: 'Gniazdka', icon: '🔌' },
   { id: 'emergency', label: 'Telefony', icon: '🚨' },
   { id: 'costs', label: 'Ceny', icon: '📊' },
-  { id: 'climate', label: 'Pogoda', icon: '🌤️' },
+  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️' },
+  { id: 'climate', label: 'Klimat', icon: '🌤️' },
   { id: 'holidays', label: 'Święta', icon: '📅' },
   { id: 'embassies', label: 'Ambasady', icon: '🏢' },
   { id: 'attractions', label: 'Atrakcje', icon: '📍' },
   { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️' },
   { id: 'health', label: 'Zdrowie', icon: '💉' },
   { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️' },
+  { id: 'law', label: 'Prawo', icon: '⚖️' },
 ];
 
 export const ALIASES: Record<string, string[]> = {

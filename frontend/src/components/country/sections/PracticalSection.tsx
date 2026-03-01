@@ -46,6 +46,13 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
             </div>
           </div>
+
+          <div className="info-block">
+            <label>Komunikacja</label>
+            <div className="driving-info-box">
+              <span>📱 {selectedCountry.popular_apps || 'WhatsApp'}</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -87,6 +94,10 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
           <label>Wymagane dokumenty (dla Polaków)</label>
         </div>
         <div className="docs-grid">
+          <div className="doc-item doc-main" style={{ borderLeftColor: '#4299e1' }}>
+            <strong>Wymagany dokument</strong>
+            <span>🆔 {selectedCountry.id_requirement || 'Paszport'}</span>
+          </div>
           <div className={`doc-item ${selectedCountry.entry?.passport_required ? 'doc-yes' : 'doc-no'}`}>
             <strong>Paszport</strong>
             <span>{selectedCountry.entry?.passport_required ? '✅ TAK' : '❌ NIE'}</span>

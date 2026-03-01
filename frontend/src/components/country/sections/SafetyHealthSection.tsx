@@ -95,7 +95,7 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
 
         {/* Nowa sekcja Prawo i Obyczaje */}
         {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards) && (
-          <div className="law-environment-grid" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+          <div id="law" className="law-environment-grid scroll-mt" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
             {selectedCountry.alcohol_status && (
               <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
                 <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Alkohol:</strong>

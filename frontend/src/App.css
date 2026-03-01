@@ -2283,3 +2283,29 @@
   text-overflow: ellipsis;
   width: 100%;
 }
+
+/* Prominent Symbols and Unique Items */
+.national-symbols-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fdf2f7;
+  border-radius: 10px;
+  margin-top: 0.75rem;
+  border-left: 4px solid #ed64a6;
+}
+
+.symbols-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #b83280;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.symbols-value {
+  font-size: 0.95rem;
+  color: #2d3748;
+  font-weight: 600;
+}

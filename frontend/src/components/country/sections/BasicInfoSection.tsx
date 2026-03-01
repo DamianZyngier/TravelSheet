@@ -60,14 +60,6 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             <span>🍽️ {selectedCountry.national_dish}</span>
           </div>
         )}
-        <div className="info-item-box">
-          <strong>Dowód tożsamości:</strong>
-          <span>{selectedCountry.id_requirement || 'Brak danych'}</span>
-        </div>
-        <div className="info-item-box">
-          <strong>Najpopularniejsze apki:</strong>
-          <span>{selectedCountry.popular_apps || 'Brak danych'}</span>
-        </div>
         {selectedCountry.main_airport && (
           <div className="info-item-box full">
             <strong>Główne lotnisko:</strong>
