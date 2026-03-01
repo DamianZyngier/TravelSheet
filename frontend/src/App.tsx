@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
+import Footer from './components/layout/Footer'
+import LegalModal from './components/layout/LegalModal'
 import CountryGrid from './components/country/CountryGrid'
 import CountryDetail from './components/country/CountryDetail'
 import type { CountryData } from './types'
@@ -29,19 +31,9 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   })
   const [showOnlyFavorites, setShowOnlyFavorites] = useState(false)
+  const [legalModal, setLegalModal] = useState<{ isOpen: boolean, type: 'terms' | 'license' }>({ isOpen: false, type: 'terms' })
   
   const [mapPosition, setMapPosition] = useState<{ coordinates: [number, number], zoom: number }>({ coordinates: [0, 0], zoom: 1 })
-...
-  useEffect(() => {
-    localStorage.setItem('travelsheet_favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
-  const toggleFavorite = (iso2: string) => {
-    setFavorites(prev => 
-      prev.includes(iso2) ? prev.filter(i => i !== iso2) : [...prev, iso2]
-    );
-  };
-
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -60,6 +52,16 @@ function App() {
         setLoading(false)
       })
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('travelsheet_favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  const toggleFavorite = (iso2: string) => {
+    setFavorites(prev => 
+      prev.includes(iso2) ? prev.filter(i => i !== iso2) : [...prev, iso2]
+    );
+  };
 
   const continents = useMemo(() => {
     try {
@@ -156,7 +158,6 @@ function App() {
       .filter(c => {
         if (!c || !c.safety) return false;
         
-        // Favorites filter
         if (showOnlyFavorites && !favorites.includes(c.iso2)) return false;
 
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
@@ -174,7 +175,7 @@ function App() {
         return matchSafety && matchContinent && matchSearch;
       })
       .sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
-  }, [countries, filterSafety, filterContinent, searchQuery]);
+  }, [countries, filterSafety, filterContinent, searchQuery, showOnlyFavorites, favorites]);
 
   const sortedFullList = useMemo(() => {
     if (!countries || typeof countries !== 'object') return [];
@@ -274,6 +275,11 @@ function App() {
               toggleFavorite={toggleFavorite}
             />
           </main>
+
+          <Footer 
+            onOpenTerms={() => setLegalModal({ isOpen: true, type: 'terms' })}
+            onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
+          />
         </>
       ) : (
         <div className="detail-view-layout">
@@ -310,6 +316,34 @@ function App() {
           </div>
         </div>
       )}
+
+      <LegalModal 
+        isOpen={legalModal.isOpen} 
+        title={legalModal.type === 'terms' ? 'Regulamin Serwisu' : 'Licencja i Prawa Autorskie'}
+        onClose={() => setLegalModal({ ...legalModal, isOpen: false })}
+      >
+        {legalModal.type === 'terms' ? (
+          <div className="legal-text">
+            <h3>1. Postanowienia ogólne</h3>
+            <p>TripSheet jest agregatorem danych publicznych mającym na celu ułatwienie planowania podróży. Dane pochodzą z zewnętrznych źródeł (MSZ, CDC, UNESCO, Wikidata, Open-Meteo).</p>
+            
+            <h3>2. Odpowiedzialność</h3>
+            <p>Informacje prezentowane w serwisie mają charakter wyłącznie informacyjny. Autor serwisu nie ponosi odpowiedzialności za jakiekolwiek szkody wynikające z błędnych danych lub ich nieaktualności. Zawsze weryfikuj dane w oficjalnych źródłach rządowych.</p>
+            
+            <h3>3. Prawa autorskie</h3>
+            <p>Struktura serwisu, kod źródłowy oraz sposób prezentacji danych są chronione prawem autorskim.</p>
+          </div>
+        ) : (
+          <div className="legal-text">
+            <h3>Licencja Danych i Oprogramowania</h3>
+            <p>Wszystkie dane zagregowane w niniejszym serwisie są udostępniane użytkownikowi końcowemu wyłącznie do użytku osobistego.</p>
+            <div style={{ padding: '1rem', backgroundColor: '#fff5f5', borderLeft: '4px solid #f56565', margin: '1rem 0' }}>
+              <strong>BARDZO WAŻNE:</strong> Zakazuje się kopiowania, redystrybucji, odsprzedaży oraz jakiegokolwiek publicznego rozpowszechniania bazy danych oraz treści serwisu TripSheet bez wyraźnej, pisemnej zgody autora.
+            </div>
+            <p>Naruszenie tych warunków może skutkować podjęciem kroków prawnych.</p>
+          </div>
+        )}
+      </LegalModal>
     </div>
   )
 }

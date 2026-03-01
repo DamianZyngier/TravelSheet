@@ -93,9 +93,14 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
           )}
         </div>
 
-        {/* Nowa sekcja Prawo i Obyczaje */}
-        {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code) && (
-          <div id="law" className="law-environment-grid scroll-mt" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+        <div id="law" className="section-header scroll-mt" style={{ marginTop: '2rem' }}>
+          <span className="section-header-icon">⚖️</span>
+          <label>Prawo i obyczaje</label>
+        </div>
+
+        {/* Sekcja Prawo i Obyczaje */}
+        {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code || selectedCountry.practical.local_norms) ? (
+          <div className="law-environment-grid" style={{ marginTop: '1rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
             {selectedCountry.alcohol_status && (
               <div className="law-item">
                 <strong>Alkohol:</strong>
@@ -141,6 +146,8 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
               </div>
             )}
           </div>
+        ) : (
+          <div className="no-data-msg">Brak szczegółowych informacji o prawie i obyczajach dla tego kraju.</div>
         )}
         
         <div className="travel-disclaimer">
