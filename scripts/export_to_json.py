@@ -95,9 +95,17 @@ def export_all():
             
             # Safety
             if c.safety:
+                labels = {
+                    'low': 'zachowanie zwykłej ostrożności', 
+                    'medium': 'zachowanie szczególnej ostrożności', 
+                    'high': 'odradzane podróże, które nie są konieczne', 
+                    'critical': 'odradzane wszelkie podróże'
+                }
+                fallback_text = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(c.safety.risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
+                
                 processed_data["safety"] = {
                     "risk_level": c.safety.risk_level or "unknown",
-                    "risk_text": c.safety.summary or f"Ministerstwo Spraw Zagranicznych zaleca zachowanie ostrożności podczas podróży do tego kraju.",
+                    "risk_text": c.safety.summary or fallback_text,
                     "risk_details": c.safety.risk_details or "",
                     "url": c.safety.full_url or "",
                     "last_updated": str(c.safety.last_checked) if c.safety.last_checked else None
