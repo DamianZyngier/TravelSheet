@@ -67,7 +67,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswana",
+        "name": "Tswany",
         "is_official": 1
       },
       {
@@ -134,9 +134,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.03,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 22.39,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -408,9 +408,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 31.0,
+      "temp": 28.0,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [],
     "unesco_places": [
@@ -580,9 +580,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.23,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 33.23,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -683,7 +683,7 @@
       {
         "month": 4,
         "temp_day": 36,
-        "temp_night": 25,
+        "temp_night": 24,
         "rain": 151
       },
       {
@@ -815,9 +815,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.29,
+      "temp": 5.62,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -1026,9 +1026,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 8.48,
+      "temp": 12.79,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -1873,9 +1873,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.05,
-      "condition": "Haze",
-      "icon": "50d"
+      "temp": 12.05,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -2353,9 +2353,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.09,
+      "temp": 35.7,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -2570,9 +2570,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.51,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 23.51,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -3068,9 +3068,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.82,
+      "temp": 11.73,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -3583,9 +3583,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.48,
+      "temp": 26.36,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -3759,7 +3759,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.3,
+      "temp": 28.11,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -3930,9 +3930,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.34,
+      "temp": 16.03,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -4097,13 +4097,13 @@
         "month": 2,
         "temp_day": 10,
         "temp_night": 3,
-        "rain": 59
+        "rain": 58
       },
       {
         "month": 3,
         "temp_day": 13,
         "temp_night": 4,
-        "rain": 123
+        "rain": 124
       },
       {
         "month": 4,
@@ -4243,9 +4243,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.92,
+      "temp": 27.08,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -4405,9 +4405,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 0.82,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 14.82,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -4652,9 +4652,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.76,
+      "temp": 25.74,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [
@@ -4693,7 +4693,7 @@
         "month": 4,
         "temp_day": 30,
         "temp_night": 25,
-        "rain": 355
+        "rain": 354
       },
       {
         "month": 5,
@@ -4828,9 +4828,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.98,
-      "condition": "Dust",
-      "icon": "50n"
+      "temp": 32.98,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -4971,7 +4971,7 @@
         "is_official": 1
       },
       {
-        "name": "Jeszcze jeden",
+        "name": "Ponownie",
         "is_official": 1
       }
     ],
@@ -5022,9 +5022,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.53,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 18.17,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -5188,9 +5188,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.09,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 14.88,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -6078,9 +6078,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.49,
+      "temp": 22.49,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -6223,7 +6223,7 @@
         "month": 2,
         "temp_day": 21,
         "temp_night": 10,
-        "rain": 81
+        "rain": 80
       },
       {
         "month": 3,
@@ -6235,7 +6235,7 @@
         "month": 4,
         "temp_day": 19,
         "temp_night": 10,
-        "rain": 183
+        "rain": 182
       },
       {
         "month": 5,
@@ -6366,9 +6366,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.0,
+      "temp": 25.0,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -6652,9 +6652,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.09,
+      "temp": 33.09,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -6827,9 +6827,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.97,
+      "temp": 27.97,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -6989,9 +6989,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 3.7,
+      "temp": 11.76,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -7371,9 +7371,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.53,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 16.24,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -7653,7 +7653,7 @@
       {
         "month": 6,
         "temp_day": 27,
-        "temp_night": 15,
+        "temp_night": 16,
         "rain": 76
       },
       {
@@ -7778,7 +7778,7 @@
     "weather": {
       "temp": 25.82,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -7942,9 +7942,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.28,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 11.51,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -8215,9 +8215,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.51,
+      "temp": 25.6,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -8600,9 +8600,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.56,
+      "temp": 12.16,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [
@@ -8789,9 +8789,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.15,
+      "temp": 25.39,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -8878,13 +8878,13 @@
         "month": 3,
         "temp_day": 30,
         "temp_night": 26,
-        "rain": 335
+        "rain": 336
       },
       {
         "month": 4,
         "temp_day": 30,
         "temp_night": 26,
-        "rain": 289
+        "rain": 290
       },
       {
         "month": 5,
@@ -8902,7 +8902,7 @@
         "month": 7,
         "temp_day": 30,
         "temp_night": 26,
-        "rain": 99
+        "rain": 98
       },
       {
         "month": 8,
@@ -9036,9 +9036,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.81,
-      "condition": "Clouds",
-      "icon": "03d"
+      "temp": 9.1,
+      "condition": "Rain",
+      "icon": "10n"
     },
     "embassies": [
       {
@@ -9344,9 +9344,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.6,
+      "temp": 24.37,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -9499,7 +9499,7 @@
         "month": 4,
         "temp_day": 34,
         "temp_night": 21,
-        "rain": 91
+        "rain": 92
       },
       {
         "month": 5,
@@ -9634,9 +9634,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 6.27,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 7.77,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [
       {
@@ -9937,7 +9937,7 @@
         "month": 8,
         "temp_day": 26,
         "temp_night": 15,
-        "rain": 73
+        "rain": 74
       },
       {
         "month": 9,
@@ -10048,9 +10048,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.74,
+      "temp": 29.74,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -10122,7 +10122,7 @@
         "month": 5,
         "temp_day": 30,
         "temp_night": 21,
-        "rain": 95
+        "rain": 96
       },
       {
         "month": 6,
@@ -10247,9 +10247,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.76,
-      "condition": "Clouds",
-      "icon": "02d"
+      "temp": 20.81,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [
@@ -10455,9 +10455,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.97,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 27.4,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -10638,7 +10638,7 @@
         "month": 10,
         "temp_day": 30,
         "temp_night": 23,
-        "rain": 427
+        "rain": 426
       },
       {
         "month": 11,
@@ -10737,9 +10737,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.66,
+      "temp": 27.35,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -10908,9 +10908,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.96,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 20.24,
+      "condition": "Fog",
+      "icon": "50d"
     },
     "embassies": [
       {
@@ -11198,7 +11198,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.9,
+      "temp": 2.97,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -11736,9 +11736,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.67,
+      "temp": 27.45,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -11802,7 +11802,7 @@
       },
       {
         "month": 7,
-        "temp_day": 31,
+        "temp_day": 32,
         "temp_night": 26,
         "rain": 69
       },
@@ -11920,9 +11920,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.23,
+      "temp": 27.45,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -12094,9 +12094,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 12.67,
+      "temp": 15.5,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -12237,7 +12237,7 @@
         "month": 1,
         "temp_day": 19,
         "temp_night": 12,
-        "rain": 323
+        "rain": 322
       },
       {
         "month": 2,
@@ -12249,7 +12249,7 @@
         "month": 3,
         "temp_day": 19,
         "temp_night": 11,
-        "rain": 361
+        "rain": 360
       },
       {
         "month": 4,
@@ -12403,9 +12403,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.79,
+      "temp": 17.63,
       "condition": "Rain",
-      "icon": "10d"
+      "icon": "09n"
     },
     "embassies": [
       {
@@ -12947,7 +12947,7 @@
         "month": 4,
         "temp_day": 26,
         "temp_night": 25,
-        "rain": 39
+        "rain": 40
       },
       {
         "month": 5,
@@ -13086,9 +13086,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.71,
+      "temp": 23.71,
       "condition": "Rain",
-      "icon": "09d"
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [
@@ -13109,7 +13109,7 @@
         "month": 1,
         "temp_day": 29,
         "temp_night": 22,
-        "rain": 409
+        "rain": 410
       },
       {
         "month": 2,
@@ -13149,7 +13149,7 @@
       },
       {
         "month": 8,
-        "temp_day": 23,
+        "temp_day": 24,
         "temp_night": 18,
         "rain": 147
       },
@@ -13258,9 +13258,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.94,
+      "temp": 23.22,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [],
     "unesco_places": [
@@ -13439,9 +13439,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.36,
+      "temp": 33.02,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -13605,7 +13605,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.98,
+      "temp": 25.98,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -13708,7 +13708,7 @@
         "month": 3,
         "temp_day": 27,
         "temp_night": 17,
-        "rain": 161
+        "rain": 162
       },
       {
         "month": 4,
@@ -13849,9 +13849,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.0,
+      "temp": 28.0,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -14136,7 +14136,7 @@
       },
       {
         "month": 12,
-        "temp_day": 11,
+        "temp_day": 12,
         "temp_night": 9,
         "rain": 65
       }
@@ -14224,9 +14224,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 29.99,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 27.99,
+      "condition": "Rain",
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -14386,9 +14386,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.74,
-      "condition": "Clouds",
-      "icon": "03n"
+      "temp": 14.47,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -14513,7 +14513,7 @@
         "date": "2026-01-01"
       },
       {
-        "name": "Dzień Pamięci o Rewolucji 1848 r",
+        "name": "Dzień Pamięci Rewolucji 1848 r",
         "date": "2026-03-15"
       },
       {
@@ -14715,7 +14715,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.42,
+      "temp": 17.42,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -14991,9 +14991,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -3.89,
+      "temp": -1.89,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -15190,9 +15190,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 32.91,
+      "temp": 26.71,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -15430,7 +15430,7 @@
         "month": 10,
         "temp_day": 34,
         "temp_night": 24,
-        "rain": 51
+        "rain": 52
       },
       {
         "month": 11,
@@ -15525,9 +15525,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.77,
+      "temp": 23.74,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -15826,9 +15826,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 29.15,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 26.93,
+      "condition": "Rain",
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -15988,7 +15988,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.79,
+      "temp": 27.43,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -16233,7 +16233,7 @@
         "month": 3,
         "temp_day": 25,
         "temp_night": 17,
-        "rain": 265
+        "rain": 264
       },
       {
         "month": 4,
@@ -16395,9 +16395,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.04,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 7.77,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -17069,9 +17069,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 9.39,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 9.86,
+      "condition": "Mist",
+      "icon": "50d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -17142,7 +17142,7 @@
         "month": 11,
         "temp_day": 12,
         "temp_night": 5,
-        "rain": 61
+        "rain": 60
       },
       {
         "month": 12,
@@ -17234,9 +17234,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.88,
-      "condition": "Rain",
-      "icon": "09n"
+      "temp": 27.71,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -17396,9 +17396,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.36,
+      "temp": 28.25,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -17486,7 +17486,7 @@
         "date": "2026-07-01"
       },
       {
-        "name": "Dzień przyjazdu Jawajczyków",
+        "name": "Dzień przyjazdu Jawajczyka",
         "date": "2026-08-08"
       },
       {
@@ -17498,7 +17498,7 @@
         "date": "2026-10-10"
       },
       {
-        "name": "Dzień przyjazdu chińskiego",
+        "name": "Chiński dzień przyjazdu",
         "date": "2026-10-20"
       },
       {
@@ -17561,7 +17561,7 @@
         "month": 8,
         "temp_day": 32,
         "temp_night": 22,
-        "rain": 71
+        "rain": 70
       },
       {
         "month": 9,
@@ -17585,7 +17585,7 @@
         "month": 12,
         "temp_day": 30,
         "temp_night": 22,
-        "rain": 249
+        "rain": 248
       }
     ]
   },
@@ -17670,7 +17670,7 @@
     "weather": {
       "temp": 4.03,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -17902,9 +17902,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.2,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 11.98,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -18260,9 +18260,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.33,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 11.44,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -18485,9 +18485,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.86,
+      "temp": 13.09,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -18826,7 +18826,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.25,
+      "temp": 21.45,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -19028,9 +19028,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 23.33,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 26.01,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -19190,9 +19190,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.31,
+      "temp": 27.05,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -19362,9 +19362,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.92,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 19.92,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -19590,9 +19590,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.39,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 27.39,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -19752,9 +19752,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -0.91,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 4.09,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -20016,9 +20016,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.0,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 29.0,
+      "condition": "Thunderstorm",
+      "icon": "11d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -20095,7 +20095,7 @@
         "month": 12,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 147
+        "rain": 148
       }
     ]
   },
@@ -20178,9 +20178,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.9,
+      "temp": 27.99,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -20394,7 +20394,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.21,
+      "temp": 28.01,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -20584,9 +20584,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 0.56,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 8.91,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -21035,9 +21035,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.95,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 28.84,
+      "condition": "Rain",
+      "icon": "10n"
     },
     "embassies": [
       {
@@ -21206,9 +21206,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 7.37,
+      "temp": 11.71,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -22038,9 +22038,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.84,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 22.62,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -22266,8 +22266,8 @@
     },
     "weather": {
       "temp": -13.93,
-      "condition": "Clear",
-      "icon": "01d"
+      "condition": "Clouds",
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -22540,9 +22540,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.17,
+      "temp": 15.77,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -22827,9 +22827,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.94,
+      "temp": 3.94,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -23596,9 +23596,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.88,
+      "temp": 16.88,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -23896,9 +23896,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 29.87,
-      "condition": "Clouds",
-      "icon": "03d"
+      "temp": 27.15,
+      "condition": "Mist",
+      "icon": "50n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -24058,9 +24058,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 34.11,
+      "temp": 28.99,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -24275,9 +24275,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 7.6,
+      "temp": 10.01,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -24522,9 +24522,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.47,
-      "condition": "Dust",
-      "icon": "50n"
+      "temp": 21.81,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -24818,9 +24818,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 7.86,
+      "temp": 12.25,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -25469,9 +25469,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.99,
+      "temp": 27.99,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -25500,7 +25500,7 @@
         "month": 4,
         "temp_day": 30,
         "temp_night": 26,
-        "rain": 21
+        "rain": 20
       },
       {
         "month": 5,
@@ -25530,7 +25530,7 @@
         "month": 9,
         "temp_day": 32,
         "temp_night": 28,
-        "rain": 19
+        "rain": 20
       },
       {
         "month": 10,
@@ -25634,9 +25634,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.02,
+      "temp": 30.02,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -25677,7 +25677,7 @@
         "month": 6,
         "temp_day": 30,
         "temp_night": 22,
-        "rain": 259
+        "rain": 258
       },
       {
         "month": 7,
@@ -25796,9 +25796,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.07,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 36.07,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -25995,7 +25995,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.57,
+      "temp": 23.99,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -26176,9 +26176,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -0.16,
-      "condition": "Clouds",
-      "icon": "02d"
+      "temp": 2.68,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -26521,9 +26521,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.86,
+      "temp": 7.96,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -27117,9 +27117,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 7.05,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 9.88,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -27580,9 +27580,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 16.19,
+      "temp": 20.19,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -27745,9 +27745,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.37,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 24.98,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -27907,9 +27907,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.49,
-      "condition": "Fog",
-      "icon": "50n"
+      "temp": 16.49,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -28184,7 +28184,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.83,
+      "temp": 13.83,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -28460,9 +28460,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.28,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 16.91,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -28725,9 +28725,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.4,
-      "condition": "Clouds",
-      "icon": "03d"
+      "temp": 28.45,
+      "condition": "Clear",
+      "icon": "01n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -28756,7 +28756,7 @@
         "month": 4,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 93
+        "rain": 94
       },
       {
         "month": 5,
@@ -28804,7 +28804,7 @@
         "month": 12,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 31
+        "rain": 30
       }
     ]
   },
@@ -28890,9 +28890,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 21.94,
+      "temp": 22.08,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -29052,9 +29052,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.91,
-      "condition": "Fog",
-      "icon": "50n"
+      "temp": 7.04,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -29323,9 +29323,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.03,
+      "temp": 27.03,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -29384,7 +29384,7 @@
         "month": 9,
         "temp_day": 22,
         "temp_night": 20,
-        "rain": 119
+        "rain": 120
       },
       {
         "month": 10,
@@ -29438,7 +29438,7 @@
         "is_official": 1
       },
       {
-        "name": "Maltański",
+        "name": "maltański",
         "is_official": 1
       }
     ],
@@ -29489,9 +29489,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.61,
+      "temp": 18.06,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -29748,7 +29748,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.48,
+      "temp": 25.16,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -29910,9 +29910,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.76,
+      "temp": 8.76,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -30171,7 +30171,7 @@
         "month": 5,
         "temp_day": 24,
         "temp_night": 12,
-        "rain": 115
+        "rain": 116
       },
       {
         "month": 6,
@@ -30299,9 +30299,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.33,
+      "temp": 26.67,
       "condition": "Clouds",
-      "icon": "03d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -30461,7 +30461,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.24,
+      "temp": 34.01,
       "condition": "Clouds",
       "icon": "02d"
     },
@@ -30696,9 +30696,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 2.43,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 12.01,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -30930,9 +30930,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 8.96,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 13.48,
+      "condition": "Drizzle",
+      "icon": "09d"
     },
     "embassies": [
       {
@@ -31189,9 +31189,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.08,
+      "temp": 35.08,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -31420,9 +31420,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.99,
+      "temp": 22.99,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -31640,9 +31640,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.0,
+      "temp": 27.98,
       "condition": "Rain",
-      "icon": "10d"
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [
@@ -31812,9 +31812,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 8.46,
+      "temp": 14.43,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -32211,9 +32211,9 @@
       }
     ],
     "safety": {
-      "risk_level": "low",
+      "risk_level": "critical",
       "risk_text": null,
-      "risk_details": "Z uwagi na zagrożenie terrorystyczne, Ministerstwo Spraw Zagranicznych zaleca szczególną ostrożność osobom przebywającym na Malediwach.\nPoziom zagrożenia terrorystycznego na Malediwach utrzymuje się na wysokim poziomie. Choć od 2023 r. nie odnotowano zamachów terrorystycznych, na wzrost zagrożenia może mieć wpływ niestabilna sytuacja na Bliskim Wschodzie.",
+      "risk_details": "Z uwagi na konflikt na Bliskim Wschodzie oraz biorąc pod uwagę fakt, że większość połączeń lotniczych na Malediwy odbywa się przez kraje Zatoki Perskiej (np. ZEA, Katar) odradzamy wszelkie podróże na Malediwy.\nOsoby pozostające na wyspach prosimy o jak najszybsze ich opuszczenie korzystając z oferty linii lotniczych oferujących alternatywne drogi powrotu do Europy.",
       "url": null
     },
     "currency": {
@@ -32259,7 +32259,7 @@
     "weather": {
       "temp": 28.97,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -32426,13 +32426,19 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.94,
+      "temp": 26.94,
       "condition": "Rain",
-      "icon": "10d"
+      "icon": "10n"
     },
     "embassies": [],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Limu Pools",
+        "category": "Wiki Attraction",
+        "description": "tourist attraction in Niue"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -32505,7 +32511,7 @@
         "month": 12,
         "temp_day": 26,
         "temp_night": 25,
-        "rain": 111
+        "rain": 112
       }
     ]
   },
@@ -32588,9 +32594,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -1.58,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 12.42,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -32666,7 +32672,28 @@
         "description": "Bosra, once the capital of the Roman province of Arabia, was an important stopover on the ancient caravan route to Mecca. A magnificent 2nd-century Roman theatre, early Christian ruins and several mosques are found within its great walls."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Meczet Umajjadów",
+        "category": "Wiki Attraction",
+        "description": "meczet w Damaszku"
+      },
+      {
+        "name": "Bab Tuma",
+        "category": "Wiki Attraction",
+        "description": "ancient city gate of Damascus"
+      },
+      {
+        "name": "Mar Sarkis",
+        "category": "Wiki Attraction",
+        "description": "monastery in Lebanon"
+      },
+      {
+        "name": "Aqua Fresca",
+        "category": "Wiki Attraction",
+        "description": "Water Park in Syria"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -32823,8 +32850,8 @@
     },
     "weather": {
       "temp": 11.53,
-      "condition": "Rain",
-      "icon": "10n"
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -32891,7 +32918,58 @@
         "description": "Santa Ana de los Ríos de Cuenca is set in a valley surrounded by the Andean mountains in the south of Ecuador. This inland colonial town (entroterra ), now the country's third city, was founded in 1557 on the rigorous planning guidelines issued 30 years earlier by the Spanish king Charles V. Cuenca still observes the formal orthogonal town plan that it has respected for 400 years. One of the region's agricultural and administrative centres, it has been a melting pot for local and immigrant populations. Cuenca's architecture, much of which dates from the 18th century, was 'modernized' in the economic prosperity of the 19th century as the city became a major exporter of quinine, straw hats and other products."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Galapagos",
+        "category": "Wiki Attraction",
+        "description": "Archipelago in the Pacific Ocean, part of Ecuador since 1832"
+      },
+      {
+        "name": "Mitad del Mundo",
+        "category": "Wiki Attraction",
+        "description": "monument park in Ecuador"
+      },
+      {
+        "name": "Plaza de la Independencia",
+        "category": "Wiki Attraction",
+        "description": "plaza in Ecuador"
+      },
+      {
+        "name": "Vulqano Park",
+        "category": "Wiki Attraction",
+        "description": "amusement park in Quito, Ecuador"
+      },
+      {
+        "name": "Puente Roto",
+        "category": "Wiki Attraction",
+        "description": "bridge and landmark in Cuenca, Azuay, Ecuador"
+      },
+      {
+        "name": "Turi viewpoint",
+        "category": "Wiki Attraction",
+        "description": "viewpoint in Turi, Azuay Province, Ecuador"
+      },
+      {
+        "name": "Mundayacu Canyon",
+        "category": "Wiki Attraction",
+        "description": "canyon in Napo Province, Ecuador"
+      },
+      {
+        "name": "Cerro Cojitambo",
+        "category": "Wiki Attraction",
+        "description": "Ecuadorian mountain in Azogues, Cañar, Ecuador"
+      },
+      {
+        "name": "Cerro Abuga",
+        "category": "Wiki Attraction",
+        "description": "Ecuadorian mountain in Azogues, Cañar, Ecuador"
+      },
+      {
+        "name": "La Ronda Street",
+        "category": "Wiki Attraction",
+        "description": "tourist attraction in Quito, Ecuador"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -33096,9 +33174,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.42,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 11.42,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -33148,7 +33226,18 @@
         "description": "The Parthian Fortresses of Nisa consist of two tells of Old and New Nisa, indicating the site of one of the earliest and most important cities of the Parthian Empire, a major power from the mid 3rd century BC to the 3rd century AD. They conserve the unexcavated remains of an ancient civilization which skilfully combined its own traditional cultural elements with those of the Hellenistic and Roman west. Archaeological excavations in two parts of the site have revealed richly decorated architecture, illustrative of domestic, state and religious functions. Situated at the crossroads of important commercial and strategic axes, this powerful empire formed a barrier to Roman expansion while serving as an important communication and trading centre between east and west, north and south."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Pomnik Niepodległości w Aszchabadzie",
+        "category": "Wiki Attraction",
+        "description": "pomnik znajdujący się w Aszchabadzie"
+      },
+      {
+        "name": "World of Turkmenbashi Tales",
+        "category": "Wiki Attraction",
+        "description": "theme Park in Ashgabat, Turkmenistan"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -33160,7 +33249,7 @@
       {
         "month": 2,
         "temp_day": 9,
-        "temp_night": -1,
+        "temp_night": 0,
         "rain": 3
       },
       {
@@ -33307,9 +33396,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.31,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 28.21,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -33348,7 +33437,7 @@
       },
       {
         "month": 6,
-        "temp_day": 29,
+        "temp_day": 28,
         "temp_night": 27,
         "rain": 98
       },
@@ -33469,9 +33558,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 29.99,
+      "temp": 25.99,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -33484,7 +33573,13 @@
       }
     ],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Jerudong Park",
+        "category": "Wiki Attraction",
+        "description": "Amusement park in Brunei"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -33644,9 +33739,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 8.07,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 12.31,
+      "condition": "Clouds",
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -33723,7 +33818,58 @@
         "description": "The historic centre of Shakhrisyabz contains a collection of exceptional monuments and ancient quarters which bear witness to the city's secular development, and particularly to the period of its apogee, under the rule of Amir Temur and the Temurids, in the 15th-16th century."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Mauzoleum Samanidów",
+        "category": "Wiki Attraction",
+        "description": "mausoleum"
+      },
+      {
+        "name": "Kalyan Minaret",
+        "category": "Wiki Attraction",
+        "description": "minaret in Bukhara, Uzbekistan; the last surviving fragment of the Kara-khanid era mosque built by Mohammad Arslan Khan in 1127"
+      },
+      {
+        "name": "Kukeltasz",
+        "category": "Wiki Attraction",
+        "description": "geographical object"
+      },
+      {
+        "name": "Amir Timur Museum",
+        "category": "Wiki Attraction",
+        "description": "museum in Tashkent, Uzbekistan"
+      },
+      {
+        "name": "Chor Minor",
+        "category": "Wiki Attraction",
+        "description": "mosque in Bukhara, Uzbekistan"
+      },
+      {
+        "name": "Magok-i-Attari Mosque",
+        "category": "Wiki Attraction",
+        "description": "mosque in Bukhara, Uzbekistan"
+      },
+      {
+        "name": "Chashma-Ayub Mausoleum",
+        "category": "Wiki Attraction",
+        "description": "Historic site in Uzbekistan"
+      },
+      {
+        "name": "Ak-Saray Palace",
+        "category": "Wiki Attraction",
+        "description": "Timur's palace in Shahrisabz"
+      },
+      {
+        "name": "Bolo Haouz Mosque",
+        "category": "Wiki Attraction",
+        "description": "mosque in Bukhara, Uzbekistan"
+      },
+      {
+        "name": "Ulugh beg Madrassah",
+        "category": "Wiki Attraction",
+        "description": "madrassah in Bukhara"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -33748,7 +33894,7 @@
         "month": 4,
         "temp_day": 25,
         "temp_night": 12,
-        "rain": 11
+        "rain": 12
       },
       {
         "month": 5,
@@ -33814,7 +33960,7 @@
     "area": 765.0,
     "timezone": null,
     "national_dish": null,
-    "wiki_summary": "Bahrajn, oficjalnie Królestwo Bahrajnu – państwo o ustroju monarchicznym, położone w Azji, w Zatoce Perskiej, na archipelagu między Katarem a północno-wschodnim wybrzeżem Arabii Saudyjskiej. W 1971 roku uzyskał niepodległość. Od lat 30. XX wieku wydobywa się tam ropę naftową, a uzyskane dochody inwestuje na miejscu. Od 2002 roku panujący Bahrajnem używa tytułu król, wcześniej posługiwał się tytułem emir.",
+    "wiki_summary": "Bahrajn, oficjalnie Królestwo Bahrajnu – państwo o ustroju monarchicznym, położone w Azji, w Zatoce Perskiej, na archipelagu między Katarem a wschodnim wybrzeżem Arabii Saudyjskiej. W 1971 roku uzyskał niepodległość. Od lat 30. XX wieku wydobywa się tam ropę naftową, a uzyskane dochody inwestuje na miejscu. Od 2002 roku panujący Bahrajnem używa tytułu król.",
     "national_symbols": null,
     "phone_code": "+973",
     "largest_cities": null,
@@ -33879,7 +34025,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.99,
+      "temp": 21.99,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -33913,7 +34059,18 @@
         "description": "The Dilmun Burial Mounds, built between 2200 and 1750 BCE, span over 21 archaeological sites in the western part of the island. Six of these sites are burial mound fields consisting of a few dozen to several thousand tumuli. In all there are about 11,774 burial mounds, originally in the form of cylindrical low towers. The other 15 sites include 17 royal mounds, constructed as two-storey sepulchral towers. The burial mounds are evidence of the Early Dilmun civilization, around the 2nd millennium BCE, during which Bahrain became a trade hub whose prosperity enabled the inhabitants to develop an elaborate burial tradition applicable to the entire population. These tombs illustrate globally unique characteristics, not only in terms of their number, density and scale, but also in terms of details such as burial chambers equipped with alcoves."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Bab Al Bahrain",
+        "category": "Wiki Attraction",
+        "description": "historical building located in the Customs Square in the central business district of Manama"
+      },
+      {
+        "name": "The Lost Paradise of Dilmun",
+        "category": "Wiki Attraction",
+        "description": "water park in Bahrain"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -34072,9 +34229,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.3,
+      "temp": 26.02,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -34085,7 +34242,7 @@
         "month": 1,
         "temp_day": 26,
         "temp_night": 25,
-        "rain": 21
+        "rain": 20
       },
       {
         "month": 2,
@@ -34133,7 +34290,7 @@
         "month": 9,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 101
+        "rain": 102
       },
       {
         "month": 10,
@@ -34234,9 +34391,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -3.76,
-      "condition": "Clouds",
-      "icon": "03d"
+      "temp": 11.63,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -34259,7 +34416,13 @@
         "description": "The Struve Arc is a chain of survey triangulations stretching from Hammerfest in Norway to the Black Sea, through 10 countries and over 2,820 km. These are points of a survey, carried out between 1816 and 1855 by the astronomer Friedrich Georg Wilhelm Struve, which represented the first accurate measuring of a long segment of a meridian. This helped to establish the exact size and shape of the planet and marked an important step in the development of earth sciences and topographic mapping. It is an extraordinary example of scientific collaboration among scientists from different countries, and of collaboration between monarchs for a scientific cause. The original arc consisted of 258 main triangles with 265 main station points. The listed site includes 34 of the original station points, with different markings, i.e. a drilled hole in rock, iron cross, cairns, or built obelisks."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Pałac Rady Kraju",
+        "category": "Wiki Attraction",
+        "description": "historical and architectural monument of national importance in Moldova"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -34488,9 +34651,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.79,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 29.67,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -34513,7 +34676,58 @@
         "description": "Le Morne Cultural Landscape, a rugged mountain that juts into the Indian Ocean in the southwest of Mauritius was used as a shelter by runaway slaves, maroons, through the 18th and early years of the 19th centuries. Protected by the mountain’s isolated, wooded and almost inaccessible cliffs, the escaped slaves formed small settlements in the caves and on the summit of Le Morne. The oral traditions associated with the maroons, have made Le Morne a symbol of the slaves’ fight for freedom, their suffering, and their sacrifice, all of which have relevance to the countries from which the slaves came - the African mainland, Madagascar, India, and South-east Asia. Indeed, Mauritius, an important stopover in the eastern slave trade, also came to be known as the “Maroon republic” because of the large number of escaped slaves who lived on Le Morne Mountain."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Blue Bay Marine Park",
+        "category": "Wiki Attraction",
+        "description": "located in the South East coast, Mauritius"
+      },
+      {
+        "name": "Casela World of Adventures",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Ebony Forest Chamarel",
+        "category": "Wiki Attraction",
+        "description": "protected area in Mauritius"
+      },
+      {
+        "name": "Pont Naturel",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Crystal Coral rock",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Casela Nature Parks",
+        "category": "Wiki Attraction",
+        "description": "a park located in Mauritius"
+      },
+      {
+        "name": "Mauritius Aquarium",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "La Roche qui Pleure",
+        "category": "Wiki Attraction",
+        "description": "scenic viewpoint in Souillac, Mauritius"
+      },
+      {
+        "name": "Maconde Viewpoint",
+        "category": "Wiki Attraction",
+        "description": "scenic viewpoint in Mauritius"
+      },
+      {
+        "name": "Plaine Champagne Road",
+        "category": "Wiki Attraction",
+        "description": "a road situated in Black River in Mauritius"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -34673,7 +34887,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.19,
+      "temp": 27.19,
       "condition": "Rain",
       "icon": "10n"
     },
@@ -34740,7 +34954,7 @@
         "month": 10,
         "temp_day": 25,
         "temp_night": 24,
-        "rain": 189
+        "rain": 188
       },
       {
         "month": 11,
@@ -34844,8 +35058,8 @@
     },
     "weather": {
       "temp": 28.59,
-      "condition": "Rain",
-      "icon": "10d"
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -34877,7 +35091,23 @@
         "description": "In the heart of the small island of Praslin, the reserve has the vestiges of a natural palm forest preserved in almost its original state. The famous coco de mer, from a palm-tree once believed to grow in the depths of the sea, is the largest seed in the plant kingdom."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Anse Lazio",
+        "category": "Wiki Attraction",
+        "description": "beach situated in the northwest of Praslin Island, Seychelles"
+      },
+      {
+        "name": "Anse Georgette",
+        "category": "Wiki Attraction",
+        "description": "is a beach on Praslin Island, Seychelles"
+      },
+      {
+        "name": "Anse Fourmis",
+        "category": "Wiki Attraction",
+        "description": "beach on the Seychelles Islands"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -34937,13 +35167,13 @@
         "month": 1,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 225
+        "rain": 226
       },
       {
         "month": 2,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 367
+        "rain": 366
       },
       {
         "month": 3,
@@ -34967,7 +35197,7 @@
         "month": 6,
         "temp_day": 28,
         "temp_night": 26,
-        "rain": 203
+        "rain": 204
       },
       {
         "month": 7,
@@ -35086,9 +35316,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.0,
+      "temp": 31.0,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -35111,7 +35341,13 @@
         "description": "The town of Mbanza Kongo, located on a plateau at an altitude of 570 m, was the political and spiritual capital of the Kingdom of Kongo, one of the largest constituted states in Southern Africa from the 14th to 19th centuries. The historical area grew around the royal residence, the customary court and the holy tree, as well as the royal funeral places. When the Portuguese arrived in the 15th century they added stone buildings constructed in accordance with European methods to the existing urban conurbation built in local materials. Mbanza Kongo illustrates, more than anywhere in sub-Saharan Africa, the profound changes caused by the introduction of Christianity and the arrival of the Portuguese into Central Africa."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Miradouro da Lua",
+        "category": "Wiki Attraction",
+        "description": null
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -35267,9 +35503,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.19,
-      "condition": "Snow",
-      "icon": "13n"
+      "temp": 4.38,
+      "condition": "Drizzle",
+      "icon": "09d"
     },
     "embassies": [
       {
@@ -35301,7 +35537,58 @@
         "description": "The Struve Arc is a chain of survey triangulations stretching from Hammerfest in Norway to the Black Sea, through 10 countries and over 2,820 km. These are points of a survey, carried out between 1816 and 1855 by the astronomer Friedrich Georg Wilhelm Struve, which represented the first accurate measuring of a long segment of a meridian. This helped to establish the exact size and shape of the planet and marked an important step in the development of earth sciences and topographic mapping. It is an extraordinary example of scientific collaboration among scientists from different countries, and of collaboration between monarchs for a scientific cause. The original arc consisted of 258 main triangles with 265 main station points. The listed site includes 34 of the original station points, with different markings, i.e. a drilled hole in rock, iron cross, cairns, or built obelisks."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Dąb Tamme-Lauri",
+        "category": "Wiki Attraction",
+        "description": "najgrubszy i najstarszy dąb w Estonii"
+      },
+      {
+        "name": "Russalka Memorial",
+        "category": "Wiki Attraction",
+        "description": "monument in Kadriorg, Tallinn"
+      },
+      {
+        "name": "Mausoleum of Barclay de Tolly",
+        "category": "Wiki Attraction",
+        "description": "mausoleum in Estonia"
+      },
+      {
+        "name": "Suur Munamägi Tower",
+        "category": "Wiki Attraction",
+        "description": "observation tower in Estonia"
+      },
+      {
+        "name": "Lotte Village",
+        "category": "Wiki Attraction",
+        "description": "theme park in Estonia"
+      },
+      {
+        "name": "Old Town of Narva",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Vembu-Tembumaa",
+        "category": "Wiki Attraction",
+        "description": "theme park in Saku Parish, Estonia"
+      },
+      {
+        "name": "Orjaku study trail",
+        "category": "Wiki Attraction",
+        "description": "educational trail in Estonia"
+      },
+      {
+        "name": "Rannametsa-Tolkuse nature trail",
+        "category": "Wiki Attraction",
+        "description": "Educational trail, Rannametsa, Estonia"
+      },
+      {
+        "name": "Pärnu Coastal Meadow Hiking Trail",
+        "category": "Wiki Attraction",
+        "description": null
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -35509,13 +35796,19 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 19.44,
-      "condition": "Rain",
-      "icon": "09n"
+      "temp": 21.11,
+      "condition": "Mist",
+      "icon": "50d"
     },
     "embassies": [],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Bermuda Aquarium, Museum and Zoo",
+        "category": "Wiki Attraction",
+        "description": "aquarium in Flatts Village, Bermuda"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -35675,9 +35968,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 31.24,
+      "temp": 27.77,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -35777,7 +36070,58 @@
         "description": "The Tubbataha Reef Marine Park covers 96,828 ha, including the North and South Atolls and the Jessie Beazley Reef. It is a unique example of an atoll reef with a very high density of marine species; the North Islet serving as a nesting site for birds and marine turtles. The site is an excellent example of a pristine coral reef with a spectacular 100-m perpendicular wall, extensive lagoons and two coral islands."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Callao Cave",
+        "category": "Wiki Attraction",
+        "description": "cave and archaeological site in the Philippines"
+      },
+      {
+        "name": "Calauit Safari Park",
+        "category": "Wiki Attraction",
+        "description": "Philippine animal sanctuary"
+      },
+      {
+        "name": "Star City, Manila",
+        "category": "Wiki Attraction",
+        "description": "Amusement park in the Philippines"
+      },
+      {
+        "name": "Seven Lakes of San Pablo",
+        "category": "Wiki Attraction",
+        "description": "volcanic crater lakes in San Pablo, Laguna, Philippines"
+      },
+      {
+        "name": "Anjo World",
+        "category": "Wiki Attraction",
+        "description": "amusement park"
+      },
+      {
+        "name": "Sky Fun",
+        "category": "Wiki Attraction",
+        "description": "chain of amusement parks in the Philippines"
+      },
+      {
+        "name": "Paskuhan Village",
+        "category": "Wiki Attraction",
+        "description": "Philippine theme park"
+      },
+      {
+        "name": "Enchanted Kingdom",
+        "category": "Wiki Attraction",
+        "description": "theme park in the Philippines"
+      },
+      {
+        "name": "Felix Y. Manalo National Historical Landmark",
+        "category": "Wiki Attraction",
+        "description": "National Historical Landmark for the birthplace of Felix Y. Manalo"
+      },
+      {
+        "name": "Arroyo Fountain",
+        "category": "Wiki Attraction",
+        "description": "historical landmark in the Philippines"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -35893,7 +36237,7 @@
         "month": 7,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 435
+        "rain": 434
       },
       {
         "month": 8,
@@ -36010,9 +36354,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 9.92,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 15.21,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -36044,7 +36388,53 @@
         "description": "The Vatican City, one of the most sacred places in Christendom, attests to a great history and a formidable spiritual venture. A unique collection of artistic and architectural masterpieces lie within the boundaries of this small state. At its centre is St Peter's Basilica, with its double colonnade and a circular piazza in front and bordered by palaces and gardens. The basilica, erected over the tomb of St Peter the Apostle, is the largest religious building in the world, the fruit of the combined genius of Bramante, Raphael, Michelangelo, Bernini and Maderno."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Watykan",
+        "category": "Wiki Attraction",
+        "description": "miasto-państwo w Europie Południowej"
+      },
+      {
+        "name": "bazylika św. Piotra",
+        "category": "Wiki Attraction",
+        "description": "świątynia katolicka w Watykanie, w mieście Rzym"
+      },
+      {
+        "name": "Kaplica Sykstyńska",
+        "category": "Wiki Attraction",
+        "description": "kaplica w Pałacu Apostolskim w Watykanie"
+      },
+      {
+        "name": "Pietà watykańska",
+        "category": "Wiki Attraction",
+        "description": "rzeźba Michała Anioła"
+      },
+      {
+        "name": "Cmentarz w Watykanie",
+        "category": "Wiki Attraction",
+        "description": "cmentarz znajdujący się na terenie Watykanu"
+      },
+      {
+        "name": "Grotta di Lourdes",
+        "category": "Wiki Attraction",
+        "description": "building in Vatican City"
+      },
+      {
+        "name": "Gregoriańskie Muzeum Etruskie",
+        "category": "Wiki Attraction",
+        "description": "sekcja Muzeów Watykańskich"
+      },
+      {
+        "name": "Fontana del Sacramento",
+        "category": "Wiki Attraction",
+        "description": "barokowa fontanna w Ogrodach Watykańskich z 1605 roku"
+      },
+      {
+        "name": "Terace of the Niche",
+        "category": "Wiki Attraction",
+        "description": null
+      }
+    ],
     "holidays": [
       {
         "name": "Uroczystość Maryi, Matki Bożej",
@@ -36130,7 +36520,7 @@
         "month": 4,
         "temp_day": 21,
         "temp_night": 10,
-        "rain": 37
+        "rain": 36
       },
       {
         "month": 5,
@@ -36261,9 +36651,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.82,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 23.97,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -36320,7 +36710,58 @@
         "description": "The Ciudad Universitaria de Caracas, built to the design of the architect Carlos Raúl Villanueva, between 1940 and 1960, is an outstanding example of the Modern Movement in architecture. The university campus integrates the large number of buildings and functions into a clearly articulated ensemble, including masterpieces of modern architecture and visual arts, such as the Aula Magna with the Clouds of Alexander Calder, the Olympic Stadium, and the Covered Plaza."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Salto Angel",
+        "category": "Wiki Attraction",
+        "description": "wodospad w Wenezueli"
+      },
+      {
+        "name": "Park Narodowy Canaima",
+        "category": "Wiki Attraction",
+        "description": "national park in Venezuela"
+      },
+      {
+        "name": "Bolívar Square",
+        "category": "Wiki Attraction",
+        "description": "public space in Caracas"
+      },
+      {
+        "name": "La Guaricha Zoo",
+        "category": "Wiki Attraction",
+        "description": "zoo in Maturín, Venezuela"
+      },
+      {
+        "name": "Musipán El Reino Theme Park",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Cayo Sal",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Parque El Agua",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Aguamania",
+        "category": "Wiki Attraction",
+        "description": "place"
+      },
+      {
+        "name": "Parque Francisco de Miranda La Bandera",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Monumento De Campo Oficina",
+        "category": "Wiki Attraction",
+        "description": "Atracción turística en El Tigre Anzoátegui Venezuela"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -36613,9 +37054,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.27,
+      "temp": 28.27,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -36851,9 +37292,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.09,
+      "temp": 26.09,
       "condition": "Haze",
-      "icon": "50d"
+      "icon": "50n"
     },
     "embassies": [
       {
@@ -37368,7 +37809,7 @@
         "month": 12,
         "temp_day": 28,
         "temp_night": 17,
-        "rain": 11
+        "rain": 10
       }
     ]
   },
@@ -37451,9 +37892,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.23,
+      "temp": 32.23,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [
@@ -37657,9 +38098,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 23.23,
+      "temp": 21.23,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [],
@@ -37823,9 +38264,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -2.02,
+      "temp": 4.79,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -37953,7 +38394,7 @@
         "month": 2,
         "temp_day": 4,
         "temp_night": 0,
-        "rain": 59
+        "rain": 58
       },
       {
         "month": 3,
@@ -38096,9 +38537,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.81,
+      "temp": 28.21,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -38280,9 +38721,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 23.58,
+      "temp": 26.58,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -38442,9 +38883,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 0.52,
-      "condition": "Mist",
-      "icon": "50n"
+      "temp": 8.18,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -38589,7 +39030,7 @@
         "month": 2,
         "temp_day": 4,
         "temp_night": -1,
-        "rain": 55
+        "rain": 54
       },
       {
         "month": 3,
@@ -38735,9 +39176,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.33,
+      "temp": 26.23,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -38853,7 +39294,7 @@
         "month": 11,
         "temp_day": 27,
         "temp_night": 25,
-        "rain": 115
+        "rain": 114
       },
       {
         "month": 12,
@@ -38942,9 +39383,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.16,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 34.16,
+      "condition": "Dust",
+      "icon": "50d"
     },
     "embassies": [],
     "unesco_places": [
@@ -39339,9 +39780,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.95,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 16.95,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -39573,9 +40014,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.96,
+      "temp": 26.96,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -39763,9 +40204,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.02,
+      "temp": 22.32,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -39934,9 +40375,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -0.16,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 2.84,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -40226,9 +40667,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 23.18,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 27.63,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -40384,7 +40825,7 @@
         "month": 11,
         "temp_day": 28,
         "temp_night": 21,
-        "rain": 197
+        "rain": 196
       },
       {
         "month": 12,
@@ -40477,9 +40918,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.69,
+      "temp": 35.7,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -40587,7 +41028,7 @@
       {
         "month": 6,
         "temp_day": 30,
-        "temp_night": 21,
+        "temp_night": 20,
         "rain": 33
       },
       {
@@ -40612,13 +41053,13 @@
         "month": 10,
         "temp_day": 34,
         "temp_night": 23,
-        "rain": 95
+        "rain": 96
       },
       {
         "month": 11,
         "temp_day": 35,
         "temp_night": 23,
-        "rain": 115
+        "rain": 114
       },
       {
         "month": 12,
@@ -40707,9 +41148,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.28,
+      "temp": 29.11,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -40841,7 +41282,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswana",
+        "name": "Tswany",
         "is_official": 1
       }
     ],
@@ -40892,9 +41333,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.95,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 19.95,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -41121,9 +41562,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 28.79,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 27.79,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -41292,9 +41733,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 0.06,
+      "temp": 1.42,
       "condition": "Fog",
-      "icon": "50n"
+      "icon": "50d"
     },
     "embassies": [
       {
@@ -41639,9 +42080,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 9.36,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 11.59,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -41845,9 +42286,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 5.66,
+      "temp": 7.66,
       "condition": "Rain",
-      "icon": "10n"
+      "icon": "10d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -42076,9 +42517,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 2.02,
-      "condition": "Fog",
-      "icon": "50n"
+      "temp": 5.74,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [
       {
@@ -42371,7 +42812,7 @@
         "month": 9,
         "temp_day": 15,
         "temp_night": 7,
-        "rain": 65
+        "rain": 66
       },
       {
         "month": 10,
@@ -42430,9 +42871,9 @@
       }
     ],
     "safety": {
-      "risk_level": "low",
+      "risk_level": "critical",
       "risk_text": null,
-      "risk_details": "Z uwagi na niestabilną sytuację bezpieczeństwa, Ministerstwo Spraw Zagranicznych zaleca szczególną ostrożność osobom przebywającym na Sri Lance.",
+      "risk_details": "Z uwagi na konflikt na Bliskim Wschodzie oraz biorąc pod uwagę fakt, że większość połączeń lotniczych na Sri Lankę odbywa się przez kraje Zatoki Perskiej (np. ZEA, Katar) odradzamy wszelkie podróże na Sri Lankę.\nOsoby pozostające na wyspie prosimy o jak najszybsze jej opuszczenie korzystając z oferty linii lotniczych oferujących alternatywne drogi dotarcia do Europy.",
       "url": null
     },
     "currency": {
@@ -42476,9 +42917,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 31.2,
+      "temp": 25.74,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -42595,7 +43036,7 @@
         "month": 5,
         "temp_day": 29,
         "temp_night": 21,
-        "rain": 205
+        "rain": 206
       },
       {
         "month": 6,
@@ -42720,9 +43161,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 33.15,
+      "temp": 30.27,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -42975,9 +43416,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": -5.66,
+      "temp": -4.66,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -43202,9 +43643,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.21,
+      "temp": 13.83,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -43545,7 +43986,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 16.93,
+      "temp": 22.93,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -43853,9 +44294,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.04,
+      "temp": 22.11,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -44093,8 +44534,8 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -1.57,
-      "condition": "Fog",
+      "temp": 2.01,
+      "condition": "Mist",
       "icon": "50d"
     },
     "embassies": [
@@ -44287,7 +44728,7 @@
         "date": "2026-08-15"
       },
       {
-        "name": "Dzień Świętego Andrzeja",
+        "name": "Andrzejki",
         "date": "2026-11-30"
       },
       {
@@ -44461,7 +44902,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.08,
+      "temp": 26.11,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -44495,7 +44936,18 @@
         "description": "This property encompasses the mountain range located in southern Malawi, with the imposing Mount Mulanje—one of the world’s largest inselbergs—and its surrounding environment. Revered as a sacred place inhabited by gods, spirits, and ancestors, it holds deep cultural and spiritual significance. The mountain’s geological and hydrological features are connected with the belief systems and cultural practices of the Yao, Mang’anja, and Lhomwe peoples. These communities have sustained the mountain’s sacredness through rituals and traditions, making the site a sacred cultural landscape that reflects the spiritual and ecological harmony between people and nature."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Mumbo Island",
+        "category": "Wiki Attraction",
+        "description": "island within Lake Malawi National Park"
+      },
+      {
+        "name": "Mvuu Camp",
+        "category": "Wiki Attraction",
+        "description": "located within Liwonde National Park, Malawi"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -44659,9 +45111,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.2,
+      "temp": 31.2,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -44748,7 +45200,7 @@
         "month": 3,
         "temp_day": 32,
         "temp_night": 22,
-        "rain": 213
+        "rain": 214
       },
       {
         "month": 4,
@@ -44885,9 +45337,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.42,
+      "temp": 21.42,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -44919,7 +45371,13 @@
         "description": "Located on the watershed of the Río Plátano, the reserve is one of the few remains of a tropical rainforest in Central America and has an abundant and varied plant and wildlife. In its mountainous landscape sloping down to the Caribbean coast, over 2,000 indigenous people have preserved their traditional way of life."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Cuevas de Taulabé",
+        "category": "Wiki Attraction",
+        "description": "Cave system in Honduras"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -45127,18 +45585,29 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 26.43,
+      "temp": 28.28,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "03d"
     },
     "embassies": [],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Conchi Natural Pool",
+        "category": "Wiki Attraction",
+        "description": "sacred freshwater pool"
+      },
+      {
+        "name": "Philip's Animal Garden (Aruba)",
+        "category": "Wiki Attraction",
+        "description": "Park for rescued exotic mammals, reptiles, birds & farm animals"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
         "month": 1,
-        "temp_day": 29,
+        "temp_day": 30,
         "temp_night": 26,
         "rain": 34
       },
@@ -45289,9 +45758,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.32,
+      "temp": 15.24,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -45304,7 +45773,23 @@
       }
     ],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Foire Attractions",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Place du Casino",
+        "category": "Wiki Attraction",
+        "description": "public square in Monte Carlo, Monaco"
+      },
+      {
+        "name": "La Condamine Market",
+        "category": "Wiki Attraction",
+        "description": "market in Monaco"
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -45378,7 +45863,7 @@
         "month": 4,
         "temp_day": 16,
         "temp_night": 6,
-        "rain": 75
+        "rain": 76
       },
       {
         "month": 5,
@@ -45402,7 +45887,7 @@
         "month": 8,
         "temp_day": 29,
         "temp_night": 19,
-        "rain": 21
+        "rain": 20
       },
       {
         "month": 9,
@@ -45674,9 +46159,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.49,
+      "temp": 25.14,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -45699,7 +46184,38 @@
         "description": "These are among the most spectacular waterfalls in the world. The Zambezi River, which is more than 2 km wide at this point, plunges noisily down a series of basalt gorges and raises an iridescent mist that can be seen more than 20 km away."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Leopards Hill Caves",
+        "category": "Wiki Attraction",
+        "description": "cave in Lusaka, Zambia"
+      },
+      {
+        "name": "Kalimba Reptile Park",
+        "category": "Wiki Attraction",
+        "description": "is a place where animals are situated in the basin of the Ngwerere stream in Zambia"
+      },
+      {
+        "name": "Livingstone Island",
+        "category": "Wiki Attraction",
+        "description": "an island on the edge of the Victoria Falls in Zambia"
+      },
+      {
+        "name": "Croc Valley Camp",
+        "category": "Wiki Attraction",
+        "description": "is a camp on the banks of Luangwa river, Zambia"
+      },
+      {
+        "name": "Anabezi Camp",
+        "category": "Wiki Attraction",
+        "description": "safari camp nestled on the banks of the Zambezi River"
+      },
+      {
+        "name": "Devil's Pool",
+        "category": "Wiki Attraction",
+        "description": "section of Victoria Falls near the edge of the falls on Livingstone Island on the Zambian side"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -45855,9 +46371,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.47,
+      "temp": 5.92,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -45880,7 +46396,28 @@
         "description": "The cultural landscape of Madriu-Perafita-Claror Valley offers a microcosmic perspective of the way people have harvested the resources of the high Pyrenees over millennia. Its dramatic glacial landscapes of craggy cliffs and glaciers, with high open pastures and steep wooded valleys, covers an area of 4,247 ha, 9% of the total area of the principality. It reflects past changes in climate, economic fortune and social systems, as well as the persistence of pastoralism and a strong mountain culture, notably the survival of a communal land-ownership system dating back to the 13th century. The site features houses, notably summer settlements, terraced fields, stone tracks and evidence of iron smelting."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Mirador Roc del Quer",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Naturland",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Tobotronc",
+        "category": "Wiki Attraction",
+        "description": null
+      },
+      {
+        "name": "Mirador solar de Tristaina",
+        "category": "Wiki Attraction",
+        "description": null
+      }
+    ],
     "holidays": [
       {
         "name": "Nowy Rok",
@@ -46093,13 +46630,29 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.97,
-      "condition": "Rain",
-      "icon": "10n"
+      "temp": 28.7,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Kpatawee Waterfall",
+        "category": "Wiki Attraction",
+        "description": "waterfall in Liberia"
+      },
+      {
+        "name": "Cece Beach",
+        "category": "Wiki Attraction",
+        "description": "a beach in Monrovia Liberia"
+      },
+      {
+        "name": "Wulki Farms",
+        "category": "Wiki Attraction",
+        "description": "agricultural venture in Careysburg, Liberia"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -46130,7 +46683,7 @@
         "month": 5,
         "temp_day": 32,
         "temp_night": 23,
-        "rain": 185
+        "rain": 184
       },
       {
         "month": 6,
@@ -46259,9 +46812,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.95,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 18.62,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -46338,7 +46891,58 @@
         "description": "On the eastern slopes of the Masai escarpment bordering the Great Rift Valley are natural rock shelters, overhanging slabs of sedimentary rocks fragmented by rift faults, whose vertical planes have been used for rock paintings for at least two millennia. The spectacular collection of images from over 150 shelters over 2,336 km2 , many with high artistic value, displays sequences that provide a unique testimony to the changing socio-economic base of the area from hunter-gatherer to agro-pastoralist, and the beliefs and ideas associated with the different societies. Some of the shelters are still considered to have ritual associations with the people who live nearby, reflecting their beliefs, rituals and cosmological traditions."
       }
     ],
-    "attractions": [],
+    "attractions": [
+      {
+        "name": "Kilimandżaro",
+        "category": "Wiki Attraction",
+        "description": "Najwyższa góra Afryki w Tanzanii"
+      },
+      {
+        "name": "Park Narodowy Serengeti",
+        "category": "Wiki Attraction",
+        "description": "park narodowy"
+      },
+      {
+        "name": "Old Fort of Zanzibar",
+        "category": "Wiki Attraction",
+        "description": "building in Tanzania"
+      },
+      {
+        "name": "Amboni Caves",
+        "category": "Wiki Attraction",
+        "description": "jaskinia turystyczna (Tanga, Tanzania)"
+      },
+      {
+        "name": "Darajani Market",
+        "category": "Wiki Attraction",
+        "description": "main bazaar in Stone Town, Zanzibar."
+      },
+      {
+        "name": "Old Dispensary",
+        "category": "Wiki Attraction",
+        "description": "historic building in Stone Town, Zanzibar"
+      },
+      {
+        "name": "Hamamni Persian Baths",
+        "category": "Wiki Attraction",
+        "description": "building in Tanzania"
+      },
+      {
+        "name": "Tanzania Buddhist Temple and Meditation Center",
+        "category": "Wiki Attraction",
+        "description": "buddhist temple in Dar es Salaam, Tanzania"
+      },
+      {
+        "name": "Tippu Tip's House",
+        "category": "Wiki Attraction",
+        "description": "building in Tanzania"
+      },
+      {
+        "name": "Irente View Point",
+        "category": "Wiki Attraction",
+        "description": "scenic viewpoint in Tanzania"
+      }
+    ],
     "holidays": [],
     "climate": [
       {
@@ -46497,9 +47101,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": -0.02,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 0.98,
+      "condition": "Mist",
+      "icon": "50d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -46659,9 +47263,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.39,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 16.03,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -47100,9 +47704,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -2.19,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": -1.19,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -47364,9 +47968,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.18,
+      "temp": 27.91,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -47539,9 +48143,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": -2.09,
+      "temp": -1.09,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -47750,7 +48354,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.61,
+      "temp": 21.36,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -47930,9 +48534,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.04,
+      "temp": 19.04,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -48221,7 +48825,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswana",
+        "name": "Tswany",
         "is_official": 1
       }
     ],
@@ -48272,9 +48876,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.27,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 30.27,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -48510,9 +49114,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 11.9,
-      "condition": "Clear",
-      "icon": "01d"
+      "temp": 15.9,
+      "condition": "Clouds",
+      "icon": "03n"
     },
     "embassies": [],
     "unesco_places": [
@@ -48726,9 +49330,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.78,
+      "temp": 23.78,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [
@@ -48903,8 +49507,8 @@
     },
     "weather": {
       "temp": 25.53,
-      "condition": "Clouds",
-      "icon": "02n"
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -49318,9 +49922,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.88,
+      "temp": 24.74,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -49578,9 +50182,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.37,
+      "temp": 2.27,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -49765,9 +50369,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.21,
+      "temp": 31.21,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -49949,9 +50553,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -28.03,
+      "temp": -19.03,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -50244,7 +50848,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 13.97,
+      "temp": 18.21,
       "condition": "Clear",
       "icon": "01d"
     },
@@ -50428,9 +51032,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 15.0,
+      "temp": 15.56,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -50639,9 +51243,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.01,
+      "temp": 31.01,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -50882,9 +51486,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.28,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 20.14,
+      "condition": "Mist",
+      "icon": "50d"
     },
     "embassies": [
       {
@@ -51253,9 +51857,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.96,
+      "temp": 6.64,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -51467,7 +52071,7 @@
         "month": 4,
         "temp_day": 11,
         "temp_night": 4,
-        "rain": 123
+        "rain": 124
       },
       {
         "month": 5,
@@ -51598,9 +52202,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 6.05,
-      "condition": "Fog",
-      "icon": "50n"
+      "temp": 16.82,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -51806,7 +52410,7 @@
         "month": 6,
         "temp_day": 27,
         "temp_night": 15,
-        "rain": 99
+        "rain": 100
       },
       {
         "month": 7,
@@ -51834,7 +52438,7 @@
       },
       {
         "month": 11,
-        "temp_day": 11,
+        "temp_day": 10,
         "temp_night": 2,
         "rain": 80
       },
@@ -51936,9 +52540,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.99,
+      "temp": 27.95,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -52003,7 +52607,7 @@
         "month": 10,
         "temp_day": 33,
         "temp_night": 28,
-        "rain": 23
+        "rain": 22
       },
       {
         "month": 11,
@@ -52280,9 +52884,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.42,
+      "temp": 4.97,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -52633,9 +53237,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.2,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 22.84,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [
@@ -52850,9 +53454,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.33,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 13.52,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -53267,9 +53871,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 5.13,
-      "condition": "Drizzle",
-      "icon": "09n"
+      "temp": 10.72,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -53729,9 +54333,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.72,
+      "temp": 23.36,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [
@@ -53861,7 +54465,7 @@
         "month": 9,
         "temp_day": 33,
         "temp_night": 24,
-        "rain": 147
+        "rain": 146
       },
       {
         "month": 10,
@@ -53970,9 +54574,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 3.89,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 12.22,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -54399,9 +55003,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 27.07,
+      "temp": 24.69,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -54486,7 +55090,7 @@
         "month": 2,
         "temp_day": 30,
         "temp_night": 20,
-        "rain": 33
+        "rain": 34
       },
       {
         "month": 3,
@@ -54632,9 +55236,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 25.5,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 26.3,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -54806,9 +55410,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 32.26,
+      "temp": 28.07,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -55028,9 +55632,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.76,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 23.8,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [
       {
@@ -55268,9 +55872,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 1.21,
-      "condition": "Clouds",
-      "icon": "02n"
+      "temp": 14.54,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -55430,9 +56034,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 30.97,
+      "temp": 27.97,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -55495,7 +56099,7 @@
         "month": 2,
         "temp_day": 28,
         "temp_night": 15,
-        "rain": 25
+        "rain": 26
       },
       {
         "month": 3,
@@ -55638,9 +56242,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 21.56,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 24.43,
+      "condition": "Clouds",
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -55966,9 +56570,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.81,
+      "temp": 20.93,
       "condition": "Clouds",
-      "icon": "02n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -56227,9 +56831,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 15.96,
-      "condition": "Mist",
-      "icon": "50d"
+      "temp": 19.29,
+      "condition": "Rain",
+      "icon": "10d"
     },
     "embassies": [
       {
@@ -56425,9 +57029,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.94,
+      "temp": 28.94,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -56600,9 +57204,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 34.01,
+      "temp": 29.75,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "02n"
     },
     "embassies": [
       {
@@ -56815,7 +57419,7 @@
         "is_official": 1
       },
       {
-        "name": "Tswana",
+        "name": "Tswany",
         "is_official": 1
       },
       {
@@ -56882,9 +57486,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 18.37,
-      "condition": "Rain",
-      "icon": "10d"
+      "temp": 24.36,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -57219,7 +57823,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 14.86,
+      "temp": 22.47,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -57475,9 +58079,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.94,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 27.05,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -57740,7 +58344,7 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 8.18,
+      "temp": 8.19,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -57968,7 +58572,7 @@
         "month": 8,
         "temp_day": 29,
         "temp_night": 27,
-        "rain": 275
+        "rain": 276
       },
       {
         "month": 9,
@@ -58079,7 +58683,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.93,
+      "temp": 29.93,
       "condition": "Clouds",
       "icon": "03d"
     },
@@ -58241,9 +58845,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 17.53,
+      "temp": 12.79,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04n"
     },
     "embassies": [
       {
@@ -58909,9 +59513,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.0,
-      "condition": "Clouds",
-      "icon": "02d"
+      "temp": 27.69,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -59108,9 +59712,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 10.46,
+      "temp": 13.79,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -59347,9 +59951,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 19.23,
+      "temp": 31.24,
       "condition": "Clouds",
-      "icon": "02d"
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -59558,9 +60162,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 4.57,
-      "condition": "Clear",
-      "icon": "01n"
+      "temp": 13.07,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [
       {
@@ -60224,7 +60828,7 @@
         "month": 1,
         "temp_day": 8,
         "temp_night": 1,
-        "rain": 59
+        "rain": 58
       },
       {
         "month": 2,
@@ -60384,9 +60988,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": 24.97,
-      "condition": "Rain",
-      "icon": "09n"
+      "temp": 27.95,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -60546,9 +61150,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.99,
+      "temp": 26.99,
       "condition": "Haze",
-      "icon": "50d"
+      "icon": "50n"
     },
     "embassies": [
       {
@@ -60749,9 +61353,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 23.1,
-      "condition": "Clouds",
-      "icon": "04d"
+      "temp": 34.1,
+      "condition": "Clear",
+      "icon": "01d"
     },
     "embassies": [],
     "unesco_places": [
@@ -60934,9 +61538,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -7.31,
+      "temp": -13.89,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -61291,7 +61895,7 @@
         "date": "2026-08-03"
       },
       {
-        "name": "Dzień Saskatchewana",
+        "name": "Dzień Saskatchewan",
         "date": "2026-08-03"
       },
       {
@@ -61348,7 +61952,7 @@
         "month": 3,
         "temp_day": -15,
         "temp_night": -23,
-        "rain": 17
+        "rain": 18
       },
       {
         "month": 4,
@@ -61489,8 +62093,8 @@
     },
     "weather": {
       "temp": 30.1,
-      "condition": "Rain",
-      "icon": "10d"
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [],
@@ -61650,9 +62254,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 24.51,
+      "temp": 27.6,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -61821,9 +62425,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.87,
+      "temp": 24.47,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "04n"
     },
     "embassies": [],
     "unesco_places": [
@@ -61993,9 +62597,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.3,
-      "condition": "Haze",
-      "icon": "50n"
+      "temp": 24.3,
+      "condition": "Clouds",
+      "icon": "02d"
     },
     "embassies": [],
     "unesco_places": [
@@ -62165,9 +62769,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 25.82,
+      "temp": 28.82,
       "condition": "Clouds",
-      "icon": "03n"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -62393,9 +62997,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 22.13,
+      "temp": 19.36,
       "condition": "Clear",
-      "icon": "01d"
+      "icon": "01n"
     },
     "embassies": [
       {
@@ -62635,9 +63239,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 18.12,
-      "condition": "Haze",
-      "icon": "50d"
+      "temp": 17.12,
+      "condition": "Clouds",
+      "icon": "03n"
     },
     "embassies": [
       {
@@ -62851,9 +63455,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": -1.05,
+      "temp": 18.95,
       "condition": "Clear",
-      "icon": "01n"
+      "icon": "01d"
     },
     "embassies": [
       {
@@ -63129,7 +63733,7 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 26.73,
+      "temp": 30.29,
       "condition": "Clouds",
       "icon": "04d"
     },
@@ -63193,7 +63797,7 @@
         "month": 8,
         "temp_day": 30,
         "temp_night": 22,
-        "rain": 165
+        "rain": 164
       },
       {
         "month": 9,
@@ -63304,9 +63908,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 20.06,
-      "condition": "Clouds",
-      "icon": "04n"
+      "temp": 31.06,
+      "condition": "Dust",
+      "icon": "50d"
     },
     "embassies": [],
     "unesco_places": [
@@ -63476,9 +64080,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 28.9,
+      "temp": 32.9,
       "condition": "Clouds",
-      "icon": "04n"
+      "icon": "03d"
     },
     "embassies": [
       {
@@ -63619,7 +64223,7 @@
         "month": 7,
         "temp_day": 31,
         "temp_night": 22,
-        "rain": 221
+        "rain": 222
       },
       {
         "month": 8,
@@ -63736,9 +64340,9 @@
       "visa_notes": null
     },
     "weather": {
-      "temp": 8.54,
+      "temp": 15.41,
       "condition": "Clouds",
-      "icon": "04d"
+      "icon": "02d"
     },
     "embassies": [
       {
@@ -63973,9 +64577,9 @@
       "visa_notes": ""
     },
     "weather": {
-      "temp": -0.08,
-      "condition": "Drizzle",
-      "icon": "09n"
+      "temp": 2.92,
+      "condition": "Clouds",
+      "icon": "04d"
     },
     "embassies": [],
     "unesco_places": [],
