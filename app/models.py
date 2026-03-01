@@ -163,6 +163,7 @@ class Attraction(Base):
     category = Column(String(50))
     is_must_see = Column(Boolean, default=False)
     is_unique = Column(Boolean, default=False)
+    booking_info = Column(Text) # Information about pre-booking tickets
     display_order = Column(Integer, default=0)
 
     def __repr__(self):

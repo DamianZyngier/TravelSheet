@@ -88,7 +88,14 @@ def export_all():
             processed_data["unesco_places"] = c_dict["unesco_places"]
             
             # Limited attractions
-            processed_data["attractions"] = c_dict["attractions"][:15]
+            processed_data["attractions"] = [
+                {
+                    "name": a.name,
+                    "category": a.category,
+                    "description": a.description,
+                    "booking_info": a.booking_info
+                } for a in c.attractions[:15]
+            ]
             
             # Dates to string for holidays
             processed_data["holidays"] = [

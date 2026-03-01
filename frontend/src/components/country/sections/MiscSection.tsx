@@ -149,6 +149,12 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
                       <ExpandableText text={attr.description} />
                     </div>
                   )}
+                  {attr.booking_info && (
+                    <div className="booking-info-tip" style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#2c5282', backgroundColor: '#ebf8ff', padding: '0.5rem 0.75rem', borderRadius: '8px', borderLeft: '3px solid #4299e1' }}>
+                      <span style={{ marginRight: '6px' }}>🎟️</span>
+                      <strong>Porada:</strong> {attr.booking_info}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

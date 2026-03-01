@@ -109,6 +109,7 @@ export interface CountryData {
     name: string;
     category: string;
     description?: string;
+    booking_info?: string | null;
   }[];
   unesco_places?: {
     name: string;

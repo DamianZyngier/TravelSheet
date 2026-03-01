@@ -15,16 +15,19 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
     
+    # Optimized query: only items with many sitelinks (popularity indicator)
     query = f"""
-    SELECT DISTINCT ?countryISO ?item ?itemLabel ?itemDescription ?sitelinks WHERE {{
+    SELECT DISTINCT ?countryISO ?item ?itemLabel ?itemDescription WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
       ?item wdt:P31/wdt:P279* wd:Q570116; 
-            wdt:P17 ?country.
-      ?item wikibase:sitelinks ?sitelinks.
+            wdt:P17 ?country;
+            wikibase:sitelinks ?sitelinks.
+      FILTER(?sitelinks > 15)
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     ORDER BY DESC(?sitelinks)
+    LIMIT 100
     """
 
     url = "https://query.wikidata.org/sparql"
@@ -34,9 +37,9 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
-    async with httpx.AsyncClient(timeout=60.0) as client:
+    async with httpx.AsyncClient(timeout=120.0) as client:
         try:
-            # Use POST for SPARQL to avoid URL truncation issues
+            # Use POST for SPARQL
             resp = await client.post(url, data={'query': query}, headers=headers)
             if resp.status_code != 200:
                 logger.error(f"Wikidata batch error {resp.status_code}: {resp.text[:200]}")
@@ -46,7 +49,6 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
             results = data.get("results", {}).get("bindings", [])
             
             synced = 0
-            # To avoid huge number of attractions, we'll only take top 10 per country from the results
             counts = {iso: 0 for iso in country_map.keys()}
             
             for res in results:
@@ -58,6 +60,15 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
                 description = res.get("itemDescription", {}).get("value")
                 
                 if not name or name.startswith("Q"): continue
+
+                # Heuristic for booking info
+                booking_note = None
+                text_to_check = f"{name} {description}".lower()
+                booking_keywords = ["ticket", "booking", "bilety", "rezerwacja", "wstęp płatny", "admission", "entrance fee"]
+                if any(kw in text_to_check for kw in booking_keywords):
+                    booking_note = "Zalecana wcześniejsza rezerwacja biletów online (miejsce popularne lub płatne)."
+                elif any(kw in text_to_check for kw in ["museum", "muzeum", "gallery", "galeria", "palace", "pałac", "castle", "zamek"]):
+                    booking_note = "Warto sprawdzić dostępność biletów online przed wizytą."
 
                 existing = db.query(models.Attraction).filter(
                     models.Attraction.country_id == country.id,
@@ -71,13 +82,16 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
                         description=description,
                         category='Wiki Attraction',
                         is_must_see=True,
-                        is_unique=False
+                        is_unique=False,
+                        booking_info=booking_note
                     ))
                     synced += 1
                     counts[iso] += 1
+                else:
+                    existing.booking_info = booking_note
             
             db.commit()
-            logger.info(f"Batch sync: Added {synced} attractions for {len(countries)} countries.")
+            logger.info(f"Batch sync: Added/Updated attractions for {len(countries)} countries.")
         except Exception as e:
             logger.error(f"Batch sync error: {e}")
 
