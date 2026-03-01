@@ -27,8 +27,9 @@ wheels/
 *.egg
 
 # Database
-*.db
-*.sqlite3
+# We track the SQLite DB to allow Daily Sync to update existing data
+# instead of rebuilding everything from zero.
+!travel_cheatsheet.db
 *.db-journal
 
 # Node / Frontend

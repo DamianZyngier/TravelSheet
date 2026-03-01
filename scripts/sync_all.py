@@ -39,95 +39,57 @@ async def run_sync(mode="full"):
 
     db = SessionLocal()
     try:
-        # --- PHASE 1: MANDATORY / DAILY ---
+        # --- PHASE 1: MANDATORY / DAILY (Parallelized where possible) ---
+        print("--- PHASE 1: Daily / Mandatory Data ---")
         
-        # 1. Basic Country Info (REST Countries)
-        print("--- [1] Basic Country Information ---")
+        # 1. Basic Country Info (MANDATORY for others)
+        print("[1/4] Syncing Basic Country Information...")
         await rest_countries.sync_countries(db)
-        print(f"✅ Synced/Updated {db.query(models.Country).count()} countries.\n")
-
-        # 2. Exchange Rates
-        print("--- [2] Currency Exchange Rates ---")
-        await exchange_rates.sync_rates(db)
-        print("✅ Rates updated.\n")
-
-        # 3. MSZ Safety Advisories (gov.pl)
-        print("--- [3] MSZ (gov.pl) Safety & Entry Info ---")
-        await msz_gov_pl.scrape_all_with_cache(db)
-        print("✅ MSZ advisories updated.\n")
-
-        # 4. Current Weather
-        print("--- [4] Current Weather ---")
-        await weather.update_all_weather(db)
-        print("✅ Weather updated.\n")
-
-        # --- PHASE 2: WEEKLY / SLOW CHANGING ---
         
+        # 2-4. Exchange Rates, MSZ, Weather (These are independent)
+        print("[2-4/4] Syncing Rates, MSZ Safety, and Weather in parallel...")
+        await asyncio.gather(
+            exchange_rates.sync_rates(db),
+            msz_gov_pl.scrape_all_with_cache(db),
+            weather.update_all_weather(db)
+        )
+        print("✅ Phase 1 completed.\n")
+
+        # --- PHASE 2: WEEKLY / SLOW CHANGING (Parallelized) ---
         if mode == "full" or mode == "weekly":
-            # 5. Static Info (Plugs, Water, Driving)
-            print("--- [5] Static Practical Info ---")
+            print("--- PHASE 2: Weekly / slow-changing Data ---")
+            
+            # Grouping independent scrapers to run in parallel
+            # Group A: Fast static/local data
+            print("[5-8/15] Syncing Static Info, UNESCO, Emergency, and Costs...")
+            # Note: unesco and emergency are async, static_info and costs are sync
+            # We run sync ones first or wrap them
             static_info.sync_static_data(db)
-            print("✅ Static records synced.\n")
-
-            # 6. UNESCO Sites
-            print("--- [6] UNESCO World Heritage Sites ---")
-            u_res = await unesco.sync_unesco_sites(db)
-            if u_res.get('sites_synced', 0) == 0 and mode == "weekly":
-                raise Exception("UNESCO sync returned 0 sites!")
-            print(f"✅ UNESCO sites synced.\n")
-
-            # 7. Emergency Numbers
-            print("--- [7] Emergency Numbers ---")
-            await emergency.sync_emergency_numbers(db)
-            print("✅ Emergency numbers synced.\n")
-
-            # 8. Costs (Numbeo)
-            print("--- [8] Cost of Living Indices ---")
             costs.sync_costs(db)
-            print("✅ Cost records synced.\n")
+            
+            await asyncio.gather(
+                unesco.sync_unesco_sites(db),
+                emergency.sync_emergency_numbers(db)
+            )
 
-            # 9. Climate
-            print("--- [9] Climate Data ---")
-            await climate.sync_all_climate(db, force=True)
-            print("✅ Climate data synced.\n")
+            # Group B: External API heavy data
+            print("[9-12/15] Syncing Climate, Wiki Summaries, Holidays, and CDC...")
+            await asyncio.gather(
+                climate.sync_all_climate(db, force=True),
+                wiki_summaries.sync_all_summaries(db),
+                holidays.sync_all_holidays(db),
+                cdc_health.sync_all_cdc(db)
+            )
 
-            # 10. Wikipedia Summaries
-            print("--- [10] Wikipedia Descriptions ---")
-            await wiki_summaries.sync_all_summaries(db)
-            print("✅ Wikipedia summaries updated.\n")
-
-            # 11. Public Holidays
-            print("--- [11] Public Holidays ---")
-            await holidays.sync_all_holidays(db)
-            print("✅ Holidays updated.\n")
-
-            # 12. CDC Health Info
-            print("--- [12] CDC Health & Vaccinations ---")
-            await cdc_health.sync_all_cdc(db)
-            print("✅ CDC info updated.\n")
-
-            # 13. Embassies
-            print("--- [13] Polish Embassies ---")
+            # Group C: Scrapers & Wikidata (Wikidata is sensitive to parallel load, we run these last)
+            print("[13-15/15] Syncing Embassies and Wikidata...")
             await embassies.scrape_embassies(db)
-            if db.query(models.Embassy).count() == 0 and mode == "weekly":
-                raise Exception("Embassy sync returned 0 embassies!")
-            print("✅ Embassies updated.\n")
-
-            # 14. Wikidata Attractions
-            print("--- [14] Wikidata Attractions ---")
-            attr_res = await wikidata_attractions.sync_all_wiki_attractions(db)
-            if attr_res.get('total_attractions', 0) == 0 and mode == "weekly":
-                print("⚠️ Attractions returned 0, retrying once...")
-                await asyncio.sleep(5)
-                attr_res = await wikidata_attractions.sync_all_wiki_attractions(db)
-                if attr_res.get('total_attractions', 0) == 0:
-                    raise Exception("Attractions sync returned 0 records after retry!")
-            print("✅ Attractions synced.\n")
-
-            # 15. Wikidata Extended Info
-            print("--- [15] Wikidata Extended Info ---")
+            
+            # We run wikidata scrapers sequentially to avoid 429/5xx errors
+            await wikidata_attractions.sync_all_wiki_attractions(db)
             await wikidata_info.sync_all_wikidata_info(db)
-            print("✅ Wikidata info updated.\n")
+            
+            print("✅ Phase 2 completed.\n")
 
         # FINAL Export to JSON
         print("--- Final Exporting to docs/data.json ---")

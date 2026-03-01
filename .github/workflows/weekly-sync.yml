@@ -28,15 +28,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Basic Database Seed
-        run: |
-          python scripts/seed_db.py
-
       - name: Full Data Synchronization
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
-          rm -f travel_cheatsheet.db
           python scripts/sync_all.py --mode weekly
 
       - name: Validate Data Integrity
@@ -64,4 +59,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: weekly full sync [skip ci]"
-          file_pattern: 'docs/data.json'
+          file_pattern: |
+            docs/data.json
+            travel_cheatsheet.db

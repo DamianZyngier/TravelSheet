@@ -116,37 +116,18 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     
     risk_level = risk_level or 'low'
 
-    # --- RISK SUMMARY ---
     risk_summary = ""
-    # 1. Look for specific warning text (often bold)
     strong_warning = soup.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
     if strong_warning:
         risk_summary = strong_warning.get_text().strip()
     else:
-        # 2. Try paragraphs with keywords
-        summary_p = soup.find('p', string=re.compile(r'odradza|zachowaj|ostrzega', re.I))
+        summary_p = soup.find('p', string=re.compile(r'odradza|zachowaj', re.I))
         if summary_p: risk_summary = summary_p.get_text().strip()
 
-    # 3. Fallback: Take the first substantial paragraph from common content areas
-    if not risk_summary or len(risk_summary) < 20:
-        content_container = soup.select_one('.editor-content') or soup.select_one('.article-content') or soup.select_one('#main-content')
-        if content_container:
-            ps = [p.get_text().strip() for p in content_container.select('p') if len(p.get_text().strip()) > 40]
-            if ps: risk_summary = ps[0]
-
-    # 4. Final safety fallback based on risk level
     if not risk_summary or len(risk_summary) < 10:
-        labels = {
-            'low': 'zachowanie zwykłej ostrożności', 
-            'medium': 'zachowanie szczególnej ostrożności', 
-            'high': 'odradzane podróże, które nie są konieczne', 
-            'critical': 'odradzane wszelkie podróże'
-        }
+        labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
         risk_summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
     
-    risk_summary = normalize_polish_text(risk_summary)
-    
-    # --- RISK DETAILS ---
     risk_details_list = []
     advisory_el = soup.select_one('.travel-advisory--description')
     if advisory_el: risk_details_list.append(advisory_el.get_text().strip())
@@ -243,12 +224,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
-    
-    safety.risk_level = risk_level
-    safety.summary = normalize_polish_text(risk_summary)
-    safety.risk_details = normalize_polish_text(risk_details)
-    safety.url = final_url
-    safety.last_checked = func.now()
+    safety.risk_level, safety.summary, safety.risk_details, safety.url, safety.last_checked = risk_level, normalize_polish_text(risk_summary), normalize_polish_text(risk_details), final_url, func.now()
 
     entry = db.query(models.EntryRequirement).filter(models.EntryRequirement.country_id == country.id).first()
     if not entry:
@@ -270,19 +246,24 @@ async def scrape_all_with_cache(db: Session):
     global _URL_CACHE
     _URL_CACHE = await fetch_country_urls()
     countries = db.query(models.Country).all()
-    results = {"success": 0, "errors": 0, "details": []}
-    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
-        for i, country in enumerate(countries):
-            try:
-                logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
-                res = await scrape_country(db, country.iso_alpha2, client)
-                if "error" in res:
+    results = {"success": 0, "errors": 0}
+    
+    # Use semaphore to limit concurrency
+    semaphore = asyncio.Semaphore(10)
+    
+    async def limited_scrape(country):
+        async with semaphore:
+            async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+                try:
+                    res = await scrape_country(db, country.iso_alpha2, client)
+                    if "error" in res:
+                        results["errors"] += 1
+                    else:
+                        results["success"] += 1
+                except Exception as e:
                     results["errors"] += 1
-                    logger.warning(f"  - Skip: {res['error']}")
-                else:
-                    results["success"] += 1
-                await asyncio.sleep(1.0)
-            except Exception as e:
-                results["errors"] += 1
-                logger.error(f"  - Error: {str(e)}")
+                    logger.error(f"  - Error scraping {country.iso_alpha2}: {str(e)}")
+
+    logger.info(f"Starting parallel MSZ scrape for {len(countries)} countries...")
+    await asyncio.gather(*(limited_scrape(c) for c in countries))
     return results
