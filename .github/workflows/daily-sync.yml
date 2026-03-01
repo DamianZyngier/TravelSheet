@@ -65,8 +65,22 @@ jobs:
           curl -s -X POST "http://localhost:8000/api/admin/sync-holidays" | jq .
           echo "Syncing wiki summaries..."
           curl -s -X POST "http://localhost:8000/api/admin/sync-wiki-summaries" | jq .
-          echo "Syncing wiki attractions..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
+                    echo "Syncing wiki attractions..."
+                    curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
+                    
+                    # NEW: Added recently integrated wikidata info (religions, transport, laws)
+                    echo "Syncing wikidata info (extended)..."
+                    # Since there is no single endpoint for 'all wikidata info' yet in admin.py,
+                    # we can use a python script or add the endpoint. 
+                    # Let's add the endpoint to admin.py first to keep it clean.
+                    curl -s -X POST "http://localhost:8000/api/admin/sync-wikidata-info" | jq .
+          
+                    echo "Syncing embassies..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-embassies" | jq .
+          echo "Syncing climate..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-climate" | jq .
+          echo "Syncing CDC health info..."
+          curl -s -X POST "http://localhost:8000/api/admin/sync-cdc" | jq .
 
       - name: Scrape All Countries (MSZ gov.pl)
         run: |

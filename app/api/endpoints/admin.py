@@ -60,6 +60,14 @@ async def sync_attractions_wiki(db: Session = Depends(get_db)):
     result = await sync_all_wiki_attractions(db)
     return result
 
+@router.post("/sync-wikidata-info")
+async def sync_wikidata_info(db: Session = Depends(get_db)):
+    """Admin endpoint - sync extended country info from Wikidata (religions, transport, etc)"""
+    from ...scrapers.wikidata_info import sync_all_wikidata_info
+
+    result = await sync_all_wikidata_info(db)
+    return result
+
 @router.post("/sync-wiki-summaries")
 async def sync_wiki_summaries(db: Session = Depends(get_db)):
     """Admin endpoint - sync country summaries and symbols from Wikipedia/Wikidata"""
