@@ -37,8 +37,8 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
     # Query 1: Basic & Cultural
     q_basic = f"SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?ethnicLabel ?religionLabel ?religionPercent WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P421 ?timezone. }} OPTIONAL {{ ?country wdt:P3646 ?dish. }} OPTIONAL {{ ?country wdt:P442 ?phoneCode. }} OPTIONAL {{ ?country p:P172 [ ps:P172 ?ethnic; pq:P2107 ?ethnicPercent ]. }} OPTIONAL {{ ?country p:P140 [ ps:P140 ?religion; pq:P2107 ?religionPercent ]. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
     
-    # Query 2: Law & Safety & Animals
-    q_law = f"SELECT ?countryISO ?animalLabel ?alcoholLabel ?lgbtqLabel ?idReqLabel ?hazardLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P2579 ?animal. }} OPTIONAL {{ ?country wdt:P3931 ?alcohol. }} OPTIONAL {{ ?country wdt:P91 ?lgbtq. }} OPTIONAL {{ ?country wdt:P3120 ?idReq. }} OPTIONAL {{ ?country wdt:P1057 ?hazard. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
+    # Query 2: Law & Safety & Animals (Fixed P1584 for National Animal)
+    q_law = f"SELECT ?countryISO ?animalLabel ?alcoholLabel ?lgbtqLabel ?idReqLabel ?hazardLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P1584 ?animal. }} OPTIONAL {{ ?country wdt:P3931 ?alcohol. }} OPTIONAL {{ ?country wdt:P91 ?lgbtq. }} OPTIONAL {{ ?country wdt:P3120 ?idReq. }} OPTIONAL {{ ?country wdt:P1057 ?hazard. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
 
     # Query 3: Transport
     q_trans = f"SELECT ?countryISO ?airportLabel ?railwayLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P114 ?airport. }} OPTIONAL {{ ?country wdt:P1194 ?railway. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
@@ -51,7 +51,6 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
     )
     
     # Process Results
-    # 1. Basic & Cultural
     for r in results[0]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -59,10 +58,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
         if not c.timezone: c.timezone = r.get("timezoneLabel", {}).get("value")
         if not c.national_dish: c.national_dish = r.get("dishLabel", {}).get("value")
         if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
-        # Ethnic and Religions handled separately if needed or just first one here
-        # For religions we need to clear and re-add, so we do it in a grouped pass later or keep existing logic
     
-    # 2. Law & Animals
     for r in results[1]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -72,13 +68,12 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
         if not c.id_requirement: c.id_requirement = r.get("idReqLabel", {}).get("value")
         
         animal = r.get("animalLabel", {}).get("value")
-        if animal and not animal.startswith("Q"):
+        if animal and not animal.startswith("Q") and "studies" not in animal.lower():
             existing = c.unique_animals.split(", ") if c.unique_animals else []
             if animal not in existing:
                 existing.append(animal)
                 c.unique_animals = ", ".join(existing[:5])
 
-    # 3. Transport
     for r in results[2]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -135,7 +130,6 @@ async def sync_all_wikidata_info(db: Session):
         for i in range(0, len(countries), batch_size):
             batch = countries[i : i + batch_size]
             print(f"Progress: {i}/{len(countries)} countries...")
-            # Run everything for the batch concurrently
             await asyncio.gather(
                 sync_wikidata_batch(db, batch, client),
                 sync_things_batch(db, batch, client)
