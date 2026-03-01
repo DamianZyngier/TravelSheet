@@ -23,30 +23,21 @@ async def fetch_country_urls():
             response = await client.get(url, headers=headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-            # The directory uses <li> elements with <a> inside
             links = soup.select('div.article-content ul li a')
             if not links:
-                # Fallback to a broader selector if structure changed
                 links = soup.select('a[href*="/web/dyplomacja/"]')
             
             for a in links:
                 href = a.get('href', '')
                 if not href: continue
-                
                 if not href.startswith('http'):
                     href = "https://www.gov.pl" + href
-                
                 title_div = a.select_one('.title') or a
                 name = title_div.get_text().strip()
-                
-                # Filter out the directory page itself
                 if href.rstrip('/').endswith("informacje-dla-podrozujacych") and "/web/dyplomacja" in href:
-                    if href.count('/') <= 5: # It's the main directory link
-                        continue
-
+                    if href.count('/') <= 5: continue
                 name_clean = clean_polish_name(name)
                 urls[name_clean] = href
-            
             _URL_CACHE.update(urls)
             logger.info(f"Fetched {len(urls)} URLs from MSZ directory")
             return urls
@@ -64,58 +55,46 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         return {"error": "Country not found in DB"}
 
     name_pl = clean_polish_name(country.name_pl or country.name)
-    
-    # Kolejność sprawdzania URLi (sekwencyjna)
     strategies = []
-    
-    # 1. Link z katalogu (Directory)
     dir_url = _URL_CACHE.get(name_pl)
-    if dir_url:
-        strategies.append(("1st link (directory)", dir_url))
-        
-    # 2. Link z mapowania ręcznego
+    if dir_url: strategies.append(("1st link (directory)", dir_url))
     manual_slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
-    if manual_slug:
-        strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
-        
-    # 3. Link zgadywany (nowy format MSZ: /web/[kraj]/idp lub /web/[kraj]/informacje-dla-podrozujacych)
-    # To jest znacznie skuteczniejsze niż stary format dyplomacja/kraj
+    if manual_slug: strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
     simple_slug = slugify(name_pl)
     strategies.append(("3rd link (modern)", f"https://www.gov.pl/web/{simple_slug}/idp"))
     strategies.append(("4th link (modern-alt)", f"https://www.gov.pl/web/{simple_slug}/informacje-dla-podrozujacych"))
 
     headers = get_headers()
-    response_text = None
-    strategy_used = "None"
-    final_url = ""
+    response_text, strategy_used, final_url = None, "None", ""
 
     for strat_name, url in strategies:
         try:
-            # We follow redirects automatically via httpx client if configured
             response = await client.get(url, headers=headers)
             if response.status_code == 200:
                 curr_url = str(response.url).rstrip('/')
-                # Unikaj bycia przekierowanym z powrotem do katalogu
                 if curr_url not in ["https://www.gov.pl", "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"]:
-                    # Sprawdź czy strona faktycznie zawiera treść podróżniczą
                     text_check = response.text.lower()
                     if any(kw in text_check for kw in ["bezpieczeństwo", "ostrzeżenia", "informacje dla podróżujących", "idp"]):
-                        response_text = response.text
-                        final_url = str(response.url)
-                        strategy_used = strat_name
-                        break # Znaleziono działający link, przerywamy pętlę strategii
+                        response_text, final_url, strategy_used = response.text, str(response.url), strat_name
+                        break
         except Exception as e:
             logger.debug(f"Strategy {strat_name} failed for {iso_code}: {e}")
 
+    if not final_url and dir_url: final_url = dir_url
+
     if not response_text:
+        if final_url:
+            safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
+            if not safety:
+                safety = models.SafetyInfo(country_id=country.id, risk_level="low", risk_text="Brak danych szczegółowych.", full_url=final_url)
+                db.add(safety)
+            else:
+                safety.full_url = final_url
+            db.commit()
         return {"error": f"No valid MSZ page found for {iso_code}"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
-    
-    # --- RISK LEVEL DETECTION ---
-    risk_level = "low"
-    
-    # 1. Try official class
+    risk_level = None
     risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')
     if not risk_container:
         for i in range(1, 5):
@@ -129,59 +108,58 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         elif 'odradzamy podróże, które nie są konieczne' in text_l: risk_level = 'high'
         elif 'odradzamy wszelkie podróże' in text_l: risk_level = 'critical'
     
-    # 2. Text-based fallback (very important for countries like Afghanistan)
     page_text = soup.get_text().lower()
-    if 'odradzamy wszelkie podróże' in page_text or 'odradza wszelkie podróże' in page_text:
+    if re.search(r'odradza(my)? wszelkie podróże|bezwzględnie odradza(my)?|najwyższy poziom ostrzeżenia', page_text, re.I):
         risk_level = 'critical'
-    elif risk_level == 'low':
-        if 'odradzamy podróże, które nie są konieczne' in page_text or 'odradza podróże, które nie są konieczne' in page_text:
-            risk_level = 'high'
-        elif 'zachowaj szczególną ostrożność' in page_text or 'zachowanie szczególnej ostrożności' in page_text:
-            risk_level = 'medium'
-
-    # --- TEXT EXTRACTION ---
+    elif re.search(r'odradza(my)? podróże.*?które nie są konieczne', page_text, re.I | re.S):
+        if not risk_level or risk_level in ['low', 'medium']: risk_level = 'high'
+    elif re.search(r'zachowa(j|ć) szczególną ostrożność|ostrzegamy przed podróżami', page_text, re.I):
+        if not risk_level or risk_level == 'low': risk_level = 'medium'
     
-    # Risk Summary (top text)
+    risk_level = risk_level or 'low'
+
     risk_summary = ""
     summary_container = soup.select_one('.editor-content')
     if summary_container:
-        first_p = summary_container.select_one('p')
-        if first_p: risk_summary = first_p.get_text().strip()
+        strong_text = summary_container.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
+        if strong_text: risk_summary = strong_text.get_text().strip()
+        else:
+            first_p = summary_container.select_one('p')
+            if first_p: risk_summary = first_p.get_text().strip()
     
     if not risk_summary:
-        labels = {
-            'low': 'zachowanie zwykłej ostrożności',
-            'medium': 'zachowanie szczególnej ostrożności',
-            'high': 'odradzane podróże, które nie są konieczne',
-            'critical': 'odradzane wszelkie podróże'
-        }
-        risk_summary = f"MSZ zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju ({country.name_pl})."
+        labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
+        risk_summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
     
     risk_summary = normalize_polish_text(risk_summary)
-
-    # Risk Details
     risk_details_list = []
     advisory_el = soup.select_one('.travel-advisory--description')
     if advisory_el: risk_details_list.append(advisory_el.get_text().strip())
     
+    safety_header = soup.find(['h2', 'h3'], string=re.compile(r'Bezpieczeństwo', re.I))
+    if safety_header:
+        curr = safety_header.find_next_sibling()
+        for _ in range(15):
+            if curr and curr.name not in ['h2', 'h3']:
+                txt = curr.get_text().strip()
+                if txt and len(txt) > 20: risk_details_list.append(txt)
+                curr = curr.find_next_sibling()
+            else: break
+
     for alert in soup.select('.alert-danger, .alert-warning'):
         txt = alert.get_text().strip()
         if txt and txt not in risk_details_list: risk_details_list.append(txt)
-    
     risk_details = "\n\n".join(risk_details_list)
 
-    # Entry Requirements
     passport_req, temp_passport_req, id_card_req, visa_req = True, True, False, False
-    
-    docs_section = soup.find(string=re.compile(r'Na jakim dokumencie', re.I))
+    docs_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(r'Na jakim dokumencie|Wjazd i pobyt', re.I))
     if docs_section:
         docs_text = ""
-        curr = docs_section.parent
-        for _ in range(10):
+        curr = docs_section.parent if docs_section.name == 'strong' else docs_section
+        for _ in range(15):
             if curr:
                 docs_text += curr.get_text()
                 curr = curr.find_next_sibling()
-        
         if re.search(r'Paszport:.*?TAK', docs_text, re.I | re.S): passport_req = True
         elif re.search(r'Paszport:.*?NIE', docs_text, re.I | re.S): passport_req = False
         if re.search(r'Paszport tymczasowy:.*?TAK', docs_text, re.I | re.S): temp_passport_req = True
@@ -189,28 +167,24 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         if re.search(r'Dowód osobisty:.*?TAK', docs_text, re.I | re.S): id_card_req = True
         elif re.search(r'Dowód osobisty:.*?NIE', docs_text, re.I | re.S): id_card_req = False
     
-    visa_section = soup.find(string=re.compile(r'Czy trzeba wyrobić wizę', re.I))
+    visa_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(r'Czy trzeba wyrobić wizę', re.I))
     if visa_section:
         visa_text = ""
-        curr = visa_section.parent
-        for _ in range(8):
+        curr = visa_section.parent if visa_section.name == 'strong' else visa_section
+        for _ in range(10):
             if curr:
                 visa_text += curr.get_text()
                 curr = curr.find_next_sibling()
-        if any(x in visa_text.lower() for x in ["nie muszą mieć wizy", "nie jest wymagana wiza", "ruch bezwizowy", "bezwizowo"]):
-            visa_req = False
-        elif any(x in visa_text.lower() for x in ["wymagana jest wiza", "obowiązek wizowy"]):
-            visa_req = True
+        if any(x in visa_text.lower() for x in ["nie muszą mieć wizy", "nie jest wymagana wiza", "ruch bezwizowy", "bezwizowo"]): visa_req = False
+        elif any(x in visa_text.lower() for x in ["wymagana jest wiza", "obowiązek wizowy"]): visa_req = True
 
-    if country.continent == 'Europe' and iso_code not in ['BY', 'RU', 'UA', 'GB']:
-        id_card_req, visa_req = True, False
+    if country.continent == 'Europe' and iso_code not in ['BY', 'RU', 'UA', 'GB']: id_card_req, visa_req = True, False
 
-    # Health Info
     health_full, vaccines_req, vaccines_sug = "", "", ""
-    health_section = soup.find(string=re.compile(r'^Zdrowie$', re.I)) or soup.find(string=re.compile(r'Informacje dotyczące zdrowia', re.I))
+    health_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(r'^Zdrowie$|Informacje dotyczące zdrowia', re.I))
     if health_section:
         health_text_list = []
-        curr = health_section.parent
+        curr = health_section.parent if health_section.name == 'strong' else health_section
         for _ in range(25):
             if curr:
                 txt = curr.get_text().strip()
@@ -220,18 +194,20 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         health_full = "\n\n".join(health_text_list)
         h_lower = health_full.lower()
         if "żółtą febrę" in h_lower or "żółtej febry" in h_lower:
-            if any(x in h_lower for x in ["obowiązkowe", "wymagane"]):
-                vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane)"
-        
+            if any(x in h_lower for x in ["obowiązkowe", "wymagane"]): vaccines_req = "Szczepienie przeciw żółtej febrze (wymagane)"
         sug = [v for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"] if v.lower() in h_lower]
         if sug: vaccines_sug = "Zalecane: " + ", ".join(sug)
 
-    # Local Customs & Laws
-    customs_full, alcohol_rules, tipping, dress_code, photos, sensitive = "", "", "", "", "", ""
-    customs_section = soup.find(string=re.compile(r'Miejscowe prawo i zwyczaje', re.I))
+    customs_full, alcohol_rules, tipping, dress_code, photos = "", "", "", "", ""
+    customs_patterns = [r'Miejscowe prawo i zwyczaje', r'Prawo i obyczaje', r'Miejscowe prawo', r'Zwyczaje', r'Przepisy prawne', r'Obyczaje', r'Cło']
+    customs_section = None
+    for pattern in customs_patterns:
+        customs_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(pattern, re.I))
+        if customs_section: break
+
+    customs_text_list = []
     if customs_section:
-        customs_text_list = []
-        curr = customs_section.parent
+        curr = customs_section.parent if customs_section.name == 'strong' else customs_section
         for _ in range(25):
             if curr:
                 txt = curr.get_text().strip()
@@ -239,63 +215,35 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
                 curr = curr.find_next_sibling()
                 if curr and curr.name in ['h2', 'h3']: break
         customs_full = "\n\n".join(customs_text_list)
-        c_lower = customs_full.lower()
-        
-        # Heuristics for sub-fields
-        if "alkohol" in c_lower:
-            # Extract paragraph containing alcohol
-            for p in customs_text_list:
-                if "alkohol" in p.lower(): alcohol_rules = p; break
-        
-        if "napiwek" in c_lower or "napiwki" in c_lower:
-            for p in customs_text_list:
-                if "napiwek" in p.lower() or "napiwki" in p.lower(): tipping = p; break
-                
-        if "ubiór" in c_lower or "ubior" in c_lower or "odzież" in c_lower:
-            for p in customs_text_list:
-                if any(x in p.lower() for x in ["ubiór", "odzież", "świątyń", "meczet"]): dress_code = p; break
 
-        if "zdjęć" in c_lower or "fotografowanie" in c_lower:
-            for p in customs_text_list:
-                if any(x in p.lower() for x in ["zdjęć", "fotografow", "zakaz"]): photos = p; break
+    # Heuristics for sub-fields (search in customs list first, then entire page)
+    all_fragments = customs_text_list if customs_text_list else [p.get_text().strip() for p in soup.find_all(['p', 'li', 'strong'])]
+    for p in all_fragments:
+        p_low = p.lower()
+        if len(p) < 20: continue
+        if "alkohol" in p_low and not alcohol_rules: alcohol_rules = p
+        if any(x in p_low for x in ["napiwek", "napiwki"]) and not tipping: tipping = p
+        if any(x in p_low for x in ["ubiór", "ubior", "odzież", "świątyń", "meczet"]) and not dress_code: dress_code = p
+        if any(x in p_low for x in ["zdjęć", "fotografow", "zakaz"]) and not photos: photos = p
 
-    # --- SAVE TO DB ---
-    # Safety
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
-    
-    # Apply normalization to all Polish output
-    safety.risk_level = risk_level
-    safety.risk_text = normalize_polish_text(risk_summary)
-    safety.risk_details = normalize_polish_text(risk_details)
-    safety.url = final_url
-    safety.last_checked = func.now()
+    safety.risk_level, safety.risk_text, safety.risk_details, safety.url, safety.last_checked = risk_level, normalize_polish_text(risk_summary), normalize_polish_text(risk_details), final_url, func.now()
 
-    # Entry
     entry = db.query(models.EntryRequirement).filter(models.EntryRequirement.country_id == country.id).first()
     if not entry:
         entry = models.EntryRequirement(country_id=country.id)
         db.add(entry)
     entry.passport_required, entry.temp_passport_allowed, entry.id_card_allowed, entry.visa_required = passport_req, temp_passport_req, id_card_req, visa_req
 
-    # Practical (Health)
     practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
     if not practical:
         practical = models.PracticalInfo(country_id=country.id)
         db.add(practical)
-    practical.health_info = normalize_polish_text(health_full)
-    practical.vaccinations_required = normalize_polish_text(vaccines_req)
-    practical.vaccinations_suggested = normalize_polish_text(vaccines_sug)
-    
-    # New fields
-    practical.local_norms = normalize_polish_text(customs_full)
-    practical.tipping_culture = normalize_polish_text(tipping)
-    practical.alcohol_rules = normalize_polish_text(alcohol_rules)
-    practical.dress_code = normalize_polish_text(dress_code)
-    practical.photography_restrictions = normalize_polish_text(photos)
-    practical.last_updated = func.now()
+    practical.health_info, practical.vaccinations_required, practical.vaccinations_suggested = normalize_polish_text(health_full), normalize_polish_text(vaccines_req), normalize_polish_text(vaccines_sug)
+    practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), func.now()
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url, "strategy": strategy_used}
@@ -305,28 +253,25 @@ async def scrape_all_with_cache(db: Session):
     _URL_CACHE = await fetch_country_urls()
     countries = db.query(models.Country).all()
     results = {"success": 0, "errors": 0, "details": []}
-    
     async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
         for i, country in enumerate(countries):
             try:
                 logger.info(f"[{i+1}/{len(countries)}] Scraping {country.name_pl or country.name} ({country.iso_alpha2})...")
                 res = await scrape_country(db, country.iso_alpha2, client)
-                if "error" in res: 
+                if "error" in res:
                     results["errors"] += 1
                     logger.warning(f"  - Skip: {res['error']}")
                     results["details"].append(f"{country.iso_alpha2}: {res['error']}")
                 elif res.get("status") == "skipped":
                     results["success"] += 1
                     logger.info(f"  - Skipped: {res.get('reason')}")
-                else: 
+                else:
                     results["success"] += 1
                     logger.info(f"  - {res.get('strategy', 'OK')}: Risk {res.get('risk_level', 'unknown')}")
-                
-                await asyncio.sleep(1.0) 
+                await asyncio.sleep(1.0)
             except Exception as e:
                 results["errors"] += 1
                 err_msg = f"{country.iso_alpha2} CRITICAL: {str(e)}"
                 results["details"].append(err_msg)
                 logger.error(f"  - {err_msg}")
-            
     return results
