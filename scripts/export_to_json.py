@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload, joinedload
 from sqlalchemy import create_engine
 
 # Add project root to path
@@ -11,64 +11,49 @@ from app.database import SessionLocal
 from app import models, schemas
 
 def export_all():
-    print("Eksportuję dane (SQLAlchemy & Pydantic Mode)...")
+    print("Eksportuję dane (Optimized Eager Loading Mode)...")
     db = SessionLocal()
     
     try:
-        # Fetch all countries with all relationships loaded (SQLAlchemy will handle lazy loading)
-        countries = db.query(models.Country).all()
+        # Fetch all countries with all relationships pre-loaded to avoid N+1 queries
+        countries = db.query(models.Country).options(
+            selectinload(models.Country.languages),
+            selectinload(models.Country.religions),
+            selectinload(models.Country.embassies),
+            selectinload(models.Country.unesco_places),
+            selectinload(models.Country.attractions),
+            selectinload(models.Country.holidays),
+            selectinload(models.Country.climate),
+            selectinload(models.Country.territories),
+            joinedload(models.Country.currency),
+            joinedload(models.Country.safety),
+            joinedload(models.Country.practical),
+            joinedload(models.Country.costs),
+            joinedload(models.Country.entry_req),
+            joinedload(models.Country.weather)
+        ).all()
+        
         print(f"Pobrano {len(countries)} krajów.")
         
-        # Maps for parent/territory names
+        # Maps for parent names (parent object is already loaded via relationship)
         id_to_iso = {c.id: c.iso_alpha2 for c in countries}
         id_to_name_pl = {c.id: (c.name_pl or c.name) for c in countries}
         
         output = {}
         for i, c in enumerate(countries):
-            # Use Pydantic to serialize most of the data
-            # We use CountryDetail schema but we need to convert to dict and then adjust to match exact UI expectations
-            
+            # Using model_validate from CountryDetail (which is already configured for from_attributes)
             c_schema = schemas.CountryDetail.model_validate(c)
             c_dict = c_schema.model_dump()
             
-            # Manual adjustments to match the legacy JSON structure exactly
+            # Legacy structure adjustments
+            processed_data = c_dict
+            processed_data["name_pl"] = c.name_pl or c.name
+            processed_data["capital"] = c.capital_pl or c.capital
+            processed_data["area"] = float(c.area) if c.area else None
+            processed_data["latitude"] = float(c.latitude) if c.latitude else None
+            processed_data["longitude"] = float(c.longitude) if c.longitude else None
             
-            # 1. Basic fields that were modified in legacy export
-            processed_data = {
-                "name": c.name,
-                "name_pl": c.name_pl or c.name,
-                "iso2": c.iso_alpha2,
-                "iso3": c.iso_alpha3,
-                "capital": c.capital_pl or c.capital,
-                "continent": c.continent,
-                "region": c.region,
-                "flag_emoji": c.flag_emoji,
-                "flag_url": c.flag_url,
-                "population": c.population,
-                "area": float(c.area) if c.area else None,
-                "timezone": c.timezone,
-                "national_dish": c.national_dish,
-                "wiki_summary": c.wiki_summary,
-                "national_symbols": c.national_symbols,
-                "unique_animals": c.unique_animals,
-                "unique_things": c.unique_things,
-                "alcohol_status": c.alcohol_status,
-                "lgbtq_status": c.lgbtq_status,
-                "id_requirement": c.id_requirement,
-                "main_airport": c.main_airport,
-                "railway_info": c.railway_info,
-                "natural_hazards": c.natural_hazards,
-                "popular_apps": c.popular_apps,
-                "phone_code": c.phone_code,
-                "largest_cities": c.largest_cities,
-                "ethnic_groups": c.ethnic_groups,
-                "latitude": float(c.latitude) if c.latitude else None,
-                "longitude": float(c.longitude) if c.longitude else None,
-                "unesco_count": c.unesco_count or 0,
-                "is_independent": bool(c.is_independent),
-            }
-            
-            # 2. Parent & Territories
+            # Parent & Territories names mapping
             processed_data["parent"] = {
                 "iso2": id_to_iso.get(c.parent_id),
                 "name_pl": id_to_name_pl.get(c.parent_id)
@@ -81,27 +66,37 @@ def export_all():
                 } for t in c.territories
             ]
             
-            # 3. Lists
-            processed_data["religions"] = c_dict["religions"]
-            processed_data["languages"] = c_dict["languages"]
-            processed_data["embassies"] = c_dict["embassies"]
-            processed_data["unesco_places"] = c_dict["unesco_places"]
-            
-            # Limited attractions
-            processed_data["attractions"] = [
-                {
-                    "name": a.name,
-                    "category": a.category,
-                    "description": a.description,
-                    "booking_info": a.booking_info
-                } for a in c.attractions[:15]
-            ]
-            
-            # Dates to string for holidays
+            # Dates to string for holidays (Pydantic does this by default but just in case)
             processed_data["holidays"] = [
                 {"name": h.name, "date": str(h.date)} for h in c.holidays
             ]
             
+            # Safety mapping (legacy field names)
+            if c.safety:
+                processed_data["safety"] = {
+                    "risk_level": c.safety.risk_level or "unknown",
+                    "risk_text": c.safety.summary or "Brak danych",
+                    "risk_details": c.safety.risk_details or "",
+                    "url": c.safety.full_url or ""
+                }
+            
+            # Currency mapping
+            if c.currency:
+                processed_data["currency"] = {
+                    "code": c.currency.code,
+                    "name": c.currency.name or "",
+                    "rate_pln": float(c.currency.exchange_rate_pln) if c.currency.exchange_rate_pln else None
+                }
+            
+            # Weather mapping
+            if c.weather:
+                processed_data["weather"] = {
+                    "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
+                    "condition": c.weather.condition or "",
+                    "icon": c.weather.condition_icon or "",
+                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else []
+                }
+
             # Climate mapping
             processed_data["climate"] = [
                 {
@@ -111,53 +106,8 @@ def export_all():
                     "rain": cl.avg_rain_mm
                 } for cl in c.climate
             ]
-            
-            # 4. Nested Objects with specific field names
-            # Safety
-            processed_data["safety"] = {
-                "risk_level": c.safety.risk_level if c.safety else "unknown",
-                "risk_text": c.safety.summary if c.safety else "Brak danych", # legacy use 'summary' as 'risk_text'
-                "risk_details": c.safety.risk_details if c.safety else "",
-                "url": c.safety.full_url if c.safety else ""
-            }
-            
-            # Currency
-            processed_data["currency"] = {
-                "code": c.currency.code if c.currency else "",
-                "name": c.currency.name if c.currency else "",
-                "rate_pln": float(c.currency.exchange_rate_pln) if c.currency and c.currency.exchange_rate_pln else None
-            }
-            
-            # Practical
-            if c.practical:
-                p = c_dict["practical"]
-                processed_data["practical"] = {
-                    "plug_types": c.practical.plug_types or "",
-                    "voltage": c.practical.voltage,
-                    "water_safe": c.practical.tap_water_safe,
-                    "water_safe_for_brushing": c.practical.water_safe_for_brushing,
-                    "driving_side": c.practical.driving_side or "",
-                    "card_acceptance": c.practical.card_acceptance or "",
-                    "best_exchange_currency": c.practical.best_exchange_currency or "",
-                    "exchange_where": c.practical.exchange_where or "",
-                    "atm_advice": c.practical.atm_advice or "",
-                    "emergency": p["emergency"],
-                    "vaccinations_required": c.practical.vaccinations_required or "",
-                    "vaccinations_suggested": c.practical.vaccinations_suggested or "",
-                    "health_info": c.practical.health_info or "",
-                    "roaming_info": c.practical.roaming_info or "",
-                    "license_type": c.practical.license_type or ""
-                }
-            else:
-                processed_data["practical"] = {
-                    "plug_types": "", "voltage": None, "water_safe": None, "water_safe_for_brushing": None,
-                    "driving_side": "", "card_acceptance": "", "best_exchange_currency": "", 
-                    "exchange_where": "", "atm_advice": "", "emergency": None, 
-                    "vaccinations_required": "", "vaccinations_suggested": "", 
-                    "health_info": "", "roaming_info": "", "license_type": ""
-                }
 
-            # Costs
+            # Costs (convert decimals to float)
             if c.costs:
                 processed_data["costs"] = {
                     "index": float(c.costs.index_overall) if c.costs.index_overall else None,
@@ -170,35 +120,9 @@ def export_all():
                     "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs.daily_budget_mid else None,
                     "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None
                 }
-            else:
-                processed_data["costs"] = None
-
-            # Entry
-            if c.entry_req:
-                processed_data["entry"] = {
-                    "visa_required": c.entry_req.visa_required,
-                    "visa_status": c.entry_req.visa_status or "",
-                    "passport_required": c.entry_req.passport_required if c.entry_req.passport_required is not None else True,
-                    "temp_passport_allowed": c.entry_req.temp_passport_allowed if c.entry_req.temp_passport_allowed is not None else True,
-                    "id_card_allowed": c.entry_req.id_card_allowed if c.entry_req.id_card_allowed is not None else False,
-                    "visa_notes": c.entry_req.visa_notes or ""
-                }
-            else:
-                processed_data["entry"] = None
-                
-            # Weather
-            if c.weather:
-                processed_data["weather"] = {
-                    "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
-                    "condition": c.weather.condition or "",
-                    "icon": c.weather.condition_icon or "",
-                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else []
-                }
-            else:
-                processed_data["weather"] = None
 
             output[c.iso_alpha2] = processed_data
-            if (i+1) % 50 == 0:
+            if (i+1) % 100 == 0:
                 print(f"Przetworzono {i+1}/{len(countries)} krajów...")
 
         # Save to files
