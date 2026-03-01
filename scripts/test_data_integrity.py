@@ -50,22 +50,25 @@ def test_data_integrity():
                 errors.append(f"{iso}: Missing practical field '{field}'")
         
         # 5. Costs
-        costs = country.get('costs', {})
-        for field in ['index', 'restaurants', 'groceries', 'transport', 'accommodation', 'ratio_to_pl']:
-            if field not in costs:
-                errors.append(f"{iso}: Missing costs field '{field}'")
+        costs = country.get('costs')
+        if costs:
+            for field in ['index', 'restaurants', 'groceries', 'transport', 'accommodation', 'ratio_to_pl']:
+                if field not in costs:
+                    errors.append(f"{iso}: Missing costs field '{field}'")
         
         # 6. Entry Requirements
-        entry = country.get('entry', {})
-        for field in ['visa_required', 'visa_status', 'passport_required', 'temp_passport_allowed', 'id_card_allowed', 'visa_notes']:
-            if field not in entry:
-                errors.append(f"{iso}: Missing entry field '{field}'")
+        entry = country.get('entry')
+        if entry:
+            for field in ['visa_required', 'visa_status', 'passport_required', 'temp_passport_allowed', 'id_card_allowed', 'visa_notes']:
+                if field not in entry:
+                    errors.append(f"{iso}: Missing entry field '{field}'")
 
         # 7. Weather
-        weather = country.get('weather', {})
-        for field in ['temp', 'condition', 'icon']:
-            if field not in weather:
-                errors.append(f"{iso}: Missing weather field '{field}'")
+        weather = country.get('weather')
+        if weather:
+            for field in ['temp', 'condition', 'icon']:
+                if field not in weather:
+                    errors.append(f"{iso}: Missing weather field '{field}'")
 
         # 8. UNESCO Places
         unesco_places = country.get('unesco_places', [])

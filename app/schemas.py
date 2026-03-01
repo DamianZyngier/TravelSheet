@@ -143,6 +143,10 @@ class PracticalSchema(BaseModel):
     health_info: Optional[str] = None
     roaming_info: Optional[str] = None
     license_type: Optional[str] = None
+    water_safe_for_brushing: Optional[bool] = None
+    best_exchange_currency: Optional[str] = None
+    exchange_where: Optional[str] = None
+    atm_advice: Optional[str] = None
 
     @field_validator("emergency", mode="before")
     @classmethod
@@ -194,6 +198,15 @@ class CountryDetail(BaseModel):
     ethnic_groups: Optional[str] = None
     wiki_summary: Optional[str] = None
     national_symbols: Optional[str] = None
+    unique_animals: Optional[str] = None
+    unique_things: Optional[str] = None
+    alcohol_status: Optional[str] = None
+    lgbtq_status: Optional[str] = None
+    id_requirement: Optional[str] = None
+    main_airport: Optional[str] = None
+    railway_info: Optional[str] = None
+    natural_hazards: Optional[str] = None
+    popular_apps: Optional[str] = None
     unesco_count: int = 0
 
     # Grouped Info
@@ -210,6 +223,23 @@ class CountryDetail(BaseModel):
     weather: Optional[WeatherSchema]
     practical: Optional[PracticalSchema]
     laws_and_customs: List[LawCustomSchema] = []
+    costs: Optional["CostOfLivingSchema"] = None
 
     class Config:
         from_attributes = True
+
+class CostOfLivingSchema(BaseModel):
+    index_overall: Optional[float]
+    index_restaurants: Optional[float]
+    index_groceries: Optional[float]
+    index_transport: Optional[float]
+    index_accommodation: Optional[float]
+    ratio_to_poland: Optional[float]
+    daily_budget_low: Optional[float]
+    daily_budget_mid: Optional[float]
+    daily_budget_high: Optional[float]
+
+    class Config:
+        from_attributes = True
+
+CountryDetail.model_rebuild()

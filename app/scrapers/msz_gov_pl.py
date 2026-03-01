@@ -1,7 +1,7 @@
 import httpx
 from bs4 import BeautifulSoup
 from sqlalchemy.orm import Session
-from .. import models, crud
+from .. import models
 import asyncio
 import re
 import logging

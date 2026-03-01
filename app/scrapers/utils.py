@@ -137,8 +137,26 @@ def slugify(text: str) -> str:
     text = re.sub(r'[\s]+', '-', text)
     return text.strip('-')
 
+import httpx
+import asyncio
+
 def get_headers():
     return {
         "User-Agent": "TravelSheet/1.0 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
         "Accept": "application/json"
     }
+
+async def async_get(url: str, params: dict = None, headers: dict = None, timeout: float = 30.0):
+    """Common async GET helper with error handling"""
+    combined_headers = get_headers()
+    if headers:
+        combined_headers.update(headers)
+        
+    async with httpx.AsyncClient(timeout=timeout, follow_redirects=True) as client:
+        try:
+            response = await client.get(url, params=params, headers=combined_headers)
+            response.raise_for_status()
+            return response
+        except Exception as e:
+            logger.error(f"HTTP Error for {url}: {e}")
+            return None

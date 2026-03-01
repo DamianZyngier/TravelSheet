@@ -1,239 +1,196 @@
-import sqlite3
 import json
 import os
-
 import sys
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
 
-db_path = os.environ.get('DB_PATH', 'travel_cheatsheet.db')
+# Add project root to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-def dict_factory(cursor, row):
-    d = {}
-    for idx, col in enumerate(cursor.description):
-        d[col[0]] = row[idx]
-    return d
+from app.database import SessionLocal
+from app import models, schemas
 
 def export_all():
-    print("Eksportuję dane (Direct SQLite Mode - ultra safe)...")
-    conn = sqlite3.connect(db_path)
-    conn.row_factory = dict_factory
-    cur = conn.cursor()
+    print("Eksportuję dane (SQLAlchemy & Pydantic Mode)...")
+    db = SessionLocal()
     
     try:
-        # 1. Pobierz kraje
-        cur.execute("SELECT * FROM countries")
-        countries = cur.fetchall()
+        # Fetch all countries with all relationships loaded (SQLAlchemy will handle lazy loading)
+        countries = db.query(models.Country).all()
         print(f"Pobrano {len(countries)} krajów.")
         
-        # Mapa do szybkiego wyszukiwania nazw po ID (dla parent/territories)
-        id_to_iso = {c['id']: c['iso_alpha2'] for c in countries}
-        id_to_name_pl = {c['id']: (c['name_pl'] or c['name']) for c in countries}
+        # Maps for parent/territory names
+        id_to_iso = {c.id: c.iso_alpha2 for c in countries}
+        id_to_name_pl = {c.id: (c.name_pl or c.name) for c in countries}
         
         output = {}
         for i, c in enumerate(countries):
-            c_id = c['id']
-            iso2 = c['iso_alpha2']
+            # Use Pydantic to serialize most of the data
+            # We use CountryDetail schema but we need to convert to dict and then adjust to match exact UI expectations
             
-            # Pobierz relacje dla tego kraju
+            c_schema = schemas.CountryDetail.model_validate(c)
+            c_dict = c_schema.model_dump()
+            
+            # Manual adjustments to match the legacy JSON structure exactly
+            
+            # 1. Basic fields that were modified in legacy export
+            processed_data = {
+                "name": c.name,
+                "name_pl": c.name_pl or c.name,
+                "iso2": c.iso_alpha2,
+                "iso3": c.iso_alpha3,
+                "capital": c.capital_pl or c.capital,
+                "continent": c.continent,
+                "region": c.region,
+                "flag_emoji": c.flag_emoji,
+                "flag_url": c.flag_url,
+                "population": c.population,
+                "area": float(c.area) if c.area else None,
+                "timezone": c.timezone,
+                "national_dish": c.national_dish,
+                "wiki_summary": c.wiki_summary,
+                "national_symbols": c.national_symbols,
+                "unique_animals": c.unique_animals,
+                "unique_things": c.unique_things,
+                "alcohol_status": c.alcohol_status,
+                "lgbtq_status": c.lgbtq_status,
+                "id_requirement": c.id_requirement,
+                "main_airport": c.main_airport,
+                "railway_info": c.railway_info,
+                "natural_hazards": c.natural_hazards,
+                "popular_apps": c.popular_apps,
+                "phone_code": c.phone_code,
+                "largest_cities": c.largest_cities,
+                "ethnic_groups": c.ethnic_groups,
+                "latitude": float(c.latitude) if c.latitude else None,
+                "longitude": float(c.longitude) if c.longitude else None,
+                "unesco_count": c.unesco_count or 0,
+                "is_independent": bool(c.is_independent),
+            }
+            
+            # 2. Parent & Territories
+            processed_data["parent"] = {
+                "iso2": id_to_iso.get(c.parent_id),
+                "name_pl": id_to_name_pl.get(c.parent_id)
+            } if c.parent_id else None
+            
+            processed_data["territories"] = [
+                {
+                    "iso2": t.iso_alpha2,
+                    "name_pl": id_to_name_pl.get(t.id)
+                } for t in c.territories
+            ]
+            
+            # 3. Lists
+            processed_data["religions"] = c_dict["religions"]
+            processed_data["languages"] = c_dict["languages"]
+            processed_data["embassies"] = c_dict["embassies"]
+            processed_data["unesco_places"] = c_dict["unesco_places"]
+            
+            # Limited attractions
+            processed_data["attractions"] = c_dict["attractions"][:15]
+            
+            # Dates to string for holidays
+            processed_data["holidays"] = [
+                {"name": h.name, "date": str(h.date)} for h in c.holidays
+            ]
+            
+            # Climate mapping
+            processed_data["climate"] = [
+                {
+                    "month": cl.month,
+                    "temp_day": cl.avg_temp_max,
+                    "temp_night": cl.avg_temp_min,
+                    "rain": cl.avg_rain_mm
+                } for cl in c.climate
+            ]
+            
+            # 4. Nested Objects with specific field names
             # Safety
-            cur.execute(f"SELECT * FROM safety_info WHERE country_id={c_id}")
-            safety = cur.fetchone()
-            
-            # Practical
-            cur.execute(f"SELECT * FROM practical_info WHERE country_id={c_id}")
-            practical = cur.fetchone()
+            processed_data["safety"] = {
+                "risk_level": c.safety.risk_level if c.safety else "unknown",
+                "risk_text": c.safety.summary if c.safety else "Brak danych", # legacy use 'summary' as 'risk_text'
+                "risk_details": c.safety.risk_details if c.safety else "",
+                "url": c.safety.full_url if c.safety else ""
+            }
             
             # Currency
-            cur.execute(f"SELECT * FROM currencies WHERE country_id={c_id}")
-            currency = cur.fetchone()
-            
-            # Weather
-            cur.execute(f"SELECT * FROM weather WHERE country_id={c_id}")
-            weather = cur.fetchone()
-            
-            # Costs
-            cur.execute(f"SELECT * FROM cost_of_living WHERE country_id={c_id}")
-            costs = cur.fetchone()
-            
-            # Entry
-            cur.execute(f"SELECT * FROM entry_requirements WHERE country_id={c_id}")
-            entry = cur.fetchone()
-            
-            # Lists
-            cur.execute(f"SELECT * FROM languages WHERE country_id={c_id}")
-            languages = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM religions WHERE country_id={c_id}")
-            religions = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM embassies WHERE country_id={c_id}")
-            embassies = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM unesco_places WHERE country_id={c_id}")
-            unesco = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM attractions WHERE country_id={c_id} LIMIT 15")
-            attractions = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM holidays WHERE country_id={c_id} ORDER BY date")
-            holidays = cur.fetchall()
-            
-            cur.execute(f"SELECT * FROM climate WHERE country_id={c_id} ORDER BY month")
-            climate = cur.fetchall()
-            
-            # Territories (if this is a parent)
-            cur.execute(f"SELECT id, iso_alpha2 FROM countries WHERE parent_id={c_id}")
-            territories_list = cur.fetchall()
-            
-            # Budowa obiektu
-            country_data = {
-                "name": c['name'],
-                "name_pl": c['name_pl'] or c['name'],
-                "iso2": iso2,
-                "iso3": c['iso_alpha3'],
-                "capital": c['capital_pl'] or c['capital'],
-                "continent": c['continent'],
-                "region": c['region'],
-                "flag_emoji": c['flag_emoji'],
-                "flag_url": c['flag_url'],
-                "population": c['population'],
-                "area": float(c['area']) if c['area'] else None,
-                "timezone": c['timezone'],
-                "national_dish": c['national_dish'],
-                "wiki_summary": c['wiki_summary'],
-                "national_symbols": c['national_symbols'],
-                "unique_animals": c['unique_animals'],
-                "unique_things": c['unique_things'],
-                "alcohol_status": c['alcohol_status'],
-                "lgbtq_status": c['lgbtq_status'],
-                "id_requirement": c['id_requirement'],
-                "main_airport": c['main_airport'],
-                "railway_info": c['railway_info'],
-                "natural_hazards": c['natural_hazards'],
-                "popular_apps": c['popular_apps'],
-                "phone_code": c['phone_code'],
-                "largest_cities": c['largest_cities'],
-                "ethnic_groups": c['ethnic_groups'],
-                "latitude": float(c['latitude']) if c['latitude'] else None,
-                "longitude": float(c['longitude']) if c['longitude'] else None,
-                "unesco_count": c['unesco_count'] or 0,
-                "is_independent": bool(c.get('is_independent', True)),
-                
-                "parent": {
-                    "iso2": id_to_iso.get(c['parent_id']),
-                    "name_pl": id_to_name_pl.get(c['parent_id'])
-                } if c.get('parent_id') else None,
-                
-                "territories": [
-                    {
-                        "iso2": t['iso_alpha2'],
-                        "name_pl": id_to_name_pl.get(t['id'])
-                    } for t in territories_list
-                ],
-                
-                "religions": [{"name": r['name'], "percentage": float(r['percentage'])} for r in religions],
-                "languages": [{"name": l['name'], "is_official": l['is_official']} for l in languages],
-                
-                "safety": {
-                    "risk_level": safety['risk_level'] if safety else "unknown",
-                    "risk_text": safety['summary'] if safety else "Brak danych",
-                    "risk_details": safety['risk_details'] if safety else "",
-                    "url": safety['full_url'] if safety else ""
-                },
-                
-                "currency": {
-                    "code": currency['code'] if currency else "",
-                    "name": currency['name'] if currency else "",
-                    "rate_pln": float(currency['exchange_rate_pln']) if currency and currency['exchange_rate_pln'] else None
-                },
-                
-                "practical": {
-                    "plug_types": practical['plug_types'] if practical else "",
-                    "voltage": practical['voltage'] if practical else None,
-                    "water_safe": practical['tap_water_safe'] if practical else None,
-                    "water_safe_for_brushing": practical['water_safe_for_brushing'] if practical else None,
-                    "driving_side": practical['driving_side'] if practical else "",
-                    "card_acceptance": practical['card_acceptance'] if practical else "",
-                    "best_exchange_currency": practical['best_exchange_currency'] if practical else "",
-                    "exchange_where": practical['exchange_where'] if practical else "",
-                    "atm_advice": practical['atm_advice'] if practical else "",
-                    "emergency": json.loads(practical['emergency_numbers']) if practical and practical['emergency_numbers'] else None,
-                    "vaccinations_required": practical['vaccinations_required'] if practical else "",
-                    "vaccinations_suggested": practical['vaccinations_suggested'] if practical else "",
-                    "health_info": practical['health_info'] if practical else "",
-                    "roaming_info": practical['roaming_info'] if practical else "",
-                    "license_type": practical['license_type'] if practical else ""
-                },
-
-                "costs": {
-                    "index": float(costs['index_overall']) if costs else None,
-                    "restaurants": float(costs['index_restaurants']) if costs else None,
-                    "groceries": float(costs['index_groceries']) if costs else None,
-                    "transport": float(costs['index_transport']) if costs else None,
-                    "accommodation": float(costs['index_accommodation']) if costs else None,
-                    "ratio_to_pl": float(costs['ratio_to_poland']) if costs else None,
-                    "daily_budget_low": float(costs['daily_budget_low']) if costs and costs['daily_budget_low'] else None,
-                    "daily_budget_mid": float(costs['daily_budget_mid']) if costs and costs['daily_budget_mid'] else None,
-                    "daily_budget_high": float(costs['daily_budget_high']) if costs and costs['daily_budget_high'] else None
-                },
-
-                "entry": {
-                    "visa_required": entry['visa_required'] if entry else None,
-                    "visa_status": entry['visa_status'] if entry else "",
-                    "passport_required": entry['passport_required'] if entry else True,
-                    "temp_passport_allowed": entry['temp_passport_allowed'] if entry else True,
-                    "id_card_allowed": entry['id_card_allowed'] if entry else False,
-                    "visa_notes": entry['visa_notes'] if entry else ""
-                },
-                
-                "weather": {
-                    "temp": float(weather['temp_c']) if weather and weather['temp_c'] else None,
-                    "condition": weather['condition'] if weather else "",
-                    "icon": weather['condition_icon'] if weather else ""
-                },
-                
-                "embassies": [
-                    {
-                        "type": e['type'],
-                        "city": e['city'],
-                        "address": e['address'],
-                        "phone": e['phone'],
-                        "email": e['email'],
-                        "website": e['website']
-                    } for e in embassies
-                ],
-
-                "unesco_places": [
-                    {
-                        "name": u['name'],
-                        "category": u['category'],
-                        "is_danger": bool(u['is_danger']),
-                        "is_transnational": bool(u['is_transnational']),
-                        "unesco_id": u['unesco_id'],
-                        "image_url": u['image_url'],
-                        "description": u['description']
-                    } for u in unesco
-                ],
-
-                "attractions": [
-                    {
-                        "name": a['name'], 
-                        "category": a['category'],
-                        "description": a['description']
-                    } for a in attractions
-                ],
-                
-                "holidays": [{"name": h['name'], "date": str(h['date'])} for h in holidays],
-                "climate": [
-                    {
-                        "month": cl['month'],
-                        "temp_day": cl['avg_temp_max'],
-                        "temp_night": cl['avg_temp_min'],
-                        "rain": cl['avg_rain_mm']
-                    } for cl in climate
-                ]
+            processed_data["currency"] = {
+                "code": c.currency.code if c.currency else "",
+                "name": c.currency.name if c.currency else "",
+                "rate_pln": float(c.currency.exchange_rate_pln) if c.currency and c.currency.exchange_rate_pln else None
             }
-            output[iso2] = country_data
-            if (i+1) % 25 == 0:
+            
+            # Practical
+            if c.practical:
+                p = c_dict["practical"]
+                processed_data["practical"] = {
+                    "plug_types": c.practical.plug_types or "",
+                    "voltage": c.practical.voltage,
+                    "water_safe": c.practical.tap_water_safe,
+                    "water_safe_for_brushing": c.practical.water_safe_for_brushing,
+                    "driving_side": c.practical.driving_side or "",
+                    "card_acceptance": c.practical.card_acceptance or "",
+                    "best_exchange_currency": c.practical.best_exchange_currency or "",
+                    "exchange_where": c.practical.exchange_where or "",
+                    "atm_advice": c.practical.atm_advice or "",
+                    "emergency": p["emergency"],
+                    "vaccinations_required": c.practical.vaccinations_required or "",
+                    "vaccinations_suggested": c.practical.vaccinations_suggested or "",
+                    "health_info": c.practical.health_info or "",
+                    "roaming_info": c.practical.roaming_info or "",
+                    "license_type": c.practical.license_type or ""
+                }
+            else:
+                processed_data["practical"] = {
+                    "plug_types": "", "voltage": None, "water_safe": None, "water_safe_for_brushing": None,
+                    "driving_side": "", "card_acceptance": "", "best_exchange_currency": "", 
+                    "exchange_where": "", "atm_advice": "", "emergency": None, 
+                    "vaccinations_required": "", "vaccinations_suggested": "", 
+                    "health_info": "", "roaming_info": "", "license_type": ""
+                }
+
+            # Costs
+            if c.costs:
+                processed_data["costs"] = {
+                    "index": float(c.costs.index_overall) if c.costs.index_overall else None,
+                    "restaurants": float(c.costs.index_restaurants) if c.costs.index_restaurants else None,
+                    "groceries": float(c.costs.index_groceries) if c.costs.index_groceries else None,
+                    "transport": float(c.costs.index_transport) if c.costs.index_transport else None,
+                    "accommodation": float(c.costs.index_accommodation) if c.costs.index_accommodation else None,
+                    "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs.ratio_to_poland else None,
+                    "daily_budget_low": float(c.costs.daily_budget_low) if c.costs.daily_budget_low else None,
+                    "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs.daily_budget_mid else None,
+                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None
+                }
+            else:
+                processed_data["costs"] = None
+
+            # Entry
+            if c.entry_req:
+                processed_data["entry"] = {
+                    "visa_required": c.entry_req.visa_required,
+                    "visa_status": c.entry_req.visa_status or "",
+                    "passport_required": c.entry_req.passport_required if c.entry_req.passport_required is not None else True,
+                    "temp_passport_allowed": c.entry_req.temp_passport_allowed if c.entry_req.temp_passport_allowed is not None else True,
+                    "id_card_allowed": c.entry_req.id_card_allowed if c.entry_req.id_card_allowed is not None else False,
+                    "visa_notes": c.entry_req.visa_notes or ""
+                }
+            else:
+                processed_data["entry"] = None
+                
+            # Weather
+            if c.weather:
+                processed_data["weather"] = {
+                    "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
+                    "condition": c.weather.condition or "",
+                    "icon": c.weather.condition_icon or ""
+                }
+            else:
+                processed_data["weather"] = None
+
+            output[c.iso_alpha2] = processed_data
+            if (i+1) % 50 == 0:
                 print(f"Przetworzono {i+1}/{len(countries)} krajów...")
 
         # Save to files
@@ -250,7 +207,7 @@ def export_all():
         print(f"Eksport zakończony sukcesem! data.json zawiera {len(output)} krajów.")
 
     finally:
-        conn.close()
+        db.close()
 
 if __name__ == "__main__":
     export_all()
