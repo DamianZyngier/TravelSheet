@@ -90,7 +90,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             <div className="religion-badges">
               {selectedCountry.religions.sort((a,b) => b.percentage - a.percentage).map((r, i) => (
                 <span key={i} className="religion-badge">
-                  {r.name}: <strong>{r.percentage.toFixed(1)}%</strong>
+                  {r.name}{r.percentage > 0 && <>: <strong>{r.percentage.toFixed(1)}%</strong></>}
                 </span>
               ))}
             </div>
