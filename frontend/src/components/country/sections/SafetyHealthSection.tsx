@@ -101,27 +101,29 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
         {/* Sekcja Prawo i Obyczaje */}
         {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code || selectedCountry.practical.local_norms) ? (
           <div className="law-environment-grid" style={{ marginTop: '1rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
-            {selectedCountry.alcohol_status && (
+            {selectedCountry.alcohol_status && selectedCountry.alcohol_status !== selectedCountry.practical.local_norms && (
               <div className="law-item">
                 <strong>Alkohol:</strong>
                 <span>{selectedCountry.alcohol_status}</span>
                 {selectedCountry.practical.drinking_age && <small> (Wiek: {selectedCountry.practical.drinking_age})</small>}
-                {selectedCountry.practical.alcohol_rules && <p className="law-subtext">{selectedCountry.practical.alcohol_rules}</p>}
+                {selectedCountry.practical.alcohol_rules && selectedCountry.practical.alcohol_rules !== selectedCountry.practical.local_norms && (
+                  <p className="law-subtext">{selectedCountry.practical.alcohol_rules}</p>
+                )}
               </div>
             )}
-            {selectedCountry.lgbtq_status && (
+            {selectedCountry.lgbtq_status && selectedCountry.lgbtq_status !== selectedCountry.practical.local_norms && (
               <div className="law-item">
                 <strong>Prawa LGBTQ+:</strong>
                 <span>{selectedCountry.lgbtq_status}</span>
               </div>
             )}
-            {selectedCountry.practical.dress_code && (
+            {selectedCountry.practical.dress_code && selectedCountry.practical.dress_code !== selectedCountry.practical.local_norms && (
               <div className="law-item">
                 <strong>Ubiór i normy:</strong>
                 <p className="law-subtext">{selectedCountry.practical.dress_code}</p>
               </div>
             )}
-            {selectedCountry.practical.photography_restrictions && (
+            {selectedCountry.practical.photography_restrictions && selectedCountry.practical.photography_restrictions !== selectedCountry.practical.local_norms && (
               <div className="law-item">
                 <strong>Fotografowanie:</strong>
                 <p className="law-subtext">{selectedCountry.practical.photography_restrictions}</p>
@@ -133,7 +135,7 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
                 <ExpandableText text={selectedCountry.practical.local_norms} />
               </div>
             )}
-            {selectedCountry.practical.tipping_culture && (
+            {selectedCountry.practical.tipping_culture && selectedCountry.practical.tipping_culture !== selectedCountry.practical.local_norms && (
               <div className="law-item">
                 <strong>Napiwki:</strong>
                 <p className="law-subtext">{selectedCountry.practical.tipping_culture}</p>

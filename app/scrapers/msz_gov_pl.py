@@ -39,7 +39,6 @@ async def fetch_country_urls():
                 name_clean = clean_polish_name(name)
                 urls[name_clean] = href
             _URL_CACHE.update(urls)
-            logger.info(f"Fetched {len(urls)} URLs from MSZ directory")
             return urls
         except Exception as e:
             logger.error(f"Error fetching directory: {e}")
@@ -88,12 +87,13 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
             if not safety:
                 safety = models.SafetyInfo(country_id=country.id, risk_level="low", risk_text="Brak danych szczegółowych.", full_url=final_url)
                 db.add(safety)
-            else:
-                safety.full_url = final_url
+            else: safety.full_url = final_url
             db.commit()
         return {"error": f"No valid MSZ page found for {iso_code}"}
 
     soup = BeautifulSoup(response_text, 'html.parser')
+    
+    # --- RISK LEVEL DETECTION ---
     risk_level = None
     risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')
     if not risk_container:
@@ -118,20 +118,22 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     
     risk_level = risk_level or 'low'
 
+    # --- RISK SUMMARY ---
     risk_summary = ""
-    summary_container = soup.select_one('.editor-content')
-    if summary_container:
-        strong_text = summary_container.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
-        if strong_text: risk_summary = strong_text.get_text().strip()
-        else:
-            first_p = summary_container.select_one('p')
-            if first_p: risk_summary = first_p.get_text().strip()
-    
-    if not risk_summary:
+    # Najpierw szukaj konkretnego ostrzeżenia w tekście (często pogrubione)
+    strong_warning = soup.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
+    if strong_warning:
+        risk_summary = strong_warning.get_text().strip()
+    else:
+        # Przeszukaj akapity w poszukiwaniu frazy ostrzegawczej
+        summary_p = soup.find('p', string=re.compile(r'odradza|zachowaj', re.I))
+        if summary_p: risk_summary = summary_p.get_text().strip()
+
+    if not risk_summary or len(risk_summary) < 10:
         labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
         risk_summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
     
-    risk_summary = normalize_polish_text(risk_summary)
+    # --- RISK DETAILS ---
     risk_details_list = []
     advisory_el = soup.select_one('.travel-advisory--description')
     if advisory_el: risk_details_list.append(advisory_el.get_text().strip())
@@ -139,18 +141,16 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     safety_header = soup.find(['h2', 'h3'], string=re.compile(r'Bezpieczeństwo', re.I))
     if safety_header:
         curr = safety_header.find_next_sibling()
-        for _ in range(15):
+        for _ in range(20):
             if curr and curr.name not in ['h2', 'h3']:
                 txt = curr.get_text().strip()
-                if txt and len(txt) > 20: risk_details_list.append(txt)
+                if txt and len(txt) > 30 and txt not in risk_details_list: risk_details_list.append(txt)
                 curr = curr.find_next_sibling()
             else: break
 
-    for alert in soup.select('.alert-danger, .alert-warning'):
-        txt = alert.get_text().strip()
-        if txt and txt not in risk_details_list: risk_details_list.append(txt)
     risk_details = "\n\n".join(risk_details_list)
 
+    # --- ENTRY REQS ---
     passport_req, temp_passport_req, id_card_req, visa_req = True, True, False, False
     docs_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(r'Na jakim dokumencie|Wjazd i pobyt', re.I))
     if docs_section:
@@ -180,6 +180,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
 
     if country.continent == 'Europe' and iso_code not in ['BY', 'RU', 'UA', 'GB']: id_card_req, visa_req = True, False
 
+    # --- HEALTH ---
     health_full, vaccines_req, vaccines_sug = "", "", ""
     health_section = soup.find(['h2', 'h3', 'strong'], string=re.compile(r'^Zdrowie$|Informacje dotyczące zdrowia', re.I))
     if health_section:
@@ -198,6 +199,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         sug = [v for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"] if v.lower() in h_lower]
         if sug: vaccines_sug = "Zalecane: " + ", ".join(sug)
 
+    # --- CUSTOMS ---
     customs_full, alcohol_rules, tipping, dress_code, photos = "", "", "", "", ""
     customs_patterns = [r'Miejscowe prawo i zwyczaje', r'Prawo i obyczaje', r'Miejscowe prawo', r'Zwyczaje', r'Przepisy prawne', r'Obyczaje', r'Cło']
     customs_section = None
@@ -208,24 +210,27 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     customs_text_list = []
     if customs_section:
         curr = customs_section.parent if customs_section.name == 'strong' else customs_section
-        for _ in range(25):
+        for _ in range(30):
             if curr:
                 txt = curr.get_text().strip()
-                if txt: customs_text_list.append(txt)
+                if txt and len(txt) > 10: customs_text_list.append(txt)
                 curr = curr.find_next_sibling()
                 if curr and curr.name in ['h2', 'h3']: break
         customs_full = "\n\n".join(customs_text_list)
 
-    # Heuristics for sub-fields (search in customs list first, then entire page)
-    all_fragments = customs_text_list if customs_text_list else [p.get_text().strip() for p in soup.find_all(['p', 'li', 'strong'])]
-    for p in all_fragments:
-        p_low = p.lower()
-        if len(p) < 20: continue
-        if "alkohol" in p_low and not alcohol_rules: alcohol_rules = p
-        if any(x in p_low for x in ["napiwek", "napiwki"]) and not tipping: tipping = p
-        if any(x in p_low for x in ["ubiór", "ubior", "odzież", "świątyń", "meczet"]) and not dress_code: dress_code = p
-        if any(x in p_low for x in ["zdjęć", "fotografow", "zakaz"]) and not photos: photos = p
+    # Heuristics for sub-fields: Only take short, specific paragraphs
+    def find_specific(keywords, text_list):
+        for p in text_list:
+            if any(k in p.lower() for k in keywords) and len(p) < 1000:
+                return p
+        return ""
 
+    alcohol_rules = find_specific(["alkohol"], customs_text_list)
+    tipping = find_specific(["napiwek", "napiwki"], customs_text_list)
+    dress_code = find_specific(["ubiór", "ubior", "odzież", "świątyń", "meczet"], customs_text_list)
+    photos = find_specific(["zdjęć", "fotografow", "zakaz"], customs_text_list)
+
+    # --- SAVE TO DB ---
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
@@ -246,7 +251,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), func.now()
 
     db.commit()
-    return {"status": "success", "risk_level": risk_level, "url": final_url, "strategy": strategy_used}
+    return {"status": "success", "risk_level": risk_level, "url": final_url}
 
 async def scrape_all_with_cache(db: Session):
     global _URL_CACHE
@@ -261,17 +266,10 @@ async def scrape_all_with_cache(db: Session):
                 if "error" in res:
                     results["errors"] += 1
                     logger.warning(f"  - Skip: {res['error']}")
-                    results["details"].append(f"{country.iso_alpha2}: {res['error']}")
-                elif res.get("status") == "skipped":
-                    results["success"] += 1
-                    logger.info(f"  - Skipped: {res.get('reason')}")
                 else:
                     results["success"] += 1
-                    logger.info(f"  - {res.get('strategy', 'OK')}: Risk {res.get('risk_level', 'unknown')}")
                 await asyncio.sleep(1.0)
             except Exception as e:
                 results["errors"] += 1
-                err_msg = f"{country.iso_alpha2} CRITICAL: {str(e)}"
-                results["details"].append(err_msg)
-                logger.error(f"  - {err_msg}")
+                logger.error(f"  - Error: {str(e)}")
     return results
