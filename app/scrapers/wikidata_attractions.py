@@ -5,6 +5,8 @@ import asyncio
 import logging
 
 logger = logging.getLogger("uvicorn")
+# Wyciszenie logów HTTPX
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 async def sync_wiki_attractions_batch(db: Session, countries: list[models.Country]):
     """Sync attractions for a batch of countries to speed up process"""
@@ -28,14 +30,16 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
     url = "https://query.wikidata.org/sparql"
     headers = {
         "User-Agent": "TravelCheatsheet/1.0 (https://github.com/zyngi/TravelSheet)",
-        "Accept": "application/sparql-results+json"
+        "Accept": "application/sparql-results+json",
+        "Content-Type": "application/x-www-form-urlencoded"
     }
 
     async with httpx.AsyncClient(timeout=60.0) as client:
         try:
-            resp = await client.get(url, params={'query': query}, headers=headers)
+            # Use POST for SPARQL to avoid URL truncation issues
+            resp = await client.post(url, data={'query': query}, headers=headers)
             if resp.status_code != 200:
-                logger.error(f"Wikidata batch error {resp.status_code}")
+                logger.error(f"Wikidata batch error {resp.status_code}: {resp.text[:200]}")
                 return
             
             data = resp.json()
@@ -85,10 +89,10 @@ async def sync_all_wiki_attractions(db: Session):
     batch_size = 10
     for i in range(0, len(countries), batch_size):
         batch = countries[i : i + batch_size]
-        logger.info(f"Syncing Wiki attractions batch {i//batch_size + 1}/{(len(countries)+batch_size-1)//batch_size}")
+        logger.info(f"Syncing Wiki attractions batch {i//batch_size + 1}/{(len(countries)+batch_size-1)//batch_size}...")
         await sync_wiki_attractions_batch(db, batch)
-        # Still sleep a bit to be nice to Wikidata
-        await asyncio.sleep(2.0)
+        # Sleep to avoid Wikidata rate limits
+        await asyncio.sleep(2.5)
         
     # Count total at the end
     total["total_attractions"] = db.query(models.Attraction).filter(models.Attraction.category == 'Wiki Attraction').count()
