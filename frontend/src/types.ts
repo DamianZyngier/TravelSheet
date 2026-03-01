@@ -129,5 +129,12 @@ export interface CountryData {
     temp: number | null;
     condition: string;
     icon: string;
+    forecast?: {
+      date: string;
+      temp_max: number;
+      temp_min: number;
+      condition: string;
+      icon: string;
+    }[];
   };
 }

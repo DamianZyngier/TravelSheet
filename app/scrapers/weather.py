@@ -1,57 +1,97 @@
 import httpx
 import os
 import asyncio
+import json
 from sqlalchemy.orm import Session
 from .. import models
 from datetime import datetime
-from dotenv import load_dotenv
+from .utils import async_get
 
-load_dotenv()
+# Weather code mapping to conditions and icons (WMO Weather interpretation codes)
+# Based on https://open-meteo.com/en/docs
+WMO_CODE_MAP = {
+    0: ("Czyste niebo", "01d"),
+    1: ("Głównie bezchmurnie", "02d"),
+    2: ("Częściowe zachmurzenie", "03d"),
+    3: ("Zachmurzenie", "04d"),
+    45: ("Mgła", "50d"), 
+    48: ("Mgła osadzająca szadź", "50d"),
+    51: ("Lekka mżawka", "09d"),
+    53: ("Mżawka", "09d"),
+    55: ("Gęsta mżawka", "09d"),
+    61: ("Lekki deszcz", "10d"),
+    63: ("Deszcz", "10d"),
+    65: ("Ulewny deszcz", "10d"),
+    71: ("Lekki śnieg", "13d"),
+    73: ("Śnieg", "13d"),
+    75: ("Gęsty śnieg", "13d"),
+    77: ("Grad", "13d"),
+    80: ("Lekkie opady deszczu", "09d"),
+    81: ("Opady deszczu", "09d"),
+    82: ("Gwałtowne ulewy", "09d"),
+    85: ("Lekkie opady śniegu", "13d"),
+    86: ("Gęste opady śniegu", "13d"),
+    95: ("Burza", "11d"),
+    96: ("Burza z gradem", "11d"),
+    99: ("Gwałtowna burza z gradem", "11d")
+}
+
+def get_weather_info(code):
+    return WMO_CODE_MAP.get(code, ("Nieznana", "03d"))
 
 async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClient = None):
-    """Fetch current weather for country capital using OpenWeatherMap"""
+    """Fetch current weather and 7-day forecast using Open-Meteo"""
     
-    api_key = os.getenv("OPENWEATHER_API_KEY")
-    if not api_key:
-        return {"error": "OPENWEATHER_API_KEY not set"}
-    
-    api_key = api_key.strip() # Clean potential whitespace
-
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
-    if not country or not country.capital:
-        return {"error": "Country or capital not found"}
+    if not country or country.latitude is None or country.longitude is None:
+        return {"error": "Country location not found"}
 
-    # Use params dict for safer encoding
+    # Open-Meteo API URL for forecast
+    url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "q": f"{country.capital},{country_iso2}",
-        "appid": api_key,
-        "units": "metric"
+        "latitude": float(country.latitude),
+        "longitude": float(country.longitude),
+        "current": "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m",
+        "daily": "weather_code,temperature_2m_max,temperature_2m_min",
+        "timezone": "auto"
     }
-    url = "https://api.openweathermap.org/data/2.5/weather"
-
-    # Use provided client or create new one
-    close_client = False
-    if client is None:
-        client = httpx.AsyncClient()
-        close_client = True
 
     try:
-        response = await client.get(url, params=params)
-        if response.status_code == 401:
-            return {"error": f"Invalid API Key (401). Body: {response.text}"}
-        if response.status_code == 429:
-            return {"error": "Rate limit exceeded"}
+        if client:
+            response = await client.get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+        else:
+            async with httpx.AsyncClient() as c:
+                response = await c.get(url, params=params)
+                response.raise_for_status()
+                data = response.json()
         
-        response.raise_for_status()
-        data = response.json()
+        current = data.get("current", {})
+        daily = data.get("daily", {})
         
+        cond_text, cond_icon = get_weather_info(current.get("weather_code", 0))
+        
+        # Prepare 7-day forecast list
+        forecast = []
+        for i in range(len(daily.get("time", []))):
+            d_cond_text, d_cond_icon = get_weather_info(daily.get("weather_code", [])[i])
+            forecast.append({
+                "date": daily.get("time", [])[i],
+                "temp_max": daily.get("temperature_2m_max", [])[i],
+                "temp_min": daily.get("temperature_2m_min", [])[i],
+                "condition": d_cond_text,
+                "icon": d_cond_icon
+            })
+
         weather_data = {
-            'temp_c': data['main']['temp'],
-            'feels_like_c': data['main']['feels_like'],
-            'condition': data['weather'][0]['main'],
-            'condition_icon': data['weather'][0]['icon'],
-            'humidity': data['main']['humidity'],
-            'wind_kph': data['wind']['speed'] * 3.6,
+            'temp_c': current.get('temperature_2m', 0),
+            'feels_like_c': current.get('apparent_temperature', 0),
+            'condition': cond_text,
+            'condition_icon': cond_icon,
+            'humidity': current.get('relative_humidity_2m', 0),
+            'wind_kph': current.get('wind_speed_10m', 0),
+            'forecast_json': json.dumps(forecast),
             'last_updated': datetime.now()
         }
 
@@ -66,20 +106,20 @@ async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClie
         db.commit()
         return {"status": "success", "temp": weather_data['temp_c']}
     except Exception as e:
+        print(f"Error updating weather for {country_iso2}: {e}")
         return {"error": str(e)}
-    finally:
-        if close_client:
-            await client.aclose()
 
 async def update_all_weather(db: Session):
-    """Update weather for all countries with rate limiting (max 45 calls/min)"""
-    countries = db.query(models.Country).filter(models.Country.capital != None).all()
+    """Update weather for all countries using Open-Meteo"""
+    countries = db.query(models.Country).filter(models.Country.latitude != None, models.Country.longitude != None).all()
     
+    # Open-Meteo doesn't require API key and has very generous rate limits
+    # We still do them sequentially but faster
     async with httpx.AsyncClient() as client:
-        for country in countries:
-            print(f"Updating weather for {country.name}...")
+        for i, country in enumerate(countries):
+            if (i+1) % 20 == 0:
+                print(f"Updating weather: {i+1}/{len(countries)}...")
             await update_weather(db, country.iso_alpha2, client)
-            # 60s / 45 calls = 1.33s. Let's wait 1.5s to be safe.
-            await asyncio.sleep(1.5)
+            await asyncio.sleep(0.1) 
     
     return {"status": "completed", "count": len(countries)}

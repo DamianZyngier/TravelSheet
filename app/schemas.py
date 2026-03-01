@@ -116,7 +116,18 @@ class WeatherSchema(BaseModel):
     condition_icon: Optional[str]
     humidity: Optional[int]
     wind_kph: Optional[float]
+    forecast: List[dict] = []
     last_updated: Optional[datetime]
+
+    @field_validator("forecast", mode="before")
+    @classmethod
+    def parse_forecast(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            try:
+                return json.loads(v)
+            except:
+                return []
+        return v or []
 
     class Config:
         from_attributes = True

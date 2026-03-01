@@ -271,6 +271,7 @@ class Weather(Base):
     condition_icon = Column(String(100))
     humidity = Column(Integer)
     wind_kph = Column(DECIMAL(5, 1))
+    forecast_json = Column(Text) # JSON string with 7-day forecast
     last_updated = Column(TIMESTAMP, server_default=func.now())
 
     country = relationship("Country", back_populates="weather")

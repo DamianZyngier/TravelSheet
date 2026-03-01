@@ -31,34 +31,11 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             <label>Stolica</label>
             <span>{selectedCountry.capital || 'Brak danych'}</span>
           </div>
-          
-          {selectedCountry.weather?.temp !== null && (
-            <div className="info-block weather-top-block">
-              <label>Pogoda teraz</label>
-              <div className="weather-brief">
-                {selectedCountry.weather?.icon && (
-                  <img 
-                    src={`https://openweathermap.org/img/wn/${selectedCountry.weather.icon}.png`} 
-                    alt={selectedCountry.weather.condition} 
-                    className="weather-mini-icon"
-                  />
-                )}
-                <span className="weather-temp-main">{Math.round(selectedCountry.weather?.temp || 0)}°C</span>
-              </div>
-            </div>
-          )}
 
           {selectedCountry.timezone && (
             <div className="info-block">
               <label>Strefa czasowa</label>
               <span>{selectedCountry.timezone}</span>
-            </div>
-          )}
-
-          {selectedCountry.national_dish && (
-            <div className="info-block">
-              <label>Potrawa narodowa</label>
-              <span>🍽️ {selectedCountry.national_dish}</span>
             </div>
           )}
 
@@ -69,6 +46,38 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div id="weather-forecast" className="info-block full-width scroll-mt">
+        <div className="section-header">
+          <span className="section-header-icon">🌦️</span>
+          <label>Pogoda: dziś i na najbliższy tydzień</label>
+        </div>
+        <div className="weather-forecast-container">
+          {selectedCountry.weather?.forecast && selectedCountry.weather.forecast.length > 0 ? (
+            <div className="forecast-scroll-wrapper">
+              {selectedCountry.weather.forecast.map((day, idx) => (
+                <div key={idx} className={`forecast-day-card ${idx === 0 ? 'today' : ''}`}>
+                  <span className="forecast-date">
+                    {idx === 0 ? 'Dziś' : new Date(day.date).toLocaleDateString('pl-PL', { weekday: 'short', day: 'numeric', month: 'numeric' })}
+                  </span>
+                  <img 
+                    src={`https://openweathermap.org/img/wn/${day.icon}.png`} 
+                    alt={day.condition} 
+                    className="forecast-icon"
+                  />
+                  <div className="forecast-temps">
+                    <span className="temp-max">{Math.round(day.temp_max)}°</span>
+                    <span className="temp-min">{Math.round(day.temp_min)}°</span>
+                  </div>
+                  <span className="forecast-condition">{day.condition}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="no-data-msg">Brak szczegółowych danych o prognozie pogody.</div>
+          )}
         </div>
       </div>
 

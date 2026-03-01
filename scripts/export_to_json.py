@@ -184,7 +184,8 @@ def export_all():
                 processed_data["weather"] = {
                     "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
                     "condition": c.weather.condition or "",
-                    "icon": c.weather.condition_icon or ""
+                    "icon": c.weather.condition_icon or "",
+                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else []
                 }
             else:
                 processed_data["weather"] = None

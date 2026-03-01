@@ -2207,3 +2207,79 @@
 
 .water-text strong { font-size: 0.9rem; }
 .water-text span { font-size: 0.85rem; color: #4a5568; }
+
+/* Weather Forecast UI */
+.weather-forecast-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.forecast-scroll-wrapper {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.forecast-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.forecast-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.forecast-day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #edf2f7;
+  flex-shrink: 0;
+}
+
+.forecast-day-card.today {
+  background: #ebf8ff;
+  border-color: #bee3f8;
+}
+
+.forecast-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4a5568;
+  text-transform: uppercase;
+}
+
+.forecast-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0.25rem 0;
+}
+
+.forecast-temps {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.temp-max { color: #2d3748; }
+.temp-min { color: #718096; font-weight: 600; }
+
+.forecast-condition {
+  font-size: 0.7rem;
+  color: #718096;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
