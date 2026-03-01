@@ -29,7 +29,6 @@ class Country(Base):
     ethnic_groups = Column(Text) # Store as comma-separated or JSON
     wiki_summary = Column(Text)
     national_symbols = Column(String(255)) # e.g. animal, flower
-    unique_animals = Column(Text)
     unique_things = Column(Text)
     alcohol_status = Column(String(255))
     lgbtq_status = Column(String(255))

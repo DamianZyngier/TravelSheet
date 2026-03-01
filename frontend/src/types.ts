@@ -16,7 +16,6 @@ export interface CountryData {
   national_dish: string | null;
   wiki_summary: string | null;
   national_symbols: string | null;
-  unique_animals: string | null;
   unique_things: string | null;
   alcohol_status: string | null;
   lgbtq_status: string | null;

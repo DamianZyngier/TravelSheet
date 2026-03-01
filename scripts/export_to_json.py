@@ -58,7 +58,6 @@ def export_all():
                 "national_dish": c.national_dish,
                 "wiki_summary": c.wiki_summary,
                 "national_symbols": c.national_symbols,
-                "unique_animals": c.unique_animals,
                 "unique_things": c.unique_things,
                 "alcohol_status": c.alcohol_status,
                 "lgbtq_status": c.lgbtq_status,

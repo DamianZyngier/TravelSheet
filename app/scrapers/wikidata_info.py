@@ -37,8 +37,8 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
     # Query 1: Basic & Cultural
     q_basic = f"SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?ethnicLabel ?religionLabel ?religionPercent WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P421 ?timezone. }} OPTIONAL {{ ?country wdt:P3646 ?dish. }} OPTIONAL {{ ?country wdt:P442 ?phoneCode. }} OPTIONAL {{ ?country p:P172 [ ps:P172 ?ethnic; pq:P2107 ?ethnicPercent ]. }} OPTIONAL {{ ?country p:P140 [ ps:P140 ?religion; pq:P2107 ?religionPercent ]. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
     
-    # Query 2: Law & Safety & Animals (Fixed P1584 for National Animal)
-    q_law = f"SELECT ?countryISO ?animalLabel ?alcoholLabel ?lgbtqLabel ?idReqLabel ?hazardLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P1584 ?animal. }} OPTIONAL {{ ?country wdt:P3931 ?alcohol. }} OPTIONAL {{ ?country wdt:P91 ?lgbtq. }} OPTIONAL {{ ?country wdt:P3120 ?idReq. }} OPTIONAL {{ ?country wdt:P1057 ?hazard. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
+    # Query 2: Law & Safety (Removed Animals)
+    q_law = f"SELECT ?countryISO ?alcoholLabel ?lgbtqLabel ?idReqLabel ?hazardLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P3931 ?alcohol. }} OPTIONAL {{ ?country wdt:P91 ?lgbtq. }} OPTIONAL {{ ?country wdt:P3120 ?idReq. }} OPTIONAL {{ ?country wdt:P1057 ?hazard. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
 
     # Query 3: Transport
     q_trans = f"SELECT ?countryISO ?airportLabel ?railwayLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P114 ?airport. }} OPTIONAL {{ ?country wdt:P1194 ?railway. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
@@ -66,13 +66,6 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
         if not c.alcohol_status: c.alcohol_status = r.get("alcoholLabel", {}).get("value")
         if not c.lgbtq_status: c.lgbtq_status = r.get("lgbtqLabel", {}).get("value")
         if not c.id_requirement: c.id_requirement = r.get("idReqLabel", {}).get("value")
-        
-        animal = r.get("animalLabel", {}).get("value")
-        if animal and not animal.startswith("Q") and "studies" not in animal.lower():
-            existing = c.unique_animals.split(", ") if c.unique_animals else []
-            if animal not in existing:
-                existing.append(animal)
-                c.unique_animals = ", ".join(existing[:5])
 
     for r in results[2]:
         iso = r.get("countryISO", {}).get("value")

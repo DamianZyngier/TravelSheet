@@ -216,7 +216,6 @@ class CountryDetail(BaseModel):
     ethnic_groups: Optional[str] = None
     wiki_summary: Optional[str] = None
     national_symbols: Optional[str] = None
-    unique_animals: Optional[str] = None
     unique_things: Optional[str] = None
     alcohol_status: Optional[str] = None
     lgbtq_status: Optional[str] = None
