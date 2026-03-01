@@ -49,17 +49,17 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
     """
 
     things_query = f"""
-    SELECT ?thingLabel WHERE {{
+    SELECT DISTINCT ?thingLabel WHERE {{
       ?thing wdt:P31/wdt:P279* wd:Q570116;
              wdt:P17 ?country.
       ?country wdt:P297 "{country_iso2.upper()}".
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
-    LIMIT 10
+    LIMIT 20
     """
 
     cities_query = f"""
-    SELECT ?cityLabel ?pop WHERE {{
+    SELECT DISTINCT ?cityLabel ?pop WHERE {{
       ?city wdt:P31 wd:Q515;
             wdt:P17 ?country;
             wdt:P1082 ?pop.
@@ -67,7 +67,7 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     ORDER BY DESC(?pop)
-    LIMIT 5
+    LIMIT 10
     """
 
     url = "https://query.wikidata.org/sparql"
@@ -103,22 +103,22 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
                     if not country.railway_info: country.railway_info = r.get("railwayLabel", {}).get("value")
 
                     ethnic = r.get("ethnicLabel", {}).get("value")
-                    if ethnic: ethnics.add(ethnic)
+                    if ethnic and not ethnic.startswith("Q"): ethnics.add(ethnic)
                     
                     animal = r.get("animalLabel", {}).get("value")
-                    if animal: animals.add(animal)
+                    if animal and not animal.startswith("Q"): animals.add(animal)
 
                     hazard = r.get("hazardLabel", {}).get("value")
-                    if hazard: hazards.add(hazard)
+                    if hazard and not hazard.startswith("Q"): hazards.add(hazard)
                     
                     rel = r.get("religionLabel", {}).get("value")
                     perc = r.get("religionPercent", {}).get("value")
                     if rel and perc:
                         religions[rel] = max(religions.get(rel, 0), float(perc))
 
-                if ethnics: country.ethnic_groups = ", ".join(list(ethnics)[:5])
-                if animals: country.unique_animals = ", ".join(list(animals)[:5])
-                if hazards: country.natural_hazards = ", ".join(list(hazards)[:5])
+                if ethnics: country.ethnic_groups = ", ".join(sorted(list(ethnics))[:5])
+                if animals: country.unique_animals = ", ".join(sorted(list(animals))[:5])
+                if hazards: country.natural_hazards = ", ".join(sorted(list(hazards))[:5])
                 
                 if not country.popular_apps:
                     if country.continent == 'Europe': country.popular_apps = "WhatsApp, Messenger, Instagram"
@@ -136,15 +136,24 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
             resp_things = await client.post(url, data={'query': things_query}, headers=headers)
             if resp_things.status_code == 200:
                 thing_data = resp_things.json().get("results", {}).get("bindings", [])
-                things = [f"{c['thingLabel']['value']}" for c in thing_data]
-                if things: country.unique_things = ", ".join(things[:5])
+                # Use set to avoid duplicates
+                things = set()
+                for c in thing_data:
+                    val = c['thingLabel']['value']
+                    if val and not val.startswith("Q"):
+                        things.add(val)
+                if things: country.unique_things = ", ".join(sorted(list(things))[:5])
 
             # 3. Cities
             resp_cities = await client.post(url, data={'query': cities_query}, headers=headers)
             if resp_cities.status_code == 200:
                 city_data = resp_cities.json().get("results", {}).get("bindings", [])
-                cities = [f"{c['cityLabel']['value']}" for c in city_data]
-                if cities: country.largest_cities = ", ".join(cities)
+                cities = set()
+                for c in city_data:
+                    val = c['cityLabel']['value']
+                    if val and not val.startswith("Q"):
+                        cities.add(val)
+                if cities: country.largest_cities = ", ".join(sorted(list(cities))[:5])
 
             db.commit()
             return {"status": "success"}
