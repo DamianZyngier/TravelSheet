@@ -31,6 +31,13 @@ class Country(Base):
     national_symbols = Column(String(255)) # e.g. animal, flower
     unique_animals = Column(Text)
     unique_things = Column(Text)
+    alcohol_status = Column(String(255))
+    lgbtq_status = Column(String(255))
+    id_requirement = Column(String(255))
+    main_airport = Column(String(255))
+    railway_info = Column(String(255))
+    natural_hazards = Column(Text)
+    popular_apps = Column(String(255))
     unesco_count = Column(Integer, default=0)
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())

@@ -17,6 +17,13 @@ export interface CountryData {
   national_symbols: string | null;
   unique_animals: string | null;
   unique_things: string | null;
+  alcohol_status: string | null;
+  lgbtq_status: string | null;
+  id_requirement: string | null;
+  main_airport: string | null;
+  railway_info: string | null;
+  natural_hazards: string | null;
+  popular_apps: string | null;
   population: number | null;
   area: number | null;
   phone_code: string | null;

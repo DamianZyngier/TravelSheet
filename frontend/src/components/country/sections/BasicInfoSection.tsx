@@ -54,6 +54,26 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <strong>Nr kierunkowy:</strong>
           <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
+        <div className="info-item-box">
+          <strong>Dowód tożsamości:</strong>
+          <span>{selectedCountry.id_requirement || 'Brak danych'}</span>
+        </div>
+        <div className="info-item-box">
+          <strong>Najpopularniejsze apki:</strong>
+          <span>{selectedCountry.popular_apps || 'Brak danych'}</span>
+        </div>
+        {selectedCountry.main_airport && (
+          <div className="info-item-box full">
+            <strong>Główne lotnisko:</strong>
+            <span>✈️ {selectedCountry.main_airport}</span>
+          </div>
+        )}
+        {selectedCountry.railway_info && (
+          <div className="info-item-box full">
+            <strong>Kolej:</strong>
+            <span>🚆 {selectedCountry.railway_info}</span>
+          </div>
+        )}
         {selectedCountry.largest_cities && (
           <div className="info-item-box full">
             <strong>Największe miasta:</strong>

@@ -10,10 +10,11 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
     if not country: return {"error": "Country not found"}
 
-    # SPARQL Query for basic info, phone code, ethnic groups, and unique animals
+    # SPARQL Query for basic info, phone code, ethnic groups, unique animals, and new law/transport fields
     query = f"""
     SELECT ?timezoneLabel ?dishLabel ?phoneCode ?ethnicLabel ?religionLabel ?religionPercent 
-           ?animalLabel ?thingLabel WHERE {{
+           ?animalLabel ?alcoholLabel ?lgbtqLabel ?idReqLabel ?airportLabel ?railwayLabel 
+           ?hazardLabel WHERE {{
       ?country wdt:P297 "{country_iso2.upper()}".
       OPTIONAL {{ ?country wdt:P421 ?timezone. }}
       OPTIONAL {{ ?country wdt:P3646 ?dish. }}
@@ -30,14 +31,19 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
       }}
 
       # Unique/National Animal
-      OPTIONAL {{
-        ?country wdt:P2579 ?animal.
-      }}
-      UNION
-      OPTIONAL {{
-        ?country wdt:P31 wd:Q2152485. # National animal
-        ?country wdt:P17 ?country.
-      }}
+      OPTIONAL {{ ?country wdt:P2579 ?animal. }}
+      
+      # Law & Safety
+      OPTIONAL {{ ?country wdt:P3931 ?alcohol. }}
+      OPTIONAL {{ ?country wdt:P91 ?lgbtq. }}
+      OPTIONAL {{ ?country wdt:P3120 ?idReq. }}
+      
+      # Transport
+      OPTIONAL {{ ?country wdt:P114 ?airport. }}
+      OPTIONAL {{ ?country wdt:P1194 ?railway. }}
+      
+      # Environment
+      OPTIONAL {{ ?country wdt:P1057 ?hazard. }}
 
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". 
         ?timezone rdfs:label ?timezoneLabel.
@@ -45,6 +51,12 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
         ?ethnic rdfs:label ?ethnicLabel.
         ?religion rdfs:label ?religionLabel.
         ?animal rdfs:label ?animalLabel.
+        ?alcohol rdfs:label ?alcoholLabel.
+        ?lgbtq rdfs:label ?lgbtqLabel.
+        ?idReq rdfs:label ?idReqLabel.
+        ?airport rdfs:label ?airportLabel.
+        ?railway rdfs:label ?railwayLabel.
+        ?hazard rdfs:label ?hazardLabel.
       }}
     }}
     """
@@ -89,6 +101,7 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
                 
                 ethnics = set()
                 animals = set()
+                hazards = set()
                 religions = {} # Use dict to store highest percentage per religion
                 
                 for r in bindings:
@@ -97,12 +110,22 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
                     if not country.national_dish: country.national_dish = r.get("dishLabel", {}).get("value")
                     if not country.phone_code: country.phone_code = r.get("phoneCode", {}).get("value")
                     
+                    # New fields
+                    if not country.alcohol_status: country.alcohol_status = r.get("alcoholLabel", {}).get("value")
+                    if not country.lgbtq_status: country.lgbtq_status = r.get("lgbtqLabel", {}).get("value")
+                    if not country.id_requirement: country.id_requirement = r.get("idReqLabel", {}).get("value")
+                    if not country.main_airport: country.main_airport = r.get("airportLabel", {}).get("value")
+                    if not country.railway_info: country.railway_info = r.get("railwayLabel", {}).get("value")
+
                     # Collections
                     ethnic = r.get("ethnicLabel", {}).get("value")
                     if ethnic: ethnics.add(ethnic)
                     
                     animal = r.get("animalLabel", {}).get("value")
                     if animal: animals.add(animal)
+
+                    hazard = r.get("hazardLabel", {}).get("value")
+                    if hazard: hazards.add(hazard)
                     
                     rel = r.get("religionLabel", {}).get("value")
                     perc = r.get("religionPercent", {}).get("value")
@@ -111,6 +134,15 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
 
                 if ethnics: country.ethnic_groups = ", ".join(list(ethnics)[:5])
                 if animals: country.unique_animals = ", ".join(list(animals)[:5])
+                if hazards: country.natural_hazards = ", ".join(list(hazards)[:5])
+                
+                # Communication (regional defaults as Wiki doesn't have a direct "popular social media" property often)
+                if not country.popular_apps:
+                    if country.continent == 'Europe': country.popular_apps = "WhatsApp, Messenger, Instagram"
+                    elif country.continent == 'Asia': country.popular_apps = "WhatsApp, WeChat, Line, Telegram"
+                    elif country.continent == 'Americas': country.popular_apps = "WhatsApp, Messenger, Instagram"
+                    elif country.continent == 'Africa': country.popular_apps = "WhatsApp, Facebook"
+                    else: country.popular_apps = "WhatsApp, Messenger"
                 
                 # Update Religions in DB
                 if religions:

@@ -92,7 +92,31 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
             </a>
           )}
         </div>
-        <DataSource sources={['MSZ']} />
+
+        {/* Nowa sekcja Prawo i Obyczaje */}
+        {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards) && (
+          <div className="law-environment-grid" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+            {selectedCountry.alcohol_status && (
+              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Alkohol:</strong>
+                <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.alcohol_status}</span>
+              </div>
+            )}
+            {selectedCountry.lgbtq_status && (
+              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Prawa LGBTQ+:</strong>
+                <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.lgbtq_status}</span>
+              </div>
+            )}
+            {selectedCountry.natural_hazards && (
+              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Zagrożenia:</strong>
+                <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.natural_hazards}</span>
+              </div>
+            )}
+          </div>
+        )}
+        <DataSource sources={['MSZ', 'WIKI']} />
       </div>
     </>
   );
