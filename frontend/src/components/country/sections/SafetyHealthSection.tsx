@@ -79,17 +79,20 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
         </div>
 
         <div className={`safety-card risk-${selectedCountry.safety.risk_level}`}>
-          <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+          <div className="safety-card-header">
+            <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+            {selectedCountry.safety.url && (
+              <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-external-badge">
+                Oficjalny komunikat MSZ ↗
+              </a>
+            )}
+          </div>
+          
           <p className="risk-summary-text"><LinkifyOdyseusz text={selectedCountry.safety.risk_text} /></p>
           {selectedCountry.safety.risk_details && (
             <div className="risk-details-box">
               <ExpandableText text={selectedCountry.safety.risk_details} />
             </div>
-          )}
-          {selectedCountry.safety.url && (
-            <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-link">
-              Zobacz pełny komunikat MSZ na gov.pl →
-            </a>
           )}
         </div>
 

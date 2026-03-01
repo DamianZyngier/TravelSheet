@@ -2732,3 +2732,41 @@
   }
 }
 
+
+/* MSZ External Link Badge */
+.safety-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.msz-external-badge {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3182ce;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.msz-external-badge:hover {
+  background: #ebf8ff;
+  border-color: #3182ce;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .safety-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
