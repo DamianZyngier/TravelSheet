@@ -3,7 +3,7 @@ import os
 import sys
 
 def test_data_integrity():
-    filepath = 'docs/data.json'
+    filepath = sys.argv[1] if len(sys.argv) > 1 else 'docs/data.json'
     if not os.path.exists(filepath):
         print(f"[ERROR] {filepath} not found. Run export script first.")
         sys.exit(1)
@@ -18,6 +18,9 @@ def test_data_integrity():
     print(f"Validating {len(data)} countries and all fields...")
     
     errors = []
+    any_unesco = False
+    any_attractions = False
+    any_embassies = False
     
     for iso, country in data.items():
         # 1. Basic Fields
@@ -68,6 +71,8 @@ def test_data_integrity():
         unesco_places = country.get('unesco_places', [])
         if not isinstance(unesco_places, list):
             errors.append(f"{iso}: 'unesco_places' is not a list")
+        if unesco_places:
+            any_unesco = True
         for place in unesco_places:
             for field in ['name', 'category', 'is_danger', 'is_transnational', 'unesco_id', 'image_url', 'description']:
                 if field not in place:
@@ -77,6 +82,8 @@ def test_data_integrity():
         attractions = country.get('attractions', [])
         if not isinstance(attractions, list):
             errors.append(f"{iso}: 'attractions' is not a list")
+        if attractions:
+            any_attractions = True
         for attr in attractions:
             for field in ['name', 'category', 'description']:
                 if field not in attr:
@@ -94,8 +101,24 @@ def test_data_integrity():
 
         # 12. Religions & Languages & Embassies
         for list_field in ['religions', 'languages', 'embassies']:
-            if not isinstance(country.get(list_field), list):
+            field_val = country.get(list_field)
+            if not isinstance(field_val, list):
                 errors.append(f"{iso}: '{list_field}' is not a list")
+            if list_field == 'embassies' and field_val:
+                any_embassies = True
+
+    # Critical check: do we have ANY data?
+    # For basic seeding only, these might be empty. 
+    # But for a real data.json they MUST NOT be empty.
+    # We allow skipping these checks if we pass a special flag.
+    is_full_check = "--full" in sys.argv
+    if is_full_check:
+        if not any_unesco:
+            errors.append("CRITICAL: No UNESCO places found in the entire dataset!")
+        if not any_attractions:
+            errors.append("CRITICAL: No attractions found in the entire dataset!")
+        if not any_embassies:
+            errors.append("CRITICAL: No embassies found in the entire dataset!")
 
     if errors:
         print(f"\n[FAILED] Validation Failed! Found {len(errors)} structural issues.")

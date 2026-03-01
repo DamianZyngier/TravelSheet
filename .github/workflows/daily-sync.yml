@@ -76,6 +76,10 @@ jobs:
         run: |
           python scripts/export_to_json.py
 
+      - name: Validate Data Integrity
+        run: |
+          python scripts/test_data_integrity.py docs/data.json --full
+
       - name: Build Frontend
         run: |
           cd frontend
@@ -84,6 +88,7 @@ jobs:
           # Po buildzie data.json został usunięty przez emptyOutDir, więc musimy go przywrócić
           cd ..
           python scripts/export_to_json.py
+          python scripts/test_data_integrity.py docs/data.json --full
 
       - name: Pull latest changes
         run: |

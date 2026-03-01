@@ -2,7 +2,9 @@ import sqlite3
 import json
 import os
 
-db_path = 'travel_cheatsheet.db'
+import sys
+
+db_path = os.environ.get('DB_PATH', 'travel_cheatsheet.db')
 
 def dict_factory(cursor, row):
     d = {}
@@ -219,13 +221,15 @@ def export_all():
                 print(f"Przetworzono {i+1}/{len(countries)} krajów...")
 
         # Save to files
-        os.makedirs('docs', exist_ok=True)
-        with open('docs/data.json', 'w', encoding='utf-8') as f:
+        json_path = os.environ.get('JSON_OUTPUT_PATH', 'docs/data.json')
+        os.makedirs(os.path.dirname(json_path), exist_ok=True)
+        with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
 
-        os.makedirs('frontend/public', exist_ok=True)
-        with open('frontend/public/data.json', 'w', encoding='utf-8') as f:
-            json.dump(output, f, ensure_ascii=False, indent=2)
+        if 'JSON_OUTPUT_PATH' not in os.environ:
+            os.makedirs('frontend/public', exist_ok=True)
+            with open('frontend/public/data.json', 'w', encoding='utf-8') as f:
+                json.dump(output, f, ensure_ascii=False, indent=2)
 
         print(f"Eksport zakończony sukcesem! data.json zawiera {len(output)} krajów.")
 

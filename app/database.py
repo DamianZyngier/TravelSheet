@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # Lokalna baza SQLite
-DATABASE_URL = "sqlite:///./travel_cheatsheet.db"
+DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./travel_cheatsheet.db")
 
 # connect_args={"check_same_thread": False} jest wymagane tylko dla SQLite
 engine = create_engine(
