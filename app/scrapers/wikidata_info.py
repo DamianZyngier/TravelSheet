@@ -120,12 +120,32 @@ async def sync_wikidata_country_info(db: Session, country_iso2: str):
                 if animals: country.unique_animals = ", ".join(sorted(list(animals))[:5])
                 if hazards: country.natural_hazards = ", ".join(sorted(list(hazards))[:5])
                 
+                # FALLBACKS for often missing Wiki data
+                # 1. Communication (regional defaults)
                 if not country.popular_apps:
                     if country.continent == 'Europe': country.popular_apps = "WhatsApp, Messenger, Instagram"
                     elif country.continent == 'Asia': country.popular_apps = "WhatsApp, WeChat, Line, Telegram"
                     elif country.continent == 'Americas': country.popular_apps = "WhatsApp, Messenger, Instagram"
                     elif country.continent == 'Africa': country.popular_apps = "WhatsApp, Facebook"
                     else: country.popular_apps = "WhatsApp, Messenger"
+                
+                # 2. ID Requirement (fallback to entry_requirements data if missing from Wiki)
+                if not country.id_requirement:
+                    if country.entry_req:
+                        if country.entry_req.id_card_allowed:
+                            country.id_requirement = "Dowód osobisty lub Paszport"
+                        elif country.entry_req.passport_required:
+                            country.id_requirement = "Paszport"
+                        else:
+                            country.id_requirement = "Paszport (zalecany)"
+                    else:
+                        # Regional fallback if entry_req not yet scraped
+                        EU_EEA = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
+                                  'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'CH']
+                        if country.iso_alpha2.upper() in EU_EEA:
+                            country.id_requirement = "Dowód osobisty lub Paszport"
+                        else:
+                            country.id_requirement = "Paszport"
                 
                 if religions:
                     db.query(models.Religion).filter(models.Religion.country_id == country.id).delete()
