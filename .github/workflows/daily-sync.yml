@@ -28,67 +28,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Start API in background
+      - name: Full Data Sync
         run: |
           rm -f travel_cheatsheet.db
-          # Redirect to log file for later viewing
-          nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > uvicorn.log 2>&1 &
-          # Wait for API to be ready 
-          for i in {1..30}; do
-            if curl -s http://localhost:8000/health > /dev/null; then
-              echo "API is ready!"
-              break
-            fi
-            echo "Waiting for API..."
-            sleep 1
-          done
-
-      - name: Initial Seed
-        run: |
-          python scripts/seed_db.py
-
-      - name: Sync Data
-        run: |
-          echo "Syncing exchange rates..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-exchange-rates" | jq .
-          echo "Syncing static info..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-static-info" | jq .
-          echo "Syncing emergency numbers..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-emergency" | jq .
-          echo "Syncing costs..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-costs" | jq .
-          echo "Syncing visas (Wiki)..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-visas" | jq .
-          echo "Syncing UNESCO sites..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-unesco-sites" | jq .
-          echo "Syncing holidays..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-holidays" | jq .
-          echo "Syncing wiki summaries..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-wiki-summaries" | jq .
-                    echo "Syncing wiki attractions..."
-                    curl -s -X POST "http://localhost:8000/api/admin/sync-attractions-wiki" | jq .
-                    
-                    # NEW: Added recently integrated wikidata info (religions, transport, laws)
-                    echo "Syncing wikidata info (extended)..."
-                    # Since there is no single endpoint for 'all wikidata info' yet in admin.py,
-                    # we can use a python script or add the endpoint. 
-                    # Let's add the endpoint to admin.py first to keep it clean.
-                    curl -s -X POST "http://localhost:8000/api/admin/sync-wikidata-info" | jq .
-          
-                    echo "Syncing embassies..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-embassies" | jq .
-          echo "Syncing climate..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-climate" | jq .
-          echo "Syncing CDC health info..."
-          curl -s -X POST "http://localhost:8000/api/admin/sync-cdc" | jq .
-
-      - name: Scrape All Countries (MSZ gov.pl)
-        run: |
-          python scripts/sync_msz.py
-
-      - name: Export to JSON
-        run: |
-          python scripts/export_to_json.py
+          python scripts/sync_all.py
 
       - name: Validate Data Integrity
         run: |
