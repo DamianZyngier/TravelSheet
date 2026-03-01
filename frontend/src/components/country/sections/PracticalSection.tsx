@@ -75,8 +75,14 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                     className="forecast-icon"
                   />
                   <div className="forecast-temps">
-                    <span className="temp-max">{Math.round(day.temp_max)}°</span>
-                    <span className="temp-min">{Math.round(day.temp_min)}°</span>
+                    <div className="temp-group">
+                      <span className="temp-label">dzień</span>
+                      <span className="temp-max">{Math.round(day.temp_max)}°</span>
+                    </div>
+                    <div className="temp-group">
+                      <span className="temp-label">noc</span>
+                      <span className="temp-min">{Math.round(day.temp_min)}°</span>
+                    </div>
                   </div>
                   <span className="forecast-condition">{day.condition}</span>
                 </div>
