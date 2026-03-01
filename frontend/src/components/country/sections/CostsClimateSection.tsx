@@ -125,7 +125,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
             </div>
           )}
         </div>
-        <DataSource sources={['NUMBEO']} />
+        <DataSource sources={['NUMBEO']} lastUpdated={selectedCountry.costs?.last_updated} />
       </div>
 
       <div id="climate" className="info-block full-width climate-section scroll-mt">
@@ -232,7 +232,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
         ) : (
           <p className="no-data-text">Brak danych klimatycznych dla tego kraju.</p>
         )}
-        <DataSource sources={['METEO', 'OWM']} />
+        <DataSource sources={['METEO', 'OWM']} lastUpdated={selectedCountry.weather?.last_updated} />
       </div>
     </>
   );

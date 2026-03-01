@@ -11,7 +11,7 @@ from app.database import SessionLocal
 from app import models, schemas
 
 def export_all():
-    print("Eksportuję dane (Optimized Eager Loading Mode - Fixed)...")
+    print("Eksportuję dane (Optimized Eager Loading Mode - Extended)...")
     db = SessionLocal()
     
     try:
@@ -74,6 +74,7 @@ def export_all():
                 "longitude": float(c.longitude) if c.longitude else None,
                 "unesco_count": c.unesco_count or 0,
                 "is_independent": bool(c.is_independent),
+                "last_updated": str(c.updated_at) if c.updated_at else None
             }
             
             # Parent & Territories
@@ -99,20 +100,22 @@ def export_all():
                     "risk_level": c.safety.risk_level or "unknown",
                     "risk_text": c.safety.summary or "Brak danych",
                     "risk_details": c.safety.risk_details or "",
-                    "url": c.safety.full_url or ""
+                    "url": c.safety.full_url or "",
+                    "last_updated": str(c.safety.last_checked) if c.safety.last_checked else None
                 }
             else:
-                processed_data["safety"] = {"risk_level": "unknown", "risk_text": "Brak danych", "risk_details": "", "url": ""}
+                processed_data["safety"] = {"risk_level": "unknown", "risk_text": "Brak danych", "risk_details": "", "url": "", "last_updated": None}
             
             # Currency
             if c.currency:
                 processed_data["currency"] = {
                     "code": c.currency.code,
                     "name": c.currency.name or "",
-                    "rate_pln": float(c.currency.exchange_rate_pln) if c.currency.exchange_rate_pln else None
+                    "rate_pln": float(c.currency.exchange_rate_pln) if c.currency.exchange_rate_pln else None,
+                    "last_updated": str(c.currency.last_updated) if c.currency.last_updated else None
                 }
             else:
-                processed_data["currency"] = {"code": "", "name": "", "rate_pln": None}
+                processed_data["currency"] = {"code": "", "name": "", "rate_pln": None, "last_updated": None}
             
             # Practical
             if c.practical:
@@ -126,20 +129,30 @@ def export_all():
                     "best_exchange_currency": c.practical.best_exchange_currency or "",
                     "exchange_where": c.practical.exchange_where or "",
                     "atm_advice": c.practical.atm_advice or "",
+                    "tipping_culture": c.practical.tipping_culture or "",
+                    "drinking_age": c.practical.drinking_age or "",
+                    "alcohol_rules": c.practical.alcohol_rules or "",
+                    "dress_code": c.practical.dress_code or "",
+                    "photography_restrictions": c.practical.photography_restrictions or "",
+                    "sensitive_topics": c.practical.sensitive_topics or "",
+                    "local_norms": c.practical.local_norms or "",
                     "emergency": json.loads(c.practical.emergency_numbers) if c.practical.emergency_numbers else None,
                     "vaccinations_required": c.practical.vaccinations_required or "",
                     "vaccinations_suggested": c.practical.vaccinations_suggested or "",
                     "health_info": c.practical.health_info or "",
                     "roaming_info": c.practical.roaming_info or "",
-                    "license_type": c.practical.license_type or ""
+                    "license_type": c.practical.license_type or "",
+                    "last_updated": str(c.practical.last_updated) if c.practical.last_updated else None
                 }
             else:
                 processed_data["practical"] = {
                     "plug_types": "", "voltage": None, "water_safe": None, "water_safe_for_brushing": None,
                     "driving_side": "right", "card_acceptance": "", "best_exchange_currency": "", 
-                    "exchange_where": "", "atm_advice": "", "emergency": None, 
+                    "exchange_where": "", "atm_advice": "", "tipping_culture": "", "drinking_age": "",
+                    "alcohol_rules": "", "dress_code": "", "photography_restrictions": "",
+                    "sensitive_topics": "", "local_norms": "", "emergency": None, 
                     "vaccinations_required": "", "vaccinations_suggested": "", 
-                    "health_info": "", "roaming_info": "", "license_type": ""
+                    "health_info": "", "roaming_info": "", "license_type": "", "last_updated": None
                 }
 
             # Costs
@@ -153,7 +166,8 @@ def export_all():
                     "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs.ratio_to_poland else None,
                     "daily_budget_low": float(c.costs.daily_budget_low) if c.costs.daily_budget_low else None,
                     "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs.daily_budget_mid else None,
-                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None
+                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None,
+                    "last_updated": str(c.costs.last_updated) if c.costs.last_updated else None
                 }
             else:
                 processed_data["costs"] = None
@@ -177,7 +191,8 @@ def export_all():
                     "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
                     "condition": c.weather.condition or "",
                     "icon": c.weather.condition_icon or "",
-                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else []
+                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else [],
+                    "last_updated": str(c.weather.last_updated) if c.weather.last_updated else None
                 }
             else:
                 processed_data["weather"] = None

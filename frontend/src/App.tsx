@@ -24,8 +24,24 @@ function App() {
   const [filterSafety, setFilterSafety] = useState('all')
   const [activeSection, setActiveSection] = useState('summary')
   const [error, setError] = useState<string | null>(null)
+  const [favorites, setFavorites] = useState<string[]>(() => {
+    const saved = localStorage.getItem('travelsheet_favorites');
+    return saved ? JSON.parse(saved) : [];
+  })
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState(false)
   
   const [mapPosition, setMapPosition] = useState<{ coordinates: [number, number], zoom: number }>({ coordinates: [0, 0], zoom: 1 })
+...
+  useEffect(() => {
+    localStorage.setItem('travelsheet_favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  const toggleFavorite = (iso2: string) => {
+    setFavorites(prev => 
+      prev.includes(iso2) ? prev.filter(i => i !== iso2) : [...prev, iso2]
+    );
+  };
+
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -139,6 +155,10 @@ function App() {
     return Object.values(countries)
       .filter(c => {
         if (!c || !c.safety) return false;
+        
+        // Favorites filter
+        if (showOnlyFavorites && !favorites.includes(c.iso2)) return false;
+
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
         const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
         
@@ -227,6 +247,11 @@ function App() {
     <div className="app-container" onContextMenu={() => true}>
       {!selectedCountry ? (
         <>
+          <div className="hero-intro">
+            <h1>TripSheet</h1>
+            <p>Twoje centrum bezpiecznych podróży. Agregujemy dane z oficjalnych źródeł (MSZ, CDC, UNESCO), abyś mógł podróżować świadomie i bezpiecznie.</p>
+          </div>
+
           <Header 
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -234,6 +259,8 @@ function App() {
             setFilterContinent={setFilterContinent}
             filterSafety={filterSafety}
             setFilterSafety={setFilterSafety}
+            showOnlyFavorites={showOnlyFavorites}
+            setShowOnlyFavorites={setShowOnlyFavorites}
             continents={continents}
             onLogoClick={() => handleSelectCountry(null)}
             searchInputRef={searchInputRef}
@@ -242,7 +269,9 @@ function App() {
           <main className="content-area">
             <CountryGrid 
               countryList={countryList} 
-              onSelectCountry={handleSelectCountry} 
+              onSelectCountry={handleSelectCountry}
+              favorites={favorites}
+              toggleFavorite={toggleFavorite}
             />
           </main>
         </>
@@ -258,6 +287,14 @@ function App() {
           />
 
           <div className="detail-view-content">
+            <div className="detail-actions-top">
+               <button 
+                className={`favorite-btn-large ${favorites.includes(selectedCountry.iso2) ? 'is-fav' : ''}`}
+                onClick={() => toggleFavorite(selectedCountry.iso2)}
+               >
+                 {favorites.includes(selectedCountry.iso2) ? '⭐ Zapamiętany' : '☆ Zapamiętaj kraj'}
+               </button>
+            </div>
             <CountryDetail 
               selectedCountry={selectedCountry}
               allCountries={sortedFullList}

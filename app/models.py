@@ -245,6 +245,17 @@ class PracticalInfo(Base):
     best_exchange_currency = Column(String(100)) # e.g. "USD, EUR"
     exchange_where = Column(String(255)) # e.g. "Polska", "Na miejscu"
     atm_advice = Column(Text)
+    
+    # New cultural/law fields
+    tipping_culture = Column(Text)
+    drinking_age = Column(String(100))
+    alcohol_rules = Column(Text)
+    dress_code = Column(Text)
+    photography_restrictions = Column(Text)
+    sensitive_topics = Column(Text)
+    local_norms = Column(Text)
+    
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     @property
     def emergency(self):

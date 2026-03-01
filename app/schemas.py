@@ -146,6 +146,12 @@ class PracticalSchema(BaseModel):
     odyseusz_url: Optional[str]
     store_hours: Optional[str]
     tipping_culture: Optional[str]
+    drinking_age: Optional[str]
+    alcohol_rules: Optional[str]
+    dress_code: Optional[str]
+    photography_restrictions: Optional[str]
+    sensitive_topics: Optional[str]
+    local_norms: Optional[str]
     internet_notes: Optional[str]
     esim_available: Optional[bool]
     emergency: Optional[EmergencyNumbersSchema] = None
@@ -158,6 +164,7 @@ class PracticalSchema(BaseModel):
     best_exchange_currency: Optional[str] = None
     exchange_where: Optional[str] = None
     atm_advice: Optional[str] = None
+    last_updated: Optional[datetime] = None
 
     @field_validator("emergency", mode="before")
     @classmethod
@@ -249,6 +256,7 @@ class CostOfLivingSchema(BaseModel):
     daily_budget_low: Optional[float]
     daily_budget_mid: Optional[float]
     daily_budget_high: Optional[float]
+    last_updated: Optional[datetime] = None
 
     class Config:
         from_attributes = True

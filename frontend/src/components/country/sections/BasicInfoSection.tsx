@@ -97,7 +97,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </div>
         )}
       </div>
-      <DataSource sources={['REST', 'WIKI', 'CDC']} />
+      <DataSource sources={['REST', 'WIKI', 'CDC']} lastUpdated={selectedCountry.last_updated} />
     </div>
   );
 };

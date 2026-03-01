@@ -11,6 +11,7 @@ export interface CountryData {
   latitude: number | null;
   longitude: number | null;
   unesco_count: number;
+  last_updated: string | null;
   timezone: string | null;
   national_dish: string | null;
   wiki_summary: string | null;
@@ -45,11 +46,13 @@ export interface CountryData {
     risk_text: string;
     risk_details: string;
     url: string;
+    last_updated: string | null;
   };
   currency: {
     code: string;
     name: string;
     rate_pln: number | null;
+    last_updated: string | null;
   };
   practical: {
     plug_types: string;
@@ -61,6 +64,13 @@ export interface CountryData {
     best_exchange_currency: string;
     exchange_where: string;
     atm_advice: string;
+    tipping_culture: string;
+    drinking_age: string;
+    alcohol_rules: string;
+    dress_code: string;
+    photography_restrictions: string;
+    sensitive_topics: string;
+    local_norms: string;
     emergency?: {
       police: string | null;
       ambulance: string | null;
@@ -73,6 +83,7 @@ export interface CountryData {
     health_info: string;
     roaming_info: string;
     license_type: string;
+    last_updated: string | null;
   };
   costs?: {
     index: number | null;
@@ -84,6 +95,7 @@ export interface CountryData {
     daily_budget_low: number | null;
     daily_budget_mid: number | null;
     daily_budget_high: number | null;
+    last_updated: string | null;
   };
   embassies?: {
     type: string;
@@ -130,6 +142,7 @@ export interface CountryData {
     temp: number | null;
     condition: string;
     icon: string;
+    last_updated: string | null;
     forecast?: {
       date: string;
       temp_max: number;

@@ -94,29 +94,60 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
         </div>
 
         {/* Nowa sekcja Prawo i Obyczaje */}
-        {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards) && (
-          <div id="law" className="law-environment-grid scroll-mt" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+        {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code) && (
+          <div id="law" className="law-environment-grid scroll-mt" style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
             {selectedCountry.alcohol_status && (
-              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Alkohol:</strong>
-                <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.alcohol_status}</span>
+              <div className="law-item">
+                <strong>Alkohol:</strong>
+                <span>{selectedCountry.alcohol_status}</span>
+                {selectedCountry.practical.drinking_age && <small> (Wiek: {selectedCountry.practical.drinking_age})</small>}
+                {selectedCountry.practical.alcohol_rules && <p className="law-subtext">{selectedCountry.practical.alcohol_rules}</p>}
               </div>
             )}
             {selectedCountry.lgbtq_status && (
-              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Prawa LGBTQ+:</strong>
-                <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.lgbtq_status}</span>
+              <div className="law-item">
+                <strong>Prawa LGBTQ+:</strong>
+                <span>{selectedCountry.lgbtq_status}</span>
+              </div>
+            )}
+            {selectedCountry.practical.dress_code && (
+              <div className="law-item">
+                <strong>Ubiór i normy:</strong>
+                <p className="law-subtext">{selectedCountry.practical.dress_code}</p>
+              </div>
+            )}
+            {selectedCountry.practical.photography_restrictions && (
+              <div className="law-item">
+                <strong>Fotografowanie:</strong>
+                <p className="law-subtext">{selectedCountry.practical.photography_restrictions}</p>
+              </div>
+            )}
+            {selectedCountry.practical.local_norms && (
+              <div className="law-item full-width-grid">
+                <strong>Lokalne obyczaje:</strong>
+                <ExpandableText text={selectedCountry.practical.local_norms} />
+              </div>
+            )}
+            {selectedCountry.practical.tipping_culture && (
+              <div className="law-item">
+                <strong>Napiwki:</strong>
+                <p className="law-subtext">{selectedCountry.practical.tipping_culture}</p>
               </div>
             )}
             {selectedCountry.natural_hazards && (
-              <div className="law-item" style={{ background: 'white', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block' }}>Zagrożenia:</strong>
+              <div className="law-item">
+                <strong>Zagrożenia naturalne:</strong>
                 <span style={{ fontSize: '0.9rem', color: '#2d3748' }}>{selectedCountry.natural_hazards}</span>
               </div>
             )}
           </div>
         )}
-        <DataSource sources={['MSZ', 'WIKI']} />
+        
+        <div className="travel-disclaimer">
+          ⚠️ Zawsze weryfikuj informacje w oficjalnych źródłach rządowych przed podróżą; przepisy często ulegają zmianom.
+        </div>
+
+        <DataSource sources={['MSZ', 'WIKI']} lastUpdated={selectedCountry.safety.last_updated} />
       </div>
     </>
   );

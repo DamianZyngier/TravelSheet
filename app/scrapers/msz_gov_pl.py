@@ -226,6 +226,39 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         sug = [v for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"] if v.lower() in h_lower]
         if sug: vaccines_sug = "Zalecane: " + ", ".join(sug)
 
+    # Local Customs & Laws
+    customs_full, alcohol_rules, tipping, dress_code, photos, sensitive = "", "", "", "", "", ""
+    customs_section = soup.find(string=re.compile(r'Miejscowe prawo i zwyczaje', re.I))
+    if customs_section:
+        customs_text_list = []
+        curr = customs_section.parent
+        for _ in range(25):
+            if curr:
+                txt = curr.get_text().strip()
+                if txt: customs_text_list.append(txt)
+                curr = curr.find_next_sibling()
+                if curr and curr.name in ['h2', 'h3']: break
+        customs_full = "\n\n".join(customs_text_list)
+        c_lower = customs_full.lower()
+        
+        # Heuristics for sub-fields
+        if "alkohol" in c_lower:
+            # Extract paragraph containing alcohol
+            for p in customs_text_list:
+                if "alkohol" in p.lower(): alcohol_rules = p; break
+        
+        if "napiwek" in c_lower or "napiwki" in c_lower:
+            for p in customs_text_list:
+                if "napiwek" in p.lower() or "napiwki" in p.lower(): tipping = p; break
+                
+        if "ubiór" in c_lower or "ubior" in c_lower or "odzież" in c_lower:
+            for p in customs_text_list:
+                if any(x in p.lower() for x in ["ubiór", "odzież", "świątyń", "meczet"]): dress_code = p; break
+
+        if "zdjęć" in c_lower or "fotografowanie" in c_lower:
+            for p in customs_text_list:
+                if any(x in p.lower() for x in ["zdjęć", "fotografow", "zakaz"]): photos = p; break
+
     # --- SAVE TO DB ---
     # Safety
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
@@ -255,6 +288,14 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     practical.health_info = normalize_polish_text(health_full)
     practical.vaccinations_required = normalize_polish_text(vaccines_req)
     practical.vaccinations_suggested = normalize_polish_text(vaccines_sug)
+    
+    # New fields
+    practical.local_norms = normalize_polish_text(customs_full)
+    practical.tipping_culture = normalize_polish_text(tipping)
+    practical.alcohol_rules = normalize_polish_text(alcohol_rules)
+    practical.dress_code = normalize_polish_text(dress_code)
+    practical.photography_restrictions = normalize_polish_text(photos)
+    practical.last_updated = func.now()
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url, "strategy": strategy_used}

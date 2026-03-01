@@ -5,9 +5,11 @@ import CountryCard from './CountryCard';
 interface CountryGridProps {
   countryList: CountryData[];
   onSelectCountry: (country: CountryData) => void;
+  favorites: string[];
+  toggleFavorite: (iso2: string) => void;
 }
 
-const CountryGrid: React.FC<CountryGridProps> = ({ countryList, onSelectCountry }) => {
+const CountryGrid: React.FC<CountryGridProps> = ({ countryList, onSelectCountry, favorites, toggleFavorite }) => {
   return (
     <div className="country-grid">
       {countryList.length > 0 ? (
@@ -16,6 +18,8 @@ const CountryGrid: React.FC<CountryGridProps> = ({ countryList, onSelectCountry 
             key={country.iso2} 
             country={country} 
             onClick={() => onSelectCountry(country)} 
+            isFavorite={favorites.includes(country.iso2)}
+            toggleFavorite={toggleFavorite}
           />
         ))
       ) : (

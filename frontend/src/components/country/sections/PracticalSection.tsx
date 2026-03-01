@@ -121,7 +121,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             </span>
           </div>
         </div>
-        <DataSource sources={['MSZ', 'WIKI']} />
+        <DataSource sources={['MSZ', 'WIKI']} lastUpdated={selectedCountry.practical.last_updated} />
       </div>
 
       <div id="currency" className="info-block full-width scroll-mt">
@@ -156,7 +156,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             </div>
           )}
         </div>
-        <DataSource sources={['REST', 'WIKI']} />
+        <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.currency.last_updated} />
       </div>
 
       <div id="water" className="info-block full-width scroll-mt">

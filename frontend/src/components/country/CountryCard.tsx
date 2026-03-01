@@ -6,14 +6,25 @@ import { getLongNameClass } from '../../utils/helpers';
 interface CountryCardProps {
   country: CountryData;
   onClick: () => void;
+  isFavorite: boolean;
+  toggleFavorite: (iso2: string) => void;
 }
 
-const CountryCard: React.FC<CountryCardProps> = ({ country, onClick }) => {
+const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite, toggleFavorite }) => {
   return (
     <div 
       className={`country-card risk-border-${country.safety.risk_level}`}
       onClick={onClick}
     >
+      <button 
+        className={`card-favorite-btn ${isFavorite ? 'is-fav' : ''}`}
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleFavorite(country.iso2);
+        }}
+      >
+        {isFavorite ? '⭐' : '☆'}
+      </button>
       <div className="card-content">
         <img 
           src={country.flag_url} 

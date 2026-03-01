@@ -209,6 +209,7 @@ def sync_static_data(db: Session):
             practical.best_exchange_currency = exchange_curr
             practical.exchange_where = exchange_where
             practical.atm_advice = atm_adv
+            practical.last_updated = func.now()
         else:
             practical = models.PracticalInfo(
                 country_id=country.id,
@@ -221,7 +222,8 @@ def sync_static_data(db: Session):
                 card_acceptance=card_acc,
                 best_exchange_currency=exchange_curr,
                 exchange_where=exchange_where,
-                atm_advice=atm_adv
+                atm_advice=atm_adv,
+                last_updated=func.now()
             )
             db.add(practical)
         synced += 1
