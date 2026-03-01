@@ -1,47 +1,43 @@
-# Admin Documentation - Data Sources & Features
+# Admin Documentation - Data Sources & Management
 
-This document provides technical details about the data sources used in TravelSheet. It is intended for administrators and developers to understand where data comes from, costs, limits, and specific data points.
+Technical details about the data architecture of TripSheet.
 
 ## Data Sources Summary
 
-| Source | Type | URL | Cost | Limits | UI Category | Sync | Official | Primary Data |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **REST Countries** | API | [restcountries.com](https://restcountries.com) | Free | No strict limits | **Informacje** | Weekly | No | Basic info, ISO codes, coordinates |
-| **MSZ gov.pl** | Scraper | [gov.pl](https://www.gov.pl/...) | Free | 1s delay per country | **Bezpieczeństwo** | Daily | Yes | Safety, Visas, Health, Polish Embassies |
-| **Wikipedia** | API | [pl.wikipedia.org](https://pl.wikipedia.org) | Free | Generous | **Poznaj kraj** | Weekly | No | Country summaries (descriptions) |
-| **Wikidata** | SPARQL | [query.wikidata.org](https://query.wikidata.org) | Free | Strict (batching used) | **Poznaj kraj** | Weekly | No | Attractions, Symbols, Largest cities |
-| **NBP** | API | [api.nbp.pl](https://api.nbp.pl) | Free | Very generous | **Waluta** | Daily | Yes | Exchange rates (PLN) |
-| **Nager.Date** | API | [date.nager.at](https://date.nager.at) | Free | No strict limits | **Święta** | Weekly | No | Public holidays |
-| **OpenWeather** | API | [openweathermap.org](https://openweathermap.org) | Paid/Free | 60 calls / min | **Pogoda** | Monthly | No | Current weather & conditions |
-| **UNESCO** | API | [data.unesco.org](https://data.unesco.org) | Free | No strict limits | **Atrakcje** | Weekly | Yes | World Heritage sites info |
-| **CDC** | Scraper | [cdc.gov](https://cdc.gov) | Free | Rate-limited | **Zdrowie** | Weekly | Yes | Secondary vaccination info |
+| Source | Type | Cost | Sync | UI Category | Key Data Points |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **REST Countries** | API | Free | Weekly | **Informacje** | ISO codes, Population, Area, Coordinates |
+| **MSZ gov.pl** | Scraper | Free | Daily | **Bezpieczeństwo** | Risk levels, Detailed advisories, Local laws & customs, Embassies |
+| **Open-Meteo** | API | Free | Daily | **Pogoda** | **7-day weather forecast**, Historical climate averages |
+| **NBP** | API | Free | Daily | **Waluta** | Live PLN exchange rates |
+| **Wikipedia** | API | Free | Weekly | **Poznaj kraj** | Country summaries, Visa requirements table |
+| **Wikidata** | SPARQL | Free | Weekly | **Wiele sekcji** | Religions (%), Attractions, Symbols, Airports, Railways, Hazards |
+| **UNESCO** | API | Free | Weekly | **Atrakcje** | World Heritage sites, In-danger status |
+| **Numbeo** | Fallback | Free | Weekly | **Ceny** | Cost of living indices, **Daily budget estimations** |
+| **CDC** | Scraper | Free | Weekly | **Zdrowie** | Medical and vaccination requirements |
 
 ## Management Scripts
 
-Use these scripts to keep data fresh:
+- **`python scripts/sync_all.py --mode [daily|weekly]`**: Main orchestrator. 
+  - `daily`: Parallel sync of volatile data (~2-5 min).
+  - `weekly`: Full parallel sync of all sources (~8-15 min).
+- **`python scripts/export_to_json.py`**: Fast export using SQLAlchemy eager loading.
+- **`python scripts/test_sync_tasks.py`**: Integration test that runs a full cycle using a temporary database to verify the pipeline.
 
-- **`python scripts/sync_all.py`**: The main entry point. Performs a full synchronization of all sources (UNESCO, Safety, Wikipedia, Holidays, Weather) and exports to JSON.
-- **`python scripts/export_to_json.py`**: Only performs the export from the SQLite database to `docs/data.json`.
-- **`python scripts/run_unesco_sync.py`**: Syncs only UNESCO data.
-- **`python scripts/sync_msz.py`**: Syncs only safety/entry information from gov.pl.
+## Quality Assurance
 
-## Testing & Quality Assurance
-
-To ensure data integrity and UI stability, run these tests before committing:
-
-### 1. Data Integrity Test
-Validates that `docs/data.json` contains all required fields (safety levels, UNESCO flags, plug types, etc.).
+### 1. Data Integrity
+Validates `data.json` structure and content. Use `--full` for weekly checks.
 ```bash
-python scripts/test_data_integrity.py
+python scripts/test_data_integrity.py docs/data.json --full
 ```
 
-### 2. Frontend Unit Tests
-Ensures the UI renders correctly and handles data as expected using Vitest.
-```bash
-npm test --prefix frontend
-```
+### 2. Frontend & Build
+- `npm test`: Runs Vitest suite (16+ tests).
+- `BuildIntegrity.test.ts`: Verifies that `docs/index.html` exists and uses relative paths (prevents 404s).
 
-## Technical Notes
-*   **Frontend:** Reads exclusively from `docs/data.json` (static export). No direct database access to ensure high performance and zero server costs (GitHub Pages).
-*   **Backend:** FastAPI app used primarily as an orchestrator for scrapers and admin tasks.
-*   **UNESCO In-Danger:** The `is_danger` flag is now separate from `category`. A site can be both "Cultural" and "ZAGROŻONE" (in danger).
+## Technical Architecture
+*   **Database Persistence:** `travel_cheatsheet.db` is versioned in Git. This allows GitHub Actions to perform incremental updates instead of starting from scratch, preserving slow-changing data (like UNESCO) during daily runs.
+*   **Performance:** All scrapers use `asyncio` with `httpx` and semaphores to maximize speed while respecting target server rate limits.
+*   **Export:** Uses Pydantic schemas for validation and SQLAlchemy `joinedload`/`selectinload` to eliminate the N+1 query problem.
+*   **Mapping:** Small countries (<15,000 km²) are highlighted with a custom SVG ring/marker in the Map section for better UX.
