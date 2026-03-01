@@ -28,16 +28,27 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
           </div>
           <div className="info-block">
-            <label>Stolica</label>
-            <span>{selectedCountry.capital || 'Brak danych'}</span>
+            <label>Stolica i strefa</label>
+            <span>{selectedCountry.capital || 'Brak danych'} {selectedCountry.timezone && `(${selectedCountry.timezone})`}</span>
           </div>
 
-          {selectedCountry.timezone && (
-            <div className="info-block">
-              <label>Strefa czasowa</label>
-              <span>{selectedCountry.timezone}</span>
+          <div className="info-block">
+            <label>Napięcie i częstotliwość</label>
+            <span>{selectedCountry.practical.voltage}V / {selectedCountry.practical.frequency}Hz</span>
+          </div>
+
+          <div className="info-block">
+            <label>Internet i eSIM</label>
+            <div className="driving-info-box">
+              <span>{selectedCountry.practical.esim_available ? '📱 eSIM: Dostępne' : '📱 eSIM: Brak danych'}</span>
+              {selectedCountry.practical.internet_notes && <span className="license-info">{selectedCountry.practical.internet_notes}</span>}
             </div>
-          )}
+          </div>
+
+          <div className="info-block">
+            <label>Sklepy i godziny</label>
+            <span>🕒 {selectedCountry.practical.store_hours || 'Brak danych'}</span>
+          </div>
 
           <div className="info-block">
             <label>Ruch drogowy</label>

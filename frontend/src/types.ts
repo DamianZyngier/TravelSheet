@@ -56,6 +56,7 @@ export interface CountryData {
   practical: {
     plug_types: string;
     voltage: number | null;
+    frequency: number | null;
     water_safe: boolean | null;
     water_safe_for_brushing: boolean | null;
     driving_side: string;
@@ -70,6 +71,9 @@ export interface CountryData {
     photography_restrictions: string;
     sensitive_topics: string;
     local_norms: string;
+    store_hours: string;
+    internet_notes: string;
+    esim_available: boolean | null;
     emergency?: {
       police: string | null;
       ambulance: string | null;

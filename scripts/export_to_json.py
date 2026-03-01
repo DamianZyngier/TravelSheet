@@ -121,6 +121,7 @@ def export_all():
                 processed_data["practical"] = {
                     "plug_types": c.practical.plug_types or "",
                     "voltage": c.practical.voltage,
+                    "frequency": c.practical.frequency,
                     "water_safe": c.practical.tap_water_safe,
                     "water_safe_for_brushing": c.practical.water_safe_for_brushing,
                     "driving_side": c.practical.driving_side or "right",
@@ -135,6 +136,9 @@ def export_all():
                     "photography_restrictions": c.practical.photography_restrictions or "",
                     "sensitive_topics": c.practical.sensitive_topics or "",
                     "local_norms": c.practical.local_norms or "",
+                    "store_hours": c.practical.store_hours or "",
+                    "internet_notes": c.practical.internet_notes or "",
+                    "esim_available": bool(c.practical.esim_available) if c.practical.esim_available is not None else None,
                     "emergency": json.loads(c.practical.emergency_numbers) if c.practical.emergency_numbers else None,
                     "vaccinations_required": c.practical.vaccinations_required or "",
                     "vaccinations_suggested": c.practical.vaccinations_suggested or "",

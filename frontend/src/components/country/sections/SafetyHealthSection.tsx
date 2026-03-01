@@ -132,6 +132,12 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
                 <p className="law-subtext">{selectedCountry.practical.photography_restrictions}</p>
               </div>
             )}
+            {selectedCountry.practical.sensitive_topics && (
+              <div className="law-item">
+                <strong>Tematy wrażliwe:</strong>
+                <p className="law-subtext">{selectedCountry.practical.sensitive_topics}</p>
+              </div>
+            )}
             {selectedCountry.practical.local_norms && (
               <div className="law-item full-width-grid">
                 <strong>Lokalne obyczaje:</strong>
