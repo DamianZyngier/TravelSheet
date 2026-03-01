@@ -1,7 +1,7 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
 import Sidebar from './Sidebar';
-import { CountryData } from '../../types';
+import type { CountryData } from '../../types';
 
 const mockCountry: CountryData = {
   iso2: 'MQ',

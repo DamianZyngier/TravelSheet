@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { formatPLN, checkPlugs, getMapSettings, getLongNameClass } from './helpers';
-import { CountryData } from '../types';
+import type { CountryData } from '../types';
 
 describe('Helpers Unit Tests', () => {
   it('formatPLN should format numbers correctly', () => {

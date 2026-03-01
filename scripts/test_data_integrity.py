@@ -5,17 +5,17 @@ import sys
 def test_data_integrity():
     filepath = 'docs/data.json'
     if not os.path.exists(filepath):
-        print(f"❌ Error: {filepath} not found. Run export script first.")
+        print(f"[ERROR] {filepath} not found. Run export script first.")
         sys.exit(1)
 
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     if not data:
-        print("❌ Error: data.json is empty.")
+        print("[ERROR] data.json is empty.")
         sys.exit(1)
 
-    print(f"🧐 Validating {len(data)} countries and all fields...")
+    print(f"Validating {len(data)} countries and all fields...")
     
     errors = []
     
@@ -98,7 +98,7 @@ def test_data_integrity():
                 errors.append(f"{iso}: '{list_field}' is not a list")
 
     if errors:
-        print(f"\n❌ Validation Failed! Found {len(errors)} structural issues.")
+        print(f"\n[FAILED] Validation Failed! Found {len(errors)} structural issues.")
         # Group errors by type to avoid spam
         error_types = {}
         for err in errors:
@@ -109,7 +109,7 @@ def test_data_integrity():
             print(f"  - {etype}: {count} occurrences")
         sys.exit(1)
     else:
-        print("\n✅ All structural tests passed! All fields are present in the JSON structure.")
+        print("\n[SUCCESS] All structural tests passed! All fields are present in the JSON structure.")
         sys.exit(0)
 
 if __name__ == "__main__":
