@@ -133,16 +133,23 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
             <label className="filter-label">Bezpieczeństwo</label>
             <div className="safety-filter-list">
               <button
-                className={`safety-filter-item risk-unknown ${filterSafety === 'all' ? 'active' : ''}`}
+                className={`safety-filter-item risk-badge risk-unknown ${filterSafety === 'all' ? 'active' : ''}`}
                 onClick={() => setFilterSafety('all')}
+                style={{ marginTop: 0, cursor: 'pointer', border: filterSafety === 'all' ? '2px solid #2b6cb0' : '1px solid #e2e8f0' }}
               >
                 Wszystkie
               </button>
               {safetyLevels.map(level => (
                 <button
                   key={level.id}
-                  className={`safety-filter-item ${level.class} ${filterSafety === level.id ? 'active' : ''}`}
+                  className={`safety-filter-item risk-badge ${level.class} ${filterSafety === level.id ? 'active' : ''}`}
                   onClick={() => setFilterSafety(level.id)}
+                  style={{ 
+                    marginTop: 0, 
+                    cursor: 'pointer',
+                    border: filterSafety === level.id ? '2px solid #2d3748' : '1px solid transparent',
+                    boxShadow: filterSafety === level.id ? '0 0 0 1px white' : 'none'
+                  }}
                 >
                   {level.label}
                 </button>
