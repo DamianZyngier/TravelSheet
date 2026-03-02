@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import LegalModal from './components/layout/LegalModal'
 import CountryGrid from './components/country/CountryGrid'
 import CountryDetail from './components/country/CountryDetail'
+import ChecklistSection from './components/checklist/ChecklistSection'
 import type { CountryData } from './types'
 import { SECTIONS, ALIASES } from './constants'
 import './App.css'
@@ -21,6 +22,7 @@ function App() {
   const [countries, setCountries] = useState<Record<string, CountryData>>({})
   const [loading, setLoading] = useState(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
+  const [showChecklist, setShowChecklist] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
   const [filterSafety, setFilterSafety] = useState('all')
@@ -57,6 +59,16 @@ function App() {
     localStorage.setItem('travelsheet_favorites', JSON.stringify(favorites));
   }, [favorites]);
 
+  useEffect(() => {
+    const handleNavChecklist = () => {
+      setShowChecklist(true);
+      setSelectedCountry(null);
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('nav-checklist', handleNavChecklist);
+    return () => window.removeEventListener('nav-checklist', handleNavChecklist);
+  }, []);
+
   const toggleFavorite = (iso2: string) => {
     setFavorites(prev => 
       prev.includes(iso2) ? prev.filter(i => i !== iso2) : [...prev, iso2]
@@ -76,6 +88,7 @@ function App() {
   const handleSelectCountry = useCallback((country: CountryData | null) => {
     setSelectedCountry(country)
     if (country) {
+      setShowChecklist(false)
       setMapPosition({
         coordinates: [country.longitude || 0, country.latitude || 0],
         zoom: getMapSettings(country).zoom
@@ -101,6 +114,7 @@ function App() {
       const countryIso = params.get('country') || params.get('kraj');
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
+        setShowChecklist(false);
       } else {
         setSelectedCountry(null);
       }
@@ -113,6 +127,7 @@ function App() {
       const countryIso = params.get('country') || params.get('kraj');
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
+        setShowChecklist(false);
       }
     }
 
@@ -197,28 +212,33 @@ function App() {
     handleSelectCountry(list[nextIndex]);
   };
 
+  const handlePrintCountry = () => {
+    window.print();
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedCountry && (e.ctrlKey || e.metaKey) && e.key === 'f') {
+      if (!selectedCountry && !showChecklist && (e.ctrlKey || e.metaKey) && e.key === 'f') {
         e.preventDefault();
         searchInputRef.current?.focus();
       }
 
-      if (e.key === 'Backspace' && selectedCountry) {
+      if (e.key === 'Backspace' && (selectedCountry || showChecklist)) {
         const target = e.target as HTMLElement;
         if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
           handleSelectCountry(null);
+          setShowChecklist(false);
         }
       }
 
-      if (e.key === 'Enter' && !selectedCountry && countryList.length === 1) {
+      if (e.key === 'Enter' && !selectedCountry && !showChecklist && countryList.length === 1) {
         handleSelectCountry(countryList[0]);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedCountry, countryList, handleSelectCountry]);
+  }, [selectedCountry, showChecklist, countryList, handleSelectCountry]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
 
@@ -246,7 +266,7 @@ function App() {
 
   return (
     <div className="app-container" onContextMenu={() => true}>
-      {!selectedCountry ? (
+      {!selectedCountry && !showChecklist ? (
         <>
           <Header 
             searchQuery={searchQuery}
@@ -276,10 +296,12 @@ function App() {
             onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
           />
         </>
+      ) : showChecklist ? (
+        <ChecklistSection onBack={() => setShowChecklist(false)} />
       ) : (
         <div className="detail-view-layout">
           <Sidebar 
-            selectedCountry={selectedCountry}
+            selectedCountry={selectedCountry!}
             sortedFullList={sortedFullList}
             onSelectCountry={handleSelectCountry}
             activeSection={activeSection}
@@ -288,16 +310,32 @@ function App() {
           />
 
           <div className="detail-view-content">
-            <div className="detail-actions-top">
+            <div className="detail-actions-top no-print">
                <button 
-                className={`favorite-btn-large ${favorites.includes(selectedCountry.iso2) ? 'is-fav' : ''}`}
-                onClick={() => toggleFavorite(selectedCountry.iso2)}
+                className="print-country-btn"
+                onClick={handlePrintCountry}
+                style={{
+                  marginRight: '1rem',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '8px',
+                  border: '1px solid #e2e8f0',
+                  background: 'white',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                  color: '#4a5568'
+                }}
                >
-                 {favorites.includes(selectedCountry.iso2) ? '⭐ Zapamiętany' : '☆ Zapamiętaj kraj'}
+                 🖨️ PDF / Drukuj dane kraju
+               </button>
+               <button 
+                className={`favorite-btn-large ${favorites.includes(selectedCountry!.iso2) ? 'is-fav' : ''}`}
+                onClick={() => toggleFavorite(selectedCountry!.iso2)}
+               >
+                 {favorites.includes(selectedCountry!.iso2) ? '⭐ Zapamiętany' : '☆ Zapamiętaj kraj'}
                </button>
             </div>
             <CountryDetail 
-              selectedCountry={selectedCountry}
+              selectedCountry={selectedCountry!}
               allCountries={sortedFullList}
               onSelectCountry={handleSelectCountry}
               mapPosition={mapPosition}
