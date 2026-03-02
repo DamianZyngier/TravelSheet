@@ -34,13 +34,12 @@ const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, acti
   if (!iconSrc) return <span>🌐</span>;
 
   return (
-    <img 
-      src={iconSrc} 
-      alt={name} 
-      className="continent-tile-icon"
+    <div 
+      className="continent-tile-icon-mask"
       style={{ 
-        filter: active ? 'brightness(0) invert(1)' : 'none'
-      }} 
+        '--icon-url': `url(${iconSrc})`,
+        backgroundColor: active ? 'white' : 'var(--tile-color)'
+      } as any}
     />
   );
 };
@@ -132,7 +131,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
                     onClick={() => handleContinentClick(c)}
                     style={{ 
                       '--tile-color': style.color,
-                      '--tile-bg': isActive ? style.color : style.bg,
+                      '--tile-bg': isActive ? style.color : 'white',
                       '--tile-text': isActive ? 'white' : style.color,
                       borderColor: isActive ? style.color : '#e2e8f0'
                     } as any}
