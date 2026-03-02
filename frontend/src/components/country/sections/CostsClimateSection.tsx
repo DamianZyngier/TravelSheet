@@ -50,6 +50,9 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
   };
 
   const bestMonthsList = getBestTravelTime();
+  
+  // Check if rainfall data is worth showing
+  const hasRainfall = selectedCountry.climate?.some(cl => cl.rain > 0);
 
   return (
     <>
@@ -171,10 +174,18 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
           <span className="section-header-icon">🌤️</span>
           <label>Typowa pogoda (średnie miesięczne)</label>
         </div>
+        
+        {selectedCountry.climate_description && (
+          <div className="climate-type-box" style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#f7fafc', borderRadius: '12px', borderLeft: '4px solid #4299e1' }}>
+            <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Typ klimatu:</strong>
+            <span style={{ fontSize: '1rem', fontWeight: '600', color: '#2d3748' }}>{selectedCountry.climate_description}</span>
+          </div>
+        )}
+
         {selectedCountry.climate && selectedCountry.climate.length > 0 ? (
           <div className="combined-chart-container" onMouseLeave={() => setChartTooltip((prev: any) => ({ ...prev, visible: false }))}>
             <div className="chart-y-axis-label left">Temperatura (°C)</div>
-            <div className="chart-y-axis-label right">Opady (mm)</div>
+            {hasRainfall && <div className="chart-y-axis-label right">Opady (mm)</div>}
 
             {chartTooltip.visible && (
               <div className="chart-custom-tooltip" style={{ left: chartTooltip.x, top: chartTooltip.y }}>
@@ -198,11 +209,11 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
 
               return (
                 <svg viewBox="0 0 600 260" className="combined-svg-chart">
-                  {/* Season Background Bands - Improved visibility and positioning */}
+                  {/* Season Background Bands */}
                   {selectedCountry.climate?.map((cl, i) => {
                     const bandWidth = 43;
                     const xStart = 40.5 + i * bandWidth;
-                    if (cl.season === 'wet') {
+                    if (cl.season === 'wet' && hasRainfall) {
                       return <rect key={`bg-wet-${i}`} x={xStart} y={20} width={bandWidth} height={180} fill="#e6f6ff" opacity="0.8" />;
                     } else if (cl.season === 'dry') {
                       return <rect key={`bg-dry-${i}`} x={xStart} y={20} width={bandWidth} height={180} fill="#fff9eb" opacity="0.8" />;
@@ -220,13 +231,13 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                     );
                   })}
 
-                  {[0, 0.5, 1].map(p => (
+                  {hasRainfall && [0, 0.5, 1].map(p => (
                     <text key={p} x="565" y={200 - p * 180 + 4} textAnchor="start" className="chart-axis-text rain">
                       {Math.round(p * maxRain)}
                     </text>
                   ))}
 
-                  {selectedCountry.climate?.map((cl, i) => {
+                  {hasRainfall && selectedCountry.climate?.map((cl, i) => {
                     const barHeight = (cl.rain / maxRain) * 180;
                     return (
                       <rect
@@ -293,18 +304,22 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                 <span className="legend-color-box" style={{ backgroundColor: '#4299e1' }}></span>
                 <span className="legend-label">Noc</span>
               </div>
-              <div className="legend-item">
-                <span className="legend-color-box" style={{ backgroundColor: '#bee3f8' }}></span>
-                <span className="legend-label">Opady</span>
-              </div>
+              {hasRainfall && (
+                <div className="legend-item">
+                  <span className="legend-color-box" style={{ backgroundColor: '#bee3f8' }}></span>
+                  <span className="legend-label">Opady</span>
+                </div>
+              )}
               <div className="legend-item">
                 <span className="legend-color-box" style={{ backgroundColor: '#fff9eb', border: '1px solid #feebc8' }}></span>
                 <span className="legend-label">Pora sucha</span>
               </div>
-              <div className="legend-item">
-                <span className="legend-color-box" style={{ backgroundColor: '#e6f6ff', border: '1px solid #bee3f8' }}></span>
-                <span className="legend-label">Pora mokra</span>
-              </div>
+              {hasRainfall && (
+                <div className="legend-item">
+                  <span className="legend-color-box" style={{ backgroundColor: '#e6f6ff', border: '1px solid #bee3f8' }}></span>
+                  <span className="legend-label">Pora mokra</span>
+                </div>
+              )}
             </div>
 
             {bestMonthsList && bestMonthsList.length > 0 && (

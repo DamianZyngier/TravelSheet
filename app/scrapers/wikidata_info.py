@@ -23,9 +23,9 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
     
-    # Query 1: Basic Stats (Timezone, Dish, Phone, Airport, Railway)
+    # Query 1: Basic Stats (Timezone, Dish, Phone, Airport, Railway, Climate)
     q_basic = f"""
-    SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?airportLabel ?railwayLabel WHERE {{
+    SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?airportLabel ?railwayLabel ?climateLabel WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
       OPTIONAL {{ ?country wdt:P421 ?timezone. }}
@@ -33,6 +33,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
       OPTIONAL {{ ?country wdt:P442 ?phoneCode. }}
       OPTIONAL {{ ?country wdt:P114 ?airport. }}
       OPTIONAL {{ ?country wdt:P1194 ?railway. }}
+      OPTIONAL {{ ?country wdt:P2524 ?climate. }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     """
@@ -93,6 +94,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     country_ethnics = {} 
     country_hazards = {} 
     country_cities = {} 
+    country_climates = {}
 
     # 1. Basic Stats
     for r in results[0]:
@@ -104,6 +106,11 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
         if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
         if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
+        
+        clim = r.get("climateLabel", {}).get("value")
+        if clim and not clim.startswith("Q"):
+            if iso not in country_climates: country_climates[iso] = set()
+            country_climates[iso].add(clim)
     
     # 2. Cultural
     for r in results[1]:
@@ -145,65 +152,74 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         if iso and name and pop and not name.startswith("Q"):
             if iso not in country_cities: country_cities[iso] = []
             if len(country_cities[iso]) < 5:
-                # Deduplicate by name
                 if not any(city[0].lower() == name.lower() for city in country_cities[iso]):
                     try: country_cities[iso].append((name, int(float(pop))))
                     except: continue
 
-    # Fallbacks for major countries
+    # Fallbacks
     EXTRA_FALLBACKS = {
         'PL': {
             'dish': 'Bigos, Pierogi',
             'airport': 'Lotnisko Chopina w Warszawie (WAW)',
             'railway': 'PKP (Polskie Koleje Państwowe)',
-            'cities': [("Warszawa", 1860000), ("Kraków", 800000), ("Wrocław", 670000), ("Łódź", 660000), ("Poznań", 540000)]
+            'cities': [("Warszawa", 1860000), ("Kraków", 800000), ("Wrocław", 670000), ("Łódź", 660000), ("Poznań", 540000)],
+            'climate': 'Klimat umiarkowany przejściowy'
+        },
+        'EG': {
+            'climate': 'Klimat zwrotnikowy suchy (pustynny)'
+        },
+        'TH': {
+            'climate': 'Klimat zwrotnikowy monsunowy'
+        },
+        'MX': {
+            'climate': 'Zróżnicowany: zwrotnikowy suchy na północy, wilgotny na południu'
+        },
+        'GR': {
+            'climate': 'Klimat śródziemnomorski'
+        },
+        'HR': {
+            'climate': 'Klimat śródziemnomorski na wybrzeżu, umiarkowany w głębi lądu'
         },
         'US': {
-            'dish': 'Hamburger, Apple Pie',
-            'airport': 'Hartsfield-Jackson Atlanta (ATL)',
-            'railway': 'Amtrak',
-            'cities': [("Nowy Jork", 8300000), ("Los Angeles", 3800000), ("Chicago", 2600000), ("Houston", 2300000), ("Phoenix", 1600000)]
+            'cities': [("Nowy Jork", 8300000), ("Los Angeles", 3800000), ("Chicago", 2600000), ("Houston", 2300000), ("Phoenix", 1600000)],
+            'climate': 'Zróżnicowany: od polarnego na Alasce po tropikalny na Florydzie i Hawajach'
         },
         'DE': {
-            'dish': 'Sauerbraten, Currywurst',
-            'airport': 'Frankfurt am Main (FRA)',
-            'railway': 'Deutsche Bahn (DB)',
-            'cities': [("Berlin", 3700000), ("Hamburg", 1900000), ("Monachium", 1500000), ("Kolonia", 1100000), ("Frankfurt", 760000)]
+            'cities': [("Berlin", 3700000), ("Hamburg", 1900000), ("Monachium", 1500000), ("Kolonia", 1100000), ("Frankfurt", 760000)],
+            'climate': 'Klimat umiarkowany morski i przejściowy'
         },
         'FR': {
-            'dish': 'Pot-au-feu, Coq au vin',
-            'airport': 'Paris Charles de Gaulle (CDG)',
-            'railway': 'SNCF (TGV)',
-            'cities': [("Paryż", 2100000), ("Marsylia", 870000), ("Lyon", 520000), ("Tuluza", 490000), ("Nicea", 340000)]
+            'cities': [("Paryż", 2100000), ("Marsylia", 870000), ("Lyon", 520000), ("Tuluza", 490000), ("Nicea", 340000)],
+            'climate': 'Klimat umiarkowany morski, na południu śródziemnomorski'
         },
         'GB': {
-            'dish': 'Fish and Chips',
-            'airport': 'London Heathrow (LHR)',
-            'railway': 'National Rail',
-            'cities': [("Londyn", 8900000), ("Birmingham", 1100000), ("Glasgow", 630000), ("Liverpool", 500000), ("Leeds", 480000)]
+            'cities': [("Londyn", 8900000), ("Birmingham", 1100000), ("Glasgow", 630000), ("Liverpool", 500000), ("Leeds", 480000)],
+            'climate': 'Klimat umiarkowany morski'
         },
         'IT': {
-            'dish': 'Pasta, Pizza',
-            'airport': 'Roma Fiumicino (FCO)',
-            'railway': 'Trenitalia',
-            'cities': [("Rzym", 2800000), ("Mediolan", 1400000), ("Neapol", 960000), ("Turyn", 870000), ("Palermo", 660000)]
+            'cities': [("Rzym", 2800000), ("Mediolan", 1400000), ("Neapol", 960000), ("Turyn", 870000), ("Palermo", 660000)],
+            'climate': 'Klimat śródziemnomorski'
         },
         'ES': {
-            'dish': 'Paella, Tortilla',
-            'airport': 'Madrid Barajas (MAD)',
-            'railway': 'Renfe (AVE)',
-            'cities': [("Madryt", 3300000), ("Barcelona", 1600000), ("Walencja", 790000), ("Sewilla", 680000), ("Zaragoza", 670000)]
+            'cities': [("Madryt", 3300000), ("Barcelona", 1600000), ("Walencja", 790000), ("Sewilla", 680000), ("Zaragoza", 670000)],
+            'climate': 'Klimat śródziemnomorski i kontynentalny'
         }
     }
 
     for iso, c in country_map.items():
         fallback = EXTRA_FALLBACKS.get(iso)
         if fallback:
-            if not c.national_dish: c.national_dish = fallback['dish']
-            if not c.main_airport: c.main_airport = fallback['airport']
-            if not c.railway_info: c.railway_info = fallback['railway']
-            if iso not in country_cities or len(country_cities[iso]) < 2: 
+            if not c.national_dish and 'dish' in fallback: c.national_dish = fallback['dish']
+            if not c.main_airport and 'airport' in fallback: c.main_airport = fallback['airport']
+            if not c.railway_info and 'railway' in fallback: c.railway_info = fallback['railway']
+            if (iso not in country_cities or len(country_cities[iso]) < 2) and 'cities' in fallback: 
                 country_cities[iso] = fallback['cities']
+            if not c.climate_description and 'climate' in fallback:
+                c.climate_description = fallback['climate']
+
+        if iso in country_climates and not c.climate_description:
+            # Join top 3 climate types if available
+            c.climate_description = ", ".join(sorted(list(country_climates[iso]))[:3])
 
         if iso in country_ethnics: c.ethnic_groups = ", ".join(sorted(list(country_ethnics[iso]))[:5])
         if iso in country_hazards: c.natural_hazards = ", ".join(sorted(list(country_hazards[iso]))[:5])
@@ -213,7 +229,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             cities.sort(key=lambda x: x[1], reverse=True)
             c.largest_cities = ", ".join([f"{name} ({format_pop(pop)})" for name, pop in cities])
         
-        # Religions (existing)
+        # Religions
         rels = country_religions.get(iso, {})
         db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
         if rels and sum(rels.values()) > 0:

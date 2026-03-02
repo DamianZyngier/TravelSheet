@@ -69,6 +69,7 @@ def export_all():
                 "phone_code": c.phone_code,
                 "largest_cities": c.largest_cities,
                 "ethnic_groups": c.ethnic_groups,
+                "climate_description": c.climate_description,
                 "latitude": float(c.latitude) if c.latitude else None,
                 "longitude": float(c.longitude) if c.longitude else None,
                 "unesco_count": c.unesco_count or 0,

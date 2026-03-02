@@ -29,6 +29,7 @@ export interface CountryData {
   phone_code: string | null;
   largest_cities: string | null;
   ethnic_groups: string | null;
+  climate_description: string | null;
   is_independent: boolean;
   parent?: {
     iso2: string;

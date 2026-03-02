@@ -41,6 +41,7 @@ class Country(Base):
     popular_apps = Column(Text)
     largest_cities = Column(Text)
     ethnic_groups = Column(Text)
+    climate_description = Column(Text) # General description of climate types
     
     is_independent = Column(Boolean, default=True)
     parent_id = Column(Integer, ForeignKey("countries.id"))
