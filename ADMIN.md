@@ -18,11 +18,31 @@ Technical details about the data architecture of TripSheet.
 
 ## Management Scripts
 
-- **`python scripts/sync_all.py --mode [daily|weekly]`**: Main orchestrator. 
+- **`python scripts/sync_all.py --mode [daily|weekly|full]`**: Main orchestrator. 
   - `daily`: Parallel sync of volatile data (~2-5 min).
-  - `weekly`: Full parallel sync of all sources (~8-15 min).
+  - `weekly`/`full`: Full parallel sync of all sources (~15-30 min).
 - **`python scripts/export_to_json.py`**: Fast export using SQLAlchemy eager loading.
 - **`python scripts/test_sync_tasks.py`**: Integration test that runs a full cycle using a temporary database to verify the pipeline.
+
+## Offline Fallbacks & Resilience
+
+The system is designed to be resilient to API downtime or network issues through various local fallbacks:
+
+| Feature | Fallback Mechanism | File/Source |
+| :--- | :--- | :--- |
+| **UNESCO** | Uses a local JSON dump if the official API is unreachable. | `data/unesco_fallback.json` |
+| **Religions** | Hardcoded statistical data for top ~15 most visited countries. | `app/scrapers/wikidata_info.py` |
+| **Cities** | Hardcoded population data for major world capitals and metropolises. | `app/scrapers/wikidata_info.py` |
+| **Static Info** | Technical data (plugs, voltage, frequency) is entirely local. | `app/scrapers/static_info.py` |
+| **Costs** | Pre-calculated cost-of-living indices for 191 countries. | `app/scrapers/costs.py` |
+| **MSZ Safety** | Generic safety advisory text if the specific country page fails to scrape. | `app/scrapers/msz_gov_pl.py` |
+
+## Authentication & APIs
+
+To ensure stability during high-volume Wikidata syncs, the system uses a **Wikimedia Access Token**:
+*   Stored in `.env` as `WIKIMEDIA_ACCESS_TOKEN`.
+*   Included in `Authorization: Bearer` headers for SPARQL queries.
+*   Significantly reduces 429 (Rate Limit) and 504 (Timeout) errors.
 
 ## Quality Assurance
 

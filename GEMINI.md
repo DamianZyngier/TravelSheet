@@ -30,8 +30,9 @@ TripSheet is a comprehensive travel safety and information portal. It aggregates
 ## Local Development
 ### Backend
 1. Install dependencies: `pip install -r requirements.txt`
-2. Initialize/Update database: `python scripts/sync_all.py --mode daily`
-3. Run API: `uvicorn app.main:app --reload`
+2. Configure environment: Create `.env` from `.env.example` and add `WIKIMEDIA_ACCESS_TOKEN`.
+3. Initialize/Update database: `python scripts/sync_all.py --mode daily`
+4. Run API: `uvicorn app.main:app --reload`
 
 ### Frontend
 1. Navigate to directory: `cd frontend`
