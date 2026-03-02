@@ -144,89 +144,119 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
               </div>
             )}
 
-            <svg viewBox="0 0 600 260" className="combined-svg-chart">
-              {/* Grid lines & Y-Axis Labels */}
-              {[-20, -10, 0, 10, 20, 30, 40].map(temp => {
-                const y = 200 - (temp + 20) * 3.5;
-                return (
-                  <g key={temp}>
-                    <line x1="40" y1={y} x2="560" y2={y} className={`chart-grid-line ${temp === 0 ? 'zero-line' : ''}`} />
-                    <text x="35" y={y + 4} textAnchor="end" className="chart-axis-text temp">{temp}°</text>
-                  </g>
-                );
-              })}
+            {(() => {
+              // Calculate dynamic range for temperatures
+              const allTemps = selectedCountry.climate?.flatMap(c => [c.temp_day, c.temp_night]) || [];
+              const minT = Math.min(...allTemps, 0);
+              const maxT = Math.max(...allTemps, 30);
+              
+              // Add margin and round to nearest 10
+              const yMin = Math.floor(minT / 10) * 10 - 10;
+              const yMax = Math.ceil(maxT / 10) * 10 + 10;
+              const yRange = yMax - yMin;
+              
+              // Generate ticks
+              const ticks = [];
+              for (let t = yMin; t <= yMax; t += 10) ticks.push(t);
+              
+              const getY = (temp: number) => 200 - ((temp - yMin) / yRange) * 180;
+              const getX = (i: number) => 62 + i * 43;
+              
+              const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
 
-              {(() => {
-                const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
-                return [0, 0.5, 1].map(p => (
-                  <text key={p} x="565" y={200 - p * 180 + 4} textAnchor="start" className="chart-axis-text rain">
-                    {Math.round(p * maxRain)}
-                  </text>
-                ));
-              })()}
-
-              {selectedCountry.climate?.map((cl, i) => {
-                const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
-                const barHeight = (cl.rain / maxRain) * 180;
-                return (
-                  <rect
-                    key={`rain-${i}`}
-                    x={50 + i * 43}
-                    y={200 - barHeight}
-                    width="24"
-                    height={barHeight}
-                    className="chart-bar-rain"
-                    onMouseEnter={(e) => setChartTooltip({
-                      visible: true,
-                      text: `${cl.rain} mm`,
-                      x: e.nativeEvent.offsetX,
-                      y: e.nativeEvent.offsetY - 30
-                    })}
-                    onMouseMove={(e) => setChartTooltip((prev: any) => ({
-                      ...prev,
-                      x: e.nativeEvent.offsetX,
-                      y: e.nativeEvent.offsetY - 30
-                    }))}
-                  />
-                );
-              })}
-
-              {(() => {
-                const getX = (i: number) => 62 + i * 43;
-                const getY = (temp: number) => 200 - (temp + 20) * 3.5;
-                const dayPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ') || '';
-                const nightPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ') || '';
-                return (
-                  <>
-                    <path d={dayPath} className="chart-line-day" fill="none" />
-                    <path d={nightPath} className="chart-line-night" fill="none" />
-                    {selectedCountry.climate?.map((cl, i) => (
-                      <g key={`dots-${i}`}>
-                        <circle cx={getX(i)} cy={getY(cl.temp_day)} r="4" className="chart-dot-day"
-                          onMouseEnter={(e) => setChartTooltip({ visible: true, text: `Dzień: ${cl.temp_day}°C`, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 })}
-                          onMouseMove={(e) => setChartTooltip((prev: any) => ({ ...prev, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 }))}
-                        />
-                        <circle cx={getX(i)} cy={getY(cl.temp_night)} r="4" className="chart-dot-night"
-                          onMouseEnter={(e) => setChartTooltip({ visible: true, text: `Noc: ${cl.temp_night}°C`, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 })}
-                          onMouseMove={(e) => setChartTooltip((prev: any) => ({ ...prev, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 }))}
-                        />
+              return (
+                <svg viewBox="0 0 600 260" className="combined-svg-chart">
+                  {/* Dynamic Grid lines & Y-Axis Labels */}
+                  {ticks.map(temp => {
+                    const y = getY(temp);
+                    return (
+                      <g key={temp}>
+                        <line x1="40" y1={y} x2="560" y2={y} className={`chart-grid-line ${temp === 0 ? 'zero-line' : ''}`} />
+                        <text x="35" y={y + 4} textAnchor="end" className="chart-axis-text temp">{temp}°</text>
                       </g>
-                    ))}
-                  </>
-                );
-              })()}
+                    );
+                  })}
 
-              {selectedCountry.climate?.map((cl, i) => (
-                <text key={`label-${i}`} x={62 + i * 43} y="240" textAnchor="middle" className="chart-month-text">
-                  {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
-                </text>
-              ))}
-            </svg>
+                  {/* Rain Y-axis labels */}
+                  {[0, 0.5, 1].map(p => (
+                    <text key={p} x="565" y={200 - p * 180 + 4} textAnchor="start" className="chart-axis-text rain">
+                      {Math.round(p * maxRain)}
+                    </text>
+                  ))}
+
+                  {/* Rainfall Bars */}
+                  {selectedCountry.climate?.map((cl, i) => {
+                    const barHeight = (cl.rain / maxRain) * 180;
+                    return (
+                      <rect
+                        key={`rain-${i}`}
+                        x={50 + i * 43}
+                        y={200 - barHeight}
+                        width="24"
+                        height={barHeight}
+                        className="chart-bar-rain"
+                        onMouseEnter={(e) => setChartTooltip({
+                          visible: true,
+                          text: `${cl.rain} mm`,
+                          x: e.nativeEvent.offsetX,
+                          y: e.nativeEvent.offsetY - 30
+                        })}
+                        onMouseMove={(e) => setChartTooltip((prev: any) => ({
+                          ...prev,
+                          x: e.nativeEvent.offsetX,
+                          y: e.nativeEvent.offsetY - 30
+                        }))}
+                      />
+                    );
+                  })}
+
+                  {/* Temperature Lines */}
+                  {(() => {
+                    const dayPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ') || '';
+                    const nightPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ') || '';
+                    return (
+                      <>
+                        <path d={dayPath} className="chart-line-day" fill="none" stroke="#f56565" strokeWidth="3" />
+                        <path d={nightPath} className="chart-line-night" fill="none" stroke="#4299e1" strokeWidth="3" />
+                        {selectedCountry.climate?.map((cl, i) => (
+                          <g key={`dots-${i}`}>
+                            <circle cx={getX(i)} cy={getY(cl.temp_day)} r="4" fill="#f56565" className="chart-dot-day"
+                              onMouseEnter={(e) => setChartTooltip({ visible: true, text: `Dzień: ${cl.temp_day}°C`, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 })}
+                              onMouseMove={(e) => setChartTooltip((prev: any) => ({ ...prev, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 }))}
+                            />
+                            <circle cx={getX(i)} cy={getY(cl.temp_night)} r="4" fill="#4299e1" className="chart-dot-night"
+                              onMouseEnter={(e) => setChartTooltip({ visible: true, text: `Noc: ${cl.temp_night}°C`, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 })}
+                              onMouseMove={(e) => setChartTooltip((prev: any) => ({ ...prev, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY - 30 }))}
+                            />
+                          </g>
+                        ))}
+                      </>
+                    );
+                  })()}
+
+                  {/* Month Labels */}
+                  {selectedCountry.climate?.map((cl, i) => (
+                    <text key={`label-${i}`} x={getX(i)} y="240" textAnchor="middle" className="chart-month-text">
+                      {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
+                    </text>
+                  ))}
+                </svg>
+              );
+            })()}
 
             <div className="chart-legend-combined">
-              <span className="legend-item"><i className="legend-line day"></i> Dzień</span>
-              <span className="legend-item"><i className="legend-line night"></i> Noc</span>
-              <span className="legend-item"><i className="legend-rect rain"></i> Opady (mm)</span>
+              <div className="legend-item">
+                <span className="legend-color-box" style={{ backgroundColor: '#f56565' }}></span>
+                <span className="legend-label">Temperatura w dzień</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-color-box" style={{ backgroundColor: '#4299e1' }}></span>
+                <span className="legend-label">Temperatura w nocy</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-color-box" style={{ backgroundColor: '#a0aec0', opacity: 0.3 }}></span>
+                <span className="legend-label">Opady (mm)</span>
+              </div>
             </div>
           </div>
         ) : (

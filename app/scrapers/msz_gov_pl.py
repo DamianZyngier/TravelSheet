@@ -202,7 +202,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         sug = [v for v in ["tężec", "błonica", "krztusiec", "dur brzuszny", "WZW A", "WZW B", "wścieklizna", "cholera", "polio"] if v.lower() in h_lower]
         if sug: vaccines_sug = "Zalecane: " + ", ".join(sug)
 
-    customs_full, alcohol_rules, tipping, dress_code, photos = "", "", "", "", ""
+    customs_full, alcohol_rules, tipping, dress_code, photos, souvenirs = "", "", "", "", "", ""
     customs_patterns = [r'Miejscowe prawo i zwyczaje', r'Prawo i obyczaje', r'Miejscowe prawo', r'Zwyczaje', r'Przepisy prawne', r'Obyczaje', r'Cło']
     customs_section = None
     for pattern in customs_patterns:
@@ -230,6 +230,8 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     tipping = find_specific(["napiwek", "napiwki"], customs_text_list)
     dress_code = find_specific(["ubiór", "ubior", "odzież", "świątyń", "meczet"], customs_text_list)
     photos = find_specific(["zdjęć", "fotografow", "zakaz"], customs_text_list)
+    # Souvenirs/What to buy extraction
+    souvenirs = find_specific(["pamiątk", "prezent", "zakup", "wywoz", "cło", "unikat", "lokalne"], customs_text_list)
 
     safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
     if not safety:
@@ -248,7 +250,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         practical = models.PracticalInfo(country_id=country.id)
         db.add(practical)
     practical.health_info, practical.vaccinations_required, practical.vaccinations_suggested = normalize_polish_text(health_full), normalize_polish_text(vaccines_req), normalize_polish_text(vaccines_sug)
-    practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), func.now()
+    practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.souvenirs, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), normalize_polish_text(souvenirs), func.now()
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url}

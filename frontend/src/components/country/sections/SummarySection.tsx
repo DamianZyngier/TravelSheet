@@ -4,85 +4,59 @@ import { ExpandableText, DataSource } from '../../common';
 
 interface SummarySectionProps {
   selectedCountry: CountryData;
-  onSelectCountry: (country: CountryData) => void;
   allCountries: CountryData[];
+  onSelectCountry: (country: CountryData) => void;
 }
 
 export const SummarySection: React.FC<SummarySectionProps> = ({ 
   selectedCountry, 
-  onSelectCountry, 
-  allCountries 
+  allCountries,
+  onSelectCountry
 }) => {
   return (
-    <div id="discover" className="info-block full-width scroll-mt">
-      {/* Territory/Parent Relationship Information at the top */}
-      {(selectedCountry.parent || (selectedCountry.territories && selectedCountry.territories.length > 0)) && (
-        <div className="top-relationship-box">
-          {selectedCountry.parent && (
-            <div className="parent-info-line">
-              <span className="relationship-tag">Terytorium państwa:</span>
-              <button 
-                className="relationship-text-btn"
-                onClick={() => {
-                  const parent = allCountries.find(c => c.iso2 === selectedCountry.parent?.iso2);
-                  if (parent) onSelectCountry(parent);
-                }}
-              >
-                📍 {selectedCountry.parent.name_pl}
-              </button>
-            </div>
-          )}
-          
-          {selectedCountry.territories && selectedCountry.territories.length > 0 && (
-            <div className="territories-info-line">
-              <span className="relationship-tag">Terytoria zależne:</span>
-              <div className="territories-text-list">
-                {selectedCountry.territories.map((t, idx) => (
-                  <React.Fragment key={t.iso2}>
-                    <button 
-                      className="relationship-text-btn"
-                      onClick={() => {
-                        const territory = allCountries.find(c => c.iso2 === t.iso2);
-                        if (territory) onSelectCountry(territory);
-                      }}
-                    >
-                      {t.name_pl}
-                    </button>
-                    {idx < (selectedCountry.territories?.length || 0) - 1 ? ', ' : ''}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
+    <div id="discover" className="info-block full-width discover-section scroll-mt">
       <div className="section-header">
         <span className="section-header-icon">✨</span>
-        <label>Odkryj i poznaj {selectedCountry.name_pl}</label>
+        <label>Odkryj i poznaj kraj</label>
       </div>
       
-      <div className="discover-section">
-        <div className="discover-container">
-          {selectedCountry.wiki_summary ? (
-            <div className="wiki-summary-text">
-              <ExpandableText text={selectedCountry.wiki_summary} />
-            </div>
-          ) : (
-            <p className="no-data-text">Brak dostępnego opisu dla tego kraju.</p>
-          )}
+      <div className="discover-container">
+        {selectedCountry.wiki_summary ? (
+          <div className="wiki-summary-text">
+            <ExpandableText text={selectedCountry.wiki_summary} maxLength={450} />
+          </div>
+        ) : (
+          <p className="no-data-text">Brak dostępnego podsumowania dla tego kraju.</p>
+        )}
+
+        <div className="summary-metadata-grid" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {selectedCountry.national_symbols && (
             <div className="national-symbols-bar">
-              <span className="symbols-label">Symbole narodowe:</span>
+              <span className="symbols-label">Symbole:</span>
               <span className="symbols-value">{selectedCountry.national_symbols}</span>
             </div>
           )}
+          
           {selectedCountry.unique_things && (
-            <div className="national-symbols-bar">
-              <span className="symbols-label">Coś unikalnego:</span>
+            <div className="national-symbols-bar" style={{ backgroundColor: '#f0fff4', borderLeftColor: '#48bb78' }}>
+              <span className="symbols-label" style={{ color: '#2f855a' }}>Unikatowe:</span>
               <span className="symbols-value">{selectedCountry.unique_things}</span>
             </div>
           )}
+
+          {/* New Souvenirs / Shopping Data Point */}
+          {selectedCountry.practical.souvenirs && (
+            <div className="souvenirs-box">
+              <span className="souvenirs-icon">🎁</span>
+              <div className="souvenirs-content">
+                <span className="souvenirs-label">Co warto kupić / Pamiątki:</span>
+                <div className="souvenirs-value">
+                  <ExpandableText text={selectedCountry.practical.souvenirs} maxLength={200} />
+                </div>
+              </div>
+            </div>
+          )}
+          
           <DataSource sources={['WIKI']} lastUpdated={selectedCountry.last_updated} />
         </div>
       </div>

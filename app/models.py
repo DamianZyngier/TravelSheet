@@ -6,64 +6,65 @@ from .database import Base
 class Country(Base):
     __tablename__ = "countries"
 
-    id = Column(Integer, primary_key=True, index=True)
-    iso_alpha2 = Column(String(2), unique=True, nullable=False, index=True)
-    iso_alpha3 = Column(String(3), unique=True, nullable=False, index=True)
-    name = Column(String(255), nullable=False)
-    name_pl = Column(String(255))
-    name_local = Column(String(255))
-    capital = Column(String(255))
-    capital_pl = Column(String(255))
+    id = Column(Integer, primary_key=True)
+    iso_alpha2 = Column(String(2), unique=True, nullable=False)
+    iso_alpha3 = Column(String(3), unique=True, nullable=False)
+    name = Column(String(100), nullable=False)
+    name_pl = Column(String(100))
+    capital = Column(String(100))
+    capital_pl = Column(String(100))
     continent = Column(String(50))
     region = Column(String(100))
+    flag_url = Column(String(255))
     flag_emoji = Column(String(10))
-    flag_url = Column(Text)
-    population = Column(Integer)
-    area = Column(DECIMAL(15, 2))
     latitude = Column(DECIMAL(10, 6))
     longitude = Column(DECIMAL(10, 6))
-    timezone = Column(String(255))
-    national_dish = Column(String(255))
-    phone_code = Column(String(50))
-    largest_cities = Column(Text) # Store as comma-separated or JSON
-    ethnic_groups = Column(Text) # Store as comma-separated or JSON
+    population = Column(Integer)
+    area = Column(DECIMAL(15, 2))
+    phone_code = Column(String(20))
+    
+    # Wiki & Info
     wiki_summary = Column(Text)
-    national_symbols = Column(String(255)) # e.g. animal, flower
-    unique_things = Column(Text)
-    alcohol_status = Column(String(255))
-    lgbtq_status = Column(String(255))
-    id_requirement = Column(String(255))
-    main_airport = Column(String(255))
-    railway_info = Column(String(255))
-    natural_hazards = Column(Text)
-    popular_apps = Column(String(255))
     unesco_count = Column(Integer, default=0)
+    
+    # Extended Stats from Wikidata
+    timezone = Column(String(100))
+    national_dish = Column(Text)
+    national_symbols = Column(Text) # Symbols or motto
+    unique_things = Column(Text) # Q-items or unique landmarks
+    alcohol_status = Column(Text) # Status/rules about alcohol
+    lgbtq_status = Column(Text) # Status of rights
+    id_requirement = Column(Text) # If ID or passport is needed
+    main_airport = Column(Text)
+    railway_info = Column(Text)
+    natural_hazards = Column(Text)
+    popular_apps = Column(Text)
+    largest_cities = Column(Text)
+    ethnic_groups = Column(Text)
+    
+    is_independent = Column(Boolean, default=True)
+    parent_id = Column(Integer, ForeignKey("countries.id"))
+    
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-    
-    # Dependency relationship (e.g. Martinique -> France)
-    parent_id = Column(Integer, ForeignKey("countries.id"), nullable=True)
-    is_independent = Column(Boolean, default=True)
 
-    def __repr__(self):
-        return f"<Country(name='{self.name}', iso2='{self.iso_alpha2}')>"
-
-    # Relations
-    parent = relationship("Country", remote_side=[id], backref="territories")
+    # Relationships
+    parent = relationship("Country", remote_side=[id], back_populates="territories")
+    territories = relationship("Country", back_populates="parent")
     languages = relationship("Language", back_populates="country", cascade="all, delete-orphan")
-    religions = relationship("Religion", back_populates="country", cascade="all, delete-orphan")
     currency = relationship("Currency", back_populates="country", uselist=False, cascade="all, delete-orphan")
     safety = relationship("SafetyInfo", back_populates="country", uselist=False, cascade="all, delete-orphan")
     embassies = relationship("Embassy", back_populates="country", cascade="all, delete-orphan")
+    practical = relationship("PracticalInfo", back_populates="country", uselist=False, cascade="all, delete-orphan")
     entry_req = relationship("EntryRequirement", back_populates="country", uselist=False, cascade="all, delete-orphan")
     attractions = relationship("Attraction", back_populates="country", cascade="all, delete-orphan")
     unesco_places = relationship("UnescoPlace", back_populates="country", cascade="all, delete-orphan")
-    practical = relationship("PracticalInfo", back_populates="country", uselist=False, cascade="all, delete-orphan")
+    religions = relationship("Religion", back_populates="country", cascade="all, delete-orphan")
+    holidays = relationship("Holiday", back_populates="country", cascade="all, delete-orphan")
     weather = relationship("Weather", back_populates="country", uselist=False, cascade="all, delete-orphan")
     climate = relationship("Climate", back_populates="country", cascade="all, delete-orphan")
-    holidays = relationship("Holiday", back_populates="country", cascade="all, delete-orphan")
-    laws_and_customs = relationship("LawAndCustom", back_populates="country", cascade="all, delete-orphan")
     costs = relationship("CostOfLiving", back_populates="country", uselist=False, cascade="all, delete-orphan")
+    laws_and_customs = relationship("LawAndCustom", back_populates="country", cascade="all, delete-orphan")
 
 class Language(Base):
     __tablename__ = "languages"
@@ -254,13 +255,13 @@ class PracticalInfo(Base):
     atm_advice = Column(Text)
     
     # New cultural/law fields
-    tipping_culture = Column(Text)
     drinking_age = Column(String(100))
     alcohol_rules = Column(Text)
     dress_code = Column(Text)
     photography_restrictions = Column(Text)
     sensitive_topics = Column(Text)
     local_norms = Column(Text)
+    souvenirs = Column(Text) # Local shopping/gifts info
     
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 

@@ -165,6 +165,7 @@ def export_all():
                     "health_info": c.practical.health_info or "",
                     "roaming_info": c.practical.roaming_info or "",
                     "license_type": c.practical.license_type or "",
+                    "souvenirs": c.practical.souvenirs or "",
                     "last_updated": str(c.practical.last_updated) if c.practical.last_updated else None
                 }
             else:

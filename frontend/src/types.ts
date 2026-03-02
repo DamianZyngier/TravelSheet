@@ -86,6 +86,7 @@ export interface CountryData {
     health_info: string;
     roaming_info: string;
     license_type: string;
+    souvenirs: string;
     last_updated: string | null;
   };
   costs?: {
