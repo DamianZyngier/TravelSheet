@@ -21,6 +21,46 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
       </div>
       
       <div className="discover-container">
+        {/* Parent / Territory Relationships */}
+        <div className="relationship-nav-box">
+          {selectedCountry.parent && (
+            <div className="parent-info-line">
+              <span className="relationship-tag">Terytorium zależne od:</span>
+              <button 
+                className="relationship-text-btn"
+                onClick={() => {
+                  const parent = allCountries.find(c => c.iso2 === selectedCountry.parent?.iso2);
+                  if (parent) onSelectCountry(parent);
+                }}
+              >
+                {selectedCountry.parent.name_pl}
+              </button>
+            </div>
+          )}
+          
+          {selectedCountry.territories && selectedCountry.territories.length > 0 && (
+            <div className="territories-info-line">
+              <span className="relationship-tag">Terytoria zależne:</span>
+              <div className="territories-text-list">
+                {selectedCountry.territories.map((t, idx) => (
+                  <React.Fragment key={t.iso2}>
+                    <button 
+                      className="relationship-text-btn"
+                      onClick={() => {
+                        const target = allCountries.find(c => c.iso2 === t.iso2);
+                        if (target) onSelectCountry(target);
+                      }}
+                    >
+                      {t.name_pl}
+                    </button>
+                    {idx < selectedCountry.territories!.length - 1 ? ', ' : ''}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         {selectedCountry.wiki_summary ? (
           <div className="wiki-summary-text">
             <ExpandableText text={selectedCountry.wiki_summary} maxLength={450} />
@@ -45,7 +85,7 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
           )}
 
           {/* New Souvenirs / Shopping Data Point */}
-          {selectedCountry.practical.souvenirs && (
+          {selectedCountry.practical?.souvenirs && (
             <div className="souvenirs-box">
               <span className="souvenirs-icon">🎁</span>
               <div className="souvenirs-content">

@@ -13,6 +13,44 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
   chartTooltip, 
   setChartTooltip 
 }) => {
+  // Helper to get month name
+  const getMonthName = (m: number) => {
+    return new Date(2024, m - 1).toLocaleDateString('pl-PL', { month: 'long' });
+  };
+
+  // Helper to calculate best travel months
+  const getBestTravelTime = () => {
+    if (!selectedCountry.climate || selectedCountry.climate.length === 0) return null;
+    
+    // Scoring logic: low rain is good, temperature between 18-28 is best
+    const scoredMonths = selectedCountry.climate.map(cl => {
+      let score = 0;
+      if (cl.rain < 40) score += 3;
+      else if (cl.rain < 80) score += 1;
+      
+      if (cl.temp_day >= 18 && cl.temp_day <= 28) score += 3;
+      else if (cl.temp_day > 28 && cl.temp_day <= 33) score += 1;
+      
+      return { month: cl.month, score };
+    });
+
+    const bestMonths = scoredMonths
+      .filter(m => m.score >= 4)
+      .map(m => getMonthName(m.month));
+
+    if (bestMonths.length === 0) {
+      // Fallback: just return months with least rain
+      const minRain = Math.min(...selectedCountry.climate.map(c => c.rain));
+      return selectedCountry.climate
+        .filter(c => c.rain === minRain)
+        .map(c => getMonthName(c.month));
+    }
+
+    return bestMonths;
+  };
+
+  const bestMonthsList = getBestTravelTime();
+
   return (
     <>
       <div id="costs" className="info-block full-width costs-section-box scroll-mt">
@@ -145,28 +183,33 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
             )}
 
             {(() => {
-              // Calculate dynamic range for temperatures
               const allTemps = selectedCountry.climate?.flatMap(c => [c.temp_day, c.temp_night]) || [];
               const minT = Math.min(...allTemps, 0);
               const maxT = Math.max(...allTemps, 30);
-              
-              // Add margin and round to nearest 10
               const yMin = Math.floor(minT / 10) * 10 - 10;
               const yMax = Math.ceil(maxT / 10) * 10 + 10;
               const yRange = yMax - yMin;
-              
-              // Generate ticks
               const ticks = [];
               for (let t = yMin; t <= yMax; t += 10) ticks.push(t);
               
               const getY = (temp: number) => 200 - ((temp - yMin) / yRange) * 180;
               const getX = (i: number) => 62 + i * 43;
-              
               const maxRain = Math.max(...(selectedCountry.climate?.map(c => c.rain) || [100]), 1);
 
               return (
                 <svg viewBox="0 0 600 260" className="combined-svg-chart">
-                  {/* Dynamic Grid lines & Y-Axis Labels */}
+                  {/* Season Background Bands - Improved visibility and positioning */}
+                  {selectedCountry.climate?.map((cl, i) => {
+                    const bandWidth = 43;
+                    const xStart = 40.5 + i * bandWidth;
+                    if (cl.season === 'wet') {
+                      return <rect key={`bg-wet-${i}`} x={xStart} y={20} width={bandWidth} height={180} fill="#e6f6ff" opacity="0.8" />;
+                    } else if (cl.season === 'dry') {
+                      return <rect key={`bg-dry-${i}`} x={xStart} y={20} width={bandWidth} height={180} fill="#fff9eb" opacity="0.8" />;
+                    }
+                    return null;
+                  })}
+
                   {ticks.map(temp => {
                     const y = getY(temp);
                     return (
@@ -177,14 +220,12 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                     );
                   })}
 
-                  {/* Rain Y-axis labels */}
                   {[0, 0.5, 1].map(p => (
                     <text key={p} x="565" y={200 - p * 180 + 4} textAnchor="start" className="chart-axis-text rain">
                       {Math.round(p * maxRain)}
                     </text>
                   ))}
 
-                  {/* Rainfall Bars */}
                   {selectedCountry.climate?.map((cl, i) => {
                     const barHeight = (cl.rain / maxRain) * 180;
                     return (
@@ -195,9 +236,10 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                         width="24"
                         height={barHeight}
                         className="chart-bar-rain"
+                        style={{ fill: cl.season === 'wet' ? '#3182ce' : '#bee3f8' }}
                         onMouseEnter={(e) => setChartTooltip({
                           visible: true,
-                          text: `${cl.rain} mm`,
+                          text: `${cl.rain} mm (${cl.season === 'wet' ? 'pora mokra' : cl.season === 'dry' ? 'pora sucha' : 'sezon przejściowy'})`,
                           x: e.nativeEvent.offsetX,
                           y: e.nativeEvent.offsetY - 30
                         })}
@@ -210,7 +252,6 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                     );
                   })}
 
-                  {/* Temperature Lines */}
                   {(() => {
                     const dayPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_day)}`).join(' ') || '';
                     const nightPath = selectedCountry.climate?.map((cl, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(cl.temp_night)}`).join(' ') || '';
@@ -234,7 +275,6 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                     );
                   })()}
 
-                  {/* Month Labels */}
                   {selectedCountry.climate?.map((cl, i) => (
                     <text key={`label-${i}`} x={getX(i)} y="240" textAnchor="middle" className="chart-month-text">
                       {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
@@ -247,17 +287,36 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
             <div className="chart-legend-combined">
               <div className="legend-item">
                 <span className="legend-color-box" style={{ backgroundColor: '#f56565' }}></span>
-                <span className="legend-label">Temperatura w dzień</span>
+                <span className="legend-label">Dzień</span>
               </div>
               <div className="legend-item">
                 <span className="legend-color-box" style={{ backgroundColor: '#4299e1' }}></span>
-                <span className="legend-label">Temperatura w nocy</span>
+                <span className="legend-label">Noc</span>
               </div>
               <div className="legend-item">
-                <span className="legend-color-box" style={{ backgroundColor: '#a0aec0', opacity: 0.3 }}></span>
-                <span className="legend-label">Opady (mm)</span>
+                <span className="legend-color-box" style={{ backgroundColor: '#bee3f8' }}></span>
+                <span className="legend-label">Opady</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-color-box" style={{ backgroundColor: '#fff9eb', border: '1px solid #feebc8' }}></span>
+                <span className="legend-label">Pora sucha</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-color-box" style={{ backgroundColor: '#e6f6ff', border: '1px solid #bee3f8' }}></span>
+                <span className="legend-label">Pora mokra</span>
               </div>
             </div>
+
+            {bestMonthsList && bestMonthsList.length > 0 && (
+              <div className="best-travel-time-box">
+                <span className="best-travel-icon">✈️</span>
+                <div className="best-travel-content">
+                  <strong>Najlepszy czas na wyjazd:</strong>
+                  <p>{bestMonthsList.join(', ')}</p>
+                  <small>W oparciu o statystycznie najniższe opady i przyjemną temperaturę.</small>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <p className="no-data-text">Brak danych klimatycznych dla tego kraju.</p>

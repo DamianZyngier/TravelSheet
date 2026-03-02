@@ -52,13 +52,20 @@ async def sync_country_climate(db: Session, country: models.Country, client: htt
                 avg_min = sum(stats["temp_min"]) / len(stats["temp_min"])
                 total_rain = sum(stats["rain"])
                 
+                # Season calculation logic
+                # Wet if rain > 150mm
+                # Dry if rain < 40mm
+                if total_rain > 150: season = 'wet'
+                elif total_rain < 40: season = 'dry'
+                else: season = 'shoulder'
+                
                 db.add(models.Climate(
                     country_id=country.id,
                     month=month,
                     avg_temp_max=int(round(avg_max)),
                     avg_temp_min=int(round(avg_min)),
                     avg_rain_mm=int(round(total_rain)),
-                    season_type='N/A'
+                    season_type=season
                 ))
             db.commit()
             return {"status": "success"}

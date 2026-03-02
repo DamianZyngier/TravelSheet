@@ -276,6 +276,7 @@ def export_all():
                     "temp_day": cl.avg_temp_max,
                     "temp_night": cl.avg_temp_min,
                     "rain": cl.avg_rain_mm,
+                    "season": cl.season_type,
                     "last_updated": str(cl.last_updated) if cl.last_updated else None
                 } for cl in c.climate
             ]

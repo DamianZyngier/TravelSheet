@@ -146,6 +146,7 @@ export interface CountryData {
     temp_day: number;
     temp_night: number;
     rain: number;
+    season: string;
     last_updated?: string;
   }[];
   weather?: {
