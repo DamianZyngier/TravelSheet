@@ -77,13 +77,6 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
             </div>
           )}
           
-          {selectedCountry.unique_things && (
-            <div className="national-symbols-bar" style={{ backgroundColor: '#f0fff4', borderLeftColor: '#48bb78' }}>
-              <span className="symbols-label" style={{ color: '#2f855a' }}>Unikatowe:</span>
-              <span className="symbols-value">{selectedCountry.unique_things}</span>
-            </div>
-          )}
-
           {/* New Souvenirs / Shopping Data Point */}
           {selectedCountry.practical?.souvenirs && (
             <div className="souvenirs-box">

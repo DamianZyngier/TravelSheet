@@ -31,7 +31,6 @@ class Country(Base):
     timezone = Column(String(100))
     national_dish = Column(Text)
     national_symbols = Column(Text) # Symbols or motto
-    unique_things = Column(Text) # Q-items or unique landmarks
     alcohol_status = Column(Text) # Status/rules about alcohol
     lgbtq_status = Column(Text) # Status of rights
     id_requirement = Column(Text) # If ID or passport is needed
