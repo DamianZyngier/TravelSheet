@@ -37,12 +37,8 @@ const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, acti
     <img 
       src={iconSrc} 
       alt={name} 
+      className="continent-tile-icon"
       style={{ 
-        width: '20px', 
-        height: '20px', 
-        marginRight: '6px',
-        flexShrink: 0,
-        // If active, make the icon white using CSS filters
         filter: active ? 'brightness(0) invert(1)' : 'none'
       }} 
     />
@@ -59,14 +55,14 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const continentColors: Record<string, string> = {
-    'Africa': '#48bb78',
-    'Asia': '#ed8936',
-    'Europe': '#4299e1',
-    'North America': '#f56565',
-    'South America': '#9f7aea',
-    'Oceania': '#38b2ac',
-    'Antarctica': '#a0aec0'
+  const continentStyles: Record<string, { color: string, bg: string }> = {
+    'Africa': { color: '#2f855a', bg: '#f0fff4' },
+    'Asia': { color: '#c05621', bg: '#fffaf0' },
+    'Europe': { color: '#2b6cb0', bg: '#ebf8ff' },
+    'North America': { color: '#c53030', bg: '#fff5f5' },
+    'South America': { color: '#6b46c1', bg: '#faf5ff' },
+    'Oceania': { color: '#2c7a7b', bg: '#e6fffa' },
+    'Antarctica': { color: '#4a5568', bg: '#edf2f7' }
   };
 
   useEffect(() => {
@@ -88,6 +84,22 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 
   const activeFiltersCount = (filterContinent !== 'all' ? 1 : 0) + (filterSafety !== 'all' ? 1 : 0);
 
+  const handleContinentClick = (c: string) => {
+    if (filterContinent === c) {
+      setFilterContinent('all');
+    } else {
+      setFilterContinent(c);
+    }
+  };
+
+  const handleSafetyClick = (s: string) => {
+    if (filterSafety === s) {
+      setFilterSafety('all');
+    } else {
+      setFilterSafety(s);
+    }
+  };
+
   return (
     <div className="filter-dropdown-container" ref={dropdownRef}>
       <button 
@@ -103,52 +115,50 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
         <div className="filter-panel">
           <div className="filter-section">
             <label className="filter-label">Kontynent</label>
-            <div className="continent-filter-grid">
+            <div className="continent-filter-grid-v2">
               <button 
-                className={`continent-btn ${filterContinent === 'all' ? 'active' : ''}`}
+                className={`continent-tile-btn ${filterContinent === 'all' ? 'active' : ''}`}
                 onClick={() => setFilterContinent('all')}
               >
-                Wszystkie
+                <span>Wszystkie</span>
               </button>
-              {continents.map(c => (
-                <button 
-                  key={c}
-                  className={`continent-btn ${filterContinent === c ? 'active' : ''}`}
-                  onClick={() => setFilterContinent(c)}
-                  style={{ 
-                    borderColor: filterContinent === c ? continentColors[c] : '#e2e8f0',
-                    backgroundColor: filterContinent === c ? `${continentColors[c]}` : 'transparent',
-                    color: filterContinent === c ? 'white' : '#4a5568'
-                  }}
-                >
-                  <ContinentIcon name={c} color={continentColors[c]} active={filterContinent === c} />
-                  <span>{CONTINENT_MAP[c] || c}</span>
-                </button>
-              ))}
+              {continents.map(c => {
+                const style = continentStyles[c] || { color: '#4a5568', bg: '#f7fafc' };
+                const isActive = filterContinent === c;
+                return (
+                  <button 
+                    key={c}
+                    className={`continent-tile-btn ${isActive ? 'active' : ''}`}
+                    onClick={() => handleContinentClick(c)}
+                    style={{ 
+                      '--tile-color': style.color,
+                      '--tile-bg': isActive ? style.color : style.bg,
+                      '--tile-text': isActive ? 'white' : style.color,
+                      borderColor: isActive ? style.color : '#e2e8f0'
+                    } as any}
+                  >
+                    <ContinentIcon name={c} active={isActive} />
+                    <span className="continent-tile-label">{CONTINENT_MAP[c] || c}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
           <div className="filter-section">
             <label className="filter-label">Bezpieczeństwo</label>
-            <div className="safety-filter-list">
+            <div className="safety-filter-list-v2">
               <button
-                className={`safety-filter-item risk-badge risk-unknown ${filterSafety === 'all' ? 'active' : ''}`}
+                className={`safety-badge-btn risk-badge risk-unknown ${filterSafety === 'all' ? 'active' : ''}`}
                 onClick={() => setFilterSafety('all')}
-                style={{ marginTop: 0, cursor: 'pointer', border: filterSafety === 'all' ? '2px solid #2b6cb0' : '1px solid #e2e8f0' }}
               >
                 Wszystkie
               </button>
               {safetyLevels.map(level => (
                 <button
                   key={level.id}
-                  className={`safety-filter-item risk-badge ${level.class} ${filterSafety === level.id ? 'active' : ''}`}
-                  onClick={() => setFilterSafety(level.id)}
-                  style={{ 
-                    marginTop: 0, 
-                    cursor: 'pointer',
-                    border: filterSafety === level.id ? '2px solid #2d3748' : '1px solid transparent',
-                    boxShadow: filterSafety === level.id ? '0 0 0 1px white' : 'none'
-                  }}
+                  className={`safety-badge-btn risk-badge ${level.class} ${filterSafety === level.id ? 'active' : ''}`}
+                  onClick={() => handleSafetyClick(level.id)}
                 >
                   {level.label}
                 </button>
