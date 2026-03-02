@@ -112,7 +112,10 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="filter-icon">🔍</span>
-        <span>Filtry {activeFiltersCount > 0 && `(${activeFiltersCount})`}</span>
+        <div className="filter-btn-label-wrapper">
+          <span>Filtry</span>
+          {activeFiltersCount > 0 && <span className="filter-count-badge">{activeFiltersCount}</span>}
+        </div>
         <span className="chevron">{isOpen ? '▴' : '▾'}</span>
       </button>
 
