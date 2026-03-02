@@ -31,13 +31,17 @@ const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, acti
 
   const iconSrc = iconMap[name];
 
-  if (!iconSrc) return <span>🌐</span>;
+  if (!iconSrc) {
+    console.warn(`Missing icon for continent: ${name}`);
+    return <span>🌐</span>;
+  }
 
   return (
     <div 
       className="continent-tile-icon-mask"
+      data-continent={name}
       style={{ 
-        '--icon-url': `url(${iconSrc})`,
+        '--icon-url': `url("${iconSrc}")`,
         backgroundColor: active ? 'white' : 'var(--tile-color)'
       } as any}
     />
