@@ -84,20 +84,8 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             <span>{selectedCountry.ethnic_groups}</span>
           </div>
         )}
-        {selectedCountry.religions?.length > 0 && (
-          <div className="info-item-box full">
-            <strong>Religie:</strong>
-            <div className="religion-badges">
-              {selectedCountry.religions.sort((a,b) => b.percentage - a.percentage).map((r, i) => (
-                <span key={i} className="religion-badge">
-                  {r.name}{r.percentage > 0 && <>: <strong>{r.percentage.toFixed(1)}%</strong></>}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
-      <DataSource sources={['REST', 'WIKI', 'CDC']} lastUpdated={selectedCountry.last_updated} />
+      <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.last_updated} />
     </div>
   );
 };
