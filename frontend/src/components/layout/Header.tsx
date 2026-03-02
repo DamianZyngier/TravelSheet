@@ -78,6 +78,7 @@ const Header: React.FC<HeaderProps> = ({
                 color: showOnlyFavorites ? '#c53030' : '#4a5568',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '6px',
                 height: '38px'
               }}

@@ -1771,7 +1771,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.2s;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: block;
   text-align: center;
 }
@@ -2390,7 +2390,14 @@
   z-index: 5;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-size: 1.2rem;
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.country-card:hover .card-favorite-btn {
+  opacity: 1;
+  visibility: visible;
 }
 
 .card-favorite-btn:hover {
