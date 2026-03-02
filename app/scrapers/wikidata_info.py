@@ -43,9 +43,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     SELECT ?countryISO ?ethnicLabel ?religionLabel ?religionPercent WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
-      OPTIONAL {{ 
-        ?country p:P172 [ ps:P172 ?ethnic; pq:P2107 ?ethnicPercent ]. 
-      }}
+      OPTIONAL {{ ?country p:P172 [ ps:P172 ?ethnic; pq:P2107 ?ethnicPercent ]. }}
       OPTIONAL {{ 
         ?country p:P140 ?relStatement.
         ?relStatement ps:P140 ?religion.
@@ -68,26 +66,37 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     }}
     """
 
-    # Query 4: Largest Cities (Deduplicated)
+    # Query 4: Largest Cities
     q_cities = f"""
     SELECT ?countryISO ?city ?cityLabel (MAX(?pop) as ?maxPop) WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
-      ?city wdt:P31/wdt:P279* wd:Q515;
-            wdt:P17 ?country;
-            wdt:P1082 ?pop.
+      ?city wdt:P31/wdt:P279* wd:Q515; wdt:P17 ?country; wdt:P1082 ?pop.
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     GROUP BY ?countryISO ?city ?cityLabel
     ORDER BY DESC(?maxPop)
     """
 
-    # Run queries
+    # Query 5: Souvenirs / Local Products (Handicrafts, Specialties)
+    q_products = f"""
+    SELECT ?countryISO ?itemLabel WHERE {{
+      VALUES ?countryISO {{ {isos} }}
+      ?country wdt:P297 ?countryISO.
+      ?item wdt:P495 ?country.
+      ?item wdt:P31/wdt:P279* ?type.
+      VALUES ?type {{ wd:Q170658 wd:Q11690 wd:Q2095 wd:Q13182 }}
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
+    }}
+    LIMIT 100
+    """
+
     results = [
         await async_sparql_get(q_basic, "Basic Stats"),
         await async_sparql_get(q_cultural, "Cultural Info"),
         await async_sparql_get(q_law, "Law Info"),
-        await async_sparql_get(q_cities, "Cities Info")
+        await async_sparql_get(q_cities, "Cities Info"),
+        await async_sparql_get(q_products, "Products/Souvenirs")
     ]
     
     country_religions = {} 
@@ -95,33 +104,31 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     country_hazards = {} 
     country_cities = {} 
     country_climates = {}
+    country_souvenirs = {}
 
-    # 1. Basic Stats
+    # Process Basic
     for r in results[0]:
         iso = r.get("countryISO", {}).get("value")
-        if iso not in country_map: continue
-        c = country_map[iso]
-        if not c.timezone: c.timezone = r.get("timezoneLabel", {}).get("value")
-        if not c.national_dish: c.national_dish = r.get("dishLabel", {}).get("value")
-        if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
-        if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
-        if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
-        
-        clim = r.get("climateLabel", {}).get("value")
-        if clim and not clim.startswith("Q"):
-            if iso not in country_climates: country_climates[iso] = set()
-            country_climates[iso].add(clim)
+        if iso in country_map:
+            c = country_map[iso]
+            if not c.timezone: c.timezone = r.get("timezoneLabel", {}).get("value")
+            if not c.national_dish: c.national_dish = r.get("dishLabel", {}).get("value")
+            if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
+            if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
+            if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
+            clim = r.get("climateLabel", {}).get("value")
+            if clim and not clim.startswith("Q"):
+                if iso not in country_climates: country_climates[iso] = set()
+                country_climates[iso].add(clim)
     
-    # 2. Cultural
+    # Process Cultural, Law, Cities (same as before)
     for r in results[1]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
-        
         ethnic = r.get("ethnicLabel", {}).get("value")
         if ethnic and not ethnic.startswith("Q"):
             if iso not in country_ethnics: country_ethnics[iso] = set()
             country_ethnics[iso].add(ethnic)
-            
         rel = r.get("religionLabel", {}).get("value")
         perc = r.get("religionPercent", {}).get("value")
         if rel and not rel.startswith("Q"):
@@ -130,7 +137,6 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             except: p_val = 0.0
             country_religions[iso][rel] = max(country_religions[iso].get(rel, 0.0), p_val)
 
-    # 3. Law & Safety
     for r in results[2]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -138,17 +144,14 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         if not c.alcohol_status: c.alcohol_status = r.get("alcoholLabel", {}).get("value")
         if not c.lgbtq_status: c.lgbtq_status = r.get("lgbtqLabel", {}).get("value")
         if not c.id_requirement: c.id_requirement = r.get("idReqLabel", {}).get("value")
-        
         hazard = r.get("hazardLabel", {}).get("value")
         if hazard and not hazard.startswith("Q"):
             if iso not in country_hazards: country_hazards[iso] = set()
             country_hazards[iso].add(hazard)
 
-    # 4. Cities
     for r in results[3]:
         iso = r.get("countryISO", {}).get("value")
-        name = r.get("cityLabel", {}).get("value")
-        pop = r.get("maxPop", {}).get("value")
+        name = r.get("cityLabel", {}).get("value"); pop = r.get("maxPop", {}).get("value")
         if iso and name and pop and not name.startswith("Q"):
             if iso not in country_cities: country_cities[iso] = []
             if len(country_cities[iso]) < 5:
@@ -156,53 +159,49 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
                     try: country_cities[iso].append((name, int(float(pop))))
                     except: continue
 
-    # Fallbacks
+    # Process Souvenirs
+    for r in results[4]:
+        iso = r.get("countryISO", {}).get("value")
+        prod = r.get("itemLabel", {}).get("value")
+        if iso and prod and not prod.startswith("Q"):
+            if iso not in country_souvenirs: country_souvenirs[iso] = set()
+            country_souvenirs[iso].add(prod)
+
+    # Fallbacks and final application
     EXTRA_FALLBACKS = {
         'PL': {
-            'dish': 'Bigos, Pierogi',
-            'airport': 'Lotnisko Chopina w Warszawie (WAW)',
-            'railway': 'PKP (Polskie Koleje Państwowe)',
-            'cities': [("Warszawa", 1860000), ("Kraków", 800000), ("Wrocław", 670000), ("Łódź", 660000), ("Poznań", 540000)],
-            'climate': 'Klimat umiarkowany przejściowy'
+            'dish': 'Bigos, Pierogi', 'climate': 'Klimat umiarkowany przejściowy',
+            'souvenirs': 'Bursztyn, Ceramika bolesławiecka, Wyroby z lnu, Krówki, Oscypek'
         },
         'EG': {
-            'climate': 'Klimat zwrotnikowy suchy (pustynny)'
+            'climate': 'Klimat zwrotnikowy suchy (pustynny)',
+            'souvenirs': 'Papirusy, Olejki zapachowe, Przyprawy, Wyroby z alabastru, Bawełna egipska'
         },
         'TH': {
-            'climate': 'Klimat zwrotnikowy monsunowy'
+            'climate': 'Klimat zwrotnikowy monsunowy',
+            'souvenirs': 'Jedwab tajski, Wyroby z drewna tekowego, Naturalne kosmetyki, Figurki słoni, Produkty kokosowe'
         },
         'MX': {
-            'climate': 'Zróżnicowany: zwrotnikowy suchy na północy, wilgotny na południu'
-        },
-        'GR': {
-            'climate': 'Klimat śródziemnomorski'
-        },
-        'HR': {
-            'climate': 'Klimat śródziemnomorski na wybrzeżu, umiarkowany w głębi lądu'
-        },
-        'US': {
-            'cities': [("Nowy Jork", 8300000), ("Los Angeles", 3800000), ("Chicago", 2600000), ("Houston", 2300000), ("Phoenix", 1600000)],
-            'climate': 'Zróżnicowany: od polarnego na Alasce po tropikalny na Florydzie i Hawajach'
-        },
-        'DE': {
-            'cities': [("Berlin", 3700000), ("Hamburg", 1900000), ("Monachium", 1500000), ("Kolonia", 1100000), ("Frankfurt", 760000)],
-            'climate': 'Klimat umiarkowany morski i przejściowy'
+            'climate': 'Zróżnicowany: zwrotnikowy suchy na północy, wilgotny na południu',
+            'souvenirs': 'Tequila, Mezcal, Ceramika Talavera, Wyroby ze srebra, Kapelusze Sombrero'
         },
         'FR': {
-            'cities': [("Paryż", 2100000), ("Marsylia", 870000), ("Lyon", 520000), ("Tuluza", 490000), ("Nicea", 340000)],
-            'climate': 'Klimat umiarkowany morski, na południu śródziemnomorski'
-        },
-        'GB': {
-            'cities': [("Londyn", 8900000), ("Birmingham", 1100000), ("Glasgow", 630000), ("Liverpool", 500000), ("Leeds", 480000)],
-            'climate': 'Klimat umiarkowany morski'
+            'souvenirs': 'Wina, Sery, Perfumy, Makaroniki, Berety, Wyroby z lawendy (Prowansja)'
         },
         'IT': {
-            'cities': [("Rzym", 2800000), ("Mediolan", 1400000), ("Neapol", 960000), ("Turyn", 870000), ("Palermo", 660000)],
-            'climate': 'Klimat śródziemnomorski'
+            'souvenirs': 'Wyroby skórzane, Oliwa z oliwek, Ocet balsamiczny, Szkło weneckie (Murano), Ceramika'
         },
         'ES': {
-            'cities': [("Madryt", 3300000), ("Barcelona", 1600000), ("Walencja", 790000), ("Sewilla", 680000), ("Zaragoza", 670000)],
-            'climate': 'Klimat śródziemnomorski i kontynentalny'
+            'souvenirs': 'Wachlarze, Wyroby ze skóry, Oliwa, Szafran, Ceramika, Espadryle'
+        },
+        'GR': {
+            'souvenirs': 'Oliwa z oliwek, Naturalne gąbki, Miód tymiankowy, Ouzo, Biżuteria antyczna'
+        },
+        'TR': {
+            'souvenirs': 'Dywaniki, Turecka herbata i kawa, Chałwa, Oko proroka (Nazar), Wyroby ze skóry'
+        },
+        'JP': {
+            'souvenirs': 'Pałeczki, Matcha, Ceramika, Kimono/Yukata, Wyroby z papieru Washi, Noże kuchenne'
         }
     }
 
@@ -210,16 +209,18 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         fallback = EXTRA_FALLBACKS.get(iso)
         if fallback:
             if not c.national_dish and 'dish' in fallback: c.national_dish = fallback['dish']
-            if not c.main_airport and 'airport' in fallback: c.main_airport = fallback['airport']
-            if not c.railway_info and 'railway' in fallback: c.railway_info = fallback['railway']
-            if (iso not in country_cities or len(country_cities[iso]) < 2) and 'cities' in fallback: 
-                country_cities[iso] = fallback['cities']
-            if not c.climate_description and 'climate' in fallback:
-                c.climate_description = fallback['climate']
+            if not c.climate_description and 'climate' in fallback: c.climate_description = fallback['climate']
+            if fallback.get('souvenirs'):
+                # Prefer fallback souvenirs as they are curated
+                c.practical.souvenirs = fallback['souvenirs']
 
         if iso in country_climates and not c.climate_description:
-            # Join top 3 climate types if available
             c.climate_description = ", ".join(sorted(list(country_climates[iso]))[:3])
+
+        if not c.practical.souvenirs and iso in country_souvenirs:
+            # Filter out generic names and join
+            s_list = [s for s in country_souvenirs[iso] if len(s) > 2][:6]
+            c.practical.souvenirs = ", ".join(s_list)
 
         if iso in country_ethnics: c.ethnic_groups = ", ".join(sorted(list(country_ethnics[iso]))[:5])
         if iso in country_hazards: c.natural_hazards = ", ".join(sorted(list(country_hazards[iso]))[:5])
