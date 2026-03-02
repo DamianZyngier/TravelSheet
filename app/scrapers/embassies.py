@@ -7,6 +7,7 @@ import html
 import logging
 from sqlalchemy.orm import Session
 from .. import models
+from sqlalchemy.sql import func
 
 logger = logging.getLogger("uvicorn")
 
@@ -15,10 +16,10 @@ async def scrape_embassies(db: Session):
     Scrapes all diplomatic missions (Embassies, Consulates, etc.) from the centralized MSZ portal.
     """
     url = "https://www.gov.pl/web/dyplomacja/polskie-przedstawicielstwa-na-swiecie"
-    results = {"synced_countries": 0, "total_missions": 0, "errors": 0}
+    results = {"success": 0, "total_missions": 0, "errors": 0}
 
     try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
+        async with httpx.AsyncClient(timeout=45.0) as client:
             resp = await client.get(url)
             content = resp.text
             
@@ -26,6 +27,7 @@ async def scrape_embassies(db: Session):
             match = re.search(r'<pre id="registerData".*?>(.*?)</pre>', content, re.DOTALL)
             if not match:
                 logger.error("Could not find registerData for embassies scraper")
+                results["errors"] += 1
                 return results
             
             raw_json = html.unescape(match.group(1))
@@ -62,7 +64,7 @@ async def scrape_embassies(db: Session):
                 "szwajcaria (konfederacja helwecka)": "szwajcaria"
             }
             
-            # Ensure Hongkong and Makau are in the map
+            # Ensure mappings are in the name_to_id
             for m_key, m_val in manual_map.items():
                 if m_val in name_to_id:
                     name_to_id[m_key] = name_to_id[m_val]
@@ -101,33 +103,44 @@ async def scrape_embassies(db: Session):
                 postal = row['Kod pocztowy'].strip()
                 full_address = f"{postal} {addr}".strip() if postal else addr
                 
-                mission = models.Embassy(
-                    country_id=country_id,
-                    type=m_type,
-                    city=row['Miasto'].strip(),
-                    address=full_address,
-                    phone=row['Telefon'].strip(),
-                    emergency_phone=row['Telefon dyżurny'].strip(),
-                    email=row['Adres e-mail'].strip(),
-                    website=row['Strona internetowa'].strip()
-                )
+                mission_data = {
+                    "country_id": country_id,
+                    "type": m_type,
+                    "city": row['Miasto'].strip(),
+                    "address": full_address,
+                    "phone": row['Telefon'].strip(),
+                    "emergency_phone": row['Telefon dyżurny'].strip(),
+                    "email": row['Adres e-mail'].strip(),
+                    "website": row['Strona internetowa'].strip()
+                }
                 
                 # Simple deduplication
-                if not any(m.type == mission.type and (m.address == mission.address or m.email == mission.email) for m in missions_by_country[country_id]):
+                is_dup = False
+                for existing_m in missions_by_country[country_id]:
+                    if existing_m.type == mission_data["type"] and (existing_m.address == mission_data["address"] or existing_m.email == mission_data["email"]):
+                        is_dup = True
+                        break
+                
+                if not is_dup:
+                    mission = models.Embassy(**mission_data, last_updated=func.now())
                     missions_by_country[country_id].append(mission)
 
             # Update database
             synced_count = 0
             total_missions = 0
             for country_id, missions in missions_by_country.items():
-                db.query(models.Embassy).filter(models.Embassy.country_id == country_id).delete()
-                for m in missions:
-                    db.add(m)
-                synced_count += 1
-                total_missions += len(missions)
+                try:
+                    db.query(models.Embassy).filter(models.Embassy.country_id == country_id).delete()
+                    for m in missions:
+                        db.add(m)
+                    synced_count += 1
+                    total_missions += len(missions)
+                except Exception as e:
+                    logger.error(f"Error updating embassies for country {country_id}: {e}")
+                    results["errors"] += 1
             
             db.commit()
-            results["synced_countries"] = synced_count
+            results["success"] = synced_count
             results["total_missions"] = total_missions
             logger.info(f"Centralized embassy sync complete: {synced_count} countries, {total_missions} missions")
             

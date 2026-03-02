@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from .. import models
 import logging
+from sqlalchemy.sql import func
 
 logger = logging.getLogger("uvicorn")
 
@@ -35,37 +36,51 @@ def sync_costs(db: Session):
     """
     pl_index = COST_DATA.get('PL', 42.0)
     synced = 0
+    errors = 0
     countries = db.query(models.Country).all()
     
     for country in countries:
-        index = COST_DATA.get(country.iso_alpha2.upper())
-        if not index:
-            continue
+        try:
+            index = COST_DATA.get(country.iso_alpha2.upper())
+            if not index:
+                continue
+                
+            ratio = round(index / pl_index, 2)
+            pl_low, pl_mid, pl_high = 120.0, 300.0, 800.0
             
-        # We estimate Restaurant and Grocery sub-indices for UI diversity
-        # based on overall index trends
-        ratio = round(index / pl_index, 2)
-        
-        # Polish baseline (PLN)
-        pl_low, pl_mid, pl_high = 120.0, 300.0, 800.0
-        
-        db.query(models.CostOfLiving).filter(models.CostOfLiving.country_id == country.id).delete()
-        
-        cost_entry = models.CostOfLiving(
-            country_id=country.id,
-            index_overall=index,
-            index_restaurants=index * 0.95,
-            index_groceries=index * 1.05,
-            index_transport=index * 0.85,
-            index_accommodation=index * 1.2, # Accommodation usually higher than groceries
-            ratio_to_poland=ratio,
-            daily_budget_low=round(pl_low * ratio, 2),
-            daily_budget_mid=round(pl_mid * ratio, 2),
-            daily_budget_high=round(pl_high * ratio, 2)
-        )
-        db.add(cost_entry)
-        synced += 1
+            existing = db.query(models.CostOfLiving).filter(models.CostOfLiving.country_id == country.id).first()
+            
+            if existing:
+                existing.index_overall = index
+                existing.index_restaurants = index * 0.95
+                existing.index_groceries = index * 1.05
+                existing.index_transport = index * 0.85
+                existing.index_accommodation = index * 1.2
+                existing.ratio_to_poland = ratio
+                existing.daily_budget_low = round(pl_low * ratio, 2)
+                existing.daily_budget_mid = round(pl_mid * ratio, 2)
+                existing.daily_budget_high = round(pl_high * ratio, 2)
+                existing.last_updated = func.now()
+            else:
+                cost_entry = models.CostOfLiving(
+                    country_id=country.id,
+                    index_overall=index,
+                    index_restaurants=index * 0.95,
+                    index_groceries=index * 1.05,
+                    index_transport=index * 0.85,
+                    index_accommodation=index * 1.2,
+                    ratio_to_poland=ratio,
+                    daily_budget_low=round(pl_low * ratio, 2),
+                    daily_budget_mid=round(pl_mid * ratio, 2),
+                    daily_budget_high=round(pl_high * ratio, 2),
+                    last_updated=func.now()
+                )
+                db.add(cost_entry)
+            synced += 1
+        except Exception as e:
+            logger.error(f"Error syncing costs for {country.iso_alpha2}: {e}")
+            errors += 1
         
     db.commit()
-    logger.info(f"Synced cost data for {synced} countries")
-    return {"synced": synced}
+    logger.info(f"Synced cost data: {synced} success, {errors} errors")
+    return {"success": synced, "errors": errors}

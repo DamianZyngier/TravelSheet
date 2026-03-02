@@ -7,6 +7,24 @@ interface DataSourceProps {
 }
 
 export const DataSource: React.FC<DataSourceProps> = ({ sources, lastUpdated }) => {
+  const formatDate = (dateStr: string) => {
+    try {
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return null;
+      return d.toLocaleString('pl-PL', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const formattedDate = lastUpdated ? formatDate(lastUpdated) : null;
+
   return (
     <div className="data-source-footer">
       <div className="data-source-links">
@@ -20,9 +38,9 @@ export const DataSource: React.FC<DataSourceProps> = ({ sources, lastUpdated }) 
           </span>
         ))}
       </div>
-      {lastUpdated && (
+      {formattedDate && (
         <div className="last-updated-tag">
-          Aktualizacja: {new Date(lastUpdated).toLocaleDateString('pl-PL')}
+          Aktualizacja: {formattedDate}
         </div>
       )}
     </div>

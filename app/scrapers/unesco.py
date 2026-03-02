@@ -6,6 +6,7 @@ import json
 import os
 import re
 import asyncio
+from sqlalchemy.sql import func
 
 logger = logging.getLogger("uvicorn")
 
@@ -72,15 +73,6 @@ def parse_unesco_records(records):
         if not img_url and uid:
             img_url = f"https://whc.unesco.org/uploads/sites/gallery/original/site_{str(uid).zfill(4)}_0001.jpg"
 
-        site_obj = {
-            "name": rec.get('name_en'),
-            "category": rec.get('category'),
-            "is_danger": danger_val,
-            "id": uid,
-            "image": img_url,
-            "description": clean_html(rec.get('short_description_en'))
-        }
-        
         iso_codes_raw = rec.get('iso_codes')
         iso_codes = []
         if iso_codes_raw:
@@ -110,12 +102,13 @@ async def sync_unesco_sites(db: Session):
     """Main entry point to sync UNESCO data from API to Database"""
     synced_sites = 0
     synced_countries = 0
+    errors = 0
     
     records = await fetch_all_unesco_records()
     
     if not records:
         logger.warning("UNESCO API returned no records. Sync aborted.")
-        return {"status": "error", "message": "No data from API."}
+        return {"success": 0, "errors": 1}
 
     unesco_data_dict = parse_unesco_records(records)
     
@@ -129,7 +122,6 @@ async def sync_unesco_sites(db: Session):
         logger.error(f"Could not save backup file: {e}")
 
     # Update Database
-    # We clear and re-add to ensure consistency with the latest API state
     for iso, sites in unesco_data_dict.items():
         country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso).first()
         if not country: continue
@@ -147,17 +139,18 @@ async def sync_unesco_sites(db: Session):
                     is_danger=site.get("is_danger", False),
                     is_transnational=site.get("is_transnational", False),
                     image_url=site["image"],
-                    description=site["description"]
+                    description=site["description"],
+                    last_updated=func.now()
                 ))
                 synced_sites += 1
             synced_countries += 1
         except Exception as e:
             logger.error(f"DB Error for {iso}: {e}")
+            errors += 1
 
     db.commit()
     return {
-        "status": "success", 
-        "countries_synced": synced_countries, 
-        "sites_synced": synced_sites,
-        "source": "unesco_api_v2"
+        "success": synced_countries, 
+        "errors": errors,
+        "sites_synced": synced_sites
     }

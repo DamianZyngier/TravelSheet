@@ -73,6 +73,7 @@ class Language(Base):
     name = Column(String(100))
     code = Column(String(10))
     is_official = Column(Boolean, default=False)
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Language(name='{self.name}', code='{self.code}')>"
@@ -91,7 +92,7 @@ class Currency(Base):
     exchange_rate_eur = Column(DECIMAL(10, 6))
     exchange_rate_usd = Column(DECIMAL(10, 6))
     relative_cost = Column(String(20))
-    last_updated = Column(TIMESTAMP, server_default=func.now())
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Currency(code='{self.code}', rate_pln={self.exchange_rate_pln})>"
@@ -107,7 +108,7 @@ class SafetyInfo(Base):
     summary = Column(Text)
     risk_details = Column(Text)
     full_url = Column(Text)
-    last_checked = Column(TIMESTAMP, server_default=func.now())
+    last_checked = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Safety(risk='{self.risk_level}')>"
@@ -126,6 +127,7 @@ class Embassy(Base):
     emergency_phone = Column(String(50))
     email = Column(String(100))
     website = Column(Text)
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Embassy(type='{self.type}', city='{self.city}')>"
@@ -148,6 +150,7 @@ class EntryRequirement(Base):
     visa_free_days = Column(Integer)
     visa_notes = Column(Text)
     special_requirements = Column(Text) # Comma separated or JSON string
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="entry_req")
 
@@ -164,6 +167,7 @@ class Attraction(Base):
     is_unique = Column(Boolean, default=False)
     booking_info = Column(Text) # Information about pre-booking tickets
     display_order = Column(Integer, default=0)
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Attraction(name='{self.name}', cat='{self.category}')>"
@@ -183,6 +187,7 @@ class UnescoPlace(Base):
     is_transnational = Column(Boolean, default=False)
     year = Column(Integer) # Year of inscription
     image_url = Column(String(500))
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<UnescoPlace(name='{self.name}', cat='{self.category}')>"
@@ -196,6 +201,7 @@ class Religion(Base):
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
     name = Column(String(100))
     percentage = Column(DECIMAL(5, 2))
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="religions")
 
@@ -208,11 +214,13 @@ class Holiday(Base):
     name_local = Column(String(255))
     date = Column(Date)
     type = Column(String(50)) # Public, Religious, etc.
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<Holiday(name='{self.name}', date={self.date})>"
 
     country = relationship("Country", back_populates="holidays")
+
 
 class PracticalInfo(Base):
     __tablename__ = "practical_info"
@@ -283,7 +291,7 @@ class Weather(Base):
     humidity = Column(Integer)
     wind_kph = Column(DECIMAL(5, 1))
     forecast_json = Column(Text) # JSON string with 7-day forecast
-    last_updated = Column(TIMESTAMP, server_default=func.now())
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="weather")
 
@@ -297,6 +305,7 @@ class Climate(Base):
     avg_temp_max = Column(Integer)
     avg_rain_mm = Column(Integer)
     season_type = Column(String(50)) # "dry", "wet", "shoulder"
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="climate")
 
@@ -308,6 +317,7 @@ class LawAndCustom(Base):
     category = Column(String(50)) # "law", "custom", "tip", "souvenir"
     title = Column(String(255))
     description = Column(Text)
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
         return f"<LawAndCustom(cat='{self.category}', title='{self.title[:20]}...')>"
@@ -336,6 +346,6 @@ class CostOfLiving(Base):
     daily_budget_mid = Column(DECIMAL(10, 2)) # budget hotel, casual dining
     daily_budget_high = Column(DECIMAL(10, 2)) # mid-range hotel, restaurant, attractions
     
-    last_updated = Column(TIMESTAMP, server_default=func.now())
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="costs")

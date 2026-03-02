@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from .. import models
 import asyncio
 import logging
+from .utils import async_sparql_get
 
 logger = logging.getLogger("uvicorn")
 # Wyciszenie logów HTTPX
@@ -15,99 +16,71 @@ async def sync_wiki_attractions_batch(db: Session, countries: list[models.Countr
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
     
-    # Optimized query: only items with many sitelinks (popularity indicator)
+    # Ultra-simplified query: only items with many sitelinks
     query = f"""
-    SELECT DISTINCT ?countryISO ?item ?itemLabel ?itemDescription WHERE {{
+    SELECT DISTINCT ?countryISO ?itemLabel WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
       ?item wdt:P31/wdt:P279* wd:Q570116; 
             wdt:P17 ?country;
             wikibase:sitelinks ?sitelinks.
-      FILTER(?sitelinks > 15)
+      FILTER(?sitelinks > 50)
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
-    ORDER BY DESC(?sitelinks)
-    LIMIT 100
+    LIMIT 20
     """
 
-    url = "https://query.wikidata.org/sparql"
-    headers = {
-        "User-Agent": "TravelCheatsheet/1.0 (https://github.com/zyngi/TravelSheet)",
-        "Accept": "application/sparql-results+json",
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
+    results = await async_sparql_get(query, "Wiki Attractions")
+    if not results:
+        return
+    
+    counts = {iso: 0 for iso in country_map.keys()}
+    
+    for res in results:
+        iso = res.get("countryISO", {}).get("value")
+        if not iso or iso not in counts or counts[iso] >= 5: continue
+        
+        country = country_map[iso]
+        name = res.get("itemLabel", {}).get("value")
+        
+        if not name or name.startswith("Q"): continue
 
-    async with httpx.AsyncClient(timeout=120.0) as client:
-        try:
-            # Use POST for SPARQL
-            resp = await client.post(url, data={'query': query}, headers=headers)
-            if resp.status_code != 200:
-                logger.error(f"Wikidata batch error {resp.status_code}: {resp.text[:200]}")
-                return
-            
-            data = resp.json()
-            results = data.get("results", {}).get("bindings", [])
-            
-            synced = 0
-            counts = {iso: 0 for iso in country_map.keys()}
-            
-            for res in results:
-                iso = res.get("countryISO", {}).get("value")
-                if not iso or counts[iso] >= 10: continue
-                
-                country = country_map[iso]
-                name = res.get("itemLabel", {}).get("value")
-                description = res.get("itemDescription", {}).get("value")
-                
-                if not name or name.startswith("Q"): continue
-
-                # Heuristic for booking info
-                booking_note = None
-                text_to_check = f"{name} {description}".lower()
-                booking_keywords = ["ticket", "booking", "bilety", "rezerwacja", "wstęp płatny", "admission", "entrance fee"]
-                if any(kw in text_to_check for kw in booking_keywords):
-                    booking_note = "Zalecana wcześniejsza rezerwacja biletów online (miejsce popularne lub płatne)."
-                elif any(kw in text_to_check for kw in ["museum", "muzeum", "gallery", "galeria", "palace", "pałac", "castle", "zamek"]):
-                    booking_note = "Warto sprawdzić dostępność biletów online przed wizytą."
-
-                existing = db.query(models.Attraction).filter(
-                    models.Attraction.country_id == country.id,
-                    models.Attraction.name == name
-                ).first()
-                
-                if not existing:
-                    db.add(models.Attraction(
-                        country_id=country.id,
-                        name=name,
-                        description=description,
-                        category='Wiki Attraction',
-                        is_must_see=True,
-                        is_unique=False,
-                        booking_info=booking_note
-                    ))
-                    synced += 1
-                    counts[iso] += 1
-                else:
-                    existing.booking_info = booking_note
-            
-            db.commit()
-            logger.info(f"Batch sync: Added/Updated attractions for {len(countries)} countries.")
-        except Exception as e:
-            logger.error(f"Batch sync error: {e}")
+        existing = db.query(models.Attraction).filter(
+            models.Attraction.country_id == country.id,
+            models.Attraction.name == name
+        ).first()
+        
+        if not existing:
+            db.add(models.Attraction(
+                country_id=country.id,
+                name=name,
+                category='Wiki Attraction',
+                is_must_see=True,
+                is_unique=False
+            ))
+            counts[iso] += 1
+        else:
+            from sqlalchemy.sql import func
+            existing.last_updated = func.now()
+    
+    db.commit()
 
 async def sync_all_wiki_attractions(db: Session):
     countries = db.query(models.Country).all()
-    total = {"synced_countries": len(countries), "total_attractions": 0}
+    total = {"success": 0, "errors": 0}
     
-    # Process in batches of 10 countries
-    batch_size = 10
+    # SINGLE country batches because Wikidata is struggling
+    batch_size = 1
     for i in range(0, len(countries), batch_size):
         batch = countries[i : i + batch_size]
-        logger.info(f"Syncing Wiki attractions batch {i//batch_size + 1}/{(len(countries)+batch_size-1)//batch_size}...")
-        await sync_wiki_attractions_batch(db, batch)
-        # Sleep to avoid Wikidata rate limits
-        await asyncio.sleep(2.5)
+        if (i + 1) % 10 == 0:
+            logger.info(f"Syncing Wiki attractions progress: {i+1}/{len(countries)}...")
+        try:
+            await sync_wiki_attractions_batch(db, batch)
+            total["success"] += len(batch)
+        except Exception as e:
+            logger.error(f"Error in batch sync: {e}")
+            total["errors"] += len(batch)
+        await asyncio.sleep(1.0) # Short sleep between many small queries
         
-    # Count total at the end
-    total["total_attractions"] = db.query(models.Attraction).filter(models.Attraction.category == 'Wiki Attraction').count()
     return total

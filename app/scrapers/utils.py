@@ -1,6 +1,8 @@
 import re
 import logging
 from deep_translator import GoogleTranslator
+import httpx
+import asyncio
 
 logger = logging.getLogger("uvicorn")
 
@@ -79,22 +81,12 @@ _TRANSLATION_CACHE = {}
 
 def translate_to_pl(text: str) -> str:
     if not text: return text
-    
-    # Check for known fixes first
-    if text in CURRENCY_FIXES:
-        return CURRENCY_FIXES[text]
-    
-    if text in _TRANSLATION_CACHE:
-        return _TRANSLATION_CACHE[text]
-    
+    if text in CURRENCY_FIXES: return CURRENCY_FIXES[text]
+    if text in _TRANSLATION_CACHE: return _TRANSLATION_CACHE[text]
     try:
         translated = GoogleTranslator(source='auto', target='pl').translate(text)
-        translated = normalize_polish_text(translated) # Clean up translation
-        
-        # Check if translation result is in fixes
-        if translated in CURRENCY_FIXES:
-            translated = CURRENCY_FIXES[translated]
-            
+        translated = normalize_polish_text(translated)
+        if translated in CURRENCY_FIXES: translated = CURRENCY_FIXES[translated]
         _TRANSLATION_CACHE[text] = translated
         return translated
     except Exception as e:
@@ -102,21 +94,10 @@ def translate_to_pl(text: str) -> str:
         return text
 
 def normalize_polish_text(text: str) -> str:
-    """Fix common errors in Polish text/names from external APIs or scrapers."""
     if not text: return text
-    
-    # Specific fix for Ivory Coast capitalization issue
-    text = text.replace("WybrzeŻe", "Wybrzeże")
-    text = text.replace("WYBRZEŻE", "Wybrzeże")
-    
-    # Fix Suazi -> Eswatini
-    text = text.replace("Suazi", "Eswatini")
-    text = text.replace("SUAZI", "ESWATINI")
-    
-    # Fix common spacing/punctuation issues from translations
-    text = text.replace(" .", ".")
-    text = text.replace(" ,", ",")
-    
+    text = text.replace("WybrzeŻe", "Wybrzeże").replace("WYBRZEŻE", "Wybrzeże")
+    text = text.replace("Suazi", "Eswatini").replace("SUAZI", "ESWATINI")
+    text = text.replace(" .", ".").replace(" ,", ",")
     return text.strip()
 
 def clean_polish_name(name: str) -> str:
@@ -128,30 +109,21 @@ def clean_polish_name(name: str) -> str:
 def slugify(text: str) -> str:
     if not text: return ""
     text = text.lower()
-    # Polish characters replacement
     polish_chars = str.maketrans("ąćęłńóśźż", "acelnoszz")
     text = text.translate(polish_chars)
-    # Remove non-alphanumeric chars
     text = re.sub(r'[^a-z0-9\s-]', '', text)
-    # Replace spaces with hyphens
     text = re.sub(r'[\s]+', '-', text)
     return text.strip('-')
 
-import httpx
-import asyncio
-
 def get_headers():
     return {
-        "User-Agent": "TravelSheet/1.0 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
+        "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
         "Accept": "application/json"
     }
 
 async def async_get(url: str, params: dict = None, headers: dict = None, timeout: float = 30.0):
-    """Common async GET helper with error handling"""
     combined_headers = get_headers()
-    if headers:
-        combined_headers.update(headers)
-        
+    if headers: combined_headers.update(headers)
     async with httpx.AsyncClient(timeout=timeout, follow_redirects=True) as client:
         try:
             response = await client.get(url, params=params, headers=combined_headers)
@@ -160,3 +132,55 @@ async def async_get(url: str, params: dict = None, headers: dict = None, timeout
         except Exception as e:
             logger.error(f"HTTP Error for {url}: {e}")
             return None
+
+# Global semaphore to limit concurrent SPARQL requests to Wikidata
+# This helps prevent 504 timeouts by not overwhelming the server
+_WIKIDATA_SEMAPHORE = asyncio.Semaphore(1) 
+_WIKIDATA_DOWN = False # Global flag to skip Wikidata if it's struggling
+
+async def async_sparql_get(query: str, description: str = "SPARQL"):
+    """Robust SPARQL query helper with retries and exponential backoff"""
+    global _WIKIDATA_DOWN
+    if _WIKIDATA_DOWN:
+        return []
+
+    url = "https://query.wikidata.org/sparql"
+    headers = {
+        "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
+        "Accept": "application/sparql-results+json",
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    
+    max_retries = 2 # Reduced retries during struggle
+    base_delay = 5
+    
+    for attempt in range(max_retries):
+        try:
+            async with _WIKIDATA_SEMAPHORE:
+                async with httpx.AsyncClient(timeout=60.0) as client: # Reduced timeout to fail faster
+                    resp = await client.post(url, data={'query': query}, headers=headers)
+                    
+                    if resp.status_code == 200:
+                        return resp.json().get("results", {}).get("bindings", [])
+                    
+                    elif resp.status_code == 429:
+                        delay = base_delay * (2 ** attempt)
+                        logger.warning(f"Wikidata Rate Limit hit ({description}), retrying in {delay}s...")
+                        await asyncio.sleep(delay)
+                        
+                    elif resp.status_code in [504, 502, 503]:
+                        logger.error(f"Wikidata Server Error {resp.status_code} ({description}).")
+                        if attempt == max_retries - 1:
+                            logger.error("Wikidata seems to be down or overloaded. Marking as DOWN for this session.")
+                            _WIKIDATA_DOWN = True
+                        await asyncio.sleep(base_delay)
+                    else:
+                        logger.error(f"Wikidata error {resp.status_code} for {description}: {resp.text[:200]}")
+                        break
+        except Exception as e:
+            logger.error(f"SPARQL request error for {description}: {e}")
+            if attempt == max_retries - 1:
+                _WIKIDATA_DOWN = True
+            await asyncio.sleep(2)
+                
+    return []

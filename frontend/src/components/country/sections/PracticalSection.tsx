@@ -106,6 +106,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             <div className="no-data-msg">Brak szczegółowych danych o prognozie pogody.</div>
           )}
         </div>
+        <DataSource sources={['METEO']} lastUpdated={selectedCountry.weather?.last_updated} />
       </div>
 
       <div id="docs" className="info-block full-width docs-section scroll-mt">
@@ -229,7 +230,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             {checkPlugs(selectedCountry.practical.plug_types).text}
           </div>
         </div>
-        <DataSource sources={['REST', 'WIKI']} />
+        <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.practical.last_updated} />
       </div>
     </>
   );

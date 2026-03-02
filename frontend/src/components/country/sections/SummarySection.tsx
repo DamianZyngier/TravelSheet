@@ -83,7 +83,7 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
               <span className="symbols-value">{selectedCountry.unique_things}</span>
             </div>
           )}
-          <DataSource sources={['WIKI']} />
+          <DataSource sources={['WIKI']} lastUpdated={selectedCountry.last_updated} />
         </div>
       </div>
     </div>

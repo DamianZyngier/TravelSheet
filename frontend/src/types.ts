@@ -38,8 +38,8 @@ export interface CountryData {
     iso2: string;
     name_pl: string;
   }[];
-  religions: { name: string; percentage: number }[];
-  languages: { name: string; is_official: boolean }[];
+  religions: { name: string; percentage: number; last_updated?: string }[];
+  languages: { name: string; is_official: boolean; last_updated?: string }[];
   safety: {
     risk_level: string;
     risk_text: string;
@@ -107,6 +107,7 @@ export interface CountryData {
     phone: string;
     email: string;
     website: string;
+    last_updated?: string;
   }[];
   entry?: {
     visa_required: boolean | null;
@@ -115,16 +116,19 @@ export interface CountryData {
     temp_passport_allowed: boolean | null;
     id_card_allowed: boolean | null;
     visa_notes: string;
+    last_updated?: string;
   };
   holidays?: {
     name: string;
     date: string;
+    last_updated?: string;
   }[];
   attractions?: {
     name: string;
     category: string;
     description?: string;
     booking_info?: string | null;
+    last_updated?: string;
   }[];
   unesco_places?: {
     name: string;
@@ -134,12 +138,14 @@ export interface CountryData {
     unesco_id?: string;
     image_url?: string;
     description?: string;
+    last_updated?: string;
   }[];
   climate?: {
     month: number;
     temp_day: number;
     temp_night: number;
     rain: number;
+    last_updated?: string;
   }[];
   weather?: {
     temp: number | null;

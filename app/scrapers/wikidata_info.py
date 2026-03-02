@@ -3,32 +3,12 @@ from sqlalchemy.orm import Session
 from .. import models
 import asyncio
 import logging
-import json
+from .utils import async_sparql_get
 
 logger = logging.getLogger("uvicorn")
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-async def run_sparql(client: httpx.AsyncClient, query: str, description: str = "SPARQL"):
-    url = "https://query.wikidata.org/sparql"
-    headers = {
-        "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet)",
-        "Accept": "application/sparql-results+json",
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
-    try:
-        resp = await client.post(url, data={'query': query}, headers=headers)
-        if resp.status_code == 200:
-            return resp.json().get("results", {}).get("bindings", [])
-        elif resp.status_code == 429:
-            logger.warning(f"Wikidata Rate Limit hit ({description}), sleeping...")
-            await asyncio.sleep(5)
-        else:
-            logger.error(f"Wikidata error {resp.status_code} for {description}")
-    except Exception as e:
-        logger.error(f"SPARQL request error for {description}: {e}")
-    return []
-
-async def sync_wikidata_batch(db: Session, countries: list[models.Country], client: httpx.AsyncClient):
+async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     """Sync info using multiple small queries for speed and stability"""
     if not countries: return
     country_map = {c.iso_alpha2.upper(): c for c in countries}
@@ -46,13 +26,14 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
     # Query 4: Transport
     q_trans = f"SELECT ?countryISO ?airportLabel ?railwayLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. OPTIONAL {{ ?country wdt:P114 ?airport. }} OPTIONAL {{ ?country wdt:P1194 ?railway. }} SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
 
-    # Run queries in parallel
-    results = await asyncio.gather(
-        run_sparql(client, q_simple, "Simple Info"),
-        run_sparql(client, q_cultural, "Cultural Info"),
-        run_sparql(client, q_law, "Law Info"),
-        run_sparql(client, q_trans, "Transport Info")
-    )
+    # Run queries
+    # sequential to avoid overwhelming Wikidata
+    results = [
+        await async_sparql_get(q_simple, "Simple Info"),
+        await async_sparql_get(q_cultural, "Cultural Info"),
+        await async_sparql_get(q_law, "Law Info"),
+        await async_sparql_get(q_trans, "Transport Info")
+    ]
     
     # Data containers for grouped processing
     country_religions = {} # ISO -> {name: percent}
@@ -84,7 +65,10 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
         if rel and not rel.startswith("Q"):
             if iso not in country_religions: country_religions[iso] = {}
             # Percentage might be missing, default to 0
-            p_val = float(perc) if (perc and perc.replace('.','',1).isdigit()) else 0.0
+            try:
+                p_val = float(perc) if perc else 0.0
+            except:
+                p_val = 0.0
             country_religions[iso][rel] = max(country_religions[iso].get(rel, 0.0), p_val)
 
     # 3. Law & Safety
@@ -120,8 +104,10 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
         rels = country_religions.get(iso, {})
         total_p = sum(rels.values())
         
+        # Always update last_updated for religions even if using fallbacks
+        db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
+        
         if rels and total_p > 0:
-            db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
             sorted_rels = sorted(rels.items(), key=lambda x: x[1], reverse=True)
             for name, p in sorted_rels[:5]:
                 db.add(models.Religion(country_id=c.id, name=name, percentage=p))
@@ -141,11 +127,9 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
                 'TH': [("buddyzm", 94.0), ("islam", 5.0)]
             }
             if iso in fallbacks:
-                db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
                 for name, p in fallbacks[iso]:
                     db.add(models.Religion(country_id=c.id, name=name, percentage=p))
             elif rels: # Use what we found even if 0%
-                db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
                 for name, p in list(rels.items())[:5]:
                     db.add(models.Religion(country_id=c.id, name=name, percentage=p))
 
@@ -167,14 +151,14 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country], clie
     
     db.commit()
 
-async def sync_things_batch(db: Session, countries: list[models.Country], client: httpx.AsyncClient):
+async def sync_things_batch(db: Session, countries: list[models.Country]):
     if not countries: return
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
     
     query = f"SELECT DISTINCT ?countryISO ?thingLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. ?thing wdt:P31/wdt:P279* wd:Q570116; wdt:P17 ?country. SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
     
-    data = await run_sparql(client, query, "Unique Things")
+    data = await async_sparql_get(query, "Unique Things")
     iso_things = {}
     for r in data:
         iso = r.get("countryISO", {}).get("value")
@@ -190,25 +174,22 @@ async def sync_things_batch(db: Session, countries: list[models.Country], client
 
 async def sync_all_wikidata_info(db: Session):
     countries = db.query(models.Country).all()
-    batch_size = 10
+    batch_size = 5 # Smaller batches
     
     print(f"Syncing extended info in batches of {batch_size}...")
-    async with httpx.AsyncClient(timeout=120.0) as client:
-        for i in range(0, len(countries), batch_size):
-            batch = countries[i : i + batch_size]
-            print(f"Progress: {i}/{len(countries)} countries...")
-            await asyncio.gather(
-                sync_wikidata_batch(db, batch, client),
-                sync_things_batch(db, batch, client)
-            )
-            await asyncio.sleep(2.0)
+    for i in range(0, len(countries), batch_size):
+        batch = countries[i : i + batch_size]
+        print(f"Progress: {i}/{len(countries)} countries...")
+        await sync_wikidata_batch(db, batch)
+        await asyncio.sleep(1.0)
+        await sync_things_batch(db, batch)
+        await asyncio.sleep(2.0) # More delay between batches
     
     return {"status": "done"}
 
 async def sync_wikidata_country_info(db: Session, country_iso2: str):
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
     if country:
-        async with httpx.AsyncClient(timeout=120.0) as client:
-            await sync_wikidata_batch(db, [country], client)
-            await sync_things_batch(db, [country], client)
+        await sync_wikidata_batch(db, [country])
+        await sync_things_batch(db, [country])
     return {"status": "done"}

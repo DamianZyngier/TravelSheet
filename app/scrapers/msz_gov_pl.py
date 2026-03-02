@@ -18,7 +18,7 @@ async def fetch_country_urls():
     url = "https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych"
     headers = get_headers()
     urls = {}
-    async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+    async with httpx.AsyncClient(timeout=45.0, follow_redirects=True) as client:
         try:
             response = await client.get(url, headers=headers)
             response.raise_for_status()
@@ -68,6 +68,8 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
 
     for strat_name, url in strategies:
         try:
+            # Add small jitter to avoid perfect patterns
+            await asyncio.sleep(0.5)
             response = await client.get(url, headers=headers)
             if response.status_code == 200:
                 curr_url = str(response.url).rstrip('/')
@@ -233,7 +235,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if not safety:
         safety = models.SafetyInfo(country_id=country.id)
         db.add(safety)
-    safety.risk_level, safety.summary, safety.risk_details, safety.url, safety.last_checked = risk_level, normalize_polish_text(risk_summary), normalize_polish_text(risk_details), final_url, func.now()
+    safety.risk_level, safety.summary, safety.risk_details, safety.full_url, safety.last_checked = risk_level, normalize_polish_text(risk_summary), normalize_polish_text(risk_details), final_url, func.now()
 
     entry = db.query(models.EntryRequirement).filter(models.EntryRequirement.country_id == country.id).first()
     if not entry:
@@ -257,12 +259,12 @@ async def scrape_all_with_cache(db: Session):
     countries = db.query(models.Country).all()
     results = {"success": 0, "errors": 0}
     
-    # Use semaphore to limit concurrency
-    semaphore = asyncio.Semaphore(10)
+    # Lower concurrency to avoid MSZ blocking
+    semaphore = asyncio.Semaphore(3)
     
     async def limited_scrape(country):
         async with semaphore:
-            async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+            async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
                 try:
                     res = await scrape_country(db, country.iso_alpha2, client)
                     if "error" in res:
@@ -272,7 +274,9 @@ async def scrape_all_with_cache(db: Session):
                 except Exception as e:
                     results["errors"] += 1
                     logger.error(f"  - Error scraping {country.iso_alpha2}: {str(e)}")
+            # Delay between countries in one semaphore slot
+            await asyncio.sleep(1.0)
 
-    logger.info(f"Starting parallel MSZ scrape for {len(countries)} countries...")
+    logger.info(f"Starting controlled parallel MSZ scrape for {len(countries)} countries...")
     await asyncio.gather(*(limited_scrape(c) for c in countries))
     return results

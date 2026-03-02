@@ -5,6 +5,7 @@ import json
 from sqlalchemy.orm import Session
 from .. import models
 from datetime import datetime
+from sqlalchemy.sql import func
 from .utils import async_get
 
 # Weather code mapping to conditions and icons (WMO Weather interpretation codes)
@@ -92,7 +93,7 @@ async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClie
             'humidity': current.get('relative_humidity_2m', 0),
             'wind_kph': current.get('wind_speed_10m', 0),
             'forecast_json': json.dumps(forecast),
-            'last_updated': datetime.now()
+            'last_updated': func.now()
         }
 
         weather = db.query(models.Weather).filter(models.Weather.country_id == country.id).first()
@@ -106,20 +107,27 @@ async def update_weather(db: Session, country_iso2: str, client: httpx.AsyncClie
         db.commit()
         return {"status": "success", "temp": weather_data['temp_c']}
     except Exception as e:
-        print(f"Error updating weather for {country_iso2}: {e}")
+        # print(f"Error updating weather for {country_iso2}: {e}")
         return {"error": str(e)}
 
 async def update_all_weather(db: Session):
     """Update weather for all countries using Open-Meteo"""
     countries = db.query(models.Country).filter(models.Country.latitude != None, models.Country.longitude != None).all()
     
+    success = 0
+    errors = 0
+    
     # Open-Meteo doesn't require API key and has very generous rate limits
     # We still do them sequentially but faster
     async with httpx.AsyncClient() as client:
         for i, country in enumerate(countries):
-            if (i+1) % 20 == 0:
+            if (i+1) % 50 == 0:
                 print(f"Updating weather: {i+1}/{len(countries)}...")
-            await update_weather(db, country.iso_alpha2, client)
-            await asyncio.sleep(0.1) 
+            res = await update_weather(db, country.iso_alpha2, client)
+            if "error" in res:
+                errors += 1
+            else:
+                success += 1
+            await asyncio.sleep(0.05) 
     
-    return {"status": "completed", "count": len(countries)}
+    return {"success": success, "errors": errors}
