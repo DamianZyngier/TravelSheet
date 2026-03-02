@@ -24,9 +24,7 @@ function App() {
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
   const [activeChecklist, setActiveChecklist] = useState<string | null>(() => {
     const params = new URLSearchParams(window.location.search);
-    const checklistVar = params.get('checklist');
-    if (checklistVar) return checklistVar;
-    return localStorage.getItem('travelsheet_last_checklist');
+    return params.get('checklist');
   })
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
