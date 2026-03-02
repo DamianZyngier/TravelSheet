@@ -2816,6 +2816,53 @@
   padding-bottom: 0.75rem !important;
 }
 
+/* Integrated Religion Box Styles */
+.religion-integrated-box {
+  background-color: #f0f9ff !important;
+  border: 1px solid #bee3f8 !important;
+}
+
+.religion-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.religion-mini-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.religion-mini-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.religion-mini-name {
+  font-weight: 600;
+  color: #2c5282;
+}
+
+.religion-mini-perc {
+  color: #718096;
+  font-weight: 700;
+}
+
+.religion-mini-bar-bg {
+  height: 4px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.religion-mini-bar-fill {
+  height: 100%;
+  background-color: #3182ce;
+  border-radius: 2px;
+}
+
 /* Religion Section Styles */
 /* Religion Section Styles - Compact Grid */
 .religion-section.compact {
