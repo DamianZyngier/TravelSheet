@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { CHECKLISTS } from '../../constants/checklists';
 
 interface ChecklistSectionProps {
+  variantId: string;
   onBack: () => void;
+  onVariantChange: (variant: string) => void;
 }
 
-const ChecklistSection: React.FC<ChecklistSectionProps> = ({ onBack }) => {
+const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, onVariantChange }) => {
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(() => {
     const saved = localStorage.getItem('travelsheet_checklists');
     return saved ? JSON.parse(saved) : {};
   });
 
-  const [activeVariant, setActiveVariant] = useState<'minimum' | 'optimal' | 'maximum'>('minimum');
+  // Local state for the dropdown/tab selection should be synced with prop
+  const activeVariant = variantId;
 
   useEffect(() => {
     localStorage.setItem('travelsheet_checklists', JSON.stringify(checkedItems));
@@ -28,7 +31,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ onBack }) => {
     window.print();
   };
 
-  const currentChecklist = CHECKLISTS.find(c => c.id === activeVariant)!;
+  const currentChecklist = CHECKLISTS.find(c => c.id === activeVariant) || CHECKLISTS[0];
 
   return (
     <div className="checklist-page">
@@ -42,7 +45,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ onBack }) => {
               <button
                 key={v.id}
                 className={`variant-tab ${activeVariant === v.id ? 'active' : ''}`}
-                onClick={() => setActiveVariant(v.id as any)}
+                onClick={() => onVariantChange(v.id as any)}
               >
                 {v.id.toUpperCase()}
               </button>
@@ -84,7 +87,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ onBack }) => {
 
       <style dangerouslySetInnerHTML={{ __html: `
         @media print {
-          .no-print, .main-header, .main-footer, .side-menu, .detail-actions-top {
+          .no-print, .main-header, .main-footer, .side-menu, .detail-actions-top, .checklist-header {
             display: none !important;
           }
           .printable-area {

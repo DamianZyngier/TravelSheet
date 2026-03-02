@@ -22,7 +22,7 @@ function App() {
   const [countries, setCountries] = useState<Record<string, CountryData>>({})
   const [loading, setLoading] = useState(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
-  const [showChecklist, setShowChecklist] = useState(false)
+  const [activeChecklist, setActiveChecklist] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
   const [filterSafety, setFilterSafety] = useState('all')
@@ -59,16 +59,6 @@ function App() {
     localStorage.setItem('travelsheet_favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  useEffect(() => {
-    const handleNavChecklist = () => {
-      setShowChecklist(true);
-      setSelectedCountry(null);
-      window.scrollTo(0, 0);
-    };
-    window.addEventListener('nav-checklist', handleNavChecklist);
-    return () => window.removeEventListener('nav-checklist', handleNavChecklist);
-  }, []);
-
   const toggleFavorite = (iso2: string) => {
     setFavorites(prev => 
       prev.includes(iso2) ? prev.filter(i => i !== iso2) : [...prev, iso2]
@@ -88,7 +78,7 @@ function App() {
   const handleSelectCountry = useCallback((country: CountryData | null) => {
     setSelectedCountry(country)
     if (country) {
-      setShowChecklist(false)
+      setActiveChecklist(null)
       setMapPosition({
         coordinates: [country.longitude || 0, country.latitude || 0],
         zoom: getMapSettings(country).zoom
@@ -97,6 +87,7 @@ function App() {
       setActiveSection('summary')
       
       const url = new URL(window.location.href);
+      url.searchParams.delete('checklist');
       url.searchParams.set('country', country.iso2);
       window.history.pushState({}, '', url.toString());
     } else {
@@ -108,15 +99,33 @@ function App() {
     }
   }, [])
 
+  const handleOpenChecklist = useCallback((variant: string = 'minimum') => {
+    setActiveChecklist(variant)
+    setSelectedCountry(null)
+    window.scrollTo(0, 0)
+    
+    const url = new URL(window.location.href);
+    url.searchParams.delete('country');
+    url.searchParams.delete('kraj');
+    url.searchParams.set('checklist', variant);
+    window.history.pushState({}, '', url.toString());
+  }, [])
+
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
       const countryIso = params.get('country') || params.get('kraj');
+      const checklistVar = params.get('checklist');
+      
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
-        setShowChecklist(false);
+        setActiveChecklist(null);
+      } else if (checklistVar) {
+        setActiveChecklist(checklistVar);
+        setSelectedCountry(null);
       } else {
         setSelectedCountry(null);
+        setActiveChecklist(null);
       }
     };
 
@@ -125,14 +134,27 @@ function App() {
     if (!loading && Object.keys(countries).length > 0) {
       const params = new URLSearchParams(window.location.search);
       const countryIso = params.get('country') || params.get('kraj');
+      const checklistVar = params.get('checklist');
+      
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
-        setShowChecklist(false);
+        setActiveChecklist(null);
+      } else if (checklistVar) {
+        setActiveChecklist(checklistVar);
+        setSelectedCountry(null);
       }
     }
 
     return () => window.removeEventListener('popstate', handlePopState);
   }, [countries, loading]);
+
+  useEffect(() => {
+    const handleNavChecklist = () => {
+      handleOpenChecklist('minimum');
+    };
+    window.addEventListener('nav-checklist', handleNavChecklist);
+    return () => window.removeEventListener('nav-checklist', handleNavChecklist);
+  }, [handleOpenChecklist]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -218,27 +240,27 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedCountry && !showChecklist && (e.ctrlKey || e.metaKey) && e.key === 'f') {
+      if (!selectedCountry && !activeChecklist && (e.ctrlKey || e.metaKey) && e.key === 'f') {
         e.preventDefault();
         searchInputRef.current?.focus();
       }
 
-      if (e.key === 'Backspace' && (selectedCountry || showChecklist)) {
+      if (e.key === 'Backspace' && (selectedCountry || activeChecklist)) {
         const target = e.target as HTMLElement;
         if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
           handleSelectCountry(null);
-          setShowChecklist(false);
+          setActiveChecklist(null);
         }
       }
 
-      if (e.key === 'Enter' && !selectedCountry && !showChecklist && countryList.length === 1) {
+      if (e.key === 'Enter' && !selectedCountry && !activeChecklist && countryList.length === 1) {
         handleSelectCountry(countryList[0]);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedCountry, showChecklist, countryList, handleSelectCountry]);
+  }, [selectedCountry, activeChecklist, countryList, handleSelectCountry]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
 
@@ -266,7 +288,7 @@ function App() {
 
   return (
     <div className="app-container" onContextMenu={() => true}>
-      {!selectedCountry && !showChecklist ? (
+      {!selectedCountry && !activeChecklist ? (
         <>
           <Header 
             searchQuery={searchQuery}
@@ -296,8 +318,22 @@ function App() {
             onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
           />
         </>
-      ) : showChecklist ? (
-        <ChecklistSection onBack={() => setShowChecklist(false)} />
+      ) : activeChecklist ? (
+        <ChecklistSection 
+          variantId={activeChecklist}
+          onBack={() => {
+            setActiveChecklist(null);
+            const url = new URL(window.location.href);
+            url.searchParams.delete('checklist');
+            window.history.pushState({}, '', url.toString());
+          }} 
+          onVariantChange={(v) => {
+            setActiveChecklist(v);
+            const url = new URL(window.location.href);
+            url.searchParams.set('checklist', v);
+            window.history.pushState({}, '', url.toString());
+          }}
+        />
       ) : (
         <div className="detail-view-layout">
           <Sidebar 

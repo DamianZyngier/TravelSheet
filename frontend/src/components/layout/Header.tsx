@@ -1,6 +1,6 @@
 import React from 'react';
 import logoNoText from '../../assets/logo-no-text.png';
-import { CONTINENT_MAP } from '../../constants';
+import FilterDropdown from './FilterDropdown';
 
 interface HeaderProps {
   searchQuery: string;
@@ -110,20 +110,13 @@ const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="filter-group">
-            <select value={filterContinent} onChange={e => setFilterContinent(e.target.value)}>
-              <option value="all">Wszystkie kontynenty</option>
-              {continents.map(c => <option key={c} value={c}>{CONTINENT_MAP[c] || c}</option>)}
-            </select>
-          </div>
-
-          <div className="filter-group">
-            <select value={filterSafety} onChange={e => setFilterSafety(e.target.value)}>
-              <option value="all">Wszystkie poziomy bezpieczeństwa</option>
-              <option value="low">Bezpiecznie</option>
-              <option value="medium">Średnio bezpiecznie</option>
-              <option value="high">Niebezpiecznie</option>
-              <option value="critical">Bardzo niebezpiecznie</option>
-            </select>
+            <FilterDropdown 
+              filterContinent={filterContinent}
+              setFilterContinent={setFilterContinent}
+              filterSafety={filterSafety}
+              setFilterSafety={setFilterSafety}
+              continents={continents}
+            />
           </div>
         </div>
       </div>
