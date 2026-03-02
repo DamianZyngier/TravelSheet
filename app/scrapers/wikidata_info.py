@@ -106,22 +106,22 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     country_climates = {}
     country_souvenirs = {}
 
-    # Process Basic
+    # 1. Basic Stats
     for r in results[0]:
         iso = r.get("countryISO", {}).get("value")
-        if iso in country_map:
-            c = country_map[iso]
-            if not c.timezone: c.timezone = r.get("timezoneLabel", {}).get("value")
-            if not c.national_dish: c.national_dish = r.get("dishLabel", {}).get("value")
-            if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
-            if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
-            if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
-            clim = r.get("climateLabel", {}).get("value")
-            if clim and not clim.startswith("Q"):
-                if iso not in country_climates: country_climates[iso] = set()
-                country_climates[iso].add(clim)
+        if iso not in country_map: continue
+        c = country_map[iso]
+        if not c.timezone: c.timezone = r.get("timezoneLabel", {}).get("value")
+        if not c.national_dish: c.national_dish = r.get("dishLabel", {}).get("value")
+        if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
+        if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
+        if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
+        clim = r.get("climateLabel", {}).get("value")
+        if clim and not clim.startswith("Q"):
+            if iso not in country_climates: country_climates[iso] = set()
+            country_climates[iso].add(clim)
     
-    # Process Cultural, Law, Cities (same as before)
+    # 2. Cultural
     for r in results[1]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -137,6 +137,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             except: p_val = 0.0
             country_religions[iso][rel] = max(country_religions[iso].get(rel, 0.0), p_val)
 
+    # 3. Law
     for r in results[2]:
         iso = r.get("countryISO", {}).get("value")
         if iso not in country_map: continue
@@ -149,6 +150,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             if iso not in country_hazards: country_hazards[iso] = set()
             country_hazards[iso].add(hazard)
 
+    # 4. Cities
     for r in results[3]:
         iso = r.get("countryISO", {}).get("value")
         name = r.get("cityLabel", {}).get("value"); pop = r.get("maxPop", {}).get("value")
@@ -159,7 +161,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
                     try: country_cities[iso].append((name, int(float(pop))))
                     except: continue
 
-    # Process Souvenirs
+    # 5. Souvenirs
     for r in results[4]:
         iso = r.get("countryISO", {}).get("value")
         prod = r.get("itemLabel", {}).get("value")
@@ -186,15 +188,19 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             'souvenirs': 'Tequila, Mezcal, Ceramika Talavera, Wyroby ze srebra, Kapelusze Sombrero'
         },
         'FR': {
+            'climate': 'Klimat umiarkowany morski, na południu śródziemnomorski',
             'souvenirs': 'Wina, Sery, Perfumy, Makaroniki, Berety, Wyroby z lawendy (Prowansja)'
         },
         'IT': {
+            'climate': 'Klimat śródziemnomorski',
             'souvenirs': 'Wyroby skórzane, Oliwa z oliwek, Ocet balsamiczny, Szkło weneckie (Murano), Ceramika'
         },
         'ES': {
+            'climate': 'Klimat śródziemnomorski i kontynentalny',
             'souvenirs': 'Wachlarze, Wyroby ze skóry, Oliwa, Szafran, Ceramika, Espadryle'
         },
         'GR': {
+            'climate': 'Klimat śródziemnomorski',
             'souvenirs': 'Oliwa z oliwek, Naturalne gąbki, Miód tymiankowy, Ouzo, Biżuteria antyczna'
         },
         'TR': {
@@ -211,14 +217,12 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             if not c.national_dish and 'dish' in fallback: c.national_dish = fallback['dish']
             if not c.climate_description and 'climate' in fallback: c.climate_description = fallback['climate']
             if fallback.get('souvenirs'):
-                # Prefer fallback souvenirs as they are curated
                 c.practical.souvenirs = fallback['souvenirs']
 
         if iso in country_climates and not c.climate_description:
             c.climate_description = ", ".join(sorted(list(country_climates[iso]))[:3])
 
         if not c.practical.souvenirs and iso in country_souvenirs:
-            # Filter out generic names and join
             s_list = [s for s in country_souvenirs[iso] if len(s) > 2][:6]
             c.practical.souvenirs = ", ".join(s_list)
 

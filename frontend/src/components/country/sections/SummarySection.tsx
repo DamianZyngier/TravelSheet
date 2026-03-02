@@ -77,19 +77,6 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
             </div>
           )}
           
-          {/* New Souvenirs / Shopping Data Point */}
-          {selectedCountry.practical?.souvenirs && (
-            <div className="souvenirs-box">
-              <span className="souvenirs-icon">🎁</span>
-              <div className="souvenirs-content">
-                <span className="souvenirs-label">Co warto kupić / Pamiątki:</span>
-                <div className="souvenirs-value">
-                  <ExpandableText text={selectedCountry.practical.souvenirs} maxLength={200} />
-                </div>
-              </div>
-            </div>
-          )}
-          
           <DataSource sources={['WIKI']} lastUpdated={selectedCountry.last_updated} />
         </div>
       </div>

@@ -70,6 +70,8 @@ export const SECTIONS = [
   { id: 'summary', label: 'Podsumowanie', icon: '📝' },
   { id: 'discover', label: 'Poznaj kraj', icon: '✨' },
   { id: 'info', label: 'Informacje', icon: 'ℹ️' },
+  { id: 'religion', label: 'Religie', icon: '⛪' },
+  { id: 'souvenirs', label: 'Pamiątki', icon: '🎁' },
   { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️' },
   { id: 'docs', label: 'Dokumenty', icon: '🛂' },
   { id: 'currency', label: 'Waluta', icon: '💰' },

@@ -2863,7 +2863,17 @@
   border-radius: 2px;
 }
 
-/* Integrated Religion Simple Styles */
+/* Integrated Souvenirs Simple Styles */
+.souvenirs-integrated-box {
+  background-color: #fffaf0 !important;
+  border: 1px solid #feebc8 !important;
+}
+
+.souvenirs-value-simple {
+  font-size: 0.9rem;
+  color: #2d3748;
+  line-height: 1.4;
+}
 .religion-list-simple {
   display: flex;
   flex-direction: column;
