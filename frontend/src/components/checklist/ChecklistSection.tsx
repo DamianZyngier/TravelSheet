@@ -41,6 +41,15 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
         </button>
         <div className="checklist-controls">
           <div className="variant-tabs">
+            <div 
+              className="variant-slider" 
+              style={{ 
+                transform: `translateX(${
+                  activeVariant === 'minimum' ? '0' : 
+                  activeVariant === 'optimal' ? '100%' : '200%'
+                })` 
+              }}
+            ></div>
             {CHECKLISTS.map(v => (
               <button
                 key={v.id}
