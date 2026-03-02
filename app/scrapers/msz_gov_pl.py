@@ -241,7 +241,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if not entry:
         entry = models.EntryRequirement(country_id=country.id)
         db.add(entry)
-    entry.passport_required, entry.temp_passport_allowed, entry.id_card_allowed, entry.visa_required = passport_req, temp_passport_req, id_card_req, visa_req
+    entry.passport_required, entry.temp_passport_allowed, entry.id_card_allowed, entry.visa_required, entry.last_updated = passport_req, temp_passport_req, id_card_req, visa_req, func.now()
 
     practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
     if not practical:

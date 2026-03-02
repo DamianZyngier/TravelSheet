@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from .. import models
 import logging
 import asyncio
+from sqlalchemy.sql import func
 from .utils import translate_to_pl, get_headers, normalize_polish_text
 
 logger = logging.getLogger("uvicorn")
@@ -135,6 +136,8 @@ async def sync_countries(db: Session):
                 country.area = area
                 country.phone_code = phone_code
                 country.is_independent = is_independent
+                # Trigger country.updated_at
+                country.updated_at = func.now()
                 results["updated"] += 1
 
             # Languages
@@ -146,7 +149,8 @@ async def sync_countries(db: Session):
                         country_id=country.id,
                         name=translate_to_pl(name),
                         code=code,
-                        is_official=True
+                        is_official=True,
+                        last_updated=func.now()
                     ))
 
             # Currencies
@@ -158,7 +162,8 @@ async def sync_countries(db: Session):
                         country_id=country.id,
                         code=code,
                         name=translate_to_pl(info.get("name")),
-                        symbol=info.get("symbol")
+                        symbol=info.get("symbol"),
+                        last_updated=func.now()
                     ))
         except Exception as e:
             err_msg = f"Error processing country {iso2}: {str(e)}"

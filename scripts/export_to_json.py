@@ -90,8 +90,20 @@ def export_all():
             ]
             
             # Lists
-            processed_data["religions"] = [{"name": r.name, "percentage": float(r.percentage)} for r in c.religions]
-            processed_data["languages"] = [{"name": l.name, "is_official": l.is_official} for l in c.languages]
+            processed_data["religions"] = [
+                {
+                    "name": r.name, 
+                    "percentage": float(r.percentage),
+                    "last_updated": str(r.last_updated) if r.last_updated else None
+                } for r in c.religions
+            ]
+            processed_data["languages"] = [
+                {
+                    "name": l.name, 
+                    "is_official": l.is_official,
+                    "last_updated": str(l.last_updated) if l.last_updated else None
+                } for l in c.languages
+            ]
             
             # Safety
             if c.safety:
@@ -191,7 +203,8 @@ def export_all():
                     "passport_required": c.entry_req.passport_required if c.entry_req.passport_required is not None else True,
                     "temp_passport_allowed": c.entry_req.temp_passport_allowed if c.entry_req.temp_passport_allowed is not None else True,
                     "id_card_allowed": c.entry_req.id_card_allowed if c.entry_req.id_card_allowed is not None else False,
-                    "visa_notes": c.entry_req.visa_notes or ""
+                    "visa_notes": c.entry_req.visa_notes or "",
+                    "last_updated": str(c.entry_req.last_updated) if c.entry_req.last_updated else None
                 }
             else:
                 processed_data["entry"] = None
@@ -216,7 +229,8 @@ def export_all():
                     "address": e.address,
                     "phone": e.phone,
                     "email": e.email,
-                    "website": e.website
+                    "website": e.website,
+                    "last_updated": str(e.last_updated) if e.last_updated else None
                 } for e in c.embassies
             ]
 
@@ -229,7 +243,8 @@ def export_all():
                     "is_transnational": bool(u.is_transnational),
                     "unesco_id": u.unesco_id,
                     "image_url": u.image_url,
-                    "description": u.description
+                    "description": u.description,
+                    "last_updated": str(u.last_updated) if u.last_updated else None
                 } for u in c.unesco_places
             ]
 
@@ -239,12 +254,19 @@ def export_all():
                     "name": a.name, 
                     "category": a.category,
                     "description": a.description,
-                    "booking_info": a.booking_info
+                    "booking_info": a.booking_info,
+                    "last_updated": str(a.last_updated) if a.last_updated else None
                 } for a in c.attractions[:15]
             ]
             
             # Holidays
-            processed_data["holidays"] = [{"name": h.name, "date": str(h.date)} for h in c.holidays]
+            processed_data["holidays"] = [
+                {
+                    "name": h.name, 
+                    "date": str(h.date),
+                    "last_updated": str(h.last_updated) if h.last_updated else None
+                } for h in c.holidays
+            ]
             
             # Climate
             processed_data["climate"] = [
@@ -252,7 +274,8 @@ def export_all():
                     "month": cl.month,
                     "temp_day": cl.avg_temp_max,
                     "temp_night": cl.avg_temp_min,
-                    "rain": cl.avg_rain_mm
+                    "rain": cl.avg_rain_mm,
+                    "last_updated": str(cl.last_updated) if cl.last_updated else None
                 } for cl in c.climate
             ]
 

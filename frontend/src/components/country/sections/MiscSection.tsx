@@ -55,7 +55,7 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         ) : (
           <div className="no-data-msg">Brak informacji o świętach dla tego kraju.</div>
         )}
-        <DataSource sources={['NAGER']} />
+        <DataSource sources={['NAGER']} lastUpdated={selectedCountry.holidays?.[0]?.last_updated || selectedCountry.last_updated} />
       </div>
 
       <div id="embassies" className="info-block full-width embassy-section scroll-mt">
@@ -127,7 +127,7 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         ) : (
           <div className="no-data-msg">Brak danych o polskich placówkach w tym kraju.</div>
         )}
-        <DataSource sources={['MSZ']} />
+        <DataSource sources={['MSZ']} lastUpdated={selectedCountry.embassies?.[0]?.last_updated || selectedCountry.last_updated} />
       </div>
 
       <div id="attractions" className="info-block full-width unesco-section scroll-mt">
@@ -162,7 +162,7 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         ) : (
           <div className="no-data-msg">Nie znaleziono szczegółowych informacji o atrakcjach turystycznych.</div>
         )}
-        <DataSource sources={['WIKI']} />
+        <DataSource sources={['WIKI']} lastUpdated={selectedCountry.attractions?.[0]?.last_updated || selectedCountry.last_updated} />
       </div>
 
       <div id="unesco" className="info-block full-width unesco-section scroll-mt">
@@ -233,7 +233,7 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         ) : (
           <div className="no-data-msg">Brak wpisów na liście UNESCO dla tego kraju.</div>
         )}
-        <DataSource sources={['UNESCO']} />
+        <DataSource sources={['UNESCO']} lastUpdated={selectedCountry.unesco_places?.[0]?.last_updated || selectedCountry.last_updated} />
       </div>
     </>
   );

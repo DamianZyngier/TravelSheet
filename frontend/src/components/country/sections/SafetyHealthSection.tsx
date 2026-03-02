@@ -56,7 +56,7 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
             </a>
           )}
         </div>
-        <DataSource sources={['CDC', 'MSZ']} lastUpdated={selectedCountry.practical.last_updated} />
+        <DataSource sources={['CDC', 'MSZ']} lastUpdated={selectedCountry.practical.last_updated || selectedCountry.safety.last_updated} />
       </div>
 
       <div id="safety" className="info-block full-width scroll-mt">
