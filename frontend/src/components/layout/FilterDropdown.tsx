@@ -67,7 +67,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
     'North America': { color: '#c53030', bg: '#fff5f5' },
     'South America': { color: '#6b46c1', bg: '#faf5ff' },
     'Oceania': { color: '#2c7a7b', bg: '#e6fffa' },
-    'Antarctica': { color: '#4a5568', bg: '#edf2f7' }
+    'Antarctica': { color: '#00b4d8', bg: '#e0f7fa' }
   };
 
   useEffect(() => {
@@ -125,10 +125,10 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
                 className={`continent-tile-btn ${filterContinent === 'all' ? 'active' : ''}`}
                 onClick={() => setFilterContinent('all')}
                 style={{ 
-                  '--tile-color': '#3182ce',
-                  '--tile-bg': filterContinent === 'all' ? '#3182ce' : 'white',
-                  '--tile-text': filterContinent === 'all' ? 'white' : '#3182ce',
-                  borderColor: filterContinent === 'all' ? '#3182ce' : '#e2e8f0'
+                  '--tile-color': '#4a5568',
+                  '--tile-bg': filterContinent === 'all' ? '#4a5568' : 'white',
+                  '--tile-text': filterContinent === 'all' ? 'white' : '#4a5568',
+                  borderColor: filterContinent === 'all' ? '#4a5568' : '#e2e8f0'
                 } as any}
               >
                 <ContinentIcon name="All" active={filterContinent === 'all'} />
