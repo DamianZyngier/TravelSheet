@@ -1,13 +1,21 @@
 import type { CountryData } from '../types';
 
 export const formatPLN = (val: number) => {
-  return new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' }).format(val);
+  // For small values (like 1 KES = 0.03 PLN), show more decimal places
+  const fractionDigits = val < 0.1 ? 4 : 2;
+  return new Intl.NumberFormat('pl-PL', { 
+    style: 'currency', 
+    currency: 'PLN',
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits
+  }).format(val);
 };
 
 export const getCurrencyExample = (country: CountryData) => {
   if (!country.currency.rate_pln) return '';
   const price = 10 / country.currency.rate_pln;
-  return `Przykład: 10 PLN ≈ ${price.toFixed(2)} ${country.currency.code}`;
+  const digits = country.currency.rate_pln < 0.1 ? 4 : 2;
+  return `Przykład: 10 PLN ≈ ${price.toFixed(digits)} ${country.currency.code}`;
 };
 
 export const checkPlugs = (plugs: string) => {
