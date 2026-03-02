@@ -1,8 +1,13 @@
 import re
 import logging
+import os
 from deep_translator import GoogleTranslator
 import httpx
 import asyncio
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 logger = logging.getLogger("uvicorn")
 
@@ -116,10 +121,15 @@ def slugify(text: str) -> str:
     return text.strip('-')
 
 def get_headers():
-    return {
+    headers = {
         "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
         "Accept": "application/json"
     }
+    # Add Wikimedia Access Token if available
+    access_token = os.getenv("WIKIMEDIA_ACCESS_TOKEN")
+    if access_token and "twoj_" not in access_token:
+        headers["Authorization"] = f"Bearer {access_token}"
+    return headers
 
 async def async_get(url: str, params: dict = None, headers: dict = None, timeout: float = 30.0):
     combined_headers = get_headers()
@@ -145,11 +155,9 @@ async def async_sparql_get(query: str, description: str = "SPARQL"):
         return []
 
     url = "https://query.wikidata.org/sparql"
-    headers = {
-        "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
-        "Accept": "application/sparql-results+json",
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
+    headers = get_headers()
+    headers["Content-Type"] = "application/x-www-form-urlencoded"
+    headers["Accept"] = "application/sparql-results+json"
     
     max_retries = 2 # Reduced retries during struggle
     base_delay = 5

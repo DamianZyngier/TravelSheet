@@ -2863,6 +2863,31 @@
   border-radius: 2px;
 }
 
+/* Integrated Religion Simple Styles */
+.religion-list-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.religion-item-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.rel-name {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.rel-perc {
+  color: #718096;
+  font-weight: 700;
+}
+
 /* Religion Section Styles */
 /* Religion Section Styles - Compact Grid */
 .religion-section.compact {

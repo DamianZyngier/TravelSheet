@@ -7,9 +7,9 @@ interface BasicInfoSectionProps {
 }
 
 export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCountry }) => {
-  // Top 4 religions to keep it very compact
+  // Top 3 religions for maximum compactness
   const topReligions = selectedCountry.religions 
-    ? [...selectedCountry.religions].sort((a, b) => b.percentage - a.percentage).slice(0, 4)
+    ? [...selectedCountry.religions].sort((a, b) => b.percentage - a.percentage).slice(0, 3)
     : [];
 
   return (
@@ -59,24 +59,16 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <strong>Nr kierunkowy:</strong>
           <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
-
-        {/* Integrated Religions Sub-section */}
+        
+        {/* Fully Integrated Religions */}
         {topReligions.length > 0 && (
-          <div id="religion" className="info-item-box full religion-integrated-box">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <span style={{ fontSize: '1rem' }}>⛪</span>
-              <strong style={{ margin: 0, color: '#2c5282' }}>Religie i wyznania:</strong>
-            </div>
-            <div className="religion-mini-grid">
+          <div id="religion" className="info-item-box">
+            <strong>Religie i wyznania:</strong>
+            <div className="religion-list-simple">
               {topReligions.map((r, i) => (
-                <div key={i} className="religion-mini-item">
-                  <div className="religion-mini-info">
-                    <span className="religion-mini-name">{r.name}</span>
-                    <span className="religion-mini-perc">{r.percentage.toFixed(1)}%</span>
-                  </div>
-                  <div className="religion-mini-bar-bg">
-                    <div className="religion-mini-bar-fill" style={{ width: `${r.percentage}%` }}></div>
-                  </div>
+                <div key={i} className="religion-item-simple">
+                  <span className="rel-name">{r.name}</span>
+                  <span className="rel-perc">{Math.round(r.percentage)}%</span>
                 </div>
               ))}
             </div>
