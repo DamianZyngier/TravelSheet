@@ -172,11 +172,14 @@
   margin: 0;
   font-size: 0.8rem;
   color: #a0aec0;
+  line-height: 1.2;
 }
 
 .card-dependency {
+  font-size: 0.75rem;
   color: #cbd5e0;
   font-style: italic;
+  margin-top: 2px;
 }
 
 .risk-badge {

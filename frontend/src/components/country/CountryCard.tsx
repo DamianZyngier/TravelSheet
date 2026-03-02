@@ -33,12 +33,12 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite,
           style={{ objectFit: 'contain' }}
         />
         <h3 className={getLongNameClass(country.name_pl, 'h3')}>{country.name_pl}</h3>
-        <p className="card-continent">
+        <div className="card-continent">
           {CONTINENT_MAP[country.continent] || country.continent}
-          {country.parent && (
-            <span className="card-dependency"> (zal. {country.parent.name_pl})</span>
-          )}
-        </p>
+        </div>
+        {country.parent && (
+          <div className="card-dependency">zal. {country.parent.name_pl}</div>
+        )}
         <span className={`risk-badge risk-${country.safety.risk_level}`}>
           {SAFETY_LABELS[country.safety.risk_level] || country.safety.risk_level}
         </span>
