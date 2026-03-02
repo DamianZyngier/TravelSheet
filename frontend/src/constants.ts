@@ -71,6 +71,7 @@ export const SECTIONS = [
   { id: 'discover', label: 'Poznaj kraj', icon: '✨' },
   { id: 'docs', label: 'Dokumenty', icon: '🛂' },
   { id: 'info', label: 'Informacje', icon: 'ℹ️' },
+  { id: 'religion', label: 'Religie', icon: '⛪' },
   { id: 'currency', label: 'Waluta', icon: '💰' },
   { id: 'water', label: 'Woda z kranu', icon: '🚰' },
   { id: 'plugs', label: 'Gniazdka', icon: '🔌' },

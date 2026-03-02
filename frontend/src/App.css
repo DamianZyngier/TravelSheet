@@ -2817,50 +2817,50 @@
 }
 
 /* Religion Section Styles */
-.religion-section {
-  background-color: white;
+/* Religion Section Styles - Compact Grid */
+.religion-section.compact {
+  padding-bottom: 1rem;
 }
 
-.religion-content-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.religion-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
   margin-top: 0.5rem;
 }
 
-.religion-row {
+.religion-compact-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.religion-info {
+.religion-compact-info {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-.religion-name {
+.religion-compact-name {
   font-weight: 600;
   color: #2d3748;
 }
 
-.religion-percentage {
-  color: #4a5568;
-  font-size: 0.85rem;
+.religion-compact-perc {
+  color: #718096;
+  font-weight: 700;
 }
 
-.religion-bar-bg {
-  height: 8px;
+.religion-compact-bar-bg {
+  height: 6px;
   background-color: #edf2f7;
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
-.religion-bar-fill {
+.religion-compact-bar-fill {
   height: 100%;
   background-color: #4299e1;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
