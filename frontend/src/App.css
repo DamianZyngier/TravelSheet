@@ -3232,8 +3232,10 @@
   color: #4a5568;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   height: 38px;
+  min-width: 115px;
   transition: all 0.2s;
 }
 
