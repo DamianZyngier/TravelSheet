@@ -9,6 +9,7 @@ import { EmergencySection } from './sections/EmergencySection';
 import { CostsClimateSection } from './sections/CostsClimateSection';
 import { MiscSection } from './sections/MiscSection';
 import { SafetyHealthSection } from './sections/SafetyHealthSection';
+import { WeatherForecastSection } from './sections/WeatherForecastSection';
 
 interface CountryDetailProps {
   selectedCountry: CountryData;
@@ -68,6 +69,12 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           onSelectCountry={onSelectCountry}
         />
         
+        {/* Info between Discover and Weather */}
+        <BasicInfoSection selectedCountry={selectedCountry} />
+
+        <WeatherForecastSection selectedCountry={selectedCountry} />
+
+        {/* The rest follows */}
         <PracticalSection 
           selectedCountry={selectedCountry}
           formatPLN={formatPLN}
@@ -75,8 +82,6 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           checkPlugs={checkPlugs}
           getEnlargedPlugUrl={getEnlargedPlugUrl}
         />
-
-        <BasicInfoSection selectedCountry={selectedCountry} />
 
         <EmergencySection selectedCountry={selectedCountry} />
 
