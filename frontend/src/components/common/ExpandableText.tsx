@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LinkifyOdyseusz } from './LinkifyOdyseusz';
 
+/**
+ * ExpandableText Component
+ * Supports text truncation via CSS line-clamp (default) or explicit maxLength prop.
+ */
 interface ExpandableTextProps {
   text: string;
-  maxLength?: number;
+  maxLength?: number; // Optional prop to truncate text by character count
 }
 
 export const ExpandableText: React.FC<ExpandableTextProps> = ({ text, maxLength }) => {
@@ -22,6 +26,7 @@ export const ExpandableText: React.FC<ExpandableTextProps> = ({ text, maxLength 
 
   if (!text) return null;
 
+  // Use character-based truncation if maxLength is provided, otherwise fallback to CSS line-clamp
   const displayText = (!isExpanded && maxLength && text.length > maxLength) 
     ? text.substring(0, maxLength) + '...' 
     : text;

@@ -36,4 +36,15 @@ describe('Build Integrity', () => {
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
     expect(Object.keys(data).length).toBeGreaterThan(0);
   });
+
+  it('should have maxLength prop defined in ExpandableText component source', () => {
+    const componentPath = path.resolve(__dirname, '../components/common/ExpandableText.tsx');
+    expect(fs.existsSync(componentPath)).toBe(true);
+    
+    const content = fs.readFileSync(componentPath, 'utf-8');
+    // Verify that the interface includes maxLength
+    expect(content).toContain('maxLength?: number');
+    // Verify that the component destructures maxLength
+    expect(content).toContain('({ text, maxLength })');
+  });
 });
