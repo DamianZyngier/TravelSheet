@@ -7,6 +7,11 @@ interface BasicInfoSectionProps {
 }
 
 export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCountry }) => {
+  // Top 4 religions to keep it very compact
+  const topReligions = selectedCountry.religions 
+    ? [...selectedCountry.religions].sort((a, b) => b.percentage - a.percentage).slice(0, 4)
+    : [];
+
   return (
     <div id="info" className="info-block full-width basic-info-section scroll-mt">
       <div className="section-header">
@@ -54,6 +59,30 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <strong>Nr kierunkowy:</strong>
           <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
+
+        {/* Integrated Religions Sub-section */}
+        {topReligions.length > 0 && (
+          <div id="religion" className="info-item-box full religion-integrated-box">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+              <span style={{ fontSize: '1rem' }}>⛪</span>
+              <strong style={{ margin: 0, color: '#2c5282' }}>Religie i wyznania:</strong>
+            </div>
+            <div className="religion-mini-grid">
+              {topReligions.map((r, i) => (
+                <div key={i} className="religion-mini-item">
+                  <div className="religion-mini-info">
+                    <span className="religion-mini-name">{r.name}</span>
+                    <span className="religion-mini-perc">{r.percentage.toFixed(1)}%</span>
+                  </div>
+                  <div className="religion-mini-bar-bg">
+                    <div className="religion-mini-bar-fill" style={{ width: `${r.percentage}%` }}></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {selectedCountry.national_dish && (
           <div className="info-item-box">
             <strong>Danie narodowe:</strong>
@@ -85,7 +114,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </div>
         )}
       </div>
-      <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.last_updated} />
+      <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.religions?.[0]?.last_updated || selectedCountry.last_updated} />
     </div>
   );
 };
