@@ -119,6 +119,25 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             <span>{selectedCountry.ethnic_groups}</span>
           </div>
         )}
+
+        {/* Integrated Top Attractions */}
+        {selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
+          <div id="attractions" className="info-item-box full" style={{ borderTop: '2px solid #edf2f7', marginTop: '0.5rem', paddingTop: '1rem' }}>
+            <strong style={{ color: '#2b6cb0', fontSize: '0.8rem', marginBottom: '0.75rem' }}>✨ Najciekawsze miejsca i atrakcje:</strong>
+            <div className="attractions-mini-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
+              {selectedCountry.attractions.map((attr, idx) => (
+                <div key={idx} className="attraction-mini-item" style={{ padding: '0.75rem', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                  <div style={{ fontWeight: '700', color: '#2d3748', fontSize: '0.9rem', marginBottom: '4px' }}>{attr.name}</div>
+                  {attr.description && (
+                    <div style={{ fontSize: '0.8rem', color: '#718096', lineHeight: '1.4' }}>
+                      <ExpandableText text={attr.description} maxLength={120} />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.last_updated} />
     </div>

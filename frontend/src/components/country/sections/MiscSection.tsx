@@ -129,41 +129,6 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         <DataSource sources={['MSZ']} lastUpdated={selectedCountry.embassies?.[0]?.last_updated || selectedCountry.last_updated} />
       </div>
 
-      <div id="attractions" className="info-block full-width unesco-section scroll-mt">
-        <div className="section-header">
-          <span className="section-header-icon">📍</span>
-          <label>Najciekawsze miejsca i atrakcje</label>
-        </div>
-        {selectedCountry.attractions && selectedCountry.attractions.length > 0 ? (
-          <div className="unesco-grid">
-            {selectedCountry.attractions.map((attr, idx) => (
-              <div key={idx} className="unesco-item-v2">
-                <div className="unesco-item-content">
-                  <div className="unesco-item-header">
-                    <span className="unesco-icon">✨</span>
-                    <span className="unesco-name">{attr.name}</span>
-                  </div>
-                  {attr.description && (
-                    <div className="unesco-description">
-                      <ExpandableText text={attr.description} />
-                    </div>
-                  )}
-                  {attr.booking_info && (
-                    <div className="booking-info-tip" style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#2c5282', backgroundColor: '#ebf8ff', padding: '0.5rem 0.75rem', borderRadius: '8px', borderLeft: '3px solid #4299e1' }}>
-                      <span style={{ marginRight: '6px' }}>🎟️</span>
-                      <strong>Porada:</strong> {attr.booking_info}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="no-data-msg">Nie znaleziono szczegółowych informacji o atrakcjach turystycznych.</div>
-        )}
-        <DataSource sources={['WIKI']} lastUpdated={selectedCountry.attractions?.[0]?.last_updated || selectedCountry.last_updated} />
-      </div>
-
       <div id="unesco" className="info-block full-width unesco-section scroll-mt">
         <div className="section-header">
           <span className="section-header-icon">🏛️</span>

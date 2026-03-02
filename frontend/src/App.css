@@ -3415,25 +3415,39 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  transition: opacity 0.3s ease;
+}
+
+.safety-filter-list-v2.has-active .safety-badge-btn:not(.active) {
+  opacity: 0.5;
 }
 
 .safety-badge-btn {
   margin-top: 0 !important;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.check-icon {
+  font-weight: 900;
+  font-size: 0.8rem;
 }
 
 .safety-badge-btn.active {
-  border-color: #1a202c !important;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #2d3748, 0 4px 12px rgba(0,0,0,0.2);
   transform: scale(1.05) translateY(-1px);
   z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.safety-badge-btn.risk-unknown.active {
-  border-color: #3182ce !important;
-}
+.safety-badge-btn.risk-low.active { border-color: #2f855a !important; }
+.safety-badge-btn.risk-medium.active { border-color: #b7791f !important; }
+.safety-badge-btn.risk-high.active { border-color: #9b2c2c !important; }
+.safety-badge-btn.risk-critical.active { border-color: #fed7d7 !important; }
+.safety-badge-btn.risk-unknown.active { border-color: #4a5568 !important; }
 
 /* Media Queries */
 @media (max-width: 768px) {
