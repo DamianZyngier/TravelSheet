@@ -114,7 +114,6 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
                   {hasHiddenConsulates && (
                     <button
                       className="section-expand-btn"
-                      style={{ marginTop: '1rem', width: '100%' }}
                       onClick={() => setIsEmbassiesExpanded(!isEmbassiesExpanded)}
                     >
                       {isEmbassiesExpanded ? 'Pokaż mniej' : `Pokaż pozostałe placówki (${consulatesAll.length - 2})`}
@@ -215,15 +214,6 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
             {selectedCountry.unesco_places.length > 10 && (
               <button
                 className="section-expand-btn"
-                style={{
-                  marginTop: '0.5rem',
-                  width: '100%',
-                  padding: '0.4rem',
-                  fontSize: '0.75rem',
-                  backgroundColor: 'transparent',
-                  border: '1px solid #e2e8f0',
-                  color: '#718096'
-                }}
                 onClick={() => setIsUnescoExpanded(!isUnescoExpanded)}
               >
                 {isUnescoExpanded ? 'Pokaż mniej' : `Pokaż pozostałe (${selectedCountry.unesco_places.length - 10})`}

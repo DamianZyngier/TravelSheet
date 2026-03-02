@@ -1761,19 +1761,25 @@
 }
 
 .section-expand-btn {
-  background-color: #ebf8ff;
-  color: #2b6cb0;
-  border: 1px dashed #bee3f8;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   transition: all 0.2s;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
 }
 
 .section-expand-btn:hover {
-  background-color: #bee3f8;
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+  color: #2d3748;
 }
 
 .collapse-holidays-btn {
