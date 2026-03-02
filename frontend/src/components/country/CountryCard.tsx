@@ -17,7 +17,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite,
       onClick={onClick}
     >
       <button 
-        className={`card-favorite-btn ${isFavorite ? 'is-fav' : ''}`}
+        className={`card-favorite-btn always-visible ${isFavorite ? 'is-fav' : ''}`}
         onClick={(e) => {
           e.stopPropagation();
           toggleFavorite(country.iso2);

@@ -195,11 +195,18 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
 
             {(() => {
               const allTemps = selectedCountry.climate?.flatMap(c => [c.temp_day, c.temp_night]) || [];
-              const minT = Math.min(...allTemps, 0);
+              const minT = Math.min(...allTemps);
               const maxT = Math.max(...allTemps, 30);
-              const yMin = Math.floor(minT / 10) * 10 - 10;
+              
+              // Dynamic minimum: if always > 10, start at 0. Otherwise start at -10 or below.
+              let yMin = 0;
+              if (minT <= 10) {
+                yMin = Math.floor(minT / 10) * 10 - 10;
+              }
+              
               const yMax = Math.ceil(maxT / 10) * 10 + 10;
               const yRange = yMax - yMin;
+              
               const ticks = [];
               for (let t = yMin; t <= yMax; t += 10) ticks.push(t);
               

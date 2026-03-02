@@ -3355,6 +3355,56 @@
   }
 }
 
+/* Grid Sorting and Separator Styles */
+.country-grid-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.grid-section-label {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #2d3748;
+  border-left: 4px solid #3182ce;
+  padding-left: 1rem;
+  margin-bottom: -1rem;
+}
+
+.grid-separator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.grid-separator hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+.grid-separator span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-favorite-btn.always-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+}
+
+.card-favorite-btn.always-visible.is-fav {
+  color: #ecc94b;
+  border-color: #fbd38d;
+}
+
 /* Global Print Styles for PDF Export */
 @media print {
   @page {

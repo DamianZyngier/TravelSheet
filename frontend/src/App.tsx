@@ -22,7 +22,12 @@ function App() {
   const [countries, setCountries] = useState<Record<string, CountryData>>({})
   const [loading, setLoading] = useState(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryData | null>(null)
-  const [activeChecklist, setActiveChecklist] = useState<string | null>(null)
+  const [activeChecklist, setActiveChecklist] = useState<string | null>(() => {
+    const params = new URLSearchParams(window.location.search);
+    const checklistVar = params.get('checklist');
+    if (checklistVar) return checklistVar;
+    return localStorage.getItem('travelsheet_last_checklist');
+  })
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
   const [filterSafety, setFilterSafety] = useState('all')
@@ -101,6 +106,7 @@ function App() {
 
   const handleOpenChecklist = useCallback((variant: string = 'minimum') => {
     setActiveChecklist(variant)
+    localStorage.setItem('travelsheet_last_checklist', variant);
     setSelectedCountry(null)
     window.scrollTo(0, 0)
     
@@ -122,6 +128,7 @@ function App() {
         setActiveChecklist(null);
       } else if (checklistVar) {
         setActiveChecklist(checklistVar);
+        localStorage.setItem('travelsheet_last_checklist', checklistVar);
         setSelectedCountry(null);
       } else {
         setSelectedCountry(null);
@@ -141,6 +148,7 @@ function App() {
         setActiveChecklist(null);
       } else if (checklistVar) {
         setActiveChecklist(checklistVar);
+        localStorage.setItem('travelsheet_last_checklist', checklistVar);
         setSelectedCountry(null);
       }
     }
@@ -150,7 +158,8 @@ function App() {
 
   useEffect(() => {
     const handleNavChecklist = () => {
-      handleOpenChecklist('minimum');
+      const lastVariant = localStorage.getItem('travelsheet_last_checklist') || 'minimum';
+      handleOpenChecklist(lastVariant);
     };
     window.addEventListener('nav-checklist', handleNavChecklist);
     return () => window.removeEventListener('nav-checklist', handleNavChecklist);
@@ -189,14 +198,13 @@ function App() {
     return () => observer.disconnect();
   }, [selectedCountry]);
 
-  const countryList = useMemo(() => {
+  // Filtering logic
+  const baseFilteredList = useMemo(() => {
     if (!countries || typeof countries !== 'object') return [];
     return Object.values(countries)
       .filter(c => {
         if (!c || !c.safety) return false;
         
-        if (showOnlyFavorites && !favorites.includes(c.iso2)) return false;
-
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
         const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
         
@@ -212,7 +220,17 @@ function App() {
         return matchSafety && matchContinent && matchSearch;
       })
       .sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
-  }, [countries, filterSafety, filterContinent, searchQuery, showOnlyFavorites, favorites]);
+  }, [countries, filterSafety, filterContinent, searchQuery]);
+
+  // Split into favorites and non-favorites if "Ulubione" is active
+  const { favoriteList, remainingList } = useMemo(() => {
+    if (!showOnlyFavorites) {
+      return { favoriteList: [], remainingList: baseFilteredList };
+    }
+    const favs = baseFilteredList.filter(c => favorites.includes(c.iso2));
+    const rest = baseFilteredList.filter(c => !favorites.includes(c.iso2));
+    return { favoriteList: favs, remainingList: rest };
+  }, [baseFilteredList, showOnlyFavorites, favorites]);
 
   const sortedFullList = useMemo(() => {
     if (!countries || typeof countries !== 'object') return [];
@@ -253,14 +271,14 @@ function App() {
         }
       }
 
-      if (e.key === 'Enter' && !selectedCountry && !activeChecklist && countryList.length === 1) {
-        handleSelectCountry(countryList[0]);
+      if (e.key === 'Enter' && !selectedCountry && !activeChecklist && baseFilteredList.length === 1) {
+        handleSelectCountry(baseFilteredList[0]);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedCountry, activeChecklist, countryList, handleSelectCountry]);
+  }, [selectedCountry, activeChecklist, baseFilteredList, handleSelectCountry]);
 
   if (loading) return <div className="loader">Ładowanie danych podróżniczych...</div>;
 
@@ -306,7 +324,9 @@ function App() {
 
           <main className="content-area">
             <CountryGrid 
-              countryList={countryList} 
+              favoriteList={favoriteList}
+              remainingList={remainingList}
+              showOnlyFavorites={showOnlyFavorites}
               onSelectCountry={handleSelectCountry}
               favorites={favorites}
               toggleFavorite={toggleFavorite}
@@ -329,6 +349,7 @@ function App() {
           }} 
           onVariantChange={(v) => {
             setActiveChecklist(v);
+            localStorage.setItem('travelsheet_last_checklist', v);
             const url = new URL(window.location.href);
             url.searchParams.set('checklist', v);
             window.history.pushState({}, '', url.toString());
