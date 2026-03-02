@@ -1,6 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { CONTINENT_MAP } from '../../constants';
 
+// Import continent icons
+import africaIcon from '../../assets/continents/Africa.svg';
+import antarcticaIcon from '../../assets/continents/Antarctica.svg';
+import asiaIcon from '../../assets/continents/Asia.svg';
+import oceaniaIcon from '../../assets/continents/Australia.svg';
+import europeIcon from '../../assets/continents/Europe.svg';
+import northAmericaIcon from '../../assets/continents/North_America.svg';
+import southAmericaIcon from '../../assets/continents/South_America.svg';
+
 interface FilterDropdownProps {
   filterContinent: string;
   setFilterContinent: (continent: string) => void;
@@ -9,44 +18,34 @@ interface FilterDropdownProps {
   continents: string[];
 }
 
-const ContinentIcon: React.FC<{ name: string; color: string; active: boolean }> = ({ name, color, active }) => {
-  // Refined silhouettes for 24x24 icon view
-  const silhouettes: Record<string, string> = {
-    'Africa': 'M12 2l3 1 2 3 1 4-1 4-2 4-3 4-3-4-2-4-1-4 1-4 3-3 2-1z',
-    'Asia': 'M16 4l4 1 2 3 1 4-1 4-2 3-4 1-4-1-2-3-1-4 1-4 3-3 3-1z',
-    'Europe': 'M8 4l3-1 3 1 2 3 1 4-1 4-3 1-3-1-2-3-1-4 1-4 3-3 3-1z',
-    'North America': 'M6 2l4-1 4 1 2 3 1 4-1 4-2 4-4 1-4-1-2-4-1-4 1-4 3-3 1-1z',
-    'South America': 'M8 10l4-1 4 1 2 3 1 4-1 4-2 4-4 1-4-1-2-4-1-4 1-4 3-3 1-1z',
-    'Oceania': 'M16 14l3-1 3 1 1 2-1 2-3 1-3-1-1-2 1-2z',
-    'Antarctica': 'M12 20l6-1 4 1 1 2-1 2-4 1-6-1-6 1-4-1-1-2 1-2 4-1 6 1z'
+const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, active }) => {
+  const iconMap: Record<string, string> = {
+    'Africa': africaIcon,
+    'Asia': asiaIcon,
+    'Europe': europeIcon,
+    'North America': northAmericaIcon,
+    'South America': southAmericaIcon,
+    'Oceania': oceaniaIcon,
+    'Antarctica': antarcticaIcon
   };
 
-  const emojiFallback: Record<string, string> = {
-    'Africa': '🌍',
-    'Asia': '🌏',
-    'Europe': '🇪🇺',
-    'North America': '🏔️',
-    'South America': '🌴',
-    'Oceania': '🏝️',
-    'Antarctica': '❄️'
-  };
+  const iconSrc = iconMap[name];
+
+  if (!iconSrc) return <span>🌐</span>;
 
   return (
-    <svg 
-      viewBox="0 0 24 24" 
-      width="18" 
-      height="18" 
-      fill={active ? 'white' : color} 
-      stroke={active ? 'white' : color} 
-      strokeWidth="1"
-      style={{ marginRight: '4px', flexShrink: 0 }}
-    >
-      {silhouettes[name] ? (
-        <path d={silhouettes[name]} strokeLinecap="round" strokeLinejoin="round" />
-      ) : (
-        <text y="18" x="0" fontSize="16" fill={color}>{emojiFallback[name] || '🌐'}</text>
-      )}
-    </svg>
+    <img 
+      src={iconSrc} 
+      alt={name} 
+      style={{ 
+        width: '20px', 
+        height: '20px', 
+        marginRight: '6px',
+        flexShrink: 0,
+        // If active, make the icon white using CSS filters
+        filter: active ? 'brightness(0) invert(1)' : 'none'
+      }} 
+    />
   );
 };
 
