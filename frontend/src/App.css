@@ -3374,10 +3374,8 @@
   padding: 4px;
 }
 
-.continent-tile-btn:first-child {
-  grid-column: span 1;
-  background-color: #f7fafc;
-  color: #4a5568;
+.continent-tile-btn:hover {
+  border-color: #cbd5e0;
 }
 
 .continent-tile-btn.active {

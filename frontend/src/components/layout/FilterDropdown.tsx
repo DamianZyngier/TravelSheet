@@ -9,6 +9,7 @@ import oceaniaIcon from '../../assets/continents/Australia.svg';
 import europeIcon from '../../assets/continents/Europe.svg';
 import northAmericaIcon from '../../assets/continents/North_America.svg';
 import southAmericaIcon from '../../assets/continents/South_America.svg';
+import worldIcon from '../../assets/continents/World.svg';
 
 interface FilterDropdownProps {
   filterContinent: string;
@@ -26,7 +27,8 @@ const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, acti
     'North America': northAmericaIcon,
     'South America': southAmericaIcon,
     'Oceania': oceaniaIcon,
-    'Antarctica': antarcticaIcon
+    'Antarctica': antarcticaIcon,
+    'All': worldIcon
   };
 
   const iconSrc = iconMap[name];
@@ -122,8 +124,15 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
               <button 
                 className={`continent-tile-btn ${filterContinent === 'all' ? 'active' : ''}`}
                 onClick={() => setFilterContinent('all')}
+                style={{ 
+                  '--tile-color': '#3182ce',
+                  '--tile-bg': filterContinent === 'all' ? '#3182ce' : 'white',
+                  '--tile-text': filterContinent === 'all' ? 'white' : '#3182ce',
+                  borderColor: filterContinent === 'all' ? '#3182ce' : '#e2e8f0'
+                } as any}
               >
-                <span>Wszystkie</span>
+                <ContinentIcon name="All" active={filterContinent === 'all'} />
+                <span className="continent-tile-label">Wszystkie</span>
               </button>
               {continents.map(c => {
                 const style = continentStyles[c] || { color: '#4a5568', bg: '#f7fafc' };
