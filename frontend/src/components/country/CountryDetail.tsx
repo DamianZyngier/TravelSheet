@@ -9,7 +9,6 @@ import { EmergencySection } from './sections/EmergencySection';
 import { CostsClimateSection } from './sections/CostsClimateSection';
 import { MiscSection } from './sections/MiscSection';
 import { SafetyHealthSection } from './sections/SafetyHealthSection';
-import { ReligionSection } from './sections/ReligionSection';
 
 interface CountryDetailProps {
   selectedCountry: CountryData;
@@ -78,8 +77,6 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         />
 
         <BasicInfoSection selectedCountry={selectedCountry} />
-
-        <ReligionSection selectedCountry={selectedCountry} />
 
         <EmergencySection selectedCountry={selectedCountry} />
 
