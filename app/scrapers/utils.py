@@ -78,7 +78,13 @@ CURRENCY_FIXES = {
     "Euro": "Euro",
     "British pound": "Funt brytyjski",
     "Polish złoty": "Złoty polski",
-    "Złoty": "Złoty"
+    "Złoty": "Złoty",
+    "North Korean won": "Won północnokoreański",
+    "South Korean won": "Won południowokoreański",
+    "zwyciężyła": "Won",
+    "zwycięzca": "Won",
+    "Korea Północna zwyciężyła": "Won północnokoreański",
+    "Korea Południowa zwyciężyła": "Won południowokoreański"
 }
 
 # In-memory cache for translations to avoid redundant API calls
