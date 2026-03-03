@@ -27,6 +27,8 @@ def normalize_polish_name(name: str, iso2: str = None) -> str:
     """Fix common errors in Polish country names from external APIs."""
     if iso2 == 'SS' and name == 'Sudan':
         return 'Sudan Południowy'
+    if iso2 == 'GB':
+        return 'Wielka Brytania'
     return normalize_polish_text(name)
 
 async def sync_countries(db: Session):
