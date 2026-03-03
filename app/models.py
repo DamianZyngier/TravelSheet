@@ -233,18 +233,13 @@ class PracticalInfo(Base):
     id = Column(Integer, primary_key=True)
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
     tap_water_safe = Column(Boolean)
-    tap_water_notes = Column(Text)
     plug_types = Column(String(50)) # e.g. "C,E"
     voltage = Column(Integer) # e.g. 230
     frequency = Column(Integer) # e.g. 50
     card_acceptance = Column(String(50)) # e.g. "high", "medium", "low"
-    cash_vs_card_notes = Column(Text)
     driving_side = Column(String(10)) # "left" or "right"
-    license_required = Column(String(100)) # "national" or "international"
-    driving_notes = Column(Text)
     odyseusz_url = Column(Text, default="https://odyseusz.msz.gov.pl")
     store_hours = Column(Text)
-    tipping_culture = Column(Text)
     internet_notes = Column(Text)
     esim_available = Column(Boolean)
     emergency_numbers = Column(Text) # JSON string with police, ambulance, fire
@@ -259,7 +254,6 @@ class PracticalInfo(Base):
     atm_advice = Column(Text)
     
     # New cultural/law fields
-    drinking_age = Column(String(100))
     alcohol_rules = Column(Text)
     dress_code = Column(Text)
     photography_restrictions = Column(Text)

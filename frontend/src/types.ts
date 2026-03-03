@@ -69,8 +69,6 @@ export interface CountryData {
     best_exchange_currency: string;
     exchange_where: string;
     atm_advice: string;
-    tipping_culture: string;
-    drinking_age: string;
     alcohol_rules: string;
     dress_code: string;
     photography_restrictions: string;

@@ -153,8 +153,6 @@ def export_all():
                     "best_exchange_currency": c.practical.best_exchange_currency or "",
                     "exchange_where": c.practical.exchange_where or "",
                     "atm_advice": c.practical.atm_advice or "",
-                    "tipping_culture": c.practical.tipping_culture or "",
-                    "drinking_age": c.practical.drinking_age or "",
                     "alcohol_rules": c.practical.alcohol_rules or "",
                     "dress_code": c.practical.dress_code or "",
                     "photography_restrictions": c.practical.photography_restrictions or "",
@@ -176,10 +174,9 @@ def export_all():
                 processed_data["practical"] = {
                     "plug_types": "", "voltage": None, "water_safe": None, "water_safe_for_brushing": None,
                     "driving_side": "right", "card_acceptance": "", "best_exchange_currency": "", 
-                    "exchange_where": "", "atm_advice": "", "tipping_culture": "", "drinking_age": "",
-                    "alcohol_rules": "", "dress_code": "", "photography_restrictions": "",
-                    "sensitive_topics": "", "local_norms": "", "emergency": None, 
-                    "vaccinations_required": "", "vaccinations_suggested": "", 
+                    "exchange_where": "", "atm_advice": "", "alcohol_rules": "", "dress_code": "", 
+                    "photography_restrictions": "", "sensitive_topics": "", "local_norms": "", 
+                    "emergency": None, "vaccinations_required": "", "vaccinations_suggested": "", 
                     "health_info": "", "roaming_info": "", "license_type": "", "last_updated": None
                 }
 

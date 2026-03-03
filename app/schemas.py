@@ -163,19 +163,12 @@ class WeatherSchema(BaseModel):
 
 class PracticalSchema(BaseModel):
     tap_water_safe: Optional[bool]
-    tap_water_notes: Optional[str]
     plug_types: List[str] = []
     voltage: Optional[int]
     frequency: Optional[int]
     card_acceptance: Optional[str]
-    cash_vs_card_notes: Optional[str]
-    driving_side: Optional[str]
-    license_required: Optional[str]
-    driving_notes: Optional[str]
     odyseusz_url: Optional[str]
     store_hours: Optional[str]
-    tipping_culture: Optional[str]
-    drinking_age: Optional[str]
     alcohol_rules: Optional[str]
     dress_code: Optional[str]
     photography_restrictions: Optional[str]
@@ -193,6 +186,7 @@ class PracticalSchema(BaseModel):
     best_exchange_currency: Optional[str] = None
     exchange_where: Optional[str] = None
     atm_advice: Optional[str] = None
+    souvenirs: Optional[str] = None
     last_updated: Optional[datetime] = None
 
     @field_validator("emergency", mode="before")
