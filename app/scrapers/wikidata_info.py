@@ -237,10 +237,19 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         # Religions
         rels = country_religions.get(iso, {})
         db.query(models.Religion).filter(models.Religion.country_id == c.id).delete()
-        if rels and sum(rels.values()) > 0:
+        if rels:
+            # If we have some data but all percentages are 0, assign a small value to top 3 
+            # so they show up as "Major religion" in the UI logic.
+            total_perc = sum(rels.values())
             sorted_rels = sorted(rels.items(), key=lambda x: x[1], reverse=True)
-            for name, p in sorted_rels[:5]:
-                db.add(models.Religion(country_id=c.id, name=name, percentage=p))
+            
+            if total_perc == 0 and sorted_rels:
+                # No percentage data but we found religions - assign 0 to indicate "Presence known, percent unknown"
+                for name, p in sorted_rels[:5]:
+                    db.add(models.Religion(country_id=c.id, name=name, percentage=0.0))
+            else:
+                for name, p in sorted_rels[:5]:
+                    db.add(models.Religion(country_id=c.id, name=name, percentage=p))
         else:
             rel_fallbacks = {
                 'PL': [("chrześcijaństwo", 92.0), ("brak wyznania", 6.0)],

@@ -51,6 +51,14 @@ describe('Data Integrity Check', () => {
         "religions": [
           { "name": "Catholic", "percentage": 85.0 }
         ]
+      },
+      "AQ": {
+        "name": "Antarctica",
+        "name_pl": "Antarktyka",
+        "iso2": "AQ",
+        "religions": [
+          { "name": "Atheism", "percentage": 0.0 }
+        ]
       }
     };
 
@@ -62,5 +70,8 @@ describe('Data Integrity Check', () => {
     expect(country.currency.code).toBeDefined();
     expect(Array.isArray(country.unesco_places)).toBe(true);
     expect(country.weather.temp).toBeTypeOf('number');
+
+    const antarctica = mockData.AQ;
+    expect(antarctica.religions[0].percentage).toBe(0.0);
   });
 });

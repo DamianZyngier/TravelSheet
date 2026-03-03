@@ -17,6 +17,7 @@ To ensure high-quality data, the project implements several layers of validation
 - **Database Constraints**: SQLite indices and foreign keys ensure referential integrity.
 - **Schema Validation**: Pydantic models in `app/schemas.py` enforce strict rules for ISO codes (2 and 3 characters), geographical coordinates (lat/lng ranges), and percentage values (0-100%).
 - **Data Cleaning**: Automated scripts handle edge cases like uninhabited territories (population set to NULL instead of 0) and religious percentage normalization (capping at 100%).
+- **Religious Data**: Improved scraping logic to include dominant religions from Wikidata even when exact percentages are unavailable (displayed as "Główne wyznanie" in the UI).
 - **Automated Testing**: `scripts/test_data_integrity.py` validates the exported `data.json` structure before deployment.
 
 ## Tech Stack

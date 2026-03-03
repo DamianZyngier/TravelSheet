@@ -27,14 +27,18 @@ export const ReligionSection: React.FC<ReligionSectionProps> = ({ selectedCountr
           <div key={i} className="religion-compact-item">
             <div className="religion-compact-info">
               <span className="religion-compact-name">{r.name}</span>
-              <span className="religion-compact-perc">{r.percentage.toFixed(1)}%</span>
+              <span className="religion-compact-perc">
+                {r.percentage > 0 ? `${r.percentage.toFixed(1)}%` : 'Główne wyznanie'}
+              </span>
             </div>
-            <div className="religion-compact-bar-bg">
-              <div 
-                className="religion-compact-bar-fill" 
-                style={{ width: `${r.percentage}%` }}
-              ></div>
-            </div>
+            {r.percentage > 0 && (
+              <div className="religion-compact-bar-bg">
+                <div 
+                  className="religion-compact-bar-fill" 
+                  style={{ width: `${r.percentage}%` }}
+                ></div>
+              </div>
+            )}
           </div>
         ))}
       </div>
