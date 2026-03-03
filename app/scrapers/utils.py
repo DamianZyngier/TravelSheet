@@ -48,9 +48,13 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
     'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
     'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
     'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
-    'AE': 'zjednoczone-emiraty-arabskie', 'ZA': 'rpa'
+    'AE': 'zjednoczone-emiraty-arabskie', 'ZA': 'rpa',
+    'PR': 'usa/portoryko-amerykanskie-wyspy-dziewicze',
+    'VI': 'usa/portoryko-amerykanskie-wyspy-dziewicze',
+    'AS': 'usa/samoa-amerykanskie2',
+    'MP': 'usa/mariany-polnocne2',
+    'GU': 'usa/guam2'
     }
-
 CDC_MAPPING = {
     'RU': 'russia', 'US': 'united-states', 'GB': 'united-kingdom',
     'KR': 'south-korea', 'KP': 'north-korea', 'AE': 'united-arab-emirates',

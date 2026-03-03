@@ -66,6 +66,7 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if manual_slug:
         strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
         strategies.append(("2.5 link (manual-modern)", f"https://www.gov.pl/web/{manual_slug}/idp"))
+        strategies.append(("2.7 link (manual-direct)", f"https://www.gov.pl/web/{manual_slug}"))
     simple_slug = slugify(name_pl)
     strategies.append(("3rd link (modern)", f"https://www.gov.pl/web/{simple_slug}/idp"))
     strategies.append(("4th link (modern-alt)", f"https://www.gov.pl/web/{simple_slug}/informacje-dla-podrozujacych"))
