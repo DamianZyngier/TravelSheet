@@ -24,30 +24,24 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
           </div>
           <div className="health-container">
             {selectedCountry.practical.health_info && (
-              <div className="health-full-info">
-                <strong>Oficjalne zalecenia MSZ:</strong>
+              <div className="info-item-box full">
+                <strong>Oficjalne zalecenia MSZ</strong>
                 <ExpandableText text={selectedCountry.practical.health_info} />
               </div>
             )}
 
             {(selectedCountry.practical.vaccinations_required || selectedCountry.practical.vaccinations_suggested) && (
-              <div className="health-summary-vax">
+              <div className="info-grid">
                 {selectedCountry.practical.vaccinations_required && (
-                  <div className="health-item mandatory" style={{ backgroundColor: '#fed7d7', borderLeft: '5px solid #f56565' }}>
-                    <span className="health-icon">🚨</span>
-                    <div className="health-text">
-                      <strong style={{ color: '#822727' }}>Obowiązkowe:</strong>
-                      <p>{selectedCountry.practical.vaccinations_required.replace(/szczepienie przeciw /gi, '').replace(/szczepienie przeciwko /gi, '').replace(/Obowiązkowe: /gi, '')}</p>
-                    </div>
+                  <div className="info-item-box" style={{ borderLeft: '5px solid #f56565' }}>
+                    <strong style={{ color: '#822727' }}>Obowiązkowe</strong>
+                    <span>{selectedCountry.practical.vaccinations_required.replace(/szczepienie przeciw /gi, '').replace(/szczepienie przeciwko /gi, '').replace(/Obowiązkowe: /gi, '')}</span>
                   </div>
                 )}
                 {selectedCountry.practical.vaccinations_suggested && (
-                  <div className="health-item suggested" style={{ backgroundColor: '#fefcbf', borderLeft: '5px solid #ecc94b' }}>
-                    <span className="health-icon">💉</span>
-                    <div className="health-text">
-                      <strong style={{ color: '#744210' }}>Zalecane:</strong>
-                      <p>{selectedCountry.practical.vaccinations_suggested.replace(/Zalecane: /gi, '')}</p>
-                    </div>
+                  <div className="info-item-box" style={{ borderLeft: '5px solid #ecc94b' }}>
+                    <strong style={{ color: '#744210' }}>Zalecane</strong>
+                    <span>{selectedCountry.practical.vaccinations_suggested.replace(/Zalecane: /gi, '')}</span>
                   </div>
                 )}
               </div>
@@ -75,11 +69,11 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
           </div>
 
           {/* Informacja o Odyseuszu */}
-          <div className="info-item-box full" style={{ backgroundColor: '#ebf8ff', border: '1px solid #bee3f8', padding: '1rem', borderRadius: '12px', marginBottom: '1.5rem' }}>
+          <div className="info-item-box full" style={{ backgroundColor: '#ebf8ff', border: '1px solid #bee3f8', marginBottom: '1.5rem' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
               <span style={{ fontSize: '1.25rem' }}>🛡️</span>
               <div>
-                <strong style={{ color: '#2b6cb0', fontSize: '0.75rem', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>System Odyseusz:</strong>
+                <strong>System Odyseusz</strong>
                 <span style={{ fontSize: '0.85rem', color: '#2c5282', lineHeight: '1.4' }}>
                   MSZ zaleca rejestrację podróży w <a href="https://odyseusz.msz.gov.pl" target="_blank" rel="noopener noreferrer" style={{ fontWeight: '700', textDecoration: 'underline' }}>systemie Odyseusz</a>. Pozwoli to służbom konsularnym na kontakt i pomoc w sytuacjach kryzysowych.
                 </span>

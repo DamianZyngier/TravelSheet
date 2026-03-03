@@ -42,13 +42,13 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         <span className="section-header-icon">ℹ️</span>
         <label>Podstawowe informacje</label>
       </div>
-      <div className="basic-info-grid">
+      <div className="info-grid">
         <div className="info-item-box">
-          <strong>Kontynent:</strong>
+          <strong>Kontynent</strong>
           <span>{selectedCountry.continent || 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
-          <strong>Stolica:</strong>
+          <strong>Stolica</strong>
           <span>
             {selectedCountry.capital || 'Brak danych'} 
             {selectedCountry.timezone && (
@@ -71,11 +71,11 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </span>
         </div>
         <div className="info-item-box">
-          <strong>Ludność:</strong>
+          <strong>Ludność</strong>
           <span>{selectedCountry.population?.toLocaleString() || 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
-          <strong>Gęstość zaludnienia:</strong>
+          <strong>Gęstość zaludnienia</strong>
           <span>
             {selectedCountry.population && selectedCountry.area ? (
               <>
@@ -103,18 +103,18 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </span>
         </div>
         <div className="info-item-box">
-          <strong>Języki:</strong>
+          <strong>Języki</strong>
           <span>{selectedCountry.languages?.length > 0 ? selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ') : 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
-          <strong>Nr kierunkowy:</strong>
+          <strong>Nr kierunkowy</strong>
           <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
         
         {/* Integrated Religions */}
         {topReligions.length > 0 && (
           <div id="religion" className="info-item-box">
-            <strong>Religie i wyznania:</strong>
+            <strong>Religie i wyznania</strong>
             <div className="religion-list-simple">
               {topReligions.map((r, i) => (
                 <div key={i} className="religion-item-simple">
@@ -128,32 +128,32 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
 
         {selectedCountry.national_dish && (
           <div className="info-item-box">
-            <strong>Danie narodowe:</strong>
+            <strong>Danie narodowe</strong>
             <span>🍽️ {selectedCountry.national_dish}</span>
           </div>
         )}
 
         {selectedCountry.main_airport && (
           <div className="info-item-box full">
-            <strong>Główne lotnisko:</strong>
+            <strong>Główne lotnisko</strong>
             <span>✈️ {selectedCountry.main_airport}</span>
           </div>
         )}
         {selectedCountry.railway_info && (
           <div className="info-item-box full">
-            <strong>Kolej:</strong>
+            <strong>Kolej</strong>
             <span>🚆 {selectedCountry.railway_info}</span>
           </div>
         )}
         {selectedCountry.largest_cities && (
           <div className="info-item-box full">
-            <strong>Największe miasta:</strong>
+            <strong>Największe miasta</strong>
             <span>{selectedCountry.largest_cities}</span>
           </div>
         )}
         {selectedCountry.ethnic_groups && (
           <div className="info-item-box full">
-            <strong>Grupy etniczne:</strong>
+            <strong>Grupy etniczne</strong>
             <span>{selectedCountry.ethnic_groups}</span>
           </div>
         )}

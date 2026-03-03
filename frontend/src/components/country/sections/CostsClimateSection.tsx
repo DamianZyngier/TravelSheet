@@ -185,9 +185,9 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
           </div>
           
           {selectedCountry.climate_description && (
-            <div className="climate-type-box" style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#f7fafc', borderRadius: '12px', borderLeft: '4px solid #4299e1' }}>
-              <strong style={{ fontSize: '0.75rem', color: '#718096', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Typ klimatu:</strong>
-              <span style={{ fontSize: '1rem', fontWeight: '600', color: '#2d3748' }}>{selectedCountry.climate_description}</span>
+            <div className="info-item-box full" style={{ marginBottom: '1.5rem', borderLeft: '4px solid #4299e1' }}>
+              <strong>Typ klimatu</strong>
+              <span>{selectedCountry.climate_description}</span>
             </div>
           )}
 
@@ -340,7 +340,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                 <div className="best-travel-time-box">
                   <span className="best-travel-icon">✈️</span>
                   <div className="best-travel-content">
-                    <strong>Najlepszy czas na wyjazd:</strong>
+                    <strong>Najlepszy czas na wyjazd</strong>
                     <p>{bestMonthsList.join(', ')}</p>
                     <small>W oparciu o statystycznie najniższe opady i przyjemną temperaturę.</small>
                   </div>

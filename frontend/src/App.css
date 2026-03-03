@@ -559,17 +559,45 @@
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
 }
 
-.info-block label {
-  display: block;
+.info-item-box {
+  padding: 1rem 1.25rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.info-item-box:hover {
+  border-color: #cbd5e0;
+  background-color: #f1f5f9;
+}
+
+.info-item-box.full {
+  grid-column: 1 / -1;
+}
+
+.info-item-box strong {
+  color: #64748b;
   font-size: 0.7rem;
   text-transform: uppercase;
-  color: #5c5c5c;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  display: block;
+}
+
+.info-item-box span {
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .docs-grid {

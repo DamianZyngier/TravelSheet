@@ -34,10 +34,10 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
             <span className="section-header-icon">✨</span>
             <label>Najciekawsze miejsca i atrakcje</label>
           </div>
-          <div className="attractions-mini-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          <div className="info-grid">
             {selectedCountry.attractions.map((attr, idx) => (
-              <div key={idx} className="attraction-mini-item" style={{ padding: '1.25rem', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontWeight: '800', color: '#2d3748', fontSize: '1rem', marginBottom: '8px' }}>{attr.name}</div>
+              <div key={idx} className="info-item-box">
+                <strong>{attr.name}</strong>
                 {attr.description && (
                   <div style={{ fontSize: '0.9rem', color: '#4a5568', lineHeight: '1.5' }}>
                     <ExpandableText text={attr.description} maxLength={200} />
@@ -54,7 +54,7 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
         <div id="souvenirs" className="info-block full-width souvenirs-box scroll-mt">
           <span className="souvenirs-icon">🎁</span>
           <div className="souvenirs-content">
-            <span className="souvenirs-label">Co warto kupić / Pamiątki</span>
+            <strong>Co warto kupić / Pamiątki</strong>
             <div className="souvenirs-value">
               <ExpandableText text={selectedCountry.practical.souvenirs} />
             </div>

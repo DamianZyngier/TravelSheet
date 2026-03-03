@@ -37,12 +37,12 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
       {showGeneral && (
         <div className="info-block full-width">
           <div className="info-grid">
-            <div className="info-block">
-              <label>Kontynent</label>
+            <div className="info-item-box">
+              <strong>Kontynent</strong>
               <span>{CONTINENT_MAP[selectedCountry.continent] || selectedCountry.continent}</span>
             </div>
-            <div className="info-block">
-              <label>Stolica i strefa</label>
+            <div className="info-item-box">
+              <strong>Stolica i strefa</strong>
               <span>{selectedCountry.capital || 'Brak danych'} {selectedCountry.timezone && `(${selectedCountry.timezone})`}</span>
             </div>
           </div>
@@ -54,15 +54,15 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
           <div className="info-grid">
             {showInternet && (
               <>
-                <div className="info-block">
-                  <label>Internet i eSIM</label>
+                <div className="info-item-box">
+                  <strong>Internet i eSIM</strong>
                   <div className="driving-info-box">
                     <span>{selectedCountry.practical.esim_available ? '📱 eSIM: Dostępne' : '📱 eSIM: Brak danych'}</span>
                     {selectedCountry.practical.internet_notes && <span className="license-info">{selectedCountry.practical.internet_notes}</span>}
                   </div>
                 </div>
-                <div className="info-block">
-                  <label>Komunikacja</label>
+                <div className="info-item-box">
+                  <strong>Komunikacja</strong>
                   <div className="driving-info-box">
                     <span>📱 {selectedCountry.popular_apps || 'WhatsApp'}</span>
                   </div>
@@ -71,8 +71,8 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             )}
 
             {showDriving && (
-              <div className="info-block">
-                <label>Ruch drogowy</label>
+              <div className="info-item-box">
+                <strong>Ruch drogowy</strong>
                 <div className="driving-info-box">
                   <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
                   <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
@@ -81,8 +81,8 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             )}
 
             {showStores && (
-              <div className="info-block">
-                <label>Sklepy i godziny</label>
+              <div className="info-item-box">
+                <strong>Sklepy i godziny</strong>
                 <span>🕒 {selectedCountry.practical.store_hours || 'Brak danych'}</span>
               </div>
             )}
