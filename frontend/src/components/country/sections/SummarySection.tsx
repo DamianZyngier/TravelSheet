@@ -14,52 +14,54 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
   onSelectCountry
 }) => {
   return (
-    <div id="discover" className="info-block full-width discover-section scroll-mt">
-      <div className="section-header">
-        <span className="section-header-icon">✨</span>
-        <label>Odkryj i poznaj kraj</label>
-      </div>
-      
-      <div className="discover-container">
-        {/* Parent / Territory Relationships */}
-        <div className="relationship-nav-box">
-          {selectedCountry.parent && (
-            <div className="parent-info-line">
-              <span className="relationship-tag">Terytorium zależne od:</span>
-              <button 
-                className="relationship-text-btn"
-                onClick={() => {
-                  const parent = allCountries.find(c => c.iso2 === selectedCountry.parent?.iso2);
-                  if (parent) onSelectCountry(parent);
-                }}
-              >
-                {selectedCountry.parent.name_pl}
-              </button>
-            </div>
-          )}
-          
-          {selectedCountry.territories && selectedCountry.territories.length > 0 && (
-            <div className="territories-info-line">
-              <span className="relationship-tag">Terytoria zależne:</span>
-              <div className="territories-text-list">
-                {selectedCountry.territories.map((t, idx) => (
-                  <React.Fragment key={t.iso2}>
-                    <button 
-                      className="relationship-text-btn"
-                      onClick={() => {
-                        const target = allCountries.find(c => c.iso2 === t.iso2);
-                        if (target) onSelectCountry(target);
-                      }}
-                    >
-                      {t.name_pl}
-                    </button>
-                    {idx < selectedCountry.territories!.length - 1 ? ', ' : ''}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-          )}
+      <div className="discover-container info-block">
+        <div className="section-header">
+          <span className="section-header-icon">✨</span>
+          <label>Odkryj i poznaj kraj</label>
         </div>
+
+        <div id="discover" className=" full-width discover-section scroll-mt">
+        {/* Parent / Territory Relationships */}
+        {(selectedCountry.parent || (selectedCountry.territories && selectedCountry.territories.length > 0)) && (
+          <div className="relationship-nav-box">
+            {selectedCountry.parent && (
+              <div className="parent-info-line">
+                <span className="relationship-tag">Terytorium zależne od:</span>
+                <button 
+                  className="relationship-text-btn"
+                  onClick={() => {
+                    const parent = allCountries.find(c => c.iso2 === selectedCountry.parent?.iso2);
+                    if (parent) onSelectCountry(parent);
+                  }}
+                >
+                  {selectedCountry.parent.name_pl}
+                </button>
+              </div>
+            )}
+            
+            {selectedCountry.territories && selectedCountry.territories.length > 0 && (
+              <div className="territories-info-line">
+                <span className="relationship-tag">Terytoria zależne:</span>
+                <div className="territories-text-list">
+                  {selectedCountry.territories.map((t, idx) => (
+                    <React.Fragment key={t.iso2}>
+                      <button 
+                        className="relationship-text-btn"
+                        onClick={() => {
+                          const target = allCountries.find(c => c.iso2 === t.iso2);
+                          if (target) onSelectCountry(target);
+                        }}
+                      >
+                        {t.name_pl}
+                      </button>
+                      {idx < selectedCountry.territories!.length - 1 ? ', ' : ''}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         {selectedCountry.wiki_summary ? (
           <div className="wiki-summary-text">
