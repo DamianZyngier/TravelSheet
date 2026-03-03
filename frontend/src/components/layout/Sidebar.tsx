@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import type { CountryData } from '../../types';
 import { SECTIONS } from '../../constants';
 import { getLongNameClass } from '../../utils/helpers';
@@ -24,8 +24,36 @@ const Sidebar: React.FC<SidebarProps> = ({
   const prevCountry = currentIndex > 0 ? sortedFullList[currentIndex - 1] : sortedFullList[sortedFullList.length - 1];
   const nextCountry = currentIndex < sortedFullList.length - 1 ? sortedFullList[currentIndex + 1] : sortedFullList[0];
 
+  // Track expanded categories in sidebar
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>(() => {
+    // Initially expand the category containing the active section
+    const initial: Record<string, boolean> = {};
+    const activeCat = SECTIONS.find(s => s.id === activeSection)?.category;
+    if (activeCat) initial[activeCat] = true;
+    return initial;
+  });
+
+  // Auto-expand category if activeSection changes from outside (e.g. scroll)
+  useEffect(() => {
+    const activeCat = SECTIONS.find(s => s.id === activeSection)?.category;
+    if (activeCat && !expandedCategories[activeCat]) {
+      setExpandedCategories(prev => ({ ...prev, [activeCat]: true }));
+    }
+  }, [activeSection]);
+
+  const toggleCategory = (cat: string) => {
+    setExpandedCategories(prev => ({ ...prev, [cat]: !prev[cat] }));
+  };
+
+  const groupedSections = SECTIONS.reduce((acc, s) => {
+    const cat = s.category || 'Inne';
+    if (!acc[cat]) acc[cat] = [];
+    acc[cat].push(s);
+    return acc;
+  }, {} as Record<string, typeof SECTIONS>);
+
   return (
-    <aside className="side-menu">
+    <aside className="side-menu no-print">
       <button className="side-back-button" onClick={() => onSelectCountry(null)}>
         ← Powrót do listy
       </button>
@@ -60,28 +88,37 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       <div className="side-menu-list">
-        {Object.entries(
-          SECTIONS.reduce((acc, s) => {
-            const cat = s.category || 'Inne';
-            if (!acc[cat]) acc[cat] = [];
-            acc[cat].push(s);
-            return acc;
-          }, {} as Record<string, typeof SECTIONS>)
-        ).map(([category, sections]) => (
-          <div key={category} className="side-menu-category-group">
-            <h4 className="side-menu-category-title">{category}</h4>
-            {sections.map(s => (
+        {Object.entries(groupedSections).map(([category, sections]) => {
+          const isExpanded = !!expandedCategories[category];
+          const hasActiveChild = sections.some(s => s.id === activeSection);
+
+          return (
+            <div key={category} className={`side-menu-category-group ${isExpanded ? 'expanded' : ''} ${hasActiveChild ? 'has-active' : ''}`}>
               <button 
-                key={s.id}
-                className={`side-menu-item ${activeSection === s.id ? 'active' : ''}`}
-                onClick={() => scrollToSection(s.id)}
+                className="side-menu-category-toggle"
+                onClick={() => toggleCategory(category)}
               >
-                <span className="side-menu-icon">{s.icon}</span>
-                <span className="side-menu-label">{s.label}</span>
+                <span className="category-toggle-icon">{isExpanded ? '▾' : '▸'}</span>
+                <span className="side-menu-category-title">{category}</span>
               </button>
-            ))}
-          </div>
-        ))}
+              
+              {isExpanded && (
+                <div className="side-menu-sub-items">
+                  {sections.map(s => (
+                    <button 
+                      key={s.id}
+                      className={`side-menu-item ${activeSection === s.id ? 'active' : ''}`}
+                      onClick={() => scrollToSection(s.id)}
+                    >
+                      <span className="side-menu-icon">{s.icon}</span>
+                      <span className="side-menu-label">{s.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </aside>
   );

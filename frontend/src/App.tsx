@@ -400,6 +400,7 @@ function App() {
               getCurrencyExample={getCurrencyExample}
               checkPlugs={checkPlugs}
               getEnlargedPlugUrl={getEnlargedPlugUrl}
+              activeSection={activeSection}
             />
           </div>
         </div>
