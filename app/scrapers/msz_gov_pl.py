@@ -32,10 +32,15 @@ async def fetch_country_urls():
                 if not href: continue
                 if not href.startswith('http'):
                     href = "https://www.gov.pl" + href
+                
+                # Filter to only relevant diplomacy/idp links
+                if "/web/dyplomacja" not in href and "/web/" not in href: continue
+                if "praktyki" in href or "konkursy" in href or "praca" in href: continue
+                
                 title_div = a.select_one('.title') or a
                 name = title_div.get_text().strip()
-                if href.rstrip('/').endswith("informacje-dla-podrozujacych") and "/web/dyplomacja" in href:
-                    if href.count('/') <= 5: continue
+                if len(name) < 2 or len(name) > 50: continue
+
                 name_clean = clean_polish_name(name)
                 urls[name_clean] = href
             _URL_CACHE.update(urls)

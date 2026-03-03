@@ -35,8 +35,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
   formatPLN,
   getCurrencyExample,
   checkPlugs,
-  getEnlargedPlugUrl,
-  activeSection
+  getEnlargedPlugUrl
 }) => {
   const [chartTooltip, setChartTooltip] = useState({ visible: false, x: 0, y: 0, text: '' });
   const [isEmbassiesExpanded, setIsEmbassiesExpanded] = useState(false);

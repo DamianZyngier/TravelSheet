@@ -291,15 +291,21 @@ async def sync_things_batch(db: Session, countries: list[models.Country]):
 async def sync_all_wikidata_info(db: Session):
     countries = db.query(models.Country).all()
     batch_size = 5
+    results = {"success": 0, "errors": 0}
     print(f"Syncing extended info in batches of {batch_size}...")
     for i in range(0, len(countries), batch_size):
         batch = countries[i : i + batch_size]
         print(f"Progress: {i}/{len(countries)} countries...")
-        await sync_wikidata_batch(db, batch)
+        try:
+            await sync_wikidata_batch(db, batch)
+            await asyncio.sleep(0.5)
+            await sync_things_batch(db, batch)
+            results["success"] += len(batch)
+        except Exception as e:
+            logger.error(f"Error in wikidata batch: {e}")
+            results["errors"] += len(batch)
         await asyncio.sleep(1.0)
-        await sync_things_batch(db, batch)
-        await asyncio.sleep(2.0)
-    return {"status": "done"}
+    return results
 
 async def sync_wikidata_country_info(db: Session, country_iso2: str):
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()

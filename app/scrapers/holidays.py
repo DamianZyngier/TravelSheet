@@ -11,6 +11,9 @@ logger = logging.getLogger("uvicorn")
 async def sync_holidays(db: Session, iso2: str, client: httpx.AsyncClient):
     """Sync holidays for a country from Nager.Date API with automatic translation"""
     current_year = date.today().year
+    if iso2.upper() == 'XK':
+        return {"status": "success", "data": []} # Nager.Date does not support Kosovo
+    
     url = f"https://date.nager.at/api/v3/PublicHolidays/{current_year}/{iso2.upper()}"
 
     try:

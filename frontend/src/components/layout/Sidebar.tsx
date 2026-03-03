@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import type { CountryData } from '../../types';
-import { SECTIONS } from '../../constants';
 import { getLongNameClass } from '../../utils/helpers';
 
 interface SidebarProps {

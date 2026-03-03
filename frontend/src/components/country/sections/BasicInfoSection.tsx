@@ -1,6 +1,6 @@
 import React from 'react';
 import type { CountryData } from '../../../types';
-import { DataSource, ExpandableText } from '../../common';
+import { DataSource } from '../../common';
 
 interface BasicInfoSectionProps {
   selectedCountry: CountryData;

@@ -46,7 +46,7 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
     'TH': 'tajlandia', 'TW': 'tajwan', 'TZ': 'tanzania', 'TL': 'timor-wschodni', 'TG': 'togo',
     'TO': 'tonga', 'TT': 'trynidaditobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
     'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
-    'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielkabrytania', 'VN': 'wietnam',
+    'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
     'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
     'AE': 'zjednoczone-emiraty-arabskie'
 }
@@ -55,7 +55,11 @@ CDC_MAPPING = {
     'RU': 'russia', 'US': 'united-states', 'GB': 'united-kingdom',
     'KR': 'south-korea', 'KP': 'north-korea', 'AE': 'united-arab-emirates',
     'CD': 'democratic-republic-of-congo', 'CG': 'congo',
-    'CI': 'ivory-coast', 'SZ': 'eswatini'
+    'CI': 'ivory-coast', 'SZ': 'eswatini', 'MM': 'burma', 'TL': 'east-timor',
+    'ST': 'sao-tome-and-principe', 'BL': 'saint-barthelemy', 'BS': 'the-bahamas',
+    'KN': 'saint-kitts-and-nevis', 'VA': 'vatican-city', 'HK': 'hong-kong-sar',
+    'MO': 'macau-sar', 'RE': 'reunion', 'AX': 'aland-islands', 'PS': 'gaza-and-west-bank',
+    'GM': 'the-gambia'
 }
 
 WIKI_NAME_MAP = {

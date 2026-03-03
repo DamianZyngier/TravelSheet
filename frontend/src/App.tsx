@@ -7,7 +7,7 @@ import CountryGrid from './components/country/CountryGrid'
 import CountryDetail from './components/country/CountryDetail'
 import ChecklistSection from './components/checklist/ChecklistSection'
 import type { CountryData } from './types'
-import { SECTIONS, ALIASES } from './constants'
+import { ALIASES } from './constants'
 import './App.css'
 import logoNoText from './assets/logo-no-text.png'
 import { 
