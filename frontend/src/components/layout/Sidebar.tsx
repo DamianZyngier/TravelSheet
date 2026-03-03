@@ -27,11 +27,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   // Define the main categories and their IDs
   const CATEGORIES = [
     { id: 'summary', label: 'Podsumowanie', icon: '📝', items: 'Info, Podstawowe, Mapa' },
-    { id: 'category-1', label: '1. Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
-    { id: 'category-2', label: '2. Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
-    { id: 'category-3', label: '3. Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
-    { id: 'category-4', label: '4. Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
-    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Prawo, UNESCO, Pamiątki' },
+    { id: 'category-1', label: 'Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
+    { id: 'category-2', label: 'Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
+    { id: 'category-3', label: 'Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
+    { id: 'category-4', label: 'Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
+    { id: 'category-5', label: 'Kultura i Atrakcje', icon: '🏛️', items: 'Prawo, UNESCO, Pamiątki' },
   ];
 
   // Map individual section IDs to category IDs for active state highlighting
@@ -66,20 +66,20 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       <div className="country-navigation">
         <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
+          <span className="nav-arrow">←</span>
           <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
           <div className="nav-info">
             <span className="nav-label">Poprzedni</span>
             <span className={`nav-name ${getLongNameClass(prevCountry?.name_pl || '', 'h3')}`}>{prevCountry?.name_pl}</span>
           </div>
-          <span className="nav-arrow">←</span>
         </button>
         <button className="nav-button next" onClick={() => navigateCountry('next')}>
-          <span className="nav-arrow">→</span>
           <div className="nav-info">
             <span className="nav-label">Następny</span>
             <span className={`nav-name ${getLongNameClass(nextCountry?.name_pl || '', 'h3')}`}>{nextCountry?.name_pl}</span>
           </div>
           <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
+          <span className="nav-arrow">→</span>
         </button>
       </div>
 
