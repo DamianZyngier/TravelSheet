@@ -82,10 +82,10 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           </div>
         </div>
 
-        {/* 1. Przygotowanie i Formalności */}
+        {/* Przygotowanie i Formalności */}
         <div id="category-1" className="category-group scroll-mt">
           <div className="category-group-header-simple">
-            <h3 className="category-group-title">1. Przygotowanie i Formalności</h3>
+            <h3 className="category-group-title">Przygotowanie i Formalności</h3>
           </div>
           <div className="category-content">
             <PracticalSection 
@@ -110,7 +110,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         {/* 2. Zdrowie i Bezpieczeństwo */}
         <div id="category-2" className="category-group scroll-mt">
           <div className="category-group-header-simple">
-            <h3 className="category-group-title">2. Zdrowie i Bezpieczeństwo</h3>
+            <h3 className="category-group-title">Zdrowie i Bezpieczeństwo</h3>
           </div>
           <div className="category-content">
             <SafetyHealthSection 
@@ -131,7 +131,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         {/* 3. Praktyczne Codzienne */}
         <div id="category-3" className="category-group scroll-mt">
           <div className="category-group-header-simple">
-            <h3 className="category-group-title">3. Informacje Praktyczne</h3>
+            <h3 className="category-group-title">Informacje Praktyczne</h3>
           </div>
           <div className="category-content">
             <WeatherForecastSection selectedCountry={selectedCountry} />
@@ -156,7 +156,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         {/* 4. Warunki Środowiskowe */}
         <div id="category-4" className="category-group scroll-mt">
           <div className="category-group-header-simple">
-            <h3 className="category-group-title">4. Warunki Środowiskowe</h3>
+            <h3 className="category-group-title">Warunki Środowiskowe</h3>
           </div>
           <div className="category-content">
             <CostsClimateSection 
@@ -179,7 +179,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         {/* 5. Kultura i Atrakcje */}
         <div id="category-5" className="category-group scroll-mt">
           <div className="category-group-header-simple">
-            <h3 className="category-group-title">5. Kultura i Atrakcje</h3>
+            <h3 className="category-group-title">Kultura i Atrakcje</h3>
           </div>
           <div className="category-content">
             <MiscSection 
