@@ -12,6 +12,30 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
     ? [...selectedCountry.religions].sort((a, b) => b.percentage - a.percentage).slice(0, 3)
     : [];
 
+  const getTimezoneDiff = (tzStr: string | null) => {
+    if (!tzStr) return null;
+    // Warsaw is UTC+1 (winter) / UTC+2 (summer). 
+    // For simplicity and consistency without external libs, we use UTC+1 as base.
+    const warsawOffset = 1;
+    
+    // Extract UTC offset from string like "UTC+05:30" or "UTC-03:00"
+    const match = tzStr.match(/UTC([+-])(\d{2}):(\d{2})/);
+    if (match) {
+      const sign = match[1] === '+' ? 1 : -1;
+      const hours = parseInt(match[2]);
+      const mins = parseInt(match[3]);
+      const offset = sign * (hours + mins/60);
+      const diff = offset - warsawOffset;
+      
+      const diffStr = diff > 0 ? `+${diff}` : `${diff}`;
+      // Clean up .0
+      return diffStr.replace('.0', '') + 'h';
+    }
+    return null;
+  };
+
+  const tzDiff = getTimezoneDiff(selectedCountry.timezone);
+
   return (
     <div id="info" className="info-block full-width basic-info-section scroll-mt">
       <div className="section-header">
@@ -25,7 +49,19 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         </div>
         <div className="info-item-box">
           <strong>Stolica:</strong>
-          <span>{selectedCountry.capital || 'Brak danych'} {selectedCountry.timezone && `(${selectedCountry.timezone})`}</span>
+          <span>
+            {selectedCountry.capital || 'Brak danych'} 
+            {selectedCountry.timezone && (
+              <span style={{ marginLeft: '4px', color: '#64748b' }}>
+                ({selectedCountry.timezone})
+                {tzDiff && (
+                  <span style={{ color: '#059669', fontWeight: 'bold', marginLeft: '6px' }}>
+                    {tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do WAW`}
+                  </span>
+                )}
+              </span>
+            )}
+          </span>
         </div>
         <div className="info-item-box">
           <strong>Ludność:</strong>
