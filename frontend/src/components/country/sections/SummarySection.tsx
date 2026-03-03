@@ -21,7 +21,6 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
           <label>Odkryj i poznaj kraj</label>
         </div>
 
-        <div id="discover" className=" full-width discover-section scroll-mt">
         {/* Travel Types Section */}
         {selectedCountry.travel_types?.categories?.length > 0 && (
           <div className="travel-types-container">
@@ -44,6 +43,7 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
           </div>
         )}
 
+        <div id="discover" className=" full-width discover-section scroll-mt">
         {/* Parent / Territory Relationships */}
         {(selectedCountry.parent || (selectedCountry.territories && selectedCountry.territories.length > 0)) && (
           <div className="relationship-nav-box">
