@@ -68,13 +68,23 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div className="nav-content">
             <span className="nav-arrow">←</span>
             <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
-            <span className="nav-name">{prevCountry?.name_pl}</span>
+            <span className={`nav-name ${
+              prevCountry?.name_pl && prevCountry.name_pl.length > 30 ? 'font-extra-compact' : 
+              prevCountry?.name_pl && prevCountry.name_pl.length > 20 ? 'font-compact' : ''
+            }`}>
+              {prevCountry?.name_pl}
+            </span>
           </div>
         </button>
         <button className="nav-button next" onClick={() => navigateCountry('next')}>
           <span className="nav-label">Następny</span>
           <div className="nav-content">
-            <span className="nav-name">{nextCountry?.name_pl}</span>
+            <span className={`nav-name ${
+              nextCountry?.name_pl && nextCountry.name_pl.length > 30 ? 'font-extra-compact' : 
+              nextCountry?.name_pl && nextCountry.name_pl.length > 20 ? 'font-compact' : ''
+            }`}>
+              {nextCountry?.name_pl}
+            </span>
             <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
             <span className="nav-arrow">→</span>
           </div>

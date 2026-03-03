@@ -176,25 +176,46 @@ function App() {
 
     const options = {
       root: null,
-      rootMargin: '-15% 0px -60% 0px', // Adjusted for better mid-screen detection
-      threshold: [0, 0.1, 0.5] // Multiple thresholds for smoother tracking
+      rootMargin: '-10% 0px -85% 0px', // Narrow detection band at the top
+      threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
+      // Find the first entry that is intersecting
+      const intersecting = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top);
+
+      if (intersecting.length > 0) {
+        setActiveSection(intersecting[0].target.id);
+      }
     }, options);
 
-    const targetIds = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5', 'summary'];
+    const targetIds = ['summary', 'category-1', 'category-2', 'category-3', 'category-4', 'category-5'];
     targetIds.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // Handle edge cases: very top and very bottom
+    const handleScroll = () => {
+      const scrollPos = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      if (scrollPos < 100) {
+        setActiveSection('summary');
+      } else if (scrollPos + windowHeight >= documentHeight - 50) {
+        setActiveSection('category-5');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [selectedCountry]);
 
   // Filtering logic

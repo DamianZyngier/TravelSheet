@@ -2045,6 +2045,14 @@
   flex: 1;
 }
 
+.nav-name.font-compact {
+  font-size: 0.75rem;
+}
+
+.nav-name.font-extra-compact {
+  font-size: 0.65rem;
+}
+
 .nav-arrow {
   font-size: 0.85rem;
   color: #cbd5e0;
