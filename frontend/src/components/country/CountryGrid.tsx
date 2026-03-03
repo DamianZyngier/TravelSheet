@@ -28,20 +28,27 @@ const CountryGrid: React.FC<CountryGridProps> = ({
 
   return (
     <div className="country-grid-container">
-      {showOnlyFavorites && hasFavorites && (
+      {showOnlyFavorites && (
         <>
           <div className="grid-section-label">Zapamiętane kraje</div>
-          <div className="country-grid">
-            {favoriteList.map(country => (
-              <CountryCard 
-                key={country.iso2} 
-                country={country} 
-                onClick={() => onSelectCountry(country)} 
-                isFavorite={true}
-                toggleFavorite={toggleFavorite}
-              />
-            ))}
-          </div>
+          {hasFavorites ? (
+            <div className="country-grid">
+              {favoriteList.map(country => (
+                <CountryCard 
+                  key={country.iso2} 
+                  country={country} 
+                  onClick={() => onSelectCountry(country)} 
+                  isFavorite={true}
+                  toggleFavorite={toggleFavorite}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="empty-favorites-message">
+              <p>Nie masz jeszcze żadnych ulubionych krajów.</p>
+              <p className="hint">Kliknij ikonę gwiazdki ⭐ przy dowolnym kraju, aby go tu dodać i mieć do niego szybki dostęp.</p>
+            </div>
+          )}
           
           {hasRemaining && (
             <div className="grid-separator">
