@@ -30,6 +30,8 @@ function App() {
   const [filterContinent, setFilterContinent] = useState('all')
   const [filterSafety, setFilterSafety] = useState('all')
   const [activeSection, setActiveSection] = useState('summary')
+  const isManualScrollRef = useRef(false)
+  const manualScrollTimeoutRef = useRef<number | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [favorites, setFavorites] = useState<string[]>(() => {
     const saved = localStorage.getItem('travelsheet_favorites');
@@ -166,8 +168,18 @@ function App() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      setActiveSection(id) // Set immediately for instant visual feedback
-      element.scrollIntoView({ behavior: 'smooth' })
+      if (manualScrollTimeoutRef.current) {
+        window.clearTimeout(manualScrollTimeoutRef.current);
+      }
+      isManualScrollRef.current = true;
+      setActiveSection(id);
+      element.scrollIntoView({ behavior: 'smooth' });
+      
+      // Reset the manual scroll flag after smooth scroll is likely finished
+      manualScrollTimeoutRef.current = window.setTimeout(() => {
+        isManualScrollRef.current = false;
+        manualScrollTimeoutRef.current = null;
+      }, 1000);
     }
   }
 
@@ -176,12 +188,14 @@ function App() {
 
     const options = {
       root: null,
-      rootMargin: '-10% 0px -85% 0px', // Narrow detection band at the top
+      rootMargin: '-10% 0px -85% 0px',
       threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
-      // Find the first entry that is intersecting
+      // Ignore observer updates if we are currently manually scrolling (clicked a sidebar item)
+      if (isManualScrollRef.current) return;
+
       const intersecting = entries
         .filter(entry => entry.isIntersecting)
         .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top);
