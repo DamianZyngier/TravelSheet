@@ -165,13 +165,13 @@ async def async_sparql_get(query: str, description: str = "SPARQL"):
     headers["Content-Type"] = "application/x-www-form-urlencoded"
     headers["Accept"] = "application/sparql-results+json"
     
-    max_retries = 2 # Reduced retries during struggle
+    max_retries = 2
     base_delay = 5
     
     for attempt in range(max_retries):
         try:
             async with _WIKIDATA_SEMAPHORE:
-                async with httpx.AsyncClient(timeout=60.0) as client: # Reduced timeout to fail faster
+                async with httpx.AsyncClient(timeout=60.0) as client:
                     resp = await client.post(url, data={'query': query}, headers=headers)
                     
                     if resp.status_code == 200:

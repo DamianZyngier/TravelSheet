@@ -13,9 +13,9 @@ TripSheet is a comprehensive travel safety and information portal. It aggregates
 ## Repository Structure
 - `app/`: FastAPI backend and database models.
   - `api/`: API endpoints for data access and administration.
-  - `scrapers/`: Parallelized modules for fetching data (MSZ, Wiki, UNESCO, etc.).
+  - `scrapers/`: Parallelized modules for fetching data (MSZ, Wiki, CDC, etc.).
 - `frontend/`: React source code and Vitest suite.
-- `scripts/`: Utility scripts for database management, migration, and eager-loading export.
+- `scripts/`: Production-ready utility scripts for database management, seeding, and export.
 - `docs/`: Production build and the main `data.json` file.
 - `travel_cheatsheet.db`: Versioned SQLite database (persisted for incremental updates).
 
