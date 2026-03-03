@@ -6,6 +6,7 @@ import LegalModal from './components/layout/LegalModal'
 import CountryGrid from './components/country/CountryGrid'
 import CountryDetail from './components/country/CountryDetail'
 import ChecklistSection from './components/checklist/ChecklistSection'
+import PassengerRightsSection from './components/static/PassengerRightsSection'
 import type { CountryData } from './types'
 import { ALIASES } from './constants'
 import './App.css'
@@ -25,6 +26,10 @@ function App() {
   const [activeChecklist, setActiveChecklist] = useState<string | null>(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('checklist');
+  })
+  const [activeStaticPage, setActiveStaticPage] = useState<string | null>(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('page');
   })
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
@@ -109,12 +114,28 @@ function App() {
     setActiveChecklist(variant)
     localStorage.setItem('travelsheet_last_checklist', variant);
     setSelectedCountry(null)
+    setActiveStaticPage(null)
     window.scrollTo(0, 0)
     
     const url = new URL(window.location.href);
     url.searchParams.delete('country');
     url.searchParams.delete('kraj');
+    url.searchParams.delete('page');
     url.searchParams.set('checklist', variant);
+    window.history.pushState({}, '', url.toString());
+  }, [])
+
+  const handleOpenPassengerRights = useCallback(() => {
+    setActiveStaticPage('passenger-rights')
+    setSelectedCountry(null)
+    setActiveChecklist(null)
+    window.scrollTo(0, 0)
+
+    const url = new URL(window.location.href);
+    url.searchParams.delete('country');
+    url.searchParams.delete('kraj');
+    url.searchParams.delete('checklist');
+    url.searchParams.set('page', 'passenger-rights');
     window.history.pushState({}, '', url.toString());
   }, [])
 
@@ -123,17 +144,25 @@ function App() {
       const params = new URLSearchParams(window.location.search);
       const countryIso = params.get('country') || params.get('kraj');
       const checklistVar = params.get('checklist');
+      const pageVar = params.get('page');
       
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
         setActiveChecklist(null);
+        setActiveStaticPage(null);
       } else if (checklistVar) {
         setActiveChecklist(checklistVar);
         localStorage.setItem('travelsheet_last_checklist', checklistVar);
         setSelectedCountry(null);
+        setActiveStaticPage(null);
+      } else if (pageVar) {
+        setActiveStaticPage(pageVar);
+        setSelectedCountry(null);
+        setActiveChecklist(null);
       } else {
         setSelectedCountry(null);
         setActiveChecklist(null);
+        setActiveStaticPage(null);
       }
     };
 
@@ -143,14 +172,21 @@ function App() {
       const params = new URLSearchParams(window.location.search);
       const countryIso = params.get('country') || params.get('kraj');
       const checklistVar = params.get('checklist');
+      const pageVar = params.get('page');
       
       if (countryIso && countries[countryIso]) {
         setSelectedCountry(countries[countryIso]);
         setActiveChecklist(null);
+        setActiveStaticPage(null);
       } else if (checklistVar) {
         setActiveChecklist(checklistVar);
         localStorage.setItem('travelsheet_last_checklist', checklistVar);
         setSelectedCountry(null);
+        setActiveStaticPage(null);
+      } else if (pageVar) {
+        setActiveStaticPage(pageVar);
+        setSelectedCountry(null);
+        setActiveChecklist(null);
       }
     }
 
@@ -162,9 +198,16 @@ function App() {
       const lastVariant = localStorage.getItem('travelsheet_last_checklist') || 'minimum';
       handleOpenChecklist(lastVariant);
     };
+    const handleNavPassengerRights = () => {
+      handleOpenPassengerRights();
+    };
     window.addEventListener('nav-checklist', handleNavChecklist);
-    return () => window.removeEventListener('nav-checklist', handleNavChecklist);
-  }, [handleOpenChecklist]);
+    window.addEventListener('nav-passenger-rights', handleNavPassengerRights);
+    return () => {
+      window.removeEventListener('nav-checklist', handleNavChecklist);
+      window.removeEventListener('nav-passenger-rights', handleNavPassengerRights);
+    };
+  }, [handleOpenChecklist, handleOpenPassengerRights]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -344,7 +387,7 @@ function App() {
 
   return (
     <div className="app-container" onContextMenu={() => true}>
-      {!selectedCountry && !activeChecklist ? (
+      {!selectedCountry && !activeChecklist && !activeStaticPage ? (
         <>
           <Header 
             searchQuery={searchQuery}
@@ -378,6 +421,15 @@ function App() {
             onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
           />
         </>
+      ) : activeStaticPage === 'passenger-rights' ? (
+        <PassengerRightsSection 
+          onBack={() => {
+            setActiveStaticPage(null);
+            const url = new URL(window.location.href);
+            url.searchParams.delete('page');
+            window.history.pushState({}, '', url.toString());
+          }} 
+        />
       ) : activeChecklist ? (
         <ChecklistSection 
           variantId={activeChecklist}
