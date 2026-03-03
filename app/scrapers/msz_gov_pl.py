@@ -225,6 +225,31 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
                 if curr and curr.name in ['h2', 'h3']: break
         customs_full = "\n\n".join(customs_text_list)
 
+    # Populate laws_and_customs table
+    db.query(models.LawAndCustom).filter(models.LawAndCustom.country_id == country.id).delete()
+    if customs_text_list:
+        current_cat = "custom"
+        for p in customs_text_list:
+            p_lower = p.lower()
+            if "przepisy prawne" in p_lower or "prawo" in p_lower:
+                current_cat = "law"
+            elif "zwyczaje" in p_lower or "obyczaje" in p_lower:
+                current_cat = "custom"
+            elif "pamiątk" in p_lower or "cło" in p_lower:
+                current_cat = "souvenir"
+            
+            # Simple title extraction (first 5 words or up to first period)
+            title = p.split('.')[0][:100]
+            if len(title) < 10 and len(p) > 10:
+                title = " ".join(p.split()[:5])
+
+            db.add(models.LawAndCustom(
+                country_id=country.id,
+                category=current_cat,
+                title=title,
+                description=p
+            ))
+
     def find_specific(keywords, text_list):
         for p in text_list:
             if any(k in p.lower() for k in keywords) and len(p) < 1000:

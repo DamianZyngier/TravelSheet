@@ -109,7 +109,25 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
             <label>Prawo i obyczaje</label>
           </div>
 
-          {(selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code || selectedCountry.practical.local_norms) ? (
+          {(selectedCountry.laws_and_customs && selectedCountry.laws_and_customs.length > 0) ? (
+            <div className="laws-customs-list" style={{ marginTop: '1rem' }}>
+              <div className="law-environment-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+                {selectedCountry.laws_and_customs.map((lc, idx) => (
+                  <div key={idx} className="law-item-box-v2">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                      <span style={{ fontSize: '1.2rem' }}>
+                        {lc.category === 'law' ? '⚖️' : lc.category === 'souvenir' ? '🎁' : '🤝'}
+                      </span>
+                      <strong style={{ color: '#2d3748' }}>{lc.title}</strong>
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: '#4a5568', lineHeight: '1.5' }}>
+                      <ExpandableText text={lc.description} maxLength={300} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (selectedCountry.alcohol_status || selectedCountry.lgbtq_status || selectedCountry.natural_hazards || selectedCountry.practical.tipping_culture || selectedCountry.practical.dress_code || selectedCountry.practical.local_norms) ? (
             <div className="law-environment-grid" style={{ marginTop: '1rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
               {selectedCountry.alcohol_status && selectedCountry.alcohol_status !== selectedCountry.practical.local_norms && (
                 <div className="law-item">
@@ -165,7 +183,7 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
               )}
             </div>
           ) : (
-            <div className="no-data-msg">Brak szczegółowych informacji o prawie i obyczajach dla tego kraju.</div>
+            <div className="no-data-msg">Brak szczegółowych informacji o prawie i obyczajach dla tego kraju. Sekcja w trakcie aktualizacji.</div>
           )}
           
           <DataSource sources={['MSZ', 'WIKI']} lastUpdated={selectedCountry.safety.last_updated} />

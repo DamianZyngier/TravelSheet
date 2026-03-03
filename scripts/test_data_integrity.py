@@ -102,13 +102,19 @@ def test_data_integrity():
         if not isinstance(climate, list):
             errors.append(f"{iso}: 'climate' is not a list")
 
-        # 12. Religions & Languages & Embassies
-        for list_field in ['religions', 'languages', 'embassies']:
+        # 12. Religions & Languages & Embassies & Laws and Customs
+        for list_field in ['religions', 'languages', 'embassies', 'laws_and_customs']:
             field_val = country.get(list_field)
             if not isinstance(field_val, list):
                 errors.append(f"{iso}: '{list_field}' is not a list")
             if list_field == 'embassies' and field_val:
                 any_embassies = True
+            
+            if list_field == 'laws_and_customs' and field_val:
+                for lc in field_val:
+                    for field in ['category', 'title', 'description']:
+                        if field not in lc:
+                            errors.append(f"{iso}: Law/Custom missing field '{field}'")
 
     # Critical check: do we have ANY data?
     # For basic seeding only, these might be empty. 

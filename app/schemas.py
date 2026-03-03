@@ -91,12 +91,33 @@ class CountryBasic(BaseModel):
     unesco_count: int = 0
     travel_types: Optional[str] = None
 
+    @field_validator("iso_alpha2")
+    @classmethod
+    def validate_iso2(cls, v: str) -> str:
+        if len(v) != 2:
+            raise ValueError("iso_alpha2 must be exactly 2 characters")
+        return v.upper()
+
+    @field_validator("iso_alpha3")
+    @classmethod
+    def validate_iso3(cls, v: str) -> str:
+        if len(v) != 3:
+            raise ValueError("iso_alpha3 must be exactly 3 characters")
+        return v.upper()
+
     class Config:
         from_attributes = True
 
 class ReligionSchema(BaseModel):
     name: str
     percentage: Optional[float]
+
+    @field_validator("percentage")
+    @classmethod
+    def validate_percentage(cls, v: Optional[float]) -> Optional[float]:
+        if v is not None and (v < 0 or v > 100):
+            raise ValueError("Percentage must be between 0 and 100")
+        return v
 
     class Config:
         from_attributes = True
@@ -119,6 +140,13 @@ class WeatherSchema(BaseModel):
     wind_kph: Optional[float]
     forecast: List[dict] = []
     last_updated: Optional[datetime]
+
+    @field_validator("humidity")
+    @classmethod
+    def validate_humidity(cls, v: Optional[int]) -> Optional[int]:
+        if v is not None and (v < 0 or v > 100):
+            raise ValueError("Humidity must be between 0 and 100")
+        return v
 
     @field_validator("forecast", mode="before")
     @classmethod

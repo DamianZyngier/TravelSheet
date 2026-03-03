@@ -167,4 +167,10 @@ export interface CountryData {
       icon: string;
     }[];
   };
+  laws_and_customs?: {
+    category: string;
+    title: string;
+    description: string;
+    last_updated?: string;
+  }[];
 }

@@ -25,6 +25,7 @@ def export_all():
             selectinload(models.Country.holidays),
             selectinload(models.Country.climate),
             selectinload(models.Country.territories),
+            selectinload(models.Country.laws_and_customs),
             joinedload(models.Country.currency),
             joinedload(models.Country.safety),
             joinedload(models.Country.practical),
@@ -282,6 +283,15 @@ def export_all():
                     "season": cl.season_type,
                     "last_updated": str(cl.last_updated) if cl.last_updated else None
                 } for cl in c.climate
+            ]
+
+            processed_data["laws_and_customs"] = [
+                {
+                    "category": lc.category,
+                    "title": lc.title,
+                    "description": lc.description,
+                    "last_updated": str(lc.last_updated) if lc.last_updated else None
+                } for lc in c.laws_and_customs
             ]
 
             output[c.iso_alpha2] = processed_data
