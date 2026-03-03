@@ -166,8 +166,8 @@ function App() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
+      setActiveSection(id) // Set immediately for instant visual feedback
       element.scrollIntoView({ behavior: 'smooth' })
-      setActiveSection(id)
     }
   }
 
@@ -176,8 +176,8 @@ function App() {
 
     const options = {
       root: null,
-      rootMargin: '-100px 0px -70% 0px',
-      threshold: 0
+      rootMargin: '-15% 0px -60% 0px', // Adjusted for better mid-screen detection
+      threshold: [0, 0.1, 0.5] // Multiple thresholds for smoother tracking
     };
 
     const observer = new IntersectionObserver((entries) => {

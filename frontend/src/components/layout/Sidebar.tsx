@@ -35,16 +35,14 @@ const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   // Map individual section IDs to category IDs for active state highlighting
-  const sectionToCategoryMap: Record<string, string> = SECTIONS.reduce((acc, s) => {
-    if (s.category === 'Podsumowanie') acc[s.id] = 'summary';
-    else if (s.category?.includes('1.')) acc[s.id] = 'category-1';
-    else if (s.category?.includes('2.')) acc[s.id] = 'category-2';
-    else if (s.category?.includes('3.')) acc[s.id] = 'category-3';
-    else if (s.category?.includes('4.')) acc[s.id] = 'category-4';
-    else if (s.category?.includes('5.')) acc[s.id] = 'category-5';
-    else if (s.category?.includes('Kultura')) acc[s.id] = 'category-5';
-    return acc;
-  }, {} as Record<string, string>);
+  const sectionToCategoryMap: Record<string, string> = {
+    'summary': 'summary',
+    'category-1': 'category-1',
+    'category-2': 'category-2',
+    'category-3': 'category-3',
+    'category-4': 'category-4',
+    'category-5': 'category-5',
+  };
 
   const activeCategoryId = sectionToCategoryMap[activeSection] || 'summary';
 
