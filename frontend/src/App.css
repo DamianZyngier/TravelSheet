@@ -289,14 +289,14 @@
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   position: relative;
-  /* Removed overflow: hidden to prevent clipping of borders/shadows if needed, 
-     but actually it was clipping the shadow from transform */
+}
+
 .side-menu-category-item::before {
   content: '';
   position: absolute;
-  left: -1px; /* Align with the border */
   top: -1px;
   bottom: -1px;
+  left: -1px;
   width: 0;
   background-color: #3182ce;
   transition: width 0.2s ease;
@@ -304,15 +304,11 @@
   z-index: 1;
 }
 
-.side-menu-category-item.active::before {
-  width: 5px;
-}
-
+.side-menu-category-item:hover {
   border-color: #cbd5e0;
   background-color: #f8fafc;
-  /* Removed translateY(-2px) to prevent top clipping */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transform: scale(1.01); /* Subtle scale instead of move */
+  transform: scale(1.01);
 }
 
 .side-menu-category-item.active {
@@ -324,7 +320,7 @@
 }
 
 .side-menu-category-item.active::before {
-  width: 4px;
+  width: 6px;
 }
 
 .category-item-main {
