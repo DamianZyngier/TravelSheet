@@ -29,7 +29,7 @@ describe('Helpers Unit Tests', () => {
 
   it('getLongNameClass should return correct font class', () => {
     expect(getLongNameClass('Polska', 'h3')).toBe('');
-    expect(getLongNameClass('Zjednoczone Emiraty Arabskie', 'h3')).toBe('font-very-small');
+    expect(getLongNameClass('Zjednoczone Emiraty Arabskie', 'h3')).toBe('font-small'); // Now small, not very-small
     expect(getLongNameClass('Demokratyczna Republika Konga', 'h2')).toBe('font-small');
   });
 });

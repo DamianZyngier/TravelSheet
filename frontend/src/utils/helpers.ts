@@ -52,11 +52,11 @@ export const getMapSettings = (country: CountryData) => {
 
 export const getLongNameClass = (name: string, type: 'h3' | 'h2') => {
   if (type === 'h3') {
-    if (name.length > 25) return 'font-very-small';
-    if (name.length > 18) return 'font-small';
+    if (name.length > 35) return 'font-very-small';
+    if (name.length > 25) return 'font-small';
   } else {
-    if (name.length > 30) return 'font-very-small';
-    if (name.length > 20) return 'font-small';
+    if (name.length > 40) return 'font-very-small';
+    if (name.length > 25) return 'font-small';
   }
   return '';
 };
