@@ -63,43 +63,116 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
       </div>
 
       <div className="detail-body">
-        <SummarySection 
-          selectedCountry={selectedCountry} 
-          allCountries={allCountries}
-          onSelectCountry={onSelectCountry}
-        />
-        
-        {/* Info between Discover and Weather */}
-        <BasicInfoSection selectedCountry={selectedCountry} />
+        {/* 1. Przygotowanie i Formalności */}
+        <div className="category-group">
+          <h3 className="category-group-title">1. Przygotowanie i Formalności</h3>
+          <div className="category-content">
+            <PracticalSection 
+              selectedCountry={selectedCountry}
+              formatPLN={formatPLN}
+              getCurrencyExample={getCurrencyExample}
+              checkPlugs={checkPlugs}
+              getEnlargedPlugUrl={getEnlargedPlugUrl}
+              onlySections={['docs', 'currency']}
+            />
+            <MiscSection 
+              selectedCountry={selectedCountry}
+              isEmbassiesExpanded={isEmbassiesExpanded}
+              setIsEmbassiesExpanded={setIsEmbassiesExpanded}
+              isUnescoExpanded={isUnescoExpanded}
+              setIsUnescoExpanded={setIsUnescoExpanded}
+              onlySections={['embassies']}
+            />
+          </div>
+        </div>
 
-        <WeatherForecastSection selectedCountry={selectedCountry} />
+        {/* 2. Zdrowie i Bezpieczeństwo */}
+        <div className="category-group">
+          <h3 className="category-group-title">2. Zdrowie i Bezpieczeństwo</h3>
+          <div className="category-content">
+            <SafetyHealthSection 
+              selectedCountry={selectedCountry} 
+              onlySections={['health', 'safety']}
+            />
+            <PracticalSection 
+              selectedCountry={selectedCountry}
+              formatPLN={formatPLN}
+              getCurrencyExample={getCurrencyExample}
+              checkPlugs={checkPlugs}
+              getEnlargedPlugUrl={getEnlargedPlugUrl}
+              onlySections={['water']}
+            />
+          </div>
+        </div>
 
-        {/* The rest follows */}
-        <PracticalSection 
-          selectedCountry={selectedCountry}
-          formatPLN={formatPLN}
-          getCurrencyExample={getCurrencyExample}
-          checkPlugs={checkPlugs}
-          getEnlargedPlugUrl={getEnlargedPlugUrl}
-        />
+        {/* 3. Praktyczne Codzienne */}
+        <div className="category-group">
+          <h3 className="category-group-title">3. Praktyczne Codzienne</h3>
+          <div className="category-content">
+            <WeatherForecastSection selectedCountry={selectedCountry} />
+            <PracticalSection 
+              selectedCountry={selectedCountry}
+              formatPLN={formatPLN}
+              getCurrencyExample={getCurrencyExample}
+              checkPlugs={checkPlugs}
+              getEnlargedPlugUrl={getEnlargedPlugUrl}
+              onlySections={['plugs']}
+            />
+            <EmergencySection selectedCountry={selectedCountry} />
+            <CostsClimateSection 
+              selectedCountry={selectedCountry}
+              chartTooltip={chartTooltip}
+              setChartTooltip={setChartTooltip}
+              onlySections={['costs']}
+            />
+          </div>
+        </div>
 
-        <EmergencySection selectedCountry={selectedCountry} />
+        {/* 4. Warunki Środowiskowe */}
+        <div className="category-group">
+          <h3 className="category-group-title">4. Warunki Środowiskowe</h3>
+          <div className="category-content">
+            <CostsClimateSection 
+              selectedCountry={selectedCountry}
+              chartTooltip={chartTooltip}
+              setChartTooltip={setChartTooltip}
+              onlySections={['climate']}
+            />
+            <MiscSection 
+              selectedCountry={selectedCountry}
+              isEmbassiesExpanded={isEmbassiesExpanded}
+              setIsEmbassiesExpanded={setIsEmbassiesExpanded}
+              isUnescoExpanded={isUnescoExpanded}
+              setIsUnescoExpanded={setIsUnescoExpanded}
+              onlySections={['holidays']}
+            />
+          </div>
+        </div>
 
-        <CostsClimateSection 
-          selectedCountry={selectedCountry}
-          chartTooltip={chartTooltip}
-          setChartTooltip={setChartTooltip}
-        />
-
-        <MiscSection 
-          selectedCountry={selectedCountry}
-          isEmbassiesExpanded={isEmbassiesExpanded}
-          setIsEmbassiesExpanded={setIsEmbassiesExpanded}
-          isUnescoExpanded={isUnescoExpanded}
-          setIsUnescoExpanded={setIsUnescoExpanded}
-        />
-
-        <SafetyHealthSection selectedCountry={selectedCountry} />
+        {/* 5. Kultura i Atrakcje */}
+        <div className="category-group">
+          <h3 className="category-group-title">5. Kultura i Atrakcje</h3>
+          <div className="category-content">
+            <SummarySection 
+              selectedCountry={selectedCountry} 
+              allCountries={allCountries}
+              onSelectCountry={onSelectCountry}
+            />
+            <BasicInfoSection selectedCountry={selectedCountry} />
+            <SafetyHealthSection 
+              selectedCountry={selectedCountry} 
+              onlySections={['law']}
+            />
+            <MiscSection 
+              selectedCountry={selectedCountry}
+              isEmbassiesExpanded={isEmbassiesExpanded}
+              setIsEmbassiesExpanded={setIsEmbassiesExpanded}
+              isUnescoExpanded={isUnescoExpanded}
+              setIsUnescoExpanded={setIsUnescoExpanded}
+              onlySections={['unesco']}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

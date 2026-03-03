@@ -67,23 +67,32 @@ export const PLUG_IMAGES: Record<string, string> = {
 };
 
 export const SECTIONS = [
-  { id: 'summary', label: 'Podsumowanie', icon: '📝' },
-  { id: 'discover', label: 'Poznaj kraj', icon: '✨' },
-  { id: 'info', label: 'Informacje', icon: 'ℹ️' },
-  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️' },
-  { id: 'docs', label: 'Dokumenty', icon: '🛂' },
-  { id: 'currency', label: 'Waluta', icon: '💰' },
-  { id: 'water', label: 'Woda z kranu', icon: '🚰' },
-  { id: 'plugs', label: 'Gniazdka', icon: '🔌' },
-  { id: 'emergency', label: 'Telefony', icon: '🚨' },
-  { id: 'costs', label: 'Ceny', icon: '📊' },
-  { id: 'climate', label: 'Klimat', icon: '🌤️' },
-  { id: 'holidays', label: 'Święta', icon: '📅' },
-  { id: 'embassies', label: 'Ambasady', icon: '🏢' },
-  { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️' },
-  { id: 'health', label: 'Zdrowie', icon: '💉' },
-  { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️' },
-  { id: 'law', label: 'Prawo', icon: '⚖️' },
+  // 1. Przygotowanie i Formalności
+  { id: 'docs', label: 'Dokumenty', icon: '🛂', category: 'Przygotowanie i Formalności' },
+  { id: 'currency', label: 'Waluta', icon: '💰', category: 'Przygotowanie i Formalności' },
+  { id: 'embassies', label: 'Ambasady', icon: '🏢', category: 'Przygotowanie i Formalności' },
+
+  // 2. Zdrowie i Bezpieczeństwo
+  { id: 'health', label: 'Zdrowie', icon: '💉', category: 'Zdrowie i Bezpieczeństwo' },
+  { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️', category: 'Zdrowie i Bezpieczeństwo' },
+  { id: 'water', label: 'Woda z kranu', icon: '🚰', category: 'Zdrowie i Bezpieczeństwo' },
+
+  // 3. Praktyczne Codzienne
+  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️', category: 'Praktyczne Codzienne' },
+  { id: 'plugs', label: 'Gniazdka', icon: '🔌', category: 'Praktyczne Codzienne' },
+  { id: 'emergency', label: 'Telefony', icon: '🚨', category: 'Praktyczne Codzienne' },
+  { id: 'costs', label: 'Ceny', icon: '📊', category: 'Praktyczne Codzienne' },
+
+  // 4. Warunki Środowiskowe
+  { id: 'climate', label: 'Klimat', icon: '🌤️', category: 'Warunki Środowiskowe' },
+  { id: 'holidays', label: 'Święta', icon: '📅', category: 'Warunki Środowiskowe' },
+
+  // 5. Kultura i Atrakcje
+  { id: 'summary', label: 'Podsumowanie', icon: '📝', category: 'Kultura i Atrakcje' },
+  { id: 'discover', label: 'Poznaj kraj', icon: '✨', category: 'Kultura i Atrakcje' },
+  { id: 'info', label: 'Informacje', icon: 'ℹ️', category: 'Kultura i Atrakcje' },
+  { id: 'law', label: 'Prawo', icon: '⚖️', category: 'Kultura i Atrakcje' },
+  { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️', category: 'Kultura i Atrakcje' },
 ];
 
 export const ALIASES: Record<string, string[]> = {

@@ -60,15 +60,27 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       <div className="side-menu-list">
-        {SECTIONS.map(s => (
-          <button 
-            key={s.id}
-            className={`side-menu-item ${activeSection === s.id ? 'active' : ''}`}
-            onClick={() => scrollToSection(s.id)}
-          >
-            <span className="side-menu-icon">{s.icon}</span>
-            <span className="side-menu-label">{s.label}</span>
-          </button>
+        {Object.entries(
+          SECTIONS.reduce((acc, s) => {
+            const cat = s.category || 'Inne';
+            if (!acc[cat]) acc[cat] = [];
+            acc[cat].push(s);
+            return acc;
+          }, {} as Record<string, typeof SECTIONS>)
+        ).map(([category, sections]) => (
+          <div key={category} className="side-menu-category-group">
+            <h4 className="side-menu-category-title">{category}</h4>
+            {sections.map(s => (
+              <button 
+                key={s.id}
+                className={`side-menu-item ${activeSection === s.id ? 'active' : ''}`}
+                onClick={() => scrollToSection(s.id)}
+              >
+                <span className="side-menu-icon">{s.icon}</span>
+                <span className="side-menu-label">{s.label}</span>
+              </button>
+            ))}
+          </div>
         ))}
       </div>
     </aside>

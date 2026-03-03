@@ -3,6 +3,13 @@
 ## Project Overview
 TripSheet is a comprehensive travel safety and information portal. It aggregates data from multiple official and public sources to provide travelers with up-to-date information on safety, visas, health, costs, climate, and local laws for every country in the world.
 
+Data is grouped into 5 logical categories for better UX:
+1. **Przygotowanie i Formalności** (Docs, Currency, Embassies)
+2. **Zdrowie i Bezpieczeństwo** (Health, Safety, Water)
+3. **Praktyczne Codzienne** (Weather, Plugs, Phones, Costs)
+4. **Warunki Środowiskowe** (Climate, Holidays)
+5. **Kultura i Atrakcje** (Summary, Discover, Law, UNESCO)
+
 ## Tech Stack
 - **Frontend**: React (TypeScript), Vite, Vanilla CSS.
 - **Backend/Scrapers**: Python 3.10+, FastAPI, SQLAlchemy, Pydantic, SQLite.
