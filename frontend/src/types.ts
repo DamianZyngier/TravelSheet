@@ -90,6 +90,8 @@ export interface CountryData {
     roaming_info: string;
     license_type: string;
     souvenirs: string;
+    tipping_culture: string | null;
+    drinking_age: string | null;
     last_updated: string | null;
   };
   costs?: {

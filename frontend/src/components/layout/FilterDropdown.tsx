@@ -42,6 +42,16 @@ const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, acti
   );
 };
 
+interface FilterDropdownProps {
+  filterContinent: string;
+  setFilterContinent: (c: string) => void;
+  filterSafety: string;
+  setFilterSafety: (s: string) => void;
+  filterTravelType: string;
+  setFilterTravelType: (t: string) => void;
+  continents: string[];
+}
+
 const FilterDropdown: React.FC<FilterDropdownProps> = ({
   filterContinent,
   setFilterContinent,
@@ -163,7 +173,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
                 <ContinentIcon name="All" active={filterContinent === 'all'} />
                 <span className="continent-tile-label">Wszystkie</span>
               </button>
-              {continents.map(c => {
+              {continents.map((c: string) => {
                 const style = continentStyles[c] || { color: '#4a5568', bg: '#f7fafc' };
                 const isActive = filterContinent === c;
                 return (
