@@ -51,7 +51,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git stash
+          git stash -u
           git pull origin master --rebase
           git stash pop || echo "Nothing to pop"
 
@@ -60,5 +60,5 @@ jobs:
         with:
           commit_message: "chore: weekly full sync [skip ci]"
           file_pattern: |
-            docs/data.json
+            docs/
             travel_cheatsheet.db
