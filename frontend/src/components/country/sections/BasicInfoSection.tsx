@@ -52,14 +52,21 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <span>
             {selectedCountry.capital || 'Brak danych'} 
             {selectedCountry.timezone && (
-              <span style={{ marginLeft: '4px', color: '#64748b' }}>
-                ({selectedCountry.timezone})
+              <>
+                <span style={{ marginLeft: '4px', color: '#64748b', fontSize: '0.85rem' }}>
+                  ({selectedCountry.timezone})
+                </span>
                 {tzDiff && (
-                  <span style={{ color: '#059669', fontWeight: 'bold', marginLeft: '6px' }}>
-                    {tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do WAW`}
+                  <span style={{ 
+                    color: tzDiff === '0h' ? '#4299e1' : '#48bb78', 
+                    fontSize: '0.8rem', 
+                    fontWeight: 'bold', 
+                    marginLeft: '6px' 
+                  }}>
+                    ({tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do WAW`})
                   </span>
                 )}
-              </span>
+              </>
             )}
           </span>
         </div>
