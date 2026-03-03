@@ -78,10 +78,10 @@ export const SECTIONS = [
   { id: 'water', label: 'Woda z kranu', icon: '🚰', category: 'Zdrowie i Bezpieczeństwo' },
 
   // 3. Praktyczne Codzienne
-  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️', category: 'Praktyczne Codzienne' },
-  { id: 'plugs', label: 'Gniazdka', icon: '🔌', category: 'Praktyczne Codzienne' },
-  { id: 'emergency', label: 'Telefony', icon: '🚨', category: 'Praktyczne Codzienne' },
-  { id: 'costs', label: 'Ceny', icon: '📊', category: 'Praktyczne Codzienne' },
+  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️', category: 'Informacje Praktyczne' },
+  { id: 'plugs', label: 'Gniazdka', icon: '🔌', category: 'Informacje Praktyczne' },
+  { id: 'emergency', label: 'Telefony', icon: '🚨', category: 'Informacje Praktyczne' },
+  { id: 'costs', label: 'Ceny', icon: '📊', category: 'Informacje Praktyczne' },
 
   // 4. Warunki Środowiskowe
   { id: 'climate', label: 'Klimat', icon: '🌤️', category: 'Warunki Środowiskowe' },

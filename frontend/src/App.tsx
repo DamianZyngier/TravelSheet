@@ -176,7 +176,7 @@ function App() {
 
     const options = {
       root: null,
-      rootMargin: '-150px 0px -50% 0px',
+      rootMargin: '-100px 0px -70% 0px',
       threshold: 0
     };
 
@@ -188,8 +188,9 @@ function App() {
       });
     }, options);
 
-    SECTIONS.forEach(section => {
-      const el = document.getElementById(section.id);
+    const targetIds = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5', 'summary'];
+    targetIds.forEach(id => {
+      const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
 

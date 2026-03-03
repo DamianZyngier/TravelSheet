@@ -6,7 +6,7 @@ TripSheet is a comprehensive travel safety and information portal. It aggregates
 Data is grouped into 5 logical categories for better UX (collapsible accordion style):
 1. **Przygotowanie i Formalności** (Docs, Currency, Embassies)
 2. **Zdrowie i Bezpieczeństwo** (Health, Safety, Water)
-3. **Praktyczne Codzienne** (Weather, Plugs, Phones, Costs)
+3. **Informacje Praktyczne** (Weather, Plugs, Phones, Costs)
 4. **Warunki Środowiskowe** (Climate, Holidays)
 5. **Kultura i Atrakcje** (Summary, Discover, Law, UNESCO)
 

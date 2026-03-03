@@ -24,18 +24,20 @@ const Sidebar: React.FC<SidebarProps> = ({
   const prevCountry = currentIndex > 0 ? sortedFullList[currentIndex - 1] : sortedFullList[sortedFullList.length - 1];
   const nextCountry = currentIndex < sortedFullList.length - 1 ? sortedFullList[currentIndex + 1] : sortedFullList[0];
 
-  // Define the 5 main categories and their IDs (matching the ones in CountryDetail)
+  // Define the main categories and their IDs
   const CATEGORIES = [
+    { id: 'summary', label: 'Podsumowanie i Mapa', icon: '📍', items: 'Opis, Flaga, Położenie' },
     { id: 'category-1', label: '1. Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
     { id: 'category-2', label: '2. Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
-    { id: 'category-3', label: '3. Praktyczne Codzienne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
+    { id: 'category-3', label: '3. Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
     { id: 'category-4', label: '4. Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
-    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Opis, Prawo, UNESCO' },
+    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Info, Prawo, UNESCO' },
   ];
 
   // Map individual section IDs to category IDs for active state highlighting
   const sectionToCategoryMap: Record<string, string> = SECTIONS.reduce((acc, s) => {
-    if (s.category?.includes('1.')) acc[s.id] = 'category-1';
+    if (s.id === 'summary') acc[s.id] = 'summary';
+    else if (s.category?.includes('1.')) acc[s.id] = 'category-1';
     else if (s.category?.includes('2.')) acc[s.id] = 'category-2';
     else if (s.category?.includes('3.')) acc[s.id] = 'category-3';
     else if (s.category?.includes('4.')) acc[s.id] = 'category-4';
@@ -43,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     return acc;
   }, {} as Record<string, string>);
 
-  const activeCategoryId = sectionToCategoryMap[activeSection] || 'category-1';
+  const activeCategoryId = sectionToCategoryMap[activeSection] || 'summary';
 
   return (
     <aside className="side-menu no-print">

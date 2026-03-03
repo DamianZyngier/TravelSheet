@@ -266,25 +266,13 @@
   background: #f8fafc;
 }
 
-.category-group-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0;
+.category-group-header-simple {
   background: #edf2f7;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  text-align: left;
-}
-
-.category-group-header:hover {
-  background-color: #e2e8f0;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .category-group-title {
-  padding: 1rem 1.5rem;
   margin: 0;
   font-size: 1.1rem;
   font-weight: 800;
@@ -333,13 +321,14 @@
 .side-menu-category-item:hover {
   border-color: #3182ce;
   background-color: #f7fafc;
-  transform: translateX(4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .side-menu-category-item.active {
   border-color: #3182ce;
   background-color: #ebf8ff;
   border-left: 4px solid #3182ce;
+  box-shadow: 0 2px 4px rgba(49, 130, 206, 0.1);
 }
 
 .category-item-main {
