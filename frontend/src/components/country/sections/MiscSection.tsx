@@ -131,7 +131,11 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
                   <div key={idx} className="embassy-item">
                     <strong>{emb.type} {emb.city ? `w ${emb.city}` : ''}</strong>
                     {emb.address && <p>📍 {emb.address}</p>}
-                    {emb.phone && <p>📞 {emb.phone}</p>}
+                    {emb.phone && (
+                      <p>
+                        📞 <a href={`tel:${emb.phone.replace(/\s+/g, '')}`} className="clickable-phone">{emb.phone}</a>
+                      </p>
+                    )}
                     {emb.email && <p>✉️ <a href={`mailto:${emb.email}`}>{emb.email}</a></p>}
                     {emb.website && <p>🌐 <a href={emb.website} target="_blank" rel="noreferrer">Strona WWW</a></p>}
                   </div>

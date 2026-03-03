@@ -23,10 +23,10 @@ export const DATA_SOURCES = {
 };
 
 export const SAFETY_LABELS: Record<string, string> = {
-  'low': 'Bezpiecznie',
-  'medium': 'Średnio bezpiecznie',
-  'high': 'Niebezpiecznie',
-  'critical': 'Bardzo niebezpiecznie',
+  'low': 'Zachowaj zwykłą ostrożność',
+  'medium': 'Zachowaj szczególną ostrożność',
+  'high': 'Odradzane podróże (niekonieczne)',
+  'critical': 'Odradzane wszelkie podróże',
   'unknown': 'Brak danych'
 };
 
@@ -80,33 +80,33 @@ export const PLUG_IMAGES: Record<string, string> = {
 
 export const SECTIONS = [
   // 1. Przygotowanie i Formalności
-  { id: 'docs', label: 'Dokumenty', icon: '🛂', category: 'Przygotowanie i Formalności' },
-  { id: 'currency', label: 'Waluta', icon: '💰', category: 'Przygotowanie i Formalności' },
-  { id: 'embassies', label: 'Ambasady', icon: '🏢', category: 'Przygotowanie i Formalności' },
+  { id: 'docs', label: 'Dokumenty wjazdowe', icon: '🛂', category: 'Przygotowanie i Formalności' },
+  { id: 'currency', label: 'Waluta i płatności', icon: '💰', category: 'Przygotowanie i Formalności' },
+  { id: 'embassies', label: 'Ambasady i konsulaty', icon: '🏢', category: 'Przygotowanie i Formalności' },
 
   // 2. Zdrowie i Bezpieczeństwo
-  { id: 'health', label: 'Zdrowie', icon: '💉', category: 'Zdrowie i Bezpieczeństwo' },
-  { id: 'safety', label: 'Bezpieczeństwo', icon: '🛡️', category: 'Zdrowie i Bezpieczeństwo' },
-  { id: 'water', label: 'Woda z kranu', icon: '🚰', category: 'Zdrowie i Bezpieczeństwo' },
+  { id: 'health', label: 'Zdrowie i szczepienia', icon: '💉', category: 'Zdrowie i Bezpieczeństwo' },
+  { id: 'safety', label: 'Bezpieczeństwo MSZ', icon: '🛡️', category: 'Zdrowie i Bezpieczeństwo' },
+  { id: 'water', label: 'Woda i higiena', icon: '🚰', category: 'Zdrowie i Bezpieczeństwo' },
 
   // 3. Praktyczne Codzienne
-  { id: 'weather-forecast', label: 'Pogoda', icon: '🌦️', category: 'Informacje Praktyczne' },
-  { id: 'plugs', label: 'Gniazdka', icon: '🔌', category: 'Informacje Praktyczne' },
-  { id: 'emergency', label: 'Telefony', icon: '🚨', category: 'Informacje Praktyczne' },
-  { id: 'costs', label: 'Ceny', icon: '📊', category: 'Informacje Praktyczne' },
+  { id: 'weather-forecast', label: 'Pogoda i prognoza', icon: '🌦️', category: 'Informacje Praktyczne' },
+  { id: 'plugs', label: 'Prąd i gniazdka', icon: '🔌', category: 'Informacje Praktyczne' },
+  { id: 'emergency', label: 'Numery alarmowe', icon: '🚨', category: 'Informacje Praktyczne' },
+  { id: 'costs', label: 'Koszty i ceny', icon: '📊', category: 'Informacje Praktyczne' },
 
   // 4. Warunki Środowiskowe
-  { id: 'climate', label: 'Klimat', icon: '🌤️', category: 'Warunki Środowiskowe' },
-  { id: 'holidays', label: 'Święta', icon: '📅', category: 'Warunki Środowiskowe' },
+  { id: 'climate', label: 'Klimat i pogoda', icon: '🌤️', category: 'Warunki Środowiskowe' },
+  { id: 'holidays', label: 'Święta i dni wolne', icon: '📅', category: 'Warunki Środowiskowe' },
 
   // 5. Kultura i Atrakcje
-  { id: 'law', label: 'Prawo', icon: '⚖️', category: 'Kultura i Atrakcje' },
-  { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️', category: 'Kultura i Atrakcje' },
+  { id: 'law', label: 'Prawo i zwyczaje', icon: '⚖️', category: 'Kultura i Atrakcje' },
+  { id: 'unesco', label: 'Zabytki UNESCO', icon: '🏛️', category: 'Kultura i Atrakcje' },
 
   // 0. Podsumowanie (Merged category)
-  { id: 'summary', label: 'Podsumowanie', icon: '📝', category: 'Podsumowanie' },
-  { id: 'discover', label: 'Poznaj kraj', icon: '✨', category: 'Podsumowanie' },
-  { id: 'info', label: 'Informacje', icon: 'ℹ️', category: 'Podsumowanie' },
+  { id: 'summary', label: 'Podsumowanie kraju', icon: '📝', category: 'Podsumowanie' },
+  { id: 'discover', label: 'Atrakcje i klimat', icon: '✨', category: 'Podsumowanie' },
+  { id: 'info', label: 'Podstawowe fakty', icon: 'ℹ️', category: 'Podsumowanie' },
 ];
 
 export const ALIASES: Record<string, string[]> = {

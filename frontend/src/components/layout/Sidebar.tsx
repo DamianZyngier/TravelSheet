@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside className="side-menu no-print">
       <button className="side-back-button" onClick={() => onSelectCountry(null)}>
-        ← Powrót do listy
+        ← Wróć do listy krajów
       </button>
 
       <div className="current-country-nav-box">

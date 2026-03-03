@@ -38,17 +38,35 @@ export const EmergencySection: React.FC<EmergencySectionProps> = ({ selectedCoun
           <div className="emergency-item-box">
             <span className="emergency-icon">🚓</span>
             <span className="emergency-label">Policja</span>
-            <span className="emergency-num">{selectedCountry.practical.emergency?.police || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+            {selectedCountry.practical.emergency?.police || selectedCountry.practical.emergency?.member_112 ? (
+              <a href={`tel:${selectedCountry.practical.emergency?.police || '112'}`} className="emergency-num clickable-phone">
+                {selectedCountry.practical.emergency?.police || '112'}
+              </a>
+            ) : (
+              <span className="emergency-num">Brak</span>
+            )}
           </div>
           <div className="emergency-item-box">
             <span className="emergency-icon">🚑</span>
             <span className="emergency-label">Pogotowie</span>
-            <span className="emergency-num">{selectedCountry.practical.emergency?.ambulance || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+            {selectedCountry.practical.emergency?.ambulance || selectedCountry.practical.emergency?.member_112 ? (
+              <a href={`tel:${selectedCountry.practical.emergency?.ambulance || '112'}`} className="emergency-num clickable-phone">
+                {selectedCountry.practical.emergency?.ambulance || '112'}
+              </a>
+            ) : (
+              <span className="emergency-num">Brak</span>
+            )}
           </div>
           <div className="emergency-item-box">
             <span className="emergency-icon">🚒</span>
             <span className="emergency-label">Straż</span>
-            <span className="emergency-num">{selectedCountry.practical.emergency?.fire || (selectedCountry.practical.emergency?.member_112 ? '112' : 'Brak')}</span>
+            {selectedCountry.practical.emergency?.fire || selectedCountry.practical.emergency?.member_112 ? (
+              <a href={`tel:${selectedCountry.practical.emergency?.fire || '112'}`} className="emergency-num clickable-phone">
+                {selectedCountry.practical.emergency?.fire || '112'}
+              </a>
+            ) : (
+              <span className="emergency-num">Brak</span>
+            )}
           </div>
         </div>
       </div>
