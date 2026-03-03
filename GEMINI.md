@@ -18,6 +18,7 @@ To ensure high-quality data, the project implements several layers of validation
 - **Schema Validation**: Pydantic models in `app/schemas.py` enforce strict rules for ISO codes (2 and 3 characters), geographical coordinates (lat/lng ranges), and percentage values (0-100%).
 - **Data Cleaning**: Automated scripts handle edge cases like uninhabited territories (population set to NULL instead of 0) and religious percentage normalization (capping at 100%).
 - **Religious Data**: Improved scraping logic to include dominant religions from Wikidata even when exact percentages are unavailable (displayed as "Główne wyznanie" in the UI).
+- **Largest Cities**: Enhanced scraping from Wikidata to include population data, filter out duplicate administrative units, and sort cities by population in descending order.
 - **Automated Testing**: `scripts/test_data_integrity.py` validates the exported `data.json` structure before deployment.
 
 ## Tech Stack

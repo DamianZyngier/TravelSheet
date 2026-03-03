@@ -68,14 +68,13 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
 
     # Query 4: Largest Cities
     q_cities = f"""
-    SELECT ?countryISO ?city ?cityLabel (MAX(?pop) as ?maxPop) WHERE {{
+    SELECT ?countryISO ?cityLabel ?pop WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
-      ?city wdt:P31/wdt:P279* wd:Q515; wdt:P17 ?country; wdt:P1082 ?pop.
+      ?city wdt:P31/wdt:P279* wd:Q515; wdt:P17 ?country.
+      OPTIONAL {{ ?city wdt:P1082 ?pop. }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
-    GROUP BY ?countryISO ?city ?cityLabel
-    ORDER BY DESC(?maxPop)
     """
 
     # Query 5: Souvenirs / Local Products (Handicrafts, Specialties)
@@ -153,13 +152,28 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     # 4. Cities
     for r in results[3]:
         iso = r.get("countryISO", {}).get("value")
-        name = r.get("cityLabel", {}).get("value"); pop = r.get("maxPop", {}).get("value")
-        if iso and name and pop and not name.startswith("Q"):
+        name = r.get("cityLabel", {}).get("value")
+        pop_val = r.get("pop", {}).get("value")
+        
+        if iso and name and not name.startswith("Q"):
             if iso not in country_cities: country_cities[iso] = []
-            if len(country_cities[iso]) < 5:
-                if not any(city[0].lower() == name.lower() for city in country_cities[iso]):
-                    try: country_cities[iso].append((name, int(float(pop))))
-                    except: continue
+            
+            try: 
+                pop = int(float(pop_val)) if pop_val else 0
+            except: 
+                pop = 0
+                
+            # Avoid duplicates (e.g. "Madrid" and "Madrid city")
+            is_dup = False
+            for i, (existing_name, existing_pop) in enumerate(country_cities[iso]):
+                if name.lower() == existing_name.lower() or name.lower().startswith(existing_name.lower()) or existing_name.lower().startswith(name.lower()):
+                    if pop > existing_pop:
+                        country_cities[iso][i] = (name, pop)
+                    is_dup = True
+                    break
+            
+            if not is_dup:
+                country_cities[iso].append((name, pop))
 
     # 5. Souvenirs
     for r in results[4]:
