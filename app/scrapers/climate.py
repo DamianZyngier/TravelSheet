@@ -34,7 +34,7 @@ async def sync_country_climate(db: Session, country: models.Country, client: htt
                 precip = daily.get("precipitation_sum", [])
                 
                 if not times or len(times) < 300:
-                    return {"error": "Incomplete data"}
+                    return {"error": f"Incomplete data (found {len(times)} days)"}
 
                 for i in range(len(times)):
                     try:
@@ -46,7 +46,7 @@ async def sync_country_climate(db: Session, country: models.Country, client: htt
                 
                 months_with_data = [m for m in range(1, 13) if monthly_stats[m]["temp_max"]]
                 if len(months_with_data) < 12:
-                    return {"error": "Incomplete monthly data"}
+                    return {"error": f"Incomplete monthly data (found {len(months_with_data)} months)"}
 
                 db.query(models.Climate).filter(models.Climate.country_id == country.id).delete()
                 for month in range(1, 13):

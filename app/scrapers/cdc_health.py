@@ -13,7 +13,9 @@ def get_cdc_slug(country):
         return CDC_MAPPING[country.iso_alpha2]
     return slugify(country.name)
 
-async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncClient):
+async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncClient, depth: int = 0):
+    if depth > 2: return {"error": "Max recursion depth reached"}
+    
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == country_iso2.upper()).first()
     if not country: return {"error": "Country not found"}
 
@@ -22,6 +24,14 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
     
     try:
         resp = await client.get(url, headers=get_headers(accept="text/html"))
+        if resp.status_code == 404:
+            if country.parent_id:
+                parent = db.query(models.Country).get(country.parent_id)
+                if parent:
+                    logger.info(f"CDC 404 for {country_iso2}, falling back to parent {parent.iso_alpha2}")
+                    return await sync_cdc_health(db, parent.iso_alpha2, client, depth + 1)
+            return {"error": f"CDC returned 404 for {slug}"}
+            
         if resp.status_code != 200:
             return {"error": f"CDC returned {resp.status_code} for {slug}"}
         
@@ -29,22 +39,26 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
         # Try new selector first, then old one
         vax_table = soup.select_one('table#dest-vm-a') or soup.select_one('table.disease') or soup.select_one('table.vax-list-table')
         
-        if not vax_table:
-            return {"error": "No vax table found"}
-
         required, suggested = [], []
-        rows = vax_table.select('tbody tr')
-        for row in rows:
-            cells = row.find_all('td')
-            if len(cells) >= 2:
-                name = cells[0].get_text(strip=True)
-                rec = cells[1].get_text(" ", strip=True) # Use space to separate words in nested tags
-                
-                # Check for required/mandatory in the recommendation text
-                if any(word in rec.lower() for word in ["required", "mandatory"]):
-                    required.append(name)
-                else:
-                    suggested.append(name)
+        
+        if not vax_table:
+            # Special case for countries that often don't have tables (home countries or special regions)
+            if country_iso2.upper() in ['US', 'AQ', 'PL']:
+                required, suggested = [], ["Zalecane szczepienia rutynowe"]
+            else:
+                return {"error": "No vax table found"}
+        else:
+            rows = vax_table.select('tbody tr')
+            for row in rows:
+                cells = row.find_all('td')
+                if len(cells) >= 2:
+                    name = cells[0].get_text(strip=True)
+                    rec = cells[1].get_text(" ", strip=True) 
+                    
+                    if any(word in rec.lower() for word in ["required", "mandatory"]):
+                        required.append(name)
+                    else:
+                        suggested.append(name)
 
         practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
         if not practical:
@@ -56,7 +70,7 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
         db.commit()
         return {"status": "success"}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"{type(e).__name__}: {str(e)}"}
 
 async def sync_all_cdc(db: Session):
     countries = db.query(models.Country).all()

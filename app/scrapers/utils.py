@@ -169,13 +169,14 @@ async def async_sparql_get(query: str, description: str = "SPARQL"):
     headers["Content-Type"] = "application/x-www-form-urlencoded"
     headers["Accept"] = "application/sparql-results+json"
     
-    max_retries = 2
-    base_delay = 5
+    max_retries = 3 # Increased from 2
+    base_delay = 10 # Increased from 5
     
     for attempt in range(max_retries):
         try:
             async with _WIKIDATA_SEMAPHORE:
-                async with httpx.AsyncClient(timeout=60.0) as client:
+                # Increased timeout to 90s for complex queries
+                async with httpx.AsyncClient(timeout=90.0) as client:
                     resp = await client.post(url, data={'query': query}, headers=headers)
                     
                     if resp.status_code == 200:
@@ -183,22 +184,23 @@ async def async_sparql_get(query: str, description: str = "SPARQL"):
                     
                     elif resp.status_code == 429:
                         delay = base_delay * (2 ** attempt)
-                        logger.warning(f"Wikidata Rate Limit hit ({description}), retrying in {delay}s...")
+                        logger.warning(f"Wikidata Rate Limit hit ({description}), retrying in {delay}s... (Attempt {attempt+1}/{max_retries})")
                         await asyncio.sleep(delay)
                         
                     elif resp.status_code in [504, 502, 503]:
-                        logger.error(f"Wikidata Server Error {resp.status_code} ({description}).")
+                        logger.error(f"Wikidata Server Error {resp.status_code} ({description}) at attempt {attempt+1}.")
                         if attempt == max_retries - 1:
-                            logger.error("Wikidata seems to be down or overloaded. Marking as DOWN for this session.")
+                            logger.error(f"Wikidata failed after {max_retries} attempts for {description}. Marking as DOWN for this session.")
                             _WIKIDATA_DOWN = True
-                        await asyncio.sleep(base_delay)
+                        await asyncio.sleep(base_delay * (attempt + 1))
                     else:
-                        logger.error(f"Wikidata error {resp.status_code} for {description}: {resp.text[:200]}")
+                        error_snippet = resp.text[:300].replace("\n", " ")
+                        logger.error(f"Wikidata error {resp.status_code} for {description}: {error_snippet}")
                         break
         except Exception as e:
-            logger.error(f"SPARQL request error for {description}: {e}")
+            logger.error(f"SPARQL request error for {description} (Attempt {attempt+1}): {str(e)}")
             if attempt == max_retries - 1:
                 _WIKIDATA_DOWN = True
-            await asyncio.sleep(2)
+            await asyncio.sleep(5)
                 
     return []
