@@ -46,10 +46,10 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
     'TH': 'tajlandia', 'TW': 'tajwan', 'TZ': 'tanzania', 'TL': 'timor-wschodni', 'TG': 'togo',
     'TO': 'tonga', 'TT': 'trynidaditobago', 'TN': 'tunezja', 'TR': 'turcja', 'TM': 'turkmenistan',
     'UG': 'uganda', 'UA': 'ukraina', 'UY': 'urugwaj', 'UZ': 'uzbekistan', 'VU': 'vanuatu',
-    'VA': 'watykan', 'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
+    'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
     'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
-    'AE': 'zjednoczone-emiraty-arabskie'
-}
+    'AE': 'zjednoczone-emiraty-arabskie', 'ZA': 'rpa'
+    }
 
 CDC_MAPPING = {
     'RU': 'russia', 'US': 'united-states', 'GB': 'united-kingdom',

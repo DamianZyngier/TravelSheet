@@ -63,7 +63,9 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     dir_url = _URL_CACHE.get(name_pl)
     if dir_url: strategies.append(("1st link (directory)", dir_url))
     manual_slug = MSZ_GOV_PL_MANUAL_MAPPING.get(iso_code.upper())
-    if manual_slug: strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
+    if manual_slug:
+        strategies.append(("2nd link (manual)", f"https://www.gov.pl/web/dyplomacja/{manual_slug}"))
+        strategies.append(("2.5 link (manual-modern)", f"https://www.gov.pl/web/{manual_slug}/idp"))
     simple_slug = slugify(name_pl)
     strategies.append(("3rd link (modern)", f"https://www.gov.pl/web/{simple_slug}/idp"))
     strategies.append(("4th link (modern-alt)", f"https://www.gov.pl/web/{simple_slug}/informacje-dla-podrozujacych"))
