@@ -262,6 +262,70 @@
   gap: 1rem;
 }
 
+@media (max-width: 900px) {
+  .detail-view-layout {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .side-menu {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+
+  .side-menu-list.simplified {
+    flex-direction: row !important;
+    overflow-x: auto;
+    padding: 10px 4px;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .side-menu-list.simplified::-webkit-scrollbar {
+    display: none;
+  }
+
+  .side-menu-category-item {
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .detail-view-layout {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .side-menu {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+
+  .side-menu-list.simplified {
+    flex-direction: row !important;
+    overflow-x: auto;
+    padding: 10px 4px;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .side-menu-list.simplified::-webkit-scrollbar {
+    display: none;
+  }
+
+  .side-menu-category-item {
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+}
+
 .side-back-button {
   padding: 0.75rem 1rem;
   background-color: #f8fafc;
@@ -468,8 +532,10 @@
 }
 
 .detail-map-container {
-  width: 350px;
-  height: 220px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   background-color: #f8fafc;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
@@ -989,6 +1055,12 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .emergency-grid, .holiday-month-items, .costs-grid, .embassy-grid, .budget-estimates-grid, .water-safety-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .emergency-item-box {
