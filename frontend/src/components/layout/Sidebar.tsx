@@ -69,8 +69,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <span className="nav-arrow">←</span>
             <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
             <span className={`nav-name ${
-              prevCountry?.name_pl && prevCountry.name_pl.length > 30 ? 'font-extra-compact' : 
-              prevCountry?.name_pl && prevCountry.name_pl.length > 20 ? 'font-compact' : ''
+              prevCountry?.name_pl && prevCountry.name_pl.length > 18 ? 'font-extra-compact' : 
+              prevCountry?.name_pl && prevCountry.name_pl.length > 9 ? 'font-compact' : ''
             }`}>
               {prevCountry?.name_pl}
             </span>
@@ -80,8 +80,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           <span className="nav-label">Następny</span>
           <div className="nav-content">
             <span className={`nav-name ${
-              nextCountry?.name_pl && nextCountry.name_pl.length > 30 ? 'font-extra-compact' : 
-              nextCountry?.name_pl && nextCountry.name_pl.length > 20 ? 'font-compact' : ''
+              nextCountry?.name_pl && nextCountry.name_pl.length > 18 ? 'font-extra-compact' : 
+              nextCountry?.name_pl && nextCountry.name_pl.length > 9 ? 'font-compact' : ''
             }`}>
               {nextCountry?.name_pl}
             </span>

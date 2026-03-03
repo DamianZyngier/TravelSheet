@@ -1990,8 +1990,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 4px;
-  padding: 8px 10px;
+  gap: 2px;
+  padding: 8px 6px;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
@@ -2010,24 +2010,24 @@
 }
 
 .nav-label {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: #94a3b8;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.025em;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   min-width: 0;
 }
 
 .nav-flag {
-  width: 22px;
-  height: 15px;
+  width: 20px;
+  height: 14px;
   object-fit: cover;
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -2046,7 +2046,11 @@
 }
 
 .nav-name.font-compact {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+}
+
+.nav-name.font-extra-compact {
+  font-size: 0.62rem;
 }
 
 .nav-name.font-extra-compact {
