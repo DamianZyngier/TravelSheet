@@ -213,6 +213,8 @@ function App() {
 
     // Handle edge cases: very top and very bottom
     const handleScroll = () => {
+      if (isManualScrollRef.current) return;
+
       const scrollPos = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
