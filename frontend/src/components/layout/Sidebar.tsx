@@ -64,20 +64,20 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       <div className="country-navigation">
         <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
-          <span className="nav-arrow">←</span>
-          <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
-          <div className="nav-info">
-            <span className="nav-label">Poprzedni</span>
-            <span className={`nav-name ${getLongNameClass(prevCountry?.name_pl || '', 'h3')}`}>{prevCountry?.name_pl}</span>
+          <span className="nav-label">Poprzedni</span>
+          <div className="nav-content">
+            <span className="nav-arrow">←</span>
+            <img src={prevCountry?.flag_url} alt="" className="nav-flag" />
+            <span className="nav-name">{prevCountry?.name_pl}</span>
           </div>
         </button>
         <button className="nav-button next" onClick={() => navigateCountry('next')}>
-          <div className="nav-info">
-            <span className="nav-label">Następny</span>
-            <span className={`nav-name ${getLongNameClass(nextCountry?.name_pl || '', 'h3')}`}>{nextCountry?.name_pl}</span>
+          <span className="nav-label">Następny</span>
+          <div className="nav-content">
+            <span className="nav-name">{nextCountry?.name_pl}</span>
+            <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
+            <span className="nav-arrow">→</span>
           </div>
-          <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
-          <span className="nav-arrow">→</span>
         </button>
       </div>
 

@@ -1998,8 +1998,9 @@
 
 .nav-button {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
   padding: 8px 10px;
   background: white;
   border: 1px solid #e2e8f0;
@@ -2008,7 +2009,7 @@
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: left;
   flex: 1;
-  min-width: 0; /* Important for flex-shrink and text-overflow */
+  min-width: 0;
 }
 
 .nav-button:hover {
@@ -2016,6 +2017,21 @@
   background: #f8fafc;
   transform: translateY(-1px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-label {
+  font-size: 0.5rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
 }
 
 .nav-flag {
@@ -2027,25 +2043,6 @@
   flex-shrink: 0;
 }
 
-.nav-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-}
-
-.nav-label {
-  font-size: 0.5rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.025em;
-  margin-bottom: 0px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .nav-name {
   font-size: 0.75rem;
   font-weight: 700;
@@ -2054,6 +2051,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2;
+  flex: 1;
 }
 
 .nav-arrow {
@@ -2073,8 +2071,16 @@
   text-align: right;
 }
 
-.nav-button.next .nav-info {
-  align-items: flex-end;
+.nav-button.next .nav-label {
+  text-align: right;
+}
+
+.nav-button.next .nav-content {
+  justify-content: flex-end;
+}
+
+.nav-button.next .nav-name {
+  text-align: right;
 }
 
 @media (max-width: 768px) {
