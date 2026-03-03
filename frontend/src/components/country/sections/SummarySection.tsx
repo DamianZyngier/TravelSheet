@@ -16,10 +16,6 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
 }) => {
   return (
       <div className="discover-container info-block">
-        <div className="section-header">
-          <span className="section-header-icon">✨</span>
-          <label>Odkryj i poznaj kraj</label>
-        </div>
 
         {/* Travel Types Section */}
         {selectedCountry.travel_types?.categories?.length > 0 && (
@@ -42,6 +38,11 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
             </div>
           </div>
         )}
+
+        <div className="section-header">
+          <span className="section-header-icon">✨</span>
+          <label>Odkryj i poznaj kraj</label>
+        </div>
 
         <div id="discover" className=" full-width discover-section scroll-mt">
         {/* Parent / Territory Relationships */}
