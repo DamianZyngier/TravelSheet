@@ -174,10 +174,6 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
             <div className="no-data-msg">Brak szczegółowych informacji o prawie i obyczajach dla tego kraju.</div>
           )}
           
-          <div className="travel-disclaimer">
-            ⚠️ Zawsze weryfikuj informacje w oficjalnych źródłach rządowych przed podróżą; przepisy często ulegają zmianom.
-          </div>
-
           <DataSource sources={['MSZ', 'WIKI']} lastUpdated={selectedCountry.safety.last_updated} />
         </div>
       )}

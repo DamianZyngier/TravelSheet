@@ -142,7 +142,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
               getCurrencyExample={getCurrencyExample}
               checkPlugs={checkPlugs}
               getEnlargedPlugUrl={getEnlargedPlugUrl}
-              onlySections={['plugs']}
+              onlySections={['plugs', 'phones', 'driving', 'stores']}
             />
             <EmergencySection selectedCountry={selectedCountry} />
             <CostsClimateSection 
@@ -189,7 +189,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
               setIsEmbassiesExpanded={setIsEmbassiesExpanded}
               isUnescoExpanded={isUnescoExpanded}
               setIsUnescoExpanded={setIsUnescoExpanded}
-              onlySections={['souvenirs']}
+              onlySections={['attractions', 'souvenirs']}
             />
             <SafetyHealthSection 
               selectedCountry={selectedCountry} 
@@ -205,6 +205,11 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
             />
           </div>
         </div>
+      </div>
+
+      {/* Global Travel Disclaimer */}
+      <div className="global-travel-disclaimer">
+        ⚠️ Zawsze weryfikuj informacje w oficjalnych źródłach rządowych przed podróżą; przepisy często ulegają zmianom.
       </div>
     </div>
   );

@@ -24,9 +24,32 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
   const showEmbassies = showAll || onlySections?.includes('embassies');
   const showUnesco = showAll || onlySections?.includes('unesco');
   const showSouvenirs = showAll || onlySections?.includes('souvenirs');
+  const showAttractions = showAll || onlySections?.includes('attractions');
 
   return (
     <>
+      {showAttractions && selectedCountry.attractions && selectedCountry.attractions.length > 0 && (
+        <div id="attractions" className="info-block full-width attractions-section scroll-mt">
+          <div className="section-header">
+            <span className="section-header-icon">✨</span>
+            <label>Najciekawsze miejsca i atrakcje</label>
+          </div>
+          <div className="attractions-mini-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            {selectedCountry.attractions.map((attr, idx) => (
+              <div key={idx} className="attraction-mini-item" style={{ padding: '1.25rem', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <div style={{ fontWeight: '800', color: '#2d3748', fontSize: '1rem', marginBottom: '8px' }}>{attr.name}</div>
+                {attr.description && (
+                  <div style={{ fontSize: '0.9rem', color: '#4a5568', lineHeight: '1.5' }}>
+                    <ExpandableText text={attr.description} maxLength={200} />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <DataSource sources={['WIKI']} lastUpdated={selectedCountry.last_updated} />
+        </div>
+      )}
+
       {showSouvenirs && selectedCountry.practical?.souvenirs && (
         <div id="souvenirs" className="info-block full-width souvenirs-box scroll-mt">
           <span className="souvenirs-icon">🎁</span>

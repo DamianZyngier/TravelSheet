@@ -26,6 +26,10 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
   const showCurrency = showAll || onlySections?.includes('currency');
   const showWater = showAll || onlySections?.includes('water');
   const showPlugs = showAll || onlySections?.includes('plugs');
+  const showInternet = showAll || onlySections?.includes('internet') || onlySections?.includes('phones');
+  const showDriving = showAll || onlySections?.includes('driving');
+  const showStores = showAll || onlySections?.includes('stores');
+  const showTransport = showAll || onlySections?.includes('transport');
   const showGeneral = showAll;
 
   return (
@@ -41,48 +45,47 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               <label>Stolica i strefa</label>
               <span>{selectedCountry.capital || 'Brak danych'} {selectedCountry.timezone && `(${selectedCountry.timezone})`}</span>
             </div>
+          </div>
+        </div>
+      )}
 
-            <div className="info-block">
-              <label>Napięcie i prąd</label>
-              <div className="voltage-status-box">
-                <span className="voltage-values">{selectedCountry.practical.voltage}V / {selectedCountry.practical.frequency}Hz</span>
-                {selectedCountry.practical.voltage ? (
-                  <span className={`voltage-badge ${selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 ? 'compat-ok' : 'compat-warn'}`}>
-                    {selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 
-                      ? '✅ Zgodne z polskim standardem' 
-                      : '⚠️ Wymagany konwerter napięcia'}
-                  </span>
-                ) : null}
+      {(showInternet || showDriving || showStores || showTransport) && (
+        <div className="info-block full-width">
+          <div className="info-grid">
+            {showInternet && (
+              <>
+                <div className="info-block">
+                  <label>Internet i eSIM</label>
+                  <div className="driving-info-box">
+                    <span>{selectedCountry.practical.esim_available ? '📱 eSIM: Dostępne' : '📱 eSIM: Brak danych'}</span>
+                    {selectedCountry.practical.internet_notes && <span className="license-info">{selectedCountry.practical.internet_notes}</span>}
+                  </div>
+                </div>
+                <div className="info-block">
+                  <label>Komunikacja</label>
+                  <div className="driving-info-box">
+                    <span>📱 {selectedCountry.popular_apps || 'WhatsApp'}</span>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {showDriving && (
+              <div className="info-block">
+                <label>Ruch drogowy</label>
+                <div className="driving-info-box">
+                  <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
+                  <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
+                </div>
               </div>
-            </div>
+            )}
 
-            <div className="info-block">
-              <label>Internet i eSIM</label>
-              <div className="driving-info-box">
-                <span>{selectedCountry.practical.esim_available ? '📱 eSIM: Dostępne' : '📱 eSIM: Brak danych'}</span>
-                {selectedCountry.practical.internet_notes && <span className="license-info">{selectedCountry.practical.internet_notes}</span>}
+            {showStores && (
+              <div className="info-block">
+                <label>Sklepy i godziny</label>
+                <span>🕒 {selectedCountry.practical.store_hours || 'Brak danych'}</span>
               </div>
-            </div>
-
-            <div className="info-block">
-              <label>Sklepy i godziny</label>
-              <span>🕒 {selectedCountry.practical.store_hours || 'Brak danych'}</span>
-            </div>
-
-            <div className="info-block">
-              <label>Ruch drogowy</label>
-              <div className="driving-info-box">
-                <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
-                <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
-              </div>
-            </div>
-
-            <div className="info-block">
-              <label>Komunikacja</label>
-              <div className="driving-info-box">
-                <span>📱 {selectedCountry.popular_apps || 'WhatsApp'}</span>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       )}
@@ -185,8 +188,25 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
         <div id="plugs" className="info-block full-width scroll-mt">
           <div className="section-header">
             <span className="section-header-icon">🔌</span>
-            <label>Gniazdka elektryczne</label>
+            <label>Gniazdka, napięcie i prąd</label>
           </div>
+          
+          <div className="voltage-status-box-v2">
+            <div style={{ flex: '1' }}>
+              <div className="voltage-label">Napięcie i częstotliwość</div>
+              <div className="voltage-value">
+                {selectedCountry.practical.voltage}V / {selectedCountry.practical.frequency}Hz
+              </div>
+            </div>
+            {selectedCountry.practical.voltage ? (
+              <div className={`voltage-badge-v2 ${selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 ? 'compat-ok' : 'compat-warn'}`}>
+                {selectedCountry.practical.voltage >= 220 && selectedCountry.practical.voltage <= 240 
+                  ? '✅ Zgodne z polskim standardem' 
+                  : '⚠️ Wymagany konwerter napięcia'}
+              </div>
+            ) : null}
+          </div>
+
           <div className="plugs-container">
             <div className="plug-types-list">
               {selectedCountry.practical.plug_types ? selectedCountry.practical.plug_types.split(',').map(type => {

@@ -3792,3 +3792,62 @@
   }
 }
 
+
+
+.global-travel-disclaimer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #fffaf0;
+  border: 1px solid #feebc8;
+  border-radius: 12px;
+  color: #744210;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.voltage-status-box-v2 {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.voltage-status-box-v2 .voltage-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.voltage-status-box-v2 .voltage-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.voltage-badge-v2 {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.voltage-badge-v2.compat-ok {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.voltage-badge-v2.compat-warn {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fef3c7;
+}
