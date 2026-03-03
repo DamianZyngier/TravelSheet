@@ -8,7 +8,7 @@ Data is grouped into 5 logical categories for better UX (collapsible accordion s
 2. **Zdrowie i Bezpieczeństwo** (Health, Safety, Water)
 3. **Informacje Praktyczne** (Weather, Plugs, Phones, Costs)
 4. **Warunki Środowiskowe** (Climate, Holidays)
-5. **Kultura i Atrakcje** (Summary, Discover, Law, UNESCO)
+5. **Kultura i Atrakcje** (Law, UNESCO, Souvenirs)
 
 The sidebar also supports accordion-style navigation for subcategories.
 

@@ -183,6 +183,14 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
             <h3 className="category-group-title">5. Kultura i Atrakcje</h3>
           </div>
           <div className="category-content">
+            <MiscSection 
+              selectedCountry={selectedCountry}
+              isEmbassiesExpanded={isEmbassiesExpanded}
+              setIsEmbassiesExpanded={setIsEmbassiesExpanded}
+              isUnescoExpanded={isUnescoExpanded}
+              setIsUnescoExpanded={setIsUnescoExpanded}
+              onlySections={['souvenirs']}
+            />
             <SafetyHealthSection 
               selectedCountry={selectedCountry} 
               onlySections={['law']}

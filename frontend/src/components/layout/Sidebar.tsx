@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     { id: 'category-2', label: '2. Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
     { id: 'category-3', label: '3. Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
     { id: 'category-4', label: '4. Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
-    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Prawo, UNESCO' },
+    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Prawo, UNESCO, Pamiątki' },
   ];
 
   // Map individual section IDs to category IDs for active state highlighting

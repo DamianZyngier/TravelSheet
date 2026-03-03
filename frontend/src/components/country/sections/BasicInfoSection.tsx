@@ -82,19 +82,6 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </div>
         )}
 
-        {/* Integrated Souvenirs */}
-        {selectedCountry.practical?.souvenirs && (
-          <div id="souvenirs" className="info-item-box full souvenirs-integrated-box">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-              <span style={{ fontSize: '1rem' }}>🎁</span>
-              <strong style={{ margin: 0, color: '#c05621' }}>Co warto kupić / Pamiątki:</strong>
-            </div>
-            <div className="souvenirs-value-simple">
-              <ExpandableText text={selectedCountry.practical.souvenirs} maxLength={250} />
-            </div>
-          </div>
-        )}
-
         {selectedCountry.main_airport && (
           <div className="info-item-box full">
             <strong>Główne lotnisko:</strong>

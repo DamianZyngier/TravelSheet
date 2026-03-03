@@ -23,9 +23,22 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
   const showHolidays = showAll || onlySections?.includes('holidays');
   const showEmbassies = showAll || onlySections?.includes('embassies');
   const showUnesco = showAll || onlySections?.includes('unesco');
+  const showSouvenirs = showAll || onlySections?.includes('souvenirs');
 
   return (
     <>
+      {showSouvenirs && selectedCountry.practical?.souvenirs && (
+        <div id="souvenirs" className="info-block full-width souvenirs-box scroll-mt">
+          <span className="souvenirs-icon">🎁</span>
+          <div className="souvenirs-content">
+            <span className="souvenirs-label">Co warto kupić / Pamiątki</span>
+            <div className="souvenirs-value">
+              <ExpandableText text={selectedCountry.practical.souvenirs} />
+            </div>
+          </div>
+        </div>
+      )}
+
       {showHolidays && (
         <div id="holidays" className="info-block full-width holiday-section scroll-mt">
           <div className="section-header">
