@@ -24,33 +24,26 @@ const Sidebar: React.FC<SidebarProps> = ({
   const prevCountry = currentIndex > 0 ? sortedFullList[currentIndex - 1] : sortedFullList[sortedFullList.length - 1];
   const nextCountry = currentIndex < sortedFullList.length - 1 ? sortedFullList[currentIndex + 1] : sortedFullList[0];
 
-  // Track expanded categories in sidebar
-  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>(() => {
-    // Initially expand the category containing the active section
-    const initial: Record<string, boolean> = {};
-    const activeCat = SECTIONS.find(s => s.id === activeSection)?.category;
-    if (activeCat) initial[activeCat] = true;
-    return initial;
-  });
+  // Define the 5 main categories and their IDs (matching the ones in CountryDetail)
+  const CATEGORIES = [
+    { id: 'category-1', label: '1. Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
+    { id: 'category-2', label: '2. Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
+    { id: 'category-3', label: '3. Praktyczne Codzienne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
+    { id: 'category-4', label: '4. Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
+    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Opis, Prawo, UNESCO' },
+  ];
 
-  // Auto-expand category if activeSection changes from outside (e.g. scroll)
-  useEffect(() => {
-    const activeCat = SECTIONS.find(s => s.id === activeSection)?.category;
-    if (activeCat && !expandedCategories[activeCat]) {
-      setExpandedCategories(prev => ({ ...prev, [activeCat]: true }));
-    }
-  }, [activeSection]);
-
-  const toggleCategory = (cat: string) => {
-    setExpandedCategories(prev => ({ ...prev, [cat]: !prev[cat] }));
-  };
-
-  const groupedSections = SECTIONS.reduce((acc, s) => {
-    const cat = s.category || 'Inne';
-    if (!acc[cat]) acc[cat] = [];
-    acc[cat].push(s);
+  // Map individual section IDs to category IDs for active state highlighting
+  const sectionToCategoryMap: Record<string, string> = SECTIONS.reduce((acc, s) => {
+    if (s.category?.includes('1.')) acc[s.id] = 'category-1';
+    else if (s.category?.includes('2.')) acc[s.id] = 'category-2';
+    else if (s.category?.includes('3.')) acc[s.id] = 'category-3';
+    else if (s.category?.includes('4.')) acc[s.id] = 'category-4';
+    else if (s.category?.includes('5.')) acc[s.id] = 'category-5';
     return acc;
-  }, {} as Record<string, typeof SECTIONS>);
+  }, {} as Record<string, string>);
+
+  const activeCategoryId = sectionToCategoryMap[activeSection] || 'category-1';
 
   return (
     <aside className="side-menu no-print">
@@ -87,38 +80,20 @@ const Sidebar: React.FC<SidebarProps> = ({
         </button>
       </div>
 
-      <div className="side-menu-list">
-        {Object.entries(groupedSections).map(([category, sections]) => {
-          const isExpanded = !!expandedCategories[category];
-          const hasActiveChild = sections.some(s => s.id === activeSection);
-
-          return (
-            <div key={category} className={`side-menu-category-group ${isExpanded ? 'expanded' : ''} ${hasActiveChild ? 'has-active' : ''}`}>
-              <button 
-                className="side-menu-category-toggle"
-                onClick={() => toggleCategory(category)}
-              >
-                <span className="category-toggle-icon">{isExpanded ? '▾' : '▸'}</span>
-                <span className="side-menu-category-title">{category}</span>
-              </button>
-              
-              {isExpanded && (
-                <div className="side-menu-sub-items">
-                  {sections.map(s => (
-                    <button 
-                      key={s.id}
-                      className={`side-menu-item ${activeSection === s.id ? 'active' : ''}`}
-                      onClick={() => scrollToSection(s.id)}
-                    >
-                      <span className="side-menu-icon">{s.icon}</span>
-                      <span className="side-menu-label">{s.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
+      <div className="side-menu-list simplified">
+        {CATEGORIES.map(cat => (
+          <button 
+            key={cat.id}
+            className={`side-menu-category-item ${activeCategoryId === cat.id ? 'active' : ''}`}
+            onClick={() => scrollToSection(cat.id)}
+          >
+            <div className="category-item-main">
+              <span className="category-item-icon">{cat.icon}</span>
+              <span className="category-item-label">{cat.label}</span>
             </div>
-          );
-        })}
+            <div className="category-item-subtext">{cat.items}</div>
+          </button>
+        ))}
       </div>
     </aside>
   );

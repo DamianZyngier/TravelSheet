@@ -88,7 +88,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
 
       <div className="detail-body">
         {/* 1. Przygotowanie i Formalności */}
-        <div className={`category-group ${expandedGroups['1. Przygotowanie i Formalności'] ? 'expanded' : 'collapsed'}`}>
+        <div id="category-1" className={`category-group scroll-mt ${expandedGroups['1. Przygotowanie i Formalności'] ? 'expanded' : 'collapsed'}`}>
           <button className="category-group-header" onClick={() => toggleGroup('1. Przygotowanie i Formalności')}>
             <h3 className="category-group-title">1. Przygotowanie i Formalności</h3>
             <span className="category-expand-icon">{expandedGroups['1. Przygotowanie i Formalności'] ? '−' : '+'}</span>
@@ -116,7 +116,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         </div>
 
         {/* 2. Zdrowie i Bezpieczeństwo */}
-        <div className={`category-group ${expandedGroups['2. Zdrowie i Bezpieczeństwo'] ? 'expanded' : 'collapsed'}`}>
+        <div id="category-2" className={`category-group scroll-mt ${expandedGroups['2. Zdrowie i Bezpieczeństwo'] ? 'expanded' : 'collapsed'}`}>
           <button className="category-group-header" onClick={() => toggleGroup('2. Zdrowie i Bezpieczeństwo')}>
             <h3 className="category-group-title">2. Zdrowie i Bezpieczeństwo</h3>
             <span className="category-expand-icon">{expandedGroups['2. Zdrowie i Bezpieczeństwo'] ? '−' : '+'}</span>
@@ -140,7 +140,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         </div>
 
         {/* 3. Praktyczne Codzienne */}
-        <div className={`category-group ${expandedGroups['3. Praktyczne Codzienne'] ? 'expanded' : 'collapsed'}`}>
+        <div id="category-3" className={`category-group scroll-mt ${expandedGroups['3. Praktyczne Codzienne'] ? 'expanded' : 'collapsed'}`}>
           <button className="category-group-header" onClick={() => toggleGroup('3. Praktyczne Codzienne')}>
             <h3 className="category-group-title">3. Praktyczne Codzienne</h3>
             <span className="category-expand-icon">{expandedGroups['3. Praktyczne Codzienne'] ? '−' : '+'}</span>
@@ -168,7 +168,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         </div>
 
         {/* 4. Warunki Środowiskowe */}
-        <div className={`category-group ${expandedGroups['4. Warunki Środowiskowe'] ? 'expanded' : 'collapsed'}`}>
+        <div id="category-4" className={`category-group scroll-mt ${expandedGroups['4. Warunki Środowiskowe'] ? 'expanded' : 'collapsed'}`}>
           <button className="category-group-header" onClick={() => toggleGroup('4. Warunki Środowiskowe')}>
             <h3 className="category-group-title">4. Warunki Środowiskowe</h3>
             <span className="category-expand-icon">{expandedGroups['4. Warunki Środowiskowe'] ? '−' : '+'}</span>
@@ -194,7 +194,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
         </div>
 
         {/* 5. Kultura i Atrakcje */}
-        <div className={`category-group ${expandedGroups['5. Kultura i Atrakcje'] ? 'expanded' : 'collapsed'}`}>
+        <div id="category-5" className={`category-group scroll-mt ${expandedGroups['5. Kultura i Atrakcje'] ? 'expanded' : 'collapsed'}`}>
           <button className="category-group-header" onClick={() => toggleGroup('5. Kultura i Atrakcje')}>
             <h3 className="category-group-title">5. Kultura i Atrakcje</h3>
             <span className="category-expand-icon">{expandedGroups['5. Kultura i Atrakcje'] ? '−' : '+'}</span>
