@@ -26,22 +26,23 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   // Define the main categories and their IDs
   const CATEGORIES = [
-    { id: 'summary', label: 'Podsumowanie i Mapa', icon: '📍', items: 'Opis, Flaga, Położenie' },
+    { id: 'summary', label: 'Podsumowanie', icon: '📝', items: 'Info, Podstawowe, Mapa' },
     { id: 'category-1', label: '1. Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
     { id: 'category-2', label: '2. Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
     { id: 'category-3', label: '3. Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
     { id: 'category-4', label: '4. Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
-    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Info, Prawo, UNESCO' },
+    { id: 'category-5', label: '5. Kultura i Atrakcje', icon: '🏛️', items: 'Prawo, UNESCO' },
   ];
 
   // Map individual section IDs to category IDs for active state highlighting
   const sectionToCategoryMap: Record<string, string> = SECTIONS.reduce((acc, s) => {
-    if (s.id === 'summary') acc[s.id] = 'summary';
+    if (s.category === 'Podsumowanie') acc[s.id] = 'summary';
     else if (s.category?.includes('1.')) acc[s.id] = 'category-1';
     else if (s.category?.includes('2.')) acc[s.id] = 'category-2';
     else if (s.category?.includes('3.')) acc[s.id] = 'category-3';
     else if (s.category?.includes('4.')) acc[s.id] = 'category-4';
     else if (s.category?.includes('5.')) acc[s.id] = 'category-5';
+    else if (s.category?.includes('Kultura')) acc[s.id] = 'category-5';
     return acc;
   }, {} as Record<string, string>);
 

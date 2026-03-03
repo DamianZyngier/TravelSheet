@@ -44,27 +44,45 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
 
   return (
     <div className="detail-card">
-      <div id="summary" className="detail-header scroll-mt">
-        <img 
-          src={selectedCountry.flag_url} 
-          alt={`Flaga ${selectedCountry.name_pl}`} 
-          className="detail-flag-img" 
-          style={{ objectFit: 'contain' }}
-        />
-        <div className="detail-titles">
-          <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
-          <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
-        </div>
-        
-        <MapSection 
-          selectedCountry={selectedCountry}
-          mapPosition={mapPosition}
-          setMapPosition={setMapPosition}
-          getMapSettings={getMapSettings}
-        />
-      </div>
-
       <div className="detail-body">
+        {/* 0. Podsumowanie */}
+        <div id="summary" className="category-group scroll-mt">
+          <div className="category-group-header-simple">
+            <h3 className="category-group-title">Podsumowanie</h3>
+          </div>
+          <div className="category-content">
+            <div className="detail-header-group">
+              <div className="header-info-flex">
+                <img 
+                  src={selectedCountry.flag_url} 
+                  alt={`Flaga ${selectedCountry.name_pl}`} 
+                  className="detail-flag-img" 
+                  style={{ objectFit: 'contain' }}
+                />
+                <div className="detail-titles">
+                  <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
+                  <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
+                </div>
+              </div>
+              
+              <MapSection 
+                selectedCountry={selectedCountry}
+                mapPosition={mapPosition}
+                setMapPosition={setMapPosition}
+                getMapSettings={getMapSettings}
+              />
+            </div>
+
+            <SummarySection 
+              selectedCountry={selectedCountry} 
+              allCountries={allCountries}
+              onSelectCountry={onSelectCountry}
+            />
+            
+            <BasicInfoSection selectedCountry={selectedCountry} />
+          </div>
+        </div>
+
         {/* 1. Przygotowanie i Formalności */}
         <div id="category-1" className="category-group scroll-mt">
           <div className="category-group-header-simple">
@@ -165,12 +183,6 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
             <h3 className="category-group-title">5. Kultura i Atrakcje</h3>
           </div>
           <div className="category-content">
-            <SummarySection 
-              selectedCountry={selectedCountry} 
-              allCountries={allCountries}
-              onSelectCountry={onSelectCountry}
-            />
-            <BasicInfoSection selectedCountry={selectedCountry} />
             <SafetyHealthSection 
               selectedCountry={selectedCountry} 
               onlySections={['law']}

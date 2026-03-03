@@ -88,11 +88,13 @@ export const SECTIONS = [
   { id: 'holidays', label: 'Święta', icon: '📅', category: 'Warunki Środowiskowe' },
 
   // 5. Kultura i Atrakcje
-  { id: 'summary', label: 'Podsumowanie', icon: '📝', category: 'Kultura i Atrakcje' },
-  { id: 'discover', label: 'Poznaj kraj', icon: '✨', category: 'Kultura i Atrakcje' },
-  { id: 'info', label: 'Informacje', icon: 'ℹ️', category: 'Kultura i Atrakcje' },
   { id: 'law', label: 'Prawo', icon: '⚖️', category: 'Kultura i Atrakcje' },
   { id: 'unesco', label: 'Lista UNESCO', icon: '🏛️', category: 'Kultura i Atrakcje' },
+
+  // 0. Podsumowanie (Merged category)
+  { id: 'summary', label: 'Podsumowanie', icon: '📝', category: 'Podsumowanie' },
+  { id: 'discover', label: 'Poznaj kraj', icon: '✨', category: 'Podsumowanie' },
+  { id: 'info', label: 'Informacje', icon: 'ℹ️', category: 'Podsumowanie' },
 ];
 
 export const ALIASES: Record<string, string[]> = {
