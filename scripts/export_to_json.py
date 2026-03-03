@@ -71,6 +71,7 @@ def export_all():
                 "climate_description": c.climate_description,
                 "unique_things": c.unique_things,
                 "unique_animals": c.unique_animals,
+                "travel_types": json.loads(c.travel_types) if c.travel_types else {"categories": [], "highlights": []},
                 "latitude": float(c.latitude) if c.latitude else None,
                 "longitude": float(c.longitude) if c.longitude else None,
                 "unesco_count": c.unesco_count or 0,

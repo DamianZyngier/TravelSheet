@@ -89,6 +89,7 @@ class CountryBasic(BaseModel):
     flag_emoji: Optional[str]
     flag_url: Optional[str]
     unesco_count: int = 0
+    travel_types: Optional[str] = None
 
     class Config:
         from_attributes = True
@@ -225,6 +226,7 @@ class CountryDetail(BaseModel):
     natural_hazards: Optional[str] = None
     popular_apps: Optional[str] = None
     unesco_count: int = 0
+    travel_types: Optional[str] = None
 
     # Grouped Info
     languages: List[LanguageSchema] = []

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { CONTINENT_MAP } from '../../constants';
+import { CONTINENT_MAP, TRAVEL_TYPES } from '../../constants';
 
 // Import continent icons
 import africaIcon from '../../assets/continents/Africa.svg';
@@ -16,6 +16,8 @@ interface FilterDropdownProps {
   setFilterContinent: (continent: string) => void;
   filterSafety: string;
   setFilterSafety: (safety: string) => void;
+  filterTravelType: string;
+  setFilterTravelType: (type: string) => void;
   continents: string[];
 }
 
@@ -55,6 +57,8 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   setFilterContinent,
   filterSafety,
   setFilterSafety,
+  filterTravelType,
+  setFilterTravelType,
   continents
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +91,10 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
     { id: 'critical', label: 'Bardzo niebezpiecznie', class: 'risk-critical' }
   ];
 
-  const activeFiltersCount = (filterContinent !== 'all' ? 1 : 0) + (filterSafety !== 'all' ? 1 : 0);
+  const activeFiltersCount = 
+    (filterContinent !== 'all' ? 1 : 0) + 
+    (filterSafety !== 'all' ? 1 : 0) +
+    (filterTravelType !== 'all' ? 1 : 0);
 
   const handleContinentClick = (c: string) => {
     if (filterContinent === c) {
@@ -102,6 +109,14 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
       setFilterSafety('all');
     } else {
       setFilterSafety(s);
+    }
+  };
+
+  const handleTravelTypeClick = (t: string) => {
+    if (filterTravelType === t) {
+      setFilterTravelType('all');
+    } else {
+      setFilterTravelType(t);
     }
   };
 
@@ -121,6 +136,27 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 
       {isOpen && (
         <div className="filter-panel">
+          <div className="filter-section">
+            <label className="filter-label">Typ podróży</label>
+            <div className="travel-type-filter-grid">
+              <button
+                className={`travel-type-btn ${filterTravelType === 'all' ? 'active' : ''}`}
+                onClick={() => setFilterTravelType('all')}
+              >
+                🌍 Wszystkie
+              </button>
+              {Object.entries(TRAVEL_TYPES).map(([id, type]) => (
+                <button
+                  key={id}
+                  className={`travel-type-btn ${filterTravelType === id ? 'active' : ''}`}
+                  onClick={() => handleTravelTypeClick(id)}
+                >
+                  {type.icon} {type.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="filter-section">
             <label className="filter-label">Kontynent</label>
             <div className="continent-filter-grid-v2">

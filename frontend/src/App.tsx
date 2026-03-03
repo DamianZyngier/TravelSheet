@@ -29,6 +29,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [filterContinent, setFilterContinent] = useState('all')
   const [filterSafety, setFilterSafety] = useState('all')
+  const [filterTravelType, setFilterTravelType] = useState('all')
   const [activeSection, setActiveSection] = useState('summary')
   const isManualScrollRef = useRef(false)
   const manualScrollTimeoutRef = useRef<number | null>(null)
@@ -243,6 +244,7 @@ function App() {
         
         const matchSafety = filterSafety === 'all' || c.safety.risk_level === filterSafety;
         const matchContinent = filterContinent === 'all' || c.continent === filterContinent;
+        const matchTravelType = filterTravelType === 'all' || (c.travel_types?.categories || []).includes(filterTravelType);
         
         const searchLower = searchQuery.toLowerCase();
         const countryAliases = ALIASES[c.iso2] || [];
@@ -253,10 +255,10 @@ function App() {
                             (c.iso3 || '').toLowerCase().includes(searchLower) ||
                             countryAliases.some(alias => alias.includes(searchLower));
         
-        return matchSafety && matchContinent && matchSearch;
+        return matchSafety && matchContinent && matchTravelType && matchSearch;
       })
       .sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
-  }, [countries, filterSafety, filterContinent, searchQuery]);
+  }, [countries, filterSafety, filterContinent, filterTravelType, searchQuery]);
 
   // Split into favorites and non-favorites if "Ulubione" is active
   const { favoriteList, remainingList } = useMemo(() => {
@@ -351,6 +353,8 @@ function App() {
             setFilterContinent={setFilterContinent}
             filterSafety={filterSafety}
             setFilterSafety={setFilterSafety}
+            filterTravelType={filterTravelType}
+            setFilterTravelType={setFilterTravelType}
             showOnlyFavorites={showOnlyFavorites}
             setShowOnlyFavorites={setShowOnlyFavorites}
             continents={continents}

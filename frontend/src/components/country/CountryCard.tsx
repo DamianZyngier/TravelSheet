@@ -1,6 +1,6 @@
 import React from 'react';
 import type { CountryData } from '../../types';
-import { CONTINENT_MAP, SAFETY_LABELS } from '../../constants';
+import { CONTINENT_MAP, SAFETY_LABELS, TRAVEL_TYPES } from '../../constants';
 import { getLongNameClass } from '../../utils/helpers';
 
 interface CountryCardProps {
@@ -26,6 +26,13 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite,
         {isFavorite ? '⭐' : '☆'}
       </button>
       <div className="card-content">
+        <div className="card-travel-types">
+          {(country.travel_types?.categories || []).slice(0, 3).map(catId => (
+            <span key={catId} title={TRAVEL_TYPES[catId]?.label} className="travel-type-mini-icon">
+              {TRAVEL_TYPES[catId]?.icon}
+            </span>
+          ))}
+        </div>
         <img 
           src={country.flag_url} 
           alt={`Flaga ${country.name_pl}`} 

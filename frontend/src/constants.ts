@@ -30,6 +30,18 @@ export const SAFETY_LABELS: Record<string, string> = {
   'unknown': 'Brak danych'
 };
 
+export const TRAVEL_TYPES: Record<string, { label: string; icon: string; desc: string }> = {
+  "city_break": { "label": "City Break", "icon": "🏙️", "desc": "Krótkie wypady miejskie, zabytki i atmosfera." },
+  "beaches": { "label": "Plaże i Relaks", "icon": "🏖️", "desc": "Słońce, morze i odpoczynek w resortach." },
+  "nature": { "label": "Przyroda i Aventura", "icon": "🌋", "desc": "Dzikie krajobrazy, wędrówki i parki narodowe." },
+  "food": { "label": "Świetne Jedzenie", "icon": "🍜", "desc": "Wyjazdy kulinarne, lokalne smaki i festiwale." },
+  "history": { "label": "Historia i Kultura", "icon": "🏛️", "desc": "Odkrywanie zabytków i tradycji UNESCO." },
+  "luxury": { "label": "Luksus i Wellness", "icon": "💎", "desc": "Podróże premium, spa i luksusowe hotele." },
+  "events": { "label": "Festiwale i Eventy", "icon": "🎭", "desc": "Koncerty, karnawały i widowiska sportowe." },
+  "eco": { "label": "Ekoturystyka", "icon": "🌿", "desc": "Zrównoważone podróże po rezerwatach." },
+  "family": { "label": "Rodzina i Dzieci", "icon": "👨‍👩‍👧‍👦", "desc": "Atrakcje dla najmłodszych i parki rozrywki." }
+};
+
 export const PLUG_NAMES: Record<string, string> = {
     'A': 'Standard USA / Japonia',
     'B': 'Standard USA (z uziemieniem)',

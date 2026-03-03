@@ -1,6 +1,7 @@
 import React from 'react';
 import type { CountryData } from '../../../types';
 import { ExpandableText, DataSource } from '../../common';
+import { TRAVEL_TYPES } from '../../../constants';
 
 interface SummarySectionProps {
   selectedCountry: CountryData;
@@ -21,6 +22,28 @@ export const SummarySection: React.FC<SummarySectionProps> = ({
         </div>
 
         <div id="discover" className=" full-width discover-section scroll-mt">
+        {/* Travel Types Section */}
+        {selectedCountry.travel_types?.categories?.length > 0 && (
+          <div className="travel-types-container">
+            <h4 className="travel-types-title">Polecane rodzaje podróży</h4>
+            <div className="travel-types-grid">
+              {selectedCountry.travel_types.categories.map(catId => {
+                const type = TRAVEL_TYPES[catId];
+                if (!type) return null;
+                return (
+                  <div key={catId} className="travel-type-summary-item">
+                    <span className="travel-type-summary-icon">{type.icon}</span>
+                    <div className="travel-type-summary-content">
+                      <span className="travel-type-summary-label">{type.label}</span>
+                      <p className="travel-type-summary-desc">{type.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Parent / Territory Relationships */}
         {(selectedCountry.parent || (selectedCountry.territories && selectedCountry.territories.length > 0)) && (
           <div className="relationship-nav-box">

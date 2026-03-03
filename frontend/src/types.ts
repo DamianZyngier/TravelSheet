@@ -30,6 +30,10 @@ export interface CountryData {
   largest_cities: string | null;
   ethnic_groups: string | null;
   climate_description: string | null;
+  travel_types: {
+    categories: string[];
+    highlights: string[];
+  };
   is_independent: boolean;
   parent?: {
     iso2: string;

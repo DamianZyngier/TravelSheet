@@ -9,6 +9,8 @@ interface HeaderProps {
   setFilterContinent: (continent: string) => void;
   filterSafety: string;
   setFilterSafety: (safety: string) => void;
+  filterTravelType: string;
+  setFilterTravelType: (type: string) => void;
   showOnlyFavorites: boolean;
   setShowOnlyFavorites: (val: boolean) => void;
   continents: string[];
@@ -23,6 +25,8 @@ const Header: React.FC<HeaderProps> = ({
   setFilterContinent,
   filterSafety,
   setFilterSafety,
+  filterTravelType,
+  setFilterTravelType,
   showOnlyFavorites,
   setShowOnlyFavorites,
   continents,
@@ -116,6 +120,8 @@ const Header: React.FC<HeaderProps> = ({
               setFilterContinent={setFilterContinent}
               filterSafety={filterSafety}
               setFilterSafety={setFilterSafety}
+              filterTravelType={filterTravelType}
+              setFilterTravelType={setFilterTravelType}
               continents={continents}
             />
           </div>

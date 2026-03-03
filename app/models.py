@@ -44,6 +44,7 @@ class Country(Base):
     climate_description = Column(Text) # General description of climate types
     unique_animals = Column(Text)
     unique_things = Column(Text)
+    travel_types = Column(Text) # JSON string with travel categories and highlights
     
     is_independent = Column(Boolean, default=True)
     parent_id = Column(Integer, ForeignKey("countries.id"))
