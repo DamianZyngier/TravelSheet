@@ -16,12 +16,13 @@ export const EmergencySection: React.FC<EmergencySectionProps> = ({ selectedCoun
       <div className="emergency-container">
         <div className="connectivity-badges">
           {selectedCountry.practical.emergency?.member_112 && (
-            <div className="emergency-112-hero mini">
+            <a href="tel:112" className="emergency-112-hero mini clickable-phone" style={{ textDecoration: 'none' }}>
               <span className="hero-112-badge">🇪🇺 112</span>
               <div className="hero-112-text">
                 <strong>Europejski Numer Alarmowy</strong>
+                <p>Kliknij, aby połączyć</p>
               </div>
-            </div>
+            </a>
           )}
           {selectedCountry.practical.roaming_info && (
             <div className="roaming-badge-hero">

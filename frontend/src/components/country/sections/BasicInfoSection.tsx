@@ -108,13 +108,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         </div>
         <div className="info-item-box">
           <strong>Kod telefoniczny</strong>
-          {selectedCountry.phone_code ? (
-            <a href={`tel:+${selectedCountry.phone_code.replace('+', '')}`} className="clickable-phone">
-              +{selectedCountry.phone_code.replace('+', '')}
-            </a>
-          ) : (
-            <span>Brak danych</span>
-          )}
+          <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
         
         {/* Integrated Religions */}
