@@ -225,6 +225,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
               onClick={() => {
                 setFilterContinent('all');
                 setFilterSafety('all');
+                setFilterTravelType('all');
               }}
             >
               Wyczyść wszystkie
