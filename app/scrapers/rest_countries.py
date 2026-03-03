@@ -157,14 +157,16 @@ async def sync_countries(db: Session):
             currencies = country_data.get("currencies", {})
             if currencies:
                 db.query(models.Currency).filter(models.Currency.country_id == country.id).delete()
-                for code, info in currencies.items():
-                    db.add(models.Currency(
-                        country_id=country.id,
-                        code=code,
-                        name=translate_to_pl(info.get("name")),
-                        symbol=info.get("symbol"),
-                        last_updated=func.now()
-                    ))
+                # Tylko główna waluta, aby uniknąć ostrzeżeń SQLAlchemy uselist=False
+                main_code = next(iter(currencies))
+                info = currencies[main_code]
+                db.add(models.Currency(
+                    country_id=country.id,
+                    code=main_code,
+                    name=translate_to_pl(info.get("name")),
+                    symbol=info.get("symbol"),
+                    last_updated=func.now()
+                ))
         except Exception as e:
             err_msg = f"Error processing country {iso2}: {str(e)}"
             logger.error(err_msg)

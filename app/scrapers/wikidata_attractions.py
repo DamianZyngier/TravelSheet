@@ -79,7 +79,8 @@ async def sync_all_wiki_attractions(db: Session):
             await sync_wiki_attractions_batch(db, batch)
             total["success"] += len(batch)
         except Exception as e:
-            logger.error(f"Error in batch sync: {e}")
+            isos = [c.iso_alpha2 for c in batch]
+            logger.error(f"Error in batch sync for {isos}: {e}")
             total["errors"] += len(batch)
         await asyncio.sleep(1.0) # Short sleep between many small queries
         

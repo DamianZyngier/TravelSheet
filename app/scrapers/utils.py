@@ -126,10 +126,10 @@ def slugify(text: str) -> str:
     text = re.sub(r'[\s]+', '-', text)
     return text.strip('-')
 
-def get_headers():
+def get_headers(accept: str = "application/json"):
     headers = {
         "User-Agent": "TravelSheet/1.1 (https://github.com/zyngi/TravelSheet; contact@travelsheet.io)",
-        "Accept": "application/json"
+        "Accept": accept
     }
     # Add Wikimedia Access Token if available
     access_token = os.getenv("WIKIMEDIA_ACCESS_TOKEN")

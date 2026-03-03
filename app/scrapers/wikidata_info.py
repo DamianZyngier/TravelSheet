@@ -262,7 +262,20 @@ async def sync_things_batch(db: Session, countries: list[models.Country]):
     if not countries: return
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
-    query = f"SELECT DISTINCT ?countryISO ?thingLabel WHERE {{ VALUES ?countryISO {{ {isos} }} ?country wdt:P297 ?countryISO. ?thing wdt:P31/wdt:P279* wd:Q570116; wdt:P17 ?country. SERVICE wikibase:label {{ bd:serviceParam wikibase:language 'pl,en'. }} }}"
+    
+    # Improved query with sitelinks filter to prioritize famous things and avoid timeouts
+    query = f"""
+    SELECT DISTINCT ?countryISO ?thingLabel WHERE {{ 
+      VALUES ?countryISO {{ {isos} }} 
+      ?country wdt:P297 ?countryISO. 
+      ?thing wdt:P31/wdt:P279* wd:Q570116; 
+             wdt:P17 ?country;
+             wikibase:sitelinks ?sitelinks.
+      FILTER(?sitelinks > 10)
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }} 
+    }}
+    LIMIT 100
+    """
     data = await async_sparql_get(query, "Unique Things")
     iso_things = {}
     for r in data:
@@ -271,7 +284,8 @@ async def sync_things_batch(db: Session, countries: list[models.Country]):
             if iso not in iso_things: iso_things[iso] = set()
             iso_things[iso].add(val)
     for iso, things in iso_things.items():
-        if iso in country_map: country_map[iso].unique_things = ", ".join(sorted(list(things))[:5])
+        if iso in country_map: 
+            country_map[iso].unique_things = ", ".join(sorted(list(things))[:5])
     db.commit()
 
 async def sync_all_wikidata_info(db: Session):

@@ -11,6 +11,7 @@ class Country(Base):
     iso_alpha3 = Column(String(3), unique=True, nullable=False)
     name = Column(String(100), nullable=False)
     name_pl = Column(String(100))
+    name_local = Column(String(100))
     capital = Column(String(100))
     capital_pl = Column(String(100))
     continent = Column(String(50))
@@ -41,6 +42,8 @@ class Country(Base):
     largest_cities = Column(Text)
     ethnic_groups = Column(Text)
     climate_description = Column(Text) # General description of climate types
+    unique_animals = Column(Text)
+    unique_things = Column(Text)
     
     is_independent = Column(Boolean, default=True)
     parent_id = Column(Integer, ForeignKey("countries.id"))

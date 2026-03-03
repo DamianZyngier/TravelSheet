@@ -60,6 +60,7 @@ async def sync_all_holidays(db: Session):
                 results["synced"] += 1
             else:
                 results["errors"] += 1
+                logger.warning(f"Holiday Sync Error ({country.iso_alpha2}): {res.get('error')}")
 
     logger.info(f"Starting parallel Holiday sync for {len(countries)} countries...")
     async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:

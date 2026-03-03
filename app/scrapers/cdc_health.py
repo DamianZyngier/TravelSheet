@@ -21,7 +21,7 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
     url = f"https://wwwnc.cdc.gov/travel/destinations/traveler/none/{slug}"
     
     try:
-        resp = await client.get(url, headers=get_headers())
+        resp = await client.get(url, headers=get_headers(accept="text/html"))
         if resp.status_code != 200:
             return {"error": f"CDC returned {resp.status_code} for {slug}"}
         
@@ -68,7 +68,7 @@ async def sync_all_cdc(db: Session):
                 results["synced"] += 1
             else:
                 results["errors"] += 1
-                logger.debug(f"CDC Error {country.iso_alpha2}: {res['error']}")
+                logger.warning(f"CDC Sync Error ({country.iso_alpha2}): {res.get('error')}")
 
     logger.info(f"Starting parallel CDC sync for {len(countries)} countries...")
     async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
