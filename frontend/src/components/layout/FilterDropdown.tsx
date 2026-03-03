@@ -1,25 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { CONTINENT_MAP, TRAVEL_TYPES } from '../../constants';
+import { CONTINENT_MAP, TRAVEL_TYPES, SAFETY_LABELS } from '../../constants';
 
-// Import continent icons
-import africaIcon from '../../assets/continents/Africa.svg';
-import antarcticaIcon from '../../assets/continents/Antarctica.svg';
-import asiaIcon from '../../assets/continents/Asia.svg';
-import oceaniaIcon from '../../assets/continents/Australia.svg';
-import europeIcon from '../../assets/continents/Europe.svg';
-import northAmericaIcon from '../../assets/continents/North_America.svg';
-import southAmericaIcon from '../../assets/continents/South_America.svg';
-import worldIcon from '../../assets/continents/World.svg';
-
-interface FilterDropdownProps {
-  filterContinent: string;
-  setFilterContinent: (continent: string) => void;
-  filterSafety: string;
-  setFilterSafety: (safety: string) => void;
-  filterTravelType: string;
-  setFilterTravelType: (type: string) => void;
-  continents: string[];
-}
+// ... rest of imports ...
 
 const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, active }) => {
   const iconMap: Record<string, string> = {
@@ -85,10 +67,10 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   }, []);
 
   const safetyLevels = [
-    { id: 'low', label: 'Bezpiecznie', class: 'risk-low' },
-    { id: 'medium', label: 'Średnio', class: 'risk-medium' },
-    { id: 'high', label: 'Niebezpiecznie', class: 'risk-high' },
-    { id: 'critical', label: 'Bardzo niebezpiecznie', class: 'risk-critical' }
+    { id: 'low', label: SAFETY_LABELS.low, class: 'risk-low' },
+    { id: 'medium', label: SAFETY_LABELS.medium, class: 'risk-medium' },
+    { id: 'high', label: SAFETY_LABELS.high, class: 'risk-high' },
+    { id: 'critical', label: SAFETY_LABELS.critical, class: 'risk-critical' }
   ];
 
   const activeFiltersCount = 
