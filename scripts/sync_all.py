@@ -64,16 +64,21 @@ async def run_sync(mode="full"):
         res_basic = await rest_countries.sync_countries(db)
         log_result("Basic Info", res_basic)
         
-        # 2-4. Exchange Rates, MSZ, Weather (These are independent)
-        print("[2-4/4] Syncing Rates, MSZ Safety, and Weather in parallel...")
+        # 2-3. Exchange Rates and MSZ (These are independent)
+        print("[2-3/4] Syncing Rates and MSZ Safety in parallel...")
         results = await asyncio.gather(
             exchange_rates.sync_rates(db),
-            msz_gov_pl.scrape_all_with_cache(db),
-            weather.update_all_weather(db)
+            msz_gov_pl.scrape_all_with_cache(db)
         )
         log_result("Exchange Rates", results[0])
         log_result("MSZ Safety", results[1])
-        log_result("Weather", results[2])
+        
+        # In daily mode, weather runs here. In weekly, we move it to the end.
+        if mode == "daily":
+            print("[4/4] Syncing Weather...")
+            res_weather = await weather.update_all_weather(db)
+            log_result("Weather", res_weather)
+        
         print("✅ Phase 1 completed.\n")
 
         # --- PHASE 2: WEEKLY / SLOW CHANGING (Parallelized) ---
@@ -82,7 +87,7 @@ async def run_sync(mode="full"):
             
             # Grouping independent scrapers to run in parallel
             # Group A: Fast static/local data
-            print("[5-8/15] Syncing Static Info, UNESCO, Emergency, and Costs...")
+            print("[5-8/16] Syncing Static Info, UNESCO, Emergency, and Costs...")
             static_info.sync_static_data(db)
             res_costs = costs.sync_costs(db)
             
@@ -95,7 +100,7 @@ async def run_sync(mode="full"):
             log_result("Emergency", res_emergency)
 
             # Group B: External API heavy data
-            print("[9-12/15] Syncing Climate, Wiki Summaries, Holidays, and CDC...")
+            print("[9-12/16] Syncing Climate, Wiki Summaries, Holidays, and CDC...")
             res_group_b = await asyncio.gather(
                 climate.sync_all_climate(db, force=True),
                 wiki_summaries.sync_all_summaries(db),
@@ -108,7 +113,7 @@ async def run_sync(mode="full"):
             log_result("CDC Health", res_group_b[3])
 
             # Group C: Scrapers & Wikidata (Wikidata is sensitive to parallel load, we run these last)
-            print("[13-15/15] Syncing Embassies and Wikidata...")
+            print("[13-15/16] Syncing Embassies and Wikidata...")
             res_embassies = await embassies.scrape_embassies(db)
             log_result("Embassies", res_embassies)
             
@@ -118,6 +123,11 @@ async def run_sync(mode="full"):
             
             res_wiki_info = await wikidata_info.sync_all_wikidata_info(db)
             log_result("Wiki Info (Religions/Ethnics)", res_wiki_info)
+
+            # Weather as the very last step for weekly/full sync
+            print("[16/16] Final Step: Syncing Weather...")
+            res_weather = await weather.update_all_weather(db)
+            log_result("Weather", res_weather)
             
             print("✅ Phase 2 completed.\n")
 

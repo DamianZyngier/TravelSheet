@@ -15,11 +15,14 @@ async def sync_holidays(db: Session, iso2: str, client: httpx.AsyncClient):
 
     try:
         response = await client.get(url, headers=get_headers())
+        if response.status_code == 204:
+            return {"status": "success", "data": []} # Handle No Content gracefully
         if response.status_code != 200:
             return {"error": f"HTTP {response.status_code}"}
         holidays_data = response.json()
     except Exception as e:
-        return {"error": str(e)}
+        error_msg = str(e) or "Unknown sync error"
+        return {"error": error_msg}
 
     country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2.upper()).first()
     if not country: return {"error": "Country not found"}
@@ -29,6 +32,9 @@ async def sync_holidays(db: Session, iso2: str, client: httpx.AsyncClient):
         models.Holiday.date >= date(current_year, 1, 1),
         models.Holiday.date <= date(current_year, 12, 31)
     ).delete()
+
+    if not isinstance(holidays_data, list):
+        holidays_data = []
 
     for h in holidays_data:
         try:

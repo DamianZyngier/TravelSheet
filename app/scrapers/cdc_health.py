@@ -26,7 +26,8 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
             return {"error": f"CDC returned {resp.status_code} for {slug}"}
         
         soup = BeautifulSoup(resp.text, 'html.parser')
-        vax_table = soup.select_one('table.vax-list-table')
+        # Try new selector first, then old one
+        vax_table = soup.select_one('table#dest-vm-a') or soup.select_one('table.disease') or soup.select_one('table.vax-list-table')
         
         if not vax_table:
             return {"error": "No vax table found"}
@@ -37,8 +38,10 @@ async def sync_cdc_health(db: Session, country_iso2: str, client: httpx.AsyncCli
             cells = row.find_all('td')
             if len(cells) >= 2:
                 name = cells[0].get_text(strip=True)
-                rec = cells[1].get_text(strip=True)
-                if any(word in rec for word in ["Required", "Mandatory"]):
+                rec = cells[1].get_text(" ", strip=True) # Use space to separate words in nested tags
+                
+                # Check for required/mandatory in the recommendation text
+                if any(word in rec.lower() for word in ["required", "mandatory"]):
                     required.append(name)
                 else:
                     suggested.append(name)

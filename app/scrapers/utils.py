@@ -54,8 +54,8 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
 CDC_MAPPING = {
     'RU': 'russia', 'US': 'united-states', 'GB': 'united-kingdom',
     'KR': 'south-korea', 'KP': 'north-korea', 'AE': 'united-arab-emirates',
-    'CD': 'democratic-republic-of-the-congo', 'CG': 'republic-of-the-congo',
-    'CI': 'cote-divoire', 'SZ': 'eswatini'
+    'CD': 'democratic-republic-of-congo', 'CG': 'congo',
+    'CI': 'ivory-coast', 'SZ': 'eswatini'
 }
 
 WIKI_NAME_MAP = {
