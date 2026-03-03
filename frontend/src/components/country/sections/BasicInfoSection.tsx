@@ -107,7 +107,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <span>{selectedCountry.languages?.length > 0 ? selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ') : 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
-          <strong>Kod telefoniczny</strong>
+          <strong>Nr kierunkowy</strong>
           <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
         </div>
         
