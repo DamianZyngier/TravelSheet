@@ -1,7 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { CONTINENT_MAP, TRAVEL_TYPES, SAFETY_LABELS } from '../../constants';
 
-// ... rest of imports ...
+// Import continent icons
+import africaIcon from '../../assets/continents/Africa.svg';
+import antarcticaIcon from '../../assets/continents/Antarctica.svg';
+import asiaIcon from '../../assets/continents/Asia.svg';
+import oceaniaIcon from '../../assets/continents/Australia.svg';
+import europeIcon from '../../assets/continents/Europe.svg';
+import northAmericaIcon from '../../assets/continents/North_America.svg';
+import southAmericaIcon from '../../assets/continents/South_America.svg';
+import worldIcon from '../../assets/continents/World.svg';
 
 const ContinentIcon: React.FC<{ name: string; active: boolean }> = ({ name, active }) => {
   const iconMap: Record<string, string> = {
