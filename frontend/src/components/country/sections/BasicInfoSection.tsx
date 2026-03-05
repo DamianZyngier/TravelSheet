@@ -63,7 +63,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
                     fontWeight: 'bold', 
                     marginLeft: '6px' 
                   }}>
-                    ({tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do WAW`})
+                    <br />({tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do PL`})
                   </span>
                 )}
               </>
@@ -86,15 +86,15 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
                   const ratio = density / polandDensity;
                   if (ratio > 1.1) {
                     return <span style={{ color: '#f56565', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      ({ratio.toFixed(1)}x gęściej)
+                      <br />({ratio.toFixed(1)}x gęściej niż w PL)
                     </span>;
                   } else if (ratio < 0.9) {
                     return <span style={{ color: '#48bb78', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      ({(1/ratio).toFixed(1)}x rzadziej)
+                      <br />({(1/ratio).toFixed(1)}x rzadziej niż w PL)
                     </span>;
                   } else {
                     return <span style={{ color: '#4299e1', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      (podobnie)
+                      <br />(podobnie do PL)
                     </span>;
                   }
                 })()}

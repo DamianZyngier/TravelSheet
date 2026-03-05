@@ -56,9 +56,22 @@ async def sync_rates(db: Session):
             # NBP returns 1 CURR = X PLN (mid rate)
             nbp_info = all_nbp_data.get(curr.code.upper())
             if nbp_info:
+                rate = nbp_info["rate"]
                 # Update rate
-                curr.exchange_rate_pln = nbp_info["rate"]
+                curr.exchange_rate_pln = rate
                 curr.last_updated = func.now()
+                
+                # Categorize currency strength (nominal value relative to PLN)
+                if rate > 10:
+                    curr.relative_cost = "Bardzo mocna"
+                elif rate >= 1:
+                    curr.relative_cost = "Mocna"
+                elif rate >= 0.1:
+                    curr.relative_cost = "Średnia"
+                elif rate >= 0.01:
+                    curr.relative_cost = "Słaba"
+                else:
+                    curr.relative_cost = "Bardzo słaba"
                 
                 # Update name to official Polish if available
                 if nbp_info["name"]:

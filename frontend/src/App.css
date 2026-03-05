@@ -4266,3 +4266,38 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Currency Strength Badge */
+.currency-rate-line .rate-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.currency-strength-badge {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.currency-strength-badge.strong {
+  background-color: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.currency-strength-badge.medium {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  border: 1px solid #bee3f8;
+}
+
+.currency-strength-badge.weak {
+  background-color: #f0fff4;
+  color: #276749;
+  border: 1px solid #9ae6b4;
+}

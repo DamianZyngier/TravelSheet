@@ -56,6 +56,7 @@ export interface CountryData {
     code: string;
     name: string;
     rate_pln: number | null;
+    relative_cost: string | null;
     last_updated: string | null;
   };
   practical: {

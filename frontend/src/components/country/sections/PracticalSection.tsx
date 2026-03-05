@@ -134,7 +134,17 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             </div>
             {selectedCountry.currency.rate_pln && (
               <div className="currency-rate-line">
-                1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
+                <div className="rate-main">
+                  1 {selectedCountry.currency.code} = {formatPLN(selectedCountry.currency.rate_pln)}
+                  {selectedCountry.currency.relative_cost && (
+                    <span className={`currency-strength-badge ${
+                      selectedCountry.currency.relative_cost.includes('mocna') ? 'strong' :
+                      selectedCountry.currency.relative_cost === 'Średnia' ? 'medium' : 'weak'
+                    }`}>
+                      {selectedCountry.currency.relative_cost}
+                    </span>
+                  )}
+                </div>
                 <small className="currency-example"> ({getCurrencyExample(selectedCountry)})</small>
               </div>
             )}
