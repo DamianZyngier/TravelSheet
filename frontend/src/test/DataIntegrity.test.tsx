@@ -18,6 +18,12 @@ describe('Data Integrity Check', () => {
         "population": 38000000,
         "latitude": 52.0,
         "longitude": 20.0,
+        "hdi": 0.876,
+        "life_expectancy": 76.0,
+        "has_ekuz": false,
+        "popular_apps": "Uber, Bolt",
+        "climate_description": "Klimat umiarkowany",
+        "coat_of_arms_url": "https://example.com/coat.png",
         "safety": {
           "risk_level": "low",
           "risk_text": "Safe",

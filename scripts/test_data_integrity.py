@@ -24,9 +24,20 @@ def test_data_integrity():
     
     for iso, country in data.items():
         # 1. Basic Fields
-        for field in ['name', 'name_pl', 'iso2', 'iso3', 'capital', 'continent', 'region', 'flag_url', 'unesco_count', 'wiki_summary']:
+        basic_fields = ['name', 'name_pl', 'iso2', 'iso3', 'capital', 'continent', 'region', 'flag_url', 
+                        'unesco_count', 'wiki_summary', 'hdi', 'life_expectancy', 'gdp_nominal', 
+                        'coat_of_arms_url', 'inception_date', 'official_tourist_website', 
+                        'regional_products', 'has_ekuz', 'climate_description', 'popular_apps']
+        for field in basic_fields:
             if field not in country:
-                errors.append(f"{iso}: Missing basic field '{field}'")
+                errors.append(f"{iso}: Missing basic/advanced field '{field}'")
+        
+        # Type validation for specific new fields
+        if 'has_ekuz' in country and not isinstance(country['has_ekuz'], bool):
+            errors.append(f"{iso}: 'has_ekuz' must be a boolean")
+        
+        if 'hdi' in country and country['hdi'] is not None and not isinstance(country['hdi'], (int, float)):
+            errors.append(f"{iso}: 'hdi' must be a number or null")
         
         # 2. Safety
         safety = country.get('safety', {})

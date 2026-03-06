@@ -21,6 +21,8 @@ To ensure high-quality data, the project implements several layers of validation
 - **Largest Cities**: Enhanced scraping from Wikidata to include population data, filter out duplicate administrative units, and sort cities by population in descending order.
 - **Socio-Economic Data**: Added HDI (Human Development Index), Life Expectancy, GDP (Nominal/PPP), and Gini coefficient from Wikidata to provide developmental context.
 - **Cultural & Infrastructure**: Added Coat of Arms URLs, Inception/Independence dates, Official Tourist Websites, and Regional Products (GIs).
+- **EKUZ Integration**: Automated flagging of countries where European Health Insurance Card is valid, with direct application links.
+- **Advanced Comparisons**: UI now automatically calculates and displays socio-economic differences between the selected country and Poland (HDI, Life Expectancy, GDP).
 - **Transport Apps**: Custom mapping of ride-hailing services (Uber, Bolt, Grab, etc.) per country, including city-specific availability.
 - **Automated Testing**: `scripts/test_data_integrity.py` validates the exported `data.json` structure before deployment.
 
