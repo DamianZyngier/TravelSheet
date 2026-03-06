@@ -46,13 +46,14 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
       <div className="detail-body">
         {/* 0. Podsumowanie */}
         <div id="summary" className="category-group scroll-mt">
-          <div className="category-group-header-simple">
-            <h3 className="category-group-title">Podsumowanie</h3>
-          </div>
           <div className="category-content">
             <div className="detail-header-group">
               <div className="header-info-flex">
-                <div className="header-visuals">
+                <div className="detail-titles">
+                  <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
+                  <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
+                </div>
+                <div className="header-visuals" style={{ marginTop: '1rem' }}>
                   <img 
                     src={selectedCountry.flag_url} 
                     alt={`Flaga ${selectedCountry.name_pl}`} 
@@ -65,10 +66,6 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
                       className="detail-coat-img" 
                     />
                   )}
-                </div>
-                <div className="detail-titles">
-                  <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
-                  <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
                 </div>
               </div>
               

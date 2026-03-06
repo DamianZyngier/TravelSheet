@@ -133,6 +133,13 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </div>
         )}
 
+        {selectedCountry.climate_description && (
+          <div className="info-item-box full">
+            <strong>Klimat (opis)</strong>
+            <span>☀️ {selectedCountry.climate_description}</span>
+          </div>
+        )}
+
         {selectedCountry.main_airport && (
           <div className="info-item-box full">
             <strong>Główne lotnisko</strong>
@@ -147,7 +154,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         )}
         {selectedCountry.largest_cities && (
           <div className="info-item-box full">
-            <strong>Największe miasta</strong>
+            <strong>Największe miasta (top 10)</strong>
             <span>{selectedCountry.largest_cities}</span>
           </div>
         )}
@@ -155,6 +162,26 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           <div className="info-item-box full">
             <strong>Grupy etniczne</strong>
             <span>{selectedCountry.ethnic_groups}</span>
+          </div>
+        )}
+        {selectedCountry.regional_products && (
+          <div className="info-item-box full">
+            <strong>Produkty regionalne i pamiątki</strong>
+            <span>🎁 {selectedCountry.regional_products}</span>
+          </div>
+        )}
+        {selectedCountry.official_tourist_website && (
+          <div className="info-item-box full">
+            <strong>Oficjalna strona turystyczna</strong>
+            <a 
+              href={selectedCountry.official_tourist_website} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="msz-link"
+              style={{ marginTop: '0', fontWeight: '700' }}
+            >
+              {selectedCountry.official_tourist_website.replace('https://', '').replace('http://', '').split('/')[0]} ↗
+            </a>
           </div>
         )}
 

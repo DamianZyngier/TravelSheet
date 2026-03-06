@@ -283,7 +283,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         cities = country_cities.get(iso, [])
         if cities:
             cities.sort(key=lambda x: x[1], reverse=True)
-            c.largest_cities = ", ".join([f"{name} ({format_pop(pop)})" for name, pop in cities])
+            c.largest_cities = ", ".join([f"{name} ({format_pop(pop)})" for name, pop in cities[:10]])
         
         # Religions
         rels = country_religions.get(iso, {})
