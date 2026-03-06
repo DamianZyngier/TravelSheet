@@ -288,14 +288,12 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                           alt={`Typ ${type}`} 
                           className="plug-img" 
                           referrerPolicy="no-referrer"
-                          crossOrigin="anonymous"
                         />
                         <div className="plug-img-enlarged">
                           <img 
                             src={getEnlargedPlugUrl(PLUG_IMAGES[cleanType])} 
                             alt={`Typ ${type} powiększony`} 
                             referrerPolicy="no-referrer"
-                            crossOrigin="anonymous"
                           />
                         </div>
                       </div>

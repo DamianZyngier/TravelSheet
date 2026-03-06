@@ -29,7 +29,7 @@ export const checkPlugs = (plugs: string) => {
 
 export const getEnlargedPlugUrl = (url: string) => {
   if (!url) return '';
-  return url.replace('100x100', '250x250');
+  return url;
 };
 
 export const getPlugCompatibility = (type: string) => {
