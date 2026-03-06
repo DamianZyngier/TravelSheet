@@ -35,13 +35,13 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
                 </p>
                 {selectedCountry.has_ekuz && (
                   <a 
-                    href="https://www.nfz.gov.pl/dla-pacjenta/nasze-serwisy/ekuz/" 
+                    href="https://pacjent.gov.pl/ekuz" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="msz-link"
                     style={{ marginTop: '4px', fontSize: '0.8rem' }}
                   >
-                    Wyrób kartę EKUZ (NFZ) ↗
+                    Wyrób kartę EKUZ (pacjent.gov.pl) ↗
                   </a>
                 )}
               </div>

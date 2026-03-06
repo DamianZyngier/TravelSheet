@@ -162,10 +162,10 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
                     <span className="stat-comparison" style={{ fontWeight: 'bold' }}>
                       {(() => {
                         const plHdi = 0.876;
-                        const diff = selectedCountry.hdi - plHdi;
-                        if (Math.abs(diff) < 0.01) return <span style={{ color: '#4299e1' }}>(jak w PL)</span>;
-                        return <span className={diff > 0 ? 'text-pos' : 'text-neg'}>
-                          ({diff > 0 ? 'wyższy' : 'niższy'} niż PL)
+                        const diffPct = ((selectedCountry.hdi - plHdi) / plHdi) * 100;
+                        if (Math.abs(diffPct) < 0.5) return <span style={{ color: '#4299e1' }}>(jak w PL)</span>;
+                        return <span className={diffPct > 0 ? 'text-pos' : 'text-neg'}>
+                          ({diffPct > 0 ? '+' : ''}{diffPct.toFixed(1)}% vs PL)
                         </span>;
                       })()}
                     </span>
