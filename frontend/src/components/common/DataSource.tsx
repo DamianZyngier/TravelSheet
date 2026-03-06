@@ -25,16 +25,21 @@ export const DataSource: React.FC<DataSourceProps> = ({ sources, lastUpdated }) 
 
   const formattedDate = lastUpdated ? formatDate(lastUpdated) : null;
 
+  // Filter out invalid sources to prevent crashes
+  const validSources = sources.filter(s => !!DATA_SOURCES[s]);
+
+  if (validSources.length === 0 && !formattedDate) return null;
+
   return (
     <div className="data-source-footer">
       <div className="data-source-links">
-        <span>Źródło: </span>
-        {sources.map((s, i) => (
+        {validSources.length > 0 && <span>Źródło: </span>}
+        {validSources.map((s, i) => (
           <span key={s}>
             <a href={DATA_SOURCES[s].url} target="_blank" rel="noopener noreferrer" className="data-source-link">
               {DATA_SOURCES[s].name}
             </a>
-            {i < sources.length - 1 ? ', ' : ''}
+            {i < validSources.length - 1 ? ', ' : ''}
           </span>
         ))}
       </div>

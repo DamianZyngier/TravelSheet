@@ -19,6 +19,7 @@ export const DATA_SOURCES = {
   OWM: { name: 'OpenWeatherMap', url: 'https://openweathermap.org/' },
   METEO: { name: 'Open-Meteo', url: 'https://open-meteo.com/' },
   NUMBEO: { name: 'Numbeo', url: 'https://www.numbeo.com/' },
+  NBP: { name: 'Narodowy Bank Polski', url: 'https://nbp.pl/' },
   NAGER: { name: 'Nager.Date', url: 'https://date.nager.at/' }
 };
 
