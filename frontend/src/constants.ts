@@ -62,21 +62,21 @@ export const PLUG_NAMES: Record<string, string> = {
 };
 
 export const PLUG_IMAGES: Record<string, string> = {
-    'A': 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Socket_Type_A.jpg',
-    'B': 'https://upload.wikimedia.org/wikipedia/commons/d/df/Socket_Type_B.jpg',
-    'C': 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Socket_Type_C.jpg',
-    'D': 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Socket_Type_D.jpg',
-    'E': 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Socket_Type_E.jpg',
-    'F': 'https://upload.wikimedia.org/wikipedia/commons/6/69/Socket_Type_F.jpg',
-    'G': 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Socket_Type_G.jpg',
-    'H': 'https://upload.wikimedia.org/wikipedia/commons/2/28/Socket_Type_H.jpg',
-    'I': 'https://upload.wikimedia.org/wikipedia/commons/8/84/Socket_Type_I.jpg',
-    'J': 'https://upload.wikimedia.org/wikipedia/commons/1/13/Socket_Type_J.jpg',
-    'K': 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Socket_Type_K.jpg',
-    'L': 'https://upload.wikimedia.org/wikipedia/commons/1/10/Socket_Type_L.jpg',
-    'M': 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Socket_Type_M.jpg',
-    'N': 'https://upload.wikimedia.org/wikipedia/commons/1/11/Socket_Type_N.jpg',
-    'O': 'https://upload.wikimedia.org/wikipedia/commons/1/19/Socket_Type_O.jpg'
+    'A': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-A-100x100.jpg',
+    'B': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-B-100x100.jpg',
+    'C': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-C-100x100.jpg',
+    'D': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-D-100x100.jpg',
+    'E': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-E-100x100.jpg',
+    'F': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-F-100x100.jpg',
+    'G': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-G-100x100.jpg',
+    'H': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-H-100x100.jpg',
+    'I': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-I-100x100.jpg',
+    'J': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-J-100x100.jpg',
+    'K': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-K-100x100.jpg',
+    'L': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-L-100x100.jpg',
+    'M': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-M-100x100.jpg',
+    'N': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-N-100x100.jpg',
+    'O': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-O-100x100.jpg'
 };
 
 export const SECTIONS = [
