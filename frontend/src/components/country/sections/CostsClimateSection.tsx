@@ -60,6 +60,14 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
   // Check if rainfall data is worth showing
   const hasRainfall = selectedCountry.climate?.some(cl => cl.rain > 0);
 
+  // Helper to determine if we should show wet/dry seasons (only for tropical/monsoon/hot climates)
+  const shouldShowSeasons = () => {
+    const desc = selectedCountry.climate_description?.toLowerCase() || '';
+    return desc.includes('tropikal') || desc.includes('monsun') || desc.includes('gorąc') || desc.includes('równik') || desc.includes('savanna') || desc.includes('zwrotnik');
+  };
+
+  const showSeasons = shouldShowSeasons();
+
   return (
     <>
       {showCosts && (
@@ -224,7 +232,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
 
                 return (
                   <svg viewBox="0 0 600 260" className="combined-svg-chart">
-                    {selectedCountry.climate?.map((cl, i) => {
+                    {showSeasons && selectedCountry.climate?.map((cl, i) => {
                       const bandWidth = 43;
                       const xStart = 40.5 + i * bandWidth;
                       if (cl.season === 'wet' && hasRainfall) {
@@ -261,10 +269,10 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                           width="24"
                           height={barHeight}
                           className="chart-bar-rain"
-                          style={{ fill: cl.season === 'wet' ? '#3182ce' : '#bee3f8' }}
+                          style={{ fill: (showSeasons && cl.season === 'wet') ? '#3182ce' : '#bee3f8' }}
                           onMouseEnter={(e) => setChartTooltip({
                             visible: true,
-                            text: `${cl.rain} mm (${cl.season === 'wet' ? 'pora mokra' : cl.season === 'dry' ? 'pora sucha' : 'sezon przejściowy'})`,
+                            text: `${cl.rain} mm ${showSeasons ? `(${cl.season === 'wet' ? 'pora mokra' : cl.season === 'dry' ? 'pora sucha' : 'sezon przejściowy'})` : ''}`,
                             x: e.nativeEvent.offsetX,
                             y: e.nativeEvent.offsetY - 30
                           })}
@@ -324,15 +332,19 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
                     <span className="legend-label">Opady</span>
                   </div>
                 )}
-                <div className="legend-item">
-                  <span className="legend-color-box" style={{ backgroundColor: '#fff9eb', border: '1px solid #feebc8' }}></span>
-                  <span className="legend-label">Pora sucha</span>
-                </div>
-                {hasRainfall && (
-                  <div className="legend-item">
-                    <span className="legend-color-box" style={{ backgroundColor: '#e6f6ff', border: '1px solid #bee3f8' }}></span>
-                    <span className="legend-label">Pora mokra</span>
-                  </div>
+                {showSeasons && (
+                  <>
+                    <div className="legend-item">
+                      <span className="legend-color-box" style={{ backgroundColor: '#fff9eb', border: '1px solid #feebc8' }}></span>
+                      <span className="legend-label">Pora sucha</span>
+                    </div>
+                    {hasRainfall && (
+                      <div className="legend-item">
+                        <span className="legend-color-box" style={{ backgroundColor: '#e6f6ff', border: '1px solid #bee3f8' }}></span>
+                        <span className="legend-label">Pora mokra</span>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
 

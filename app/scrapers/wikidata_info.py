@@ -103,7 +103,14 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         
         if cities:
             cities.sort(key=lambda x: x[1], reverse=True)
-            c.largest_cities = ", ".join([f"{name} ({format_pop(pop)})" for name, pop in cities[:10]])
+            max_pop = cities[0][1]
+            # Limit to top 10, but only those with at least 10% of the largest city's population
+            filtered_cities = [city for city in cities[:10] if city[1] >= max_pop * 0.1]
+            # Ensure we show at least the top 3 if they exist, regardless of the 10% rule
+            if len(filtered_cities) < 3 and len(cities) > len(filtered_cities):
+                filtered_cities = cities[:min(3, len(cities))]
+                
+            c.largest_cities = ", ".join([f"{name} ({format_pop(pop)})" for name, pop in filtered_cities])
 
         # Souvenirs, Products, Handicrafts
         q_souv = f"""
@@ -176,7 +183,8 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         'FR': {'climate': 'Klimat umiarkowany morski i śródziemnomorski', 'souvenirs': 'Wina, Sery, Perfumy, Berety', 'website': 'https://www.france.fr/pl'},
         'IT': {'climate': 'Klimat śródziemnomorski', 'souvenirs': 'Wyroby skórzane, Oliwa, Szkło weneckie', 'website': 'https://www.italia.it/en'},
         'ES': {'climate': 'Klimat śródziemnomorski i kontynentalny', 'souvenirs': 'Wachlarze, Szafran, Ceramika', 'website': 'https://www.spain.info/en/'},
-        'JP': {'climate': 'Zróżnicowany (od podzwrotnikowego po umiarkowany)', 'souvenirs': 'Matcha, Ceramika, Noże kuchenne, Kimono', 'website': 'https://www.japan.travel/en/'}
+        'JP': {'climate': 'Zróżnicowany (od podzwrotnikowego po umiarkowany)', 'souvenirs': 'Matcha, Ceramika, Noże kuchenne, Kimono', 'website': 'https://www.japan.travel/en/'},
+        'CU': {'climate': 'Klimat podzwrotnikowy (tropikalny)', 'souvenirs': 'Cygara, Rum, Kawa kubańska, Instrumenty perkusyjne, Kapelusze panama'},
     }
 
     for iso, c in country_map.items():
