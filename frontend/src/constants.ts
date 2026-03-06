@@ -62,21 +62,21 @@ export const PLUG_NAMES: Record<string, string> = {
 };
 
 export const PLUG_IMAGES: Record<string, string> = {
-    'A': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Plug_Type_A.svg/200px-Plug_Type_A.svg.png',
-    'B': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Plug_Type_B.svg/200px-Plug_Type_B.svg.png',
-    'C': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Plug_Type_C.svg/200px-Plug_Type_C.svg.png',
-    'D': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Plug_Type_D.svg/200px-Plug_Type_D.svg.png',
-    'E': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Plug_Type_E.svg/200px-Plug_Type_E.svg.png',
-    'F': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Plug_Type_F.svg/200px-Plug_Type_F.svg.png',
-    'G': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Plug_Type_G.svg/200px-Plug_Type_G.svg.png',
-    'H': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Plug_Type_H.svg/200px-Plug_Type_H.svg.png',
-    'I': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Plug_Type_I.svg/200px-Plug_Type_I.svg.png',
-    'J': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Plug_Type_J.svg/200px-Plug_Type_J.svg.png',
-    'K': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Plug_Type_K.svg/200px-Plug_Type_K.svg.png',
-    'L': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Plug_Type_L.svg/200px-Plug_Type_L.svg.png',
-    'M': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Plug_Type_M.svg/200px-Plug_Type_M.svg.png',
-    'N': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Plug_Type_N.svg/200px-Plug_Type_N.svg.png',
-    'O': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Plug_Type_O.svg/200px-Plug_Type_O.svg.png'
+    'A': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-A-100x100.jpg',
+    'B': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-B-100x100.jpg',
+    'C': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-C-100x100.jpg',
+    'D': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-D-100x100.jpg',
+    'E': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-E-100x100.jpg',
+    'F': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-F-100x100.jpg',
+    'G': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-G-100x100.jpg',
+    'H': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-H-100x100.jpg',
+    'I': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-I-100x100.jpg',
+    'J': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-J-100x100.jpg',
+    'K': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-K-100x100.jpg',
+    'L': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-L-100x100.jpg',
+    'M': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-M-100x100.jpg',
+    'N': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-N-100x100.jpg',
+    'O': 'https://www.worldstandards.eu/wp-content/uploads/electricity-tiles-type-O-100x100.jpg'
 };
 
 export const SECTIONS = [

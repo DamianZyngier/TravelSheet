@@ -29,6 +29,9 @@ export const checkPlugs = (plugs: string) => {
 
 export const getEnlargedPlugUrl = (url: string) => {
   if (!url) return '';
+  if (url.includes('wikimedia.org')) {
+    return url.replace('200px', '500px');
+  }
   return url.replace('100x100', '250x250');
 };
 

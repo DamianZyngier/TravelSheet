@@ -283,9 +283,20 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                     </div>
                     {PLUG_IMAGES[cleanType] && (
                       <div className="plug-img-wrapper">
-                        <img src={PLUG_IMAGES[cleanType]} alt={`Typ ${type}`} className="plug-img" referrerPolicy="no-referrer" />
+                        <img 
+                          src={PLUG_IMAGES[cleanType]} 
+                          alt={`Typ ${type}`} 
+                          className="plug-img" 
+                          referrerPolicy="no-referrer"
+                          crossOrigin="anonymous"
+                        />
                         <div className="plug-img-enlarged">
-                          <img src={getEnlargedPlugUrl(PLUG_IMAGES[cleanType])} alt={`Typ ${type} powiększony`} referrerPolicy="no-referrer" />
+                          <img 
+                            src={getEnlargedPlugUrl(PLUG_IMAGES[cleanType])} 
+                            alt={`Typ ${type} powiększony`} 
+                            referrerPolicy="no-referrer"
+                            crossOrigin="anonymous"
+                          />
                         </div>
                       </div>
                     )}
