@@ -119,23 +119,37 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
 
         # Souvenirs, Products, Handicrafts
         q_souv = f"""
-        SELECT DISTINCT ?itemLabel WHERE {{
+        SELECT DISTINCT ?itemLabel ?desc ?image WHERE {{
           ?country wdt:P297 "{iso}".
           {{ ?item wdt:P495 ?country. ?item wdt:P31/wdt:P279* ?type. VALUES ?type {{ wd:Q170658 wd:Q11690 wd:Q2095 wd:Q13182 wd:Q202816 }} }}
           UNION {{ ?item wdt:P17 ?country. ?item wdt:P31/wdt:P279* wd:Q202816. }}
+          OPTIONAL {{ ?item schema:description ?desc. FILTER(LANG(?desc) = "pl") }}
+          OPTIONAL {{ ?item schema:description ?desc. FILTER(LANG(?desc) = "en") }}
+          OPTIONAL {{ ?item wdt:P18 ?image. }}
           SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
         }}
         LIMIT 20
         """
         souv_data = await async_sparql_get(q_souv, f"Souvenirs for {iso}")
-        s_set = set()
-        for r in souv_data:
-            val = r.get("itemLabel", {}).get("value")
-            if val and not val.startswith("Q") and len(val) > 2:
-                s_set.add(val)
         
-        if s_set:
-            final_souv = ", ".join(sorted(list(s_set))[:8])
+        # Clear old souvenirs list
+        db.query(models.Souvenir).filter(models.Souvenir.country_id == c.id).delete()
+        
+        s_names = []
+        for r in souv_data:
+            name = r.get("itemLabel", {}).get("value")
+            if name and not name.startswith("Q") and len(name) > 2:
+                if name not in s_names:
+                    s_names.append(name)
+                    db.add(models.Souvenir(
+                        country_id=c.id,
+                        name=name,
+                        description=r.get("desc", {}).get("value"),
+                        image_url=r.get("image", {}).get("value")
+                    ))
+        
+        if s_names:
+            final_souv = ", ".join(s_names[:8])
             c.practical.souvenirs = final_souv
             c.regional_products = final_souv
 

@@ -18,6 +18,14 @@ class EmergencyNumbersSchema(BaseModel):
     dispatch: Optional[str] = None
     member_112: bool = False
 
+class CurrencyDenominationSchema(BaseModel):
+    value: str
+    type: str
+    image_url: Optional[str] = None
+
+    class Config:
+        from_attributes = True
+
 class CurrencySchema(BaseModel):
     code: str
     name: Optional[str]
@@ -27,6 +35,7 @@ class CurrencySchema(BaseModel):
     exchange_rate_usd: Optional[float]
     relative_cost: Optional[str]
     last_updated: Optional[datetime]
+    denominations: List[CurrencyDenominationSchema] = []
 
     class Config:
         from_attributes = True
@@ -73,6 +82,15 @@ class UnescoPlaceSchema(BaseModel):
     is_transnational: bool
     year: Optional[int]
     image_url: Optional[str]
+
+    class Config:
+        from_attributes = True
+
+class SouvenirSchema(BaseModel):
+    name: str
+    description: Optional[str] = None
+    category: Optional[str] = None
+    image_url: Optional[str] = None
 
     class Config:
         from_attributes = True
@@ -186,6 +204,7 @@ class PracticalSchema(BaseModel):
     best_exchange_currency: Optional[str] = None
     exchange_where: Optional[str] = None
     atm_advice: Optional[str] = None
+    bargaining_info: Optional[str] = None
     souvenirs: Optional[str] = None
     last_updated: Optional[datetime] = None
 
@@ -268,6 +287,7 @@ class CountryDetail(BaseModel):
     embassies: List[EmbassySchema] = []
     attractions: List[AttractionSchema] = []
     unesco_places: List[UnescoPlaceSchema] = []
+    souvenirs: List[SouvenirSchema] = []
     
     # New Fields
     religions: List[ReligionSchema] = []

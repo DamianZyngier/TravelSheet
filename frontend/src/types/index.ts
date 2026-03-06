@@ -37,18 +37,34 @@ export interface CountryData {
     risk_text: string;
     risk_details: string;
     url: string;
+    last_updated?: string | null;
   };
   currency: {
     code: string;
     name: string;
     rate_pln: number | null;
+    last_updated?: string | null;
+    relative_cost?: string | null;
   };
   practical: {
     plug_types: string;
     voltage: number | null;
     water_safe: boolean | null;
+    water_safe_for_brushing: boolean | null;
     driving_side: string;
     card_acceptance: string;
+    best_exchange_currency: string;
+    exchange_where: string;
+    atm_advice: string;
+    bargaining_info: string;
+    alcohol_rules: string;
+    dress_code: string;
+    photography_restrictions: string;
+    sensitive_topics: string;
+    local_norms: string;
+    store_hours: string;
+    internet_notes: string;
+    esim_available: boolean | null;
     emergency?: {
       police: string | null;
       ambulance: string | null;
@@ -61,6 +77,8 @@ export interface CountryData {
     health_info: string;
     roaming_info: string;
     license_type: string;
+    souvenirs: string;
+    last_updated?: string | null;
   };
   costs?: {
     index: number | null;
@@ -69,6 +87,10 @@ export interface CountryData {
     transport: number | null;
     accommodation: number | null;
     ratio_to_pl: number | null;
+    daily_budget_low: number | null;
+    daily_budget_mid: number | null;
+    daily_budget_high: number | null;
+    last_updated?: string | null;
   };
   embassies?: {
     type: string;
@@ -95,6 +117,12 @@ export interface CountryData {
     category: string;
     description?: string;
   }[];
+  souvenirs_list?: {
+    name: string;
+    description?: string;
+    category?: string;
+    image_url?: string;
+  }[];
   unesco_places?: {
     name: string;
     category: string;
@@ -109,12 +137,20 @@ export interface CountryData {
     temp_day: number;
     temp_night: number;
     rain: number;
+    season?: string;
   }[];
   weather?: {
     temp: number | null;
     condition: string;
     icon: string;
+    forecast?: any[];
+    last_updated?: string | null;
   };
+  laws_and_customs?: {
+    category: string;
+    title: string;
+    description: string;
+  }[];
   // Advanced Wikidata Fields
   hdi?: number;
   life_expectancy?: number;
@@ -128,4 +164,8 @@ export interface CountryData {
   regional_products?: string;
   has_ekuz: boolean;
   natural_hazards?: string;
+  popular_apps?: string;
+  largest_cities?: string;
+  ethnic_groups?: string;
+  last_updated?: string | null;
 }

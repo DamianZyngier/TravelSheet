@@ -278,12 +278,23 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
         db.add(entry)
     entry.passport_required, entry.temp_passport_allowed, entry.id_card_allowed, entry.visa_required, entry.last_updated = passport_req, temp_passport_req, id_card_req, visa_req, func.now()
 
+    # Try to extract bargaining info from the whole text
+    text_content = soup.get_text().lower()
+    bargaining_info = "Brak danych"
+    if any(kw in text_content for kw in ["targowanie", "negocjować ceny", "targuj"]):
+        if any(word in text_content for word in ["powszechne", "wskazane", "należy się targować", "zwyczaj"]):
+            bargaining_info = "Powszechne i wskazane, szczególnie na lokalnych targowiskach."
+        elif any(word in text_content for word in ["nie jest", "rzadko", "brak zwyczaju"]):
+            bargaining_info = "Niewskazane lub rzadko spotykane."
+        else:
+            bargaining_info = "Możliwe w określonych miejscach (np. bazary, targowiska)."
+
     practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
     if not practical:
         practical = models.PracticalInfo(country_id=country.id)
         db.add(practical)
     practical.health_info, practical.vaccinations_required, practical.vaccinations_suggested = normalize_polish_text(health_full), normalize_polish_text(vaccines_req), normalize_polish_text(vaccines_sug)
-    practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.souvenirs, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), normalize_polish_text(souvenirs), func.now()
+    practical.local_norms, practical.tipping_culture, practical.alcohol_rules, practical.dress_code, practical.photography_restrictions, practical.souvenirs, practical.bargaining_info, practical.last_updated = normalize_polish_text(customs_full), normalize_polish_text(tipping), normalize_polish_text(alcohol_rules), normalize_polish_text(dress_code), normalize_polish_text(photos), normalize_polish_text(souvenirs), normalize_polish_text(bargaining_info), func.now()
 
     db.commit()
     return {"status": "success", "risk_level": risk_level, "url": final_url}

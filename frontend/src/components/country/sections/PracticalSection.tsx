@@ -30,6 +30,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
   const showDriving = showAll || onlySections?.includes('driving');
   const showStores = showAll || onlySections?.includes('stores');
   const showTransport = showAll || onlySections?.includes('transport');
+  const showSouvenirs = showAll || onlySections?.includes('souvenirs');
   const showGeneral = showAll;
 
   return (
@@ -167,14 +168,57 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               <div className="advice-item">
                 <strong>Gdzie wymieniać:</strong> <span>{selectedCountry.practical.exchange_where || 'Na miejscu'}</span>
               </div>
+              <div className="advice-item">
+                <strong>Targowanie się:</strong> <span>{selectedCountry.practical.bargaining_info || 'Brak danych'}</span>
+              </div>
             </div>
             {selectedCountry.practical.atm_advice && (
               <div className="atm-advice">
                 <strong>Bankomaty:</strong> {selectedCountry.practical.atm_advice}
               </div>
             )}
+
+            {selectedCountry.currency.denominations && selectedCountry.currency.denominations.length > 0 && (
+              <div className="currency-visuals-box">
+                <strong>Pieniądze w obiegu (gotówka)</strong>
+                <div className="denom-scroll-row">
+                  {selectedCountry.currency.denominations.map((d, i) => (
+                    <div key={i} className="denom-card">
+                      <img src={d.image_url} alt={`${d.value} ${d.type}`} className="denom-img" />
+                      <span className="denom-label">{d.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-          <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.currency.last_updated} />
+          <DataSource sources={['REST', 'WIKI', 'NBP']} lastUpdated={selectedCountry.currency.last_updated} />
+        </div>
+      )}
+
+      {showSouvenirs && (selectedCountry.souvenirs_list && selectedCountry.souvenirs_list.length > 0 || selectedCountry.practical.souvenirs) && (
+        <div id="souvenirs" className="info-block full-width scroll-mt">
+          <div className="section-header">
+            <span className="section-header-icon">🎁</span>
+            <label>Co kupić i pamiątki</label>
+          </div>
+          {selectedCountry.souvenirs_list && selectedCountry.souvenirs_list.length > 0 ? (
+            <div className="souvenir-enriched-grid">
+              {selectedCountry.souvenirs_list.map((s, i) => (
+                <div key={i} className="souvenir-enriched-item">
+                  {s.image_url && <img src={s.image_url} alt={s.name} className="souvenir-img" />}
+                  <div className="souvenir-enriched-content">
+                    <strong>{s.name}</strong>
+                    {s.description && <p>{s.description}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="info-item-box full">
+              <span>{selectedCountry.practical.souvenirs}</span>
+            </div>
+          )}
         </div>
       )}
 

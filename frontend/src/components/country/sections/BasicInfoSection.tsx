@@ -7,73 +7,26 @@ interface BasicInfoSectionProps {
 }
 
 export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCountry }) => {
-  // Top 3 religions for maximum compactness
-  const topReligions = selectedCountry.religions 
-    ? [...selectedCountry.religions].sort((a, b) => b.percentage - a.percentage).slice(0, 3)
-    : [];
-
-  const getTimezoneDiff = (tzStr: string | null) => {
-    if (!tzStr) return null;
-    // Warsaw is UTC+1 (winter) / UTC+2 (summer). 
-    // For simplicity and consistency without external libs, we use UTC+1 as base.
-    const warsawOffset = 1;
-    
-    // Extract UTC offset from string like "UTC+05:30" or "UTC-03:00"
-    const match = tzStr.match(/UTC([+-])(\d{2}):(\d{2})/);
-    if (match) {
-      const sign = match[1] === '+' ? 1 : -1;
-      const hours = parseInt(match[2]);
-      const mins = parseInt(match[3]);
-      const offset = sign * (hours + mins/60);
-      const diff = offset - warsawOffset;
-      
-      const diffStr = diff > 0 ? `+${diff}` : `${diff}`;
-      // Clean up .0
-      return diffStr.replace('.0', '') + 'h';
-    }
-    return null;
-  };
-
-  const tzDiff = getTimezoneDiff(selectedCountry.timezone);
-
   return (
-    <div id="info" className="info-block full-width basic-info-section scroll-mt">
+    <div className="info-block full-width basic-info-section">
       <div className="section-header">
-        <span className="section-header-icon">ℹ️</span>
+        <span className="section-header-icon">📊</span>
         <label>Podstawowe informacje</label>
       </div>
+      
       <div className="info-grid">
         <div className="info-item-box">
-          <strong>Kontynent</strong>
-          <span>{selectedCountry.continent || 'Brak danych'}</span>
+          <strong>Stolica</strong>
+          <span>🏛️ {selectedCountry.capital || 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
-          <strong>Stolica</strong>
-          <span>
-            {selectedCountry.capital || 'Brak danych'} 
-            {selectedCountry.timezone && (
-              <>
-                <span style={{ marginLeft: '4px', color: '#64748b', fontSize: '0.85rem' }}>
-                  ({selectedCountry.timezone})
-                </span>
-                {tzDiff && (
-                  <span style={{ 
-                    color: tzDiff === '0h' ? '#4299e1' : '#48bb78', 
-                    fontSize: '0.8rem', 
-                    fontWeight: 'bold', 
-                    marginLeft: '6px' 
-                  }}>
-                    <br />({tzDiff === '0h' ? 'ten sam czas' : `${tzDiff} do PL`})
-                  </span>
-                )}
-              </>
-            )}
-          </span>
+          <strong>Strefa czasowa</strong>
+          <span>🕒 {selectedCountry.timezone || 'Brak danych'}</span>
         </div>
         <div className="info-item-box">
           <strong>Ludność</strong>
           <span>
-            {selectedCountry.population?.toLocaleString() || 'Brak danych'}
+            👥 {selectedCountry.population?.toLocaleString() || 'Brak danych'}
             {selectedCountry.population && selectedCountry.iso2 !== 'PL' && (
               <span className="stat-comparison" style={{ display: 'block', fontWeight: 'bold' }}>
                 {(() => {
@@ -116,29 +69,25 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
           </span>
         </div>
         <div className="info-item-box">
-          <strong>Języki</strong>
-          <span>{selectedCountry.languages?.length > 0 ? selectedCountry.languages.map(l => l.name + (l.is_official ? ' (ofic.)' : '')).join(', ') : 'Brak danych'}</span>
+          <strong>Religie</strong>
+          <div className="religion-list-simple">
+            {selectedCountry.religions && selectedCountry.religions.length > 0 ? (
+              selectedCountry.religions.map((r, idx) => (
+                <div key={idx} className="religion-item-simple">
+                  <span className="rel-name">{r.name}</span>
+                  <span className="rel-perc">{r.percentage > 0 ? `${r.percentage}%` : 'Główne wyznanie'}</span>
+                </div>
+              ))
+            ) : (
+              <span>Brak danych</span>
+            )}
+          </div>
         </div>
         <div className="info-item-box">
-          <strong>Nr kierunkowy</strong>
-          <span>{selectedCountry.phone_code ? `+${selectedCountry.phone_code.replace('+', '')}` : 'Brak danych'}</span>
+          <strong>Języki</strong>
+          <span>💬 {selectedCountry.languages?.map(l => l.name).join(', ') || 'Brak danych'}</span>
         </div>
         
-        {/* Integrated Religions */}
-        {topReligions.length > 0 && (
-          <div id="religion" className="info-item-box">
-            <strong>Religie i wyznania</strong>
-            <div className="religion-list-simple">
-              {topReligions.map((r, i) => (
-                <div key={i} className="religion-item-simple">
-                  <span className="rel-name">{r.name}</span>
-                  <span className="rel-perc">{Math.round(r.percentage)}%</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {selectedCountry.national_dish && (
           <div className="info-item-box">
             <strong>Danie narodowe</strong>
@@ -199,7 +148,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         )}
 
         {/* Advanced Stats */}
-        {(selectedCountry.hdi || selectedCountry.life_expectancy || selectedCountry.gdp_nominal || selectedCountry.inception_date) && (
+        {(selectedCountry.hdi || selectedCountry.life_expectancy || selectedCountry.gdp_per_capita || selectedCountry.inception_date) && (
           <div className="info-item-box full stats-container">
             <div className="stats-header">Statystyki i Rozwój</div>
             <div className="stats-grid">
@@ -250,7 +199,7 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
                   {selectedCountry.iso2 !== 'PL' && (
                     <span className="stat-comparison" style={{ fontWeight: 'bold' }}>
                       {(() => {
-                        const plGdpCapita = 18000; // Approx baseline
+                        const plGdpCapita = 18000;
                         const ratio = selectedCountry.gdp_per_capita / plGdpCapita;
                         if (ratio > 1.1) return <span className="text-pos">({ratio.toFixed(1)}x więcej niż PL)</span>;
                         if (ratio < 0.9) return <span className="text-neg">({(1/ratio).toFixed(1)}x mniej niż PL)</span>;

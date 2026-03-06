@@ -14,7 +14,8 @@ from app.scrapers import (
     unesco, msz_gov_pl, wiki_summaries, weather, holidays, 
     costs, cdc_health, embassies, emergency, climate, 
     rest_countries, exchange_rates, static_info, 
-    wikidata_attractions, wikidata_info, transport_apps
+    wikidata_attractions, wikidata_info, transport_apps,
+    currency_visuals
 )
 from scripts.export_to_json import export_all
 
@@ -86,7 +87,7 @@ async def run_sync(mode="full"):
             print("--- PHASE 2: Weekly / slow-changing Data ---")
             
             # Group A: Fast static/local data
-            print("[5-8/16] Syncing Static Info, EKUZ, UNESCO, Emergency, and Costs...")
+            print("[5-9/18] Syncing Static, EKUZ, UNESCO, Emergency, and Costs...")
             static_info.sync_static_data(db)
             static_info.sync_ekuz_data(db)
             res_costs = costs.sync_costs(db)
@@ -100,7 +101,7 @@ async def run_sync(mode="full"):
             log_result("Emergency", res_emergency)
 
             # Group B: External API heavy data
-            print("[9-12/16] Syncing Climate, Wiki Summaries, Holidays, and CDC...")
+            print("[10-13/18] Syncing Climate, Wiki Summaries, Holidays, and CDC...")
             res_group_b = await asyncio.gather(
                 climate.sync_all_climate(db, force=True),
                 wiki_summaries.sync_all_summaries(db),
@@ -112,24 +113,25 @@ async def run_sync(mode="full"):
             log_result("Holidays", res_group_b[2])
             log_result("CDC Health", res_group_b[3])
 
-            # Group C: Scrapers & Wikidata (Wikidata is sensitive to parallel load, we run these last)
-            print("[13-15/16] Syncing Embassies and Wikidata...")
+            # Group C: Scrapers & Wikidata
+            print("[14-17/18] Syncing Embassies, Wikidata, Apps and Visuals...")
             res_embassies = await embassies.scrape_embassies(db)
             log_result("Embassies", res_embassies)
             
-            # We run wikidata scrapers sequentially to avoid 429/5xx errors
             res_wiki_attr = await wikidata_attractions.sync_all_wiki_attractions(db)
             log_result("Wiki Attractions", res_wiki_attr)
             
             res_wiki_info = await wikidata_info.sync_all_wikidata_info(db)
-            log_result("Wiki Info (Religions/Ethnics)", res_wiki_info)
+            log_result("Wiki Info", res_wiki_info)
 
-            print("[16/17] Syncing Transport Apps...")
             res_transport = await transport_apps.sync_transport_apps(db)
             log_result("Transport Apps", res_transport)
 
+            res_visuals = await currency_visuals.sync_all_currency_visuals(db)
+            log_result("Currency Visuals", res_visuals)
+
             # Weather as the very last step for weekly/full sync
-            print("[17/17] Final Step: Syncing Weather...")
+            print("[18/18] Final Step: Syncing Weather...")
             res_weather = await weather.update_all_weather(db)
             log_result("Weather", res_weather)
             

@@ -77,6 +77,7 @@ class Country(Base):
     attractions = relationship("Attraction", back_populates="country", cascade="all, delete-orphan")
     unesco_places = relationship("UnescoPlace", back_populates="country", cascade="all, delete-orphan")
     religions = relationship("Religion", back_populates="country", cascade="all, delete-orphan")
+    souvenirs = relationship("Souvenir", back_populates="country", cascade="all, delete-orphan")
     holidays = relationship("Holiday", back_populates="country", cascade="all, delete-orphan")
     weather = relationship("Weather", back_populates="country", uselist=False, cascade="all, delete-orphan")
     climate = relationship("Climate", back_populates="country", cascade="all, delete-orphan")
@@ -92,9 +93,6 @@ class Language(Base):
     code = Column(String(10))
     is_official = Column(Boolean, default=False)
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-
-    def __repr__(self):
-        return f"<Language(name='{self.name}', code='{self.code}')>"
 
     country = relationship("Country", back_populates="languages")
 
@@ -112,10 +110,20 @@ class Currency(Base):
     relative_cost = Column(String(20))
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
-    def __repr__(self):
-        return f"<Currency(code='{self.code}', rate_pln={self.exchange_rate_pln})>"
-
     country = relationship("Country", back_populates="currency")
+    denominations = relationship("CurrencyDenomination", back_populates="currency", cascade="all, delete-orphan")
+
+class CurrencyDenomination(Base):
+    __tablename__ = "currency_denominations"
+
+    id = Column(Integer, primary_key=True)
+    currency_id = Column(Integer, ForeignKey("currencies.id", ondelete="CASCADE"))
+    value = Column(String(50))
+    type = Column(String(20)) # banknote, coin
+    image_url = Column(String(500))
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
+
+    currency = relationship("Currency", back_populates="denominations")
 
 class SafetyInfo(Base):
     __tablename__ = "safety_info"
@@ -127,9 +135,6 @@ class SafetyInfo(Base):
     risk_details = Column(Text)
     full_url = Column(Text)
     last_checked = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-
-    def __repr__(self):
-        return f"<Safety(risk='{self.risk_level}')>"
 
     country = relationship("Country", back_populates="safety")
 
@@ -146,9 +151,6 @@ class Embassy(Base):
     email = Column(String(100))
     website = Column(Text)
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-
-    def __repr__(self):
-        return f"<Embassy(type='{self.type}', city='{self.city}')>"
 
     country = relationship("Country", back_populates="embassies")
 
@@ -187,9 +189,6 @@ class Attraction(Base):
     display_order = Column(Integer, default=0)
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
-    def __repr__(self):
-        return f"<Attraction(name='{self.name}', cat='{self.category}')>"
-
     country = relationship("Country", back_populates="attractions")
 
 class UnescoPlace(Base):
@@ -207,9 +206,6 @@ class UnescoPlace(Base):
     image_url = Column(String(500))
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
-    def __repr__(self):
-        return f"<UnescoPlace(name='{self.name}', cat='{self.category}')>"
-
     country = relationship("Country", back_populates="unesco_places")
 
 class Religion(Base):
@@ -223,6 +219,19 @@ class Religion(Base):
 
     country = relationship("Country", back_populates="religions")
 
+class Souvenir(Base):
+    __tablename__ = "souvenirs"
+
+    id = Column(Integer, primary_key=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    name = Column(String(255), nullable=False)
+    description = Column(Text)
+    category = Column(String(50)) # food, handicraft, alcohol, etc.
+    image_url = Column(String(500))
+    last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
+
+    country = relationship("Country", back_populates="souvenirs")
+
 class Holiday(Base):
     __tablename__ = "holidays"
 
@@ -233,9 +242,6 @@ class Holiday(Base):
     date = Column(Date)
     type = Column(String(50)) # Public, Religious, etc.
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
-
-    def __repr__(self):
-        return f"<Holiday(name='{self.name}', date={self.date})>"
 
     country = relationship("Country", back_populates="holidays")
 
@@ -265,6 +271,7 @@ class PracticalInfo(Base):
     best_exchange_currency = Column(String(100)) # e.g. "USD, EUR"
     exchange_where = Column(String(255)) # e.g. "Polska", "Na miejscu"
     atm_advice = Column(Text)
+    bargaining_info = Column(Text) # Info if bargaining is common/advised
     
     # New cultural/law fields
     alcohol_rules = Column(Text)
@@ -285,9 +292,6 @@ class PracticalInfo(Base):
             except:
                 return None
         return None
-
-    def __repr__(self):
-        return f"<PracticalInfo(country_id={self.country_id}, plugs='{self.plug_types}')>"
 
     country = relationship("Country", back_populates="practical")
 
@@ -331,9 +335,6 @@ class LawAndCustom(Base):
     description = Column(Text)
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
-    def __repr__(self):
-        return f"<LawAndCustom(cat='{self.category}', title='{self.title[:20]}...')>"
-
     country = relationship("Country", back_populates="laws_and_customs")
 
 class CostOfLiving(Base):
@@ -341,23 +342,15 @@ class CostOfLiving(Base):
 
     id = Column(Integer, primary_key=True)
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
-    
-    # Indices (usually relative to NY=100)
     index_overall = Column(DECIMAL(10, 2))
     index_restaurants = Column(DECIMAL(10, 2))
     index_groceries = Column(DECIMAL(10, 2))
     index_transport = Column(DECIMAL(10, 2))
     index_accommodation = Column(DECIMAL(10, 2))
-    
-    # Comparison to Poland (calculated during sync)
-    # 1.0 means same as Poland, 1.2 means 20% more expensive
     ratio_to_poland = Column(DECIMAL(10, 2))
-    
-    # Estimates in PLN
-    daily_budget_low = Column(DECIMAL(10, 2)) # hostel, street food, transport
-    daily_budget_mid = Column(DECIMAL(10, 2)) # budget hotel, casual dining
-    daily_budget_high = Column(DECIMAL(10, 2)) # mid-range hotel, restaurant, attractions
-    
+    daily_budget_low = Column(DECIMAL(10, 2))
+    daily_budget_mid = Column(DECIMAL(10, 2))
+    daily_budget_high = Column(DECIMAL(10, 2))
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="costs")
