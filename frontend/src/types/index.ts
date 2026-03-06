@@ -114,4 +114,16 @@ export interface CountryData {
     condition: string;
     icon: string;
   };
+  // Advanced Wikidata Fields
+  hdi?: number;
+  life_expectancy?: number;
+  gdp_nominal?: number;
+  gdp_ppp?: number;
+  gini?: number;
+  coat_of_arms_url?: string;
+  inception_date?: string;
+  official_tourist_website?: string;
+  regional_products?: string;
+  has_ekuz: boolean;
+  natural_hazards?: string;
 }

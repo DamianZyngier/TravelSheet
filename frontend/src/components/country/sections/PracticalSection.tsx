@@ -64,10 +64,19 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                 <div className="info-item-box">
                   <strong>Komunikacja</strong>
                   <div className="driving-info-box">
-                    <span>📱 {selectedCountry.popular_apps || 'WhatsApp'}</span>
+                    <span>📱 WhatsApp, Messenger</span>
                   </div>
                 </div>
               </>
+            )}
+
+            {showTransport && (
+              <div className="info-item-box">
+                <strong>Aplikacje transportowe</strong>
+                <div className="driving-info-box">
+                  <span>🚗 {selectedCountry.popular_apps || 'Uber, Bolt, Lokalne taxi'}</span>
+                </div>
+              </div>
             )}
 
             {showDriving && (

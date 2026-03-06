@@ -180,6 +180,27 @@ RLAH_COUNTRIES = [
     'IS', 'LI', 'NO' # EEA
 ]
 
+# EU, EFTA and UK countries for EKUZ (European Health Insurance Card)
+EKUZ_COUNTRIES = [
+    'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
+    'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', # EU
+    'IS', 'LI', 'NO', 'CH', # EFTA
+    'GB' # UK (GHIC/EKUZ transition)
+]
+
+def sync_ekuz_data(db: Session):
+    """Update has_ekuz flag for eligible countries"""
+    countries = db.query(models.Country).all()
+    updated = 0
+    for country in countries:
+        was_ekuz = country.has_ekuz
+        country.has_ekuz = country.iso_alpha2.upper() in EKUZ_COUNTRIES
+        if was_ekuz != country.has_ekuz:
+            updated += 1
+    db.commit()
+    logger.info(f"Updated EKUZ status for {updated} countries")
+    return {"updated": updated}
+
 def sync_static_data(db: Session):
     """Update practical info using defaults and legacy data"""
     synced = 0

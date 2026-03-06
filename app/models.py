@@ -46,6 +46,18 @@ class Country(Base):
     unique_things = Column(Text)
     travel_types = Column(Text) # JSON string with travel categories and highlights
     
+    # New Fields for Advanced Info
+    hdi = Column(DECIMAL(10, 3))
+    life_expectancy = Column(DECIMAL(10, 2))
+    gdp_nominal = Column(DECIMAL(25, 2)) # Large numbers for GDP
+    gdp_ppp = Column(DECIMAL(25, 2))
+    gini = Column(DECIMAL(10, 2))
+    coat_of_arms_url = Column(String(500))
+    inception_date = Column(String(100))
+    official_tourist_website = Column(Text)
+    regional_products = Column(Text) # GI products like cheese, wine
+    has_ekuz = Column(Boolean, default=False)
+    
     is_independent = Column(Boolean, default=True)
     parent_id = Column(Integer, ForeignKey("countries.id"))
     

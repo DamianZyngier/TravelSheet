@@ -14,7 +14,7 @@ from app.scrapers import (
     unesco, msz_gov_pl, wiki_summaries, weather, holidays, 
     costs, cdc_health, embassies, emergency, climate, 
     rest_countries, exchange_rates, static_info, 
-    wikidata_attractions, wikidata_info
+    wikidata_attractions, wikidata_info, transport_apps
 )
 from scripts.export_to_json import export_all
 
@@ -85,10 +85,10 @@ async def run_sync(mode="full"):
         if mode == "full" or mode == "weekly":
             print("--- PHASE 2: Weekly / slow-changing Data ---")
             
-            # Grouping independent scrapers to run in parallel
             # Group A: Fast static/local data
-            print("[5-8/16] Syncing Static Info, UNESCO, Emergency, and Costs...")
+            print("[5-8/16] Syncing Static Info, EKUZ, UNESCO, Emergency, and Costs...")
             static_info.sync_static_data(db)
+            static_info.sync_ekuz_data(db)
             res_costs = costs.sync_costs(db)
             
             res_unesco, res_emergency = await asyncio.gather(
@@ -124,8 +124,12 @@ async def run_sync(mode="full"):
             res_wiki_info = await wikidata_info.sync_all_wikidata_info(db)
             log_result("Wiki Info (Religions/Ethnics)", res_wiki_info)
 
+            print("[16/17] Syncing Transport Apps...")
+            res_transport = await transport_apps.sync_transport_apps(db)
+            log_result("Transport Apps", res_transport)
+
             # Weather as the very last step for weekly/full sync
-            print("[16/16] Final Step: Syncing Weather...")
+            print("[17/17] Final Step: Syncing Weather...")
             res_weather = await weather.update_all_weather(db)
             log_result("Weather", res_weather)
             

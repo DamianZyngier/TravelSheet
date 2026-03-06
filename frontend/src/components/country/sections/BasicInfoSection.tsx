@@ -157,6 +157,58 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             <span>{selectedCountry.ethnic_groups}</span>
           </div>
         )}
+
+        {/* Advanced Stats */}
+        {(selectedCountry.hdi || selectedCountry.life_expectancy || selectedCountry.gdp_nominal || selectedCountry.inception_date) && (
+          <div className="info-item-box full stats-container">
+            <div className="stats-header">Statystyki i Rozwój</div>
+            <div className="stats-grid">
+              {selectedCountry.hdi && (
+                <div className="stat-item">
+                  <span className="stat-label">HDI (Rozwój)</span>
+                  <span className={`stat-value hdi-${selectedCountry.hdi >= 0.8 ? 'very-high' : selectedCountry.hdi >= 0.7 ? 'high' : 'medium'}`}>
+                    {selectedCountry.hdi.toFixed(3)}
+                  </span>
+                  <span className="stat-comparison">
+                    {selectedCountry.iso2 !== 'PL' && `(PL: 0.876)`}
+                  </span>
+                </div>
+              )}
+              {selectedCountry.life_expectancy && (
+                <div className="stat-item">
+                  <span className="stat-label">Długość życia</span>
+                  <span className="stat-value">{Math.round(selectedCountry.life_expectancy)} lat</span>
+                  <span className="stat-comparison">
+                    {selectedCountry.iso2 !== 'PL' && (
+                      <span className={selectedCountry.life_expectancy > 76 ? 'text-pos' : 'text-neg'}>
+                        {selectedCountry.life_expectancy > 76 ? '+' : ''}{Math.round(selectedCountry.life_expectancy - 76)} lat vs PL
+                      </span>
+                    )}
+                  </span>
+                </div>
+              )}
+              {selectedCountry.gdp_nominal && (
+                <div className="stat-item">
+                  <span className="stat-label">PKB (Nominal)</span>
+                  <span className="stat-value">
+                    ${(selectedCountry.gdp_nominal / 1e9).toFixed(1)} mld
+                  </span>
+                  <span className="stat-comparison">
+                    {selectedCountry.iso2 !== 'PL' && (
+                      <span>{Math.round((selectedCountry.gdp_nominal / 679.4e9) * 100)}% PL</span>
+                    )}
+                  </span>
+                </div>
+              )}
+              {selectedCountry.inception_date && (
+                <div className="stat-item">
+                  <span className="stat-label">Powstanie / Niep.</span>
+                  <span className="stat-value">{selectedCountry.inception_date}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       <DataSource sources={['REST', 'WIKI']} lastUpdated={selectedCountry.last_updated} />

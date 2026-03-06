@@ -52,12 +52,20 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
           <div className="category-content">
             <div className="detail-header-group">
               <div className="header-info-flex">
-                <img 
-                  src={selectedCountry.flag_url} 
-                  alt={`Flaga ${selectedCountry.name_pl}`} 
-                  className="detail-flag-img" 
-                  style={{ objectFit: 'contain' }}
-                />
+                <div className="header-visuals">
+                  <img 
+                    src={selectedCountry.flag_url} 
+                    alt={`Flaga ${selectedCountry.name_pl}`} 
+                    className="detail-flag-img" 
+                  />
+                  {selectedCountry.coat_of_arms_url && (
+                    <img 
+                      src={selectedCountry.coat_of_arms_url} 
+                      alt={`Herb ${selectedCountry.name_pl}`} 
+                      className="detail-coat-img" 
+                    />
+                  )}
+                </div>
                 <div className="detail-titles">
                   <h2 className={getLongNameClass(selectedCountry.name_pl, 'h2')}>{selectedCountry.name_pl}</h2>
                   <p>{selectedCountry.name} ({selectedCountry.iso2})</p>
@@ -141,7 +149,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
               getCurrencyExample={getCurrencyExample}
               checkPlugs={checkPlugs}
               getEnlargedPlugUrl={getEnlargedPlugUrl}
-              onlySections={['plugs', 'phones', 'driving', 'stores']}
+              onlySections={['plugs', 'phones', 'driving', 'stores', 'transport']}
             />
             <EmergencySection selectedCountry={selectedCountry} />
             <CostsClimateSection 

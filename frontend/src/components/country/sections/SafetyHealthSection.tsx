@@ -23,6 +23,30 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
             <label>Zdrowie i szczepienia</label>
           </div>
           <div className="health-container">
+            {/* EKUZ Info */}
+            <div className={`health-item ${selectedCountry.has_ekuz ? 'suggested' : 'neutral'}`}>
+              <div className="health-icon">{selectedCountry.has_ekuz ? '🇪🇺' : '🏥'}</div>
+              <div className="health-text">
+                <strong>Karta EKUZ</strong>
+                <p>
+                  {selectedCountry.has_ekuz 
+                    ? 'Obowiązuje w tym kraju. Zapewnia dostęp do niezbędnej opieki medycznej.' 
+                    : 'Nie obowiązuje w tym kraju. Koniecznie wykup prywatne ubezpieczenie.'}
+                </p>
+                {selectedCountry.has_ekuz && (
+                  <a 
+                    href="https://www.nfz.gov.pl/dla-pacjenta/nasze-serwisy/ekuz/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="msz-link"
+                    style={{ marginTop: '4px', fontSize: '0.8rem' }}
+                  >
+                    Wyrób kartę EKUZ (NFZ) ↗
+                  </a>
+                )}
+              </div>
+            </div>
+
             {selectedCountry.practical.health_info && (
               <div className="info-item-box full">
                 <strong>Oficjalne zalecenia MSZ</strong>

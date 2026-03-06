@@ -19,6 +19,9 @@ To ensure high-quality data, the project implements several layers of validation
 - **Data Cleaning**: Automated scripts handle edge cases like uninhabited territories (population set to NULL instead of 0) and religious percentage normalization (capping at 100%).
 - **Religious Data**: Improved scraping logic to include dominant religions from Wikidata even when exact percentages are unavailable (displayed as "Główne wyznanie" in the UI).
 - **Largest Cities**: Enhanced scraping from Wikidata to include population data, filter out duplicate administrative units, and sort cities by population in descending order.
+- **Socio-Economic Data**: Added HDI (Human Development Index), Life Expectancy, GDP (Nominal/PPP), and Gini coefficient from Wikidata to provide developmental context.
+- **Cultural & Infrastructure**: Added Coat of Arms URLs, Inception/Independence dates, Official Tourist Websites, and Regional Products (GIs).
+- **Transport Apps**: Custom mapping of ride-hailing services (Uber, Bolt, Grab, etc.) per country, including city-specific availability.
 - **Automated Testing**: `scripts/test_data_integrity.py` validates the exported `data.json` structure before deployment.
 
 ## Tech Stack

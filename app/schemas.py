@@ -247,6 +247,16 @@ class CountryDetail(BaseModel):
     railway_info: Optional[str] = None
     natural_hazards: Optional[str] = None
     popular_apps: Optional[str] = None
+    hdi: Optional[float] = None
+    life_expectancy: Optional[float] = None
+    gdp_nominal: Optional[float] = None
+    gdp_ppp: Optional[float] = None
+    gini: Optional[float] = None
+    coat_of_arms_url: Optional[str] = None
+    inception_date: Optional[str] = None
+    official_tourist_website: Optional[str] = None
+    regional_products: Optional[str] = None
+    has_ekuz: bool = False
     unesco_count: int = 0
     travel_types: Optional[str] = None
 

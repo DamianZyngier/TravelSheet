@@ -23,9 +23,10 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     country_map = {c.iso_alpha2.upper(): c for c in countries}
     isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
     
-    # Query 1: Basic Stats (Timezone, Dish, Phone, Airport, Railway, Climate)
+    # Query 1: Basic & Advanced Stats (Timezone, Dish, Phone, Airport, Railway, Climate, HDI, Life Exp, GDP, Gini, Coat, Inception, Website)
     q_basic = f"""
-    SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?airportLabel ?railwayLabel ?climateLabel WHERE {{
+    SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?airportLabel ?railwayLabel ?climateLabel 
+           ?hdi ?lifeExp ?gdpNominal ?gdpPPP ?gini ?coatOfArms ?inception ?website WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
       OPTIONAL {{ ?country wdt:P421 ?timezone. }}
@@ -34,6 +35,14 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
       OPTIONAL {{ ?country wdt:P114 ?airport. }}
       OPTIONAL {{ ?country wdt:P1194 ?railway. }}
       OPTIONAL {{ ?country wdt:P2524 ?climate. }}
+      OPTIONAL {{ ?country wdt:P1081 ?hdi. }}
+      OPTIONAL {{ ?country wdt:P2250 ?lifeExp. }}
+      OPTIONAL {{ ?country wdt:P2131 ?gdpNominal. }}
+      OPTIONAL {{ ?country wdt:P2132 ?gdpPPP. }}
+      OPTIONAL {{ ?country wdt:P3529 ?gini. }}
+      OPTIONAL {{ ?country wdt:P94 ?coatOfArms. }}
+      OPTIONAL {{ ?country wdt:P571 ?inception. }}
+      OPTIONAL {{ ?country wdt:P856 ?website. }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     """
@@ -77,25 +86,30 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     }}
     """
 
-    # Query 5: Souvenirs / Local Products (Handicrafts, Specialties)
+    # Query 5: Souvenirs / Local Products (Handicrafts, Specialties, GIs)
     q_products = f"""
     SELECT ?countryISO ?itemLabel WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
-      ?item wdt:P495 ?country.
-      ?item wdt:P31/wdt:P279* ?type.
-      VALUES ?type {{ wd:Q170658 wd:Q11690 wd:Q2095 wd:Q13182 }}
+      {{
+        ?item wdt:P495 ?country.
+        ?item wdt:P31/wdt:P279* ?type.
+        VALUES ?type {{ wd:Q170658 wd:Q11690 wd:Q2095 wd:Q13182 wd:Q202816 }}
+      }} UNION {{
+        ?item wdt:P17 ?country.
+        ?item wdt:P31/wdt:P279* wd:Q202816.
+      }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
     LIMIT 100
     """
 
     results = [
-        await async_sparql_get(q_basic, "Basic Stats"),
+        await async_sparql_get(q_basic, "Basic & Advanced Stats"),
         await async_sparql_get(q_cultural, "Cultural Info"),
         await async_sparql_get(q_law, "Law Info"),
         await async_sparql_get(q_cities, "Cities Info"),
-        await async_sparql_get(q_products, "Products/Souvenirs")
+        await async_sparql_get(q_products, "Products/Souvenirs/GIs")
     ]
     
     country_religions = {} 
@@ -115,6 +129,29 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
         if not c.phone_code: c.phone_code = r.get("phoneCode", {}).get("value")
         if not c.main_airport: c.main_airport = r.get("airportLabel", {}).get("value")
         if not c.railway_info: c.railway_info = r.get("railwayLabel", {}).get("value")
+        
+        # New Advanced Fields
+        if not c.hdi: 
+            val = r.get("hdi", {}).get("value")
+            if val: c.hdi = float(val)
+        if not c.life_expectancy: 
+            val = r.get("lifeExp", {}).get("value")
+            if val: c.life_expectancy = float(val)
+        if not c.gdp_nominal: 
+            val = r.get("gdpNominal", {}).get("value")
+            if val: c.gdp_nominal = float(val)
+        if not c.gdp_ppp: 
+            val = r.get("gdpPPP", {}).get("value")
+            if val: c.gdp_ppp = float(val)
+        if not c.gini: 
+            val = r.get("gini", {}).get("value")
+            if val: c.gini = float(val)
+        if not c.coat_of_arms_url: c.coat_of_arms_url = r.get("coatOfArms", {}).get("value")
+        if not c.inception_date: 
+            inc = r.get("inception", {}).get("value")
+            if inc: c.inception_date = inc.split('T')[0]
+        if not c.official_tourist_website: c.official_tourist_website = r.get("website", {}).get("value")
+
         clim = r.get("climateLabel", {}).get("value")
         if clim and not clim.startswith("Q"):
             if iso not in country_climates: country_climates[iso] = set()

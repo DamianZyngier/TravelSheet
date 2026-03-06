@@ -4301,3 +4301,91 @@
   color: #276749;
   border: 1px solid #9ae6b4;
 }
+
+/* Advanced Stats & Development Section */
+.stats-container {
+  margin-top: 1rem;
+  background-color: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stats-header {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #475569;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* HDI Color coding */
+.stat-value.hdi-very-high { color: #059669; }
+.stat-value.hdi-high { color: #2563eb; }
+.stat-value.hdi-medium { color: #d97706; }
+
+.stat-comparison {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.text-pos { color: #059669; }
+.text-neg { color: #dc2626; }
+
+/* Header Visuals with Coat of Arms */
+.header-visuals {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.detail-coat-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 600px) {
+  .header-visuals {
+    gap: 1rem;
+  }
+  .detail-flag-img {
+    width: 100px;
+    height: 66px;
+  }
+  .detail-coat-img {
+    height: 60px;
+  }
+}
