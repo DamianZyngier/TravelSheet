@@ -120,6 +120,7 @@ export interface CountryData {
   life_expectancy?: number;
   gdp_nominal?: number;
   gdp_ppp?: number;
+  gdp_per_capita?: number;
   gini?: number;
   coat_of_arms_url?: string;
   inception_date?: string;

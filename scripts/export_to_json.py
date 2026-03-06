@@ -77,6 +77,7 @@ def export_all():
                 "life_expectancy": float(c.life_expectancy) if c.life_expectancy else None,
                 "gdp_nominal": float(c.gdp_nominal) if c.gdp_nominal else None,
                 "gdp_ppp": float(c.gdp_ppp) if c.gdp_ppp else None,
+                "gdp_per_capita": float(c.gdp_per_capita) if c.gdp_per_capita else None,
                 "gini": float(c.gini) if c.gini else None,
                 "coat_of_arms_url": c.coat_of_arms_url,
                 "inception_date": c.inception_date,

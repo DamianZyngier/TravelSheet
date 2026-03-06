@@ -51,6 +51,7 @@ class Country(Base):
     life_expectancy = Column(DECIMAL(10, 2))
     gdp_nominal = Column(DECIMAL(25, 2)) # Large numbers for GDP
     gdp_ppp = Column(DECIMAL(25, 2))
+    gdp_per_capita = Column(DECIMAL(15, 2))
     gini = Column(DECIMAL(10, 2))
     coat_of_arms_url = Column(String(500))
     inception_date = Column(String(100))

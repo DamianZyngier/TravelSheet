@@ -251,6 +251,7 @@ class CountryDetail(BaseModel):
     life_expectancy: Optional[float] = None
     gdp_nominal: Optional[float] = None
     gdp_ppp: Optional[float] = None
+    gdp_per_capita: Optional[float] = None
     gini: Optional[float] = None
     coat_of_arms_url: Optional[str] = None
     inception_date: Optional[str] = None

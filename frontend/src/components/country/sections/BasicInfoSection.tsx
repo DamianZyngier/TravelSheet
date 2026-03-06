@@ -72,7 +72,20 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
         </div>
         <div className="info-item-box">
           <strong>Ludność</strong>
-          <span>{selectedCountry.population?.toLocaleString() || 'Brak danych'}</span>
+          <span>
+            {selectedCountry.population?.toLocaleString() || 'Brak danych'}
+            {selectedCountry.population && selectedCountry.iso2 !== 'PL' && (
+              <span className="stat-comparison" style={{ display: 'block', fontWeight: 'bold' }}>
+                {(() => {
+                  const plPop = 38000000;
+                  const ratio = selectedCountry.population / plPop;
+                  if (ratio > 1.1) return <span style={{ color: '#64748b' }}>({ratio.toFixed(1)}x więcej niż PL)</span>;
+                  if (ratio < 0.9) return <span style={{ color: '#64748b' }}>({(1/ratio).toFixed(1)}x mniej niż PL)</span>;
+                  return <span style={{ color: '#4299e1' }}>(podobna do PL)</span>;
+                })()}
+              </span>
+            )}
+          </span>
         </div>
         <div className="info-item-box">
           <strong>Gęstość zaludnienia</strong>
@@ -80,21 +93,21 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
             {selectedCountry.population && selectedCountry.area ? (
               <>
                 {(selectedCountry.population / selectedCountry.area).toFixed(1)} os./km²
-                {(() => {
+                {selectedCountry.iso2 !== 'PL' && (() => {
                   const density = selectedCountry.population / selectedCountry.area;
                   const polandDensity = 120;
                   const ratio = density / polandDensity;
                   if (ratio > 1.1) {
-                    return <span style={{ color: '#f56565', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      <br />({ratio.toFixed(1)}x gęściej niż w PL)
+                    return <span style={{ color: '#f56565', fontSize: '0.8rem', fontWeight: 'bold', display: 'block' }}>
+                      ({ratio.toFixed(1)}x gęściej niż PL)
                     </span>;
                   } else if (ratio < 0.9) {
-                    return <span style={{ color: '#48bb78', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      <br />({(1/ratio).toFixed(1)}x rzadziej niż w PL)
+                    return <span style={{ color: '#48bb78', fontSize: '0.8rem', fontWeight: 'bold', display: 'block' }}>
+                      ({(1/ratio).toFixed(1)}x rzadziej niż PL)
                     </span>;
                   } else {
-                    return <span style={{ color: '#4299e1', fontSize: '0.8rem', fontWeight: 'bold', marginLeft: '6px' }}>
-                      <br />(podobnie do PL)
+                    return <span style={{ color: '#4299e1', fontSize: '0.8rem', fontWeight: 'bold', display: 'block' }}>
+                      (podobnie do PL)
                     </span>;
                   }
                 })()}
@@ -196,35 +209,55 @@ export const BasicInfoSection: React.FC<BasicInfoSectionProps> = ({ selectedCoun
                   <span className={`stat-value hdi-${selectedCountry.hdi >= 0.8 ? 'very-high' : selectedCountry.hdi >= 0.7 ? 'high' : 'medium'}`}>
                     {selectedCountry.hdi.toFixed(3)}
                   </span>
-                  <span className="stat-comparison">
-                    {selectedCountry.iso2 !== 'PL' && `(PL: 0.876)`}
-                  </span>
+                  {selectedCountry.iso2 !== 'PL' && (
+                    <span className="stat-comparison" style={{ fontWeight: 'bold' }}>
+                      {(() => {
+                        const plHdi = 0.876;
+                        const diff = selectedCountry.hdi - plHdi;
+                        if (Math.abs(diff) < 0.01) return <span style={{ color: '#4299e1' }}>(jak w PL)</span>;
+                        return <span className={diff > 0 ? 'text-pos' : 'text-neg'}>
+                          ({diff > 0 ? 'wyższy' : 'niższy'} niż PL)
+                        </span>;
+                      })()}
+                    </span>
+                  )}
                 </div>
               )}
               {selectedCountry.life_expectancy && (
                 <div className="stat-item">
                   <span className="stat-label">Długość życia</span>
                   <span className="stat-value">{Math.round(selectedCountry.life_expectancy)} lat</span>
-                  <span className="stat-comparison">
-                    {selectedCountry.iso2 !== 'PL' && (
-                      <span className={selectedCountry.life_expectancy > 76 ? 'text-pos' : 'text-neg'}>
-                        {selectedCountry.life_expectancy > 76 ? '+' : ''}{Math.round(selectedCountry.life_expectancy - 76)} lat vs PL
-                      </span>
-                    )}
-                  </span>
+                  {selectedCountry.iso2 !== 'PL' && (
+                    <span className="stat-comparison" style={{ fontWeight: 'bold' }}>
+                      {(() => {
+                        const plLife = 76;
+                        const diff = Math.round(selectedCountry.life_expectancy - plLife);
+                        if (Math.abs(diff) === 0) return <span style={{ color: '#4299e1' }}>(jak w PL)</span>;
+                        return <span className={diff > 0 ? 'text-pos' : 'text-neg'}>
+                          ({diff > 0 ? '+' : ''}{diff} lat vs PL)
+                        </span>;
+                      })()}
+                    </span>
+                  )}
                 </div>
               )}
-              {selectedCountry.gdp_nominal && (
+              {selectedCountry.gdp_per_capita && (
                 <div className="stat-item">
-                  <span className="stat-label">PKB (Nominal)</span>
+                  <span className="stat-label">PKB na osobę</span>
                   <span className="stat-value">
-                    ${(selectedCountry.gdp_nominal / 1e9).toFixed(1)} mld
+                    ${Math.round(selectedCountry.gdp_per_capita).toLocaleString()}
                   </span>
-                  <span className="stat-comparison">
-                    {selectedCountry.iso2 !== 'PL' && (
-                      <span>{Math.round((selectedCountry.gdp_nominal / 679.4e9) * 100)}% PL</span>
-                    )}
-                  </span>
+                  {selectedCountry.iso2 !== 'PL' && (
+                    <span className="stat-comparison" style={{ fontWeight: 'bold' }}>
+                      {(() => {
+                        const plGdpCapita = 18000; // Approx baseline
+                        const ratio = selectedCountry.gdp_per_capita / plGdpCapita;
+                        if (ratio > 1.1) return <span className="text-pos">({ratio.toFixed(1)}x więcej niż PL)</span>;
+                        if (ratio < 0.9) return <span className="text-neg">({(1/ratio).toFixed(1)}x mniej niż PL)</span>;
+                        return <span style={{ color: '#4299e1' }}>(jak w PL)</span>;
+                      })()}
+                    </span>
+                  )}
                 </div>
               )}
               {selectedCountry.inception_date && (

@@ -26,7 +26,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
     # 1. Fast Batch Query: Basic & Advanced Stats (1-to-1 relations)
     q_stats = f"""
     SELECT ?countryISO ?timezoneLabel ?dishLabel ?phoneCode ?airportLabel ?railwayLabel ?climateLabel 
-           ?hdi ?lifeExp ?gdpNominal ?gdpPPP ?gini ?coatOfArms ?inception ?website WHERE {{
+           ?hdi ?lifeExp ?gdpNominal ?gdpPPP ?gdpCapita ?gini ?coatOfArms ?inception ?website WHERE {{
       VALUES ?countryISO {{ {isos} }}
       ?country wdt:P297 ?countryISO.
       OPTIONAL {{ ?country wdt:P421 ?timezone. }}
@@ -39,6 +39,7 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
       OPTIONAL {{ ?country wdt:P2250 ?lifeExp. }}
       OPTIONAL {{ ?country wdt:P2131 ?gdpNominal. }}
       OPTIONAL {{ ?country wdt:P2132 ?gdpPPP. }}
+      OPTIONAL {{ ?country wdt:P2127 ?gdpCapita. }}
       OPTIONAL {{ ?country wdt:P3529 ?gini. }}
       OPTIONAL {{ ?country wdt:P94 ?coatOfArms. }}
       OPTIONAL {{ ?country wdt:P571 ?inception. }}
@@ -66,6 +67,10 @@ async def sync_wikidata_batch(db: Session, countries: list[models.Country]):
             if r.get("lifeExp"): c.life_expectancy = float(r["lifeExp"]["value"])
             if r.get("gdpNominal"): c.gdp_nominal = float(r["gdpNominal"]["value"])
             if r.get("gdpPPP"): c.gdp_ppp = float(r["gdpPPP"]["value"])
+            if r.get("gdpCapita"): 
+                c.gdp_per_capita = float(r["gdpCapita"]["value"])
+            elif c.gdp_nominal and c.population:
+                c.gdp_per_capita = float(c.gdp_nominal) / float(c.population)
             if r.get("gini"): c.gini = float(r["gini"]["value"])
         except (ValueError, KeyError):
             pass
