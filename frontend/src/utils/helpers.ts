@@ -29,7 +29,8 @@ export const checkPlugs = (plugs: string) => {
 
 export const getEnlargedPlugUrl = (url: string) => {
   if (!url) return '';
-  return url;
+  // Remove the thumbnail size suffix to get the original high-quality image
+  return url.replace('-100x100', '');
 };
 
 export const getPlugCompatibility = (type: string) => {
