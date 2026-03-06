@@ -36,8 +36,8 @@ export const DataSource: React.FC<DataSourceProps> = ({ sources, lastUpdated }) 
         {validSources.length > 0 && <span>Źródło: </span>}
         {validSources.map((s, i) => (
           <span key={s}>
-            <a href={DATA_SOURCES[s].url} target="_blank" rel="noopener noreferrer" className="data-source-link">
-              {DATA_SOURCES[s].name}
+            <a href={DATA_SOURCES[s]?.url} target="_blank" rel="noopener noreferrer" className="data-source-link">
+              {DATA_SOURCES[s]?.name}
             </a>
             {i < validSources.length - 1 ? ', ' : ''}
           </span>
