@@ -29,7 +29,11 @@ export const checkPlugs = (plugs: string) => {
 
 export const getEnlargedPlugUrl = (url: string) => {
   if (!url) return '';
-  if (url.includes('wikimedia.org')) {
+  // For current direct wikimedia JPGs, we don't need transformation
+  if (url.includes('upload.wikimedia.org') && url.endsWith('.jpg')) {
+    return url;
+  }
+  if (url.includes('wikimedia.org') && url.includes('200px')) {
     return url.replace('200px', '500px');
   }
   return url.replace('100x100', '250x250');
