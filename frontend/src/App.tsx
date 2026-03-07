@@ -106,6 +106,8 @@ function App() {
       url.searchParams.set('country', country.iso2);
       window.history.pushState({}, '', url.toString());
     } else {
+      setActiveChecklist(null)
+      setActiveStaticPage(null)
       window.scrollTo(0, 0)
       const url = new URL(window.location.href);
       url.searchParams.delete('country');

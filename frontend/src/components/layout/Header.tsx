@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({
             <img src={logoNoText} alt="TripSheet" className="app-logo" />
             <div className="logo-text">
               <span className="logo-brand">TripSheet</span>
-              {!isStaticPage && <p>Twoje centrum bezpiecznych podróży</p>}
+              <p>Twoje centrum bezpiecznych podróży</p>
             </div>
           </div>
           

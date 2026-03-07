@@ -202,26 +202,21 @@
 .item-label {
   position: relative;
   transition: color 0.3s;
+  display: inline; /* Better for multiline backgrounds */
+  background-image: linear-gradient(transparent 50%, #cbd5e0 50%, #cbd5e0 55%, transparent 55%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-out, color 0.3s;
 }
 
 .checklist-item input:checked ~ .item-label {
   color: #a0aec0;
+  background-size: 100% 100%;
 }
 
+/* Remove the old ::after based strike-through */
 .checklist-item input:checked ~ .item-label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 2px;
-  background: #cbd5e0;
-  animation: strike 0.3s ease-out forwards;
-}
-
-@keyframes strike {
-  from { width: 0; }
-  to { width: 100%; }
+  display: none;
 }
 
 .primary-btn.print-btn {
