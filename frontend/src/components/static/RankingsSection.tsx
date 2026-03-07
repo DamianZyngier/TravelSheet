@@ -85,7 +85,7 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
     <div className="rankings-container">
       <div className="rankings-header">
         <button className="rankings-back-btn" onClick={onBack}>← Powrót</button>
-        <h1>🏆 Rankingi Podróżnicze 2024</h1>
+        <h1>🏆 Rankingi Podróżnicze 2026</h1>
         <p className="rankings-subtitle">Trendy i oceny oparte na wyborach polskich podróżnych.</p>
       </div>
 
