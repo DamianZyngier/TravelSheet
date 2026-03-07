@@ -133,6 +133,30 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     
     risk_level = risk_level or 'low'
 
+    # Mixed zones detection (e.g. Egypt, Thailand, Philippines)
+    is_mixed_zones = False
+    mixed_zone_indicators = [
+        "na pozostałym terytorium", 
+        "na pozostałej części", 
+        "w pozostałych regionach",
+        "z wyjątkiem",
+        "poza obszarami",
+        "ostrzegamy przed podróżami do wybranych"
+    ]
+    if any(ind in page_text for ind in mixed_zone_indicators):
+        is_mixed_zones = True
+        # If it's mixed, and we have a very high risk (high/critical), 
+        # let's check if the 'general' advice is lower.
+        if risk_level in ['high', 'critical']:
+            # Search for the "on the rest of territory" part specifically
+            remaining_text_match = re.search(r'(na pozostałym terytorium|na pozostałej części).*?(zalecamy|zachowaj).*?(ostrożność|ostrożności)', page_text, re.I | re.S)
+            if remaining_text_match:
+                rem_text = remaining_text_match.group(0).lower()
+                if 'szczególną ostrożność' in rem_text:
+                    risk_level = 'medium'
+                elif 'zwykłą ostrożność' in rem_text:
+                    risk_level = 'low'
+
     risk_summary = ""
     strong_warning = soup.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
     if strong_warning:
@@ -144,6 +168,9 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if not risk_summary or len(risk_summary) < 10:
         labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
         risk_summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')} podczas podróży do tego kraju."
+    
+    if is_mixed_zones and "(zobacz szczegóły)" not in risk_summary:
+        risk_summary += " (zobacz szczegóły dotyczące regionów)"
     
     # Final cleanup: Ensure it starts with "Ministerstwo Spraw Zagranicznych"
     risk_summary = risk_summary.strip()
