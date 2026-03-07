@@ -1,5 +1,5 @@
 .rankings-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   animation: fadeIn 0.4s ease-out;
@@ -43,19 +43,25 @@
 
 .rankings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 950px) {
+  .rankings-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .ranking-card {
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1.25rem;
+  padding: 1.5rem;
   border: 1px solid #edf2f7;
   display: flex;
   flex-direction: column;
-  max-height: 700px; /* Limit height to make it scrollable */
+  max-height: 750px; /* Limit height to make it scrollable */
 }
 
 .ranking-card-header {

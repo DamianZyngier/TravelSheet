@@ -23,6 +23,16 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
     { rank: 13, name: 'Austrian Airlines', rating: 3.9, icon: '🇦🇹', desc: 'Gościnność i wiedeńska kawiarnia w chmurach.' },
     { rank: 14, name: 'British Airways', rating: 3.8, icon: '🇬🇧', desc: 'Klasyka lotnictwa z dużą siatką transatlantycką.' },
     { rank: 15, name: 'TAP Air Portugal', rating: 3.7, icon: '🇵🇹', desc: 'Brama do Ameryki Południowej i na Azory.' },
+    { rank: 16, name: 'Qantas', rating: 4.1, icon: '🇦🇺', desc: 'Bezpieczeństwo i komfort na trasach do Australii.' },
+    { rank: 17, name: 'Japan Airlines (JAL)', rating: 4.6, icon: '🇯🇵', desc: 'Wybitna klasa ekonomiczna i japońska jakość.' },
+    { rank: 18, name: 'Korean Air', rating: 4.4, icon: '🇰🇷', desc: 'Luksus i świetna siatka w Azji i Ameryce.' },
+    { rank: 19, name: 'Virgin Atlantic', rating: 4.2, icon: '🇬🇧', desc: 'Stylowe podróże transatlantyckie.' },
+    { rank: 20, name: 'Etihad Airways', rating: 4.3, icon: '🇦🇪', desc: 'Luksusowe połączenia przez Abu Zabi.' },
+    { rank: 21, name: 'EVA Air', rating: 4.5, icon: '🇹🇼', desc: 'Tajwańska gościnność i wysoki standard.' },
+    { rank: 22, name: 'Air New Zealand', rating: 4.4, icon: '🇳🇿', desc: 'Innowacyjne podejście do komfortu pasażera.' },
+    { rank: 23, name: 'Delta Air Lines', rating: 3.9, icon: '🇺🇸', desc: 'Najlepszy wybór na loty wewnątrz USA.' },
+    { rank: 24, name: 'United Airlines', rating: 3.7, icon: '🇺🇸', desc: 'Ogromna siatka połączeń globalnych.' },
+    { rank: 25, name: 'American Airlines', rating: 3.6, icon: '🇺🇸', desc: 'Największa linia lotnicza świata.' },
   ];
 
   const destinationRanking = [
@@ -41,6 +51,16 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
     { rank: 13, name: 'Cypr', iso2: 'CY', category: 'Wyspa Słońca', trend: 'stable', desc: 'Świetne miejsce na jesienne i wiosenne wycieczki.' },
     { rank: 14, name: 'Wietnam', iso2: 'VN', category: 'Przygoda w Azji', trend: 'up', desc: 'Dynamicznie rosnący kierunek egzotyczny.' },
     { rank: 15, name: 'Zjedn. Emiraty Arabskie', iso2: 'AE', category: 'Nowoczesność', trend: 'stable', desc: 'Dubaj to synonim luksusu i zimowego słońca.' },
+    { rank: 16, name: 'Malediwy', iso2: 'MV', category: 'Luksusowa Egzotyka', trend: 'up', desc: 'Rajskie wyspy na podróż poślubną i relaks.' },
+    { rank: 17, name: 'Meksyk', iso2: 'MX', category: 'Kultura i Historia', trend: 'up', desc: 'Jukatan to połączenie Majów i błękitnego morza.' },
+    { rank: 18, name: 'Dominikana', iso2: 'DO', category: 'Karaibski Chill', trend: 'stable', desc: 'Punta Cana to pewna pogoda i białe plaże.' },
+    { rank: 19, name: 'Tanzania', iso2: 'TZ', category: 'Safari i Zanzibar', trend: 'up', desc: 'Magiczny Zanzibar to hit ostatnich sezonów.' },
+    { rank: 20, name: 'Islandia', iso2: 'IS', category: 'Natura i Przygoda', trend: 'up', desc: 'Wodospady, gejzery i lodowce - inny świat.' },
+    { rank: 21, name: 'Norwegia', iso2: 'NO', category: 'Fiordy i Krajobrazy', trend: 'stable', desc: 'Piękno natury i niesamowite trasy widokowe.' },
+    { rank: 22, name: 'Maroko', iso2: 'MA', category: 'Zapachy i Kolory', trend: 'stable', desc: 'Egzotyczny klimat tak blisko Europy.' },
+    { rank: 23, name: 'Jordania', iso2: 'JO', category: 'Historia i Pustynia', trend: 'up', desc: 'Petra i pustynia Wadi Rum zapierają dech.' },
+    { rank: 24, name: 'Oman', iso2: 'OM', category: 'Autentyczna Arabia', trend: 'up', desc: 'Bezpieczny i tradycyjny kraj Półwyspu Arabskiego.' },
+    { rank: 25, name: 'Indonezja', iso2: 'ID', category: 'Bali i Surfing', trend: 'up', desc: 'Bali to duchowość, pola ryżowe i surfing.' },
   ];
 
   return (
