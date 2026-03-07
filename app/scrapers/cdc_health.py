@@ -71,7 +71,7 @@ class CDCHealthScraper(BaseScraper):
         # Final Fallback to Parent
         return await self.parent_fallback(country, depth)
 
-async def sync_cdc_health_all(db: Session):
+async def sync_all_cdc(db: Session):
     countries = db.query(models.Country).all()
     scraper = CDCHealthScraper(db)
     return await scraper.run(countries)

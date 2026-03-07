@@ -90,7 +90,7 @@ async def run_sync(mode="full"):
             print("[5-9/18] Syncing Static, EKUZ, UNESCO, Emergency, and Costs...")
             static_info.sync_static_data(db)
             static_info.sync_ekuz_data(db)
-            res_costs = costs.sync_costs(db)
+            res_costs = await costs.sync_costs(db)
             
             res_unesco, res_emergency = await asyncio.gather(
                 unesco.sync_unesco_sites(db),

@@ -63,7 +63,7 @@ class WikidataInfoScraper(BaseScraper):
         except Exception as e:
             return {"error": str(e)}
 
-async def sync_wikidata_info_all(db: Session):
+async def sync_all_wikidata_info(db: Session):
     countries = db.query(models.Country).all()
     scraper = WikidataInfoScraper(db)
     return await scraper.run(countries)

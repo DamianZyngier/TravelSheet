@@ -76,7 +76,7 @@ class ClimateScraper(BaseScraper):
         except Exception as e:
             return {"error": str(e)}
 
-async def sync_country_climate_all(db: Session):
+async def sync_all_climate(db: Session, force: bool = False):
     countries = db.query(models.Country).all()
     scraper = ClimateScraper(db)
     return await scraper.run(countries)

@@ -65,14 +65,12 @@ class CostsScraper(BaseScraper):
         self.db.commit()
         return {"status": "success"}
 
-def sync_costs(db: Session):
+async def sync_costs(db: Session):
     """
-    Legacy wrapper for synchronous sync. 
-    Actually runs asynchronously through CostsScraper.
+    Asynchronously updates cost of living for all countries.
     """
-    import asyncio
     scraper = CostsScraper(db)
     countries = db.query(models.Country).all()
-    results = asyncio.run(scraper.run(countries))
+    results = await scraper.run(countries)
     logger.info(f"Synced cost data: {results['success']} success, {results['errors']} errors")
     return results
