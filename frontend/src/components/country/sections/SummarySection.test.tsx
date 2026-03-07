@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { SummarySection } from './SummarySection';
-import type { CountryData } from '../../../types';
+import type { CountryData } from '../../../types/index';
 
 const mockCountry: CountryData = {
   iso2: 'PL',

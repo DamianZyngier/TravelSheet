@@ -1,4 +1,4 @@
-import type { CountryData } from '../types';
+import type { CountryData } from '../types/index';
 
 export const formatPLN = (val: number) => {
   // For small values (like 1 KES = 0.03 PLN), show more decimal places

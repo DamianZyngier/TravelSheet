@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps";
-import type { CountryData } from '../../../types';
+import type { CountryData } from '../../../types/index';
 import { geoUrl } from '../../../constants';
 
 interface MapSectionProps {

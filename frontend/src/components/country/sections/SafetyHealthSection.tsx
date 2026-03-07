@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CountryData } from '../../../types';
+import type { CountryData } from '../../../types/index';
 import { SAFETY_LABELS } from '../../../constants';
 import { DataSource, ExpandableText, LinkifyOdyseusz } from '../../common';
 

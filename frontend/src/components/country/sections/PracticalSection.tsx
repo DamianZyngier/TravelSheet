@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CountryData } from '../../../types';
+import type { CountryData } from '../../../types/index';
 import { CONTINENT_MAP, PLUG_IMAGES, PLUG_NAMES } from '../../../constants';
 import { DataSource } from '../../common';
 import { getPlugCompatibility } from '../../../utils/helpers';
