@@ -201,18 +201,17 @@
 
 .item-label {
   display: inline;
-  background-image: linear-gradient(#cbd5e0, #cbd5e0);
+  background-image: linear-gradient(transparent 48%, #cbd5e0 48%, #cbd5e0 54%, transparent 54%);
+  background-size: 0% 100%;
   background-repeat: no-repeat;
-  background-position: 0 0.65em; /* Precisely hits middle of the text height */
-  background-size: 0 2px;
-  transition: background-size 0.35s ease-out, color 0.3s;
+  transition: background-size 0.4s ease-out, color 0.3s;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
 .checklist-item input:checked ~ .item-label {
   color: #a0aec0;
-  background-size: 100% 2px;
+  background-size: 100% 100%;
 }
 
 /* Cleanup redundant rules */
