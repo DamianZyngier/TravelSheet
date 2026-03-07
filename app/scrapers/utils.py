@@ -49,6 +49,8 @@ MSZ_GOV_PL_MANUAL_MAPPING = {
     'VE': 'wenezuela', 'HU': 'wegry', 'GB': 'wielka-brytania', 'VN': 'wietnam',
     'IT': 'wlochy', 'CI': 'wybrzeze-kosci-sloniowej', 'ZM': 'zambia', 'ZW': 'zimbabwe',
     'AE': 'zjednoczone-emiraty-arabskie', 'ZA': 'rpa',
+    'ET': 'etiopia',
+    'PL': 'polska',
     'MO': 'chiny/hongkong-idp',
     'HK': 'chiny/hongkong-idp',
     'PR': 'usa/portoryko-amerykanskie-wyspy-dziewicze',

@@ -72,7 +72,7 @@ async def sync_all_holidays(db: Session):
                 logger.warning(f"Holiday Sync Error ({country.iso_alpha2}): {res.get('error')}")
 
     logger.info(f"Starting parallel Holiday sync for {len(countries)} countries...")
-    async with httpx.AsyncClient(timeout=20.0, follow_redirects=True) as client:
+    async with httpx.AsyncClient(timeout=45.0, follow_redirects=True) as client:
         await asyncio.gather(*(limited_sync(c, client) for c in countries))
             
     return results

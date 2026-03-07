@@ -19,29 +19,25 @@ async def sync_currency_visuals(db: Session, country_batch: list[models.Country]
     if not curr_map: return
     codes = ' '.join([f'"{code}"' for code in curr_map.keys()])
     
-    # Improved query using multiple relationship paths
+    # Even more robust query
     query = f"""
     SELECT DISTINCT ?currCode ?denomValue ?typeLabel ?image WHERE {{
       VALUES ?currCode {{ {codes} }}
       ?curr wdt:P498 ?currCode.
       {{
         ?denom wdt:P31 ?type;
-               wdt:P361 ?curr;
+               wdt:P361* ?curr;
                wdt:P18 ?image.
       }} UNION {{
         ?denom wdt:P31 ?type;
-               wdt:P1542 ?curr;
-               wdt:P18 ?image.
-      }} UNION {{
-        ?curr wdt:P1542 ?denom.
-        ?denom wdt:P31 ?type;
+               wdt:P1542* ?curr;
                wdt:P18 ?image.
       }}
-      VALUES ?type {{ wd:Q47433 wd:Q41207 wd:Q11040348 }} 
+      VALUES ?type {{ wd:Q47433 wd:Q41207 wd:Q11040348 wd:Q1643989 }} 
       OPTIONAL {{ ?denom wdt:P1071 ?denomValue. }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
     }}
-    LIMIT 100
+    LIMIT 300
     """
     
     results = await async_sparql_get(query, "Currency Visuals")
