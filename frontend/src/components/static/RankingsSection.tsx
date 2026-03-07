@@ -133,8 +133,11 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
                   <div className="rank-content">
                     <div className="rank-title-row">
                       <span className="rank-item-name">{item.name}</span>
-                      <span className={`rank-trend ${item.trend}`}>
-                        {item.trend === 'up' ? '📈' : item.trend === 'down' ? '📉' : '➖'}
+                      <span className={`rank-trend ${item.trend}`} title={
+                        item.trend === 'up' ? 'Wzrost popularności' : 
+                        item.trend === 'down' ? 'Spadek popularności' : 'Stabilna popularność'
+                      }>
+                        {item.trend === 'up' ? '▲' : item.trend === 'down' ? '▼' : '―'}
                       </span>
                     </div>
                     <div className="rank-category">{item.category}</div>
