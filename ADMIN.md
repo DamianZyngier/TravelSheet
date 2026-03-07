@@ -43,9 +43,11 @@ Technical details about the data architecture of TripSheet.
 | | Railway Info | API | Wikidata |
 | **Entry** | Visa Required (PL) | API/Scraper | Wikipedia / MSZ |
 | | Passport / ID Rules | Scraper | MSZ (gov.pl) |
-| | Visa Status Details | Scraper | MSZ (gov.pl) |
+| | Card Acceptance | Scraper | MSZ (gov.pl) |
+| | Bargaining Info | Scraper | MSZ (gov.pl) |
 | **Finances** | Currency Code / Name | API | REST Countries |
 | | Exchange Rate (PLN) | API | NBP |
+| | Denominations (Images)| API | MSZ/Local |
 | | Cost Indices | Scraper | Numbeo |
 | | Daily Budgets | Scraper | Numbeo |
 | | Card Acceptance | Scraper | MSZ (gov.pl) |
