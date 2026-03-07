@@ -185,3 +185,8 @@ export const ALIASES: Record<string, string[]> = {
   'CR': ['kostaryka', 'costa rica'],
   'PA': ['panama']
 };
+
+export const POPULAR_ISO_CODES = [
+  'PL', 'HR', 'GR', 'IT', 'ES', 'TR', 'EG', 'BG', 'DE', 'CZ', 'SK', 'AT', 'FR', 'GB', 'PT', 
+  'TH', 'AE', 'VN', 'AL', 'ME', 'CY', 'TN', 'MA', 'GE', 'JO', 'US', 'IS', 'NO', 'MT'
+];

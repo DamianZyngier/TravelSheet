@@ -138,6 +138,29 @@ const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="filter-group">
+            <button 
+              className="rankings-nav-btn"
+              onClick={() => window.dispatchEvent(new CustomEvent('nav-rankings'))}
+              style={{
+                background: 'white',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                padding: '0.5rem 0.75rem',
+                cursor: 'pointer',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                color: '#4a5568',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                height: '38px'
+              }}
+            >
+              🏆 Rankingi
+            </button>
+          </div>
+
+          <div className="filter-group">
             <FilterDropdown 
               filterContinent={filterContinent}
               setFilterContinent={setFilterContinent}

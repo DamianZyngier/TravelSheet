@@ -7,8 +7,9 @@ import CountryGrid from './components/country/CountryGrid'
 import CountryDetail from './components/country/CountryDetail'
 import ChecklistSection from './components/checklist/ChecklistSection'
 import PassengerRightsSection from './components/static/PassengerRightsSection'
+import RankingsSection from './components/static/RankingsSection'
 import type { CountryData } from './types/index'
-import { ALIASES } from './constants'
+import { ALIASES, POPULAR_ISO_CODES } from './constants'
 import './App.css'
 import logoNoText from './assets/logo-no-text.png'
 import { 
@@ -201,11 +202,23 @@ function App() {
     const handleNavPassengerRights = () => {
       handleOpenPassengerRights();
     };
+    const handleNavRankings = () => {
+      setActiveStaticPage('rankings');
+      setSelectedCountry(null);
+      setActiveChecklist(null);
+      window.scrollTo(0, 0);
+      const url = new URL(window.location.href);
+      url.searchParams.delete('country');
+      url.searchParams.set('page', 'rankings');
+      window.history.pushState({}, '', url.toString());
+    };
     window.addEventListener('nav-checklist', handleNavChecklist);
     window.addEventListener('nav-passenger-rights', handleNavPassengerRights);
+    window.addEventListener('nav-rankings', handleNavRankings);
     return () => {
       window.removeEventListener('nav-checklist', handleNavChecklist);
       window.removeEventListener('nav-passenger-rights', handleNavPassengerRights);
+      window.removeEventListener('nav-rankings', handleNavRankings);
     };
   }, [handleOpenChecklist, handleOpenPassengerRights]);
 
@@ -300,7 +313,19 @@ function App() {
         
         return matchSafety && matchContinent && matchTravelType && matchSearch;
       })
-      .sort((a, b) => (a.name_pl || '').localeCompare(b.name_pl || '', 'pl'));
+      .sort((a, b) => {
+        const indexA = POPULAR_ISO_CODES.indexOf(a.iso2);
+        const indexB = POPULAR_ISO_CODES.indexOf(b.iso2);
+        
+        const isPopA = indexA !== -1;
+        const isPopB = indexB !== -1;
+
+        if (isPopA && isPopB) return indexA - indexB;
+        if (isPopA) return -1;
+        if (isPopB) return 1;
+        
+        return (a.name_pl || '').localeCompare(b.name_pl || '', 'pl');
+      });
   }, [countries, filterSafety, filterContinent, filterTravelType, searchQuery]);
 
   // Split into favorites and non-favorites if "Ulubione" is active
@@ -423,6 +448,15 @@ function App() {
         </>
       ) : activeStaticPage === 'passenger-rights' ? (
         <PassengerRightsSection 
+          onBack={() => {
+            setActiveStaticPage(null);
+            const url = new URL(window.location.href);
+            url.searchParams.delete('page');
+            window.history.pushState({}, '', url.toString());
+          }} 
+        />
+      ) : activeStaticPage === 'rankings' ? (
+        <RankingsSection 
           onBack={() => {
             setActiveStaticPage(null);
             const url = new URL(window.location.href);
