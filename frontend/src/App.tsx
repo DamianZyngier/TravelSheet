@@ -463,6 +463,12 @@ function App() {
             url.searchParams.delete('page');
             window.history.pushState({}, '', url.toString());
           }} 
+          onSelectCountry={(iso2) => {
+            if (countries[iso2]) {
+              setActiveStaticPage(null);
+              handleSelectCountry(countries[iso2]);
+            }
+          }}
         />
       ) : activeChecklist ? (
         <ChecklistSection 
