@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { CountryData } from '../../types';
+import type { CountryData } from '../../types/index';
 import { getLongNameClass } from '../../utils/helpers';
 import { MapSection } from './sections/MapSection';
 import { SummarySection } from './sections/SummarySection';
