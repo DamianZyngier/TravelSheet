@@ -17,6 +17,7 @@ interface HeaderProps {
   onLogoClick: () => void;
   searchInputRef: React.RefObject<HTMLInputElement>;
   isStaticPage?: boolean;
+  activePage?: string | null;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -33,7 +34,8 @@ const Header: React.FC<HeaderProps> = ({
   continents,
   onLogoClick,
   searchInputRef,
-  isStaticPage = false
+  isStaticPage = false,
+  activePage = null
 }) => {
   return (
     <header className="main-header">
@@ -43,27 +45,27 @@ const Header: React.FC<HeaderProps> = ({
             <img src={logoNoText} alt="TripSheet" className="app-logo" />
             <div className="logo-text">
               <span className="logo-brand">TripSheet</span>
-              <p>Twoje centrum bezpiecznych podróży</p>
+              {!isStaticPage && <p>Twoje centrum bezpiecznych podróży</p>}
             </div>
           </div>
           
           <nav className="header-nav-links top-nav">
             <button 
-              className="nav-link-btn"
+              className={`nav-link-btn ${activePage === 'checklist' ? 'active' : ''}`}
               onClick={() => window.dispatchEvent(new CustomEvent('nav-checklist'))}
             >
               📋 Checklisty
             </button>
 
             <button 
-              className="nav-link-btn"
+              className={`nav-link-btn ${activePage === 'passenger-rights' ? 'active' : ''}`}
               onClick={() => window.dispatchEvent(new CustomEvent('nav-passenger-rights'))}
             >
               ✈️ Prawa pasażera
             </button>
 
             <button 
-              className="nav-link-btn"
+              className={`nav-link-btn ${activePage === 'rankings' ? 'active' : ''}`}
               onClick={() => window.dispatchEvent(new CustomEvent('nav-rankings'))}
             >
               🏆 Rankingi

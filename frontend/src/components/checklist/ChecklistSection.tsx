@@ -34,10 +34,10 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
   const currentChecklist = CHECKLISTS.find(c => c.id === activeVariant) || CHECKLISTS[0];
 
   return (
-    <div className="checklist-page">
-      <div className="checklist-header no-print">
+    <div className="static-page-container checklist-page">
+      <div className="static-page-header no-print">
         <button className="side-back-button" onClick={onBack}>
-          ← Powrót do mapy
+          ← Powrót do strony głównej
         </button>
         <div className="checklist-controls">
           <div className="variant-tabs">
@@ -66,10 +66,10 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
         </div>
       </div>
 
-      <div className="checklist-content printable-area">
-        <div className="checklist-title-section">
+      <div className="static-page-content printable-area">
+        <div className="static-page-title-section">
           <h1>{currentChecklist.title}</h1>
-          <p className="checklist-desc">{currentChecklist.description}</p>
+          <p className="static-page-desc">{currentChecklist.description}</p>
         </div>
 
         <div className="checklist-grid">

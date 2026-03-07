@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import logoNoText from '../../assets/logo-no-text.png';
 
 interface PassengerRightsSectionProps {
   onBack: () => void;
@@ -19,24 +18,17 @@ const PassengerRightsSection: React.FC<PassengerRightsSectionProps> = ({ onBack 
   }, []);
 
   return (
-    <div className="checklist-page passenger-rights-page">
-      <div className="checklist-header no-print">
+    <div className="static-page-container passenger-rights-page">
+      <div className="static-page-header no-print">
         <button className="side-back-button" onClick={onBack}>
           ← Powrót do strony głównej
         </button>
-        <div className="logo-section" style={{ cursor: 'pointer' }} onClick={onBack}>
-          <img src={logoNoText} alt="TripSheet" className="app-logo" />
-          <div className="logo-text">
-            <span className="logo-brand">TripSheet</span>
-            <p>Prawa Pasażera</p>
-          </div>
-        </div>
       </div>
 
-      <div className="checklist-content">
-        <div className="checklist-title-section passenger-rights-intro">
+      <div className="static-page-content printable-area">
+        <div className="static-page-title-section">
           <h1>Twoje prawa w podróży lotniczej</h1>
-          <p className="checklist-desc">
+          <p className="static-page-desc">
             Jako pasażer linii lotniczych w Unii Europejskiej masz określone prawa w przypadku zakłóceń lotu. 
             Przepisy te (Rozporządzenie WE 261/2004) obowiązują, jeśli Twój lot odbywa się wewnątrz UE, 
             zaczyna się w UE lub kończy w UE (w przypadku linii z kraju UE).

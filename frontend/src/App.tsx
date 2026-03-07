@@ -11,6 +11,7 @@ import RankingsSection from './components/static/RankingsSection'
 import type { CountryData } from './types/index'
 import { ALIASES, POPULAR_ISO_CODES } from './constants'
 import './App.css'
+import './static-pages.css'
 import logoNoText from './assets/logo-no-text.png'
 import { 
   formatPLN, 
@@ -416,6 +417,7 @@ function App() {
   }
 
   const isStaticView = !!activeStaticPage || !!activeChecklist || !!selectedCountry;
+  const activePageHeader = activeChecklist ? 'checklist' : activeStaticPage;
 
   return (
     <div className="app-container" onContextMenu={() => true}>
@@ -434,6 +436,7 @@ function App() {
         onLogoClick={() => handleSelectCountry(null)}
         searchInputRef={searchInputRef}
         isStaticPage={isStaticView}
+        activePage={activePageHeader}
       />
 
       <main className="content-area">

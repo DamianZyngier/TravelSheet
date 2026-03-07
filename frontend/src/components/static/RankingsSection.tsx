@@ -82,14 +82,18 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
   ];
 
   return (
-    <div className="rankings-container">
-      <div className="rankings-header">
-        <button className="rankings-back-btn" onClick={onBack}>← Powrót</button>
-        <h1>🏆 Rankingi Podróżnicze 2026</h1>
-        <p className="rankings-subtitle">Trendy i oceny oparte na wyborach polskich podróżnych.</p>
+    <div className="static-page-container rankings-page">
+      <div className="static-page-header no-print">
+        <button className="side-back-button" onClick={onBack}>
+          ← Powrót do strony głównej
+        </button>
       </div>
 
-      <div className="rankings-grid">
+      <div className="static-page-content">
+        <div className="static-page-title-section">
+          <h1>🏆 Rankingi Podróżnicze 2026</h1>
+          <p className="static-page-desc">Trendy i oceny oparte na wyborach polskich podróżnych.</p>
+        </div>
         {/* Airline Rankings */}
         <section className="ranking-card">
           <div className="ranking-card-header">

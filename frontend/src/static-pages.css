@@ -1,0 +1,72 @@
+/* Unified Static Page Styles */
+.static-page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 80vh;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.static-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.static-page-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.static-page-title-section {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.static-page-title-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.static-page-desc {
+  font-size: 1.15rem;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Rankings Section Adjustments */
+.rankings-page .static-page-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Redundant removal after unification */
+.checklist-page, .passenger-rights-page, .rankings-container {
+  padding: 0;
+  max-width: none;
+  margin: 0;
+}
+
+/* Redundant legacy title section removal */
+.checklist-title-section, .passenger-rights-intro {
+  display: none !important;
+}
+
+/* Hero Icon Adjustments */
+.hero-icon {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
