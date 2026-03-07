@@ -10,6 +10,10 @@ describe('Header Component', () => {
     setFilterContinent: vi.fn(),
     filterSafety: 'all',
     setFilterSafety: vi.fn(),
+    filterTravelType: 'all',
+    setFilterTravelType: vi.fn(),
+    showOnlyFavorites: false,
+    setShowOnlyFavorites: vi.fn(),
     continents: ['Europe', 'Asia'],
     onLogoClick: vi.fn(),
     searchInputRef: { current: null } as any
