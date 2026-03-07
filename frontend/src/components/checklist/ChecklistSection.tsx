@@ -78,15 +78,17 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
               <h3>{cat.title}</h3>
               <div className="checklist-items">
                 {cat.items.map(item => (
-                  <label key={item.id} className="checklist-item">
-                    <input
-                      type="checkbox"
-                      checked={!!checkedItems[item.id]}
-                      onChange={() => toggleItem(item.id)}
-                    />
-                    <span className="checkbox-custom"></span>
-                    <span className="item-label">{item.label}</span>
-                  </label>
+                    <label key={item.id} className="checklist-item">
+                      <input
+                        type="checkbox"
+                        checked={!!checkedItems[item.id]}
+                        onChange={() => toggleItem(item.id)}
+                      />
+                      <span className="checkbox-custom"></span>
+                      <div className="checklist-item-text">
+                        <span className="item-label">{item.label}</span>
+                      </div>
+                    </label>
                 ))}
               </div>
             </div>
