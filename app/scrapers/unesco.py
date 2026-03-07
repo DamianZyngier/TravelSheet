@@ -1,14 +1,14 @@
 import httpx
-from sqlalchemy.orm import Session
-from .. import models
 import logging
 import json
 import os
 import re
 import asyncio
-from sqlalchemy.sql import func
 from typing import List, Dict, Any
+from sqlalchemy.orm import Session
+from sqlalchemy.sql import func
 
+from .. import models
 from .base import BaseScraper
 
 logger = logging.getLogger("uvicorn")
