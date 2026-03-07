@@ -16,6 +16,7 @@ interface HeaderProps {
   continents: string[];
   onLogoClick: () => void;
   searchInputRef: React.RefObject<HTMLInputElement>;
+  isStaticPage?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -31,7 +32,8 @@ const Header: React.FC<HeaderProps> = ({
   setShowOnlyFavorites,
   continents,
   onLogoClick,
-  searchInputRef
+  searchInputRef,
+  isStaticPage = false
 }) => {
   return (
     <header className="main-header">
@@ -45,48 +47,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
           
-          <div className="top-controls">
-            <div className="search-container">
-              <input 
-                ref={searchInputRef}
-                type="text" 
-                placeholder="Szukaj kraju..." 
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                className="search-input"
-              />
-              {searchQuery && (
-                <button 
-                  className="clear-input-btn" 
-                  onClick={() => setSearchQuery('')}
-                  title="Wyczyść szukanie"
-                >
-                  ✕
-                </button>
-              )}
-            </div>
-            
-            <FilterDropdown 
-              filterContinent={filterContinent}
-              setFilterContinent={setFilterContinent}
-              filterSafety={filterSafety}
-              setFilterSafety={setFilterSafety}
-              filterTravelType={filterTravelType}
-              setFilterTravelType={setFilterTravelType}
-              continents={continents}
-            />
-          </div>
-        </div>
-
-        <div className="header-bottom-row">
-          <nav className="header-nav-links">
-            <button 
-              className={`nav-link-btn ${showOnlyFavorites ? 'active' : ''}`}
-              onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
-            >
-              {showOnlyFavorites ? '⭐ Ulubione' : '☆ Wszystkie kraje'}
-            </button>
-
+          <nav className="header-nav-links top-nav">
             <button 
               className="nav-link-btn"
               onClick={() => window.dispatchEvent(new CustomEvent('nav-checklist'))}
@@ -109,6 +70,51 @@ const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
         </div>
+
+        {!isStaticPage && (
+          <div className="header-bottom-row">
+            <div className="bottom-controls-wrapper">
+              <button 
+                className={`nav-link-btn fav-toggle-btn ${showOnlyFavorites ? 'active' : ''}`}
+                onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
+              >
+                {showOnlyFavorites ? '⭐ Ulubione' : '☆ Wszystkie kraje'}
+              </button>
+
+              <div className="top-controls">
+                <div className="search-container">
+                  <input 
+                    ref={searchInputRef}
+                    type="text" 
+                    placeholder="Szukaj kraju..." 
+                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}
+                    className="search-input"
+                  />
+                  {searchQuery && (
+                    <button 
+                      className="clear-input-btn" 
+                      onClick={() => setSearchQuery('')}
+                      title="Wyczyść szukanie"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+                
+                <FilterDropdown 
+                  filterContinent={filterContinent}
+                  setFilterContinent={setFilterContinent}
+                  filterSafety={filterSafety}
+                  setFilterSafety={setFilterSafety}
+                  filterTravelType={filterTravelType}
+                  setFilterTravelType={setFilterTravelType}
+                  continents={continents}
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -55,10 +55,22 @@
   padding-top: 0.5rem;
 }
 
+.bottom-controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .header-nav-links {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+}
+
+.header-nav-links.top-nav {
+  gap: 1rem;
 }
 
 .nav-link-btn {
@@ -74,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .nav-link-btn:hover {
@@ -84,6 +97,10 @@
 .nav-link-btn.active {
   background-color: #ebf8ff;
   color: #2b6cb0;
+}
+
+.fav-toggle-btn {
+  min-width: 140px;
 }
 
 .top-controls {

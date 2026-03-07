@@ -91,6 +91,7 @@ function App() {
     setSelectedCountry(country)
     if (country) {
       setActiveChecklist(null)
+      setActiveStaticPage(null)
       setMapPosition({
         coordinates: [country.longitude || 0, country.latitude || 0],
         zoom: getMapSettings(country).zoom
@@ -100,6 +101,7 @@ function App() {
       
       const url = new URL(window.location.href);
       url.searchParams.delete('checklist');
+      url.searchParams.delete('page');
       url.searchParams.set('country', country.iso2);
       window.history.pushState({}, '', url.toString());
     } else {
@@ -107,6 +109,8 @@ function App() {
       const url = new URL(window.location.href);
       url.searchParams.delete('country');
       url.searchParams.delete('kraj');
+      url.searchParams.delete('page');
+      url.searchParams.delete('checklist');
       window.history.pushState({}, '', url.toString());
     }
   }, [])
@@ -374,6 +378,7 @@ function App() {
         if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
           handleSelectCountry(null);
           setActiveChecklist(null);
+          setActiveStaticPage(null);
         }
       }
 
@@ -410,135 +415,136 @@ function App() {
     );
   }
 
+  const isStaticView = !!activeStaticPage || !!activeChecklist || !!selectedCountry;
+
   return (
     <div className="app-container" onContextMenu={() => true}>
-      {!selectedCountry && !activeChecklist && !activeStaticPage ? (
-        <>
-          <Header 
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            filterContinent={filterContinent}
-            setFilterContinent={setFilterContinent}
-            filterSafety={filterSafety}
-            setFilterSafety={setFilterSafety}
-            filterTravelType={filterTravelType}
-            setFilterTravelType={setFilterTravelType}
+      <Header 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        filterContinent={filterContinent}
+        setFilterContinent={setFilterContinent}
+        filterSafety={filterSafety}
+        setFilterSafety={setFilterSafety}
+        filterTravelType={filterTravelType}
+        setFilterTravelType={setFilterTravelType}
+        showOnlyFavorites={showOnlyFavorites}
+        setShowOnlyFavorites={setShowOnlyFavorites}
+        continents={continents}
+        onLogoClick={() => handleSelectCountry(null)}
+        searchInputRef={searchInputRef}
+        isStaticPage={isStaticView}
+      />
+
+      <main className="content-area">
+        {!selectedCountry && !activeChecklist && !activeStaticPage ? (
+          <CountryGrid 
+            favoriteList={favoriteList}
+            remainingList={remainingList}
             showOnlyFavorites={showOnlyFavorites}
-            setShowOnlyFavorites={setShowOnlyFavorites}
-            continents={continents}
-            onLogoClick={() => handleSelectCountry(null)}
-            searchInputRef={searchInputRef}
-          />
-
-          <main className="content-area">
-            <CountryGrid 
-              favoriteList={favoriteList}
-              remainingList={remainingList}
-              showOnlyFavorites={showOnlyFavorites}
-              onSelectCountry={handleSelectCountry}
-              favorites={favorites}
-              toggleFavorite={toggleFavorite}
-            />
-          </main>
-
-          <Footer 
-            onOpenTerms={() => setLegalModal({ isOpen: true, type: 'terms' })}
-            onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
-          />
-        </>
-      ) : activeStaticPage === 'passenger-rights' ? (
-        <PassengerRightsSection 
-          onBack={() => {
-            setActiveStaticPage(null);
-            const url = new URL(window.location.href);
-            url.searchParams.delete('page');
-            window.history.pushState({}, '', url.toString());
-          }} 
-        />
-      ) : activeStaticPage === 'rankings' ? (
-        <RankingsSection 
-          onBack={() => {
-            setActiveStaticPage(null);
-            const url = new URL(window.location.href);
-            url.searchParams.delete('page');
-            window.history.pushState({}, '', url.toString());
-          }} 
-          onSelectCountry={(iso2) => {
-            if (countries[iso2]) {
-              setActiveStaticPage(null);
-              handleSelectCountry(countries[iso2]);
-            }
-          }}
-        />
-      ) : activeChecklist ? (
-        <ChecklistSection 
-          variantId={activeChecklist}
-          onBack={() => {
-            setActiveChecklist(null);
-            const url = new URL(window.location.href);
-            url.searchParams.delete('checklist');
-            window.history.pushState({}, '', url.toString());
-          }} 
-          onVariantChange={(v) => {
-            setActiveChecklist(v);
-            localStorage.setItem('travelsheet_last_checklist', v);
-            const url = new URL(window.location.href);
-            url.searchParams.set('checklist', v);
-            window.history.pushState({}, '', url.toString());
-          }}
-        />
-      ) : (
-        <div className="detail-view-layout">
-          <Sidebar 
-            selectedCountry={selectedCountry!}
-            sortedFullList={sortedFullList}
             onSelectCountry={handleSelectCountry}
-            activeSection={activeSection}
-            scrollToSection={scrollToSection}
-            navigateCountry={navigateCountry}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
           />
-
-          <div className="detail-view-content">
-            <div className="detail-actions-top no-print">
-               <button 
-                className="print-country-btn"
-                onClick={handlePrintCountry}
-                style={{
-                  marginRight: '1rem',
-                  padding: '0.5rem 1rem',
-                  borderRadius: '8px',
-                  border: '1px solid #e2e8f0',
-                  background: 'white',
-                  cursor: 'pointer',
-                  fontWeight: '600',
-                  color: '#4a5568'
-                }}
-               >
-                 🖨️ PDF / Drukuj dane kraju
-               </button>
-               <button 
-                className={`favorite-btn-large ${favorites.includes(selectedCountry!.iso2) ? 'is-fav' : ''}`}
-                onClick={() => toggleFavorite(selectedCountry!.iso2)}
-               >
-                 {favorites.includes(selectedCountry!.iso2) ? '⭐ Zapamiętany' : '☆ Zapamiętaj kraj'}
-               </button>
-            </div>
-            <CountryDetail 
+        ) : activeStaticPage === 'passenger-rights' ? (
+          <PassengerRightsSection 
+            onBack={() => {
+              setActiveStaticPage(null);
+              const url = new URL(window.location.href);
+              url.searchParams.delete('page');
+              window.history.pushState({}, '', url.toString());
+            }} 
+          />
+        ) : activeStaticPage === 'rankings' ? (
+          <RankingsSection 
+            onBack={() => {
+              setActiveStaticPage(null);
+              const url = new URL(window.location.href);
+              url.searchParams.delete('page');
+              window.history.pushState({}, '', url.toString());
+            }} 
+            onSelectCountry={(iso2) => {
+              if (countries[iso2]) {
+                setActiveStaticPage(null);
+                handleSelectCountry(countries[iso2]);
+              }
+            }}
+          />
+        ) : activeChecklist ? (
+          <ChecklistSection 
+            variantId={activeChecklist}
+            onBack={() => {
+              setActiveChecklist(null);
+              const url = new URL(window.location.href);
+              url.searchParams.delete('checklist');
+              window.history.pushState({}, '', url.toString());
+            }} 
+            onVariantChange={(v) => {
+              setActiveChecklist(v);
+              localStorage.setItem('travelsheet_last_checklist', v);
+              const url = new URL(window.location.href);
+              url.searchParams.set('checklist', v);
+              window.history.pushState({}, '', url.toString());
+            }}
+          />
+        ) : (
+          <div className="detail-view-layout">
+            <Sidebar 
               selectedCountry={selectedCountry!}
-              allCountries={sortedFullList}
+              sortedFullList={sortedFullList}
               onSelectCountry={handleSelectCountry}
-              mapPosition={mapPosition}
-              setMapPosition={setMapPosition}
-              getMapSettings={getMapSettings}
-              formatPLN={formatPLN}
-              getCurrencyExample={getCurrencyExample}
-              checkPlugs={checkPlugs}
-              getEnlargedPlugUrl={getEnlargedPlugUrl}
               activeSection={activeSection}
+              scrollToSection={scrollToSection}
+              navigateCountry={navigateCountry}
             />
+
+            <div className="detail-view-content">
+              <div className="detail-actions-top no-print">
+                 <button 
+                  className="print-country-btn"
+                  onClick={handlePrintCountry}
+                  style={{
+                    marginRight: '1rem',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '8px',
+                    border: '1px solid #e2e8f0',
+                    background: 'white',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    color: '#4a5568'
+                  }}
+                 >
+                   🖨️ PDF / Drukuj dane kraju
+                 </button>
+                 <button 
+                  className={`favorite-btn-large ${favorites.includes(selectedCountry!.iso2) ? 'is-fav' : ''}`}
+                  onClick={() => toggleFavorite(selectedCountry!.iso2)}
+                 >
+                   {favorites.includes(selectedCountry!.iso2) ? '⭐ Zapamiętany' : '☆ Zapamiętaj kraj'}
+                 </button>
+              </div>
+              <CountryDetail 
+                selectedCountry={selectedCountry!}
+                allCountries={sortedFullList}
+                onSelectCountry={handleSelectCountry}
+                mapPosition={mapPosition}
+                setMapPosition={setMapPosition}
+                getMapSettings={getMapSettings}
+                formatPLN={formatPLN}
+                getCurrencyExample={getCurrencyExample}
+                checkPlugs={checkPlugs}
+                getEnlargedPlugUrl={getEnlargedPlugUrl}
+                activeSection={activeSection}
+              />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </main>
+
+      <Footer 
+        onOpenTerms={() => setLegalModal({ isOpen: true, type: 'terms' })}
+        onOpenLicense={() => setLegalModal({ isOpen: true, type: 'license' })}
+      />
 
       <LegalModal 
         isOpen={legalModal.isOpen} 
