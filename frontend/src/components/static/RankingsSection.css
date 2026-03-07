@@ -1,5 +1,5 @@
 .rankings-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
   animation: fadeIn 0.4s ease-out;
@@ -43,11 +43,17 @@
 
 .rankings-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
+  .rankings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
   .rankings-grid {
     grid-template-columns: 1fr;
   }
@@ -57,11 +63,11 @@
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1.5rem;
+  padding: 1.25rem;
   border: 1px solid #edf2f7;
   display: flex;
   flex-direction: column;
-  max-height: 750px; /* Limit height to make it scrollable */
+  max-height: 750px;
 }
 
 .ranking-card-header {
@@ -78,7 +84,7 @@
 }
 
 .ranking-card-header h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #2d3748;
   margin: 0;
 }
@@ -86,7 +92,6 @@
 .ranking-scroll-area {
   overflow-y: auto;
   padding-right: 0.5rem;
-  /* Custom Scrollbar */
 }
 
 .ranking-scroll-area::-webkit-scrollbar {
@@ -110,8 +115,8 @@
 
 .ranking-item {
   display: flex;
-  gap: 1rem;
-  padding: 0.85rem;
+  gap: 0.75rem;
+  padding: 0.75rem;
   border-radius: 10px;
   background: #f8fafc;
   transition: transform 0.2s, background 0.2s;
@@ -132,11 +137,15 @@
   border-color: #4299e1;
 }
 
+.ranking-item.highlight {
+  background: linear-gradient(to right, #f8fafc, #f0f9ff);
+}
+
 .rank-number {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
   color: #4299e1;
-  min-width: 32px;
+  min-width: 28px;
 }
 
 .rank-content {
@@ -153,13 +162,22 @@
 .rank-item-name {
   font-weight: 700;
   color: #2d3748;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .rank-rating {
   font-weight: 700;
   color: #ecc94b;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.rank-growth {
+  font-weight: 800;
+  color: #48bb78;
+  font-size: 0.8rem;
+  background: #f0fff4;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .rank-trend.up { color: #48bb78; }
@@ -168,7 +186,7 @@
 
 .rank-category {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -177,9 +195,9 @@
 }
 
 .rank-desc {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #4a5568;
-  line-height: 1.35;
+  line-height: 1.3;
   margin: 0;
 }
 
