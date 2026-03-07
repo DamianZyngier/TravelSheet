@@ -31,8 +31,6 @@ class CurrencySchema(BaseModel):
     name: Optional[str]
     symbol: Optional[str]
     exchange_rate_pln: Optional[float]
-    exchange_rate_eur: Optional[float]
-    exchange_rate_usd: Optional[float]
     relative_cost: Optional[str]
     last_updated: Optional[datetime]
     denominations: List[CurrencyDenominationSchema] = []
@@ -102,7 +100,6 @@ class CountryBasic(BaseModel):
     name: str
     name_pl: Optional[str]
     capital: Optional[str]
-    capital_pl: Optional[str]
     region: Optional[str]
     flag_emoji: Optional[str]
     flag_url: Optional[str]
@@ -185,7 +182,6 @@ class PracticalSchema(BaseModel):
     voltage: Optional[int]
     frequency: Optional[int]
     card_acceptance: Optional[str]
-    odyseusz_url: Optional[str]
     store_hours: Optional[str]
     alcohol_rules: Optional[str]
     dress_code: Optional[str]
@@ -242,9 +238,7 @@ class CountryDetail(BaseModel):
     iso_alpha3: str
     name: str
     name_pl: Optional[str]
-    name_local: Optional[str]
     capital: Optional[str]
-    capital_pl: Optional[str]
     continent: Optional[str]
     region: Optional[str]
     flag_emoji: Optional[str]

@@ -11,9 +11,7 @@ class Country(Base):
     iso_alpha3 = Column(String(3), unique=True, nullable=False)
     name = Column(String(100), nullable=False)
     name_pl = Column(String(100))
-    name_local = Column(String(100))
     capital = Column(String(100))
-    capital_pl = Column(String(100))
     continent = Column(String(50))
     region = Column(String(100))
     flag_url = Column(String(255))
@@ -105,8 +103,6 @@ class Currency(Base):
     name = Column(String(100))
     symbol = Column(String(10))
     exchange_rate_pln = Column(DECIMAL(10, 6))
-    exchange_rate_eur = Column(DECIMAL(10, 6))
-    exchange_rate_usd = Column(DECIMAL(10, 6))
     relative_cost = Column(String(20))
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
@@ -159,17 +155,12 @@ class EntryRequirement(Base):
 
     id = Column(Integer, primary_key=True)
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
-    document_type = Column(String(50))
-    min_validity_months = Column(Integer)
     passport_required = Column(Boolean)
     temp_passport_allowed = Column(Boolean)
     id_card_allowed = Column(Boolean)
     visa_required = Column(Boolean)
     visa_status = Column(String(255)) # Detailed status: "Niepotrzebna", "e-Visa", etc.
-    visa_on_arrival = Column(Boolean)
-    visa_free_days = Column(Integer)
     visa_notes = Column(Text)
-    special_requirements = Column(Text) # Comma separated or JSON string
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     country = relationship("Country", back_populates="entry_req")
@@ -257,7 +248,6 @@ class PracticalInfo(Base):
     frequency = Column(Integer) # e.g. 50
     card_acceptance = Column(String(50)) # e.g. "high", "medium", "low"
     driving_side = Column(String(10)) # "left" or "right"
-    odyseusz_url = Column(Text, default="https://odyseusz.msz.gov.pl")
     store_hours = Column(Text)
     internet_notes = Column(Text)
     esim_available = Column(Boolean)
