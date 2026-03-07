@@ -19,7 +19,7 @@ describe('DataSource Component', () => {
   });
 
   it('renders last updated date when provided', () => {
-    const date = '2024-03-06T12:00:00Z';
+    const date = '2026-03-06T12:00:00Z';
     render(<DataSource sources={[]} lastUpdated={date} />);
     expect(screen.getByText(/Aktualizacja:/)).toBeDefined();
   });

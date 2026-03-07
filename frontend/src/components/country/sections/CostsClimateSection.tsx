@@ -21,7 +21,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
   
   // Helper to get month name
   const getMonthName = (m: number) => {
-    return new Date(2024, m - 1).toLocaleDateString('pl-PL', { month: 'long' });
+    return new Date(2026, m - 1).toLocaleDateString('pl-PL', { month: 'long' });
   };
 
   // Helper to calculate best travel months
@@ -310,7 +310,7 @@ export const CostsClimateSection: React.FC<CostsClimateSectionProps> = ({
 
                     {selectedCountry.climate?.map((cl, i) => (
                       <text key={`label-${i}`} x={getX(i)} y="240" textAnchor="middle" className="chart-month-text">
-                        {new Date(2024, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
+                        {new Date(2026, cl.month - 1).toLocaleDateString('pl-PL', { month: 'narrow' })}
                       </text>
                     ))}
                   </svg>
