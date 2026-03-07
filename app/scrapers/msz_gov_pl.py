@@ -1,6 +1,7 @@
 import httpx
 from bs4 import BeautifulSoup
 from sqlalchemy.orm import Session
+from typing import List, Dict
 from .. import models
 import asyncio
 import re

@@ -3,7 +3,7 @@ import logging
 import httpx
 from sqlalchemy.orm import Session
 from abc import ABC, abstractmethod
-from typing import List, Any, Dict, Optional, Type
+from typing import List, Any, Dict, Optional, Type, List, Dict
 from .. import models
 from .utils import get_headers
 
