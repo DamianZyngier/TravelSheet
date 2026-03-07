@@ -37,6 +37,9 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite,
           src={country.flag_url} 
           alt={`Flaga ${country.name_pl}`} 
           className="main-flag-img" 
+          width="120"
+          height="80"
+          loading="lazy"
           style={{ objectFit: 'contain' }}
         />
         <h3 className={getLongNameClass(country.name_pl, 'h3')}>{country.name_pl}</h3>

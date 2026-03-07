@@ -58,12 +58,16 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
                     src={selectedCountry.flag_url} 
                     alt={`Flaga ${selectedCountry.name_pl}`} 
                     className="detail-flag-img" 
+                    width="150"
+                    height="100"
                   />
                   {selectedCountry.coat_of_arms_url && (
                     <img 
                       src={selectedCountry.coat_of_arms_url} 
                       alt={`Herb ${selectedCountry.name_pl}`} 
                       className="detail-coat-img" 
+                      height="80"
+                      loading="lazy"
                     />
                   )}
                 </div>

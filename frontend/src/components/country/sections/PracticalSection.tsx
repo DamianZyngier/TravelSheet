@@ -184,7 +184,14 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                 <div className="denom-scroll-row">
                   {selectedCountry.currency.denominations.map((d, i) => (
                     <div key={i} className="denom-card">
-                      <img src={d.image_url} alt={`${d.value} ${d.type}`} className="denom-img" />
+                      <img 
+                        src={d.image_url} 
+                        alt={`${d.value} ${d.type}`} 
+                        className="denom-img" 
+                        width="120"
+                        height="70"
+                        loading="lazy"
+                      />
                       <span className="denom-label">{d.value}</span>
                     </div>
                   ))}
@@ -206,7 +213,16 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
             <div className="souvenir-enriched-grid">
               {selectedCountry.souvenirs_list.map((s, i) => (
                 <div key={i} className="souvenir-enriched-item">
-                  {s.image_url && <img src={s.image_url} alt={s.name} className="souvenir-img" />}
+                  {s.image_url && (
+                    <img 
+                      src={s.image_url} 
+                      alt={s.name} 
+                      className="souvenir-img" 
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                    />
+                  )}
                   <div className="souvenir-enriched-content">
                     <strong>{s.name}</strong>
                     {s.description && <p>{s.description}</p>}
@@ -287,12 +303,18 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
                           src={PLUG_IMAGES[cleanType]} 
                           alt={`Typ ${type}`} 
                           className="plug-img" 
+                          width="50"
+                          height="50"
+                          loading="lazy"
                           referrerPolicy="no-referrer"
                         />
                         <div className="plug-img-enlarged">
                           <img 
                             src={getEnlargedPlugUrl(PLUG_IMAGES[cleanType])} 
                             alt={`Typ ${type} powiększony`} 
+                            width="250"
+                            height="250"
+                            loading="lazy"
                             referrerPolicy="no-referrer"
                           />
                         </div>

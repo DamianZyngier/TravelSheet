@@ -42,7 +42,13 @@ const Header: React.FC<HeaderProps> = ({
       <div className="header-content-wrapper">
         <div className="header-top-row">
           <div className="logo-section" onClick={onLogoClick} style={{ cursor: 'pointer' }}>
-            <img src={logoNoText} alt="TripSheet" className="app-logo" />
+            <img 
+              src={logoNoText} 
+              alt="TripSheet" 
+              className="app-logo" 
+              width="45" 
+              height="45" 
+            />
             <div className="logo-text">
               <span className="logo-brand">TripSheet</span>
               <p>Twoje centrum bezpiecznych podróży</p>
