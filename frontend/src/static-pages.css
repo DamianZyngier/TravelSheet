@@ -200,23 +200,24 @@
 }
 
 .item-label {
-  position: relative;
-  transition: color 0.3s;
-  display: inline; /* Better for multiline backgrounds */
-  background-image: linear-gradient(transparent 50%, #cbd5e0 50%, #cbd5e0 55%, transparent 55%);
-  background-size: 0% 100%;
+  display: inline;
+  background-image: linear-gradient(#cbd5e0, #cbd5e0);
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease-out, color 0.3s;
+  background-position: 0 0.65em; /* Precisely hits middle of the text height */
+  background-size: 0 2px;
+  transition: background-size 0.35s ease-out, color 0.3s;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .checklist-item input:checked ~ .item-label {
   color: #a0aec0;
-  background-size: 100% 100%;
+  background-size: 100% 2px;
 }
 
-/* Remove the old ::after based strike-through */
+/* Cleanup redundant rules */
 .checklist-item input:checked ~ .item-label::after {
-  display: none;
+  display: none !important;
 }
 
 .primary-btn.print-btn {
