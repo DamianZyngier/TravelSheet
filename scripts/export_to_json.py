@@ -153,15 +153,89 @@ def export_all():
                     "last_updated": str(c.practical.last_updated) if c.practical.last_updated else None
                 }
             else:
-                processed_data["practical"] = {"last_updated": None}
+                processed_data["practical"] = {
+                    "plug_types": "", "voltage": None, "frequency": None, "water_safe": None, 
+                    "water_safe_for_brushing": None, "driving_side": "right", "card_acceptance": "", 
+                    "best_exchange_currency": "", "exchange_where": "", "atm_advice": "", 
+                    "bargaining_info": "", "alcohol_rules": "", "dress_code": "", 
+                    "photography_restrictions": "", "sensitive_topics": "", "local_norms": "", 
+                    "store_hours": "", "internet_notes": "", "esim_available": None, 
+                    "emergency": None, "vaccinations_required": "", "vaccinations_suggested": "", 
+                    "health_info": "", "roaming_info": "", "license_type": "", "souvenirs": "", 
+                    "last_updated": None
+                }
+
+            # Costs
+            if c.costs:
+                processed_data["costs"] = {
+                    "index": float(c.costs.index_overall) if c.costs.index_overall else None,
+                    "restaurants": float(c.costs.index_restaurants) if c.costs.index_restaurants else None,
+                    "groceries": float(c.costs.index_groceries) if c.costs.index_groceries else None,
+                    "transport": float(c.costs.index_transport) if c.costs.index_transport else None,
+                    "accommodation": float(c.costs.index_accommodation) if c.costs.index_accommodation else None,
+                    "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs.ratio_to_poland else None,
+                    "daily_budget_low": float(c.costs.daily_budget_low) if c.costs.daily_budget_low else None,
+                    "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs.daily_budget_mid else None,
+                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None,
+                    "last_updated": str(c.costs.last_updated) if c.costs.last_updated else None
+                }
+            else:
+                processed_data["costs"] = None
+
+            # Entry
+            if c.entry_req:
+                processed_data["entry"] = {
+                    "visa_required": bool(c.entry_req.visa_required),
+                    "visa_status": c.entry_req.visa_status or "",
+                    "passport_required": bool(c.entry_req.passport_required),
+                    "temp_passport_allowed": bool(c.entry_req.temp_passport_allowed),
+                    "id_card_allowed": bool(c.entry_req.id_card_allowed),
+                    "visa_notes": c.entry_req.visa_notes or "",
+                    "last_updated": str(c.entry_req.last_updated) if c.entry_req.last_updated else None
+                }
+            else:
+                processed_data["entry"] = None
+
+            # Weather
+            if c.weather:
+                processed_data["weather"] = {
+                    "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
+                    "condition": c.weather.condition or "",
+                    "icon": c.weather.condition_icon or "",
+                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else [],
+                    "last_updated": str(c.weather.last_updated) if c.weather.last_updated else None
+                }
+            else:
+                processed_data["weather"] = None
 
             # Lists
             processed_data["souvenirs_list"] = [{"name": s.name, "description": s.description, "category": s.category, "image_url": s.image_url} for s in c.souvenirs]
-            processed_data["unesco_places"] = [{"name": u.name, "category": u.category, "is_danger": bool(u.is_danger), "unesco_id": u.unesco_id, "image_url": u.image_url} for u in c.unesco_places]
+            processed_data["unesco_places"] = [
+                {
+                    "name": u.name, 
+                    "category": u.category, 
+                    "is_danger": bool(u.is_danger), 
+                    "is_transnational": bool(u.is_transnational),
+                    "unesco_id": u.unesco_id, 
+                    "image_url": u.image_url,
+                    "description": u.description
+                } for u in c.unesco_places
+            ]
             processed_data["attractions"] = [{"name": a.name, "category": a.category, "description": a.description} for a in c.attractions[:15]]
             processed_data["holidays"] = [{"name": h.name, "date": str(h.date)} for h in c.holidays]
             processed_data["climate"] = [{"month": cl.month, "temp_day": cl.avg_temp_max, "temp_night": cl.avg_temp_min, "rain": cl.avg_rain_mm, "season": cl.season_type} for cl in c.climate]
             processed_data["laws_and_customs"] = [{"category": lc.category, "title": lc.title, "description": lc.description} for lc in c.laws_and_customs]
+            processed_data["embassies"] = [
+                {
+                    "type": e.type,
+                    "city": e.city,
+                    "address": e.address,
+                    "phone": e.phone,
+                    "emergency_phone": e.emergency_phone,
+                    "email": e.email,
+                    "website": e.website
+                } for e in c.embassies
+            ]
             
             output[c.iso_alpha2] = processed_data
             if (i+1) % 100 == 0:

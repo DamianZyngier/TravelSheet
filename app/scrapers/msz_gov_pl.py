@@ -92,6 +92,13 @@ async def scrape_country(db: Session, iso_code: str, client: httpx.AsyncClient):
     if not final_url and dir_url: final_url = dir_url
 
     if not response_text:
+        # Parent Fallback for dependent territories
+        if country.parent_id:
+            parent = db.query(models.Country).get(country.parent_id)
+            if parent:
+                logger.info(f"MSZ: {iso_code} not found, falling back to parent {parent.iso_alpha2} ({parent.name_pl})")
+                return await scrape_country(db, parent.iso_alpha2, client)
+
         if final_url:
             safety = db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
             if not safety:
