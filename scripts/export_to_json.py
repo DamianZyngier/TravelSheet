@@ -11,11 +11,11 @@ from app.database import SessionLocal
 from app import models, schemas
 
 def export_all():
-    print("Eksportuję dane (Optimized Eager Loading Mode - Extended)...")
+    print("Eksportuję dane (Optimized Pydantic Export Mode)...")
     db = SessionLocal()
     
     try:
-        # Fetch all countries with all relationships pre-loaded
+        # Fetch all countries with all relationships pre-loaded for performance
         countries = db.query(models.Country).options(
             selectinload(models.Country.languages),
             selectinload(models.Country.religions),
@@ -37,207 +37,100 @@ def export_all():
         
         print(f"Pobrano {len(countries)} krajów.")
         
+        # Pre-compute helper maps for parent/territory names
         id_to_iso = {c.id: c.iso_alpha2 for c in countries}
         id_to_name_pl = {c.id: (c.name_pl or c.name) for c in countries}
         
         output = {}
         for i, c in enumerate(countries):
-            processed_data = {
-                "name": c.name,
-                "name_pl": c.name_pl or c.name,
+            # Prepare data for Pydantic validation
+            # We map some non-standard DB names to schema names here if they differ
+            
+            export_data = {
+                **c.__dict__,
                 "iso2": c.iso_alpha2,
                 "iso3": c.iso_alpha3,
-                "capital": c.capital_pl or c.capital,
-                "continent": c.continent,
-                "region": c.region,
-                "flag_emoji": c.flag_emoji,
-                "flag_url": c.flag_url,
-                "population": c.population,
-                "area": float(c.area) if c.area else None,
-                "timezone": c.timezone,
-                "national_dish": c.national_dish,
-                "wiki_summary": c.wiki_summary,
-                "national_symbols": c.national_symbols,
-                "alcohol_status": c.alcohol_status,
-                "lgbtq_status": c.lgbtq_status,
-                "id_requirement": c.id_requirement,
-                "main_airport": c.main_airport,
-                "railway_info": c.railway_info,
-                "natural_hazards": c.natural_hazards,
-                "popular_apps": c.popular_apps,
-                "phone_code": c.phone_code,
-                "largest_cities": c.largest_cities,
-                "ethnic_groups": c.ethnic_groups,
-                "climate_description": c.climate_description,
-                "unique_things": c.unique_things,
-                "unique_animals": c.unique_animals,
-                "travel_types": json.loads(c.travel_types) if c.travel_types else {"categories": [], "highlights": []},
-                "hdi": float(c.hdi) if c.hdi else None,
-                "life_expectancy": float(c.life_expectancy) if c.life_expectancy else None,
-                "gdp_nominal": float(c.gdp_nominal) if c.gdp_nominal else None,
-                "gdp_ppp": float(c.gdp_ppp) if c.gdp_ppp else None,
-                "gdp_per_capita": float(c.gdp_per_capita) if c.gdp_per_capita else None,
-                "gini": float(c.gini) if c.gini else None,
-                "coat_of_arms_url": c.coat_of_arms_url,
-                "inception_date": c.inception_date,
-                "official_tourist_website": c.official_tourist_website,
-                "regional_products": c.regional_products,
-                "has_ekuz": bool(c.has_ekuz),
-                "latitude": float(c.latitude) if c.latitude else None,
-                "longitude": float(c.longitude) if c.longitude else None,
-                "unesco_count": c.unesco_count or 0,
-                "is_independent": bool(c.is_independent),
-                "last_updated": str(c.updated_at) if c.updated_at else None
-            }
-            
-            # Parent & Territories
-            processed_data["parent"] = {"iso2": id_to_iso.get(c.parent_id), "name_pl": id_to_name_pl.get(c.parent_id)} if c.parent_id else None
-            processed_data["territories"] = [{"iso2": t.iso_alpha2, "name_pl": id_to_name_pl.get(t.id)} for t in c.territories]
-            processed_data["religions"] = [{"name": r.name, "percentage": float(r.percentage)} for r in c.religions]
-            processed_data["languages"] = [{"name": l.name, "is_official": l.is_official} for l in c.languages]
-            
-            # Safety
-            if c.safety:
-                processed_data["safety"] = {
-                    "risk_level": c.safety.risk_level or "unknown",
-                    "risk_text": c.safety.summary or "",
-                    "risk_details": c.safety.risk_details or "",
-                    "url": c.safety.full_url or "",
-                    "last_updated": str(c.safety.last_checked) if c.safety.last_checked else None
-                }
-            else:
-                processed_data["safety"] = {"risk_level": "unknown", "risk_text": "Brak danych.", "risk_details": "", "url": "", "last_updated": None}
-            
-            # Currency
-            if c.currency:
-                processed_data["currency"] = {
-                    "code": c.currency.code,
-                    "name": c.currency.name or "",
-                    "rate_pln": float(c.currency.exchange_rate_pln) if c.currency.exchange_rate_pln else None,
-                    "relative_cost": c.currency.relative_cost,
-                    "last_updated": str(c.currency.last_updated) if c.currency.last_updated else None,
-                    "denominations": [{"value": d.value, "type": d.type, "image_url": d.image_url} for d in c.currency.denominations]
-                }
-            else:
-                processed_data["currency"] = {"code": "", "name": "", "rate_pln": None, "relative_cost": None, "last_updated": None, "denominations": []}
-            
-            # Practical
-            if c.practical:
-                processed_data["practical"] = {
-                    "plug_types": c.practical.plug_types or "",
-                    "voltage": c.practical.voltage,
-                    "frequency": c.practical.frequency,
-                    "water_safe": c.practical.tap_water_safe,
-                    "water_safe_for_brushing": c.practical.water_safe_for_brushing,
-                    "driving_side": c.practical.driving_side or "right",
-                    "card_acceptance": c.practical.card_acceptance or "",
-                    "best_exchange_currency": c.practical.best_exchange_currency or "",
-                    "exchange_where": c.practical.exchange_where or "",
-                    "atm_advice": c.practical.atm_advice or "",
-                    "bargaining_info": c.practical.bargaining_info or "",
-                    "alcohol_rules": c.practical.alcohol_rules or "",
-                    "dress_code": c.practical.dress_code or "",
-                    "photography_restrictions": c.practical.photography_restrictions or "",
-                    "sensitive_topics": c.practical.sensitive_topics or "",
-                    "local_norms": c.practical.local_norms or "",
-                    "store_hours": c.practical.store_hours or "",
-                    "internet_notes": c.practical.internet_notes or "",
-                    "esim_available": bool(c.practical.esim_available) if c.practical.esim_available is not None else None,
-                    "emergency": json.loads(c.practical.emergency_numbers) if c.practical.emergency_numbers else None,
-                    "vaccinations_required": c.practical.vaccinations_required or "",
-                    "vaccinations_suggested": c.practical.vaccinations_suggested or "",
-                    "health_info": c.practical.health_info or "",
-                    "roaming_info": c.practical.roaming_info or "",
-                    "license_type": c.practical.license_type or "",
-                    "souvenirs": c.practical.souvenirs or "",
-                    "last_updated": str(c.practical.last_updated) if c.practical.last_updated else None
-                }
-            else:
-                processed_data["practical"] = {
-                    "plug_types": "", "voltage": None, "frequency": None, "water_safe": None, 
-                    "water_safe_for_brushing": None, "driving_side": "right", "card_acceptance": "", 
-                    "best_exchange_currency": "", "exchange_where": "", "atm_advice": "", 
-                    "bargaining_info": "", "alcohol_rules": "", "dress_code": "", 
-                    "photography_restrictions": "", "sensitive_topics": "", "local_norms": "", 
-                    "store_hours": "", "internet_notes": "", "esim_available": None, 
-                    "emergency": None, "vaccinations_required": "", "vaccinations_suggested": "", 
-                    "health_info": "", "roaming_info": "", "license_type": "", "souvenirs": "", 
-                    "last_updated": None
-                }
-
-            # Costs
-            if c.costs:
-                processed_data["costs"] = {
-                    "index": float(c.costs.index_overall) if c.costs.index_overall else None,
-                    "restaurants": float(c.costs.index_restaurants) if c.costs.index_restaurants else None,
-                    "groceries": float(c.costs.index_groceries) if c.costs.index_groceries else None,
-                    "transport": float(c.costs.index_transport) if c.costs.index_transport else None,
-                    "accommodation": float(c.costs.index_accommodation) if c.costs.index_accommodation else None,
-                    "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs.ratio_to_poland else None,
-                    "daily_budget_low": float(c.costs.daily_budget_low) if c.costs.daily_budget_low else None,
-                    "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs.daily_budget_mid else None,
-                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs.daily_budget_high else None,
-                    "last_updated": str(c.costs.last_updated) if c.costs.last_updated else None
-                }
-            else:
-                processed_data["costs"] = None
-
-            # Entry
-            if c.entry_req:
-                processed_data["entry"] = {
+                "capital": c.capital,
+                "last_updated": c.updated_at,
+                "parent": {"iso2": id_to_iso.get(c.parent_id), "name_pl": id_to_name_pl.get(c.parent_id)} if c.parent_id else None,
+                "territories": [{"iso2": t.iso_alpha2, "name_pl": id_to_name_pl.get(t.id)} for t in c.territories],
+                "religions": [{"name": r.name, "percentage": r.percentage, "last_updated": str(r.last_updated)} for r in c.religions],
+                "languages": [{"name": l.name, "is_official": l.is_official, "last_updated": str(l.last_updated)} for l in c.languages],
+                
+                "safety": {
+                    "risk_level": c.safety.risk_level if c.safety else "unknown",
+                    "risk_text": c.safety.summary if c.safety else "Brak danych.",
+                    "risk_details": c.safety.risk_details if c.safety else "",
+                    "url": c.safety.full_url if c.safety else "",
+                    "last_updated": str(c.safety.last_checked) if c.safety else None
+                },
+                
+                "currency": {
+                    "code": c.currency.code if c.currency else "",
+                    "name": c.currency.name if c.currency else "",
+                    "rate_pln": float(c.currency.exchange_rate_pln) if c.currency and c.currency.exchange_rate_pln else None,
+                    "relative_cost": c.currency.relative_cost if c.currency else None,
+                    "last_updated": str(c.currency.last_updated) if c.currency else None,
+                    "denominations": [{"value": d.value, "type": d.type, "image_url": d.image_url} for d in c.currency.denominations] if c.currency else []
+                },
+                
+                "practical": c.practical, # Pydantic will handle this from attributes
+                
+                "costs": {
+                    "index": float(c.costs.index_overall) if c.costs and c.costs.index_overall else None,
+                    "restaurants": float(c.costs.index_restaurants) if c.costs and c.costs.index_restaurants else None,
+                    "groceries": float(c.costs.index_groceries) if c.costs and c.costs.index_groceries else None,
+                    "transport": float(c.costs.index_transport) if c.costs and c.costs.index_transport else None,
+                    "accommodation": float(c.costs.index_accommodation) if c.costs and c.costs.index_accommodation else None,
+                    "ratio_to_pl": float(c.costs.ratio_to_poland) if c.costs and c.costs.ratio_to_poland else None,
+                    "daily_budget_low": float(c.costs.daily_budget_low) if c.costs and c.costs.daily_budget_low else None,
+                    "daily_budget_mid": float(c.costs.daily_budget_mid) if c.costs and c.costs.daily_budget_mid else None,
+                    "daily_budget_high": float(c.costs.daily_budget_high) if c.costs and c.costs.daily_budget_high else None,
+                    "last_updated": str(c.costs.last_updated) if c.costs else None
+                } if c.costs else None,
+                
+                "entry": {
                     "visa_required": bool(c.entry_req.visa_required),
-                    "visa_status": c.entry_req.visa_status or "",
+                    "visa_status": c.entry_req.visa_status,
                     "passport_required": bool(c.entry_req.passport_required),
                     "temp_passport_allowed": bool(c.entry_req.temp_passport_allowed),
                     "id_card_allowed": bool(c.entry_req.id_card_allowed),
-                    "visa_notes": c.entry_req.visa_notes or "",
-                    "last_updated": str(c.entry_req.last_updated) if c.entry_req.last_updated else None
-                }
-            else:
-                processed_data["entry"] = None
-
-            # Weather
-            if c.weather:
-                processed_data["weather"] = {
-                    "temp": float(c.weather.temp_c) if c.weather.temp_c else None,
-                    "condition": c.weather.condition or "",
-                    "icon": c.weather.condition_icon or "",
-                    "forecast": json.loads(c.weather.forecast_json) if c.weather.forecast_json else [],
-                    "last_updated": str(c.weather.last_updated) if c.weather.last_updated else None
-                }
-            else:
-                processed_data["weather"] = None
-
-            # Lists
-            processed_data["souvenirs_list"] = [{"name": s.name, "description": s.description, "category": s.category, "image_url": s.image_url} for s in c.souvenirs]
-            processed_data["unesco_places"] = [
-                {
-                    "name": u.name, 
-                    "category": u.category, 
-                    "is_danger": bool(u.is_danger), 
-                    "is_transnational": bool(u.is_transnational),
-                    "unesco_id": u.unesco_id, 
-                    "image_url": u.image_url,
-                    "description": u.description
-                } for u in c.unesco_places
-            ]
-            processed_data["attractions"] = [{"name": a.name, "category": a.category, "description": a.description} for a in c.attractions[:15]]
-            processed_data["holidays"] = [{"name": h.name, "date": str(h.date)} for h in c.holidays]
-            processed_data["climate"] = [{"month": cl.month, "temp_day": cl.avg_temp_max, "temp_night": cl.avg_temp_min, "rain": cl.avg_rain_mm, "season": cl.season_type} for cl in c.climate]
-            processed_data["laws_and_customs"] = [{"category": lc.category, "title": lc.title, "description": lc.description} for lc in c.laws_and_customs]
-            processed_data["embassies"] = [
-                {
-                    "type": e.type,
-                    "city": e.city,
-                    "address": e.address,
-                    "phone": e.phone,
-                    "emergency_phone": e.emergency_phone,
-                    "email": e.email,
-                    "website": e.website
-                } for e in c.embassies
-            ]
+                    "visa_notes": c.entry_req.visa_notes,
+                    "last_updated": str(c.entry_req.last_updated)
+                } if c.entry_req else None,
+                
+                "weather": {
+                    "temp": float(c.weather.temp_c) if c.weather and c.weather.temp_c else None,
+                    "condition": c.weather.condition if c.weather else "",
+                    "icon": c.weather.condition_icon if c.weather else "",
+                    "forecast": c.weather.forecast_json if c.weather else "[]",
+                    "last_updated": str(c.weather.last_updated) if c.weather else None
+                } if c.weather else None,
+                
+                "souvenirs_list": [{"name": s.name, "description": s.description, "category": s.category, "image_url": s.image_url} for s in c.souvenirs],
+                "unesco_places": [
+                    {
+                        "name": u.name, "category": u.category, "is_danger": bool(u.is_danger), 
+                        "is_transnational": bool(u.is_transnational), "unesco_id": u.unesco_id, 
+                        "image_url": u.image_url, "description": u.description, "last_updated": str(u.last_updated)
+                    } for u in c.unesco_places
+                ],
+                "attractions": [{"name": a.name, "category": a.category, "description": a.description, "last_updated": str(a.last_updated)} for a in c.attractions[:15]],
+                "holidays": [{"name": h.name, "date": str(h.date), "last_updated": str(h.last_updated)} for h in c.holidays],
+                "climate": [{"month": cl.month, "temp_day": cl.avg_temp_max, "temp_night": cl.avg_temp_min, "rain": cl.avg_rain_mm, "season": cl.season_type, "last_updated": str(cl.last_updated)} for cl in c.climate],
+                "laws_and_customs": [{"category": lc.category, "title": lc.title, "description": lc.description, "last_updated": str(lc.last_updated)} for lc in c.laws_and_customs],
+                "embassies": [
+                    {
+                        "type": e.type, "city": e.city, "address": e.address, "phone": e.phone, 
+                        "emergency_phone": e.emergency_phone, "email": e.email, "website": e.website, "last_updated": str(e.last_updated)
+                    } for e in c.embassies
+                ]
+            }
             
-            output[c.iso_alpha2] = processed_data
+            # Validate and clean with Pydantic
+            validated = schemas.CountryExportSchema.model_validate(export_data)
+            output[c.iso_alpha2] = validated.model_dump(mode='json')
+            
             if (i+1) % 100 == 0:
                 print(f"Przetworzono {i+1}/{len(countries)} krajów...")
 

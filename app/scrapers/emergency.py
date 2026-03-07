@@ -4,6 +4,9 @@ from .. import models
 import json
 import logging
 import asyncio
+from typing import Dict, Any, List
+
+from .base import BaseScraper
 
 logger = logging.getLogger("uvicorn")
 
@@ -23,30 +26,44 @@ MANUAL_FALLBACKS = {
     'PL': {"police": "997", "ambulance": "999", "fire": "998", "dispatch": "112", "member_112": True},
 }
 
-async def sync_emergency_numbers(db: Session):
-    countries = db.query(models.Country).all()
-    results = {"synced": 0, "errors": 0}
-    
-    dump_data = {}
-    try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            resp = await client.get("https://emergencynumberapi.com/api/data/all")
-            if resp.status_code == 200:
-                data = resp.json()
-                full_list = data.get("value", data) if isinstance(data, dict) else data
-                if isinstance(full_list, list):
-                    for entry in full_list:
-                        iso = entry.get("Country", {}).get("ISOCode")
-                        if iso: dump_data[iso.upper()] = entry
-    except Exception as e:
-        logger.warning(f"Dump error: {e}")
+class EmergencyScraper(BaseScraper):
+    """
+    Syncs emergency numbers for countries using EmergencyNumberAPI and manual fallbacks.
+    """
+    def __init__(self, db: Session, concurrency: int = 5, timeout: float = 30.0):
+        super().__init__(db, concurrency, timeout)
+        self.dump_data: Dict[str, Any] = {}
 
-    for country in countries:
+    async def run(self, countries: List[models.Country]) -> Dict[str, int]:
+        """
+        Overridden run to fetch all data once before distributing to sync_country calls.
+        """
+        async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True) as client:
+            self.client = client
+            try:
+                resp = await self.client.get("https://emergencynumberapi.com/api/data/all")
+                if resp.status_code == 200:
+                    data = resp.json()
+                    full_list = data.get("value", data) if isinstance(data, dict) else data
+                    if isinstance(full_list, list):
+                        for entry in full_list:
+                            iso = entry.get("Country", {}).get("ISOCode")
+                            if iso: self.dump_data[iso.upper()] = entry
+            except Exception as e:
+                logger.warning(f"Emergency API Dump error: {e}")
+
+            results = {"success": 0, "errors": 0}
+            tasks = [self._limited_sync(country, results) for country in countries]
+            await asyncio.gather(*tasks)
+            
+            return results
+
+    async def sync_country(self, country: models.Country) -> Any:
         iso2 = country.iso_alpha2.upper()
         emergency_data = None
         
-        if iso2 in dump_data:
-            d = dump_data[iso2]
+        if iso2 in self.dump_data:
+            d = self.dump_data[iso2]
             def extract(cat):
                 obj = d.get(cat, {})
                 val = None
@@ -82,14 +99,23 @@ async def sync_emergency_numbers(db: Session):
                     emergency_data[k] = None
 
             try:
-                practical = db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
-                if not practical:
-                    practical = models.PracticalInfo(country_id=country.id)
-                    db.add(practical)
+                practical = await self.get_or_create(models.PracticalInfo, country.id)
                 practical.emergency_numbers = json.dumps(emergency_data)
-                db.commit()
-                results["synced"] += 1
+                self.db.commit()
+                return {"status": "success"}
             except Exception as e:
-                results["errors"] += 1
-                
-    return results
+                logger.error(f"Error updating emergency numbers for {country.iso_alpha2}: {e}")
+                return {"error": str(e)}
+        
+        return {"status": "skipped", "reason": "No emergency data found"}
+
+async def sync_emergency_numbers(db: Session):
+    """
+    Legacy wrapper for syncing emergency numbers.
+    """
+    scraper = EmergencyScraper(db)
+    countries = db.query(models.Country).all()
+    results = await scraper.run(countries)
+    
+    # Return in legacy format
+    return {"synced": results["success"], "errors": results["errors"]}

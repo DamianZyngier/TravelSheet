@@ -1,8 +1,9 @@
-from sqlalchemy.orm import Session
-from sqlalchemy import func
-from .. import models
 import logging
-import re
+from sqlalchemy.orm import Session
+from typing import Any, List
+
+from .. import models
+from .base import BaseScraper
 
 logger = logging.getLogger("uvicorn")
 
@@ -82,14 +83,14 @@ REGIONAL_APPS = {
     'Oceania': 'Uber, Ola, DiDi'
 }
 
-async def sync_transport_apps(db: Session):
+class TransportAppsScraper(BaseScraper):
     """
     Updates popular_apps column with transport-specific data.
     """
-    countries = db.query(models.Country).all()
-    synced = 0
-    
-    for country in countries:
+    def __init__(self, db: Session, concurrency: int = 5, timeout: float = 30.0):
+        super().__init__(db, concurrency, timeout)
+
+    async def sync_country(self, country: models.Country) -> Any:
         iso2 = country.iso_alpha2.upper()
         
         # 1. Start with manual mapping
@@ -114,8 +115,15 @@ async def sync_transport_apps(db: Session):
         
         # Update database
         country.popular_apps = apps
-        synced += 1
-        
-    db.commit()
-    logger.info(f"Synced transport apps for {synced} countries")
-    return {"success": synced}
+        self.db.commit()
+        return {"status": "success"}
+
+async def sync_transport_apps(db: Session):
+    """
+    Legacy wrapper for syncing transport apps.
+    """
+    scraper = TransportAppsScraper(db)
+    countries = db.query(models.Country).all()
+    results = await scraper.run(countries)
+    logger.info(f"Synced transport apps for {results['success']} countries")
+    return {"success": results["success"]}

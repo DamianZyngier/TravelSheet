@@ -1,108 +1,82 @@
-import httpx
+import logging
 from sqlalchemy.orm import Session
 from .. import models
-import asyncio
-import logging
+from .base import BaseScraper
 from collections import defaultdict
 
 logger = logging.getLogger("uvicorn")
 
-async def sync_country_climate(db: Session, country: models.Country, client: httpx.AsyncClient):
-    if not country.latitude or not country.longitude:
-        return {"skipped": True}
-        
-    # Open-Meteo Archive is sometimes slow or has transient errors
-    for attempt in range(3):
+class ClimateScraper(BaseScraper):
+    def __init__(self, db: Session):
+        super().__init__(db, concurrency=10, timeout=60.0)
+
+    async def sync_country(self, country: models.Country):
+        # Coordinates
+        lat, lon = country.latitude, country.longitude
+        if lat is None or lon is None:
+            return {"error": "Missing coordinates"}
+
+        url = "https://archive-api.open-meteo.com/v1/archive"
+        params = {
+            "latitude": float(lat),
+            "longitude": float(lon),
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "daily": ["temperature_2m_max", "temperature_2m_min", "rain_sum"],
+            "timezone": "auto"
+        }
+
         try:
-            url = (
-                f"https://archive-api.open-meteo.com/v1/archive?"
-                f"latitude={country.latitude}&longitude={country.longitude}&"
-                f"start_date=2024-01-01&end_date=2024-12-31&"
-                f"daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT"
-            )
+            resp = await self.client.get(url, params=params)
+            if resp.status_code != 200:
+                return {"error": f"Open-Meteo returned {resp.status_code}"}
             
-            resp = await client.get(url, timeout=30.0)
-            if resp.status_code == 200:
-                data = resp.json()
-                # ... rest of logic remains same ...
-                daily = data.get("daily", {})
-                monthly_stats = defaultdict(lambda: {"temp_max": [], "temp_min": [], "rain": []})
-                
-                times = daily.get("time", [])
-                max_temps = daily.get("temperature_2m_max", [])
-                min_temps = daily.get("temperature_2m_min", [])
-                precip = daily.get("precipitation_sum", [])
-                
-                if not times or len(times) < 300:
-                    return {"error": f"Incomplete data (found {len(times)} days)"}
+            data = resp.json().get("daily", {})
+            if not data:
+                return {"error": "No daily data in response"}
 
-                for i in range(len(times)):
-                    try:
-                        month = int(times[i].split("-")[1])
-                        if i < len(max_temps) and max_temps[i] is not None: monthly_stats[month]["temp_max"].append(max_temps[i])
-                        if i < len(min_temps) and min_temps[i] is not None: monthly_stats[month]["temp_min"].append(min_temps[i])
-                        if i < len(precip) and precip[i] is not None: monthly_stats[month]["rain"].append(precip[i])
-                    except: continue
-                
-                months_with_data = [m for m in range(1, 13) if monthly_stats[m]["temp_max"]]
-                if len(months_with_data) < 12:
-                    return {"error": f"Incomplete monthly data (found {len(months_with_data)} months)"}
+            # Aggregate by month
+            months = defaultdict(lambda: {"max": [], "min": [], "rain": []})
+            for i, date_str in enumerate(data.get("time", [])):
+                month = int(date_str.split("-")[1])
+                if data["temperature_2m_max"][i] is not None:
+                    months[month]["max"].append(data["temperature_2m_max"][i])
+                if data["temperature_2m_min"][i] is not None:
+                    months[month]["min"].append(data["temperature_2m_min"][i])
+                if data["rain_sum"][i] is not None:
+                    months[month]["rain"].append(data["rain_sum"][i])
 
-                db.query(models.Climate).filter(models.Climate.country_id == country.id).delete()
-                for month in range(1, 13):
-                    stats = monthly_stats[month]
-                    avg_max = sum(stats["temp_max"]) / len(stats["temp_max"])
-                    avg_min = sum(stats["temp_min"]) / len(stats["temp_min"])
-                    total_rain = sum(stats["rain"])
-                    
-                    if total_rain > 150: season = 'wet'
-                    elif total_rain < 40: season = 'dry'
-                    else: season = 'shoulder'
-                    
-                    db.add(models.Climate(
-                        country_id=country.id,
-                        month=month,
-                        avg_temp_max=int(round(avg_max)),
-                        avg_temp_min=int(round(avg_min)),
-                        avg_rain_mm=int(round(total_rain)),
-                        season_type=season
-                    ))
-                db.commit()
-                return {"status": "success"}
-            elif resp.status_code == 429:
-                await asyncio.sleep(5 * (attempt + 1))
-                continue
-            else:
-                return {"error": f"HTTP {resp.status_code}"}
+            # Update DB
+            self.db.query(models.Climate).filter(models.Climate.country_id == country.id).delete()
+            
+            for month, vals in months.items():
+                if not vals["max"]: continue
+                
+                avg_max = sum(vals["max"]) / len(vals["max"])
+                avg_min = sum(vals["min"]) / len(vals["min"])
+                total_rain = sum(vals["rain"])
+                
+                # Simple season detection
+                season = "shoulder"
+                if avg_max > 25 and total_rain < 50: season = "dry"
+                elif total_rain > 150: season = "wet"
+
+                db_climate = models.Climate(
+                    country_id=country.id,
+                    month=month,
+                    avg_temp_max=int(avg_max),
+                    avg_temp_min=int(avg_min),
+                    avg_rain_mm=int(total_rain),
+                    season_type=season
+                )
+                self.db.add(db_climate)
+            
+            self.db.commit()
+            return {"status": "success"}
         except Exception as e:
-            if attempt == 2: return {"error": str(e)}
-            await asyncio.sleep(2)
-    return {"error": "Failed after retries"}
+            return {"error": str(e)}
 
-async def sync_all_climate(db: Session, force: bool = False):
+async def sync_country_climate_all(db: Session):
     countries = db.query(models.Country).all()
-    results = {"synced": 0, "errors": 0, "skipped": 0}
-    
-    # Reduced concurrency to be gentler on Open-Meteo
-    semaphore = asyncio.Semaphore(5)
-    
-    async def limited_sync(country, client):
-        async with semaphore:
-            if not force:
-                existing = db.query(models.Climate).filter(models.Climate.country_id == country.id).first()
-                if existing:
-                    results["skipped"] += 1
-                    return
-            
-            res = await sync_country_climate(db, country, client)
-            if res.get("status") == "success":
-                results["synced"] += 1
-            elif not res.get("skipped"):
-                results["errors"] += 1
-                logger.warning(f"Climate Sync Error ({country.iso_alpha2}): {res.get('error')}")
-
-    logger.info(f"Starting parallel Climate sync for {len(countries)} countries...")
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        await asyncio.gather(*(limited_sync(c, client) for c in countries))
-                
-    return results
+    scraper = ClimateScraper(db)
+    return await scraper.run(countries)

@@ -1,7 +1,10 @@
-from sqlalchemy.orm import Session
-from .. import models
 import logging
+from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
+from typing import Any
+
+from .. import models
+from .base import BaseScraper
 
 logger = logging.getLogger("uvicorn")
 
@@ -29,58 +32,47 @@ COST_DATA = {
     'AE': 65, 'GB': 70, 'US': 75, 'UY': 55, 'UZ': 30, 'VU': 65, 'VE': 45, 'VN': 35, 'YE': 35, 'ZM': 35, 'ZW': 38
 }
 
-def sync_costs(db: Session):
+class CostsScraper(BaseScraper):
     """
     Updates cost of living based on pre-calculated index data.
     Calculates ratio relative to Poland (PL).
     """
-    pl_index = COST_DATA.get('PL', 42.0)
-    synced = 0
-    errors = 0
-    countries = db.query(models.Country).all()
-    
-    for country in countries:
-        try:
-            index = COST_DATA.get(country.iso_alpha2.upper())
-            if not index:
-                continue
-                
-            ratio = round(index / pl_index, 2)
-            pl_low, pl_mid, pl_high = 120.0, 300.0, 800.0
+    def __init__(self, db: Session, concurrency: int = 5, timeout: float = 30.0):
+        super().__init__(db, concurrency, timeout)
+        self.pl_index = COST_DATA.get('PL', 42.0)
+
+    async def sync_country(self, country: models.Country) -> Any:
+        index = COST_DATA.get(country.iso_alpha2.upper())
+        if not index:
+            return {"status": "skipped", "reason": "No cost data available"}
             
-            existing = db.query(models.CostOfLiving).filter(models.CostOfLiving.country_id == country.id).first()
-            
-            if existing:
-                existing.index_overall = index
-                existing.index_restaurants = index * 0.95
-                existing.index_groceries = index * 1.05
-                existing.index_transport = index * 0.85
-                existing.index_accommodation = index * 1.2
-                existing.ratio_to_poland = ratio
-                existing.daily_budget_low = round(pl_low * ratio, 2)
-                existing.daily_budget_mid = round(pl_mid * ratio, 2)
-                existing.daily_budget_high = round(pl_high * ratio, 2)
-                existing.last_updated = func.now()
-            else:
-                cost_entry = models.CostOfLiving(
-                    country_id=country.id,
-                    index_overall=index,
-                    index_restaurants=index * 0.95,
-                    index_groceries=index * 1.05,
-                    index_transport=index * 0.85,
-                    index_accommodation=index * 1.2,
-                    ratio_to_poland=ratio,
-                    daily_budget_low=round(pl_low * ratio, 2),
-                    daily_budget_mid=round(pl_mid * ratio, 2),
-                    daily_budget_high=round(pl_high * ratio, 2),
-                    last_updated=func.now()
-                )
-                db.add(cost_entry)
-            synced += 1
-        except Exception as e:
-            logger.error(f"Error syncing costs for {country.iso_alpha2}: {e}")
-            errors += 1
+        ratio = round(index / self.pl_index, 2)
+        pl_low, pl_mid, pl_high = 120.0, 300.0, 800.0
         
-    db.commit()
-    logger.info(f"Synced cost data: {synced} success, {errors} errors")
-    return {"success": synced, "errors": errors}
+        cost_entry = await self.get_or_create(models.CostOfLiving, country.id)
+        
+        cost_entry.index_overall = index
+        cost_entry.index_restaurants = index * 0.95
+        cost_entry.index_groceries = index * 1.05
+        cost_entry.index_transport = index * 0.85
+        cost_entry.index_accommodation = index * 1.2
+        cost_entry.ratio_to_poland = ratio
+        cost_entry.daily_budget_low = round(pl_low * ratio, 2)
+        cost_entry.daily_budget_mid = round(pl_mid * ratio, 2)
+        cost_entry.daily_budget_high = round(pl_high * ratio, 2)
+        cost_entry.last_updated = func.now()
+        
+        self.db.commit()
+        return {"status": "success"}
+
+def sync_costs(db: Session):
+    """
+    Legacy wrapper for synchronous sync. 
+    Actually runs asynchronously through CostsScraper.
+    """
+    import asyncio
+    scraper = CostsScraper(db)
+    countries = db.query(models.Country).all()
+    results = asyncio.run(scraper.run(countries))
+    logger.info(f"Synced cost data: {results['success']} success, {results['errors']} errors")
+    return results

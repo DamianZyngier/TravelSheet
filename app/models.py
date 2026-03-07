@@ -7,13 +7,13 @@ class Country(Base):
     __tablename__ = "countries"
 
     id = Column(Integer, primary_key=True)
-    iso_alpha2 = Column(String(2), unique=True, nullable=False)
-    iso_alpha3 = Column(String(3), unique=True, nullable=False)
+    iso_alpha2 = Column(String(2), unique=True, nullable=False, index=True)
+    iso_alpha3 = Column(String(3), unique=True, nullable=False, index=True)
     name = Column(String(100), nullable=False)
-    name_pl = Column(String(100))
+    name_pl = Column(String(100), index=True)
     capital = Column(String(100))
-    continent = Column(String(50))
-    region = Column(String(100))
+    continent = Column(String(50), index=True)
+    region = Column(String(100), index=True)
     flag_url = Column(String(255))
     flag_emoji = Column(String(10))
     latitude = Column(DECIMAL(10, 6))
@@ -55,10 +55,10 @@ class Country(Base):
     inception_date = Column(String(100))
     official_tourist_website = Column(Text)
     regional_products = Column(Text) # GI products like cheese, wine
-    has_ekuz = Column(Boolean, default=False)
+    has_ekuz = Column(Boolean, default=False, index=True)
     
     is_independent = Column(Boolean, default=True)
-    parent_id = Column(Integer, ForeignKey("countries.id"))
+    parent_id = Column(Integer, ForeignKey("countries.id"), index=True)
     
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
@@ -86,7 +86,7 @@ class Language(Base):
     __tablename__ = "languages"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     name = Column(String(100))
     code = Column(String(10))
     is_official = Column(Boolean, default=False)
@@ -98,7 +98,7 @@ class Currency(Base):
     __tablename__ = "currencies"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     code = Column(String(3), nullable=False)
     name = Column(String(100))
     symbol = Column(String(10))
@@ -113,7 +113,7 @@ class CurrencyDenomination(Base):
     __tablename__ = "currency_denominations"
 
     id = Column(Integer, primary_key=True)
-    currency_id = Column(Integer, ForeignKey("currencies.id", ondelete="CASCADE"))
+    currency_id = Column(Integer, ForeignKey("currencies.id", ondelete="CASCADE"), index=True)
     value = Column(String(50))
     type = Column(String(20)) # banknote, coin
     image_url = Column(String(500))
@@ -125,8 +125,8 @@ class SafetyInfo(Base):
     __tablename__ = "safety_info"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
-    risk_level = Column(String(50))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
+    risk_level = Column(String(50), index=True)
     summary = Column(Text)
     risk_details = Column(Text)
     full_url = Column(Text)
@@ -138,7 +138,7 @@ class Embassy(Base):
     __tablename__ = "embassies"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     type = Column(String(20))
     city = Column(String(100))
     address = Column(Text)
@@ -154,7 +154,7 @@ class EntryRequirement(Base):
     __tablename__ = "entry_requirements"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     passport_required = Column(Boolean)
     temp_passport_allowed = Column(Boolean)
     id_card_allowed = Column(Boolean)
@@ -169,7 +169,7 @@ class Attraction(Base):
     __tablename__ = "attractions"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     name = Column(String(255), nullable=False)
     city = Column(String(100))
     description = Column(Text)
@@ -186,7 +186,7 @@ class UnescoPlace(Base):
     __tablename__ = "unesco_places"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     unesco_id = Column(String(20)) # Official UNESCO ID
     name = Column(String(255), nullable=False)
     description = Column(Text)
@@ -203,7 +203,7 @@ class Religion(Base):
     __tablename__ = "religions"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     name = Column(String(100))
     percentage = Column(DECIMAL(5, 2))
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
@@ -214,7 +214,7 @@ class Souvenir(Base):
     __tablename__ = "souvenirs"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     name = Column(String(255), nullable=False)
     description = Column(Text)
     category = Column(String(50)) # food, handicraft, alcohol, etc.
@@ -227,7 +227,7 @@ class Holiday(Base):
     __tablename__ = "holidays"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     name = Column(String(255))
     name_local = Column(String(255))
     date = Column(Date)
@@ -241,7 +241,7 @@ class PracticalInfo(Base):
     __tablename__ = "practical_info"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True, index=True)
     tap_water_safe = Column(Boolean)
     plug_types = Column(String(50)) # e.g. "C,E"
     voltage = Column(Integer) # e.g. 230
@@ -273,23 +273,13 @@ class PracticalInfo(Base):
     
     last_updated = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
-    @property
-    def emergency(self):
-        import json
-        if self.emergency_numbers:
-            try:
-                return json.loads(self.emergency_numbers)
-            except:
-                return None
-        return None
-
     country = relationship("Country", back_populates="practical")
 
 class Weather(Base):
     __tablename__ = "weather"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True, index=True)
     temp_c = Column(DECIMAL(4, 1))
     feels_like_c = Column(DECIMAL(4, 1))
     condition = Column(String(100))
@@ -305,7 +295,7 @@ class Climate(Base):
     __tablename__ = "climate"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     month = Column(Integer) # 1-12
     avg_temp_min = Column(Integer)
     avg_temp_max = Column(Integer)
@@ -319,7 +309,7 @@ class LawAndCustom(Base):
     __tablename__ = "laws_and_customs"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"))
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     category = Column(String(50)) # "law", "custom", "tip", "souvenir"
     title = Column(String(255))
     description = Column(Text)
@@ -331,7 +321,7 @@ class CostOfLiving(Base):
     __tablename__ = "cost_of_living"
 
     id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True)
+    country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), unique=True, index=True)
     index_overall = Column(DECIMAL(10, 2))
     index_restaurants = Column(DECIMAL(10, 2))
     index_groceries = Column(DECIMAL(10, 2))

@@ -3,85 +3,85 @@ from sqlalchemy.orm import Session
 from .. import models
 import asyncio
 import logging
+from typing import Any, List
+
+from .base import BaseScraper
 from .utils import async_sparql_get
 
 logger = logging.getLogger("uvicorn")
 # Wyciszenie logów HTTPX
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-async def sync_wiki_attractions_batch(db: Session, countries: list[models.Country]):
-    """Sync attractions for a batch of countries to speed up process"""
-    if not countries: return
-    
-    country_map = {c.iso_alpha2.upper(): c for c in countries}
-    isos = ' '.join([f'"{iso}"' for iso in country_map.keys()])
-    
-    # Ultra-simplified query: only items with many sitelinks
-    query = f"""
-    SELECT DISTINCT ?countryISO ?itemLabel WHERE {{
-      VALUES ?countryISO {{ {isos} }}
-      ?country wdt:P297 ?countryISO.
-      ?item wdt:P31/wdt:P279* wd:Q570116; 
-            wdt:P17 ?country;
-            wikibase:sitelinks ?sitelinks.
-      FILTER(?sitelinks > 50)
-      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
-    }}
-    LIMIT 20
+class WikiAttractionsScraper(BaseScraper):
     """
+    Syncs attractions for countries from Wikidata using SPARQL.
+    """
+    def __init__(self, db: Session, concurrency: int = 1, timeout: float = 60.0):
+        # Use low concurrency (1) as Wikidata often struggles with many parallel SPARQL queries
+        super().__init__(db, concurrency, timeout)
 
-    results = await async_sparql_get(query, "Wiki Attractions")
-    if not results:
-        return
-    
-    counts = {iso: 0 for iso in country_map.keys()}
-    
-    for res in results:
-        iso = res.get("countryISO", {}).get("value")
-        if not iso or iso not in counts or counts[iso] >= 5: continue
+    async def sync_country(self, country: models.Country) -> Any:
+        iso = country.iso_alpha2.upper()
         
-        country = country_map[iso]
-        name = res.get("itemLabel", {}).get("value")
-        
-        if not name or name.startswith("Q"): continue
+        # Ultra-simplified query: only items with many sitelinks
+        query = f"""
+        SELECT DISTINCT ?itemLabel WHERE {{
+          ?country wdt:P297 "{iso}".
+          ?item wdt:P31/wdt:P279* wd:Q570116; 
+                wdt:P17 ?country;
+                wikibase:sitelinks ?sitelinks.
+          FILTER(?sitelinks > 50)
+          SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
+        }}
+        LIMIT 20
+        """
 
-        existing = db.query(models.Attraction).filter(
-            models.Attraction.country_id == country.id,
-            models.Attraction.name == name
-        ).first()
-        
-        if not existing:
-            db.add(models.Attraction(
-                country_id=country.id,
-                name=name,
-                category='Wiki Attraction',
-                is_must_see=True,
-                is_unique=False
-            ))
-            counts[iso] += 1
-        else:
-            from sqlalchemy.sql import func
-            existing.last_updated = func.now()
-    
-    db.commit()
+        try:
+            results = await async_sparql_get(query, f"Wiki Attractions {iso}")
+            if not results:
+                return {"status": "skipped", "reason": "No attractions found"}
+            
+            count = 0
+            for res in results:
+                if count >= 5: break
+                
+                name = res.get("itemLabel", {}).get("value")
+                if not name or name.startswith("Q"): continue
+
+                existing = self.db.query(models.Attraction).filter(
+                    models.Attraction.country_id == country.id,
+                    models.Attraction.name == name
+                ).first()
+                
+                if not existing:
+                    self.db.add(models.Attraction(
+                        country_id=country.id,
+                        name=name,
+                        category='Wiki Attraction',
+                        is_must_see=True,
+                        is_unique=False
+                    ))
+                    count += 1
+                else:
+                    from sqlalchemy.sql import func
+                    existing.last_updated = func.now()
+            
+            self.db.commit()
+            return {"status": "success", "added_count": count}
+        except Exception as e:
+            logger.error(f"Error syncing attractions for {iso}: {e}")
+            return {"error": str(e)}
+
+async def sync_wiki_attractions_batch(db: Session, countries: list[models.Country]):
+    """Legacy wrapper for batch sync. Now uses WikiAttractionsScraper for each country."""
+    scraper = WikiAttractionsScraper(db)
+    for country in countries:
+        await scraper.sync_country(country)
+        await asyncio.sleep(0.5)
 
 async def sync_all_wiki_attractions(db: Session):
+    """Legacy wrapper for syncing all attractions."""
+    scraper = WikiAttractionsScraper(db, concurrency=1)
     countries = db.query(models.Country).all()
-    total = {"success": 0, "errors": 0}
-    
-    # SINGLE country batches because Wikidata is struggling
-    batch_size = 1
-    for i in range(0, len(countries), batch_size):
-        batch = countries[i : i + batch_size]
-        if (i + 1) % 10 == 0:
-            logger.info(f"Syncing Wiki attractions progress: {i+1}/{len(countries)}...")
-        try:
-            await sync_wiki_attractions_batch(db, batch)
-            total["success"] += len(batch)
-        except Exception as e:
-            isos = [c.iso_alpha2 for c in batch]
-            logger.error(f"Error in batch sync for {isos}: {e}")
-            total["errors"] += len(batch)
-        await asyncio.sleep(1.0) # Short sleep between many small queries
-        
-    return total
+    results = await scraper.run(countries)
+    return {"success": results["success"], "errors": results["errors"]}

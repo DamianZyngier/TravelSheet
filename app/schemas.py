@@ -309,4 +309,207 @@ class CostOfLivingSchema(BaseModel):
     class Config:
         from_attributes = True
 
+class PracticalExportSchema(BaseModel):
+    plug_types: Optional[str] = ""
+    voltage: Optional[int] = None
+    frequency: Optional[int] = None
+    water_safe: Optional[bool] = None
+    water_safe_for_brushing: Optional[bool] = None
+    driving_side: Optional[str] = "right"
+    card_acceptance: Optional[str] = ""
+    best_exchange_currency: Optional[str] = ""
+    exchange_where: Optional[str] = ""
+    atm_advice: Optional[str] = ""
+    bargaining_info: Optional[str] = ""
+    alcohol_rules: Optional[str] = ""
+    dress_code: Optional[str] = ""
+    photography_restrictions: Optional[str] = ""
+    sensitive_topics: Optional[str] = ""
+    local_norms: Optional[str] = ""
+    store_hours: Optional[str] = ""
+    internet_notes: Optional[str] = ""
+    esim_available: Optional[bool] = None
+    emergency: Optional[Dict[str, Any]] = None
+    vaccinations_required: Optional[str] = ""
+    vaccinations_suggested: Optional[str] = ""
+    health_info: Optional[str] = ""
+    roaming_info: Optional[str] = ""
+    license_type: Optional[str] = ""
+    souvenirs: Optional[str] = ""
+    last_updated: Optional[str] = None
+
+    @field_validator("plug_types", "driving_side", "card_acceptance", "best_exchange_currency", 
+                     "exchange_where", "atm_advice", "bargaining_info", "alcohol_rules", 
+                     "dress_code", "photography_restrictions", "sensitive_topics", 
+                     "local_norms", "store_hours", "internet_notes", "vaccinations_required", 
+                     "vaccinations_suggested", "health_info", "roaming_info", "license_type", "souvenirs", mode="before")
+    @classmethod
+    def convert_none_to_empty(cls, v: Any) -> str:
+        return v if v is not None else ""
+
+    @field_validator("last_updated", mode="before")
+    @classmethod
+    def format_date(cls, v: Any) -> Optional[str]:
+        return str(v) if v else None
+
+    @field_validator("emergency", mode="before")
+    @classmethod
+    def parse_emergency(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            try: return json.loads(v)
+            except: return None
+        return v
+
+    class Config:
+        from_attributes = True
+
+class CostsExportSchema(BaseModel):
+    index: Optional[float] = None
+    restaurants: Optional[float] = None
+    groceries: Optional[float] = None
+    transport: Optional[float] = None
+    accommodation: Optional[float] = None
+    ratio_to_pl: Optional[float] = None
+    daily_budget_low: Optional[float] = None
+    daily_budget_mid: Optional[float] = None
+    daily_budget_high: Optional[float] = None
+    last_updated: Optional[str] = None
+
+    @field_validator("last_updated", mode="before")
+    @classmethod
+    def format_date(cls, v: Any) -> Optional[str]:
+        return str(v) if v else None
+
+    class Config:
+        from_attributes = True
+
+class EntryExportSchema(BaseModel):
+    visa_required: bool = False
+    visa_status: Optional[str] = ""
+    passport_required: bool = True
+    temp_passport_allowed: bool = False
+    id_card_allowed: bool = False
+    visa_notes: Optional[str] = ""
+    last_updated: Optional[str] = None
+
+    @field_validator("visa_status", "visa_notes", mode="before")
+    @classmethod
+    def convert_none_to_empty(cls, v: Any) -> str:
+        return v if v is not None else ""
+
+    @field_validator("last_updated", mode="before")
+    @classmethod
+    def format_date(cls, v: Any) -> Optional[str]:
+        return str(v) if v else None
+
+    class Config:
+        from_attributes = True
+
+class WeatherExportSchema(BaseModel):
+    temp: Optional[float] = None
+    condition: str = ""
+    icon: str = ""
+    forecast: List[Dict[str, Any]] = []
+    last_updated: Optional[str] = None
+
+    @field_validator("last_updated", mode="before")
+    @classmethod
+    def format_date(cls, v: Any) -> Optional[str]:
+        return str(v) if v else None
+
+    @field_validator("forecast", mode="before")
+    @classmethod
+    def parse_forecast(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            try: return json.loads(v)
+            except: return []
+        return v or []
+
+    class Config:
+        from_attributes = True
+
+class CountryExportSchema(BaseModel):
+    name: str
+    name_pl: str
+    iso2: str
+    iso3: str
+    capital: Optional[str] = None
+    continent: str = ""
+    region: str = ""
+    flag_emoji: Optional[str] = ""
+    flag_url: Optional[str] = ""
+    population: Optional[int] = None
+    area: Optional[float] = None
+    timezone: Optional[str] = None
+    national_dish: Optional[str] = None
+    wiki_summary: Optional[str] = None
+    national_symbols: Optional[str] = None
+    alcohol_status: Optional[str] = None
+    lgbtq_status: Optional[str] = None
+    id_requirement: Optional[str] = None
+    main_airport: Optional[str] = None
+    railway_info: Optional[str] = None
+    natural_hazards: Optional[str] = None
+    popular_apps: Optional[str] = None
+    phone_code: Optional[str] = None
+    largest_cities: Optional[str] = None
+    ethnic_groups: Optional[str] = None
+    climate_description: Optional[str] = None
+    unique_things: Optional[str] = None
+    unique_animals: Optional[str] = None
+    travel_types: Dict[str, Any] = {"categories": [], "highlights": []}
+    hdi: Optional[float] = None
+    life_expectancy: Optional[float] = None
+    gdp_nominal: Optional[float] = None
+    gdp_ppp: Optional[float] = None
+    gdp_per_capita: Optional[float] = None
+    gini: Optional[float] = None
+    coat_of_arms_url: Optional[str] = None
+    inception_date: Optional[str] = None
+    official_tourist_website: Optional[str] = None
+    regional_products: Optional[str] = None
+    has_ekuz: bool = False
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    unesco_count: int = 0
+    is_independent: bool = True
+    last_updated: Optional[str] = None
+
+    # Complex nested data
+    parent: Optional[Dict[str, Optional[str]]] = None
+    territories: List[Dict[str, Optional[str]]] = []
+    religions: List[Dict[str, Any]] = []
+    languages: List[Dict[str, Any]] = []
+    safety: Dict[str, Any]
+    currency: Dict[str, Any]
+    practical: PracticalExportSchema
+    costs: Optional[CostsExportSchema] = None
+    entry: Optional[EntryExportSchema] = None
+    weather: Optional[WeatherExportSchema] = None
+    
+    # Lists
+    souvenirs_list: List[Dict[str, Any]] = []
+    unesco_places: List[Dict[str, Any]] = []
+    attractions: List[Dict[str, Any]] = []
+    holidays: List[Dict[str, Any]] = []
+    climate: List[Dict[str, Any]] = []
+    laws_and_customs: List[Dict[str, Any]] = []
+    embassies: List[Dict[str, Any]] = []
+
+    @field_validator("last_updated", mode="before")
+    @classmethod
+    def format_date(cls, v: Any) -> Optional[str]:
+        return str(v) if v else None
+
+    @field_validator("travel_types", mode="before")
+    @classmethod
+    def parse_json(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            try: return json.loads(v)
+            except: return {"categories": [], "highlights": []}
+        return v or {"categories": [], "highlights": []}
+
+    class Config:
+        from_attributes = True
+
 CountryDetail.model_rebuild()
