@@ -94,94 +94,97 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
           <h1>🏆 Rankingi Podróżnicze 2026</h1>
           <p className="static-page-desc">Trendy i oceny oparte na wyborach polskich podróżnych.</p>
         </div>
-        {/* Airline Rankings */}
-        <section className="ranking-card">
-          <div className="ranking-card-header">
-            <span className="ranking-icon">✈️</span>
-            <h2>Najlepsze Linie Lotnicze</h2>
-          </div>
-          <div className="ranking-scroll-area">
-            <div className="ranking-list">
-              {airlineRanking.map((item) => (
-                <div key={item.rank} className="ranking-item">
-                  <div className="rank-number">#{item.rank}</div>
-                  <div className="rank-content">
-                    <div className="rank-title-row">
-                      <span className="rank-item-name">{item.icon} {item.name}</span>
-                      <span className="rank-rating">⭐ {item.rating}</span>
-                    </div>
-                    <p className="rank-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+        
+        <div className="rankings-grid">
+          {/* Airline Rankings */}
+          <section className="ranking-card">
+            <div className="ranking-card-header">
+              <span className="ranking-icon">✈️</span>
+              <h2>Najlepsze Linie Lotnicze</h2>
             </div>
-          </div>
-        </section>
+            <div className="ranking-scroll-area">
+              <div className="ranking-list">
+                {airlineRanking.map((item) => (
+                  <div key={item.rank} className="ranking-item">
+                    <div className="rank-number">#{item.rank}</div>
+                    <div className="rank-content">
+                      <div className="rank-title-row">
+                        <span className="rank-item-name">{item.icon} {item.name}</span>
+                        <span className="rank-rating">⭐ {item.rating}</span>
+                      </div>
+                      <p className="rank-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-        {/* Destination Rankings */}
-        <section className="ranking-card">
-          <div className="ranking-card-header">
-            <span className="ranking-icon">🌍</span>
-            <h2>Top Kierunki z Polski</h2>
-          </div>
-          <div className="ranking-scroll-area">
-            <div className="ranking-list">
-              {destinationRanking.map((item) => (
-                <div 
-                  key={item.rank} 
-                  className="ranking-item clickable"
-                  onClick={() => onSelectCountry(item.iso2)}
-                  title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
-                >
-                  <div className="rank-number">#{item.rank}</div>
-                  <div className="rank-content">
-                    <div className="rank-title-row">
-                      <span className="rank-item-name">{item.name}</span>
-                      <span className={`rank-trend ${item.trend}`} title={
-                        item.trend === 'up' ? 'Wzrost popularności' : 
-                        item.trend === 'down' ? 'Spadek popularności' : 'Stabilna popularność'
-                      }>
-                        {item.trend === 'up' ? '▲' : item.trend === 'down' ? '▼' : '―'}
-                      </span>
-                    </div>
-                    <div className="rank-category">{item.category}</div>
-                    <p className="rank-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+          {/* Destination Rankings */}
+          <section className="ranking-card">
+            <div className="ranking-card-header">
+              <span className="ranking-icon">🌍</span>
+              <h2>Top Kierunki z Polski</h2>
             </div>
-          </div>
-        </section>
+            <div className="ranking-scroll-area">
+              <div className="ranking-list">
+                {destinationRanking.map((item) => (
+                  <div 
+                    key={item.rank} 
+                    className="ranking-item clickable"
+                    onClick={() => onSelectCountry(item.iso2)}
+                    title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
+                  >
+                    <div className="rank-number">#{item.rank}</div>
+                    <div className="rank-content">
+                      <div className="rank-title-row">
+                        <span className="rank-item-name">{item.name}</span>
+                        <span className={`rank-trend ${item.trend}`} title={
+                          item.trend === 'up' ? 'Wzrost popularności' : 
+                          item.trend === 'down' ? 'Spadek popularności' : 'Stabilna popularność'
+                        }>
+                          {item.trend === 'up' ? '▲' : item.trend === 'down' ? '▼' : '―'}
+                        </span>
+                      </div>
+                      <div className="rank-category">{item.category}</div>
+                      <p className="rank-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-        {/* Rising Destinations */}
-        <section className="ranking-card">
-          <div className="ranking-card-header">
-            <span className="ranking-icon">🚀</span>
-            <h2>Wschodzące Kierunki</h2>
-          </div>
-          <div className="ranking-scroll-area">
-            <div className="ranking-list">
-              {risingDestinations.map((item) => (
-                <div 
-                  key={item.rank} 
-                  className="ranking-item clickable highlight"
-                  onClick={() => onSelectCountry(item.iso2)}
-                  title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
-                >
-                  <div className="rank-number">#{item.rank}</div>
-                  <div className="rank-content">
-                    <div className="rank-title-row">
-                      <span className="rank-item-name">{item.name}</span>
-                      <span className="rank-growth">{item.growth}</span>
-                    </div>
-                    <div className="rank-category">{item.category}</div>
-                    <p className="rank-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+          {/* Rising Destinations */}
+          <section className="ranking-card">
+            <div className="ranking-card-header">
+              <span className="ranking-icon">🚀</span>
+              <h2>Wschodzące Kierunki</h2>
             </div>
-          </div>
-        </section>
+            <div className="ranking-scroll-area">
+              <div className="ranking-list">
+                {risingDestinations.map((item) => (
+                  <div 
+                    key={item.rank} 
+                    className="ranking-item clickable highlight"
+                    onClick={() => onSelectCountry(item.iso2)}
+                    title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
+                  >
+                    <div className="rank-number">#{item.rank}</div>
+                    <div className="rank-content">
+                      <div className="rank-title-row">
+                        <span className="rank-item-name">{item.name}</span>
+                        <span className="rank-growth">{item.growth}</span>
+                      </div>
+                      <div className="rank-category">{item.category}</div>
+                      <p className="rank-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div className="rankings-footer">
