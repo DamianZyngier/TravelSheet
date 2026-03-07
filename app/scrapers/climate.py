@@ -1,4 +1,5 @@
 import logging
+import asyncio
 from sqlalchemy.orm import Session
 from .. import models
 from .base import BaseScraper
@@ -8,7 +9,7 @@ logger = logging.getLogger("uvicorn")
 
 class ClimateScraper(BaseScraper):
     def __init__(self, db: Session):
-        super().__init__(db, concurrency=10, timeout=60.0)
+        super().__init__(db, concurrency=5, timeout=60.0)
 
     async def sync_country(self, country: models.Country):
         # Coordinates

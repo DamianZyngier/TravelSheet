@@ -5,6 +5,7 @@ import io
 import re
 import html
 import logging
+import asyncio
 from typing import List, Dict, Any
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
