@@ -6,15 +6,66 @@ Technical details about the data architecture of TripSheet.
 
 | Source | Type | Cost | Sync | UI Category | Key Data Points |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **REST Countries** | API | Free | Weekly | **Informacje** | ISO codes, Population, Area, Coordinates |
-| **MSZ gov.pl** | Scraper | Free | Daily | **Bezpieczeństwo** | Risk levels, Detailed advisories, Local laws & customs, Embassies |
-| **Open-Meteo** | API | Free | Daily | **Pogoda** | **7-day weather forecast**, Historical climate averages |
-| **NBP** | API | Free | Daily | **Waluta** | Live PLN exchange rates |
-| **Wikipedia** | API | Free | Weekly | **Poznaj kraj** | Country summaries, Visa requirements table |
-| **Wikidata** | SPARQL | Free | Weekly | **Wiele sekcji** | Religions (%), Attractions, Symbols, Airports, Railways, Hazards |
-| **UNESCO** | API | Free | Weekly | **Atrakcje** | World Heritage sites, In-danger status |
-| **Numbeo** | Fallback | Free | Weekly | **Ceny** | Cost of living indices, **Daily budget estimations** |
-| **CDC** | Scraper | Free | Weekly | **Zdrowie** | Medical and vaccination requirements |
+| **REST Countries** | API | Free | Weekly | **Informacje** | ISO codes, Population, Area, Coordinates, Flag URL, Continent, Region |
+| **MSZ gov.pl** | Scraper | Free | Daily | **Bezpieczeństwo** | Risk levels (low/medium/high/critical), Safety advisories, Local laws & customs, Embassies, Passport/ID requirements, Visa requirement (PL) |
+| **Open-Meteo** | API | Free | Daily | **Pogoda** | **Current weather**, 7-day forecast, Humidity, Wind speed |
+| **NBP** | API | Free | Daily | **Waluta** | Live PLN exchange rates (official NBP mid rates) |
+| **Wikipedia** | API | Free | Weekly | **Poznaj kraj** | Country summaries (intro), Visa requirements for PL citizens |
+| **Wikidata** | SPARQL | API | Weekly | **Wiele sekcji** | Religions (%), Attractions, Symbols, Airports, Railways, Hazards, HDI, Life Expectancy, GDP (Nominal/PPP), Gini, Coat of Arms, Inception date, Official website, Regional products (GI) |
+| **UNESCO** | API | Free | Weekly | **Atrakcje** | World Heritage sites, Category, In-danger status, Transnational status, Image, Description |
+| **Numbeo** | Scraper | Free | Weekly | **Ceny** | Cost of living indices (Groceries, Restaurants, Transport, Accommodation), **Daily budget estimations** |
+| **CDC** | Scraper | Free | Weekly | **Zdrowie** | Required/suggested vaccinations, Health info/warnings |
+| **Static Data** | Local | Free | N/A | **Praktiko** | Plug types, Voltage, Frequency, Water safety, Driving side, Timezone, Phone code, Currency code/name, Popular apps, National dish |
+
+## Data Points Catalog (Detailed)
+
+| Category | Field Name | Source Type | Source Name |
+| :--- | :--- | :--- | :--- |
+| **Basic Info** | ISO Alpha 2/3 | API | REST Countries |
+| | Name (PL/EN) | API | REST Countries |
+| | Capital | API | REST Countries |
+| | Population / Area | API | REST Countries |
+| | Continent / Region | API | REST Countries |
+| | Coordinates (Lat/Lng) | API | REST Countries |
+| | Flag Emoji / URL | API | REST Countries |
+| **Safety** | Risk Level / Summary | Scraper | MSZ (gov.pl) |
+| | Risk Details | Scraper | MSZ (gov.pl) |
+| | MSZ Advisory URL | Scraper | MSZ (gov.pl) |
+| **Health** | Vaccinations (Req/Sug) | Scraper | CDC |
+| | Health Advice | Scraper | CDC |
+| | Tap Water Safety | Local | Static Info |
+| | EKUZ Availability | Local | Static Logic |
+| **Logistics** | Plug Types / Voltage | Local | Static Info |
+| | Driving Side | Local | Static Info |
+| | Timezone | API | Wikidata |
+| | Phone Code | API | REST Countries |
+| | Main Airport | API | Wikidata |
+| | Railway Info | API | Wikidata |
+| **Entry** | Visa Required (PL) | API/Scraper | Wikipedia / MSZ |
+| | Passport / ID Rules | Scraper | MSZ (gov.pl) |
+| | Visa Status Details | Scraper | MSZ (gov.pl) |
+| **Finances** | Currency Code / Name | API | REST Countries |
+| | Exchange Rate (PLN) | API | NBP |
+| | Cost Indices | Scraper | Numbeo |
+| | Daily Budgets | Scraper | Numbeo |
+| | Card Acceptance | Scraper | MSZ (gov.pl) |
+| **Environment** | Current Weather | API | Open-Meteo |
+| | 7-day Forecast | API | Open-Meteo |
+| | Climate Averages | API | Open-Meteo |
+| | Natural Hazards | API | Wikidata |
+| **Culture** | Wiki Summary | API | Wikipedia |
+| | Religions (%) | API | Wikidata |
+| | UNESCO Sites | API | UNESCO |
+| | Top Attractions | API | Wikidata |
+| | Laws & Customs | Scraper | MSZ (gov.pl) |
+| | Holidays | Scraper | Wikipedia |
+| | National Dish/Symbols | API | Wikidata |
+| | Popular Apps | Scraper | Wikidata/Local |
+| **Socio-Econ** | HDI / Life Expectancy | API | Wikidata |
+| | GDP (Nom. / PPP) | API | Wikidata |
+| | Gini Coefficient | API | Wikidata |
+| | Inception Date | API | Wikidata |
+| | Official Website | API | Wikidata |
 
 ## Management Scripts
 
