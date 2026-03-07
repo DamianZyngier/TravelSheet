@@ -27,11 +27,9 @@ const PassengerRightsSection: React.FC<PassengerRightsSectionProps> = ({ onBack 
 
       <div className="static-page-content printable-area">
         <div className="static-page-title-section">
-          <h1>Twoje prawa w podróży lotniczej</h1>
+          <h1>Prawa pasażera linii lotniczych</h1>
           <p className="static-page-desc">
-            Jako pasażer linii lotniczych w Unii Europejskiej masz określone prawa w przypadku zakłóceń lotu. 
-            Przepisy te (Rozporządzenie WE 261/2004) obowiązują, jeśli Twój lot odbywa się wewnątrz UE, 
-            zaczyna się w UE lub kończy w UE (w przypadku linii z kraju UE).
+            Poznaj swoje prawa i dowiedz się, jak ubiegać się o odszkodowanie w przypadku opóźnionego lub odwołanego lotu (Rozporządzenie WE 261/2004).
           </p>
         </div>
 

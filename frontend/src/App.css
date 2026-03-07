@@ -2972,6 +2972,8 @@
   background: white;
   border-top: 1px solid #e2e8f0;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {

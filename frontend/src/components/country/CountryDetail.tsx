@@ -213,7 +213,9 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
 
       {/* Global Travel Disclaimer */}
       <div className="global-travel-disclaimer">
-        ⚠️ Zawsze weryfikuj informacje w oficjalnych źródłach rządowych przed podróżą; przepisy często ulegają zmianom.
+        ⚠️ Zawsze weryfikuj informacje w oficjalnych źródłach rządowych przed podróżą.
+        <br />
+        Przepisy często ulegają zmianom.
       </div>
     </div>
   );
