@@ -64,21 +64,21 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
   ];
 
   const risingDestinations = [
-    { rank: 1, name: 'Albania', iso2: 'AL', category: 'Bałkańskie Malediwy', growth: '+45%', desc: 'Najszybciej rosnący kierunek budżetowy w Europie.' },
-    { rank: 2, name: 'Oman', iso2: 'OM', category: 'Autentyczny Orient', growth: '+38%', desc: 'Spokojniejsza i bardziej tradycyjna alternatywa dla Emiratów.' },
-    { rank: 3, name: 'Wietnam', iso2: 'VN', category: 'Azjatycka Przygoda', growth: '+32%', desc: 'Polacy coraz chętniej wybierają Wietnam zamiast Tajlandii.' },
-    { rank: 4, name: 'Gruzja', iso2: 'GE', category: 'Góry i Gościnność', growth: '+28%', desc: 'Niezmiennie rosnące zainteresowanie Kaukazem.' },
-    { rank: 5, name: 'Macedonia Północna', iso2: 'MK', category: 'Jezioro Ochrydzkie', growth: '+25%', desc: 'Nowy hit na mapie Bałkanów, idealny na tanie wakacje.' },
-    { rank: 6, name: 'Filipiny', iso2: 'PH', category: 'Rajskie Plaże', growth: '+22%', desc: 'Archipelag marzeń staje się coraz bardziej dostępny.' },
-    { rank: 7, name: 'Madera (Portugalia)', iso2: 'PT', category: 'Aktywny Chill', growth: '+20%', desc: 'Wyspa wiecznej wiosny przyciąga fanów trekkingu.' },
-    { rank: 8, name: 'Sri Lanka', iso2: 'LK', category: 'Powrót do Raju', growth: '+18%', desc: 'Po trudniejszych latach Sri Lanka wraca do łask podróżnych.' },
-    { rank: 9, name: 'Uzbekistan', iso2: 'UZ', category: 'Jedwabny Szlak', growth: '+15%', desc: 'Dla szukających unikalnej historii i architektury.' },
-    { rank: 10, name: 'Maroko', iso2: 'MA', category: 'Magia Maghrebu', growth: '+14%', desc: 'Blisko, egzotycznie i coraz więcej lotów bezpośrednich.' },
-    { rank: 11, name: 'Kostaryka', iso2: 'CR', category: 'Eko-Turystyka', growth: '+12%', desc: 'Kierunek numer jeden dla miłośników dzikiej przyrody.' },
-    { rank: 12, name: 'Wyspy Owcze', iso2: 'FO', category: 'Surowa Natura', growth: '+10%', desc: 'Dla tych, którzy uciekają przed upałami na północ.' },
-    { rank: 13, name: 'Algieria', iso2: 'DZ', category: 'Nieodkryty Potencjał', growth: '+8%', desc: 'Nowy, fascynujący kierunek dla wytrawnych podróżników.' },
-    { rank: 14, name: 'Kazachstan', iso2: 'KZ', category: 'Nowoczesne Stepy', growth: '+7%', desc: 'Zaskakująca mieszanka nowoczesnych miast i natury.' },
-    { rank: 15, name: 'Czarnogóra', iso2: 'ME', category: 'Bałkańska Perła', growth: '+6%', desc: 'Mała, ale oferująca wszystko: od morza po góry.' },
+    { rank: 1, name: 'Arabia Saudyjska', iso2: 'SA', category: 'Nowy Luksus', growth: '+120%', desc: 'Otwarcie projektów Red Sea i NEOM przyciąga tysiące ciekawych świata.' },
+    { rank: 2, name: 'Japonia', iso2: 'JP', category: 'Kultura i Technologia', growth: '+65%', desc: 'Ogromny skok popularności po ponownym pełnym otwarciu i trendach social media.' },
+    { rank: 3, name: 'Albania', iso2: 'AL', category: 'Bałkańskie Malediwy', growth: '+45%', desc: 'Niezmiennie najszybciej rosnący kierunek budżetowy w Europie.' },
+    { rank: 4, name: 'Oman', iso2: 'OM', category: 'Autentyczny Orient', growth: '+38%', desc: 'Spokojniejsza i bardziej tradycyjna alternatywa dla Dubaju.' },
+    { rank: 5, name: 'Wietnam', iso2: 'VN', category: 'Azjatycka Przygoda', growth: '+32%', desc: 'Polacy coraz chętniej wybierają Wietnam jako bezpieczną egzotykę.' },
+    { rank: 6, name: 'Gruzja', iso2: 'GE', category: 'Góry i Gościnność', growth: '+28%', desc: 'Niezmiennie rosnące zainteresowanie Kaukazem i winem.' },
+    { rank: 7, name: 'Macedonia Północna', iso2: 'MK', category: 'Jezioro Ochrydzkie', growth: '+25%', desc: 'Nowy hit na mapie Bałkanów, idealny na tanie wakacje.' },
+    { rank: 8, name: 'Filipiny', iso2: 'PH', category: 'Rajskie Plaże', growth: '+22%', desc: 'Archipelag marzeń staje się coraz bardziej dostępny dzięki nowym lotom.' },
+    { rank: 9, name: 'Madera (Portugalia)', iso2: 'PT', category: 'Aktywny Chill', growth: '+20%', desc: 'Wyspa wiecznej wiosny przyciąga fanów trekkingu przez cały rok.' },
+    { rank: 10, name: 'Sri Lanka', iso2: 'LK', category: 'Powrót do Raju', growth: '+18%', desc: 'Po trudniejszych latach Sri Lanka wraca jako topowy kierunek egzotyczny.' },
+    { rank: 11, name: 'Uzbekistan', iso2: 'UZ', category: 'Jedwabny Szlak', growth: '+15%', desc: 'Dla szukających unikalnej historii, architektury i bezpieczeństwa.' },
+    { rank: 12, name: 'Maroko', iso2: 'MA', category: 'Magia Maghrebu', growth: '+14%', desc: 'Blisko, egzotycznie i coraz więcej lotów bezpośrednich z Polski.' },
+    { rank: 13, name: 'Kostaryka', iso2: 'CR', category: 'Eko-Turystyka', growth: '+12%', desc: 'Kierunek numer jeden dla miłośników natury i dzikiej przyrody.' },
+    { rank: 14, name: 'Wyspy Owcze', iso2: 'FO', category: 'Surowa Natura', growth: '+10%', desc: 'Dla tych, którzy uciekają przed upałami na daleką północ.' },
+    { rank: 15, name: 'Kazachstan', iso2: 'KZ', category: 'Nowoczesne Stepy', growth: '+9%', desc: 'Zaskakująca mieszanka futurystycznych miast i dzikiej natury.' },
   ];
 
   return (
