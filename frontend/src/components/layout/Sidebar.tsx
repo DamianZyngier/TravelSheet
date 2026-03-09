@@ -45,11 +45,29 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const activeCategoryId = sectionToCategoryMap[activeSection] || 'summary';
 
+  const handlePrevClick = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    navigateCountry('prev');
+  };
+
+  const handleNextClick = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    navigateCountry('next');
+  };
+
+  const handleBackToGrid = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onSelectCountry(null);
+  };
+
   return (
     <aside className="side-menu no-print">
-      <button className="side-back-button" onClick={() => onSelectCountry(null)}>
+      <a href="." className="side-back-button" onClick={handleBackToGrid} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         ← Wróć do listy krajów
-      </button>
+      </a>
 
       <div className="current-country-nav-box">
         <img src={selectedCountry.flag_url} alt="" className="current-nav-flag" />
@@ -62,7 +80,12 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       <div className="country-navigation">
-        <button className="nav-button prev" onClick={() => navigateCountry('prev')}>
+        <a 
+          href={`?country=${prevCountry?.iso2}`}
+          className="nav-button prev" 
+          onClick={handlePrevClick}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <span className="nav-label">Poprzedni</span>
           <div className="nav-content">
             <span className="nav-arrow">←</span>
@@ -74,8 +97,13 @@ const Sidebar: React.FC<SidebarProps> = ({
               {prevCountry?.name_pl}
             </span>
           </div>
-        </button>
-        <button className="nav-button next" onClick={() => navigateCountry('next')}>
+        </a>
+        <a 
+          href={`?country=${nextCountry?.iso2}`}
+          className="nav-button next" 
+          onClick={handleNextClick}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <span className="nav-label">Następny</span>
           <div className="nav-content">
             <span className={`nav-name ${
@@ -87,7 +115,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <img src={nextCountry?.flag_url} alt="" className="nav-flag" />
             <span className="nav-arrow">→</span>
           </div>
-        </button>
+        </a>
       </div>
 
       <div className="side-menu-list simplified">

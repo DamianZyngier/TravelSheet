@@ -6,6 +6,18 @@ interface RankingsSectionProps {
 }
 
 const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCountry }) => {
+  const handleBackClick = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onBack();
+  };
+
+  const handleCountryClick = (e: React.MouseEvent, iso2: string) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onSelectCountry(iso2);
+  };
+
   const airlineRanking = [
     { rank: 1, name: 'Qatar Airways', rating: 4.9, icon: '🇶🇦', desc: 'Najlepsza klasa biznes i obsługa na świecie.' },
     { rank: 2, name: 'Singapore Airlines', rating: 4.8, icon: '🇸🇬', desc: 'Legenda komfortu i punktualności.' },
@@ -83,9 +95,9 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
   return (
     <div className="static-page-container rankings-page">
       <div className="static-page-header no-print">
-        <button className="side-back-button" onClick={onBack}>
+        <a href="./" className="side-back-button" onClick={handleBackClick} style={{ textDecoration: 'none' }}>
           ← Powrót do strony głównej
-        </button>
+        </a>
       </div>
 
       <div className="static-page-content">
@@ -128,11 +140,13 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
             <div className="ranking-scroll-area">
               <div className="ranking-list">
                 {destinationRanking.map((item) => (
-                  <div 
+                  <a 
                     key={item.rank} 
+                    href={`?country=${item.iso2}`}
                     className="ranking-item clickable"
-                    onClick={() => onSelectCountry(item.iso2)}
+                    onClick={(e) => handleCountryClick(e, item.iso2)}
                     title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
+                    style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }}
                   >
                     <div className="rank-number">#{item.rank}</div>
                     <div className="rank-content">
@@ -148,7 +162,7 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
                       <div className="rank-category">{item.category}</div>
                       <p className="rank-desc">{item.desc}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -163,11 +177,13 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
             <div className="ranking-scroll-area">
               <div className="ranking-list">
                 {risingDestinations.map((item) => (
-                  <div 
+                  <a 
                     key={item.rank} 
+                    href={`?country=${item.iso2}`}
                     className="ranking-item clickable highlight"
-                    onClick={() => onSelectCountry(item.iso2)}
+                    onClick={(e) => handleCountryClick(e, item.iso2)}
                     title={`Kliknij, aby zobaczyć szczegóły dla: ${item.name}`}
+                    style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }}
                   >
                     <div className="rank-number">#{item.rank}</div>
                     <div className="rank-content">
@@ -178,7 +194,7 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
                       <div className="rank-category">{item.category}</div>
                       <p className="rank-desc">{item.desc}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>

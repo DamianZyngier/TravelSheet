@@ -37,11 +37,28 @@ const Header: React.FC<HeaderProps> = ({
   isStaticPage = false,
   activePage = null
 }) => {
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onLogoClick();
+  };
+
+  const handleNavClick = (e: React.MouseEvent, eventName: string) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent(eventName));
+  };
+
   return (
     <header className="main-header">
       <div className="header-content-wrapper">
         <div className="header-top-row">
-          <div className="logo-section" onClick={onLogoClick} style={{ cursor: 'pointer' }}>
+          <a 
+            href="./" 
+            className="logo-section" 
+            onClick={handleLogoClick} 
+            style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+          >
             <img 
               src={logoNoText} 
               alt="TripSheet" 
@@ -53,29 +70,35 @@ const Header: React.FC<HeaderProps> = ({
               <span className="logo-brand">TripSheet</span>
               <p>Twoje centrum bezpiecznych podróży</p>
             </div>
-          </div>
+          </a>
           
           <nav className="header-nav-links top-nav">
-            <button 
+            <a 
+              href="?checklist=minimum"
               className={`nav-link-btn ${activePage === 'checklist' ? 'active' : ''}`}
-              onClick={() => window.dispatchEvent(new CustomEvent('nav-checklist'))}
+              onClick={(e) => handleNavClick(e, 'nav-checklist')}
+              style={{ textDecoration: 'none' }}
             >
               📋 Checklisty
-            </button>
+            </a>
 
-            <button 
+            <a 
+              href="?page=passenger-rights"
               className={`nav-link-btn ${activePage === 'passenger-rights' ? 'active' : ''}`}
-              onClick={() => window.dispatchEvent(new CustomEvent('nav-passenger-rights'))}
+              onClick={(e) => handleNavClick(e, 'nav-passenger-rights')}
+              style={{ textDecoration: 'none' }}
             >
               ✈️ Prawa pasażera
-            </button>
+            </a>
 
-            <button 
+            <a 
+              href="?page=rankings"
               className={`nav-link-btn ${activePage === 'rankings' ? 'active' : ''}`}
-              onClick={() => window.dispatchEvent(new CustomEvent('nav-rankings'))}
+              onClick={(e) => handleNavClick(e, 'nav-rankings')}
+              style={{ textDecoration: 'none' }}
             >
               🏆 Rankingi
-            </button>
+            </a>
           </nav>
         </div>
 

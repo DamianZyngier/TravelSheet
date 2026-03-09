@@ -11,14 +11,31 @@ interface CountryCardProps {
 }
 
 const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite, toggleFavorite }) => {
+  const href = `?country=${country.iso2}`;
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // If it's a middle click (button 1) or any modifier key is pressed,
+    // let the browser handle it (usually opens in a new tab/window)
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) {
+      return;
+    }
+    
+    // Otherwise, prevent full page reload and use the SPA navigation
+    e.preventDefault();
+    onClick();
+  };
+
   return (
-    <div 
+    <a 
+      href={href}
       className={`country-card risk-border-${country.safety.risk_level}`}
-      onClick={onClick}
+      onClick={handleCardClick}
+      style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
     >
       <button 
         className={`card-favorite-btn ${isFavorite ? 'always-visible is-fav' : ''}`}
         onClick={(e) => {
+          e.preventDefault();
           e.stopPropagation();
           toggleFavorite(country.iso2);
         }}
@@ -53,7 +70,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, onClick, isFavorite,
           {SAFETY_LABELS[country.safety.risk_level] || country.safety.risk_level}
         </span>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -145,17 +145,20 @@ class MSZScraper(BaseScraper):
             # If partial, we want the summary to reflect the BASE level but mention partiality
             base_advice = labels.get(risk_level, 'zachowanie ostrożności')
             summary = f"MSZ zaleca {base_advice} na większości terytorium (ostrzeżenia punktowe)."
-            # Move the extreme warning to the beginning of details if found
-            if warnings:
-                extreme_warning = warnings[0]
-                if extreme_warning not in safety.risk_details:
-                    # We'll just ensure it's in the text content
-                    pass
         else:
+            # If NOT partial, we should prioritize the label-based summary to avoid
+            # picking up a specific warning (like 'be careful when swimming') as the main level
+            summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')}."
+            
+            # Optional: if there's a strong warning in the text, we can still try to find it
+            # but ONLY if it matches the risk_level we found.
             if warnings:
-                summary = warnings[0]
-            else:
-                summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')}."
+                for w in warnings:
+                    w_lower = w.lower()
+                    if risk_level == 'critical' and 'odradza wszelkie' in w_lower: summary = w; break
+                    if risk_level == 'high' and 'odradza podróże' in w_lower: summary = w; break
+                    if risk_level == 'medium' and 'szczególną ostrożność' in w_lower: summary = w; break
+                    if risk_level == 'low' and 'zwykłą ostrożność' in w_lower: summary = w; break
 
         safety.risk_level = risk_level
         safety.is_partial = is_partial

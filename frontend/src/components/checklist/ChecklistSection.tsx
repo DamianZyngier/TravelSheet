@@ -31,14 +31,26 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
     window.print();
   };
 
+  const handleBackClick = (e: React.MouseEvent) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onBack();
+  };
+
+  const handleVariantClick = (e: React.MouseEvent, vId: string) => {
+    if (e.button === 1 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onVariantChange(vId);
+  };
+
   const currentChecklist = CHECKLISTS.find(c => c.id === activeVariant) || CHECKLISTS[0];
 
   return (
     <div className="static-page-container checklist-page">
       <div className="static-page-header no-print">
-        <button className="side-back-button" onClick={onBack}>
+        <a href="./" className="side-back-button" onClick={handleBackClick} style={{ textDecoration: 'none' }}>
           ← Powrót do strony głównej
-        </button>
+        </a>
         <div className="checklist-controls">
           <div className="variant-tabs">
             <div 
@@ -51,13 +63,15 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
               }}
             ></div>
             {CHECKLISTS.map(v => (
-              <button
+              <a
                 key={v.id}
+                href={`?checklist=${v.id}`}
                 className={`variant-tab ${activeVariant === v.id ? 'active' : ''}`}
-                onClick={() => onVariantChange(v.id as any)}
+                onClick={(e) => handleVariantClick(e, v.id)}
+                style={{ textDecoration: 'none' }}
               >
                 {v.id.toUpperCase()}
-              </button>
+              </a>
             ))}
           </div>
           <button className="primary-btn print-btn" onClick={handlePrint}>
