@@ -59,6 +59,7 @@ def export_all():
                 
                 "safety": {
                     "risk_level": c.safety.risk_level if c.safety else "unknown",
+                    "is_partial": c.safety.is_partial if c.safety else False,
                     "risk_text": c.safety.summary if c.safety else "Brak danych.",
                     "risk_details": c.safety.risk_details if c.safety else "",
                     "url": c.safety.full_url if c.safety else "",

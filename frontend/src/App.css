@@ -920,9 +920,24 @@
 .risk-desc {
   font-weight: 800;
   font-size: 1.1rem;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.25rem 0; /* Reduced margin to accommodate badge */
   text-transform: uppercase;
   letter-spacing: 0.025em;
+}
+
+.partial-warning-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #744210; /* Match medium risk text color */
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
+  width: fit-content;
 }
 
 .risk-summary-text {

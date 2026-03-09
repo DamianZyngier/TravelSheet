@@ -127,6 +127,7 @@ class SafetyInfo(Base):
     id = Column(Integer, primary_key=True)
     country_id = Column(Integer, ForeignKey("countries.id", ondelete="CASCADE"), index=True)
     risk_level = Column(String(50), index=True)
+    is_partial = Column(Boolean, default=False)
     summary = Column(Text)
     risk_details = Column(Text)
     full_url = Column(Text)

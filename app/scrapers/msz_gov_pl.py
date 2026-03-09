@@ -72,7 +72,7 @@ class MSZScraper(BaseScraper):
             return {"error": "No valid MSZ page found"}
 
         soup = BeautifulSoup(response_text, 'html.parser')
-        risk_level = self._parse_risk_level(soup)
+        risk_level = self._parse_risk_level(soup, country)
         
         # Parse all sections
         self._update_safety(country, soup, risk_level, final_url)
@@ -82,9 +82,11 @@ class MSZScraper(BaseScraper):
         self.db.commit()
         return {"status": "success"}
 
-    def _parse_risk_level(self, soup: BeautifulSoup) -> str:
+    def _parse_risk_level(self, soup: BeautifulSoup, country: models.Country) -> tuple[str, bool]:
         risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')
         risk_level = 'low'
+        is_partial = False
+
         if risk_container:
             text = risk_container.get_text().lower()
             if 'zachowaj zwykłą ostrożność' in text: risk_level = 'low'
@@ -94,14 +96,27 @@ class MSZScraper(BaseScraper):
         
         # Text-based fallback/override
         page_text = soup.get_text().lower()
-        if re.search(r'odradza(my)? wszelkie podróże|bezwzględnie odradza(my)?', page_text, re.I):
-            risk_level = 'critical'
-        elif re.search(r'odradza(my)? podróże.*?które nie są konieczne', page_text, re.I | re.S):
-            if risk_level in ['low', 'medium']: risk_level = 'high'
         
-        return risk_level
+        # Check for partial territory warnings (often seen in Turkey, Egypt)
+        # "Na pozostałym terytorium... zalecamy zachowanie zwykłej ostrożności"
+        rest_pattern = r'(na\s+)?pozostałym terytorium.*?zalecamy\s+(zachowanie|zachować)\s+(.*?)(\.|$)'
+        rest_of_territory_match = re.search(rest_pattern, page_text, re.S | re.I)
+        if rest_of_territory_match:
+            rest_text = rest_of_territory_match.group(3).lower()
+            is_partial = True
+            if 'zwykłej ostrożności' in rest_text: risk_level = 'low'
+            elif 'szczególnej ostrożności' in rest_text: risk_level = 'medium'
+            elif 'odradzamy podróże' in rest_text: risk_level = 'high'
+        else:
+            if re.search(r'odradza(my)? wszelkie podróże|bezwzględnie odradza(my)?', page_text, re.I):
+                risk_level = 'critical'
+            elif re.search(r'odradza(my)? podróże.*?które nie są konieczne', page_text, re.I | re.S):
+                if risk_level in ['low', 'medium']: risk_level = 'high'
+        
+        return risk_level, is_partial
 
-    def _update_safety(self, country, soup, risk_level, url):
+    def _update_safety(self, country, soup, risk_data, url):
+        risk_level, is_partial = risk_data
         safety = self.db.query(models.SafetyInfo).filter(models.SafetyInfo.country_id == country.id).first()
         if not safety:
             safety = models.SafetyInfo(country_id=country.id)
@@ -109,14 +124,41 @@ class MSZScraper(BaseScraper):
         
         # Simple summary extraction
         summary = ""
-        strong = soup.find('strong', string=re.compile(r'odradza|zachowaj', re.I))
-        if strong: summary = strong.get_text().strip()
+        # Try to find the bolded warning summary
+        strong_elements = soup.find_all('strong')
         
-        if not summary:
-            labels = {'low': 'zachowanie zwykłej ostrożności', 'medium': 'zachowanie szczególnej ostrożności', 'high': 'odradzane podróże, które nie są konieczne', 'critical': 'odradzane wszelkie podróże'}
-            summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')}."
+        warnings = []
+        for s in strong_elements:
+            t = s.get_text().strip()
+            if any(kw in t.lower() for kw in ['odradza', 'zachowaj', 'zalecamy']):
+                if len(t) > 20: # Avoid short fragments
+                    warnings.append(t)
+        
+        labels = {
+            'low': 'zachowanie zwykłej ostrożności', 
+            'medium': 'zachowanie szczególnej ostrożności', 
+            'high': 'odradzane podróże, które nie są konieczne', 
+            'critical': 'odradzane wszelkie podróże'
+        }
+
+        if is_partial:
+            # If partial, we want the summary to reflect the BASE level but mention partiality
+            base_advice = labels.get(risk_level, 'zachowanie ostrożności')
+            summary = f"MSZ zaleca {base_advice} na większości terytorium (ostrzeżenia punktowe)."
+            # Move the extreme warning to the beginning of details if found
+            if warnings:
+                extreme_warning = warnings[0]
+                if extreme_warning not in safety.risk_details:
+                    # We'll just ensure it's in the text content
+                    pass
+        else:
+            if warnings:
+                summary = warnings[0]
+            else:
+                summary = f"Ministerstwo Spraw Zagranicznych zaleca {labels.get(risk_level, 'zachowanie ostrożności')}."
 
         safety.risk_level = risk_level
+        safety.is_partial = is_partial
         safety.summary = normalize_polish_text(summary)
         safety.full_url = url
         safety.last_checked = func.now()

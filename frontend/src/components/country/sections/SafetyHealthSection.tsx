@@ -107,7 +107,14 @@ export const SafetyHealthSection: React.FC<SafetyHealthSectionProps> = ({ select
 
           <div className={`safety-card risk-${selectedCountry.safety.risk_level}`}>
             <div className="safety-card-header">
-              <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <p className="risk-desc">{SAFETY_LABELS[selectedCountry.safety.risk_level] || selectedCountry.safety.risk_level}</p>
+                {selectedCountry.safety.is_partial && (
+                  <span className="partial-warning-badge">
+                    ⚠️ Uwaga: Ostrzeżenie dotyczy tylko części terytorium.
+                  </span>
+                )}
+              </div>
               {selectedCountry.safety.url && (
                 <a href={selectedCountry.safety.url} target="_blank" rel="noreferrer" className="msz-external-badge">
                   Oficjalny komunikat MSZ ↗

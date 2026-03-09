@@ -48,6 +48,7 @@ export interface CountryData {
   languages: { name: string; is_official: boolean; last_updated?: string }[];
   safety: {
     risk_level: string;
+    is_partial: boolean;
     risk_text: string;
     risk_details: string;
     url: string;

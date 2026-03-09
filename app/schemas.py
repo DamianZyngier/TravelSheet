@@ -40,6 +40,7 @@ class CurrencySchema(BaseModel):
 
 class SafetySchema(BaseModel):
     risk_level: Optional[str]
+    is_partial: bool = False
     summary: Optional[str]
     risk_details: Optional[str]
     full_url: Optional[str]

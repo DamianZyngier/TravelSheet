@@ -52,7 +52,9 @@ function App() {
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    fetch('data.json')
+    // Add version timestamp to bust cache
+    const version = new Date().getTime();
+    fetch(`data.json?v=${version}`)
       .then(res => {
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
