@@ -16,20 +16,20 @@ class WikiAttractionsScraper(BaseScraper):
     """
     Syncs attractions for countries from Wikidata using SPARQL.
     """
-    def __init__(self, db: Session, concurrency: int = 1, timeout: float = 60.0):
+    def __init__(self, db: Session, concurrency: int = 1, timeout: float = 90.0):
         # Use low concurrency (1) as Wikidata often struggles with many parallel SPARQL queries
         super().__init__(db, concurrency, timeout)
 
     async def sync_country(self, country: models.Country) -> Any:
         iso = country.iso_alpha2.upper()
         
-        # Ultra-simplified query: only items with many sitelinks
+        # Optimized query structure for WDQS
         query = f"""
         SELECT DISTINCT ?itemLabel WHERE {{
           ?country wdt:P297 "{iso}".
-          ?item wdt:P31/wdt:P279* wd:Q570116; 
-                wdt:P17 ?country;
-                wikibase:sitelinks ?sitelinks.
+          ?item wdt:P17 ?country.
+          ?item wdt:P31/wdt:P279* wd:Q570116.
+          ?item wikibase:sitelinks ?sitelinks.
           FILTER(?sitelinks > 50)
           SERVICE wikibase:label {{ bd:serviceParam wikibase:language "pl,en". }}
         }}

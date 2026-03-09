@@ -164,11 +164,12 @@ async def async_get(url: str, params: dict = None, headers: dict = None, timeout
 # Global semaphore to limit concurrent SPARQL requests to Wikidata
 # This helps prevent 504 timeouts by not overwhelming the server
 _WIKIDATA_SEMAPHORE = asyncio.Semaphore(1) 
-_WIKIDATA_DOWN = False # Global flag to skip Wikidata if it's struggling
+_WIKIDATA_DOWN = False # Global flag to skip Wikidata if it's consistently failing
+_WIKIDATA_ERROR_COUNT = 0
 
 async def async_sparql_get(query: str, description: str = "SPARQL"):
     """Robust SPARQL query helper with retries and exponential backoff"""
-    global _WIKIDATA_DOWN
+    global _WIKIDATA_DOWN, _WIKIDATA_ERROR_COUNT
     if _WIKIDATA_DOWN:
         return []
 
@@ -177,38 +178,44 @@ async def async_sparql_get(query: str, description: str = "SPARQL"):
     headers["Content-Type"] = "application/x-www-form-urlencoded"
     headers["Accept"] = "application/sparql-results+json"
     
-    max_retries = 3 # Increased from 2
-    base_delay = 10 # Increased from 5
+    max_retries = 4 # Increased from 3
+    base_delay = 15 # Increased from 10
     
     for attempt in range(max_retries):
         try:
             async with _WIKIDATA_SEMAPHORE:
-                # Increased timeout to 90s for complex queries
-                async with httpx.AsyncClient(timeout=90.0) as client:
+                # Increased timeout to 120s (client side)
+                async with httpx.AsyncClient(timeout=120.0) as client:
                     resp = await client.post(url, data={'query': query}, headers=headers)
                     
                     if resp.status_code == 200:
+                        _WIKIDATA_ERROR_COUNT = max(0, _WIKIDATA_ERROR_COUNT - 1)
                         return resp.json().get("results", {}).get("bindings", [])
                     
                     elif resp.status_code == 429:
-                        delay = base_delay * (2 ** attempt)
-                        logger.warning(f"Wikidata Rate Limit hit ({description}), retrying in {delay}s... (Attempt {attempt+1}/{max_retries})")
+                        delay = base_delay * (2 ** attempt) + random.uniform(0, 5)
+                        logger.warning(f"Wikidata Rate Limit (429) hit ({description}), retrying in {delay:.1f}s... (Attempt {attempt+1}/{max_retries})")
                         await asyncio.sleep(delay)
                         
                     elif resp.status_code in [504, 502, 503]:
-                        logger.error(f"Wikidata Server Error {resp.status_code} ({description}) at attempt {attempt+1}.")
-                        if attempt == max_retries - 1:
-                            logger.error(f"Wikidata failed after {max_retries} attempts for {description}. Marking as DOWN for this session.")
+                        delay = base_delay * (attempt + 1) + random.uniform(0, 5)
+                        logger.error(f"Wikidata Server Error {resp.status_code} ({description}) at attempt {attempt+1}. Retrying in {delay:.1f}s...")
+                        _WIKIDATA_ERROR_COUNT += 1
+                        
+                        if _WIKIDATA_ERROR_COUNT > 10:
+                            logger.error("Wikidata consistently failing. Marking as DOWN for this session.")
                             _WIKIDATA_DOWN = True
-                        await asyncio.sleep(base_delay * (attempt + 1))
+                            
+                        await asyncio.sleep(delay)
                     else:
                         error_snippet = resp.text[:300].replace("\n", " ")
                         logger.error(f"Wikidata error {resp.status_code} for {description}: {error_snippet}")
                         break
         except Exception as e:
             logger.error(f"SPARQL request error for {description} (Attempt {attempt+1}): {str(e)}")
-            if attempt == max_retries - 1:
+            _WIKIDATA_ERROR_COUNT += 1
+            if attempt == max_retries - 1 and _WIKIDATA_ERROR_COUNT > 5:
                 _WIKIDATA_DOWN = True
-            await asyncio.sleep(5)
+            await asyncio.sleep(base_delay)
                 
     return []
