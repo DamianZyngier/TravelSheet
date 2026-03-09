@@ -9,7 +9,7 @@ logger = logging.getLogger("uvicorn")
 
 class CDCHealthScraper(BaseScraper):
     def __init__(self, db: Session):
-        super().__init__(db, concurrency=10, timeout=30.0)
+        super().__init__(db, concurrency=10, timeout=60.0)
 
     def get_cdc_slug(self, country: models.Country) -> str:
         if country.iso_alpha2 in CDC_MAPPING:

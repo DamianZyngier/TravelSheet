@@ -1,6 +1,7 @@
 import re
 import logging
 import os
+import random
 from deep_translator import GoogleTranslator
 import httpx
 import asyncio

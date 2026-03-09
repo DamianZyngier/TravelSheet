@@ -9,8 +9,9 @@ logger = logging.getLogger("uvicorn")
 
 class ClimateScraper(BaseScraper):
     def __init__(self, db: Session):
-        super().__init__(db, concurrency=2, timeout=60.0)
-        self.rate_limit_delay = 1.0  # Open-Meteo is sensitive
+        # Open-Meteo is very sensitive to many parallel requests
+        super().__init__(db, concurrency=1, timeout=60.0)
+        self.rate_limit_delay = 2.0 
 
     async def sync_country(self, country: models.Country):
         # Coordinates
