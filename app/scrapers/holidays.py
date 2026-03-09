@@ -74,7 +74,7 @@ async def sync_holidays(db: Session, iso2: str, client: httpx.AsyncClient):
 
 async def sync_all_holidays(db: Session):
     """Legacy wrapper for syncing holidays for all countries"""
-    scraper = HolidayScraper(db, concurrency=20)
+    scraper = HolidayScraper(db, concurrency=5)
     countries = db.query(models.Country).all()
     results = await scraper.run(countries)
     return {"synced": results["success"], "errors": results["errors"]}
