@@ -67,8 +67,6 @@ class MSZScraper(BaseScraper):
             except: continue
 
         if not response_text:
-            if country.parent_id:
-                return await self.parent_fallback(country, depth)
             return {"error": "No valid MSZ page found"}
 
         soup = BeautifulSoup(response_text, 'html.parser')
@@ -98,8 +96,8 @@ class MSZScraper(BaseScraper):
         page_text = soup.get_text().lower()
         
         # Check for partial territory warnings (often seen in Turkey, Egypt)
-        # "Na pozostałym terytorium... zalecamy zachowanie zwykłej ostrożności"
-        # More robust regex to handle variations in wording
+        # We look for the "rest of territory" phrase which defines the base level
+        # This regex covers many variations including "na pozostałym terytorium Turcji/kraju/itp."
         rest_pattern = r'na pozostałym terytorium.*?(zalecamy\s+)?(zachowanie|zachować)\s+(.*?)(\.|$)'
         rest_of_territory_match = re.search(rest_pattern, page_text, re.S | re.I)
         
@@ -114,17 +112,6 @@ class MSZScraper(BaseScraper):
                 risk_level = 'critical'
             elif re.search(r'odradza(my)? podróże.*?które nie są konieczne', page_text, re.I | re.S):
                 if risk_level in ['low', 'medium']: risk_level = 'high'
-        
-        # Explicit overrides for known cases if the regex fails but we know they are partial
-        if country.iso_alpha2 == 'TR' and risk_level == 'critical':
-            logger.info("Applying explicit override for Turkey (TR) -> low (partial)")
-            risk_level, is_partial = 'low', True
-        elif country.iso_alpha2 == 'EG' and risk_level == 'critical':
-            logger.info("Applying explicit override for Egypt (EG) -> medium (partial)")
-            risk_level, is_partial = 'medium', True
-        
-        if country.iso_alpha2 in ['TR', 'EG']:
-            logger.info(f"MSZ Detection for {country.iso_alpha2}: level={risk_level}, partial={is_partial}")
         
         return risk_level, is_partial
 
