@@ -67,6 +67,8 @@ class MSZScraper(BaseScraper):
             except: continue
 
         if not response_text:
+            if country.parent_id:
+                return await self.parent_fallback(country, depth)
             return {"error": "No valid MSZ page found"}
 
         soup = BeautifulSoup(response_text, 'html.parser')
