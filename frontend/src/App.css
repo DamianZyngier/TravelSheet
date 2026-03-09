@@ -1,4 +1,9 @@
-﻿html, body {
+﻿:root {
+  --main-max-width: 1200px;
+  --main-padding: 2rem;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   scrollbar-gutter: stable;
@@ -21,7 +26,7 @@
 
 .main-header {
   background-color: white;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 0; /* Horizontal padding moved to content-wrapper */
   display: flex;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -34,10 +39,12 @@
 
 .header-content-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--main-max-width);
+  padding: 0 var(--main-padding);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  box-sizing: border-box;
 }
 
 .header-top-row {
@@ -216,14 +223,15 @@
 }
 
 .content-area {
-  padding: 2rem;
+  padding: var(--main-padding);
   flex: 1;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--main-max-width);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto; /* Center horizontal */
+  box-sizing: border-box;
 }
 
 .country-grid {
@@ -314,11 +322,12 @@
 .detail-view-layout {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--main-max-width);
   gap: 2rem;
-  padding: 2rem;
+  padding: var(--main-padding);
   margin: 0 auto;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .side-menu {
