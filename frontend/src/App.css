@@ -324,7 +324,6 @@ html, body {
   width: 100%;
   max-width: var(--main-max-width);
   gap: 2rem;
-  padding: var(--main-padding);
   margin: 0 auto;
   align-items: flex-start;
   box-sizing: border-box;
