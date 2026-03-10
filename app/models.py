@@ -263,6 +263,7 @@ class PracticalInfo(Base):
     exchange_where = Column(String(255)) # e.g. "Polska", "Na miejscu"
     atm_advice = Column(Text)
     bargaining_info = Column(Text) # Info if bargaining is common/advised
+    customs_rules = Column(Text) # Rules about export/import, including EU limits
     
     # New cultural/law fields
     alcohol_rules = Column(Text)

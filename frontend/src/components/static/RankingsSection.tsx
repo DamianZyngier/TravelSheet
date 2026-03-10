@@ -74,6 +74,24 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
     { rank: 25, name: 'Indonezja', iso2: 'ID', category: 'Bali i Surfing', trend: 'up', desc: 'Bali to duchowość, pola ryżowe i surfing.' },
   ];
 
+  const airportRanking = [
+    { rank: 1, name: 'Doha Hamad', location: 'Katar', rating: 4.9, icon: '🇶🇦', desc: 'Nowoczesność, luksus i niesamowity ogród wewnątrz terminala.' },
+    { rank: 2, name: 'Singapore Changi', location: 'Singapur', rating: 4.9, icon: '🇸🇬', desc: 'Słynny wodospad Jewel i najwyższy standard obsługi.' },
+    { rank: 3, name: 'Seoul Incheon', location: 'Korea Płd.', rating: 4.8, icon: '🇰🇷', desc: 'Błyskawiczne odprawy i świetne strefy relaksu.' },
+    { rank: 4, name: 'Tokyo Haneda', location: 'Japonia', rating: 4.8, icon: '🇯🇵', desc: 'Najczystsze lotnisko świata tuż przy centrum Tokio.' },
+    { rank: 5, name: 'Istanbul Airport', location: 'Turcja', rating: 4.7, icon: '🇹🇷', desc: 'Imponująca skala i doskonały węzeł przesiadkowy.' },
+    { rank: 6, name: 'Paris CDG', location: 'Francja', rating: 4.6, icon: '🇫🇷', desc: 'Europejski lider po wielkich modernizacjach.' },
+    { rank: 7, name: 'Dubai International', location: 'ZEA', rating: 4.6, icon: '🇦🇪', desc: 'Serce globalnych podróży i luksusowe zakupy.' },
+    { rank: 8, name: 'Munich Airport', location: 'Niemcy', rating: 4.5, icon: '🇩🇪', desc: 'Najlepsze lotnisko w Europie Środkowej, własny browar.' },
+    { rank: 9, name: 'Zurich Airport', location: 'Szwajcaria', rating: 4.5, icon: '🇨🇭', desc: 'Szwajcarska wydajność i świetny taras widokowy.' },
+    { rank: 10, name: 'Vienna International', location: 'Austria', rating: 4.4, icon: '🇦🇹', desc: 'Kompaktowe, wygodne i bardzo blisko Polski.' },
+    { rank: 11, name: 'Helsinki-Vantaa', location: 'Finlandia', rating: 4.4, icon: '🇫🇮', desc: 'Najlepszy wybór na szybkie przesiadki do Azji.' },
+    { rank: 12, name: 'Rome Fiumicino', location: 'Włochy', rating: 4.3, icon: '🇮🇹', desc: 'Ogromny skok jakościowy i świetne jedzenie.' },
+    { rank: 13, name: 'Madrid-Barajas', location: 'Hiszpania', rating: 4.3, icon: '🇪🇸', desc: 'Piękna architektura Terminalu 4.' },
+    { rank: 14, name: 'Copenhagen Airport', location: 'Dania', rating: 4.2, icon: '🇩🇰', desc: 'Skandynawski design i świetna logistyka.' },
+    { rank: 15, name: 'Warszawa-Chopin', location: 'Polska', rating: 4.1, icon: '🇵🇱', desc: 'Nasza baza, ceniona za bliskość centrum i sprawność.' },
+  ];
+
   const risingDestinations = [
     { rank: 1, name: 'Arabia Saudyjska', iso2: 'SA', category: 'Nowy Luksus', growth: '+120%', desc: 'Otwarcie projektów Red Sea i NEOM przyciąga tysiące ciekawych świata.' },
     { rank: 2, name: 'Japonia', iso2: 'JP', category: 'Kultura i Technologia', growth: '+65%', desc: 'Ogromny skok popularności po ponownym pełnym otwarciu i trendach social media.' },
@@ -163,6 +181,31 @@ const RankingsSection: React.FC<RankingsSectionProps> = ({ onBack, onSelectCount
                       <p className="rank-desc">{item.desc}</p>
                     </div>
                   </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Airport Rankings */}
+          <section className="ranking-card">
+            <div className="ranking-card-header">
+              <span className="ranking-icon">🏢</span>
+              <h2>Najlepsze Lotniska</h2>
+            </div>
+            <div className="ranking-scroll-area">
+              <div className="ranking-list">
+                {airportRanking.map((item) => (
+                  <div key={item.rank} className="ranking-item">
+                    <div className="rank-number">#{item.rank}</div>
+                    <div className="rank-content">
+                      <div className="rank-title-row">
+                        <span className="rank-item-name">{item.icon} {item.name}</span>
+                        <span className="rank-rating">⭐ {item.rating}</span>
+                      </div>
+                      <div className="rank-category">{item.location}</div>
+                      <p className="rank-desc">{item.desc}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

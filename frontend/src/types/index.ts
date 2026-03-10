@@ -78,6 +78,7 @@ export interface CountryData {
     exchange_where: string;
     atm_advice: string;
     bargaining_info: string;
+    customs_rules: string;
     alcohol_rules: string;
     dress_code: string;
     photography_restrictions: string;

@@ -23,18 +23,30 @@ class MSZScraper(BaseScraper):
             resp = await self.client.get(url, headers=get_headers())
             resp.raise_for_status()
             soup = BeautifulSoup(resp.text, 'html.parser')
-            links = soup.select('div.article-content ul li a') or soup.select('a[href*="/web/dyplomacja/"]')
+            
+            # The structure seems to be a list of <a> tags inside the main content
+            links = soup.select('a[href*="/web/dyplomacja/"]')
+            
+            if not links:
+                logger.warning("No MSZ directory links found with /web/dyplomacja/ selector")
             
             for a in links:
                 href = a.get('href', '')
                 if not href: continue
                 if not href.startswith('http'): href = "https://www.gov.pl" + href
-                if "/web/dyplomacja" not in href and "/web/" not in href: continue
                 
-                title_div = a.select_one('.title') or a
-                name = title_div.get_text().strip()
-                if 2 <= len(name) <= 50:
-                    self.url_cache[clean_polish_name(name)] = href
+                # We want links like /web/dyplomacja/niemcy or /web/dyplomacja/tajlandia
+                # but NOT the main page itself or generic ones
+                if href.rstrip('/') == url.rstrip('/'): continue
+                if any(x in href for x in ['kontakt', 'dla-mediow', 'co-robimy', 'strategia']): continue
+                
+                title_text = a.get_text().strip()
+                if title_text and 2 <= len(title_text) <= 60:
+                    self.url_cache[clean_polish_name(title_text)] = href
+            
+            logger.info(f"Fetched {len(self.url_cache)} country links from MSZ directory")
+            # Log first few for debugging
+            # logger.info(f"Sample links: {list(self.url_cache.items())[:5]}")
         except Exception as e:
             logger.error(f"Error fetching MSZ directory: {e}")
 
@@ -78,9 +90,52 @@ class MSZScraper(BaseScraper):
         self._update_safety(country, soup, risk_level, final_url)
         self._update_entry(country, soup)
         self._update_practical(country, soup)
+        self._update_customs(country, soup)
         
         self.db.commit()
         return {"status": "success"}
+
+    def _update_customs(self, country: models.Country, soup: BeautifulSoup):
+        practical = self.db.query(models.PracticalInfo).filter(models.PracticalInfo.country_id == country.id).first()
+        if not practical:
+            practical = models.PracticalInfo(country_id=country.id)
+            self.db.add(practical)
+
+        # Look for "Cło" section
+        customs_text = ""
+        
+        # Strategy 1: Find by ID or header text
+        headers = soup.find_all(['h2', 'h3', 'h4'])
+        for h in headers:
+            if 'cło' in h.get_text().lower():
+                # Get next siblings until next header
+                content = []
+                curr = h.find_next_sibling()
+                while curr and curr.name not in ['h2', 'h3', 'h4']:
+                    content.append(curr.get_text().strip())
+                    curr = curr.find_next_sibling()
+                customs_text = "\n".join(filter(None, content))
+                break
+        
+        # Strategy 2: Search in whole text if nothing found
+        if not customs_text:
+            text = soup.get_text()
+            match = re.search(r'Cło(.*?)(Ubezpieczenie|Zdrowie|Religia|Wizy|Waluta|$)', text, re.S | re.I)
+            if match:
+                customs_text = match.group(1).strip()
+
+        # Add EU info if applicable
+        eu_members = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE']
+        eu_import_limits = "\n\n**Limity wwozowe do UE (z krajów poza UE):**\n- Wyroby tytoniowe: 200 papierosów lub 50 cygar.\n- Alkohol: 1L mocnego (>22%) lub 4L wina spokojnego i 16L piwa.\n- Inne: zakaz wwożenia mięsa i nabiału (serów) z większości krajów poza UE."
+        
+        if country.iso_alpha2 in eu_members:
+            eu_intra_limits = "**Limity wewnątrzunijne (dla podróżnych):** 800 papierosów, 10L spirytusu, 20L wina wzmocnionego, 90L wina, 110L piwa."
+            customs_text = f"{eu_intra_limits}\n\n{customs_text}".strip()
+        else:
+            customs_text = f"{customs_text}\n\n{eu_import_limits}".strip()
+
+        if customs_text:
+            practical.customs_rules = normalize_polish_text(customs_text)
 
     def _parse_risk_level(self, soup: BeautifulSoup, country: models.Country) -> tuple[str, bool]:
         risk_container = soup.select_one('.travel-advisory--risk-level') or soup.select_one('.safety-level')

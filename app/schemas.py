@@ -202,6 +202,7 @@ class PracticalSchema(BaseModel):
     exchange_where: Optional[str] = None
     atm_advice: Optional[str] = None
     bargaining_info: Optional[str] = None
+    customs_rules: Optional[str] = None
     souvenirs: Optional[str] = None
     last_updated: Optional[datetime] = None
 
@@ -322,6 +323,7 @@ class PracticalExportSchema(BaseModel):
     exchange_where: Optional[str] = ""
     atm_advice: Optional[str] = ""
     bargaining_info: Optional[str] = ""
+    customs_rules: Optional[str] = ""
     alcohol_rules: Optional[str] = ""
     dress_code: Optional[str] = ""
     photography_restrictions: Optional[str] = ""

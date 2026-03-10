@@ -103,7 +103,7 @@ const CountryDetail: React.FC<CountryDetailProps> = ({
               getCurrencyExample={getCurrencyExample}
               checkPlugs={checkPlugs}
               getEnlargedPlugUrl={getEnlargedPlugUrl}
-              onlySections={['docs', 'currency']}
+              onlySections={['docs', 'currency', 'customs']}
             />
             <MiscSection 
               selectedCountry={selectedCountry}

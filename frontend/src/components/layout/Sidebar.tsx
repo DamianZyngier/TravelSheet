@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   // Define the main categories and their IDs
   const CATEGORIES = [
     { id: 'summary', label: 'Podsumowanie', icon: '📝', items: 'Info, Podstawowe, Mapa' },
-    { id: 'category-1', label: 'Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Ambasady' },
+    { id: 'category-1', label: 'Przygotowanie i Formalności', icon: '📋', items: 'Dokumenty, Waluta, Cło, Ambasady' },
     { id: 'category-2', label: 'Zdrowie i Bezpieczeństwo', icon: '🛡️', items: 'Zdrowie, Bezpieczeństwo, Woda' },
     { id: 'category-3', label: 'Informacje Praktyczne', icon: '⚡', items: 'Pogoda, Gniazdka, Telefony, Ceny' },
     { id: 'category-4', label: 'Warunki Środowiskowe', icon: '🌤️', items: 'Klimat, Święta' },
