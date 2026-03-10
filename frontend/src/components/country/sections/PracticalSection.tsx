@@ -157,7 +157,7 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
               <p>Zawsze sprawdzaj aktualne limity przed podróżą, szczególnie przy wywozie antyków, dużych kwot gotówki lub produktów pochodzenia zwierzęcego.</p>
             </div>
           </div>
-          <DataSource sources={['MSZ', 'GOV.PL']} lastUpdated={selectedCountry.practical.last_updated} />
+          <DataSource sources={['MSZ']} lastUpdated={selectedCountry.practical.last_updated} />
         </div>
       )}
 
