@@ -1992,12 +1992,64 @@ html, body {
 .info-item-box.full {
   grid-column: 1 / -1;
 }
-
 .info-item-box strong {
   color: #718096;
   font-size: 0.7rem;
   text-transform: uppercase;
   display: block;
+}
+
+/* Sekcja Celna */
+.customs-content-box {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.customs-text {
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.customs-text p {
+  margin-bottom: 0.75rem;
+}
+
+.customs-text strong {
+  color: #2c5282;
+  font-weight: 700;
+  display: block;
+  margin-top: 1rem;
+}
+
+.customs-text p:first-child {
+  margin-top: 0;
+}
+
+.customs-warning-box {
+  background-color: #fffaf0;
+  border-top: 1px solid #feebc8;
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.customs-warning-box .warning-icon {
+  font-size: 1.25rem;
+}
+
+.customs-warning-box p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #744210;
+  line-height: 1.4;
+  font-weight: 500;
+}
   margin-bottom: 2px;
 }
 

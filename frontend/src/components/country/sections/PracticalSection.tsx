@@ -132,20 +132,26 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
         </div>
       )}
 
-      {(showAll || onlySections?.includes('customs')) && selectedCountry.practical.customs_rules && (
+      {(showAll || onlySections?.includes('customs')) && (
         <div id="customs" className="info-block full-width scroll-mt">
           <div className="section-header">
             <span className="section-header-icon">🛃</span>
             <label>Przepisy celne i limity</label>
           </div>
           <div className="customs-content-box">
-            <div className="customs-text">
-              {selectedCountry.practical.customs_rules.split('\n').map((line, i) => (
-                <p key={i} style={{ marginBottom: line.startsWith('**') ? '0.5rem' : '0.25rem' }}>
-                  {line.startsWith('**') ? <strong>{line.replace(/\*\*/g, '')}</strong> : line}
-                </p>
-              ))}
-            </div>
+            {selectedCountry.practical.customs_rules ? (
+              <div className="customs-text">
+                {selectedCountry.practical.customs_rules.trim().split('\n').map((line, i) => (
+                  <p key={i} style={{ marginBottom: line.startsWith('**') ? '0.5rem' : '0.25rem' }}>
+                    {line.startsWith('**') ? <strong>{line.replace(/\*\*/g, '')}</strong> : line}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <div className="customs-text no-data-text">
+                Brak szczegółowych informacji o przepisach celnych dla tego kraju. Zazwyczaj obowiązują ogólne limity międzynarodowe.
+              </div>
+            )}
             <div className="customs-warning-box">
               <span className="warning-icon">⚠️</span>
               <p>Zawsze sprawdzaj aktualne limity przed podróżą, szczególnie przy wywozie antyków, dużych kwot gotówki lub produktów pochodzenia zwierzęcego.</p>
