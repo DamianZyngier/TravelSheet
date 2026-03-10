@@ -205,19 +205,20 @@ export const MiscSection: React.FC<MiscSectionProps> = ({
                           place.category === 'Natural' ? '🌳' :
                           place.category === 'Mixed' ? '🏔️' : '📍'}
                         </span>
-                        <div className="unesco-name">{place.name}</div>
-                      </div>
-                      <div className="unesco-badges-container" style={{ display: 'flex', gap: '8px', marginLeft: '32px' }}>
+                        <div className="unesco-name" dangerouslySetInnerHTML={{ __html: place.name }} />
+                        </div>
+                        <div className="unesco-badges-container" style={{ display: 'flex', gap: '8px', marginLeft: '32px' }}>
                         <div className={`unesco-type-badge ${place.category?.toLowerCase() || ''}`}>{place.category}</div>
                         {!!place.is_transnational && <div className="unesco-type-badge transnational">MIĘDZYNARODOWE</div>}
                         {!!place.is_danger && <div className="unesco-type-badge danger">ZAGROŻONE</div>}
-                      </div>
-
-                      {place.description && (
-                        <div className="unesco-description" onClick={(e) => e.stopPropagation()}>
-                          <ExpandableText text={place.description} />
                         </div>
-                      )}
+                        {place.description && (
+                        <div 
+                          className="unesco-description" 
+                          onClick={(e) => e.stopPropagation()}
+                          dangerouslySetInnerHTML={{ __html: place.description }}
+                        />
+                        )}
 
                       {place.unesco_id && (
                         <div className="unesco-official-link">
