@@ -1,0 +1,316 @@
+/* Mobile & Tablet Responsiveness */
+
+@media (max-width: 1024px) {
+  :root {
+    --main-padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --main-padding: 1rem;
+  }
+
+  /* Header adjustments */
+  .header-content-wrapper {
+    padding: 0 var(--main-padding);
+    gap: 0.5rem;
+  }
+
+  .header-top-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .top-controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-input {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .header-nav-links {
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .bottom-controls-wrapper {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+
+  .header-nav-links.top-nav {
+    display: none; /* Hide top nav on mobile, use sidebar/other navigation */
+  }
+
+  .fav-toggle-btn {
+    width: 100%;
+  }
+
+  /* Grid adjustments */
+  .country-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .main-flag-img {
+    width: 100px;
+    height: 60px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  /* Detail view adjustments */
+  .detail-view-layout {
+    padding: 1rem 0;
+  }
+
+  .detail-card {
+    padding: 1.25rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .detail-header-group {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .header-info-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .detail-flag-img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .detail-titles h2 {
+    font-size: 1.75rem;
+  }
+
+  .detail-map-container {
+    max-width: 100%;
+  }
+
+  .detail-actions-top {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-actions-top button {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+
+  /* Section specifics */
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plug-types-list {
+    justify-content: center;
+  }
+
+  .plug-icon-box {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* Emergency section */
+  .emergency-112-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Costs section */
+  .costs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cost-bar-label-box {
+    width: 80px;
+  }
+
+  .costs-markers {
+    left: 80px;
+  }
+
+  /* UNESCO/Attractions */
+  .unesco-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unesco-item-v2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .unesco-item-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* Embassies */
+  .embassy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Holidays */
+  .holiday-month-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Climate Chart */
+  .combined-chart-container {
+    padding: 2.5rem 0.5rem 1rem;
+    overflow-x: auto;
+  }
+
+  .combined-svg-chart {
+    min-width: 500px; /* Force horizontal scroll for the chart on very small screens */
+  }
+
+  .chart-legend-combined {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* Static pages */
+  .static-page-container {
+    padding: 1rem;
+  }
+
+  .static-page-content {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .static-page-title-section {
+    margin-bottom: 2rem;
+  }
+
+  .static-page-title-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .static-page-desc {
+    font-size: 1rem;
+  }
+
+  /* Checklist section specifically */
+  .checklist-header-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .checklist-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .variant-tabs {
+    width: 100%;
+  }
+
+  .checklist-grid {
+    gap: 1.5rem;
+  }
+
+  .checklist-category h3 {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Rankings specifically */
+  .rankings-grid {
+    gap: 1rem;
+  }
+
+  .ranking-card {
+    padding: 1rem;
+    max-height: unset; /* Allow cards to grow on mobile */
+  }
+
+  /* General elements */
+  .last-updated-tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-brand {
+    font-size: 1.25rem;
+  }
+
+  .app-logo {
+    height: 35px;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .country-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .detail-titles h2 {
+    font-size: 1.5rem;
+  }
+
+  .detail-flag-img {
+    width: 100px;
+    height: 66px;
+  }
+
+  .header-nav-links .nav-link-btn span {
+    display: none; /* Hide text, keep emoji on very small screens */
+  }
+
+  .header-nav-links .nav-link-btn {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+  }
+}

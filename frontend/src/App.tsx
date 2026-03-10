@@ -12,6 +12,7 @@ import type { CountryData } from './types/index'
 import { ALIASES, POPULAR_ISO_CODES } from './constants'
 import './App.css'
 import './static-pages.css'
+import './responsive.css'
 import logoNoText from './assets/logo-no-text.png'
 import { 
   formatPLN, 
