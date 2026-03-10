@@ -1,5 +1,17 @@
 /* Mobile & Tablet Responsiveness */
 
+/* Global overflow prevention */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.app-container {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 @media (max-width: 1024px) {
   :root {
     --main-padding: 1.5rem;
@@ -276,9 +288,43 @@
   .footer-links {
     justify-content: center;
   }
+
+  /* Filter panel responsiveness */
+  .filter-panel {
+    width: calc(100vw - 2rem);
+    right: -1rem; /* Center roughly if parent is near edge */
+    left: auto;
+    padding: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .continent-filter-grid-v2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Emergency mini blocks */
+  .emergency-112-hero.mini, .roaming-badge-hero {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* Ensure all images and large items are constrained */
+  img, svg, canvas, video {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
+  .continent-filter-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .legal-modal-content {
+    width: 95vw;
+    max-height: 90vh;
+  }
   .logo-brand {
     font-size: 1.25rem;
   }
