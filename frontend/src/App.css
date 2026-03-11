@@ -1292,6 +1292,7 @@ html, body {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  padding-right: 25px; /* Space for the 200% marker label */
 }
 
 .costs-markers {
@@ -1317,6 +1318,8 @@ html, body {
   font-weight: 700;
   color: #a0aec0;
   margin-bottom: 4px;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
 }
 
 .marker-line {
