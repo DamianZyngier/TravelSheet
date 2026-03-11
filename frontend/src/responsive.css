@@ -29,7 +29,7 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   :root {
     --main-padding: 1rem;
   }
@@ -418,11 +418,14 @@ html, body {
   /* Filter panel responsiveness */
   .filter-panel {
     width: calc(100vw - 2rem);
-    right: -1rem; /* Center roughly if parent is near edge */
-    left: auto;
+    left: 50%; /* Center relative to the screen/container */
+    transform: translateX(-50%);
+    right: auto;
     padding: 1rem;
-    max-height: 80vh;
+    max-height: 85vh;
     overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 12px);
   }
 
   .continent-filter-grid-v2 {
