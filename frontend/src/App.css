@@ -1299,7 +1299,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 120px; /* Exact match to label width */
-  right: 0;
+  right: 25px; /* Match costs-visual-chart padding-right */
   height: 100%;
   pointer-events: none;
 }
