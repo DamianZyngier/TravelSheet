@@ -49,8 +49,8 @@ html, body {
 
   .top-controls {
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
 
@@ -61,6 +61,15 @@ html, body {
   .search-input {
     min-width: unset;
     width: 100%;
+  }
+
+  .filter-dropdown-container {
+    width: 100%;
+  }
+
+  .filter-main-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .header-nav-links {
@@ -182,10 +191,21 @@ html, body {
   .detail-actions-top button {
     flex: 1; /* Equal width */
     margin-right: 0 !important;
-    font-size: 0.8rem; /* Slightly smaller text to fit */
-    padding: 0.6rem 0.4rem;
+    font-size: 0.75rem; /* Reduced from 0.8rem */
+    padding: 0.6rem 0.3rem; /* Reduced horizontal padding */
     justify-content: center;
     white-space: nowrap;
+    letter-spacing: -0.02em; /* Tighter letter spacing to fit more text */
+  }
+
+  /* Shorter text for PDF button on very narrow screens using CSS content if needed, 
+     but first we try to fit it with smaller font and less padding. 
+     Alternatively, we can target the iPhone SE specifically. */
+  @media (max-width: 380px) {
+    .detail-actions-top button {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.2rem;
+    }
   }
 
   .side-menu {
