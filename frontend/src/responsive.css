@@ -51,6 +51,11 @@ html, body {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .search-container {
+    width: 100%;
   }
 
   .search-input {
@@ -96,9 +101,10 @@ html, body {
 
   /* Detail view adjustments */
   .detail-view-layout {
-    padding: 1rem 0;
+    padding: 0.25rem 0 1rem 0;
     width: 100%;
     overflow-x: hidden;
+    gap: 0.5rem !important;
   }
 
   .detail-view-content {
@@ -131,19 +137,34 @@ html, body {
   }
 
   .header-info-flex {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
     gap: 1rem;
     width: 100%;
   }
 
+  .header-visuals {
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem !important;
+    flex-shrink: 0;
+  }
+
   .detail-flag-img {
-    width: 120px;
-    height: 80px;
+    width: 80px;
+    height: 54px;
+  }
+
+  .detail-coat-img {
+    height: 50px !important;
+    width: auto;
   }
 
   .detail-titles h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .detail-map-container {
@@ -151,14 +172,51 @@ html, body {
   }
 
   .detail-actions-top {
-    flex-direction: column;
+    flex-direction: row; /* Side-by-side */
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .detail-actions-top button {
-    width: 100%;
+    flex: 1; /* Equal width */
     margin-right: 0 !important;
+    font-size: 0.8rem; /* Slightly smaller text to fit */
+    padding: 0.6rem 0.4rem;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .side-menu {
+    gap: 0.5rem !important; /* Bring all sidebar tiles closer */
+  }
+
+  .side-back-button {
+    margin-bottom: 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .current-country-nav-box {
+    display: none !important; /* Hide redundant country name box on mobile */
+  }
+
+  .country-navigation {
+    margin-bottom: 0 !important;
+    gap: 6px;
+  }
+
+  .nav-button {
+    padding: 6px 4px;
+  }
+
+  .side-menu-list.simplified {
+    display: none; /* Hide category navigation list on mobile */
+  }
+
+  .side-menu-category-item {
+    padding: 10px 14px;
+    border-radius: 10px;
   }
 
   /* Section specifics */
@@ -196,11 +254,29 @@ html, body {
   }
 
   .cost-bar-label-box {
-    width: 80px;
+    width: 100px;
+  }
+
+  .cost-bar-name {
+    font-size: 0.75rem;
   }
 
   .costs-markers {
-    left: 80px;
+    left: 100px;
+    right: 25px; /* Added right constraint */
+    width: calc(100% - 125px); /* Explicit width */
+    overflow: visible;
+  }
+
+  .costs-visual-chart {
+    padding-right: 30px; /* Increased padding for the 200% label */
+  }
+
+  .marker-label {
+    writing-mode: horizontal-tb !important;
+    white-space: nowrap !important;
+    transform: translateX(-50%);
+    display: inline-block !important;
   }
 
   /* UNESCO/Attractions */
@@ -373,12 +449,29 @@ html, body {
   }
 
   .detail-titles h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .detail-flag-img {
-    width: 100px;
-    height: 66px;
+    width: 80px;
+    height: 54px;
+  }
+
+  .voltage-status-box-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .voltage-badge-v2 {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .voltage-value {
+    font-size: 1rem !important;
   }
 
   .header-nav-links .nav-link-btn span {
