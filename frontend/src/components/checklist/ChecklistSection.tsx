@@ -27,6 +27,32 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
     }));
   };
 
+  const clearAll = () => {
+    if (Object.keys(checkedItems).length === 0) return;
+    if (window.confirm('Czy na pewno chcesz wyczyścić całą checklistę?')) {
+      setCheckedItems({});
+    }
+  };
+
+  const toggleCategory = (categoryItems: { id: string }[]) => {
+    const allChecked = categoryItems.every(item => !!checkedItems[item.id]);
+    const newChecked = { ...checkedItems };
+    
+    categoryItems.forEach(item => {
+      newChecked[item.id] = !allChecked;
+    });
+    
+    setCheckedItems(newChecked);
+  };
+
+  const clearCategory = (categoryItems: { id: string }[]) => {
+    const newChecked = { ...checkedItems };
+    categoryItems.forEach(item => {
+      delete newChecked[item.id];
+    });
+    setCheckedItems(newChecked);
+  };
+
   const handlePrint = () => {
     window.print();
   };
@@ -74,9 +100,18 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
               </a>
             ))}
           </div>
-          <button className="primary-btn print-btn" onClick={handlePrint}>
-            🖨️ Drukuj / PDF
-          </button>
+          <div className="checklist-action-buttons">
+            <button 
+              className="secondary-btn clear-all-btn" 
+              onClick={clearAll}
+              disabled={Object.keys(checkedItems).length === 0}
+            >
+              🗑️ Wyczyść wszystko
+            </button>
+            <button className="primary-btn print-btn" onClick={handlePrint}>
+              🖨️ Drukuj / PDF
+            </button>
+          </div>
         </div>
       </div>
 
@@ -87,32 +122,186 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
         </div>
 
         <div className="checklist-grid">
-          {currentChecklist.categories.map((cat, catIdx) => (
-            <div key={catIdx} className="checklist-category">
-              <h3>{cat.title}</h3>
-              <div className="checklist-items">
-                {cat.items.map(item => (
-                    <label key={item.id} className="checklist-item">
-                      <input
-                        type="checkbox"
-                        checked={!!checkedItems[item.id]}
-                        onChange={() => toggleItem(item.id)}
-                      />
-                      <span className="checkbox-custom"></span>
-                      <div className="checklist-item-text">
-                        <span className="item-label">{item.label}</span>
-                      </div>
-                    </label>
-                ))}
+          {currentChecklist.categories.map((cat, catIdx) => {
+            const isAnyChecked = cat.items.some(item => !!checkedItems[item.id]);
+            const isAllChecked = cat.items.every(item => !!checkedItems[item.id]);
+
+            return (
+              <div key={catIdx} className="checklist-category">
+                <div className="category-header-row">
+                  <h3>{cat.title}</h3>
+                  <div className="category-actions no-print">
+                    <button 
+                      className={`category-action-btn toggle-all ${isAllChecked ? 'is-all-checked' : ''}`} 
+                      onClick={() => toggleCategory(cat.items)}
+                      title={isAllChecked ? "Odznacz wszystko" : "Zaznacz wszystko"}
+                    >
+                      {isAllChecked ? (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      ) : (
+                        <div className="empty-box"></div>
+                      )}
+                    </button>
+                    {isAnyChecked && (
+                      <button 
+                        className="category-action-btn clear-cat" 
+                        onClick={() => clearCategory(cat.items)}
+                        title="Wyczyść kategorię"
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div className="checklist-items">
+                  {cat.items.map(item => (
+                      <label key={item.id} className="checklist-item">
+                        <input
+                          type="checkbox"
+                          checked={!!checkedItems[item.id]}
+                          onChange={() => toggleItem(item.id)}
+                        />
+                        <span className="checkbox-custom"></span>
+                        <div className="checklist-item-text">
+                          <span className="item-label">{item.label}</span>
+                        </div>
+                      </label>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
+        .checklist-controls {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1.5rem;
+          margin-top: 1rem;
+        }
+        .checklist-action-buttons {
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+        }
+        .variant-tabs {
+          display: flex;
+          background-color: #edf2f7;
+          padding: 4px;
+          border-radius: 12px;
+          position: relative;
+          width: 360px;
+          height: 44px;
+          flex-shrink: 0;
+        }
+        .variant-tab {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          font-weight: 800;
+          color: #4a5568;
+          z-index: 2;
+          border-radius: 8px;
+          transition: color 0.2s;
+          letter-spacing: 0.025em;
+        }
+        .secondary-btn {
+          background-color: white;
+          color: #4a5568;
+          border: 1px solid #e2e8f0;
+          padding: 0.6rem 1rem;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          height: 40px;
+          white-space: nowrap;
+        }
+        .secondary-btn:hover:not(:disabled) {
+          background-color: #f7fafc;
+          border-color: #cbd5e0;
+          color: #2d3748;
+        }
+        .secondary-btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        .primary-btn.print-btn {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 0.6rem 1.2rem;
+          white-space: nowrap;
+        }
+        .category-header-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+          border-bottom: 2px solid #edf2f7;
+          padding-bottom: 0.5rem;
+        }
+        .category-header-row h3 {
+          margin: 0 !important;
+          padding: 0 !important;
+          border: none !important;
+        }
+        .category-actions {
+          display: flex;
+          gap: 0.4rem;
+        }
+        .category-action-btn {
+          background: white;
+          border: 1.5px solid #e2e8f0;
+          border-radius: 6px;
+          cursor: pointer;
+          width: 28px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #718096;
+          transition: all 0.2s;
+          padding: 0;
+        }
+        .category-action-btn:hover {
+          background-color: #f7fafc;
+          border-color: #cbd5e0;
+          color: #4a5568;
+        }
+        .category-action-btn.toggle-all.is-all-checked {
+          background-color: #ebf8ff;
+          border-color: #3182ce;
+          color: #3182ce;
+        }
+        .empty-box {
+          width: 10px;
+          height: 10px;
+          border: 1.5px solid #cbd5e0;
+          border-radius: 2px;
+        }
+        .category-action-btn.clear-cat:hover {
+          color: #e53e3e;
+          border-color: #feb2b2;
+          background-color: #fff5f5;
+        }
         @media print {
-          .no-print, .main-header, .main-footer, .side-menu, .detail-actions-top, .checklist-header {
+          .no-print, .main-header, .main-footer, .side-menu, .detail-actions-top, .checklist-header, .category-actions {
             display: none !important;
           }
           .printable-area {

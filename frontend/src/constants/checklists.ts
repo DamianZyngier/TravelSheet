@@ -66,6 +66,8 @@ export const CHECKLISTS: ChecklistVariant[] = [
           { id: 'min-clo-7', label: 'Kurtka ciepła / softshell (góry/zima)' },
           { id: 'min-clo-8', label: 'Czapka, rękawiczki, szalik (góry/zima)' },
           { id: 'min-clo-9', label: 'Strój kąpielowy (tropiki / basen / spa)' },
+          { id: 'min-clo-10', label: 'Piżama / strój do spania' },
+          { id: 'min-clo-11', label: 'Lekka chusta / pareo (przydatna przy wejściu do świątyń / jako osłona przed słońcem)' },
         ]
       },
       {
@@ -145,6 +147,7 @@ export const CHECKLISTS: ChecklistVariant[] = [
           { id: 'opt-clo-6', label: 'Piżama / strój do spania' },
           { id: 'opt-clo-7', label: 'Dodatkowa para butów (np. lekkie na zmianę)' },
           { id: 'opt-clo-8', label: 'Bielizna termiczna (góry/zima)' },
+          { id: 'opt-clo-9', label: 'Lekka chusta / pareo (przydatna przy wejściu do świątyń / jako osłona przed słońcem)' },
         ]
       },
       {

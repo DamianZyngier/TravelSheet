@@ -79,7 +79,7 @@ const Header: React.FC<HeaderProps> = ({
               onClick={(e) => handleNavClick(e, 'nav-checklist')}
               style={{ textDecoration: 'none' }}
             >
-              📋 Checklisty
+              📋 <span>Checklisty</span>
             </a>
 
             <a 
@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({
               onClick={(e) => handleNavClick(e, 'nav-passenger-rights')}
               style={{ textDecoration: 'none' }}
             >
-              ✈️ Prawa pasażera
+              ✈️ <span>Prawa pasażera</span>
             </a>
 
             <a 
@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({
               onClick={(e) => handleNavClick(e, 'nav-rankings')}
               style={{ textDecoration: 'none' }}
             >
-              🏆 Rankingi
+              🏆 <span>Rankingi</span>
             </a>
           </nav>
         </div>
@@ -109,7 +109,8 @@ const Header: React.FC<HeaderProps> = ({
                 className={`nav-link-btn fav-toggle-btn ${showOnlyFavorites ? 'active' : ''}`}
                 onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
               >
-                {showOnlyFavorites ? '⭐ Ulubione' : '☆ Wszystkie kraje'}
+                {showOnlyFavorites ? '⭐ ' : '☆ '}
+                <span>{showOnlyFavorites ? 'Ulubione' : 'Wszystkie kraje'}</span>
               </button>
 
               <div className="top-controls">
