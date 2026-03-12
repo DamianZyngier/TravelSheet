@@ -376,6 +376,18 @@ body {
     gap: 1rem;
   }
 
+  .checklist-grid {
+    gap: 1.5rem;
+  }
+
+  .checklist-category h3 {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
   .checklist-controls {
     width: 100%;
     flex-direction: column;
@@ -393,22 +405,9 @@ body {
     width: 100%;
     justify-content: center;
   }
+}
 
-  .variant-tabs {
-    width: 100%;
-  }
-
-  .checklist-grid {
-    gap: 1.5rem;
-  }
-
-  .checklist-category h3 {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Rankings specifically */
+@media (max-width: 480px) {
   .rankings-grid {
     gap: 1rem;
   }
@@ -462,9 +461,7 @@ body {
     max-width: 100%;
     height: auto;
   }
-}
 
-@media (max-width: 480px) {
   .continent-filter-grid-v2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -473,6 +470,7 @@ body {
     width: 95vw;
     max-height: 90vh;
   }
+
   .logo-brand {
     font-size: 1.25rem;
   }

@@ -136,13 +136,13 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
                       onClick={() => toggleCategory(cat.items)}
                       title={isAllChecked ? "Odznacz wszystko" : "Zaznacz wszystko"}
                     >
-                      {isAllChecked ? (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        {isAllChecked ? (
                           <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      ) : (
-                        <div className="empty-box"></div>
-                      )}
+                        ) : (
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        )}
+                      </svg>
                     </button>
                     {isAnyChecked && (
                       <button 
@@ -150,7 +150,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
                         onClick={() => clearCategory(cat.items)}
                         title="Wyczyść kategorię"
                       >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="18" y1="6" x2="6" y2="18"></line>
                           <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
@@ -186,6 +186,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
           align-items: center;
           gap: 1.5rem;
           margin-top: 1rem;
+          flex-wrap: wrap;
         }
         .checklist-action-buttons {
           display: flex;
@@ -198,7 +199,8 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
           padding: 4px;
           border-radius: 12px;
           position: relative;
-          width: 360px;
+          width: 100%;
+          max-width: 360px;
           height: 44px;
           flex-shrink: 0;
         }
@@ -270,8 +272,8 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
           border: 1.5px solid #e2e8f0;
           border-radius: 6px;
           cursor: pointer;
-          width: 28px;
-          height: 28px;
+          width: 32px;
+          height: 32px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -288,12 +290,6 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ variantId, onBack, 
           background-color: #ebf8ff;
           border-color: #3182ce;
           color: #3182ce;
-        }
-        .empty-box {
-          width: 10px;
-          height: 10px;
-          border: 1.5px solid #cbd5e0;
-          border-radius: 2px;
         }
         .category-action-btn.clear-cat:hover {
           color: #e53e3e;
