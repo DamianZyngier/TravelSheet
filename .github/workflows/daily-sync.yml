@@ -51,9 +51,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git stash -u
-          git pull origin master --rebase
-          git stash pop || echo "Nothing to pop"
+          git add .
+          if git commit -m "chore: temporary sync commit [skip ci]"; then
+            git pull origin master --rebase -X theirs
+            git reset HEAD~1
+          else
+            git pull origin master --rebase
+          fi
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
