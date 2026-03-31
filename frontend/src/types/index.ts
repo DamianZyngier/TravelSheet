@@ -99,6 +99,7 @@ export interface CountryData {
     health_info: string;
     roaming_info: string;
     license_type: string;
+    measurement_system: string | null;
     souvenirs: string;
     tipping_culture: string | null;
     drinking_age: string | null;

@@ -258,6 +258,7 @@ class PracticalInfo(Base):
     health_info = Column(Text)
     roaming_info = Column(Text) # Info about Roam Like at Home
     license_type = Column(String(255)) # Info about driving license requirements
+    measurement_system = Column(String(50)) # "metric", "imperial", or "mixed"
     water_safe_for_brushing = Column(Boolean)
     best_exchange_currency = Column(String(100)) # e.g. "USD, EUR"
     exchange_where = Column(String(255)) # e.g. "Polska", "Na miejscu"

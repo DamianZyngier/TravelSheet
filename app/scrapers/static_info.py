@@ -11,37 +11,44 @@ REGIONAL_DEFAULTS = {
     'Europe': {
         'voltage': 230, 'freq': 50, 
         'hours': 'Sklepy: 09:00-20:00 (często zamknięte w niedziele)', 
-        'esim': True, 'internet': 'Bardzo dobry, powszechne Wi-Fi i 5G.'
+        'esim': True, 'internet': 'Bardzo dobry, powszechne Wi-Fi i 5G.',
+        'measure': 'metryczny'
     },
     'Asia': {
         'voltage': 220, 'freq': 50, 
         'hours': 'Sklepy: 10:00-22:00 (otwarte codziennie)', 
-        'esim': True, 'internet': 'Dobry w miastach, słabszy na prowincji. Tanie karty SIM.'
+        'esim': True, 'internet': 'Dobry w miastach, słabszy na prowincji. Tanie karty SIM.',
+        'measure': 'metryczny'
     },
     'Americas': {
         'voltage': 120, 'freq': 60, 
         'hours': 'Sklepy: 09:00-21:00 (duże centra handlowe do 22:00)', 
-        'esim': True, 'internet': 'Powszechny, szybki w dużych miastach.'
+        'esim': True, 'internet': 'Powszechny, szybki w dużych miastach.',
+        'measure': 'metryczny'
     },
     'Africa': {
         'voltage': 230, 'freq': 50, 
         'hours': 'Sklepy: 08:00-18:00 (zależnie od lokalnych warunków)', 
-        'esim': False, 'internet': 'Zmienny, najlepiej kupić lokalną kartę SIM.'
+        'esim': False, 'internet': 'Zmienny, najlepiej kupić lokalną kartę SIM.',
+        'measure': 'metryczny'
     },
     'Oceania': {
         'voltage': 230, 'freq': 50, 
         'hours': 'Sklepy: 09:00-17:30 (centra do 21:00 w czwartki/piątki)', 
-        'esim': True, 'internet': 'Dobry, ale drogi poza miastami.'
+        'esim': True, 'internet': 'Dobry, ale drogi poza miastami.',
+        'measure': 'metryczny'
     }
 }
 
 # Specyficzne dane dla krajów (nadpisują regionalne)
 TECH_DATA = {
-    'US': {'plugs': 'A, B', 'side': 'right', 'voltage': 120, 'freq': 60},
-    'CA': {'plugs': 'A, B', 'side': 'right', 'voltage': 120, 'freq': 60},
+    'US': {'plugs': 'A, B', 'side': 'right', 'voltage': 120, 'freq': 60, 'measure': 'imperialny'},
+    'LR': {'measure': 'imperialny'},
+    'MM': {'measure': 'imperialny'},
+    'GB': {'plugs': 'G', 'side': 'left', 'voltage': 230, 'freq': 50, 'measure': 'mieszany'},
+    'CA': {'plugs': 'A, B', 'side': 'right', 'voltage': 120, 'freq': 60, 'measure': 'mieszany'}, # Canada is also somewhat mixed
     'JP': {'plugs': 'A, B', 'side': 'left', 'voltage': 100, 'freq': 50}, # 50/60 mix but 100V
     'PL': {'plugs': 'C, E', 'side': 'right', 'voltage': 230, 'freq': 50},
-    'GB': {'plugs': 'G', 'side': 'left', 'voltage': 230, 'freq': 50},
     'TH': {'plugs': 'A, B, C, O', 'side': 'left', 'voltage': 220, 'freq': 50, 'hours': 'Sklepy: 10:00-22:00 (7 dni w tygodniu)'},
     'AE': {'plugs': 'G', 'side': 'right', 'voltage': 230, 'freq': 50, 'hours': 'Sklepy: 10:00-22:00 (często do północy)'},
     'BR': {'plugs': 'N', 'side': 'right', 'voltage': 127, 'freq': 60}, # Some regions 220V
@@ -219,6 +226,7 @@ def sync_static_data(db: Session):
         vlt = tech.get('voltage', region['voltage'])
         frq = tech.get('freq', region['freq'])
         hrs = tech.get('hours', region['hours'])
+        measure = tech.get('measure', region['measure'])
         esim = region['esim']
         net = region['internet']
         
@@ -237,6 +245,7 @@ def sync_static_data(db: Session):
         practical.voltage = vlt
         practical.frequency = frq
         practical.store_hours = hrs
+        practical.measurement_system = measure
         practical.esim_available = esim
         practical.internet_notes = net
         practical.tap_water_safe = water_safe

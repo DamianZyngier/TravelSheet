@@ -24,6 +24,7 @@ To ensure high-quality data, the project implements several layers of validation
 - **EKUZ Integration**: Automated flagging of countries where European Health Insurance Card is valid, with direct application links.
 - **Advanced Comparisons**: UI now automatically calculates and displays socio-economic differences between the selected country and Poland (HDI, Life Expectancy, GDP).
 - **Transport Apps**: Custom mapping of ride-hailing services (Uber, Bolt, Grab, etc.) per country, including city-specific availability.
+- **Measurement Systems**: Automated detection and display of unit systems (metric, imperial, mixed) for each country, integrated into driving and practical info sections.
 - **Automated Testing**: `scripts/test_data_integrity.py` validates the exported `data.json` structure before deployment.
 
 ## Tech Stack

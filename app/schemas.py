@@ -197,6 +197,7 @@ class PracticalSchema(BaseModel):
     health_info: Optional[str] = None
     roaming_info: Optional[str] = None
     license_type: Optional[str] = None
+    measurement_system: Optional[str] = None
     water_safe_for_brushing: Optional[bool] = None
     best_exchange_currency: Optional[str] = None
     exchange_where: Optional[str] = None
@@ -338,6 +339,7 @@ class PracticalExportSchema(BaseModel):
     health_info: Optional[str] = ""
     roaming_info: Optional[str] = ""
     license_type: Optional[str] = ""
+    measurement_system: Optional[str] = ""
     souvenirs: Optional[str] = ""
     last_updated: Optional[str] = None
 

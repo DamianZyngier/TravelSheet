@@ -82,9 +82,10 @@ export const PracticalSection: React.FC<PracticalSectionProps> = ({
 
             {showDriving && (
               <div className="info-item-box">
-                <strong>Ruch drogowy</strong>
+                <strong>Ruch drogowy i miary</strong>
                 <div className="driving-info-box">
                   <span>{selectedCountry.practical.driving_side === 'right' ? '➡️ Prawostronny' : '⬅️ Lewostronny'}</span>
+                  <span>📏 System {selectedCountry.practical.measurement_system || 'metryczny'}</span>
                   <span className="license-info">🚗 {selectedCountry.practical.license_type || 'Polskie / IDP'}</span>
                 </div>
               </div>
