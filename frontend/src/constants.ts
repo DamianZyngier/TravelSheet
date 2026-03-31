@@ -53,11 +53,11 @@ export const PLUG_NAMES: Record<string, string> = {
     'G': 'Standard Brytyjski (UK)',
     'H': 'Standard Izraelski',
     'I': 'Standard Australijski',
-    'J': 'Standard Szwajcarski',
+    'J': 'Standard Szwajcarski (komp. Typ C)',
     'K': 'Standard Duński',
-    'L': 'Standard Włoski',
+    'L': 'Standard Włoski (komp. Typ C)',
     'M': 'Standard Afrykański',
-    'N': 'Standard Brazylijski',
+    'N': 'Standard Brazylijski (komp. Typ C)',
     'O': 'Standard Tajlandzki'
 };
 

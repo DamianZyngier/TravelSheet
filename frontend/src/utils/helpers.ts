@@ -22,8 +22,13 @@ export const checkPlugs = (plugs: string) => {
   if (!plugs) return { text: 'Brak danych', warning: false, class: 'plugs-err' };
   const hasC = plugs.includes('C');
   const hasE = plugs.includes('E');
+  const hasN = plugs.includes('N');
+  
   if (hasC && hasE) return { text: '🔌 Standard taki sam jak w Polsce (Typ C/E)', warning: false, class: 'plugs-ok' };
-  if (hasC || hasE) return { text: '🔌 Częściowo kompatybilne (Typ C lub E)', warning: true, class: 'plugs-warn' };
+  if (hasC || hasE || hasN) {
+    const detail = hasN && !hasC && !hasE ? ' (Typ N - pasuje tylko wersja bez uziemienia)' : '';
+    return { text: `🔌 Częściowo kompatybilne (Typ C lub E)${detail}`, warning: true, class: 'plugs-warn' };
+  }
   return { text: '🔌 Inne gniazdka - weź przejściówkę!', warning: true, class: 'plugs-err' };
 };
 
@@ -36,7 +41,7 @@ export const getEnlargedPlugUrl = (url: string) => {
 export const getPlugCompatibility = (type: string) => {
   const t = type.trim().toUpperCase();
   if (['C', 'E'].includes(t)) return 'plug-status-same'; // Green
-  if (t === 'F') return 'plug-status-compatible'; // Yellow
+  if (['F', 'N', 'L', 'J'].includes(t)) return 'plug-status-compatible'; // Yellow (N, L, J have similar pin spacing/diameter for Type C plugs)
   return 'plug-status-different'; // Red
 };
 
