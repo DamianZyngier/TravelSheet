@@ -6,7 +6,7 @@ router = APIRouter()
 
 @router.post("/sync-rest-countries")
 async def sync_rest_countries(db: Session = Depends(get_db)):
-    """Admin endpoint - sync data from REST Countries API"""
+    """Admin endpoint - sync data from ApiCountries API"""
     from ...scrapers.rest_countries import sync_countries
 
     result = await sync_countries(db)

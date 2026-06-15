@@ -6,7 +6,7 @@ Technical details about the data architecture of TripSheet.
 
 | Source | Type | Cost | Sync | UI Category | Key Data Points |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **REST Countries** | API | Free | Weekly | **Informacje** | ISO codes, Population, Area, Coordinates, Flag URL, Continent, Region |
+| **ApiCountries** | API | Free | Weekly | **Informacje** | ISO codes, Population, Area, Coordinates, Flag URL, Continent, Region |
 | **MSZ gov.pl** | Scraper | Free | Daily | **Bezpieczeństwo** | Risk levels (low/medium/high/critical), Safety advisories, Local laws & customs, Embassies, Passport/ID requirements, Visa requirement (PL) |
 | **Open-Meteo** | API | Free | Daily | **Pogoda** | **Current weather**, 7-day forecast, Humidity, Wind speed |
 | **NBP** | API | Free | Daily | **Waluta** | Live PLN exchange rates (official NBP mid rates) |
@@ -21,13 +21,13 @@ Technical details about the data architecture of TripSheet.
 
 | Category | Field Name | Source Type | Source Name |
 | :--- | :--- | :--- | :--- |
-| **Basic Info** | ISO Alpha 2/3 | API | REST Countries |
-| | Name (PL/EN) | API | REST Countries |
-| | Capital | API | REST Countries |
-| | Population / Area | API | REST Countries |
-| | Continent / Region | API | REST Countries |
-| | Coordinates (Lat/Lng) | API | REST Countries |
-| | Flag Emoji / URL | API | REST Countries |
+| **Basic Info** | ISO Alpha 2/3 | API | ApiCountries |
+| | Name (PL/EN) | API | ApiCountries |
+| | Capital | API | ApiCountries |
+| | Population / Area | API | ApiCountries |
+| | Continent / Region | API | ApiCountries |
+| | Coordinates (Lat/Lng) | API | ApiCountries |
+| | Flag Emoji / URL | API | ApiCountries |
 | **Safety** | Risk Level / Summary | Scraper | MSZ (gov.pl) |
 | | Risk Details | Scraper | MSZ (gov.pl) |
 | | MSZ Advisory URL | Scraper | MSZ (gov.pl) |
@@ -38,14 +38,14 @@ Technical details about the data architecture of TripSheet.
 | **Logistics** | Plug Types / Voltage | Local | Static Info |
 | | Driving Side | Local | Static Info |
 | | Timezone | API | Wikidata |
-| | Phone Code | API | REST Countries |
+| | Phone Code | API | ApiCountries |
 | | Main Airport | API | Wikidata |
 | | Railway Info | API | Wikidata |
 | **Entry** | Visa Required (PL) | API/Scraper | Wikipedia / MSZ |
 | | Passport / ID Rules | Scraper | MSZ (gov.pl) |
 | | Card Acceptance | Scraper | MSZ (gov.pl) |
 | | Bargaining Info | Scraper | MSZ (gov.pl) |
-| **Finances** | Currency Code / Name | API | REST Countries |
+| **Finances** | Currency Code / Name | API | ApiCountries |
 | | Exchange Rate (PLN) | API | NBP |
 | | Denominations (Images)| API | MSZ/Local |
 | | Cost Indices | Scraper | Numbeo |

@@ -67,7 +67,7 @@ To ensure high-quality data, the project implements several layers of validation
 ## Data Sources
 - **MSZ (gov.pl)**: Safety, Polish-specific advice, and detailed Local Laws/Customs.
 - **Wikipedia/Wikidata**: General summaries, visas, attractions, religions, and transport.
-- **REST Countries**: Basic geographical data and coordinates.
+- **ApiCountries**: Basic geographical data and coordinates.
 - **CDC**: Health and vaccinations.
 - **UNESCO**: World Heritage sites.
 - **Numbeo**: Cost of living and daily budget estimations.

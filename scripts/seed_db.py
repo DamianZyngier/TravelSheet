@@ -16,8 +16,8 @@ async def seed_basic():
     db = SessionLocal()
     print("Starting basic database seeding (Countries only)...")
 
-    # 1. Sync all countries from REST Countries
-    print("Step 1: Syncing all countries from REST Countries...")
+    # 1. Sync all countries from ApiCountries
+    print("Step 1: Syncing all countries from ApiCountries...")
     res = await rest_countries.sync_countries(db)
     
     country_count = db.query(models.Country).count()

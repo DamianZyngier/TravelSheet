@@ -12,7 +12,7 @@ export const CONTINENT_MAP: Record<string, string> = {
 
 export const DATA_SOURCES = {
   MSZ: { name: 'MSZ (gov.pl)', url: 'https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych' },
-  REST: { name: 'REST Countries', url: 'https://restcountries.com/' },
+  REST: { name: 'ApiCountries', url: 'https://www.apicountries.com/' },
   WIKI: { name: 'Wikipedia / Wikidata', url: 'https://www.wikipedia.org/' },
   UNESCO: { name: 'UNESCO', url: 'https://whc.unesco.org/' },
   CDC: { name: 'CDC Health', url: 'https://www.cdc.gov/' },

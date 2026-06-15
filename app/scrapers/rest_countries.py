@@ -16,7 +16,7 @@ async def fetch_data(url):
                 if resp.status_code == 200:
                     return resp.json()
                 else:
-                    logger.error(f"Attempt {attempt+1}: REST Countries returned {resp.status_code}")
+                    logger.error(f"Attempt {attempt+1}: ApiCountries returned {resp.status_code}")
                     if attempt < 2: await asyncio.sleep(2)
             except Exception as e:
                 logger.error(f"Attempt {attempt+1} failed: {e}")

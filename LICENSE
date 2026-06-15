@@ -18,7 +18,7 @@ TravelSheet (the "Software") is the property of the Author. This is a proprietar
 The Software aggregates data from various public and third-party sources. Users must also comply with the respective licenses and terms of these sources:
 
 - **Ministry of Foreign Affairs (MSZ gov.pl)**: Information for travelers (Public Domain/Open Government License). https://www.gov.pl/web/dyplomacja/informacje-dla-podrozujacych
-- **REST Countries API**: Basic country data. https://restcountries.com/
+- **ApiCountries API**: Basic country data. https://www.apicountries.com/
 - **Wikipedia / Wikidata**: Visa requirements, summaries, and attractions (Creative Commons Attribution-ShareAlike License). https://www.wikipedia.org/
 - **UNESCO World Heritage**: World Heritage sites data. https://whc.unesco.org/
 - **CDC (Centers for Disease Control and Prevention)**: Health and vaccination info. https://www.cdc.gov/
