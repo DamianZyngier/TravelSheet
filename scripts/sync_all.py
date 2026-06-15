@@ -33,6 +33,10 @@ def log_result(name, result):
     if not result or not isinstance(result, dict):
         print(f"✅ {name}: Sync completed (no detailed stats)")
         return
+    
+    if "error" in result:
+        print(f"❌ {name}: FAILED - {result['error']}")
+        return
         
     success = result.get("success", result.get("updated", result.get("synced", 0)))
     errors = result.get("errors", 0)
