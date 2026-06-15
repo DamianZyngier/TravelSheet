@@ -33,33 +33,15 @@ def normalize_polish_name(name: str, iso2: str = None) -> str:
 
 async def sync_countries(db: Session):
     """
-    Syncs base country list from REST Countries API.
-    Handles the 10-field limit by making multiple requests.
+    Syncs base country list from ApiCountries API (drop-in replacement for Rest Countries).
     """
-    # Request 1: Identity and Location
-    fields1 = "name,cca2,cca3,capital,region,continents,latlng,translations,independent"
-    url1 = f"https://restcountries.com/v3.1/all?fields={fields1}"
+    url = "https://www.apicountries.com/countries"
     
-    # Request 2: Practical data
-    fields2 = "cca2,languages,currencies,population,area,idd"
-    url2 = f"https://restcountries.com/v3.1/all?fields={fields2}"
-    
-    logger.info("Fetching country data from REST Countries (Part 1)...")
-    data1 = await fetch_data(url1)
-    
-    logger.info("Fetching country data from REST Countries (Part 2)...")
-    data2 = await fetch_data(url2)
+    logger.info("Fetching country data from ApiCountries...")
+    data = await fetch_data(url)
 
-    if not data1 or not data2:
+    if not data:
         return {"error": "Failed to fetch country data"}
-
-    # Merge by cca2
-    merged_data = {}
-    for item in data1:
-        merged_data[item['cca2']] = item
-    for item in data2:
-        if item['cca2'] in merged_data:
-            merged_data[item['cca2']].update(item)
 
     results = {"synced": 0, "updated": 0, "skipped": 0, "errors": []}
     
@@ -76,25 +58,32 @@ async def sync_countries(db: Session):
         'EH': 'MA'
     }
     
-    for i, (iso2, country_data) in enumerate(merged_data.items()):
+    for i, country_data in enumerate(data):
+        iso2 = country_data.get("alpha2Code")
+        if not iso2:
+            continue
+            
         try:
             if (i+1) % 50 == 0:
-                logger.info(f"Processing country {i+1}/{len(merged_data)}: {iso2}")
+                logger.info(f"Processing country {i+1}/{len(data)}: {iso2}")
 
             country = db.query(models.Country).filter(models.Country.iso_alpha2 == iso2).first()
             
             # Build basic data
-            name_en = country_data.get("name", {}).get("common")
-            name_pl = country_data.get("translations", {}).get("pol", {}).get("common") or name_en
+            name_en = country_data.get("name")
+            # Fallback for Polish name: check translations (unlikely in ApiCountries for 'pol'), 
+            # otherwise use translate_to_pl on name_en.
+            name_pl = country_data.get("translations", {}).get("pol") or country_data.get("translations", {}).get("pl")
+            if not name_pl:
+                name_pl = translate_to_pl(name_en)
+            
             name_pl = normalize_polish_name(name_pl, iso2)
             
-            capital_list = country_data.get("capital", [])
-            capital = capital_list[0] if capital_list else None
+            capital = country_data.get("capital")
             
             flag_url = f"https://flagcdn.com/w320/{iso2.lower()}.png"
-            region = country_data.get("region")
-            continents = country_data.get("continents", [])
-            continent = continents[0] if continents else None
+            region = country_data.get("region") # In ApiCountries this is the continent (Asia, Europe, etc.)
+            subregion = country_data.get("subregion")
             
             coords = country_data.get("latlng", [])
             lat = coords[0] if len(coords) > 0 else None
@@ -102,22 +91,22 @@ async def sync_countries(db: Session):
 
             population = country_data.get("population")
             area = country_data.get("area")
-            idd = country_data.get("idd", {})
-            root = idd.get("root", "")
-            suffixes = idd.get("suffixes", [])
-            phone_code = f"{root}{suffixes[0]}" if root and suffixes else (root if root else None)
+            
+            # Phone code from callingCodes
+            calling_codes = country_data.get("callingCodes", [])
+            phone_code = f"+{calling_codes[0]}" if calling_codes else None
             
             is_independent = country_data.get("independent", True)
 
             if not country:
                 country = models.Country(
                     iso_alpha2=iso2,
-                    iso_alpha3=country_data.get("cca3"),
+                    iso_alpha3=country_data.get("alpha3Code"),
                     name=name_en,
                     name_pl=name_pl,
                     capital=capital,
-                    continent=continent,
-                    region=region,
+                    continent=region,
+                    region=subregion,
                     flag_url=flag_url,
                     latitude=lat,
                     longitude=lon,
@@ -143,30 +132,32 @@ async def sync_countries(db: Session):
                 results["updated"] += 1
 
             # Languages
-            langs = country_data.get("languages", {})
+            langs = country_data.get("languages", [])
             if langs:
                 db.query(models.Language).filter(models.Language.country_id == country.id).delete()
-                for code, name in langs.items():
-                    db.add(models.Language(
-                        country_id=country.id,
-                        name=translate_to_pl(name),
-                        code=code,
-                        is_official=True,
-                        last_updated=func.now()
-                    ))
+                for lang_info in langs:
+                    l_name = lang_info.get("name")
+                    l_code = lang_info.get("iso639_1") or lang_info.get("iso639_2")
+                    if l_name:
+                        db.add(models.Language(
+                            country_id=country.id,
+                            name=translate_to_pl(l_name),
+                            code=l_code,
+                            is_official=True,
+                            last_updated=func.now()
+                        ))
 
             # Currencies
-            currencies = country_data.get("currencies", {})
+            currencies = country_data.get("currencies", [])
             if currencies:
                 db.query(models.Currency).filter(models.Currency.country_id == country.id).delete()
-                # Tylko główna waluta, aby uniknąć ostrzeżeń SQLAlchemy uselist=False
-                main_code = next(iter(currencies))
-                info = currencies[main_code]
+                # Use the first currency
+                curr = currencies[0]
                 db.add(models.Currency(
                     country_id=country.id,
-                    code=main_code,
-                    name=translate_to_pl(info.get("name")),
-                    symbol=info.get("symbol"),
+                    code=curr.get("code"),
+                    name=translate_to_pl(curr.get("name")),
+                    symbol=curr.get("symbol"),
                     last_updated=func.now()
                 ))
         except Exception as e:
@@ -186,5 +177,5 @@ async def sync_countries(db: Session):
     
     db.commit()
     
-    logger.info(f"REST Countries sync completed: {results['synced']} new, {results['updated']} updated, {len(results['errors'])} errors.")
+    logger.info(f"ApiCountries sync completed: {results['synced']} new, {results['updated']} updated, {len(results['errors'])} errors.")
     return results
