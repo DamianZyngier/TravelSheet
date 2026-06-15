@@ -42,6 +42,10 @@ async def sync_countries(db: Session):
 
     if not data:
         return {"error": "Failed to fetch country data"}
+    
+    if not isinstance(data, list):
+        logger.error(f"ApiCountries returned invalid data format: {type(data)}")
+        return {"error": f"Invalid data format from API: {type(data)}"}
 
     results = {"synced": 0, "updated": 0, "skipped": 0, "errors": []}
     
