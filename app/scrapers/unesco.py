@@ -58,9 +58,9 @@ class UnescoScraper(BaseScraper):
                     
                     data = resp.json()
                     if total_count is None:
-                        total_count = data.get("total_count", 0)
+                        total_count = data.get("total_count", data.get("totalRecords", 0))
                     
-                    results = data.get("results", [])
+                    results = data.get("results") or data.get("records", [])
                     if not results:
                         break
                     

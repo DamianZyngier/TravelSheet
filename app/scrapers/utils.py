@@ -1,4 +1,4 @@
-import re
+import time
 import logging
 import os
 import random
@@ -104,18 +104,50 @@ CURRENCY_FIXES = {
 _TRANSLATION_CACHE = {}
 
 def translate_to_pl(text: str) -> str:
-    if not text: return text
-    if text in CURRENCY_FIXES: return CURRENCY_FIXES[text]
-    if text in _TRANSLATION_CACHE: return _TRANSLATION_CACHE[text]
-    try:
-        translated = GoogleTranslator(source='auto', target='pl').translate(text)
-        translated = normalize_polish_text(translated)
-        if translated in CURRENCY_FIXES: translated = CURRENCY_FIXES[translated]
-        _TRANSLATION_CACHE[text] = translated
-        return translated
-    except Exception as e:
-        logger.error(f"Translation error for '{text}': {e}")
+    """Translate text to Polish with caching and retry logic.
+
+    The function first checks a simple currency fix mapping and then
+    consults an in‑memory cache. If the text hasn't been translated
+    yet, it attempts up to ``MAX_RETRIES`` Google Translate calls,
+    waiting ``BASE_DELAY`` seconds between attempts with an
+    exponential back‑off. On final failure the original text is
+    returned and cached to avoid repeated failures.
+    """
+    if not text:
         return text
+
+    # Quick look‑ups for known currency translations
+    if text in CURRENCY_FIXES:
+        return CURRENCY_FIXES[text]
+    if text in _TRANSLATION_CACHE:
+        return _TRANSLATION_CACHE[text]
+
+    MAX_RETRIES = 3
+    BASE_DELAY = 2
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            translated = GoogleTranslator(source="auto", target="pl").translate(text)
+            translated = normalize_polish_text(translated)
+            # Apply any post‑processing fixes
+            if translated in CURRENCY_FIXES:
+                translated = CURRENCY_FIXES[translated]
+            _TRANSLATION_CACHE[text] = translated
+            return translated
+        except Exception as e:
+            logger.warning(
+                f"Translation attempt {attempt}/{MAX_RETRIES} failed for '{text}': {e}"
+            )
+            if attempt < MAX_RETRIES:
+                # Exponential back‑off with slight jitter
+                jitter = random.uniform(0, 0.5)
+                sleep_time = BASE_DELAY * (2 ** (attempt - 1)) + jitter
+                logger.debug(f"Sleeping {sleep_time:.1f}s before next retry")
+                time.sleep(sleep_time)
+
+    # All retries failed – cache the original to avoid repeated calls
+    _TRANSLATION_CACHE[text] = text
+    return text
 
 def normalize_polish_text(text: str) -> str:
     if not text: return text
